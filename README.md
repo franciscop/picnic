@@ -1,7 +1,7 @@
 Picnic CSS
 =========
 
-Unpack your meal and get coding. An invasive CSS module to get your style started.
+Unpack your meal and get coding. An invasive CSS library to get your style started.
 
 
 
@@ -24,18 +24,40 @@ With IE8 usage dropping *fast* and with IE9 and IE10 usage even below their olde
 Example usage
 ------
 
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <link rel="stylesheet" type="text/css" href="http://picnicss.com/picnic.1.css">
-      </head>
-      <body>
-        
-        
-        
-      </body>
-    </html>
 
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="http://picnicss.com/picnic.css">
+  </head>
+  <body>
+    <h1>
+      Picnic CSS
+    </h1>
+    
+    <form>
+      What's your favourite Picnic CSS feature?
+      
+      <label class = "select">
+        <select name = "feature">
+          <option value = "semantic">    Semantic HTML5 </option>
+          <option value = "lightweight"> Lightweight    </option>
+          <option value = "css3">        Only CSS3      </option>
+          <option value = "responsive">  Responsive     </option>
+        </select>
+      </label>
+      
+      <input type = "email" placeholder = "Email to receive updates">
+      
+      <button class = "primary"> Subscribe! </button>
+    </form>
+    
+  </body>
+</html>
+```
+
+If you don't see anything that seems *picnic.css exclusive*, that's because there's nothing. Besides that `<link>` that includes the library. However, try it out and you'll see a decent example.
 
 
 Pros
