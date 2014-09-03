@@ -39,18 +39,18 @@ Example usage
     <form>
       What's your favourite Picnic CSS feature?
       
-      <label class = "select">
-        <select name = "feature">
-          <option value = "semantic">    Semantic HTML5 </option>
-          <option value = "lightweight"> Lightweight    </option>
-          <option value = "css3">        Only CSS3      </option>
-          <option value = "responsive">  Responsive     </option>
+      <label class="select">
+        <select name="feature">
+          <option value="semantic">    Semantic HTML5 </option>
+          <option value="lightweight"> Lightweight    </option>
+          <option value="css3">        Only CSS3      </option>
+          <option value="responsive">  Responsive     </option>
         </select>
       </label>
       
-      <input type = "email" placeholder = "Email to receive updates">
+      <input type="email" placeholder="Email to receive updates">
       
-      <button class = "primary"> Subscribe! </button>
+      <button class="primary"> Subscribe! </button>
     </form>
     
   </body>
