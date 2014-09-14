@@ -613,6 +613,7 @@ nav a:hover {
 nav a.button,
 nav a.button:hover {
     color: #FFF;
+    line-height: 1.4em;
 }
 
 nav .main,
