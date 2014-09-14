@@ -101,10 +101,10 @@ Alternatives and why I still created Picnic CSS
 Some love
 -------
 
-- http://clrs.cc/ the new nice web palette (from HN) used for Picnic CSS.
+- [Clrs](http://clrs.cc/) the new nice web palette (from HN) used for Picnic CSS.
 
-- http://fontello.com/ a library that plays really nice for icon fonts.
+- [Fontello](http://fontello.com/) an icon library that plays really nice with others.
 
 - [Tympanus buttons](http://tympanus.net/Development/CreativeButtons/) so many hours exploring its amazing CSS designs.
 
-
+- [Normalize](http://necolas.github.io/normalize.css/) the foundation of Picnic CSS
