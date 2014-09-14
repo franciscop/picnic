@@ -144,7 +144,8 @@ input:focus:invalid {
 }
 
 select {
-	width: 11em;
+	  min-width: 14em;
+	  padding: 0 0 0 .3em;
     background: none;
     border: none;
     -webkit-padding-before: .23em;
