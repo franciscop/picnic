@@ -97,6 +97,11 @@ Alternatives and why I still created Picnic CSS
 [Bootstrap](http://getbootstrap.com/): Really comprehensive, but too many files and too heavy for most of the websites. It also relies too much on javascript. Still cannot get the `<select>` right out of the box.
 
 
+Versioning
+----------
+
+Full number version mean new features added / removed, with loss of backward compatibility. The bug fixes are added to the current version. So all bugfixes for v1 are added to v1.css, and the new features to the /latest.css. This will become v2.css when the changes are formalized.
+
 
 Some love
 -------
