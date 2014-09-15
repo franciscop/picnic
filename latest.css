@@ -99,18 +99,26 @@ input {
 
 input:focus {
     border-color: #7fdbff;
+    box-shadow: 0 0 .2em -.1em rgba(0,0,0,.2);
+    transition: all 0.3s ease;
 }
 
 input:focus:valid {
     border-color: #2ecc40;
+    box-shadow: 0 0 .2em -.1em #2ecc40;
+    transition: all 0.3s ease;
 }
 
 input:invalid {
     border-color: #ff4136;
+    box-shadow: 0 0 .2em -.1em #ff4136;
+    transition: all 0.3s ease;
 }
 
 input:focus:invalid {
     border-color: #ff851b;
+    box-shadow: 0 0 .2em -.1em #ff851b;
+    transition: all 0.3s ease;
 }
 /* END INPUT */
 
@@ -129,7 +137,7 @@ input:focus:invalid {
 }
 
 .select:after {
-    padding: .2em .2em .2em 1.3em;
+    padding: .2em 0 .2em 1.3em;
     background: #FFF;
     content: "▼";
     display: block;
@@ -147,12 +155,13 @@ select {
     padding: 0 2em 0 .3em;
     background: none;
     border: none;
+    min-width: 14em;
     -webkit-padding-before: .23em;
     -webkit-padding-after: .17em;
     
     /* Add border to the dropdown and hide it from the closed one */
     border: 1px solid #CCC;
-    margin: -1px;
+    margin: -2px;
     
     cursor: pointer;
 }
