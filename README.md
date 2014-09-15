@@ -13,16 +13,6 @@ Many libraries rely upon adding classes to your already existing html elements, 
 This setup works neatly for newly created projects or for pages that you have to build quick from scratch.
 
 
-Getting Started
----------------
-
-To use it in any webpage, access /releases/v1.min.css, download the file and include it as the first stylesheet.
-
-These are the options available to get started with Picnic CSS:
-
-- Clone the repo: `git clone 	https://github.com/picnicss/picnic.git`
-- Install with bower: `bower install picnic`
-
 
 Browser support ( !IE8- )
 ------
@@ -111,6 +101,7 @@ Versioning
 ----------
 
 Full number version mean new features added / removed, with loss of backward compatibility. The bug fixes are added to the current version. So all bugfixes for v1 are added to v1.css, and the new features to the /latest.css. This will become v2.css when the changes are formalized.
+
 
 Some love
 -------
