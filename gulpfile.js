@@ -7,13 +7,11 @@ var gulp = require('gulp'),
 gulp.task('default', ['build'], function() {});
 
 gulp.task('watch', ['build'], function() {
-	gulp.watch(['./src/picnic.scss'], ['build']);
+	gulp.watch(['./src/*.scss'], ['build']);
 });
 
 gulp.task('build', [], function() {
 	return gulp.src('./src/picnic.scss')
-		.pipe(rename('latest.scss'))
-		.pipe(gulp.dest('./dist'))
 		.pipe(sass())
 		.pipe(rename('latest.css'))
 		.pipe(gulp.dest('./dist'))
