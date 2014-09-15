@@ -144,15 +144,15 @@ input:focus:invalid {
 }
 
 select {
-	  min-width: 14em;
-	  padding: 0 0 0 .3em;
+    padding: 0 2em 0 .3em;
     background: none;
     border: none;
     -webkit-padding-before: .23em;
     -webkit-padding-after: .17em;
     
     /* Add border to the dropdown and hide it from the closed one */
-    margin: -2px;
+    border: 1px solid #CCC;
+    margin: -1px;
     
     cursor: pointer;
 }
@@ -173,43 +173,55 @@ select option {
 
 
 /* CHECKBOX */
+
+
+
+
+
+
 .checkbox {
+    position: relative;
+    display: inline-block;
+    min-width: 1em;
+    min-height: 1.25em;
+    line-height: 1em;
+    margin: .2em 0 -.2em;
+    outline: 0px none;
+    vertical-align: middle;
     cursor: pointer;
 }
 
-.checkbox input {
-    display: none;
+/* Match the element following input */
+.checkbox input + * {
+    vertical-align: super;
 }
 
-.checkbox span:before {
-	  /* Actual size of the box */
-    font-size: .8em;
-    
-    /* Hide it by default */
-    content: "✔";
-    color: transparent;
-	  background: #FFF;
-	
+.checkbox input + *:before {
+    content: "";
+    position: absolute;
+    border-radius: .2em;
+    min-width: .8em;
+    height: .8em;
+    top: .1em;
     line-height: .8em;
-    padding: .1em;
-    margin: 0 .8em .1em 0;
-	  border-radius: .2em;
+    width: .8em;
+    height: .8em;
+    left: 0px;
+    content: "✔";
+    text-align: center;
+    background: #FFF;
+    color: transparent;
     border: 1px solid rgba(0, 0, 0, 0.3);
-    
-	  display: inline-block;
-    vertical-align: middle;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
-/* When hovering in any case */
-.checkbox:hover span:before {
-    /* Works nice with ✖ also */
-    color: rgba(0, 0, 0, 0.3);
+.checkbox input {
+    opacity: 0;
 }
 
-/* When checked */
-.checkbox input:checked + span:before {
-    /* Give it the default color of the text */
-    color: inherit;
+.checkbox input:checked + *:before {
+    color: #555;
 }
 /* END CHECKBOX */
 
@@ -219,46 +231,62 @@ select option {
 
 
 /* RADIO */
-/* Note: some duplicated rules to decouple .radio and .checkbox */
 .radio {
+    position: relative;
+    display: inline-block;
+    min-width: 1em;
+    min-height: 1.25em;
+    line-height: 1em;
+    margin: .2em 0 -.2em;
+    outline: 0px none;
+    vertical-align: middle;
     cursor: pointer;
 }
 
-.radio input {
-    display: none;
+/* Match the element following input */
+.radio input + * {
+    vertical-align: super;
 }
 
-.radio span:before {
-	  /* Actual size of the box */
-    font-size: .8em;
-    
-    /* Hide it by default */
-    content: "●";
-    color: transparent;
-	  background: #FFF;
-	
-	  border-radius: 1em;
-    
-	  display: inline-block;
-    vertical-align: middle;
-    
-    width: calc(1em + 2px);
-    height: calc(1em + 2px);
-    line-height: 1em;
-    font-size: .5em;
-    font-family: monospace;
-    margin: 0px 1.3em 0.1em 0px;
+/* Not to repeat them */
+.radio input + *:before,
+.radio input + *:after {
+    content: "";
+    position: absolute;
+    border-radius: 100em;
+    margin: .1em 0;
+}
+
+.radio input + *:before {    
+    min-width: .8em;
+    height: .8em;
+    top: 0;
+    line-height: .8;
+    width: .8em;
+    height: .8em;
+    left: 0px;
+    background: #FFF;
     border: 1px solid rgba(0, 0, 0, 0.3);
-    text-align: center;
-    padding: 0.2em;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
-.radio:hover span:before,
-.radio input:checked + span:before {
-    color: rgba(0, 0, 0, 0.3);
+.radio input + *:after {
+    border: none;
+    top: 0.2em;
+    left: 0.2em;
+    width: 0.4em;
+    height: 0.4em;
+    background: #555;
+    opacity: 0;
 }
-.radio input:checked + span:before {
-    color: inherit;
+
+.radio input {
+    opacity: 0;
+}
+
+.radio input:checked + *:after {
+    opacity: 1;
 }
 /* END RADIO */
 
@@ -740,6 +768,10 @@ nav .menu {
     }
 
     nav .menu .button:hover {
+        margin: .6em .5em .5em;
+    }
+
+    nav .menu .button:active {
         margin: .7em .5em .5em;
     }
 
