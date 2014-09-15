@@ -144,15 +144,15 @@ input:focus:invalid {
 }
 
 select {
-	  min-width: 14em;
-	  padding: 0 0 0 .3em;
+    padding: 0 2em 0 .3em;
     background: none;
     border: none;
     -webkit-padding-before: .23em;
     -webkit-padding-after: .17em;
     
     /* Add border to the dropdown and hide it from the closed one */
-    margin: -2px;
+    border: 1px solid #CCC;
+    margin: -1px;
     
     cursor: pointer;
 }
