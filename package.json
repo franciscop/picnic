@@ -1,0 +1,31 @@
+{
+  "name": "picnic",
+  "version": "1.0.0",
+  "description": "Semantic HTML5 & nice CSS3",
+  "main": "latest.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/picnicss/picnic.git"
+  },
+  "keywords": [
+    "css",
+    "semantic",
+    "html5",
+    "framework"
+  ],
+  "author": "picnicss <developerfrancisco@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/picnicss/picnic/issues"
+  },
+  "homepage": "https://github.com/picnicss/picnic",
+  "devDependencies": {
+    "gulp": "^3.8.8",
+    "gulp-sass": "^0.7.3",
+    "gulp-rename": "^1.2.0",
+    "gulp-minify-css": "^0.3.8"
+  }
+}
