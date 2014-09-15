@@ -1,0 +1,38 @@
+.checkbox {
+    cursor: pointer;
+}
+
+.checkbox input {
+    display: none;
+}
+
+.checkbox span:before {
+	  /* Actual size of the box */
+    font-size: .8em;
+    
+    /* Hide it by default */
+    content: "✔";
+    color: transparent;
+	  background: #FFF;
+	
+    line-height: .8em;
+    padding: .1em;
+    margin: 0 .8em .1em 0;
+	  border-radius: .2em;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    
+	  display: inline-block;
+    vertical-align: middle;
+}
+
+/* When hovering in any case */
+.checkbox:hover span:before {
+    /* Works nice with ✖ also */
+    color: rgba(0, 0, 0, 0.3);
+}
+
+/* When checked */
+.checkbox input:checked + span:before {
+    /* Give it the default color of the text */
+    color: inherit;
+}
