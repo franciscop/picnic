@@ -1,0 +1,57 @@
+.radio {
+    position: relative;
+    display: inline-block;
+    min-width: 1em;
+    min-height: 1.25em;
+    line-height: 1em;
+    margin: .2em 0 -.2em;
+    outline: 0px none;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+/* Match the element following input */
+.radio input + * {
+    vertical-align: super;
+}
+
+/* Not to repeat them */
+.radio input + *:before,
+.radio input + *:after {
+    content: "";
+    position: absolute;
+    border-radius: 100em;
+    margin: .1em 0;
+}
+
+.radio input + *:before {    
+    min-width: .8em;
+    height: .8em;
+    top: 0;
+    line-height: .8;
+    width: .8em;
+    height: .8em;
+    left: 0px;
+    background: #FFF;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.radio input + *:after {
+    border: none;
+    top: 0.2em;
+    left: 0.2em;
+    width: 0.4em;
+    height: 0.4em;
+    background: #555;
+    opacity: 0;
+}
+
+.radio input {
+    opacity: 0;
+}
+
+.radio input:checked + *:after {
+    opacity: 1;
+}
