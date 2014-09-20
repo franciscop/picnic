@@ -139,7 +139,7 @@ input:focus:invalid {
 .select:after {
     padding: .2em 0 .2em 1.3em;
     background: #FFF;
-    content: "▼";
+    content: "\25BC";
     display: block;
     position: absolute;
     right: 0;
@@ -158,11 +158,6 @@ select {
     min-width: 14em;
     -webkit-padding-before: .23em;
     -webkit-padding-after: .17em;
-    
-    /* Add border to the dropdown and hide it from the closed one */
-    border: 1px solid #CCC;
-    margin: -2px;
-    
     cursor: pointer;
 }
 
