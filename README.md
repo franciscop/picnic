@@ -103,6 +103,23 @@ Versioning
 Full number version mean new features added / removed, with loss of backward compatibility. The bug fixes are added to the current version. So all bugfixes for v1 are added to v1.css, and the new features to the /latest.css. This will become v2.css when the changes are formalized.
 
 
+Getting Started
+---------------
+
+There are two options available to get started with Picnic CSS:
+
+- Install with bower: `bower install picnic`
+- Clone the repo: `git clone 	https://github.com/picnicss/picnic.git`
+
+
+Building
+--------
+
+- Install dependencies using `npm install`
+- To build once, run `gulp`
+- For development, run `gulp watch` to rebuild whenever any of the sass files are changed
+
+
 Some love
 -------
 
