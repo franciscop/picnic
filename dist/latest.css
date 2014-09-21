@@ -196,28 +196,23 @@ input {
   margin: 0.2em;
   padding: 0.2em 0.5em;
   border: 1px solid rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0.1em 0.1em 0.2em -0.1em rgba(0, 0, 0, 0.3);
-  border-radius: 0.2em; }
+  box-shadow: none;
+  border-radius: 0.2em;
+  transition: all 0.3s ease; }
 
 input:focus {
   border-color: #7fdbff;
-  box-shadow: 0 0 0.2em -0.1em rgba(0, 0, 0, 0.2);
+  box-shadow: 0.1em 0.1em 0 rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease; }
 
 input:focus:valid {
-  border-color: #2ecc40;
-  box-shadow: 0 0 0.2em -0.1em #2ecc40;
-  transition: all 0.3s ease; }
+  border-color: #2ecc40; }
 
 input:invalid {
-  border-color: #ff4136;
-  box-shadow: 0 0 0.2em -0.1em #ff4136;
-  transition: all 0.3s ease; }
+  border-color: #ff4136; }
 
 input:focus:invalid {
-  border-color: #ff851b;
-  box-shadow: 0 0 0.2em -0.1em #ff851b;
-  transition: all 0.3s ease; }
+  border-color: #ff851b; }
 
 .select {
   display: inline-block;
@@ -247,9 +242,6 @@ select {
   min-width: 14em;
   -webkit-padding-before: 0.23em;
   -webkit-padding-after: 0.17em;
-  /* Add border to the dropdown and hide it from the closed one */
-  border: 1px solid #CCC;
-  margin: -2px;
   cursor: pointer; }
 
 select:-moz-focusring {
@@ -278,12 +270,12 @@ select option {
   content: "";
   position: absolute;
   border-radius: 0.2em;
-  min-width: 0.8em;
-  height: 0.8em;
   top: 0.1em;
   line-height: 0.8em;
-  width: 0.8em;
-  height: 0.8em;
+  width: 1em;
+  height: 1em;
+  font-size: 0.8em;
+  padding: 0.1em;
   left: 0px;
   content: "✔";
   text-align: center;
