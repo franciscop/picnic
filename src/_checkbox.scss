@@ -35,6 +35,10 @@
     -webkit-box-sizing: border-box;
 }
 
+.checkbox input:focus + *:before {
+    border: 1px solid #7fdbff;
+}
+
 .checkbox input {
     opacity: 0;
 }

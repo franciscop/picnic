@@ -14,10 +14,6 @@ input:focus {
     transition: all 0.3s ease;
 }
 
-input:focus:valid {
-    border-color: #2ecc40;
-}
-
 input:invalid {
     border-color: #ff4136;
 }

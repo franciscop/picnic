@@ -52,6 +52,10 @@
     opacity: 0;
 }
 
+.radio input:focus + *:before {
+    border: 1px solid #7fdbff;
+}
+
 .radio input:checked + *:after {
     opacity: 1;
 }

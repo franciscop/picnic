@@ -29,15 +29,22 @@ label.button span {
     transition: all .1s ease 0.1s;
 }
 
+/* Allow for tabbing (display: none) doesnt */
 .button input {
-    display: none;
+    opacity: 0;
+    z-index: -10;
+    position: absolute;
 }
 
 /* Hover the button */
 button:hover,
 input[type='submit']:hover,
 a.button:hover,
-label.button:hover span {
+label.button:hover span,
+button:focus,
+input[type='submit']:focus,
+a.button:focus,
+label.button input:focus + span {
     margin: .1em 0 .2em;
     padding: .3em 1em .4em;
     transition: all .1s ease;
