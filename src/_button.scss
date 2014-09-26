@@ -1,6 +1,9 @@
 /* Normal button */
 button,
 input[type='submit'],
+input[type='button'],
+input[type='image'],
+input[type='reset'],
 a.button,
 label.button span {
     border: none;
@@ -17,11 +20,10 @@ label.button span {
     padding: .3em 1em .5em;
     background: #AAA;
     color: #FFF;
-    margin: 0 0 .2em;
+    margin: 0 .2em .2em;
     box-shadow: inset 0 -.2em rgba(0,0,0,.3);
     border-radius: .2em;
     cursor: pointer;
-    -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -39,13 +41,19 @@ label.button span {
 /* Hover the button */
 button:hover,
 input[type='submit']:hover,
+input[type='button']:hover,
+input[type='image']:hover,
+input[type='reset']:hover,
 a.button:hover,
 label.button:hover span,
 button:focus,
 input[type='submit']:focus,
+input[type='button']:focus,
+input[type='image']:focus,
+input[type='reset']:focus,
 a.button:focus,
 label.button input:focus + span {
-    margin: .1em 0 .2em;
+    margin: .1em .2em .2em;
     padding: .3em 1em .4em;
     transition: all .1s ease;
     box-shadow: inset 0 -.1em rgba(0,0,0,.3);
@@ -54,17 +62,23 @@ label.button input:focus + span {
 /* Press the button */
 button:active,
 input[type='submit']:active,
+input[type='button']:active,
+input[type='image']:active,
+input[type='reset']:active,
 a.button:active,
 label.button span:active,
 label.button input:checked + span {
-    margin: .2em 0 .2em;
-    padding: .3em 1em .3em;
+    margin: .2em;
+    padding: .3em 1em;
     box-shadow: inset 0 .1em .1em rgba(0,0,0,0.3);
 }
 
 /* Different type of buttons */
 button.primary,
 input[type='submit'].primary,
+input[type='button'].primary,
+input[type='image'].primary,
+input[type='reset'].primary,
 a.button.primary,
 label.button.primary span {
     background: #0074d9;
@@ -72,6 +86,9 @@ label.button.primary span {
 
 button.success,
 input[type='submit'].success,
+input[type='button'].success,
+input[type='image'].success,
+input[type='reset'].success,
 a.button.success,
 label.button.success span {
     background: #2ecc40;
@@ -79,6 +96,9 @@ label.button.success span {
 
 button.warning,
 input[type='submit'].warning,
+input[type='button'].warning,
+input[type='image'].warning,
+input[type='reset'].warning,
 a.button.warning,
 label.button.warning span {
     background: #ff851b;
@@ -86,6 +106,9 @@ label.button.warning span {
 
 button.error,
 input[type='submit'].error,
+input[type='button'].error,
+input[type='image'].error,
+input[type='reset'].error,
 a.button.error,
 label.button.error span {
     background: #ff4136;

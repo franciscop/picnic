@@ -22,13 +22,15 @@
 
   <h1>Testing Picnic CSS</h1>
   
+  <p>This page is only for testing. To see the <em>nice</em> one, go to <a href="http://picnicss.com/">Picnic CSS</a></p>
+  
   
   
   <!-- BUTTONS -->
   <h2>Button types</h2>
   <button>Button</button>  
-  <a href = "#" class="button">Link</a>
-  <input type="submit" value = "Submit" />
+  <a href="#" class="button">Link</a>
+  <input type="submit" value="Submit" />
   <label class="button">
     <input type="checkbox" />
     <span>Checkable</span>
@@ -38,26 +40,133 @@
   
   <!-- COLOR BUTTONS -->
   <h2>Colored buttons</h2>
-  <button>Normal</button>
-  <button class="primary">Primary</button>
-  <button class="success">Success</button>
-  <button class="warning">Warning</button>
-  <button class="error"  >Error  </button>
+  <div>
+    <button>Button</button>
+    <button class="primary">Button</button>
+    <button class="success">Button</button>
+    <button class="warning">Button</button>
+    <button class="error"  >Button</button>
+  </div>
+  <div>
+    <a href="#" class="button">Link</a>
+    <a href="#" class="button primary">Link</a>
+    <a href="#" class="button success">Link</a>
+    <a href="#" class="button warning">Link</a>
+    <a href="#" class="button error">Link</a>
+  </div>
+  <div>
+    <input type="submit" value = "Submit" />
+    <input type="submit" class="primary" value="Submit" />
+    <input type="submit" class="success" value="Submit" />
+    <input type="submit" class="warning" value="Submit" />
+    <input type="submit" class="error" value="Submit" />
+  </div>
+  <div>
+    <label class="button">
+      <input type="checkbox" />
+      <span>Checkable</span>
+    </label>
+    <label class="button primary">
+      <input type="checkbox" />
+      <span>Checkable</span>
+    </label>
+    <label class="button success">
+      <input type="checkbox" />
+      <span>Checkable</span>
+    </label>
+    <label class="button warning">
+      <input type="checkbox" />
+      <span>Checkable</span>
+    </label>
+    <label class="button error">
+      <input type="checkbox" />
+      <span>Checkable</span>
+    </label>
+  </div>
+  
+  
+  
+  <!-- INPUT -->
+  <h2>Inputs</h2>
+  <input placeholder="none" /><br>
+  <input type="button" placeholder="button" value="Button" /><br>
+  <input type="checkbox" placeholder="checkbox" /><br>
+  <input type="color" placeholder="color" /><br>
+  <input type="date" placeholder="date" /><br>
+  <input type="datetime" placeholder="datetime" /><br>
+  <input type="datetime-local" placeholder="datetime-local" /><br>
+  <input type="email" placeholder="email" /><br>
+  <input type="file" placeholder="file" /><br>
+  <input type="hidden" placeholder="hidden" />
+  <input type="image" value="Image" /><br>
+  <input type="month" placeholder="month" /><br>
+  <input type="number" placeholder="number" /><br>
+  <input type="password" placeholder="password" /><br>
+  <input type="radio" placeholder="radio" /><br>
+  <input type="range" placeholder="range" /><br>
+  <input type="reset" value="Reset" /><br>
+  <input type="search" placeholder="search" /><br>
+  <input type="submit" value="Submit" /><br>
+  <input type="text" placeholder="text" /><br>
+  <input type="tel" placeholder="tel" /><br>
+  <input type="time" placeholder="time" /><br>
+  <input type="url" placeholder="url" /><br>
+  <input type="week" placeholder="week" />
+  
+  
+  
+  <!-- INPUT VALIDATION -->
+  <h2>Input validation</h2>
+  <input type="email" placeholder="email" value="good@test.com" /><br>
+  <input type="email" placeholder="email" value="bad email" /><br>
+  <input type="url" placeholder="url" value="http://picnicss.com/" /><br>
+  <input type="url" placeholder="url" value="bad url" />
   
   
   
   <!-- RADIO BUTTONS -->
   <h2>Radio buttons</h2>
   <label class="radio">
-    <input type="radio" name="takeme">
-    <span>Choose me</span>
+    <input type="radio" name="takeme" checked>
+    <span>Preselected</span>
   </label>
-
+  <br>
   <label class="radio">
     <input type="radio" name="takeme">
-    <span>or choose me</span>
+    <span>Other</span>
   </label>
-
+  
+  
+  
+  <!-- NO STYLE RADIO BUTTONS -->
+  <h2>Unstyled radio buttons</h2>
+  <label>
+    <input type="radio" name="nostyle" checked>
+    <span>Preselected</span>
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="nostyle">
+    <span>Other</span>
+  </label>
+  
+  
+  
+  <!-- CHECKBOX -->
+  <h2>Checkbox</h2>
+  <label class="checkbox">
+    <input type="checkbox">
+    <span>I'm really stylish</span>
+  </label>
+  
+  
+  
+  <!-- UNSTYLED CHECKBOX -->
+  <h2>Unstyled checkbox</h2>
+  <label>
+    <input type="checkbox">
+    <span>I have no style ):</span>
+  </label>
 
   
   

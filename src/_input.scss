@@ -1,3 +1,4 @@
+/* Browser treats unknow type as "text", so we'll do the same */
 input {
     line-height: 1.5em;
     margin: .2em;
@@ -21,3 +22,10 @@ input:invalid {
 input:focus:invalid {
     border-color: #ff851b;
 }
+
+/* Reset the style for those that we actually know */
+input[type=radio]:focus,
+input[type=checkbox]:focus {
+  box-shadow: none;
+  border-color: initial;
+  }

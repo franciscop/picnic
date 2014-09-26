@@ -1,6 +1,8 @@
 Picnic CSS
 =========
 
+By Francisco Presencia Fandos and Jordan Wallwork
+
 Unpack your meal and get coding. An invasive CSS library to get your style started.
 
 
