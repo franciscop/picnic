@@ -17,5 +17,6 @@ gulp.task('build', [], function() {
 		.pipe(gulp.dest('./dist'))
 		.pipe(minify())
 		.pipe(rename('latest.min.css'))
-		.pipe(gulp.dest('./dist/'));
+		.pipe(gulp.dest('./dist/'))
+		.pipe(gulp.dest('./test/'));;
 });
