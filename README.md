@@ -1,11 +1,9 @@
 Picnic CSS
 =========
 
-By [Francisco Presencia Fandos](https://github.com/FranciscoP) and [Jordan Wallwork](https://github.com/jordanwallwork).
-
 Unpack your meal and get coding. An invasive CSS library to get your style started.
 
-
+By [Francisco Presencia Fandos](https://github.com/FranciscoP) and [Jordan Wallwork](https://github.com/jordanwallwork).
 
 Wait, *invasive*?
 -----
