@@ -17,13 +17,12 @@ gulp.task('test', [], function() {
 		.pipe(gulp.dest('./test/'));;
 });
 
-gulp.task('build', [], function() {
+gulp.task('build', ['test'], function() {
 	return gulp.src('./src/picnic.scss')
 		.pipe(sass())
 		.pipe(rename('latest.css'))
-		.pipe(gulp.dest('./'))
-		.pipe(gulp.dest('./test/'))
+		.pipe(gulp.dest('./releases'))
 		.pipe(minify())
 		.pipe(rename('latest.min.css'))
-		.pipe(gulp.dest('../'));
+		.pipe(gulp.dest('./releases'));
 });
