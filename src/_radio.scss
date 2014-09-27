@@ -20,6 +20,7 @@
 .radio input + *:after {
     content: "";
     position: absolute;
+    border: 2px solid white;
     border-radius: 100em;
     margin: .1em 0;
 }
@@ -33,7 +34,7 @@
     height: .8em;
     left: $margin;
     background: #FFF;
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
@@ -41,7 +42,7 @@
 .radio input + *:after {
     border: none;
     top: 0.2em;
-    left: $margin + .2em;
+    left: 0.2em;
     width: 0.4em;
     height: 0.4em;
     background: #555;
@@ -54,13 +55,9 @@
 
 .radio input:focus + *:before,
 .radio input:hover + *:before {
-    border: 1px solid #7fdbff;
-    
-    @if $deep == true {
-        box-shadow: .1em .1em $dark-overlay;
-    }
+    box-shadow: 0 0 0 1px #7fdbff;
 }
 
-.radio input:checked + *:after {
-    opacity: 1;
+.radio input:checked + *:before {
+    background: #555;
 }

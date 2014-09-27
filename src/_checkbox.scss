@@ -16,7 +16,8 @@
 }
 
 .checkbox input + *:before {
-    content: "";
+    /* Tick */
+    content: "\2714";
     position: absolute;
     border-radius: $radius;
     top: .1em;
@@ -26,7 +27,6 @@
     font-size: .8em;
     padding: .1em;
     left: $margin;
-    content: "✔";
     text-align: center;
     background: #FFF;
     color: transparent;
@@ -38,10 +38,6 @@
 .checkbox input:focus + *:before,
 .checkbox input:hover + *:before {
     border: 1px solid #7fdbff;
-    
-    @if $deep == true {
-        box-shadow: .1em .1em $dark-overlay;
-    }
 }
 
 .checkbox input {
