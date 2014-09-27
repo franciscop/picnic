@@ -14,7 +14,7 @@ This setup works neatly for newly created projects or for pages that you have to
 
 > Note: the more *unstable* components require the use of a wrapper with a class to make them work. These are: `select` for `<select>`, `radio` for `<input type="radio">` and `checkbox` for `<input type="checkbox">`.
 
-> Another note: the sass version has this as a parameter; disable it and you'll need to add classes like `button` to your elements to have this style.
+> Another note: the sass version has a parameter called `$invasive`. Set it to `false` and you'll need to add classes like `button` to your elements to have this style.
 
 
 Browser support ( !IE8- )
