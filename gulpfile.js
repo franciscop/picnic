@@ -21,9 +21,9 @@ gulp.task('build', [], function() {
 	return gulp.src('./src/picnic.scss')
 		.pipe(sass())
 		.pipe(rename('latest.css'))
-		.pipe(gulp.dest('./dist'))
+		.pipe(gulp.dest('./'))
 		.pipe(gulp.dest('./test/'))
 		.pipe(minify())
 		.pipe(rename('latest.min.css'))
-		.pipe(gulp.dest('./dist/'));
+		.pipe(gulp.dest('./'));
 });
