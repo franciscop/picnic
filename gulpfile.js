@@ -25,5 +25,5 @@ gulp.task('build', [], function() {
 		.pipe(gulp.dest('./test/'))
 		.pipe(minify())
 		.pipe(rename('latest.min.css'))
-		.pipe(gulp.dest('./'));
+		.pipe(gulp.dest('../'));
 });
