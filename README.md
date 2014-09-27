@@ -1,5 +1,5 @@
 # Picnic CSS
-
+  
 Unpack your meal and get coding. An invasive CSS library to get your style started.
 
 
@@ -8,18 +8,19 @@ Unpack your meal and get coding. An invasive CSS library to get your style start
 
 Include the following line in your `<head>`:
 
-    <link href="http://picnicss.com/releases/v1.1.css" rel="stylesheet" type="text/css">
+    <link href="http://picnicss.com/releases/v1.1.min.css" rel="stylesheet" type="text/css">
 
-If you use bower, you can do: `bower install picnic`
-To develop it: `git clone 	https://github.com/picnicss/picnic.git`
+Alternatively:
+
+With bower: `bower install picnic`
+
+Clone it: `git clone https://github.com/picnicss/picnic.git`
 
 
 
 ## Authors
 
-Created by [Francisco Presencia](https://github.com/FranciscoP).
-SASS from [Jordan Wallwork](https://github.com/jordanwallwork).
-Significant fixes from [Alex Galushka](https://github.com/galulex).
+Created by [Francisco Presencia](https://github.com/FranciscoP). SASS from [Jordan Wallwork](https://github.com/jordanwallwork). Significant fixes from [Alex Galushka](https://github.com/galulex).
 
 
 
