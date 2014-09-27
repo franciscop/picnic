@@ -31,7 +31,7 @@
     line-height: .8;
     width: .8em;
     height: .8em;
-    left: 0px;
+    left: $margin;
     background: #FFF;
     border: 1px solid rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
@@ -41,7 +41,7 @@
 .radio input + *:after {
     border: none;
     top: 0.2em;
-    left: 0.2em;
+    left: $margin + .2em;
     width: 0.4em;
     height: 0.4em;
     background: #555;
@@ -52,8 +52,13 @@
     opacity: 0;
 }
 
-.radio input:focus + *:before {
+.radio input:focus + *:before,
+.radio input:hover + *:before {
     border: 1px solid #7fdbff;
+    
+    @if $deep == true {
+        box-shadow: .1em .1em $dark-overlay;
+    }
 }
 
 .radio input:checked + *:after {

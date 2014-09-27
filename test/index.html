@@ -5,16 +5,14 @@
   <meta charset="utf-8">
   
   <title>Picnic CSS - Testing</title>
-  <link rel="stylesheet" type="text/css" href="latest.min.css">
+  <link rel="stylesheet" type="text/css" href="latest.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <style>
     body {
-      margin: 50px auto;
+      margin: 0 auto;
       max-width: 800px;
-      }
-    
-    h2 {
-      margin-top: 50px;
+      font-size: 16px;
+      color: #333;
       }
   </style>
 </head>
@@ -22,18 +20,17 @@
 
   <h1>Testing Picnic CSS</h1>
   
-  <p>This page is only for testing. To see the <em>nice</em> one, go to <a href="http://picnicss.com/">Picnic CSS</a></p>
-  
+  <p>Check out the <a href="http://picnicss.com/test/flat.html">Flat example</a> and the <a href="http://picnicss.com/">Official page</a></p>
   
   
   <!-- BUTTONS -->
   <h2>Button types</h2>
   <button>Button</button>  
-  <a href="#" class="button">Link</a>
+  <a class="button">Link</a>
   <input type="submit" value="Submit" />
-  <label class="button">
+  <label class="toggle">
     <input type="checkbox" />
-    <span>Checkable</span>
+    <span>Toggle</span>
   </label>
   
   
@@ -42,45 +39,45 @@
   <h2>Colored buttons</h2>
   <div>
     <button>Button</button>
-    <button class="primary">Button</button>
     <button class="success">Button</button>
     <button class="warning">Button</button>
     <button class="error"  >Button</button>
+    <button class="dull">Button</button>
   </div>
   <div>
     <a href="#" class="button">Link</a>
-    <a href="#" class="button primary">Link</a>
     <a href="#" class="button success">Link</a>
     <a href="#" class="button warning">Link</a>
     <a href="#" class="button error">Link</a>
+    <a href="#" class="button dull">Link</a>
   </div>
   <div>
     <input type="submit" value = "Submit" />
-    <input type="submit" class="primary" value="Submit" />
     <input type="submit" class="success" value="Submit" />
     <input type="submit" class="warning" value="Submit" />
     <input type="submit" class="error" value="Submit" />
+    <input type="submit" class="dull" value="Submit" />
   </div>
   <div>
-    <label class="button">
+    <label class="toggle">
       <input type="checkbox" />
-      <span>Checkable</span>
+      <span>Toggle</span>
     </label>
-    <label class="button primary">
+    <label class="toggle success">
       <input type="checkbox" />
-      <span>Checkable</span>
+      <span>Toggle</span>
     </label>
-    <label class="button success">
+    <label class="toggle warning">
       <input type="checkbox" />
-      <span>Checkable</span>
+      <span>Toggle</span>
     </label>
-    <label class="button warning">
+    <label class="toggle error">
       <input type="checkbox" />
-      <span>Checkable</span>
+      <span>Toggle</span>
     </label>
-    <label class="button error">
+    <label class="toggle dull">
       <input type="checkbox" />
-      <span>Checkable</span>
+      <span>Toggle</span>
     </label>
   </div>
   
@@ -90,7 +87,10 @@
   <h2>Inputs</h2>
   <input placeholder="none" /><br>
   <input type="button" placeholder="button" value="Button" /><br>
-  <input type="checkbox" placeholder="checkbox" /><br>
+  <label class="checkbox">
+    <input type="checkbox">
+    <span>Checkbox</span>
+  </label><br>
   <input type="color" placeholder="color" /><br>
   <input type="date" placeholder="date" /><br>
   <input type="datetime" placeholder="datetime" /><br>
@@ -102,7 +102,10 @@
   <input type="month" placeholder="month" /><br>
   <input type="number" placeholder="number" /><br>
   <input type="password" placeholder="password" /><br>
-  <input type="radio" placeholder="radio" /><br>
+  <label class="radio">
+    <input type="radio">
+    <span>Radio button</span>
+  </label><br>
   <input type="range" placeholder="range" /><br>
   <input type="reset" value="Reset" /><br>
   <input type="search" placeholder="search" /><br>
@@ -126,6 +129,7 @@
   
   <!-- RADIO BUTTONS -->
   <h2>Radio buttons</h2>
+  <p>Note: this is optional, it will only appear if the <code>&lt;input&gt;</code> is within a <code>.radio</code></p>
   <label class="radio">
     <input type="radio" name="takeme" checked>
     <span>Preselected</span>
@@ -138,22 +142,9 @@
   
   
   
-  <!-- NO STYLE RADIO BUTTONS -->
-  <h2>Unstyled radio buttons</h2>
-  <label>
-    <input type="radio" name="nostyle" checked>
-    <span>Preselected</span>
-  </label>
-  <br>
-  <label>
-    <input type="radio" name="nostyle">
-    <span>Other</span>
-  </label>
-  
-  
-  
   <!-- CHECKBOX -->
   <h2>Checkbox</h2>
+  <p>Note: this is optional, it will only appear if the <code>&lt;input&gt;</code> is within a <code>.checkbox</code></p>
   <label class="checkbox">
     <input type="checkbox">
     <span>I'm really stylish</span>
@@ -161,14 +152,169 @@
   
   
   
-  <!-- UNSTYLED CHECKBOX -->
-  <h2>Unstyled checkbox</h2>
-  <label>
-    <input type="checkbox">
-    <span>I have no style ):</span>
+  <!-- SELECT -->
+  <h2>Select</h2>
+  <p>Note: this is optional, it will only appear if the <code>&lt;select&gt;</code> is within a <code>.select</code></p>
+  <label class="select">
+    <select>
+      <option>Select an option</option>
+      <option>Good option</option>
+      <option>Nice option</option>
+      <option>Cheap option</option>
+    </select>
   </label>
-
   
+  
+  
+  <!-- TABLES -->
+  <h2>Tables</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>City</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Francisco</td>
+        <td>Valencia</td>
+        <td>23</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>San Francisco</td>
+        <td>22</td>
+      </tr>
+    </tbody>
+  </table>
+    
+  <table>
+    <thead>
+      <tr class = "success">
+        <th>Name</th>
+        <th>City</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Francisco</td>
+        <td>Valencia</td>
+        <td>23</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>San Francisco</td>
+        <td>22</td>
+      </tr>
+    </tbody>
+  </table>
+    
+  <table>
+    <thead>
+      <tr class = "warning">
+        <th>Name</th>
+        <th>City</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Francisco</td>
+        <td>Valencia</td>
+        <td>23</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>San Francisco</td>
+        <td>22</td>
+      </tr>
+    </tbody>
+  </table>
+    
+  <table>
+    <thead>
+      <tr class = "error">
+        <th>Name</th>
+        <th>City</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Francisco</td>
+        <td>Valencia</td>
+        <td>23</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>San Francisco</td>
+        <td>22</td>
+      </tr>
+    </tbody>
+  </table>
+    
+  <table>
+    <thead>
+      <tr class = "dull">
+        <th>Name</th>
+        <th>City</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Francisco</td>
+        <td>Valencia</td>
+        <td>23</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>San Francisco</td>
+        <td>22</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  
+
+  <h2>The second heading looks good enough</h2>
+  <h3>The third one also!</h3>
+  <h4>Does it provide a fourth one?</h4>
+  <h5>Even a fifth one!</h5>
+  
+  <!-- COMMON -->
+  <p>This is a <strong>paragraph</strong>. <em>Lorem ipsum</em> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  
+  <p>A simple list:</p>
+  <ul>
+    <li>First item</li>
+    <li>Second item</li>
+  </ul>
+  
+  <p>An ordered list:</p>
+  <ol>
+    <li>First item</li>
+    <li>Second item</li>
+  </ol>
+  
+  <p>Now we're going to quote someone</p>
+  
+  <blockquote>
+    A person who never made a mistake never tried anything new.
+  </blockquote>
+  
+  Some <code>inline</code> code goes here. Then some block code:
+
+  <pre>
+&lt;link rel="stylesheet" type="text/css" href="//picnicss.com/dist/v2.css"&gt;
+  </pre>
+  
+  
+  <br><br><br><br><br>
   
 </body>
 

@@ -1,115 +1,107 @@
-/* Normal button */
-button,
-input[type='submit'],
-input[type='button'],
-input[type='image'],
-input[type='reset'],
-a.button,
-label.button span {
+/* BUTTONS */
+.button,
+a.button:visited,
+.toggle input + * {
+    @include noselect;
+    
     border: none;
     box-sizing: content-box;
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     display: inline-block;
     font-size: 1em;
-    height: 1.2em;
-    line-height: 1.2em;
+    height: $text-height;
+    line-height: $text-height;
     text-decoration: none;
-    color: inherit;
     vertical-align: middle;
-    padding: .3em 1em .5em;
-    background: #AAA;
+    background: $primary;
     color: #FFF;
-    margin: 0 .2em .2em;
-    box-shadow: inset 0 -.2em rgba(0,0,0,.3);
-    border-radius: .2em;
+    border-radius: $radius;
     cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    transition: all .1s ease 0.1s;
+    transition: $transition-fast;
+    margin: $margin;
+    padding: $padding $padding * 3;
+    
+    @if $deep == true {
+        height: $text-height - .2em;
+        line-height: $text-height;
+        padding: $padding $padding * 3 $padding + .2em;
+        margin: $margin $margin $margin;
+        box-shadow: inset 0 -.2em $dark-overlay;
+    }
 }
 
-/* Allow for tabbing (display: none) doesnt */
-.button input {
+
+
+/* Interactivity */
+.button:hover,
+.button:focus,
+.toggle:hover input + *,
+.toggle input:focus + * {
+    color: #FFF;
+    transition: all .1s ease;
+    box-shadow: inset 0 0 0 100em $soft-dark-overlay;
+    
+    @if $deep == true {
+        margin: $margin + .1em $margin $margin;
+        padding: $padding $padding * 3 $padding + .1em;
+        box-shadow: inset 0 -.1em $dark-overlay;
+    }
+}
+
+.button:active,
+.toggle input:active + *,
+.toggle input:checked + * {
+    box-shadow: inset 0 0 0 100em $dark-overlay;
+    
+    @if $deep == true {
+        margin: $margin + .2em $margin $margin;
+        padding: $padding $padding * 3;
+        box-shadow: inset 0 .1em .1em $dark-overlay;
+    }
+}
+
+
+
+/* Toggle button */
+.toggle input {
     opacity: 0;
     z-index: -10;
     position: absolute;
 }
 
-/* Hover the button */
-button:hover,
-input[type='submit']:hover,
-input[type='button']:hover,
-input[type='image']:hover,
-input[type='reset']:hover,
-a.button:hover,
-label.button:hover span,
-button:focus,
-input[type='submit']:focus,
-input[type='button']:focus,
-input[type='image']:focus,
-input[type='reset']:focus,
-a.button:focus,
-label.button input:focus + span {
-    margin: .1em .2em .2em;
-    padding: .3em 1em .4em;
-    transition: all .1s ease;
-    box-shadow: inset 0 -.1em rgba(0,0,0,.3);
+
+
+/* Colors */
+.button.dull,
+.toggle.dull input + * {
+    background: $dull;
 }
 
-/* Press the button */
-button:active,
-input[type='submit']:active,
-input[type='button']:active,
-input[type='image']:active,
-input[type='reset']:active,
-a.button:active,
-label.button span:active,
-label.button input:checked + span {
-    margin: .2em;
-    padding: .3em 1em;
-    box-shadow: inset 0 .1em .1em rgba(0,0,0,0.3);
+.button.success,
+.toggle.success input + * {
+    background: $success;
 }
 
-/* Different type of buttons */
-button.primary,
-input[type='submit'].primary,
-input[type='button'].primary,
-input[type='image'].primary,
-input[type='reset'].primary,
-a.button.primary,
-label.button.primary span {
-    background: #0074d9;
+.button.warning,
+.toggle.warning input + * {
+    background: $warning;
 }
 
-button.success,
-input[type='submit'].success,
-input[type='button'].success,
-input[type='image'].success,
-input[type='reset'].success,
-a.button.success,
-label.button.success span {
-    background: #2ecc40;
+.button.error,
+.toggle.error input + * {
+    background: $error;
 }
 
-button.warning,
-input[type='submit'].warning,
-input[type='button'].warning,
-input[type='image'].warning,
-input[type='reset'].warning,
-a.button.warning,
-label.button.warning span {
-    background: #ff851b;
-}
 
-button.error,
-input[type='submit'].error,
-input[type='button'].error,
-input[type='image'].error,
-input[type='reset'].error,
-a.button.error,
-label.button.error span {
-    background: #ff4136;
+
+/* This allows for the invasiveness (default styling) */
+@if $invasive == true {
+    button,
+    input[type='submit'],
+    input[type='button'],
+    input[type='image'],
+    input[type='reset'] {
+        @extend .button;
+    }
 }

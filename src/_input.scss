@@ -1,26 +1,41 @@
 /* Browser treats unknow type as "text", so we'll do the same */
 input {
-    line-height: 1.5em;
-    margin: .2em;
-    padding: .2em .5em;
-    border: 1px solid rgba(0,0,0,.3);
-    box-shadow: none;
-    border-radius: .2em;
-    transition: all 0.3s ease;
+    line-height: $text-height;
+    margin: $margin;
+    padding: $padding-text;
+    border: $border;
+    border-radius: $radius;
+    transition: $transition-slow;
 }
 
-input:focus {
-    border-color: #7fdbff;
-    box-shadow: .1em .1em 0 rgba(0, 0, 0, .2);
-    transition: all 0.3s ease;
+input[type=file],
+input[type=color] {
+    padding: $padding;
+    cursor: pointer;
 }
 
+
+input:focus,
+input[type=file]:hover,
+input[type=color]:hover,
+.select select:focus,
+.select select:hover {
+    border-color: $light-primary;
+    transition: $transition-slow;
+    
+    @if $deep == true {
+        box-shadow: .1em .1em 0 $dark-overlay;
+    }
+}
+
+
+/* Validation */
 input:invalid {
-    border-color: #ff4136;
+    border-color: $warning;
 }
 
 input:focus:invalid {
-    border-color: #ff851b;
+    border-color: $error;
 }
 
 /* Reset the style for those that we actually know */

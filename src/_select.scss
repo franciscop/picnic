@@ -2,8 +2,7 @@
     display: inline-block;
     position: relative;
     border: 1px solid rgba(0,0,0,.3);
-    border-radius: .2em;
-    overflow: hidden;
+    border-radius: $radius;
 }
 
 .select:after {
@@ -15,28 +14,30 @@
     right: 0;
     top: 0;
     width: 2.3em;
-    height: 100%;
+    height: calc(100% - .4em);
     pointer-events: none;
     font-size: .8em;
-    line-height: 1.8em;
+    line-height: calc($text-height - .4em);
+    text-align: center;
+    border-radius: $radius;
 }
 
-select {
+.select select {
     padding: 0 2em 0 .3em;
     background: none;
     border: none;
     min-width: 14em;
     -webkit-padding-before: .23em;
     -webkit-padding-after: .17em;
-    
+    border-radius: $radius;
     cursor: pointer;
 }
 
-select:-moz-focusring {
+.select select:-moz-focusring {
     color: transparent;
     text-shadow: 0 0 0 #333;
 }
 
-select option {
+.select select option {
     padding: .2em .5em;
 }

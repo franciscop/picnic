@@ -3,29 +3,29 @@ table {
 }
 
 td,th {
-    padding: .4em 2.4em .4em .6em;
+    padding: $padding 2.4em $padding $padding * 2;
 }
 
 th {
     font-weight: 900;
-    color: #fff;
-    background: #BBB;
-}
-
-.primary th {
-    background-color: #0074D9;
+    color: $white;
+    background-color: $primary;
 }
 
 .success th {
-    background-color: #2ECC40;
+    background-color: $success;
 }
 
 .warning th {
-    background-color: #FF851B;
+    background-color: $warning;
 }
 
 .error th {
-    background-color: #FF4136;
+    background-color: $error;
+}
+
+.dull th {
+    background-color: $dull;
 }
 
 

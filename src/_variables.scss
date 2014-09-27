@@ -1,14 +1,37 @@
-/*
-Defaults:
-  
-  margin: .3em;
-  padding: .3em;
-  border-radius: .2em;
-  darker color: rgba(255, 255, 255, .3);
+/* Style by default the <button>, <input type="submit">, etc? */
+/* Not fully implemented */
+$invasive: true;
 
-*/
+/* Make buttons and other things slightly 3d */
+$deep: true;
 
-
-
+/* Media query breakpoints */
 $tabletWidth: 750px;
 $laptopWidth: 1200px;
+
+/* Default element styles */
+$radius: .2em;
+$margin: .3em;
+$padding: .3em;
+$text-height: 1.5em;
+$padding-text: $padding $padding * 1.5 + .2em;
+
+/* Define the transitions */
+$transition-fast: all .1s ease;
+$transition-slow: all .3s ease;
+
+/* Colors */
+$white: #FFF;
+$black: #333;
+$primary: #0074D9;
+$light-primary: #7FDBFF;
+$success: #2ecc40;
+$warning: #FF851B;
+$error: #FF4136;
+$dull: #AAA;
+$dark-overlay: rgba(0, 0, 0, .3);
+$soft-dark-overlay: rgba(0, 0, 0, .1);
+$clear-overlay: rgba(255, 255, 255, .3);
+
+/* Border */
+$border: 1px solid $dark-overlay;

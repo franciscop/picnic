@@ -18,14 +18,14 @@
 .checkbox input + *:before {
     content: "";
     position: absolute;
-    border-radius: .2em;
+    border-radius: $radius;
     top: .1em;
     line-height: .8em;
     width: 1em;
     height: 1em;
     font-size: .8em;
     padding: .1em;
-    left: 0px;
+    left: $margin;
     content: "✔";
     text-align: center;
     background: #FFF;
@@ -35,8 +35,13 @@
     -webkit-box-sizing: border-box;
 }
 
-.checkbox input:focus + *:before {
+.checkbox input:focus + *:before,
+.checkbox input:hover + *:before {
     border: 1px solid #7fdbff;
+    
+    @if $deep == true {
+        box-shadow: .1em .1em $dark-overlay;
+    }
 }
 
 .checkbox input {
