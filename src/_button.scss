@@ -73,24 +73,28 @@ a.button:visited,
 
 
 /* Colors */
-.button.dull,
-.toggle.dull input + * {
-    background: $dull;
-}
-
 .button.success,
+a.button.success:visited,
 .toggle.success input + * {
     background: $success;
 }
 
 .button.warning,
+a.button.warning:visited,
 .toggle.warning input + * {
     background: $warning;
 }
 
 .button.error,
+a.button.error:visited,
 .toggle.error input + * {
     background: $error;
+}
+
+.button.dull,
+a.button.dull:visited,
+.toggle.dull input + * {
+    background: $dull;
 }
 
 

@@ -429,17 +429,17 @@ a, a:hover, a:active, a:visited {
   position: absolute; }
 
 /* Colors */
-.button.dull, button.dull, input.dull[type='submit'], input.dull[type='button'], input.dull[type='image'], input.dull[type='reset'], .toggle.dull input + * {
-  background: #AAA; }
-
-.button.success, button.success, input.success[type='submit'], input.success[type='button'], input.success[type='image'], input.success[type='reset'], .toggle.success input + * {
+.button.success, button.success, input.success[type='submit'], input.success[type='button'], input.success[type='image'], input.success[type='reset'], a.button.success:visited, .toggle.success input + * {
   background: #2ecc40; }
 
-.button.warning, button.warning, input.warning[type='submit'], input.warning[type='button'], input.warning[type='image'], input.warning[type='reset'], .toggle.warning input + * {
+.button.warning, button.warning, input.warning[type='submit'], input.warning[type='button'], input.warning[type='image'], input.warning[type='reset'], a.button.warning:visited, .toggle.warning input + * {
   background: #FF851B; }
 
-.button.error, button.error, input.error[type='submit'], input.error[type='button'], input.error[type='image'], input.error[type='reset'], .toggle.error input + * {
+.button.error, button.error, input.error[type='submit'], input.error[type='button'], input.error[type='image'], input.error[type='reset'], a.button.error:visited, .toggle.error input + * {
   background: #FF4136; }
+
+.button.dull, button.dull, input.dull[type='submit'], input.dull[type='button'], input.dull[type='image'], input.dull[type='reset'], a.button.dull:visited, .toggle.dull input + * {
+  background: #AAA; }
 
 /* This allows for the invasiveness (default styling) */
 table {
