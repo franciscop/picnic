@@ -1,14 +1,14 @@
 # Picnic CSS Versions
 
-From newer to older
+Full number version mean significant features added / removed, with loss of backward compatibility. The bug fixes are added to the current version. So all bugfixes for v1 are added to v1.css, and the new features to the /latest.css. Small, changes are added as sub-versions.
 
 
 
 ## Version 2.0 [planned]
 
+- `fonts`: Set a default nice font from Google fonts
 - `<main>`: Make it responsive by default
 - `<footer>`: The body scrolls up while showing it from behind
-- `fonts`: Set a default nice font from Google fonts
 
 
 
