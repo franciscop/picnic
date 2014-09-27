@@ -789,6 +789,8 @@ input[type=radio]:focus, input[type=checkbox]:focus {
   vertical-align: super; }
 
 .checkbox input + *:before {
+  /* Tick */
+  content: "\2714";
   position: absolute;
   border-radius: 0.2em;
   top: 0.1em;
@@ -798,7 +800,6 @@ input[type=radio]:focus, input[type=checkbox]:focus {
   font-size: 0.8em;
   padding: 0.1em;
   left: 0.3em;
-  content: "\2714";
   text-align: center;
   background: #FFF;
   color: transparent;
