@@ -13,10 +13,13 @@
 /* Match the element following input */
 .checkbox input + * {
     vertical-align: super;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .checkbox input + *:before {
-    content: "";
     position: absolute;
     border-radius: .2em;
     top: .1em;
@@ -26,7 +29,7 @@
     font-size: .8em;
     padding: .1em;
     left: 0px;
-    content: "✔";
+    content: '✔';
     text-align: center;
     background: #FFF;
     color: transparent;
