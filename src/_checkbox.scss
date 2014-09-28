@@ -28,16 +28,16 @@
     padding: .1em;
     left: $margin;
     text-align: center;
-    background: #FFF;
+    background: $white;
     color: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    border: $border;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
 
 .checkbox input:focus + *:before,
 .checkbox input:hover + *:before {
-    border: 1px solid #7fdbff;
+    border: 1px solid $aqua;
 }
 
 .checkbox input {
@@ -45,5 +45,5 @@
 }
 
 .checkbox input:checked + *:before {
-    color: #555;
+    color: $light-black;
 }

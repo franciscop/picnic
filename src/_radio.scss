@@ -16,37 +16,21 @@
 }
 
 /* Not to repeat them */
-.radio input + *:before,
-.radio input + *:after {
+.radio input + *:before {
     content: "";
     position: absolute;
-    border: 2px solid white;
+    border: 3px solid $white;
     border-radius: 100em;
     margin: .1em 0;
-}
-
-.radio input + *:before {    
-    min-width: .8em;
-    height: .8em;
     top: 0;
     line-height: .8;
     width: .8em;
     height: .8em;
     left: $margin;
-    background: #FFF;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+    background: $white;
+    box-shadow: 0 0 0 1px $dark-overlay;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
-}
-
-.radio input + *:after {
-    border: none;
-    top: 0.2em;
-    left: 0.2em;
-    width: 0.4em;
-    height: 0.4em;
-    background: #555;
-    opacity: 0;
 }
 
 .radio input {
@@ -55,9 +39,9 @@
 
 .radio input:focus + *:before,
 .radio input:hover + *:before {
-    box-shadow: 0 0 0 1px #7fdbff;
+    box-shadow: 0 0 0 1px $aqua;
 }
 
 .radio input:checked + *:before {
-    background: #555;
+    background: $light-black;
 }
