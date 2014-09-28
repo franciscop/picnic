@@ -429,7 +429,7 @@ a, a:hover, a:active, a:visited {
   position: absolute; }
 
 /* Colors */
-.button.success, button.success, input.success[type='submit'], input.success[type='button'], input.success[type='image'], input.success[type='reset'], a.button.success:visited, .toggle.success input + * {
+.button.success, button.success, input.success[type='submit'], input.success[type='button'], input.success[type='image'], input.success[type='reset'], .button.success:visited, button.success:visited, input.success[type='submit']:visited, input.success[type='button']:visited, input.success[type='image']:visited, input.success[type='reset']:visited, .toggle.success input + * {
   background: #2ecc40; }
 
 .button.warning, button.warning, input.warning[type='submit'], input.warning[type='button'], input.warning[type='image'], input.warning[type='reset'], a.button.warning:visited, .toggle.warning input + * {
@@ -724,7 +724,8 @@ input:focus, input[type=file]:hover, input[type=color]:hover, .select select:foc
 
 /* Validation */
 input:invalid {
-  border-color: #FF851B; }
+  border-color: #FF851B;
+  -moz-box-shadow: none; }
 
 input:focus:invalid {
   border-color: #FF4136; }

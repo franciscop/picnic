@@ -32,6 +32,7 @@ input[type=color]:hover,
 /* Validation */
 input:invalid {
     border-color: $warning;
+    -moz-box-shadow: none;
 }
 
 input:focus:invalid {

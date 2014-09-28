@@ -724,7 +724,8 @@ input:focus, input[type=file]:hover, input[type=color]:hover, .select select:foc
 
 /* Validation */
 input:invalid {
-  border-color: #FF851B; }
+  border-color: #FF851B;
+  -moz-box-shadow: none; }
 
 input:focus:invalid {
   border-color: #FF4136; }
