@@ -6,7 +6,7 @@
     "picnicss <developerfrancisco@hotmail.com>"
   ],
   "description": "Semantic HTML5 & nice CSS3",
-  "main": "dist/latest.min.css",
+  "main": "releases/latest.min.css",
   "keywords": [
     "css",
     "semantic",

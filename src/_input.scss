@@ -18,6 +18,7 @@ input[type=color] {
 input:focus,
 input[type=file]:hover,
 input[type=color]:hover,
+input:invalid:focus,
 .select select:focus,
 .select select:hover {
     border-color: $light-primary;
@@ -32,7 +33,7 @@ input[type=color]:hover,
 /* Validation */
 input:invalid {
     border-color: $warning;
-    -moz-box-shadow: none;
+    box-shadow: none;
 }
 
 input:focus:invalid {
