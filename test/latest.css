@@ -717,14 +717,15 @@ input[type=file], input[type=color] {
   padding: 0.3em;
   cursor: pointer; }
 
-input:focus, input[type=file]:hover, input[type=color]:hover, .select select:focus, .select select:hover {
+input:focus, input[type=file]:hover, input[type=color]:hover, input:invalid:focus, .select select:focus, .select select:hover {
   border-color: #7FDBFF;
   transition: all 0.3s ease;
   box-shadow: 0.1em 0.1em 0 rgba(0, 0, 0, 0.3); }
 
 /* Validation */
 input:invalid {
-  border-color: #FF851B; }
+  border-color: #FF851B;
+  box-shadow: none; }
 
 input:focus:invalid {
   border-color: #FF4136; }
@@ -795,8 +796,8 @@ input[type=radio]:focus, input[type=checkbox]:focus {
   border-radius: 0.2em;
   top: 0.1em;
   line-height: 0.8em;
-  width: 1em;
-  height: 1em;
+  width: 1.1em;
+  height: 1.1em;
   font-size: 0.8em;
   padding: 0.1em;
   left: 0.3em;
@@ -832,16 +833,12 @@ input[type=radio]:focus, input[type=checkbox]:focus {
   vertical-align: super; }
 
 /* Not to repeat them */
-.radio input + *:before, .radio input + *:after {
+.radio input + *:before {
   content: "";
   position: absolute;
-  border: 2px solid white;
+  border: 3px solid #FFF;
   border-radius: 100em;
-  margin: 0.1em 0; }
-
-.radio input + *:before {
-  min-width: 0.8em;
-  height: 0.8em;
+  margin: 0.1em 0;
   top: 0;
   line-height: 0.8;
   width: 0.8em;
@@ -851,15 +848,6 @@ input[type=radio]:focus, input[type=checkbox]:focus {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
   -webkit-box-sizing: border-box; }
-
-.radio input + *:after {
-  border: none;
-  top: 0.2em;
-  left: 0.2em;
-  width: 0.4em;
-  height: 0.4em;
-  background: #555;
-  opacity: 0; }
 
 .radio input {
   opacity: 0; }

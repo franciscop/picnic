@@ -13,7 +13,7 @@ gulp.task('watch', ['build'], function() {
 gulp.task('test', [], function() {
 	return gulp.src('./src/picnic.scss')
 		.pipe(sass())
-		.pipe(rename('latest.min.css'))
+		.pipe(rename('latest.css'))
 		.pipe(gulp.dest('./test/'));;
 });
 
