@@ -750,7 +750,7 @@ input[type=radio]:focus, input[type=checkbox]:focus {
   right: 0;
   top: 0;
   width: 2.3em;
-  height: calc(100% - .25em);
+  height: calc(100% - .22em);
   pointer-events: none;
   font-size: 0.8em;
   line-height: 2.2em;
