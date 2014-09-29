@@ -6,7 +6,6 @@
 }
 
 .select:after {
-    //padding: 0.4em 0 0em 1.3em;
     padding: 1.2% 0 0 0;
     background: #FFF;
     content: "\25BC";
@@ -15,10 +14,9 @@
     right: 0;
     top: 0;
     width: 2.3em;
-    height: calc(100% - .2em);
+    height: calc(100% - .25em);
     pointer-events: none;
     font-size: .8em;
-    //line-height: calc($text-height - .2em);
     line-height:2.2em;
     text-align: center;
     border-radius: $radius;
