@@ -6,7 +6,8 @@
 }
 
 .select:after {
-    padding: .2em 0 .2em 1.3em;
+    //padding: 0.4em 0 0em 1.3em;
+    padding: 1.2% 0 0 0;
     background: #FFF;
     content: "\25BC";
     display: block;
@@ -14,21 +15,24 @@
     right: 0;
     top: 0;
     width: 2.3em;
-    height: calc(100% - .4em);
+    height: calc(100% - .2em);
     pointer-events: none;
     font-size: .8em;
-    line-height: calc($text-height - .4em);
+    //line-height: calc($text-height - .2em);
+    line-height:2.2em;
     text-align: center;
     border-radius: $radius;
 }
 
 .select select {
-    padding: 0 2em 0 .3em;
+    //padding: 0 2em 0 .3em;
+    padding:0.23em 0 0.23em 0.23em;
     background: none;
+    -moz-appearance: none; 
+    -webkit-appearance: none; 
+    appearance: none;
     border: none;
     min-width: 14em;
-    -webkit-padding-before: .23em;
-    -webkit-padding-after: .17em;
     border-radius: $radius;
     cursor: pointer;
 }
