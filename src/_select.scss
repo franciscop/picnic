@@ -13,11 +13,11 @@
     position: absolute;
     right: 0;
     top: 0;
+    bottom: 0;
     width: 2.3em;
-    height: calc(100% - .22em);
     pointer-events: none;
     font-size: .8em;
-    line-height:2.2em;
+    line-height:2.3em;
     text-align: center;
     border-radius: $radius;
 }
