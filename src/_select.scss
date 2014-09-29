@@ -25,6 +25,9 @@
 .select select {
     padding: 0 2em 0 .3em;
     background: none;
+    -moz-appearance: none; 
+    -webkit-appearance: none; 
+    appearance: none;
     border: none;
     min-width: 14em;
     -webkit-padding-before: .23em;
