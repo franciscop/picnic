@@ -24,8 +24,9 @@
   "homepage": "https://github.com/picnicss/picnic",
   "devDependencies": {
     "gulp": "^3.8.8",
-    "gulp-sass": "^0.7.3",
+    "gulp-autoprefixer": "^1.0.1",
+    "gulp-minify-css": "^0.3.8",
     "gulp-rename": "^1.2.0",
-    "gulp-minify-css": "^0.3.8"
+    "gulp-sass": "^0.7.3"
   }
 }
