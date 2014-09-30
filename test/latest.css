@@ -380,9 +380,6 @@ a, a:hover, a:active, a:visited {
 
 /* BUTTONS */
 .button, button, input[type='submit'], input[type='button'], input[type='image'], input[type='reset'], a.button:visited, .toggle input + * {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   border: none;
   box-sizing: content-box;
