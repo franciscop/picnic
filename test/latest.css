@@ -386,8 +386,6 @@ a, a:hover, a:active, a:visited {
   user-select: none;
   border: none;
   box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   display: inline-block;
   font-size: 1em;
   height: 1.5em;

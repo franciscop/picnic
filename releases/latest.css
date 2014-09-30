@@ -243,6 +243,7 @@ input {
  * 2. Remove excess padding in IE 8/9/10.
  */
 input[type="checkbox"], input[type="radio"] {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -265,7 +266,6 @@ input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -385,9 +385,8 @@ a, a:hover, a:active, a:visited {
   -ms-user-select: none;
   user-select: none;
   border: none;
-  box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
+  box-sizing: content-box;
   display: inline-block;
   font-size: 1em;
   height: 1.5em;
@@ -398,6 +397,7 @@ a, a:hover, a:active, a:visited {
   color: #FFF;
   border-radius: 0.2em;
   cursor: pointer;
+  -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
   margin: 0.3em;
   padding: 0.3em 0.9em;
@@ -410,6 +410,7 @@ a, a:hover, a:active, a:visited {
 /* Interactivity */
 .button:hover, button:hover, input[type='submit']:hover, input[type='button']:hover, input[type='image']:hover, input[type='reset']:hover, .button:focus, button:focus, input[type='submit']:focus, input[type='button']:focus, input[type='image']:focus, input[type='reset']:focus, .toggle:hover input + *, .toggle input:focus + * {
   color: #FFF;
+  -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
   box-shadow: inset 0 0 0 100em rgba(0, 0, 0, 0.1);
   margin: 0.4em 0.3em 0.3em;
@@ -474,6 +475,7 @@ tr:nth-child(even) {
   overflow: auto; }
 
 [class*="full"], [class*="half"], [class*="third"], [class*="fourth"], [class*="fifth"], [class*="sixth"] {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   float: left;
   padding-left: 0;
@@ -578,6 +580,7 @@ nav {
   background: #FFF;
   box-shadow: 0 0 0.6em rgba(0, 0, 0, 0.3);
   z-index: 10;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease; }
 
 nav.transparent {
@@ -663,8 +666,10 @@ nav .menu {
     line-height: 1.5em;
     padding-right: 0.5em;
     text-align: right;
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     /* Avoid the burguer menu to display while hiding */
+    -webkit-transition: display 0s ease 0.3s;
     transition: display 0s ease 0.3s; }
   .burgercheck:checked ~ label:before, .burgercheck:checked ~ label:after {
     display: none; }
@@ -673,6 +678,7 @@ nav .menu {
     right: 70%;
     width: 30%;
     height: 100%;
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     background: rgba(255, 255, 255, 0.7); }
   nav .menu {
@@ -685,9 +691,11 @@ nav .menu {
     background: #FFF;
     box-shadow: 0 0 0.6em rgba(0, 0, 0, 0.3);
     overflow: auto;
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease; }
   .burgercheck:checked ~ .menu {
     right: 0;
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease; }
   nav .menu a {
     display: block;
@@ -711,6 +719,7 @@ input {
   padding: 0.3em 0.65em;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 0.2em;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease; }
 
 input[type=file], input[type=color] {
@@ -719,6 +728,7 @@ input[type=file], input[type=color] {
 
 input:focus, input[type=file]:hover, input[type=color]:hover, input:invalid:focus, .select select:focus, .select select:hover {
   border-color: #7FDBFF;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   box-shadow: 0.1em 0.1em 0 rgba(0, 0, 0, 0.3); }
 
@@ -806,6 +816,7 @@ input[type=radio]:focus, input[type=checkbox]:focus {
   background: #FFF;
   color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.3);
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-box-sizing: border-box; }
 
@@ -847,6 +858,7 @@ input[type=radio]:focus, input[type=checkbox]:focus {
   left: 0.3em;
   background: #FFF;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-box-sizing: border-box; }
 
