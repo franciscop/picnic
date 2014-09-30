@@ -817,8 +817,7 @@ input[type=radio]:focus, input[type=checkbox]:focus {
   color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.3);
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box; }
+  box-sizing: border-box; }
 
 .checkbox input:focus + *:before, .checkbox input:hover + *:before {
   border: 1px solid #7fdbff; }
