@@ -663,7 +663,7 @@ nav .menu {
     text-align: right;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    /* Avoid the burguer menu to display while hiding */
+    /* Avoid the burger menu to display while hiding */
     -webkit-transition: display 0s ease 0.3s;
     transition: display 0s ease 0.3s; }
   .burgercheck:checked ~ label:before, .burgercheck:checked ~ label:after {

@@ -659,7 +659,7 @@ nav .menu {
     padding-right: 0.5em;
     text-align: right;
     transition: all 0.3s ease;
-    /* Avoid the burguer menu to display while hiding */
+    /* Avoid the burger menu to display while hiding */
     transition: display 0s ease 0.3s; }
   .burgercheck:checked ~ label:before, .burgercheck:checked ~ label:after {
     display: none; }
