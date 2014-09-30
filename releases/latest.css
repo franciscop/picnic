@@ -851,8 +851,7 @@ input[type=radio]:focus, input[type=checkbox]:focus {
   left: 0.3em;
   background: #FFF;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box; }
+  box-sizing: border-box; }
 
 .radio input {
   opacity: 0; }
