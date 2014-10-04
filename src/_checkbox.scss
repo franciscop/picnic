@@ -1,47 +1,12 @@
-.checkbox {
-    position: relative;
-    display: inline-block;
-    min-width: 1em;
-    min-height: 1.25em;
-    line-height: 1em;
-    margin: .2em 0 -.2em;
-    outline: 0px none;
-    vertical-align: middle;
-    cursor: pointer;
-}
-
-/* Match the element following input */
-.checkbox input + * {
-    vertical-align: super;
-}
-
 .checkbox input + *:before {
-    /* Tick */
-    content: "\2714";
-    position: absolute;
-    border-radius: $radius;
-    top: .1em;
-    line-height: .8em;
-    width: 1.1em;
-    height: 1.1em;
-    font-size: .8em;
-    padding: .1em;
-    left: $margin;
-    text-align: center;
-    background: $white;
-    color: transparent;
     border: $border;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
+    border-radius: $radius;
+    padding: .1em .05em;
 }
 
 .checkbox input:focus + *:before,
 .checkbox input:hover + *:before {
     border: 1px solid $aqua;
-}
-
-.checkbox input {
-    opacity: 0;
 }
 
 .checkbox input:checked + *:before {

@@ -1,0 +1,41 @@
+.radio,
+.checkbox {
+    position: relative;
+    display: inline-block;
+    min-width: 1em;
+    min-height: 1.25em;
+    line-height: 1em;
+    margin: .2em 0 -.2em;
+    outline: 0px none;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.radio input + *:before,
+.checkbox input + *:before {
+    display: inline-block;
+    margin: 0 $margin 0;
+    box-sizing: border-box;
+    background: $white;
+    width: 1em;
+    height: 1em;
+    font-size: .8em;
+    content: "\2714";           /* Tick */
+    color: transparent;
+    line-height: .8em;
+}
+
+.radio input,
+.checkbox input {
+    opacity: 0;
+    position:absolute;
+}
+
+.radio input:focus + *:before,
+.radio input:hover + *:before {
+    box-shadow: 0 0 0 1px $aqua;
+}
+
+.radio input:checked + *:before {
+    background: $light-black;
+}

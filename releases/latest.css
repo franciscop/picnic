@@ -736,8 +736,8 @@ input[type=radio]:focus, input[type=checkbox]:focus {
   border-color: initial; }
 
 .select {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 0.2em; }
 
@@ -775,7 +775,7 @@ input[type=radio]:focus, input[type=checkbox]:focus {
 .select select option {
   padding: 0.2em 0.5em; }
 
-.checkbox {
+.radio, .checkbox {
   position: relative;
   display: inline-block;
   min-width: 1em;
@@ -786,72 +786,44 @@ input[type=radio]:focus, input[type=checkbox]:focus {
   vertical-align: middle;
   cursor: pointer; }
 
-/* Match the element following input */
-.checkbox input + * {
-  vertical-align: super; }
+.radio input + *:before, .checkbox input + *:before {
+  display: inline-block;
+  margin: 0 0.3em 0;
+  box-sizing: border-box;
+  background: #FFF;
+  width: 1em;
+  height: 1em;
+  font-size: 0.8em;
+  content: "\2714";
+  /* Tick */
+  color: transparent;
+  line-height: 0.8em; }
+
+.radio input, .checkbox input {
+  opacity: 0;
+  position: absolute; }
+
+.radio input:focus + *:before, .radio input:hover + *:before {
+  box-shadow: 0 0 0 1px #7fdbff; }
+
+.radio input:checked + *:before {
+  background: #555; }
 
 .checkbox input + *:before {
-  /* Tick */
-  content: "\2714";
-  position: absolute;
-  border-radius: 0.2em;
-  top: 0.1em;
-  line-height: 0.8em;
-  width: 1.1em;
-  height: 1.1em;
-  font-size: 0.8em;
-  padding: 0.1em;
-  left: 0.3em;
-  text-align: center;
-  background: #FFF;
-  color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.3);
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box; }
+  border-radius: 0.2em;
+  padding: 0.1em 0.05em; }
 
 .checkbox input:focus + *:before, .checkbox input:hover + *:before {
   border: 1px solid #7fdbff; }
 
-.checkbox input {
-  opacity: 0; }
-
 .checkbox input:checked + *:before {
   color: #555; }
 
-.radio {
-  position: relative;
-  display: inline-block;
-  min-width: 1em;
-  min-height: 1.25em;
-  line-height: 1em;
-  margin: 0.2em 0 -0.2em;
-  outline: 0px none;
-  vertical-align: middle;
-  cursor: pointer; }
-
-/* Match the element following input */
-.radio input + * {
-  vertical-align: super; }
-
-/* Not to repeat them */
 .radio input + *:before {
-  content: "";
-  position: absolute;
   border: 3px solid #FFF;
   border-radius: 100em;
-  margin: 0.1em 0;
-  top: 0;
-  line-height: 0.8;
-  width: 0.8em;
-  height: 0.8em;
-  left: 0.3em;
-  background: #FFF;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box; }
-
-.radio input {
-  opacity: 0; }
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3); }
 
 .radio input:focus + *:before, .radio input:hover + *:before {
   box-shadow: 0 0 0 1px #7fdbff; }

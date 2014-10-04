@@ -1,40 +1,7 @@
-.radio {
-    position: relative;
-    display: inline-block;
-    min-width: 1em;
-    min-height: 1.25em;
-    line-height: 1em;
-    margin: .2em 0 -.2em;
-    outline: 0px none;
-    vertical-align: middle;
-    cursor: pointer;
-}
-
-/* Match the element following input */
-.radio input + * {
-    vertical-align: super;
-}
-
-/* Not to repeat them */
 .radio input + *:before {
-    content: "";
-    position: absolute;
     border: 3px solid $white;
     border-radius: 100em;
-    margin: .1em 0;
-    top: 0;
-    line-height: .8;
-    width: .8em;
-    height: .8em;
-    left: $margin;
-    background: $white;
     box-shadow: 0 0 0 1px $dark-overlay;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-}
-
-.radio input {
-    opacity: 0;
 }
 
 .radio input:focus + *:before,
