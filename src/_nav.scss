@@ -4,7 +4,7 @@ nav {
     text-align: center;
     top: 0;
     background: #FFF;
-    box-shadow: 0 0 .6em rgba(0,0,0,.3);
+    box-shadow: 0 0 .6em $picnic-dark-overlay;
     z-index: 10;
     transition: all .3s ease;
 }
@@ -16,12 +16,12 @@ nav.transparent {
 
 nav.transparent a,
 nav.transparent a:visited {
-    color: #FFF;
+    color: $picnic-white;
 }
 
 nav a,
 nav a:visited {
-    color: #333;
+    color: $picnic-black;
     display: inline-block;
     font-size: 1em;
     height: 2em;
@@ -30,13 +30,13 @@ nav a:visited {
 }
 
 nav a:hover {
-    color: #333;
+    color: $picnic-black;
     box-shadow: inset 0 -.2em 0 #7fdbff;
 }
 
 nav a.button,
 nav a.button:hover {
-    color: #FFF;
+    color: $picnic-white;
     line-height: 1.4em;
 }
 
@@ -98,7 +98,7 @@ nav .menu {
     }
 }
 
-@media all and (max-width: 750px) {
+@media all and (max-width: $picnic-tablet-width) {
     [class*="icon-"]:before {
         display: inline-block;
     }
@@ -141,8 +141,8 @@ nav .menu {
         right: -70%;
         top: 0;
         margin-right: 0;
-        background: #FFF;
-        box-shadow: 0 0 .6em rgba(0,0,0,.3);
+        background: $picnic-white;
+        box-shadow: 0 0 .6em $picnic-dark-overlay;
         overflow: auto;
         transition: all .3s ease;
     }
@@ -172,6 +172,6 @@ nav .menu {
     }
 
     .transparent .menu {
-        color: #333;
+        color: $picnic-black;
     }
 }

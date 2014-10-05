@@ -19,16 +19,16 @@
 .radio input + *:before {
     content: "";
     position: absolute;
-    border: 3px solid $white;
+    border: 3px solid $picnic-white;
     border-radius: 100em;
     margin: .1em 0;
     top: 0;
     line-height: .8;
     width: .8em;
     height: .8em;
-    left: $margin;
-    background: $white;
-    box-shadow: 0 0 0 1px $dark-overlay;
+    left: $picnic-margin;
+    background: $picnic-white;
+    box-shadow: 0 0 0 1px $picnic-dark-overlay;
     box-sizing: border-box;
 }
 
@@ -38,9 +38,9 @@
 
 .radio input:focus + *:before,
 .radio input:hover + *:before {
-    box-shadow: 0 0 0 1px $aqua;
+    box-shadow: 0 0 0 1px $picnic-aqua;
 }
 
 .radio input:checked + *:before {
-    background: $light-black;
+    background: $picnic-light-black;
 }

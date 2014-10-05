@@ -326,7 +326,6 @@ td, th {
 /* Define the transitions */
 /* Colors */
 /* Border */
-/* Some light mixins */
 /* Generic styles for things like <body>, <a> and others
    It also overwrites normalize.css a bit */
 /* Delete the outline when links are active */
@@ -352,7 +351,7 @@ li {
 /* The <pre> doesn't have a nice style from Normalize.css */
 pre {
   text-align: left;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: rgba(0, 0, 0, 0.1);
   background: rgba(0, 0, 0, 0.05);
   padding: 0.3em; }
 
@@ -364,7 +363,7 @@ code {
 blockquote {
   padding: 0 0 0 1em;
   margin: 0 0 0 0.1em;
-  box-shadow: inset 5px 0px rgba(0, 0, 0, 0.2); }
+  box-shadow: inset 5px 0px rgba(0, 0, 0, 0.3); }
 
 /* Nice fontello trick from Ronen Ackerman ( http://stackoverflow.com/a/17561467 ) */
 i[class^="icon-"]:before, i[class*=" icon-"]:before {

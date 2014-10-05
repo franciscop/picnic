@@ -19,24 +19,24 @@
     /* Tick */
     content: "\2714";
     position: absolute;
-    border-radius: $radius;
+    border-radius: $picnic-radius;
     top: .1em;
     line-height: .8em;
     width: 1.1em;
     height: 1.1em;
     font-size: .8em;
     padding: .1em;
-    left: $margin;
+    left: $picnic-margin;
     text-align: center;
-    background: $white;
+    background: $picnic-white;
     color: transparent;
-    border: $border;
+    border: $picnic-border;
     box-sizing: border-box;
 }
 
 .checkbox input:focus + *:before,
 .checkbox input:hover + *:before {
-    border: 1px solid $aqua;
+    border: 1px solid $picnic-aqua;
 }
 
 .checkbox input {
@@ -44,5 +44,5 @@
 }
 
 .checkbox input:checked + *:before {
-    color: $light-black;
+    color: $picnic-light-black;
 }

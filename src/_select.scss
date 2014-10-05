@@ -2,12 +2,12 @@
     display: inline-block;
     position: relative;
     border: 1px solid rgba(0,0,0,.3);
-    border-radius: $radius;
+    border-radius: $picnic-radius;
 }
 
 .select:after {
     padding: 1.2% 0 0 0;
-    background: #FFF;
+    background: $picnic-white;
     content: "\25BC";
     display: block;
     position: absolute;
@@ -19,7 +19,7 @@
     font-size: .8em;
     line-height:2.3em;
     text-align: center;
-    border-radius: $radius;
+    border-radius: $picnic-radius;
 }
 
 .select select {
@@ -27,18 +27,18 @@
     background: none;
     //vendor prefixes required, see:
     //https://github.com/postcss/autoprefixer#why-doesnt-autoprefixer-support-appearance
-    -moz-appearance: none; 
-    -webkit-appearance: none; 
+    -moz-appearance: none;
+    -webkit-appearance: none;
     appearance: none;
     border: none;
     min-width: 14em;
-    border-radius: $radius;
+    border-radius: $picnic-radius;
     cursor: pointer;
 }
 
 .select select:-moz-focusring {
     color: transparent;
-    text-shadow: 0 0 0 #333;
+    text-shadow: 0 0 0 $picnic-black;
 }
 
 .select select option {
