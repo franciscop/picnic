@@ -14,7 +14,6 @@ input[type=color] {
     cursor: pointer;
 }
 
-
 input:focus,
 input[type=file]:hover,
 input[type=color]:hover,
@@ -29,7 +28,6 @@ input:invalid:focus,
     }
 }
 
-
 /* Validation */
 input:invalid {
     border-color: $warning;
@@ -43,6 +41,6 @@ input:focus:invalid {
 /* Reset the style for those that we actually know */
 input[type=radio]:focus,
 input[type=checkbox]:focus {
-  box-shadow: none;
-  border-color: initial;
-  }
+    box-shadow: none;
+    border-color: initial;
+}

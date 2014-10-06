@@ -1,7 +1,11 @@
 .checkbox input + *:before {
     border: $border;
+<<<<<<< HEAD
     border-radius: $radius;
     padding: .1em .05em;
+=======
+    box-sizing: border-box;
+>>>>>>> f809fc136b38de346b6a077857ae41e9f5698b00
 }
 
 .checkbox input:focus + *:before,

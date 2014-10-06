@@ -380,14 +380,9 @@ a, a:hover, a:active, a:visited {
 
 /* BUTTONS */
 .button, button, input[type='submit'], input[type='button'], input[type='image'], input[type='reset'], a.button:visited, .toggle input + * {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   border: none;
   box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   display: inline-block;
   font-size: 1em;
   height: 1.5em;
@@ -664,7 +659,7 @@ nav .menu {
     padding-right: 0.5em;
     text-align: right;
     transition: all 0.3s ease;
-    /* Avoid the burguer menu to display while hiding */
+    /* Avoid the burger menu to display while hiding */
     transition: display 0s ease 0.3s; }
   .burgercheck:checked ~ label:before, .burgercheck:checked ~ label:after {
     display: none; }
@@ -811,8 +806,12 @@ input[type=radio]:focus, input[type=checkbox]:focus {
 
 .checkbox input + *:before {
   border: 1px solid rgba(0, 0, 0, 0.3);
+<<<<<<< HEAD
   border-radius: 0.2em;
   padding: 0.1em 0.05em; }
+=======
+  box-sizing: border-box; }
+>>>>>>> f809fc136b38de346b6a077857ae41e9f5698b00
 
 .checkbox input:focus + *:before, .checkbox input:hover + *:before {
   border: 1px solid #7fdbff; }
@@ -823,7 +822,22 @@ input[type=radio]:focus, input[type=checkbox]:focus {
 .radio input + *:before {
   border: 3px solid #FFF;
   border-radius: 100em;
+<<<<<<< HEAD
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3); }
+=======
+  margin: 0.1em 0;
+  top: 0;
+  line-height: 0.8;
+  width: 0.8em;
+  height: 0.8em;
+  left: 0.3em;
+  background: #FFF;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box; }
+
+.radio input {
+  opacity: 0; }
+>>>>>>> f809fc136b38de346b6a077857ae41e9f5698b00
 
 .radio input:focus + *:before, .radio input:hover + *:before {
   box-shadow: 0 0 0 1px #7fdbff; }

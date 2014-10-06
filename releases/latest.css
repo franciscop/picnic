@@ -150,7 +150,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -264,8 +263,6 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -386,8 +383,6 @@ a, a:hover, a:active, a:visited {
   user-select: none;
   border: none;
   box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   display: inline-block;
   font-size: 1em;
   height: 1.5em;
@@ -398,6 +393,7 @@ a, a:hover, a:active, a:visited {
   color: #FFF;
   border-radius: 0.2em;
   cursor: pointer;
+  -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
   margin: 0.3em;
   padding: 0.3em 0.9em;
@@ -410,6 +406,7 @@ a, a:hover, a:active, a:visited {
 /* Interactivity */
 .button:hover, button:hover, input[type='submit']:hover, input[type='button']:hover, input[type='image']:hover, input[type='reset']:hover, .button:focus, button:focus, input[type='submit']:focus, input[type='button']:focus, input[type='image']:focus, input[type='reset']:focus, .toggle:hover input + *, .toggle input:focus + * {
   color: #FFF;
+  -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
   box-shadow: inset 0 0 0 100em rgba(0, 0, 0, 0.1);
   margin: 0.4em 0.3em 0.3em;
@@ -578,6 +575,7 @@ nav {
   background: #FFF;
   box-shadow: 0 0 0.6em rgba(0, 0, 0, 0.3);
   z-index: 10;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease; }
 
 nav.transparent {
@@ -663,8 +661,10 @@ nav .menu {
     line-height: 1.5em;
     padding-right: 0.5em;
     text-align: right;
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    /* Avoid the burguer menu to display while hiding */
+    /* Avoid the burger menu to display while hiding */
+    -webkit-transition: display 0s ease 0.3s;
     transition: display 0s ease 0.3s; }
   .burgercheck:checked ~ label:before, .burgercheck:checked ~ label:after {
     display: none; }
@@ -673,6 +673,7 @@ nav .menu {
     right: 70%;
     width: 30%;
     height: 100%;
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     background: rgba(255, 255, 255, 0.7); }
   nav .menu {
@@ -685,9 +686,11 @@ nav .menu {
     background: #FFF;
     box-shadow: 0 0 0.6em rgba(0, 0, 0, 0.3);
     overflow: auto;
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease; }
   .burgercheck:checked ~ .menu {
     right: 0;
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease; }
   nav .menu a {
     display: block;
@@ -711,6 +714,7 @@ input {
   padding: 0.3em 0.65em;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 0.2em;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease; }
 
 input[type=file], input[type=color] {
@@ -719,6 +723,7 @@ input[type=file], input[type=color] {
 
 input:focus, input[type=file]:hover, input[type=color]:hover, input:invalid:focus, .select select:focus, .select select:hover {
   border-color: #7FDBFF;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   box-shadow: 0.1em 0.1em 0 rgba(0, 0, 0, 0.3); }
 
@@ -811,8 +816,12 @@ input[type=radio]:focus, input[type=checkbox]:focus {
 
 .checkbox input + *:before {
   border: 1px solid rgba(0, 0, 0, 0.3);
+<<<<<<< HEAD
   border-radius: 0.2em;
   padding: 0.1em 0.05em; }
+=======
+  box-sizing: border-box; }
+>>>>>>> f809fc136b38de346b6a077857ae41e9f5698b00
 
 .checkbox input:focus + *:before, .checkbox input:hover + *:before {
   border: 1px solid #7fdbff; }
@@ -823,7 +832,22 @@ input[type=radio]:focus, input[type=checkbox]:focus {
 .radio input + *:before {
   border: 3px solid #FFF;
   border-radius: 100em;
+<<<<<<< HEAD
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3); }
+=======
+  margin: 0.1em 0;
+  top: 0;
+  line-height: 0.8;
+  width: 0.8em;
+  height: 0.8em;
+  left: 0.3em;
+  background: #FFF;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box; }
+
+.radio input {
+  opacity: 0; }
+>>>>>>> f809fc136b38de346b6a077857ae41e9f5698b00
 
 .radio input:focus + *:before, .radio input:hover + *:before {
   box-shadow: 0 0 0 1px #7fdbff; }
