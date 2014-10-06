@@ -150,7 +150,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -264,8 +263,6 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -329,7 +326,6 @@ td, th {
 /* Define the transitions */
 /* Colors */
 /* Border */
-/* Some light mixins */
 /* Generic styles for things like <body>, <a> and others
    It also overwrites normalize.css a bit */
 /* Delete the outline when links are active */
@@ -355,7 +351,7 @@ li {
 /* The <pre> doesn't have a nice style from Normalize.css */
 pre {
   text-align: left;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: rgba(0, 0, 0, 0.1);
   background: rgba(0, 0, 0, 0.05);
   padding: 0.3em; }
 
@@ -367,11 +363,142 @@ code {
 blockquote {
   padding: 0 0 0 1em;
   margin: 0 0 0 0.1em;
-  box-shadow: inset 5px 0px rgba(0, 0, 0, 0.2); }
+  box-shadow: inset 5px 0px rgba(0, 0, 0, 0.3); }
 
 /* Nice fontello trick from Ronen Ackerman ( http://stackoverflow.com/a/17561467 ) */
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
   margin: 0; }
+
+/* Forms */
+/* Browser treats unknow type as "text", so we'll do the same */
+input {
+  line-height: 1.5em;
+  margin: 0.3em;
+  padding: 0.3em 0.65em;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 0.2em;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+input[type=file], input[type=color] {
+  padding: 0.3em;
+  cursor: pointer; }
+
+input:focus, input[type=file]:hover, input[type=color]:hover, input:invalid:focus, .select select:focus, .select select:hover {
+  border-color: #7FDBFF;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0.1em 0.1em 0 rgba(0, 0, 0, 0.3); }
+
+/* Validation */
+input:invalid {
+  border-color: #FF851B;
+  box-shadow: none; }
+
+input:focus:invalid {
+  border-color: #FF4136; }
+
+/* Reset the style for those that we actually know */
+input[type=radio]:focus, input[type=checkbox]:focus {
+  box-shadow: none;
+  border-color: initial; }
+
+.select {
+  position: relative;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 0.2em; }
+
+.select:after {
+  padding: 1.2% 0 0 0;
+  background: #FFF;
+  content: "\25BC";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 2.3em;
+  pointer-events: none;
+  font-size: 0.8em;
+  line-height: 2.3em;
+  text-align: center;
+  border-radius: 0.2em; }
+
+.select select {
+  padding: 0.23em 0 0.23em 0.23em;
+  background: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  min-width: 14em;
+  border-radius: 0.2em;
+  cursor: pointer; }
+
+.select select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #333; }
+
+.select select option {
+  padding: 0.2em 0.5em; }
+
+.radio, .checkbox {
+  position: relative;
+  display: inline-block;
+  min-width: 1em;
+  min-height: 1.25em;
+  line-height: 1em;
+  margin: 0.1em 0 -0.1em;
+  outline: 0px none;
+  vertical-align: middle;
+  cursor: pointer; }
+
+.radio input + *:before, .checkbox input + *:before {
+  content: "\2714";
+  /* Tick */
+  display: inline-block;
+  font-size: 0.8em;
+  width: 1em;
+  height: 1em;
+  line-height: 0.8em;
+  margin: 0 0.6em 0 0.375em;
+  color: transparent;
+  background: #FFF;
+  box-sizing: border-box; }
+
+.radio input, .checkbox input {
+  opacity: 0;
+  position: absolute; }
+
+.radio input:focus + *:before, .radio input:hover + *:before {
+  box-shadow: 0 0 0 1px #7fdbff; }
+
+.radio input:checked + *:before {
+  background: #555; }
+
+.checkbox input + *:before {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 0.2em;
+  padding: 0.1em 0.05em;
+  box-sizing: border-box; }
+
+.checkbox input:focus + *:before, .checkbox input:hover + *:before {
+  border: 1px solid #7fdbff; }
+
+.checkbox input:checked + *:before {
+  color: #555; }
+
+.radio input + *:before {
+  border: 3px solid #FFF;
+  border-radius: 100em;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3); }
+
+.radio input:focus + *:before, .radio input:hover + *:before {
+  box-shadow: 0 0 0 1px #7fdbff; }
+
+.radio input:checked + *:before {
+  background: #555; }
 
 /* Components */
 a, a:hover, a:active, a:visited {
@@ -386,8 +513,6 @@ a, a:hover, a:active, a:visited {
   user-select: none;
   border: none;
   box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   display: inline-block;
   font-size: 1em;
   height: 1.5em;
@@ -398,29 +523,31 @@ a, a:hover, a:active, a:visited {
   color: #FFF;
   border-radius: 0.2em;
   cursor: pointer;
-  transition: all 0.1s ease;
   margin: 0.3em;
   padding: 0.3em 0.9em;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
   height: 1.3em;
   line-height: 1.5em;
   padding: 0.3em 0.9em 0.5em;
   margin: 0.3em 0.3em 0.3em;
-  box-shadow: inset 0 -0.2em rgba(0, 0, 0, 0.3); }
+  box-shadow: inset 0 0 0 100em transparent, inset 0 -0.2em rgba(0, 0, 0, 0.3); }
 
 /* Interactivity */
 .button:hover, button:hover, input[type='submit']:hover, input[type='button']:hover, input[type='image']:hover, input[type='reset']:hover, .button:focus, button:focus, input[type='submit']:focus, input[type='button']:focus, input[type='image']:focus, input[type='reset']:focus, .toggle:hover input + *, .toggle input:focus + * {
   color: #FFF;
-  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease, box-shadow 0s ease;
+  transition: all 0.1s ease, box-shadow 0s ease;
   box-shadow: inset 0 0 0 100em rgba(0, 0, 0, 0.1);
   margin: 0.4em 0.3em 0.3em;
   padding: 0.3em 0.9em 0.4em;
-  box-shadow: inset 0 -0.1em rgba(0, 0, 0, 0.3); }
+  box-shadow: inset 0 0 0 1000em rgba(0, 0, 0, 0.1), inset 0 -0.1em rgba(0, 0, 0, 0.3); }
 
 .button:active, button:active, input[type='submit']:active, input[type='button']:active, input[type='image']:active, input[type='reset']:active, .toggle input:active + *, .toggle input:checked + * {
   box-shadow: inset 0 0 0 100em rgba(0, 0, 0, 0.3);
   margin: 0.5em 0.3em 0.3em;
   padding: 0.3em 0.9em;
-  box-shadow: inset 0 0.1em 0.1em rgba(0, 0, 0, 0.3); }
+  box-shadow: inset 0 0 0 1000em rgba(0, 0, 0, 0.3), inset 0 0.1em 0.1em rgba(0, 0, 0, 0.3); }
 
 /* Toggle button */
 .toggle input {
@@ -578,6 +705,7 @@ nav {
   background: #FFF;
   box-shadow: 0 0 0.6em rgba(0, 0, 0, 0.3);
   z-index: 10;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease; }
 
 nav.transparent {
@@ -663,8 +791,10 @@ nav .menu {
     line-height: 1.5em;
     padding-right: 0.5em;
     text-align: right;
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    /* Avoid the burguer menu to display while hiding */
+    /* Avoid the burger menu to display while hiding */
+    -webkit-transition: display 0s ease 0.3s;
     transition: display 0s ease 0.3s; }
   .burgercheck:checked ~ label:before, .burgercheck:checked ~ label:after {
     display: none; }
@@ -673,6 +803,7 @@ nav .menu {
     right: 70%;
     width: 30%;
     height: 100%;
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     background: rgba(255, 255, 255, 0.7); }
   nav .menu {
@@ -685,9 +816,11 @@ nav .menu {
     background: #FFF;
     box-shadow: 0 0 0.6em rgba(0, 0, 0, 0.3);
     overflow: auto;
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease; }
   .burgercheck:checked ~ .menu {
     right: 0;
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease; }
   nav .menu a {
     display: block;
@@ -702,171 +835,3 @@ nav .menu {
     margin: 0.7em 0.5em 0.5em; }
   .transparent .menu {
     color: #333; } }
-
-/* Forms */
-/* Browser treats unknow type as "text", so we'll do the same */
-input {
-  line-height: 1.5em;
-  margin: 0.3em;
-  padding: 0.3em 0.65em;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: 0.2em;
-  transition: all 0.3s ease; }
-
-input[type=file], input[type=color] {
-  padding: 0.3em;
-  cursor: pointer; }
-
-input:focus, input[type=file]:hover, input[type=color]:hover, .select select:focus, .select select:hover {
-  border-color: #7FDBFF;
-  transition: all 0.3s ease;
-  box-shadow: 0.1em 0.1em 0 rgba(0, 0, 0, 0.3); }
-
-/* Validation */
-input:invalid {
-  border-color: #FF851B;
-  -moz-box-shadow: none; }
-
-input:focus:invalid {
-  border-color: #FF4136; }
-
-/* Reset the style for those that we actually know */
-input[type=radio]:focus, input[type=checkbox]:focus {
-  box-shadow: none;
-  border-color: initial; }
-
-.select {
-  display: inline-block;
-  position: relative;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: 0.2em; }
-
-.select:after {
-  padding: 0.2em 0 0.2em 1.3em;
-  background: #FFF;
-  content: "\25BC";
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 2.3em;
-  height: calc(100% - .4em);
-  pointer-events: none;
-  font-size: 0.8em;
-  line-height: calc($text-height - .4em);
-  text-align: center;
-  border-radius: 0.2em; }
-
-.select select {
-  padding: 0 2em 0 0.3em;
-  background: none;
-  border: none;
-  min-width: 14em;
-  -webkit-padding-before: 0.23em;
-  -webkit-padding-after: 0.17em;
-  border-radius: 0.2em;
-  cursor: pointer; }
-
-.select select:-moz-focusring {
-  color: transparent;
-  text-shadow: 0 0 0 #333; }
-
-.select select option {
-  padding: 0.2em 0.5em; }
-
-.checkbox {
-  position: relative;
-  display: inline-block;
-  min-width: 1em;
-  min-height: 1.25em;
-  line-height: 1em;
-  margin: 0.2em 0 -0.2em;
-  outline: 0px none;
-  vertical-align: middle;
-  cursor: pointer; }
-
-/* Match the element following input */
-.checkbox input + * {
-  vertical-align: super; }
-
-.checkbox input + *:before {
-  /* Tick */
-  content: "\2714";
-  position: absolute;
-  border-radius: 0.2em;
-  top: 0.1em;
-  line-height: 0.8em;
-  width: 1em;
-  height: 1em;
-  font-size: 0.8em;
-  padding: 0.1em;
-  left: 0.3em;
-  text-align: center;
-  background: #FFF;
-  color: transparent;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box; }
-
-.checkbox input:focus + *:before, .checkbox input:hover + *:before {
-  border: 1px solid #7fdbff; }
-
-.checkbox input {
-  opacity: 0; }
-
-.checkbox input:checked + *:before {
-  color: #555; }
-
-.radio {
-  position: relative;
-  display: inline-block;
-  min-width: 1em;
-  min-height: 1.25em;
-  line-height: 1em;
-  margin: 0.2em 0 -0.2em;
-  outline: 0px none;
-  vertical-align: middle;
-  cursor: pointer; }
-
-/* Match the element following input */
-.radio input + * {
-  vertical-align: super; }
-
-/* Not to repeat them */
-.radio input + *:before, .radio input + *:after {
-  content: "";
-  position: absolute;
-  border: 2px solid white;
-  border-radius: 100em;
-  margin: 0.1em 0; }
-
-.radio input + *:before {
-  min-width: 0.8em;
-  height: 0.8em;
-  top: 0;
-  line-height: 0.8;
-  width: 0.8em;
-  height: 0.8em;
-  left: 0.3em;
-  background: #FFF;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box; }
-
-.radio input + *:after {
-  border: none;
-  top: 0.2em;
-  left: 0.2em;
-  width: 0.4em;
-  height: 0.4em;
-  background: #555;
-  opacity: 0; }
-
-.radio input {
-  opacity: 0; }
-
-.radio input:focus + *:before, .radio input:hover + *:before {
-  box-shadow: 0 0 0 1px #7fdbff; }
-
-.radio input:checked + *:before {
-  background: #555; }
