@@ -787,17 +787,17 @@ input[type=radio]:focus, input[type=checkbox]:focus {
   cursor: pointer; }
 
 .radio input + *:before, .checkbox input + *:before {
-  display: inline-block;
-  margin: 0 0.3em 0;
-  box-sizing: border-box;
-  background: #FFF;
-  width: 1em;
-  height: 1em;
-  font-size: 0.8em;
   content: "\2714";
   /* Tick */
+  display: inline-block;
+  font-size: 0.8em;
+  width: 1em;
+  height: 1em;
+  line-height: 0.8em;
+  margin: 0 0.6em 0 0.375em;
   color: transparent;
-  line-height: 0.8em; }
+  background: #FFF;
+  box-sizing: border-box; }
 
 .radio input, .checkbox input {
   opacity: 0;

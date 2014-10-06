@@ -1,13 +1,11 @@
 var gulp = require('gulp'),
-		sass = require('gulp-sass'),
 		rename = require('gulp-rename'),
-		minify = require('gulp-minify-css');
-
+		minify = require('gulp-uglify');
 
 gulp.task('default', ['build'], function() {});
 
-gulp.task('watch', ['build'], function() {
-	gulp.watch(['./src/*.scss'], ['build']);
+gulp.task('watch', ['test'], function() {
+	gulp.watch(['./src/*.scss'], ['test']);
 });
 
 gulp.task('test', [], function() {

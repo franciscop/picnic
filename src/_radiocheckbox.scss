@@ -13,16 +13,16 @@
 
 .radio input + *:before,
 .checkbox input + *:before {
+    content: "\2714";           /* Tick */
     display: inline-block;
-    margin: 0 $margin 0;
-    box-sizing: border-box;
-    background: $white;
+    font-size: .8em;
     width: 1em;
     height: 1em;
-    font-size: .8em;
-    content: "\2714";           /* Tick */
-    color: transparent;
     line-height: .8em;
+    margin: 0 $margin * 2 0 $margin / .8;
+    color: transparent;
+    background: $white;
+    box-sizing: border-box;
 }
 
 .radio input,
