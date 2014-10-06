@@ -5,7 +5,7 @@
     min-width: 1em;
     min-height: 1.25em;
     line-height: 1em;
-    margin: .2em 0 -.2em;
+    margin: .1em 0 -.1em;
     outline: 0px none;
     vertical-align: middle;
     cursor: pointer;
@@ -19,9 +19,9 @@
     width: 1em;
     height: 1em;
     line-height: .8em;
-    margin: 0 $margin * 2 0 $margin / .8;
+    margin: 0 $picnic-margin * 2 0 $picnic-margin / .8;
     color: transparent;
-    background: $white;
+    background: $picnic-white;
     box-sizing: border-box;
 }
 
@@ -33,9 +33,9 @@
 
 .radio input:focus + *:before,
 .radio input:hover + *:before {
-    box-shadow: 0 0 0 1px $aqua;
+    box-shadow: 0 0 0 1px $picnic-aqua;
 }
 
 .radio input:checked + *:before {
-    background: $light-black;
+    background: $picnic-light-black;
 }

@@ -61,7 +61,7 @@
 }
 
 /* Responsive grids: tablet+ */
-@media all and (min-width: 750px) {
+@media all and (min-width: $picnic-tablet-width) {
     .m-none {
         display: none;
     }
@@ -112,7 +112,7 @@
 }
 
 /* Responsive grids: laptop+ */
-@media all and (min-width: 1200px) {
+@media all and (min-width: $picnic-laptop-width) {
     .l-none {
         display: none;
     }

@@ -8,16 +8,18 @@
 
 
 
-/* Some light mixins */
-@import 'mixins';
-
-
 
 /* Generic styles for things like <body>, <a> and others
    It also overwrites normalize.css a bit */
 @import 'generic';
 
 
+/* Forms */
+@import 'input';
+@import 'select';
+@import 'radiocheckbox';
+@import 'checkbox';
+@import 'radio';
 
 /* Components */
 @import 'link';
@@ -28,12 +30,6 @@
 
 
 
-/* Forms */
-@import 'input';
-@import 'select';
-@import 'radiocheckbox';
-@import 'checkbox';
-@import 'radio';
 
 
 

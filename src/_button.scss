@@ -2,30 +2,31 @@
 .button,
 a.button:visited,
 .toggle input + * {
-    @include noselect;
-    
+    user-select: none;
     border: none;
     box-sizing: content-box;
     display: inline-block;
     font-size: 1em;
-    height: $text-height;
-    line-height: $text-height;
+    height: $picnic-text-height;
+    line-height: $picnic-text-height;
     text-decoration: none;
     vertical-align: middle;
-    background: $primary;
-    color: #FFF;
-    border-radius: $radius;
+    background: $picnic-primary;
+    color: $picnic-white;
+    border-radius: $picnic-radius;
     cursor: pointer;
-    transition: $transition-fast;
-    margin: $margin;
-    padding: $padding $padding * 3;
-    
-    @if $deep == true {
-        height: $text-height - .2em;
-        line-height: $text-height;
-        padding: $padding $padding * 3 $padding + .2em;
-        margin: $margin $margin $margin;
-        box-shadow: inset 0 -.2em $dark-overlay;
+    margin: $picnic-margin;
+    padding: $picnic-padding $picnic-padding * 3;
+    transition: $picnic-transition-fast;
+
+    @if $picnic-deep == true {
+        height: $picnic-text-height - .2em;
+        line-height: $picnic-text-height;
+        padding: $picnic-padding $picnic-padding * 3 $picnic-padding + .2em;
+        margin: $picnic-margin $picnic-margin $picnic-margin;
+        box-shadow: 
+          inset 0 0 0 100em transparent,
+          inset 0 -.2em $picnic-dark-overlay;
     }
 }
 
@@ -36,26 +37,30 @@ a.button:visited,
 .button:focus,
 .toggle:hover input + *,
 .toggle input:focus + * {
-    color: #FFF;
-    transition: all .1s ease;
-    box-shadow: inset 0 0 0 100em $soft-dark-overlay;
-    
-    @if $deep == true {
-        margin: $margin + .1em $margin $margin;
-        padding: $padding $padding * 3 $padding + .1em;
-        box-shadow: inset 0 -.1em $dark-overlay;
-    }
+    color: $picnic-white;
+    transition: all .1s ease, box-shadow 0s ease;
+    box-shadow: inset 0 0 0 100em $picnic-soft-dark-overlay;
+
+    @if $picnic-deep == true {
+        margin: $picnic-margin + .1em $picnic-margin $picnic-margin;
+        padding: $picnic-padding $picnic-padding * 3 $picnic-padding + .1em;
+        box-shadow:
+          inset 0 0 0 1000em $picnic-soft-dark-overlay,
+          inset 0 -.1em $picnic-dark-overlay;
+    } 
 }
 
 .button:active,
 .toggle input:active + *,
 .toggle input:checked + * {
-    box-shadow: inset 0 0 0 100em $dark-overlay;
-    
-    @if $deep == true {
-        margin: $margin + .2em $margin $margin;
-        padding: $padding $padding * 3;
-        box-shadow: inset 0 .1em .1em $dark-overlay;
+    box-shadow: inset 0 0 0 100em $picnic-dark-overlay;
+
+    @if $picnic-deep == true {
+        margin: $picnic-margin + .2em $picnic-margin $picnic-margin;
+        padding: $picnic-padding $picnic-padding * 3;
+        box-shadow: 
+          inset 0 0 0 1000em $picnic-dark-overlay,
+          inset 0 .1em .1em $picnic-dark-overlay;
     }
 }
 
@@ -74,31 +79,31 @@ a.button:visited,
 .button.success,
 .button.success:visited,
 .toggle.success input + * {
-    background: $success;
+    background: $picnic-success;
 }
 
 .button.warning,
 a.button.warning:visited,
 .toggle.warning input + * {
-    background: $warning;
+    background: $picnic-warning;
 }
 
 .button.error,
 a.button.error:visited,
 .toggle.error input + * {
-    background: $error;
+    background: $picnic-error;
 }
 
 .button.dull,
 a.button.dull:visited,
 .toggle.dull input + * {
-    background: $dull;
+    background: $picnic-dull;
 }
 
 
 
 /* This allows for the invasiveness (default styling) */
-@if $invasive == true {
+@if $picnic-invasive == true {
     button,
     input[type='submit'],
     input[type='button'],

@@ -1,26 +1,18 @@
+// CONFIG
 var gulp = require('gulp'),
-<<<<<<< HEAD
-=======
 		sass = require('gulp-sass'),
 		autoprefixer = require('gulp-autoprefixer'),
->>>>>>> f809fc136b38de346b6a077857ae41e9f5698b00
 		rename = require('gulp-rename'),
-		minify = require('gulp-uglify');
+		minify = require('gulp-minify-css');
 
 gulp.task('default', ['build'], function() {});
 
-gulp.task('watch', ['test'], function() {
-	gulp.watch(['./src/*.scss'], ['test']);
-});
 
-gulp.task('test', [], function() {
-	return gulp.src('./src/picnic.scss')
-		.pipe(sass())
-		.pipe(rename('latest.css'))
-		.pipe(gulp.dest('./test/'));;
-});
 
-gulp.task('build', ['test'], function() {
+// MAIN BUILD
+// First execute the tests
+// Then create the latest versions
+gulp.task('build', ['normal', 'flat'], function() {
 	return gulp.src('./src/picnic.scss')
 		.pipe(sass())
 		.pipe(rename('latest.css'))
@@ -32,4 +24,32 @@ gulp.task('build', ['test'], function() {
 		.pipe(minify())
 		.pipe(rename('latest.min.css'))
 		.pipe(gulp.dest('./releases'));
+});
+
+
+
+// WATCH
+gulp.task('watch', ['build'], function() {
+	gulp.watch(['./src/*.scss'], ['build']);
+});
+
+
+
+// TESTS
+gulp.task('test', ['normal', 'flat'], function() {
+	gulp.watch(['./src/*.scss'], ['normal', 'flat']);
+});
+
+gulp.task('normal', [], function() {
+	return gulp.src('./src/picnic.scss')
+		.pipe(sass())
+		.pipe(rename('latest.css'))
+		.pipe(gulp.dest('./test/'));;
+});
+
+gulp.task('flat', [], function() {
+	return gulp.src('./src/flat.scss')
+		.pipe(sass())
+		.pipe(rename('flat.css'))
+		.pipe(gulp.dest('./test/'));;
 });

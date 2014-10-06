@@ -326,7 +326,6 @@ td, th {
 /* Define the transitions */
 /* Colors */
 /* Border */
-/* Some light mixins */
 /* Generic styles for things like <body>, <a> and others
    It also overwrites normalize.css a bit */
 /* Delete the outline when links are active */
@@ -352,7 +351,7 @@ li {
 /* The <pre> doesn't have a nice style from Normalize.css */
 pre {
   text-align: left;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: rgba(0, 0, 0, 0.1);
   background: rgba(0, 0, 0, 0.05);
   padding: 0.3em; }
 
@@ -364,7 +363,7 @@ code {
 blockquote {
   padding: 0 0 0 1em;
   margin: 0 0 0 0.1em;
-  box-shadow: inset 5px 0px rgba(0, 0, 0, 0.2); }
+  box-shadow: inset 5px 0px rgba(0, 0, 0, 0.3); }
 
 /* Nice fontello trick from Ronen Ackerman ( http://stackoverflow.com/a/17561467 ) */
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
@@ -393,10 +392,10 @@ a, a:hover, a:active, a:visited {
   color: #FFF;
   border-radius: 0.2em;
   cursor: pointer;
-  -webkit-transition: all 0.1s ease;
-  transition: all 0.1s ease;
   margin: 0.3em;
   padding: 0.3em 0.9em;
+  -webkit-transition: all 0.1s ease, box-shadow 0 ease;
+  transition: all 0.1s ease, box-shadow 0 ease;
   height: 1.3em;
   line-height: 1.5em;
   padding: 0.3em 0.9em 0.5em;
@@ -406,12 +405,12 @@ a, a:hover, a:active, a:visited {
 /* Interactivity */
 .button:hover, button:hover, input[type='submit']:hover, input[type='button']:hover, input[type='image']:hover, input[type='reset']:hover, .button:focus, button:focus, input[type='submit']:focus, input[type='button']:focus, input[type='image']:focus, input[type='reset']:focus, .toggle:hover input + *, .toggle input:focus + * {
   color: #FFF;
-  -webkit-transition: all 0.1s ease;
-  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease, box-shadow 0 ease;
+  transition: all 0.1s ease, box-shadow 0 ease;
   box-shadow: inset 0 0 0 100em rgba(0, 0, 0, 0.1);
   margin: 0.4em 0.3em 0.3em;
   padding: 0.3em 0.9em 0.4em;
-  box-shadow: inset 0 -0.1em rgba(0, 0, 0, 0.3); }
+  box-shadow: inset 0 0 0 100em rgba(0, 0, 0, 0.1), inset 0 -0.1em rgba(0, 0, 0, 0.3); }
 
 .button:active, button:active, input[type='submit']:active, input[type='button']:active, input[type='image']:active, input[type='reset']:active, .toggle input:active + *, .toggle input:checked + * {
   box-shadow: inset 0 0 0 100em rgba(0, 0, 0, 0.3);
@@ -786,7 +785,7 @@ input[type=radio]:focus, input[type=checkbox]:focus {
   min-width: 1em;
   min-height: 1.25em;
   line-height: 1em;
-  margin: 0.2em 0 -0.2em;
+  margin: 0.1em 0 -0.1em;
   outline: 0px none;
   vertical-align: middle;
   cursor: pointer; }
@@ -816,12 +815,9 @@ input[type=radio]:focus, input[type=checkbox]:focus {
 
 .checkbox input + *:before {
   border: 1px solid rgba(0, 0, 0, 0.3);
-<<<<<<< HEAD
   border-radius: 0.2em;
-  padding: 0.1em 0.05em; }
-=======
+  padding: 0.1em 0.05em;
   box-sizing: border-box; }
->>>>>>> f809fc136b38de346b6a077857ae41e9f5698b00
 
 .checkbox input:focus + *:before, .checkbox input:hover + *:before {
   border: 1px solid #7fdbff; }
@@ -832,22 +828,7 @@ input[type=radio]:focus, input[type=checkbox]:focus {
 .radio input + *:before {
   border: 3px solid #FFF;
   border-radius: 100em;
-<<<<<<< HEAD
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3); }
-=======
-  margin: 0.1em 0;
-  top: 0;
-  line-height: 0.8;
-  width: 0.8em;
-  height: 0.8em;
-  left: 0.3em;
-  background: #FFF;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
-  box-sizing: border-box; }
-
-.radio input {
-  opacity: 0; }
->>>>>>> f809fc136b38de346b6a077857ae41e9f5698b00
 
 .radio input:focus + *:before, .radio input:hover + *:before {
   box-shadow: 0 0 0 1px #7fdbff; }

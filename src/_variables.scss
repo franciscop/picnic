@@ -1,39 +1,39 @@
 /* Style by default the <button>, <input type="submit">, etc? */
 /* Not fully implemented */
-$invasive: true;
+$picnic-invasive: true !default;
 
 /* Make buttons and other things slightly 3d */
-$deep: true;
+$picnic-deep: true !default;
 
 /* Media query breakpoints */
-$tabletWidth: 750px;
-$laptopWidth: 1200px;
+$picnic-tablet-width: 750px !default;
+$picnic-laptop-width: 1200px !default;
 
 /* Default element styles */
-$radius: .2em;
-$margin: .3em;
-$padding: .3em;
-$text-height: 1.5em;
-$padding-text: $padding $padding * 1.5 + .2em;
+$picnic-radius: .2em !default;
+$picnic-margin: .3em !default;
+$picnic-padding: .3em !default;
+$picnic-text-height: 1.5em !default;
+$picnic-padding-text: $picnic-padding $picnic-padding * 1.5 + .2em !default;
 
 /* Define the transitions */
-$transition-fast: all .1s ease;
-$transition-slow: all .3s ease;
+$picnic-transition-fast: all .1s ease !default;
+$picnic-transition-slow: all .3s ease !default;
 
 /* Colors */
-$white: #FFF;
-$black: #333;
-$light-black: #555;
-$primary: #0074D9;
-$light-primary: #7FDBFF;
-$success: #2ecc40;
-$warning: #FF851B;
-$error: #FF4136;
-$dull: #AAA;
-$aqua: #7fdbff;
-$dark-overlay: rgba(0, 0, 0, .3);
-$soft-dark-overlay: rgba(0, 0, 0, .1);
-$clear-overlay: rgba(255, 255, 255, .3);
+$picnic-white: #FFF !default;
+$picnic-black: #333 !default;
+$picnic-light-black: #555 !default;
+$picnic-primary: #0074D9 !default;
+$picnic-light-primary: #7FDBFF !default;
+$picnic-success: #2ecc40 !default;
+$picnic-warning: #FF851B !default;
+$picnic-error: #FF4136 !default;
+$picnic-dull: #AAA !default;
+$picnic-aqua: #7fdbff !default;
+$picnic-dark-overlay: rgba(0, 0, 0, .3) !default;
+$picnic-soft-dark-overlay: rgba(0, 0, 0, .1) !default;
+$picnic-clear-overlay: rgba(255, 255, 255, .3) !default;
 
 /* Border */
-$border: 1px solid $dark-overlay;
+$picnic-border: 1px solid $picnic-dark-overlay !default;

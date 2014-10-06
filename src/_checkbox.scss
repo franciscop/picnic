@@ -1,18 +1,15 @@
 .checkbox input + *:before {
-    border: $border;
-<<<<<<< HEAD
-    border-radius: $radius;
+    border: $picnic-border;
+    border-radius: $picnic-radius;
     padding: .1em .05em;
-=======
     box-sizing: border-box;
->>>>>>> f809fc136b38de346b6a077857ae41e9f5698b00
 }
 
 .checkbox input:focus + *:before,
 .checkbox input:hover + *:before {
-    border: 1px solid $aqua;
+    border: 1px solid $picnic-aqua;
 }
 
 .checkbox input:checked + *:before {
-    color: $light-black;
+    color: $picnic-light-black;
 }

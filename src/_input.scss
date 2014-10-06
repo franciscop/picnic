@@ -1,16 +1,16 @@
 /* Browser treats unknow type as "text", so we'll do the same */
 input {
-    line-height: $text-height;
-    margin: $margin;
-    padding: $padding-text;
-    border: $border;
-    border-radius: $radius;
-    transition: $transition-slow;
+    line-height: $picnic-text-height;
+    margin: $picnic-margin;
+    padding: $picnic-padding-text;
+    border: $picnic-border;
+    border-radius: $picnic-radius;
+    transition: $picnic-transition-slow;
 }
 
 input[type=file],
 input[type=color] {
-    padding: $padding;
+    padding: $picnic-padding;
     cursor: pointer;
 }
 
@@ -20,22 +20,22 @@ input[type=color]:hover,
 input:invalid:focus,
 .select select:focus,
 .select select:hover {
-    border-color: $light-primary;
-    transition: $transition-slow;
-    
-    @if $deep == true {
-        box-shadow: .1em .1em 0 $dark-overlay;
+    border-color: $picnic-light-primary;
+    transition: $picnic-transition-slow;
+
+    @if $picnic-deep == true {
+        box-shadow: .1em .1em 0 $picnic-dark-overlay;
     }
 }
 
 /* Validation */
 input:invalid {
-    border-color: $warning;
+    border-color: $picnic-warning;
     box-shadow: none;
 }
 
 input:focus:invalid {
-    border-color: $error;
+    border-color: $picnic-error;
 }
 
 /* Reset the style for those that we actually know */

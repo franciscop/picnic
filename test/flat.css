@@ -372,135 +372,6 @@ blockquote {
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
   margin: 0; }
 
-/* Forms */
-/* Browser treats unknow type as "text", so we'll do the same */
-input {
-  line-height: 1.5em;
-  margin: 0.3em;
-  padding: 0.3em 0.65em;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: 0.2em;
-  transition: all 0.3s ease; }
-
-input[type=file], input[type=color] {
-  padding: 0.3em;
-  cursor: pointer; }
-
-input:focus, input[type=file]:hover, input[type=color]:hover, input:invalid:focus, .select select:focus, .select select:hover {
-  border-color: #7FDBFF;
-  transition: all 0.3s ease;
-  box-shadow: 0.1em 0.1em 0 rgba(0, 0, 0, 0.3); }
-
-/* Validation */
-input:invalid {
-  border-color: #FF851B;
-  box-shadow: none; }
-
-input:focus:invalid {
-  border-color: #FF4136; }
-
-/* Reset the style for those that we actually know */
-input[type=radio]:focus, input[type=checkbox]:focus {
-  box-shadow: none;
-  border-color: initial; }
-
-.select {
-  position: relative;
-  display: inline-block;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: 0.2em; }
-
-.select:after {
-  padding: 1.2% 0 0 0;
-  background: #FFF;
-  content: "\25BC";
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 2.3em;
-  pointer-events: none;
-  font-size: 0.8em;
-  line-height: 2.3em;
-  text-align: center;
-  border-radius: 0.2em; }
-
-.select select {
-  padding: 0.23em 0 0.23em 0.23em;
-  background: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  border: none;
-  min-width: 14em;
-  border-radius: 0.2em;
-  cursor: pointer; }
-
-.select select:-moz-focusring {
-  color: transparent;
-  text-shadow: 0 0 0 #333; }
-
-.select select option {
-  padding: 0.2em 0.5em; }
-
-.radio, .checkbox {
-  position: relative;
-  display: inline-block;
-  min-width: 1em;
-  min-height: 1.25em;
-  line-height: 1em;
-  margin: 0.1em 0 -0.1em;
-  outline: 0px none;
-  vertical-align: middle;
-  cursor: pointer; }
-
-.radio input + *:before, .checkbox input + *:before {
-  content: "\2714";
-  /* Tick */
-  display: inline-block;
-  font-size: 0.8em;
-  width: 1em;
-  height: 1em;
-  line-height: 0.8em;
-  margin: 0 0.6em 0 0.375em;
-  color: transparent;
-  background: #FFF;
-  box-sizing: border-box; }
-
-.radio input, .checkbox input {
-  opacity: 0;
-  position: absolute; }
-
-.radio input:focus + *:before, .radio input:hover + *:before {
-  box-shadow: 0 0 0 1px #7fdbff; }
-
-.radio input:checked + *:before {
-  background: #555; }
-
-.checkbox input + *:before {
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: 0.2em;
-  padding: 0.1em 0.05em;
-  box-sizing: border-box; }
-
-.checkbox input:focus + *:before, .checkbox input:hover + *:before {
-  border: 1px solid #7fdbff; }
-
-.checkbox input:checked + *:before {
-  color: #555; }
-
-.radio input + *:before {
-  border: 3px solid #FFF;
-  border-radius: 100em;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3); }
-
-.radio input:focus + *:before, .radio input:hover + *:before {
-  box-shadow: 0 0 0 1px #7fdbff; }
-
-.radio input:checked + *:before {
-  background: #555; }
-
 /* Components */
 a, a:hover, a:active, a:visited {
   color: #0074D9;
@@ -523,27 +394,16 @@ a, a:hover, a:active, a:visited {
   cursor: pointer;
   margin: 0.3em;
   padding: 0.3em 0.9em;
-  transition: all 0.1s ease;
-  height: 1.3em;
-  line-height: 1.5em;
-  padding: 0.3em 0.9em 0.5em;
-  margin: 0.3em 0.3em 0.3em;
-  box-shadow: inset 0 0 0 100em transparent, inset 0 -0.2em rgba(0, 0, 0, 0.3); }
+  transition: all 0.1s ease; }
 
 /* Interactivity */
 .button:hover, button:hover, input[type='submit']:hover, input[type='button']:hover, input[type='image']:hover, input[type='reset']:hover, .button:focus, button:focus, input[type='submit']:focus, input[type='button']:focus, input[type='image']:focus, input[type='reset']:focus, .toggle:hover input + *, .toggle input:focus + * {
   color: #FFF;
   transition: all 0.1s ease, box-shadow 0s ease;
-  box-shadow: inset 0 0 0 100em rgba(0, 0, 0, 0.1);
-  margin: 0.4em 0.3em 0.3em;
-  padding: 0.3em 0.9em 0.4em;
-  box-shadow: inset 0 0 0 1000em rgba(0, 0, 0, 0.1), inset 0 -0.1em rgba(0, 0, 0, 0.3); }
+  box-shadow: inset 0 0 0 100em rgba(0, 0, 0, 0.1); }
 
 .button:active, button:active, input[type='submit']:active, input[type='button']:active, input[type='image']:active, input[type='reset']:active, .toggle input:active + *, .toggle input:checked + * {
-  box-shadow: inset 0 0 0 100em rgba(0, 0, 0, 0.3);
-  margin: 0.5em 0.3em 0.3em;
-  padding: 0.3em 0.9em;
-  box-shadow: inset 0 0 0 1000em rgba(0, 0, 0, 0.3), inset 0 0.1em 0.1em rgba(0, 0, 0, 0.3); }
+  box-shadow: inset 0 0 0 100em rgba(0, 0, 0, 0.3); }
 
 /* Toggle button */
 .toggle input {
@@ -825,3 +685,131 @@ nav .menu {
     margin: 0.7em 0.5em 0.5em; }
   .transparent .menu {
     color: #333; } }
+
+/* Forms */
+/* Browser treats unknow type as "text", so we'll do the same */
+input {
+  line-height: 1.5em;
+  margin: 0.3em;
+  padding: 0.3em 0.65em;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 0.2em;
+  transition: all 0.3s ease; }
+
+input[type=file], input[type=color] {
+  padding: 0.3em;
+  cursor: pointer; }
+
+input:focus, input[type=file]:hover, input[type=color]:hover, input:invalid:focus, .select select:focus, .select select:hover {
+  border-color: #7FDBFF;
+  transition: all 0.3s ease; }
+
+/* Validation */
+input:invalid {
+  border-color: #FF851B;
+  box-shadow: none; }
+
+input:focus:invalid {
+  border-color: #FF4136; }
+
+/* Reset the style for those that we actually know */
+input[type=radio]:focus, input[type=checkbox]:focus {
+  box-shadow: none;
+  border-color: initial; }
+
+.select {
+  position: relative;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 0.2em; }
+
+.select:after {
+  padding: 1.2% 0 0 0;
+  background: #FFF;
+  content: "\25BC";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 2.3em;
+  pointer-events: none;
+  font-size: 0.8em;
+  line-height: 2.3em;
+  text-align: center;
+  border-radius: 0.2em; }
+
+.select select {
+  padding: 0.23em 0 0.23em 0.23em;
+  background: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  min-width: 14em;
+  border-radius: 0.2em;
+  cursor: pointer; }
+
+.select select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #333; }
+
+.select select option {
+  padding: 0.2em 0.5em; }
+
+.radio, .checkbox {
+  position: relative;
+  display: inline-block;
+  min-width: 1em;
+  min-height: 1.25em;
+  line-height: 1em;
+  margin: 0.1em 0 -0.1em;
+  outline: 0px none;
+  vertical-align: middle;
+  cursor: pointer; }
+
+.radio input + *:before, .checkbox input + *:before {
+  content: "\2714";
+  /* Tick */
+  display: inline-block;
+  font-size: 0.8em;
+  width: 1em;
+  height: 1em;
+  line-height: 0.8em;
+  margin: 0 0.6em 0 0.375em;
+  color: transparent;
+  background: #FFF;
+  box-sizing: border-box; }
+
+.radio input, .checkbox input {
+  opacity: 0;
+  position: absolute; }
+
+.radio input:focus + *:before, .radio input:hover + *:before {
+  box-shadow: 0 0 0 1px #7fdbff; }
+
+.radio input:checked + *:before {
+  background: #555; }
+
+.checkbox input + *:before {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 0.2em;
+  padding: 0.1em 0.05em;
+  box-sizing: border-box; }
+
+.checkbox input:focus + *:before, .checkbox input:hover + *:before {
+  border: 1px solid #7fdbff; }
+
+.checkbox input:checked + *:before {
+  color: #555; }
+
+.radio input + *:before {
+  border: 3px solid #FFF;
+  border-radius: 100em;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3); }
+
+.radio input:focus + *:before, .radio input:hover + *:before {
+  box-shadow: 0 0 0 1px #7fdbff; }
+
+.radio input:checked + *:before {
+  background: #555; }
