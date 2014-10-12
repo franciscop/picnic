@@ -1,5 +1,5 @@
 /* Browser treats unknow type as "text", so we'll do the same */
-input {
+input, textarea {
     line-height: $picnic-text-height;
     margin: $picnic-margin;
     padding: $picnic-padding-text;
@@ -14,7 +14,7 @@ input[type=color] {
     cursor: pointer;
 }
 
-input:focus,
+input:focus, textarea:focus,
 input[type=file]:hover,
 input[type=color]:hover,
 input:invalid:focus,
@@ -29,12 +29,12 @@ input:invalid:focus,
 }
 
 /* Validation */
-input:invalid {
+input:invalid, textarea:invalid {
     border-color: $picnic-warning;
     box-shadow: none;
 }
 
-input:focus:invalid {
+input:focus:invalid, textarea:focus:invalid {
     border-color: $picnic-error;
 }
 

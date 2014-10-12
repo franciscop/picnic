@@ -16,26 +16,24 @@
     content: "\2714";           /* Tick */
     display: inline-block;
     font-size: .8em;
-    width: 1em;
-    height: 1em;
-    line-height: .8em;
-    margin: 0 $picnic-margin * 2 0 $picnic-margin / .8;
+    width: 0.9em;
+    height: 0.9em;
+    line-height: .9em;
+    margin: 0 $picnic-margin * 2 0 0;
     color: transparent;
     background: $picnic-white;
-    box-sizing: border-box;
+    border: $picnic-border;
+}
+
+.checkbox input:focus + *:before,
+.checkbox input:hover + *:before,
+.radio input:focus + *:before,
+.radio input:hover + *:before {
+    border-color: $picnic-aqua;
 }
 
 .radio input,
 .checkbox input {
     opacity: 0;
-    position:absolute;
-}
-
-.radio input:focus + *:before,
-.radio input:hover + *:before {
-    box-shadow: 0 0 0 1px $picnic-aqua;
-}
-
-.radio input:checked + *:before {
-    background: $picnic-light-black;
+    position: absolute;
 }
