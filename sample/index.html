@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -60,6 +60,16 @@
     a {
       color: #0074d9;
       text-decoration: none;
+    }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
     }
   </style>
 
@@ -121,7 +131,7 @@
 
   <button>Button</button>
 
-  <a class="button">Link</a>
+  <a href="#buttons" class="button">Link</a>
 
   <input type="submit" value="Submit" />
 
@@ -132,9 +142,9 @@
 
   <pre>
 &lt;button&gt;Button&lt;/button&gt;
-  
-&lt;a class=&quot;button&quot;&gt;Link&lt;/a&gt;
-  
+
+&lt;a href=&quot;#buttons&quot; class=&quot;button&quot;&gt;Link&lt;/a&gt;
+
 &lt;input type=&quot;submit&quot; value = &quot;Submit&quot; /&gt;
 
 &lt;label class=&quot;button&quot;&gt;
@@ -146,20 +156,25 @@
 
   <h2 id="input">Input</h2>
 
-  <input type="email" placeholder="Email" />
+  <label class="sr-only" for="email">Email</label>
+  <input id="email" type="email" placeholder="Email" />
 
-  <input type="password" placeholder="Password" />
+  <label class="sr-only" for="password">Password</label>
+  <input id="password" type="password" placeholder="Password" />
 
   <pre>
-&lt;input type=&quot;email&quot; placeholder = &quot;Email&quot;/&gt;
+&lt;label class=&quot;sr-only&quot; for=&quot;email&quot;&gt;Email&lt;/label&gt;
+&lt;input id=&quot;email&quot; type=&quot;email&quot; placeholder = &quot;Email&quot;/&gt;
 
-&lt;input type=&quot;password&quot; placeholder = &quot;Password&quot;/&gt;
+&lt;label class=&quot;sr-only&quot; for=&quot;password&quot;&gt;Password&lt;/label&gt;
+&lt;input id=&quot;password&quot; type=&quot;password&quot; placeholder = &quot;Password&quot;/&gt;
 </pre>
 
 
   <h2 id="select">Select</h2>
 
   <label class="select">
+    <span class="sr-only">Select an option</span>
     <select>
       <option>Select an option</option>
       <option>Good option</option>
@@ -170,6 +185,7 @@
 
   <pre>
 &lt;label class=&quot;select&quot;&gt;
+  &lt;span class=&quot;sr-only&quot;&gt;Select an option&lt;/span&gt;
   &lt;select&gt;
     &lt;option&gt;Select an option&lt;/option&gt;
     &lt;option&gt;Good option&lt;/option&gt;
