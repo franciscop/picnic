@@ -331,11 +331,15 @@ td, th {
 /* Border */
 /* Generic styles for things like <body>, <a> and others
    It also overwrites normalize.css a bit */
+html, body {
+  height: 100%; }
+
 /* Delete the outline when links are active */
 body {
   color: #333;
   font-size: 1.1em;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  background: #333; }
 
 /* Hide the default focus effect */
 :focus {
@@ -825,3 +829,76 @@ nav .menu {
     margin: 0.7em 0.5em 0.5em; }
   .transparent .menu {
     color: #333; } }
+
+/**
+ * Default footer height: 200px
+ * Change it, but you'll need some js to make it responsive
+ */
+body > footer {
+  color: #FFF;
+  position: relative;
+  min-height: 200px; }
+
+body > footer .wrapper {
+  width: 100%;
+  bottom: 0px;
+  position: fixed;
+  z-index: -1; }
+
+.modal > input {
+  display: none; }
+
+.modal > input + * {
+  /* Make it not visible */
+  opacity: 0;
+  /* Also hide it from iteraction */
+  max-height: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 0.2em;
+  box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.3);
+  background: white;
+  z-index: 10;
+  transition: all 0.3s ease; }
+
+.modal > input:checked + * {
+  display: block;
+  opacity: 1;
+  max-height: 10000px;
+  transition: all 0.3s ease; }
+
+.modal > input:checked ~ .overlay {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3); }
+
+.modal header, .modal footer {
+  display: block;
+  padding: 0.5em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
+
+.modal header {
+  font-weight: bold; }
+
+.modal footer {
+  border-width: 1px 0 0 0;
+  padding: 0.2em; }
+
+.modal header .close {
+  float: right;
+  padding-right: 0.6em;
+  cursor: pointer; }
+
+.modal header .close:hover {
+  color: #FF851B; }
+
+.modal .content {
+  display: block;
+  padding: 0.5em;
+  border-bottom: 1px solid #AAA; }

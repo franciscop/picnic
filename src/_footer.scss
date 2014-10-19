@@ -1,0 +1,22 @@
+/**
+ * Default footer height: 200px
+ * Change it, but you'll need some js to make it responsive
+ */
+body > footer {
+    color: $picnic-white;
+    position: relative;
+    min-height: 200px;
+}
+
+body > footer .wrapper {
+    width: 100%;
+    bottom: 0px;
+    position: fixed;
+    z-index: -1;
+}
+
+
+
+
+
+

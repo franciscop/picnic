@@ -1,8 +1,13 @@
+html, body {
+    height: 100%;
+}
+
 /* Delete the outline when links are active */
 body {
     color: $picnic-black;
     font-size: 1.1em;
     line-height: $picnic-text-height;
+    background: $picnic-black;
 }
 
 /* Hide the default focus effect */

@@ -1,0 +1,62 @@
+.modal > input {
+    display: none;
+}
+.modal > input + * {
+    /* Make it not visible */
+    opacity: 0;
+    
+    /* Also hide it from iteraction */
+    max-height: 0;
+    overflow: hidden;
+    
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: .2em;
+    box-shadow: 0 0 .3em $picnic-dark-overlay;
+    background: white;
+    z-index: 10;
+    transition: all .3s ease;
+}
+.modal > input:checked + * {
+    display: block;
+    opacity: 1;
+    max-height: 10000px;
+    transition: all .3s ease;
+}
+.modal > input:checked ~ .overlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: $picnic-dark-overlay;
+}
+.modal header,
+.modal footer {
+    display: block;
+    padding: .5em;
+    border-bottom: 1px solid $picnic-dark-overlay;
+}
+.modal header {
+    font-weight: bold;
+}
+.modal footer {
+    border-width: 1px 0 0 0;
+    padding: .2em;
+}
+.modal header .close {
+    float: right;
+    padding-right: .6em;
+    cursor: pointer;
+}
+.modal header .close:hover {
+    color: $picnic-warning;
+}
+.modal .content {
+    display: block;
+    padding: .5em;
+    border-bottom: 1px solid #AAA;
+}

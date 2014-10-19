@@ -331,11 +331,15 @@ td, th {
 /* Border */
 /* Generic styles for things like <body>, <a> and others
    It also overwrites normalize.css a bit */
+html, body {
+  height: 100%; }
+
 /* Delete the outline when links are active */
 body {
   color: #333;
   font-size: 1.1em;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  background: #333; }
 
 /* Hide the default focus effect */
 :focus {
