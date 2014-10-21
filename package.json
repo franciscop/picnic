@@ -1,8 +1,8 @@
 {
   "name": "picnic",
-  "version": "1.0.0",
+  "version": "2.2.0",
   "description": "Semantic HTML5 & nice CSS3",
-  "main": "latest.css",
+  "main": "releases/latest.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,12 +16,12 @@
     "html5",
     "framework"
   ],
-  "author": "picnicss <developerfrancisco@hotmail.com>",
+  "author": "Francisco Presencia <developerfrancisco@hotmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/picnicss/picnic/issues"
   },
-  "homepage": "https://github.com/picnicss/picnic",
+  "homepage": "https://picnicss.com/",
   "devDependencies": {
     "gulp": "^3.8.8",
     "gulp-autoprefixer": "^1.0.1",

@@ -1,9 +1,9 @@
 {
   "name": "picnic",
-  "version": "1.0.0",
+  "version": "2.2.0",
   "homepage": "https://github.com/picnicss/picnic",
   "authors": [
-    "picnicss <developerfrancisco@hotmail.com>"
+    "Francisco Presencia <developerfrancisco@hotmail.com>"
   ],
   "description": "Semantic HTML5 & nice CSS3",
   "main": "releases/latest.min.css",
