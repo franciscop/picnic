@@ -1,7 +1,7 @@
 .select {
     position: relative;
     display: inline-block;
-    border: 1px solid rgba(0,0,0,.3);
+    border: $picnic-border;
     border-radius: $picnic-radius;
 }
 

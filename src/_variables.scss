@@ -36,4 +36,6 @@ $picnic-soft-dark-overlay: rgba(0, 0, 0, .1) !default;
 $picnic-clear-overlay: rgba(255, 255, 255, .3) !default;
 
 /* Border */
-$picnic-border: 1px solid $picnic-dark-overlay !default;
+$picnic-border-color: $picnic-dull !default;
+$picnic-border-weight: 1px !default;
+$picnic-border: $picnic-border-weight solid $picnic-border-color;

@@ -692,11 +692,11 @@ nav .menu {
 
 /* Forms */
 /* Browser treats unknow type as "text", so we'll do the same */
-input {
+input, textarea {
   line-height: 1.5em;
   margin: 0.3em;
   padding: 0.3em 0.65em;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid #AAA;
   border-radius: 0.2em;
   transition: all 0.3s ease; }
 
@@ -704,16 +704,16 @@ input[type=file], input[type=color] {
   padding: 0.3em;
   cursor: pointer; }
 
-input:focus, input[type=file]:hover, input[type=color]:hover, input:invalid:focus, .select select:focus, .select select:hover {
+input:focus, textarea:focus, input[type=file]:hover, input[type=color]:hover, input:invalid:focus, .select select:focus, .select select:hover {
   border-color: #7FDBFF;
   transition: all 0.3s ease; }
 
 /* Validation */
-input:invalid {
+input:invalid, textarea:invalid {
   border-color: #FF851B;
   box-shadow: none; }
 
-input:focus:invalid {
+input:focus:invalid, textarea:focus:invalid {
   border-color: #FF4136; }
 
 /* Reset the style for those that we actually know */
@@ -724,7 +724,7 @@ input[type=radio]:focus, input[type=checkbox]:focus {
 .select {
   position: relative;
   display: inline-block;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid #AAA;
   border-radius: 0.2em; }
 
 .select:after {
@@ -777,43 +777,31 @@ input[type=radio]:focus, input[type=checkbox]:focus {
   /* Tick */
   display: inline-block;
   font-size: 0.8em;
-  width: 1em;
-  height: 1em;
-  line-height: 0.8em;
-  margin: 0 0.6em 0 0.375em;
+  width: 0.9em;
+  height: 0.9em;
+  line-height: 0.9em;
+  margin: 0 0.6em 0 0;
   color: transparent;
   background: #FFF;
-  box-sizing: border-box; }
+  border: 1px solid #AAA; }
+
+.checkbox input:focus + *:before, .checkbox input:hover + *:before, .radio input:focus + *:before, .radio input:hover + *:before {
+  border-color: #7fdbff; }
 
 .radio input, .checkbox input {
   opacity: 0;
   position: absolute; }
 
-.radio input:focus + *:before, .radio input:hover + *:before {
-  box-shadow: 0 0 0 1px #7fdbff; }
-
-.radio input:checked + *:before {
-  background: #555; }
-
 .checkbox input + *:before {
-  border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 0.2em;
-  padding: 0.1em 0.05em;
-  box-sizing: border-box; }
-
-.checkbox input:focus + *:before, .checkbox input:hover + *:before {
-  border: 1px solid #7fdbff; }
+  text-align: right; }
 
 .checkbox input:checked + *:before {
   color: #555; }
 
 .radio input + *:before {
-  border: 3px solid #FFF;
   border-radius: 100em;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3); }
-
-.radio input:focus + *:before, .radio input:hover + *:before {
-  box-shadow: 0 0 0 1px #7fdbff; }
+  box-shadow: inset 0 0 0 3px #FFF; }
 
 .radio input:checked + *:before {
   background: #555; }

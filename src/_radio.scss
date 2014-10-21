@@ -1,12 +1,6 @@
 .radio input + *:before {
-    border: 3px solid $picnic-white;
     border-radius: 100em;
-    box-shadow: 0 0 0 1px $picnic-dark-overlay;
-}
-
-.radio input:focus + *:before,
-.radio input:hover + *:before {
-    box-shadow: 0 0 0 1px $picnic-aqua;
+    box-shadow: inset 0 0 0 3px $picnic-white;
 }
 
 .radio input:checked + *:before {
