@@ -11,6 +11,7 @@ Full number version mean significant features added / removed, with loss of back
 ## Version 2.2
 
 - Make the border easily customizable with SASS
+- `modal`: the modal has been added
 
 ## Version 2.1
 
