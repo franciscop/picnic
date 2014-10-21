@@ -19,7 +19,8 @@
     width: 0.9em;
     height: 0.9em;
     line-height: .9em;
-    margin: 0 $picnic-margin * 2 0 0;
+    // Gives it the same margin as other elements with font = 1em
+    margin: 0 $picnic-margin * 1.6 0 $picnic-margin / .8;
     color: transparent;
     background: $picnic-white;
     border: $picnic-border;

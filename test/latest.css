@@ -339,7 +339,7 @@ body {
   color: #333;
   font-size: 1.1em;
   line-height: 1.5em;
-  background: #333; }
+  background: #FFF; }
 
 /* Hide the default focus effect */
 :focus {
@@ -467,7 +467,7 @@ input[type=radio]:focus, input[type=checkbox]:focus {
   width: 0.9em;
   height: 0.9em;
   line-height: 0.9em;
-  margin: 0 0.6em 0 0;
+  margin: 0 0.48em 0 0.375em;
   color: transparent;
   background: #FFF;
   border: 1px solid #AAA; }
@@ -487,11 +487,10 @@ input[type=radio]:focus, input[type=checkbox]:focus {
   color: #555; }
 
 .radio input + *:before {
-  border-radius: 100em;
-  box-shadow: inset 0 0 0 3px #FFF; }
+  border-radius: 100em; }
 
 .radio input:checked + *:before {
-  background: #555; }
+  box-shadow: inset 0 0 0 0.2em #FFF, inset 0 0 0 100em #555; }
 
 /* Components */
 a, a:hover, a:active, a:visited {
