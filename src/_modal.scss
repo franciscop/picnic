@@ -1,14 +1,13 @@
 .modal > input {
     display: none;
 }
-.modal > input + * {
+.modal > input ~ * {
     /* Make it not visible */
     opacity: 0;
     
     /* Also hide it from iteraction */
     max-height: 0;
     overflow: hidden;
-    
     
     position: fixed;
     top: 50%;
@@ -18,27 +17,31 @@
     box-shadow: 0 0 .3em $picnic-dark-overlay;
     background: white;
     z-index: 10;
-    transition: all .3s ease;
+    transition: $picnic-transition-slow;
 }
-.modal > input:checked + * {
+.modal > input:checked + *,
+.modal > input:checked ~ .overlay {
     display: block;
     opacity: 1;
     max-height: 10000px;
-    transition: all .3s ease;
+    transition: $picnic-transition-slow;
 }
-.modal > input:checked ~ .overlay {
-    width: 100%;
-    height: 100%;
+.modal > input ~ .overlay {
+    transform: none;
     top: 0;
     left: 0;
-    position: absolute;
+    bottom: 0;
+    right: 0;
+    position: fixed;
     background: $picnic-dark-overlay;
+    transition: $picnic-transition-slow;
+    z-index: 1;
 }
 .modal header,
 .modal footer {
     display: block;
     padding: .5em;
-    border-bottom: 1px solid $picnic-dark-overlay;
+    border-bottom: 1px solid $picnic-light-gray;
 }
 .modal header {
     font-weight: bold;
@@ -58,5 +61,5 @@
 .modal .content {
     display: block;
     padding: .5em;
-    border-bottom: 1px solid #AAA;
+    border-bottom: 1px solid $picnic-light-gray;
 }

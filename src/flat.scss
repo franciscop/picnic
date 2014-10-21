@@ -15,16 +15,6 @@ $picnic-deep: false;
 @import 'generic';
 
 
-
-/* Components */
-@import 'link';
-@import 'button';
-@import 'table';
-@import 'grids';
-@import 'nav';
-
-
-
 /* Forms */
 @import 'input';
 @import 'select';
@@ -32,5 +22,12 @@ $picnic-deep: false;
 @import 'checkbox';
 @import 'radio';
 
+/* Components */
+@import 'link';
+@import 'button';
+@import 'table';
+@import 'grids';
 
-
+@import 'nav';
+@import 'footer';
+@import 'modal';

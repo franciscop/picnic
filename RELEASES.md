@@ -4,11 +4,23 @@ Full number version mean significant features added / removed, with loss of back
 
 
 
-## Version 2.0 [planned]
+## Version 2.3 [planned]
 
-- `fonts`: Set a default nice font from Google fonts
 - `<main>`: Make it responsive by default
+
+## Version 2.2
+
+- Make the border easily customizable with SASS
+
+## Version 2.1
+
 - `<footer>`: The body scrolls up while showing it from behind
+
+
+## Version 2.0
+
+
+
 
 
 

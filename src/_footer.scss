@@ -4,19 +4,7 @@
  */
 body > footer {
     color: $picnic-white;
-    position: relative;
-    min-height: 200px;
+    background: $picnic-black;
+    margin: -1px 0px;
+    padding: 1px;
 }
-
-body > footer .wrapper {
-    width: 100%;
-    bottom: 0px;
-    position: fixed;
-    z-index: -1;
-}
-
-
-
-
-
-
