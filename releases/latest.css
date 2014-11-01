@@ -381,7 +381,6 @@ input, textarea {
   padding: 0.3em 0.65em;
   border: 1px solid #AAA;
   border-radius: 0.2em;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease; }
 
 input[type=file], input[type=color] {
@@ -390,7 +389,6 @@ input[type=file], input[type=color] {
 
 input:focus, textarea:focus, input[type=file]:hover, input[type=color]:hover, input:invalid:focus, .select select:focus, .select select:hover {
   border-color: #7FDBFF;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   box-shadow: 0.1em 0.1em 0 rgba(0, 0, 0, 0.3); }
 
@@ -403,7 +401,7 @@ input:focus:invalid, textarea:focus:invalid {
   border-color: #FF4136; }
 
 /* Reset the style for those that we actually know */
-input[type=radio]:focus, input[type=checkbox]:focus {
+input[type=radio]:focus, input[type=checkbox]:focus, input[type=range]:focus {
   box-shadow: none;
   border-color: initial; }
 
@@ -516,7 +514,6 @@ a, a:hover, a:active, a:visited {
   cursor: pointer;
   margin: 0.3em;
   padding: 0.3em 0.9em;
-  -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
   height: 1.3em;
   line-height: 1.5em;
@@ -527,7 +524,6 @@ a, a:hover, a:active, a:visited {
 /* Interactivity */
 .button:hover, button:hover, input[type='submit']:hover, input[type='button']:hover, input[type='image']:hover, input[type='reset']:hover, .button:focus, button:focus, input[type='submit']:focus, input[type='button']:focus, input[type='image']:focus, input[type='reset']:focus, .toggle:hover input + *, .toggle input:focus + * {
   color: #FFF;
-  -webkit-transition: all 0.1s ease, box-shadow 0s ease;
   transition: all 0.1s ease, box-shadow 0s ease;
   box-shadow: inset 0 0 0 100em rgba(0, 0, 0, 0.1);
   margin: 0.4em 0.3em 0.3em;
@@ -696,7 +692,6 @@ nav {
   background: #FFF;
   box-shadow: 0 0 0.6em rgba(0, 0, 0, 0.3);
   z-index: 10;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease; }
 
 nav.transparent {
@@ -782,10 +777,8 @@ nav .menu {
     line-height: 1.5em;
     padding-right: 0.5em;
     text-align: right;
-    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     /* Avoid the burger menu to display while hiding */
-    -webkit-transition: display 0s ease 0.3s;
     transition: display 0s ease 0.3s; }
   .burgercheck:checked ~ label:before, .burgercheck:checked ~ label:after {
     display: none; }
@@ -794,7 +787,6 @@ nav .menu {
     right: 70%;
     width: 30%;
     height: 100%;
-    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     background: rgba(255, 255, 255, 0.7); }
   nav .menu {
@@ -807,11 +799,9 @@ nav .menu {
     background: #FFF;
     box-shadow: 0 0 0.6em rgba(0, 0, 0, 0.3);
     overflow: auto;
-    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease; }
   .burgercheck:checked ~ .menu {
     right: 0;
-    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease; }
   nav .menu a {
     display: block;
@@ -855,14 +845,12 @@ body > footer {
   box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.3);
   background: white;
   z-index: 10;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease; }
 
 .modal > input:checked + *, .modal > input:checked ~ .overlay {
   display: block;
   opacity: 1;
   max-height: 10000px;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease; }
 
 .modal > input ~ .overlay {
@@ -874,7 +862,6 @@ body > footer {
   right: 0;
   position: fixed;
   background: rgba(0, 0, 0, 0.3);
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   z-index: 1; }
 
