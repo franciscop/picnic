@@ -403,7 +403,7 @@ input:focus:invalid, textarea:focus:invalid {
   border-color: #FF4136; }
 
 /* Reset the style for those that we actually know */
-input[type=radio]:focus, input[type=checkbox]:focus {
+input[type=radio]:focus, input[type=checkbox]:focus, input[type=range]:focus {
   box-shadow: none;
   border-color: initial; }
 
