@@ -8,7 +8,7 @@ Unpack your meal and get coding. An invasive CSS library to get your style start
 
 Include the following line in your `<head>`:
 
-    <link href="http://picnicss.com/releases/v2.2.min.css" rel="stylesheet" type="text/css">
+    <link href="http://picnicss.com/releases/v2.3.min.css" rel="stylesheet" type="text/css">
 
 Alternatively:
 
@@ -20,7 +20,7 @@ Clone it: `git clone https://github.com/picnicss/picnic.git`
 
 ## Authors
 
-Created by [Francisco Presencia](https://github.com/FranciscoP). SASS from [Jordan Wallwork](https://github.com/jordanwallwork). Significant fixes from [Alex Galushka](https://github.com/galulex).
+Created by [Francisco Presencia](https://github.com/FranciscoP). SASS from [Jordan Wallwork](https://github.com/jordanwallwork). Significant fixes from [Alex Galushka](https://github.com/galulex). Tons of help in several parts of the project from [Emilio Coppola](https://github.com/Coppolaemilio).
 
 
 
@@ -70,7 +70,7 @@ If you don't see anything that seems *picnic.css exclusive*, that's because ther
 
 - **Only CSS3** is needed and your **HTML5** stays highly semantic*.
 
-- **3.2kb** when minimized and gzipped last time I checked.
+- **3.3kb** when minimized and gzipped last time I checked.
 
 - **Normalize.css** is used as a base, achieving a solid foundation.
 
@@ -102,11 +102,13 @@ If you don't see anything that seems *picnic.css exclusive*, that's because ther
 [Min](http://minfwk.com/): a tiny, basic css framework. It has great browser support. No `<select>` right, and it's too inexpressive.
 
 
+
 ## Building
 
 - Install dependencies using `npm install`
 - To build once, run `gulp`
 - For development, run `gulp watch` to rebuild whenever any of the sass files are changed
+
 
 
 ## Some love
