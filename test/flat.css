@@ -328,9 +328,13 @@ td, th {
 /* Default element styles */
 /* Define the transitions */
 /* Colors */
+/* Default grid gutter */
 /* Border */
 /* Generic styles for things like <body>, <a> and others
    It also overwrites normalize.css a bit */
+* {
+  box-sizing: border-box; }
+
 html, body {
   height: 100%; }
 
@@ -395,11 +399,8 @@ input:focus, textarea:focus, input[type=file]:hover, input[type=color]:hover, in
   transition: all 0.3s ease; }
 
 /* Validation */
-input:invalid, textarea:invalid {
-  border-color: #FF851B;
-  box-shadow: none; }
-
 input:focus:invalid, textarea:focus:invalid {
+  box-shadow: none;
   border-color: #FF4136; }
 
 /* Reset the style for those that we actually know */
@@ -492,33 +493,27 @@ input[type=radio]:focus, input[type=checkbox]:focus, input[type=range]:focus {
   box-shadow: inset 0 0 0 0.2em #FFF, inset 0 0 0 100em #555; }
 
 /* Components */
-a, a:hover, a:active, a:visited {
+a {
   color: #0074D9;
   text-decoration: none; }
 
 /* BUTTONS */
-.button, button, input[type='submit'], input[type='button'], input[type='image'], input[type='reset'], a.button:visited, .toggle input + * {
-  user-select: none;
-  border: none;
-  box-sizing: content-box;
+.button, button, input[type='submit'], input[type='button'], input[type='image'], input[type='reset'], .toggle input + * {
   display: inline-block;
-  font-size: 1em;
-  height: 1.5em;
-  line-height: 1.5em;
-  text-decoration: none;
+  height: 2em;
+  line-height: 2em;
+  margin: 0.3em;
+  padding: 0 0.9em;
   vertical-align: middle;
   background: #0074D9;
   color: #FFF;
+  border: 0;
   border-radius: 0.2em;
   cursor: pointer;
-  margin: 0.3em;
-  padding: 0.3em 0.9em;
-  transition: all 0.1s ease; }
+  transition: all 0.1s ease, box-shadow 0s ease; }
 
 /* Interactivity */
-.button:hover, button:hover, input[type='submit']:hover, input[type='button']:hover, input[type='image']:hover, input[type='reset']:hover, .button:focus, button:focus, input[type='submit']:focus, input[type='button']:focus, input[type='image']:focus, input[type='reset']:focus, .toggle:hover input + *, .toggle input:focus + * {
-  color: #FFF;
-  transition: all 0.1s ease, box-shadow 0s ease;
+.button:hover, button:hover, input[type='submit']:hover, input[type='button']:hover, input[type='image']:hover, input[type='reset']:hover, .button:focus, button:focus, input[type='submit']:focus, input[type='button']:focus, input[type='image']:focus, input[type='reset']:focus, .toggle input:focus + * {
   box-shadow: inset 0 0 0 100em rgba(0, 0, 0, 0.1); }
 
 .button:active, button:active, input[type='submit']:active, input[type='button']:active, input[type='image']:active, input[type='reset']:active, .toggle input:active + *, .toggle input:checked + * {
@@ -531,26 +526,24 @@ a, a:hover, a:active, a:visited {
   position: absolute; }
 
 /* Colors */
-.button.success, button.success, input.success[type='submit'], input.success[type='button'], input.success[type='image'], input.success[type='reset'], .button.success:visited, button.success:visited, input.success[type='submit']:visited, input.success[type='button']:visited, input.success[type='image']:visited, input.success[type='reset']:visited, .toggle.success input + * {
+.button.success, button.success, input.success[type='submit'], input.success[type='button'], input.success[type='image'], input.success[type='reset'], .toggle.success input + * {
   background: #2ecc40; }
 
-.button.warning, button.warning, input.warning[type='submit'], input.warning[type='button'], input.warning[type='image'], input.warning[type='reset'], a.button.warning:visited, .toggle.warning input + * {
+.button.warning, button.warning, input.warning[type='submit'], input.warning[type='button'], input.warning[type='image'], input.warning[type='reset'], .toggle.warning input + * {
   background: #FF851B; }
 
-.button.error, button.error, input.error[type='submit'], input.error[type='button'], input.error[type='image'], input.error[type='reset'], a.button.error:visited, .toggle.error input + * {
+.button.error, button.error, input.error[type='submit'], input.error[type='button'], input.error[type='image'], input.error[type='reset'], .toggle.error input + * {
   background: #FF4136; }
 
-.button.dull, button.dull, input.dull[type='submit'], input.dull[type='button'], input.dull[type='image'], input.dull[type='reset'], a.button.dull:visited, .toggle.dull input + * {
+.button.dull, button.dull, input.dull[type='submit'], input.dull[type='button'], input.dull[type='image'], input.dull[type='reset'], .toggle.dull input + * {
   background: #AAA; }
 
-/* This allows for the invasiveness (default styling) */
-table {
-  text-align: left; }
-
+/* This allows the invasiveness */
 td, th {
   padding: 0.3em 2.4em 0.3em 0.6em; }
 
 th {
+  text-align: left;
   font-weight: 900;
   color: #FFF;
   background-color: #0074D9; }
@@ -567,52 +560,25 @@ th {
 .dull th {
   background-color: #AAA; }
 
+/* Zebra stripes */
 tr:nth-child(even) {
   background: rgba(0, 0, 0, 0.05); }
 
-/*!
-Pure v0.3.1-pre
-Copyright 2013 Yahoo! Inc. All rights reserved.
-Licensed under the BSD License.
-https://github.com/yui/pure/blob/master/LICENSE.md
-*/
-/*csslint regex-selectors:false, known-properties:false, duplicate-properties:false*/
+/* From ungrid ( http://chrisnager.github.io/ungrid/ )  */
 .row {
-  letter-spacing: -0.31em;
-  /* Webkit: collapse white-space between units */
-  text-rendering: optimizespeed;
-  /* Webkit: fixes text-rendering: optimizeLegibility */
-  word-spacing: -0.43em;
-  /* Makes it behave similarly to display:block */
-  overflow: auto;
-  /*
-    Use flexbox when possible to avoid `letter-spacing` side-effects.
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  border-spacing: 10px 0px;
+  margin-left: -10px;
+  /* No margin-right: http://www.smashingmagazine.com/2009/07/27/the-definitive-guide-to-using-negative-margins/ */
+  width: calc(100% + 2 * 10px); }
 
-    NOTE: Firefox (as of 25) does not currently support flex-wrap, so the
-    `-moz-` prefix version is omitted.
-    */
-  display: -webkit-flex;
-  -webkit-flex-flow: row wrap;
-  /* IE10 uses display: flexbox */
-  display: -ms-flexbox;
-  -ms-flex-flow: row wrap; }
-
-/*
-Match all of the direct children of .row (which whould be column types)
-*/
 .row > * {
-  display: inline-block;
-  zoom: 1;
-  letter-spacing: normal;
-  word-spacing: normal;
-  vertical-align: top;
-  text-rendering: auto; }
+  display: table-cell; }
 
 .none {
   display: none; }
-
-.full {
-  width: 100%; }
 
 .half {
   width: 50%; }
@@ -641,15 +607,10 @@ Match all of the direct children of .row (which whould be column types)
 .four-fifth {
   width: 80%; }
 
-.sixth {
-  width: 16.6666%; }
-
 /* Responsive grids: tablet+ */
 @media all and (min-width: 750px) {
   .m-none {
     display: none; }
-  .m-full {
-    width: 100%; }
   .m-half {
     width: 50%; }
   .m-third {
@@ -667,16 +628,12 @@ Match all of the direct children of .row (which whould be column types)
   .m-three-fifth {
     width: 60%; }
   .m-four-fifth {
-    width: 80%; }
-  .m-sixth {
-    width: 16.666%; } }
+    width: 80%; } }
 
 /* Responsive grids: laptop+ */
 @media all and (min-width: 1200px) {
   .l-none {
     display: none; }
-  .l-full {
-    width: 100%; }
   .l-half {
     width: 50%; }
   .l-third {
@@ -694,9 +651,7 @@ Match all of the direct children of .row (which whould be column types)
   .l-three-fifth {
     width: 60%; }
   .l-four-fifth {
-    width: 80%; }
-  .l-sixth {
-    width: 16.666%; } }
+    width: 80%; } }
 
 nav {
   width: 100%;

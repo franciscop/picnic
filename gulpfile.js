@@ -23,7 +23,7 @@ gulp.task('build', ['normal', 'flat'], function() {
 		.pipe(gulp.dest('./releases'))
 		.pipe(minify())
 		.pipe(rename('latest.min.css'))
-		.pipe(gulp.dest('./releases'));
+		.pipe(gulp.dest('./test'));
 });
 
 
@@ -34,12 +34,7 @@ gulp.task('watch', ['build'], function() {
 });
 
 
-
-// TESTS
-gulp.task('test', ['normal', 'flat'], function() {
-	gulp.watch(['./src/*.scss'], ['normal', 'flat']);
-});
-
+// Build normal one
 gulp.task('normal', [], function() {
 	return gulp.src('./src/picnic.scss')
 		.pipe(sass())
@@ -47,6 +42,8 @@ gulp.task('normal', [], function() {
 		.pipe(gulp.dest('./test/'));;
 });
 
+
+// Build flat mode
 gulp.task('flat', [], function() {
 	return gulp.src('./src/flat.scss')
 		.pipe(sass())

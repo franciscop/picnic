@@ -1,54 +1,22 @@
-/*!
-Pure v0.3.1-pre
-Copyright 2013 Yahoo! Inc. All rights reserved.
-Licensed under the BSD License.
-https://github.com/yui/pure/blob/master/LICENSE.md
-*/
-/*csslint regex-selectors:false, known-properties:false, duplicate-properties:false*/
-
+/* From ungrid ( http://chrisnager.github.io/ungrid/ )  */
 .row {
-    letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
-    text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
-    word-spacing: -0.43em;
-    
-    /* Makes it behave similarly to display:block */
-    overflow: auto;
-    
-    /*
-    Use flexbox when possible to avoid `letter-spacing` side-effects.
+    width: 100%;
+    display: table;
+    table-layout: fixed;
 
-    NOTE: Firefox (as of 25) does not currently support flex-wrap, so the
-    `-moz-` prefix version is omitted.
-    */
-
-    display: -webkit-flex;
-    -webkit-flex-flow: row wrap;
-
-    /* IE10 uses display: flexbox */
-    display: -ms-flexbox;
-    -ms-flex-flow: row wrap;
+    border-spacing: $picnic-grid-gutter 0px;
+    margin-left: - $picnic-grid-gutter;
+    /* No margin-right: http://www.smashingmagazine.com/2009/07/27/the-definitive-guide-to-using-negative-margins/ */
+    width: calc(100% + 2 * #{$picnic-grid-gutter});
 }
 
-/*
-Match all of the direct children of .row (which whould be column types)
-*/
 .row > * {
-    display: inline-block;
-    zoom: 1;
-    letter-spacing: normal;
-    word-spacing: normal;
-    vertical-align: top;
-    text-rendering: auto;
+    display: table-cell;
 }
-
 
 
 .none {
     display: none;
-}
-
-.full {
-    width: 100%;
 }
 
 .half {
@@ -87,18 +55,10 @@ Match all of the direct children of .row (which whould be column types)
     width: 80%;
 }
 
-.sixth {
-    width: 16.6666%;
-}
-
 /* Responsive grids: tablet+ */
 @media all and (min-width: $picnic-tablet-width) {
     .m-none {
         display: none;
-    }
-
-    .m-full {
-        width: 100%;
     }
 
     .m-half {
@@ -136,20 +96,12 @@ Match all of the direct children of .row (which whould be column types)
     .m-four-fifth {
         width: 80%;
     }
-
-    .m-sixth {
-        width: 16.666%;
-    }
 }
 
 /* Responsive grids: laptop+ */
 @media all and (min-width: $picnic-laptop-width) {
     .l-none {
         display: none;
-    }
-
-    .l-full {
-        width: 100%;
     }
 
     .l-half {
@@ -186,9 +138,5 @@ Match all of the direct children of .row (which whould be column types)
 
     .l-four-fifth {
         width: 80%;
-    }
-
-    .l-sixth {
-        width: 16.666%;
     }
 }

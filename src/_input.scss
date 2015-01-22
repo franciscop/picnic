@@ -29,12 +29,8 @@ input:invalid:focus,
 }
 
 /* Validation */
-input:invalid, textarea:invalid {
-    border-color: $picnic-warning;
-    box-shadow: none;
-}
-
 input:focus:invalid, textarea:focus:invalid {
+    box-shadow: none;
     border-color: $picnic-error;
 }
 

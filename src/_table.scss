@@ -1,12 +1,10 @@
-table {
-    text-align: left;
-}
-
-td,th {
+td,
+th {
     padding: $picnic-padding 2.4em $picnic-padding $picnic-padding * 2;
 }
 
 th {
+    text-align: left;
     font-weight: 900;
     color: $picnic-white;
     background-color: $picnic-primary;
@@ -28,7 +26,7 @@ th {
     background-color: $picnic-dull;
 }
 
-
+/* Zebra stripes */
 tr:nth-child(even) {
     background: rgba(0,0,0,.05);
 }

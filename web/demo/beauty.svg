@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:ns1="http://sozi.baierouge.fr"
+    id="svg2"
+    sodipodi:docname="flower-1.svg"
+    viewBox="0 0 201.5 207.54"
+    sodipodi:version="0.32"
+    version="1.0"
+    inkscape:output_extension="org.inkscape.output.svg.inkscape"
+    inkscape:version="0.46"
+  >
+  <sodipodi:namedview
+      id="base"
+      bordercolor="#666666"
+      inkscape:pageshadow="2"
+      guidetolerance="10.0"
+      pagecolor="#ffffff"
+      gridtolerance="10.0"
+      inkscape:zoom="0.37586955"
+      objecttolerance="10.0"
+      borderopacity="1.0"
+      inkscape:current-layer="svg2"
+      inkscape:cx="638.04083"
+      inkscape:cy="657.14288"
+      inkscape:window-y="0"
+      inkscape:window-x="624"
+      inkscape:window-height="723"
+      showgrid="false"
+      inkscape:pageopacity="0.0"
+      inkscape:window-width="641"
+  />
+  <defs
+      id="defs4"
+    >
+    <linearGradient
+        id="linearGradient4193"
+      >
+      <stop
+          id="stop4195"
+          style="stop-color:#e50000"
+          offset="0"
+      />
+      <stop
+          id="stop4197"
+          style="stop-color:#ff5555;stop-opacity:0"
+          offset="1"
+      />
+    </linearGradient
+    >
+    <radialGradient
+        id="radialGradient4199"
+        xlink:href="#linearGradient4193"
+        gradientUnits="userSpaceOnUse"
+        cy="172.36"
+        cx="342.86"
+        gradientTransform="matrix(1 0 0 1.0417 0 -7.1934)"
+        r="193.09"
+    />
+  </defs
+  >
+  <g
+      id="layer1"
+      transform="matrix(.15791 0 0 .15791 16.376 41.416)"
+    >
+    <path
+        id="path2160"
+        style="fill-rule:evenodd;fill:#008000"
+        d="m470.03 168.72c-34.81 0.55-75.98 25.14-120.23 80.45 287.24-187.49 318.09 308.34-234.97 802.83h105.53c11.37-10.2 22.06-19.9 30.58-28.8 404.11-366.71 376.62-856.94 219.09-854.48z"
+    />
+    <path
+        id="path3142"
+        style="fill-rule:evenodd;fill:#008000"
+        d="m834.13 625.57c77.98-166.27-189.49-144.42-409.81 189.81l-7.81-53.51c195.76-321.73 564.68-292.21 417.62-136.3z"
+    />
+    <path
+        id="path3148"
+        style="fill-rule:evenodd;fill:#008000"
+        d="m44.425 533.84c57.285-180.94 245.14 23.08 178.28 431.36l43.44-35.18c76.75-381.56-224.17-617.67-221.72-396.18z"
+    />
+    <g
+        id="g4201"
+        transform="translate(17.143 -148.57)"
+      >
+      <path
+          id="path4191"
+          style="fill-rule:evenodd;fill:#ff8e8e"
+          d="m357.14 205.1c0.02 71.81-65.23 130.02-145.71 130.02-80.49 0-145.73-58.21-145.72-130.02-0.009-71.81 65.23-130.02 145.72-130.02 80.48-0.002 145.73 58.21 145.71 130.02z"
+          transform="translate(219.15 -163.07)"
+      />
+      <path
+          id="path4189"
+          style="fill-rule:evenodd;fill:#ff8e8e"
+          d="m357.14 205.1c0.02 71.81-65.23 130.02-145.71 130.02-80.49 0-145.73-58.21-145.72-130.02-0.009-71.81 65.23-130.02 145.72-130.02 80.48-0.002 145.73 58.21 145.71 130.02z"
+          transform="translate(27.721 -188.78)"
+      />
+      <path
+          id="path3212"
+          style="fill-rule:evenodd;fill:#ff8e8e"
+          d="m357.14 205.1c0.02 71.81-65.23 130.02-145.71 130.02-80.49 0-145.73-58.21-145.72-130.02-0.009-71.81 65.23-130.02 145.72-130.02 80.48-0.002 145.73 58.21 145.71 130.02z"
+          transform="translate(-86.565 -45.925)"
+      />
+      <path
+          id="path4183"
+          style="fill-rule:evenodd;fill:#ff8e8e"
+          d="m357.14 205.1c0.02 71.81-65.23 130.02-145.71 130.02-80.49 0-145.73-58.21-145.72-130.02-0.009-71.81 65.23-130.02 145.72-130.02 80.48-0.002 145.73 58.21 145.71 130.02z"
+          transform="translate(256.29 14.075)"
+      />
+      <path
+          id="path4185"
+          style="fill-rule:evenodd;fill:#ff8e8e"
+          d="m357.14 205.1c0.02 71.81-65.23 130.02-145.71 130.02-80.49 0-145.73-58.21-145.72-130.02-0.009-71.81 65.23-130.02 145.72-130.02 80.48-0.002 145.73 58.21 145.71 130.02z"
+          transform="translate(150.58 151.22)"
+      />
+      <path
+          id="path4187"
+          style="fill-rule:evenodd;fill:#ff8e8e"
+          d="m357.14 205.1c0.02 71.81-65.23 130.02-145.71 130.02-80.49 0-145.73-58.21-145.72-130.02-0.009-71.81 65.23-130.02 145.72-130.02 80.48-0.002 145.73 58.21 145.71 130.02z"
+          transform="translate(-12.279 128.36)"
+      />
+      <path
+          id="path3134"
+          style="fill-rule:evenodd;fill:url(#radialGradient4199)"
+          d="m500 300.93c-39.84 48.69-62.4-55.86-121.24-33.61s-6.6 115.57-68.68 105.42c-62.08-10.16 17.18-81.97-31.51-121.81-48.69-39.83-103.38 52.08-125.63-6.76-22.25-58.85 79.57-26.11 89.73-88.2 10.15-62.077-96.79-63.492-56.96-112.18 39.84-48.687 62.4 55.86 121.25 33.613 58.84-22.247 6.59-115.57 68.67-105.42 62.08 10.158-17.17 81.973 31.51 121.81 48.69 39.837 103.39-52.077 125.63 6.767 22.25 58.84-79.57 26.11-89.73 88.19-10.15 62.08 96.8 63.5 56.96 112.18z"
+          transform="matrix(1.2126 0 0 1.2126 -107.6 -19.596)"
+      />
+      <path
+          id="path3172"
+          style="fill-rule:evenodd;fill:#ffd5d5"
+          d="m514.29 249.39c0.01 44.19-33.25 80.02-74.29 80.02s-74.3-35.83-74.29-80.02c-0.01-44.2 33.25-80.03 74.29-80.03s74.3 35.83 74.29 80.03z"
+          transform="translate(-131.87 -59.983)"
+      />
+    </g
+    >
+    <g
+        id="g3190"
+        transform="matrix(.47069 .57185 -.57185 .47069 1250 464.71)"
+      >
+      <path
+          id="path3188"
+          style="fill-rule:evenodd;fill:#00ff00"
+          d="m-514.29 660.81s-168.57-82.85-5.71-242.85 162.86-154.29 162.86-154.29 97.14 128.57 51.43 242.86c-45.72 114.28-205.72 154.28-208.58 154.28z"
+          transform="translate(-129.42 -54.497)"
+      />
+      <path
+          id="path3186"
+          style="fill-rule:evenodd;fill:#008000"
+          d="m-385.71 357.96l-148.58 365.71h45.72l102.86-365.71z"
+          transform="translate(-129.42 -54.497)"
+      />
+    </g
+    >
+    <g
+        id="g3194"
+        transform="matrix(-.72358 .15808 .15808 .72358 -407.55 637.02)"
+      >
+      <path
+          id="path3196"
+          style="fill-rule:evenodd;fill:#00ff00"
+          d="m-514.29 660.81s-168.57-82.85-5.71-242.85 162.86-154.29 162.86-154.29 97.14 128.57 51.43 242.86c-45.72 114.28-205.72 154.28-208.58 154.28z"
+          transform="translate(-129.42 -54.497)"
+      />
+      <path
+          id="path3198"
+          style="fill-rule:evenodd;fill:#008000"
+          d="m-385.71 357.96l-148.58 365.71h45.72l102.86-365.71z"
+          transform="translate(-129.42 -54.497)"
+      />
+    </g
+    >
+    <g
+        id="g3200"
+        transform="matrix(.47912 .12578 -.12578 .47912 656.43 488.98)"
+      >
+      <path
+          id="path3202"
+          style="fill-rule:evenodd;fill:#00ff00"
+          d="m-514.29 660.81s-168.57-82.85-5.71-242.85 162.86-154.29 162.86-154.29 97.14 128.57 51.43 242.86c-45.72 114.28-205.72 154.28-208.58 154.28z"
+          transform="translate(-129.42 -54.497)"
+      />
+      <path
+          id="path3204"
+          style="fill-rule:evenodd;fill:#008000"
+          d="m-385.71 357.96l-148.58 365.71h45.72l102.86-365.71z"
+          transform="translate(-129.42 -54.497)"
+      />
+    </g
+    >
+    <g
+        id="g3206"
+        transform="matrix(-.051460 .49268 -.49268 -.051460 867.21 978.06)"
+      >
+      <path
+          id="path3208"
+          style="fill-rule:evenodd;fill:#00ff00"
+          d="m-514.29 660.81s-168.57-82.85-5.71-242.85 162.86-154.29 162.86-154.29 97.14 128.57 51.43 242.86c-45.72 114.28-205.72 154.28-208.58 154.28z"
+          transform="translate(-129.42 -54.497)"
+      />
+      <path
+          id="path3210"
+          style="fill-rule:evenodd;fill:#008000"
+          d="m-385.71 357.96l-148.58 365.71h45.72l102.86-365.71z"
+          transform="translate(-129.42 -54.497)"
+      />
+    </g
+    >
+    <path
+        id="path4213"
+        style="fill-rule:evenodd;fill:#ffa0bb"
+        d="m357.14 205.1c0.02 71.81-65.23 130.02-145.71 130.02-80.49 0-145.73-58.21-145.72-130.02-0.009-71.81 65.23-130.02 145.72-130.02 80.48-0.002 145.73 58.21 145.71 130.02z"
+        transform="matrix(.71905 0 0 .71905 888.86 276.52)"
+    />
+    <path
+        id="path4215"
+        style="fill-rule:evenodd;fill:#ffa0bb"
+        d="m357.14 205.1c0.02 71.81-65.23 130.02-145.71 130.02-80.49 0-145.73-58.21-145.72-130.02-0.009-71.81 65.23-130.02 145.72-130.02 80.48-0.002 145.73 58.21 145.71 130.02z"
+        transform="matrix(.71905 0 0 .71905 751.22 258.03)"
+    />
+    <path
+        id="path4217"
+        style="fill-rule:evenodd;fill:#ffa0bb"
+        d="m357.14 205.1c0.02 71.81-65.23 130.02-145.71 130.02-80.49 0-145.73-58.21-145.72-130.02-0.009-71.81 65.23-130.02 145.72-130.02 80.48-0.002 145.73 58.21 145.71 130.02z"
+        transform="matrix(.71905 0 0 .71905 669.04 360.75)"
+    />
+    <path
+        id="path4219"
+        style="fill-rule:evenodd;fill:#ffa0bb"
+        d="m357.14 205.1c0.02 71.81-65.23 130.02-145.71 130.02-80.49 0-145.73-58.21-145.72-130.02-0.009-71.81 65.23-130.02 145.72-130.02 80.48-0.002 145.73 58.21 145.71 130.02z"
+        transform="matrix(.71905 0 0 .71905 915.57 403.9)"
+    />
+    <path
+        id="path4221"
+        style="fill-rule:evenodd;fill:#ffa0bb"
+        d="m357.14 205.1c0.02 71.81-65.23 130.02-145.71 130.02-80.49 0-145.73-58.21-145.72-130.02-0.009-71.81 65.23-130.02 145.72-130.02 80.48-0.002 145.73 58.21 145.71 130.02z"
+        transform="matrix(.71905 0 0 .71905 839.56 502.51)"
+    />
+    <path
+        id="path4223"
+        style="fill-rule:evenodd;fill:#ffa0bb"
+        d="m357.14 205.1c0.02 71.81-65.23 130.02-145.71 130.02-80.49 0-145.73-58.21-145.72-130.02-0.009-71.81 65.23-130.02 145.72-130.02 80.48-0.002 145.73 58.21 145.71 130.02z"
+        transform="matrix(.71905 0 0 .71905 722.46 486.07)"
+    />
+    <path
+        id="path4225"
+        style="fill:url(#radialGradient4199);fill-rule:evenodd"
+        d="m500 300.93c-39.84 48.69-62.4-55.86-121.24-33.61s-6.6 115.57-68.68 105.42c-62.08-10.16 17.18-81.97-31.51-121.81-48.69-39.83-103.38 52.08-125.63-6.76-22.25-58.85 79.57-26.11 89.73-88.2 10.15-62.077-96.79-63.492-56.96-112.18 39.84-48.687 62.4 55.86 121.25 33.613 58.84-22.247 6.59-115.57 68.67-105.42 62.08 10.158-17.17 81.973 31.51 121.81 48.69 39.837 103.39-52.077 125.63 6.767 22.25 58.84-79.57 26.11-89.73 88.19-10.15 62.08 96.8 63.5 56.96 112.18z"
+        transform="matrix(.87188 0 0 .87188 653.91 379.68)"
+    />
+    <path
+        id="path4227"
+        style="fill-rule:evenodd;fill:#ffd5d5"
+        d="m514.29 249.39c0.01 44.19-33.25 80.02-74.29 80.02s-74.3-35.83-74.29-80.02c-0.01-44.2 33.25-80.03 74.29-80.03s74.3 35.83 74.29 80.03z"
+        transform="matrix(.71905 0 0 .71905 636.46 350.64)"
+    />
+    <path
+        id="path4233"
+        style="fill-rule:evenodd;fill:#ffb56d"
+        d="m357.14 205.1c0.02 71.81-65.23 130.02-145.71 130.02-80.49 0-145.73-58.21-145.72-130.02-0.009-71.81 65.23-130.02 145.72-130.02 80.48-0.002 145.73 58.21 145.71 130.02z"
+        transform="matrix(.49382 0 0 .49382 14.81 348.49)"
+    />
+    <path
+        id="path4235"
+        style="fill-rule:evenodd;fill:#ffb56d"
+        d="m357.14 205.1c0.02 71.81-65.23 130.02-145.71 130.02-80.49 0-145.73-58.21-145.72-130.02-0.009-71.81 65.23-130.02 145.72-130.02 80.48-0.002 145.73 58.21 145.71 130.02z"
+        transform="matrix(.49382 0 0 .49382 -79.722 335.79)"
+    />
+    <path
+        id="path4237"
+        style="fill-rule:evenodd;fill:#ffb56d"
+        d="m357.14 205.1c0.02 71.81-65.23 130.02-145.71 130.02-80.49 0-145.73-58.21-145.72-130.02-0.009-71.81 65.23-130.02 145.72-130.02 80.48-0.002 145.73 58.21 145.71 130.02z"
+        transform="matrix(.49382 0 0 .49382 -136.16 406.34)"
+    />
+    <path
+        id="path4239"
+        style="fill-rule:evenodd;fill:#ffb56d"
+        d="m357.14 205.1c0.02 71.81-65.23 130.02-145.71 130.02-80.49 0-145.73-58.21-145.72-130.02-0.009-71.81 65.23-130.02 145.72-130.02 80.48-0.002 145.73 58.21 145.71 130.02z"
+        transform="matrix(.49382 0 0 .49382 33.152 435.97)"
+    />
+    <path
+        id="path4241"
+        style="fill-rule:evenodd;fill:#ffb56d"
+        d="m357.14 205.1c0.02 71.81-65.23 130.02-145.71 130.02-80.49 0-145.73-58.21-145.72-130.02-0.009-71.81 65.23-130.02 145.72-130.02 80.48-0.002 145.73 58.21 145.71 130.02z"
+        transform="matrix(.49382 0 0 .49382 -19.052 503.69)"
+    />
+    <path
+        id="path4243"
+        style="fill-rule:evenodd;fill:#ffb56d"
+        d="m357.14 205.1c0.02 71.81-65.23 130.02-145.71 130.02-80.49 0-145.73-58.21-145.72-130.02-0.009-71.81 65.23-130.02 145.72-130.02 80.48-0.002 145.73 58.21 145.71 130.02z"
+        transform="matrix(.49382 0 0 .49382 -99.475 492.41)"
+    />
+    <path
+        id="path4245"
+        style="fill:url(#radialGradient4199);fill-rule:evenodd"
+        d="m500 300.93c-39.84 48.69-62.4-55.86-121.24-33.61s-6.6 115.57-68.68 105.42c-62.08-10.16 17.18-81.97-31.51-121.81-48.69-39.83-103.38 52.08-125.63-6.76-22.25-58.85 79.57-26.11 89.73-88.2 10.15-62.077-96.79-63.492-56.96-112.18 39.84-48.687 62.4 55.86 121.25 33.613 58.84-22.247 6.59-115.57 68.67-105.42 62.08 10.158-17.17 81.973 31.51 121.81 48.69 39.837 103.39-52.077 125.63 6.767 22.25 58.84-79.57 26.11-89.73 88.19-10.15 62.08 96.8 63.5 56.96 112.18z"
+        transform="matrix(.59879 0 0 .59879 -146.55 419.34)"
+    />
+    <path
+        id="path4247"
+        style="fill-rule:evenodd;fill:#ffd5d5"
+        d="m514.29 249.39c0.01 44.19-33.25 80.02-74.29 80.02s-74.3-35.83-74.29-80.02c-0.01-44.2 33.25-80.03 74.29-80.03s74.3 35.83 74.29 80.03z"
+        transform="matrix(.49382 0 0 .49382 -158.53 399.4)"
+    />
+    <g
+        id="g4269"
+        transform="matrix(.37085 .64112 -.64112 .37085 1004.3 1085.6)"
+      >
+      <path
+          id="path4271"
+          style="fill-rule:evenodd;fill:#00ff00"
+          d="m-514.29 660.81s-168.57-82.85-5.71-242.85 162.86-154.29 162.86-154.29 97.14 128.57 51.43 242.86c-45.72 114.28-205.72 154.28-208.58 154.28z"
+          transform="translate(-129.42 -54.497)"
+      />
+      <path
+          id="path4273"
+          style="fill-rule:evenodd;fill:#008000"
+          d="m-385.71 357.96l-148.58 365.71h45.72l102.86-365.71z"
+          transform="translate(-129.42 -54.497)"
+      />
+    </g
+    >
+  </g
+  >
+  <metadata
+    >
+    <rdf:RDF
+      >
+      <cc:Work
+        >
+        <dc:format
+          >image/svg+xml</dc:format
+        >
+        <dc:type
+            rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+        />
+        <cc:license
+            rdf:resource="http://creativecommons.org/licenses/publicdomain/"
+        />
+        <dc:publisher
+          >
+          <cc:Agent
+              rdf:about="http://openclipart.org/"
+            >
+            <dc:title
+              >Openclipart</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:publisher
+        >
+        <dc:title
+          >3 flowers</dc:title
+        >
+        <dc:date
+          >2008-06-25T11:41:23</dc:date
+        >
+        <dc:description
+          >"back to basic" collection continue with this simple set of 3 colored flowers - see the how i did this for more details</dc:description
+        >
+        <dc:source
+          >https://openclipart.org/detail/17456/3-flowers-by-peileppe</dc:source
+        >
+        <dc:creator
+          >
+          <cc:Agent
+            >
+            <dc:title
+              >Peileppe</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:creator
+        >
+        <dc:subject
+          >
+          <rdf:Bag
+            >
+            <rdf:li
+              >aiflowers</rdf:li
+            >
+            <rdf:li
+              >blooming</rdf:li
+            >
+            <rdf:li
+              >bouquet</rdf:li
+            >
+            <rdf:li
+              >colour</rdf:li
+            >
+            <rdf:li
+              >decoration</rdf:li
+            >
+            <rdf:li
+              >flores</rdf:li
+            >
+            <rdf:li
+              >florilege</rdf:li
+            >
+            <rdf:li
+              >flower</rdf:li
+            >
+            <rdf:li
+              >flower power</rdf:li
+            >
+            <rdf:li
+              >gift</rdf:li
+            >
+            <rdf:li
+              >green</rdf:li
+            >
+            <rdf:li
+              >how i did it</rdf:li
+            >
+            <rdf:li
+              >leaf</rdf:li
+            >
+            <rdf:li
+              >nature</rdf:li
+            >
+            <rdf:li
+              >plant</rdf:li
+            >
+            <rdf:li
+              >plantas</rdf:li
+            >
+            <rdf:li
+              >spring</rdf:li
+            >
+            <rdf:li
+              >spring2013</rdf:li
+            >
+            <rdf:li
+              >twig</rdf:li
+            >
+            <rdf:li
+              >vegetal</rdf:li
+            >
+            <rdf:li
+              >vegetales</rdf:li
+            >
+          </rdf:Bag
+          >
+        </dc:subject
+        >
+      </cc:Work
+      >
+      <cc:License
+          rdf:about="http://creativecommons.org/licenses/publicdomain/"
+        >
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Reproduction"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Distribution"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
+        />
+      </cc:License
+      >
+    </rdf:RDF
+    >
+  </metadata
+  >
+</svg
+>

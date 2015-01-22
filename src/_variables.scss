@@ -36,6 +36,9 @@ $picnic-dark-overlay: rgba(0, 0, 0, .3) !default;
 $picnic-soft-dark-overlay: rgba(0, 0, 0, .1) !default;
 $picnic-clear-overlay: rgba(255, 255, 255, .3) !default;
 
+/* Default grid gutter */
+$picnic-grid-gutter: 10px !default;
+
 /* Border */
 $picnic-border-color: $picnic-dull !default;
 $picnic-border-weight: 1px !default;
