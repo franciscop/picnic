@@ -574,12 +574,13 @@ tr:nth-child(even) {
 
 /* From ungrid ( http://chrisnager.github.io/ungrid/ )  */
 .row {
+  max-width: 100%;
   width: 100%;
   display: table;
   table-layout: fixed;
   border-spacing: 10px 0px;
   margin-left: -10px;
-  margin-right: -10px;
+  /* No margin-right: http://www.smashingmagazine.com/2009/07/27/the-definitive-guide-to-using-negative-margins/ */
   width: calc(100% + 2 * 10px); }
 
 .row > * {
@@ -676,10 +677,10 @@ nav.transparent {
   box-shadow: none;
   background: none; }
 
-nav.transparent a, nav.transparent a:visited {
+nav.transparent a {
   color: #FFF; }
 
-nav a, nav a:visited {
+nav a {
   color: #333;
   display: inline-block;
   font-size: 1em;
@@ -688,12 +689,10 @@ nav a, nav a:visited {
   padding: 0.5em 0.6em; }
 
 nav a:hover {
-  color: #333;
-  box-shadow: inset 0 -0.2em 0 #7fdbff; }
+  color: #0074D9; }
 
-nav a.button, nav a.button:hover {
-  color: #FFF;
-  line-height: 1.4em; }
+nav a.button:hover {
+  color: #FFF; }
 
 nav .main, nav .menu {
   margin: 0 0.5em; }

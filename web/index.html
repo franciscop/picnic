@@ -46,10 +46,16 @@
     .main img {
       vertical-align: middle;
     }
-    .row > div {
-      padding: 10px 0;
-      background: #7fdbff;
-      box-shadow: inset 0 0 0 2px #5bd;
+
+    .row {
+      margin: .5em auto;
+    }
+    .row > * {
+      padding: .3em .6em;
+      background: #6C7;
+    }
+    .row > *:nth-child(even){
+      background: #7DF;
     }
     .text {
       max-width: 500px;
@@ -195,70 +201,103 @@
 
 
   <section>
-    <h2 id="grids">Grids</h2>
-    <p>Being mobile-first, you can also add "m-" and "l-" to target only bigger screens.</p>
+    <h2 id="grids">Evenly stacked grids</h2>
+    <p>Built on top of <a href="http://chrisnager.github.io/ungrid/">ungrid</a></p>
     <p>Note: colors added for a dramatic effect</p>
     <div class="render">
 <div class="row">
-  <div class="sixth">Sixth</div>
+  <div>[one]</div>
 </div>
 
 <div class="row">
-  <div class="fifth">Fifth</div>
+  <div>[two]</div>
+  <div>[two]</div>
 </div>
 
 <div class="row">
-  <div class="fourth">Fourth</div>
+  <div>[three]</div>
+  <div>[three]</div>
+  <div>[three]</div>
 </div>
 
 <div class="row">
-  <div class="third">Third</div>
+  <div>[four]</div>
+  <div>[four]</div>
+  <div>[four]</div>
+  <div>[four]</div>
 </div>
 
 <div class="row">
-  <div class="half">Half</div>
+  <div>[five]</div>
+  <div>[five]</div>
+  <div>[five]</div>
+  <div>[five]</div>
+  <div>[five]</div>
 </div>
 
-<div class="row">
-  <div class="full">Full</div>
-</div>
+...
+
     </div>
   </section>
-  
-  
-  
+
+
+
   <section>
-    <h2 id="nav">Nav</h2>
-    <p>Current navigation bar at the top of the page. Note the use of <a href="http://fontello.com/" target="_blank">fontello</a> for icons.</p>
+    <h2 id="nav">Grid classes</h2>
+    <p>Tweak the behaviour adding classes.</p>
     <div class="render">
-<nav>
-  <a href="#" class="main">
-    <img src="/basket.svg" alt="Logo for Picnic CSS">Picnic
-  </a>
 
-  <!-- responsive -->
-  <input id="bmenu" class="burgercheck" type="checkbox">
-  <label for="bmenu" class="burgermenu"></label>
-  <!-- /responsive -->
+<div class="row">
+  <div>[empty]</div>
+</div>
 
-  <div class="menu">
-    <a href="#buttons" class="icon-button">Buttons</a>
-    <a href="#input" class="icon-form">Form</a>
-    <a href="#table" class="icon-table">Table</a>
-    <a href="#grids" class="icon-grid">Grids</a>
-    <a href="#nav" class="icon-menu">Nav</a>
-    <a href="/test/" class="button primary">Test</a>
-    <a class="button primary" href="/demo/">
-        Demo
-      </a>
-    <a class="button warning primary" href="https://github.com/picnicss/picnic">
-        Github
-    </a>
-  </div>
-</nav>
+<div class="row">
+  <div class="half">.half</div>
+  <div>[empty]</div>
+</div>
+
+<div class="row">
+  <div class="third">.third</div>
+  <div>[empty]</div>
+</div>
+
+<div class="row">
+  <div class="fourth">.fourth</div>
+  <div>[empty]</div>
+</div>
+
+<div class="row">
+  <div class="fifth">.fifth</div>
+  <div>[empty]</div>
+</div>
+
+<div class="row">
+  <div class="two-fifth">.two-fifth</div>
+  <div>[empty]</div>
+</div>
+
+<div class="row">
+  <div class="three-fifth">.three-fifth</div>
+  <div>[empty]</div>
+</div>
+
+<div class="row">
+  <div class="two-third">.two-third</div>
+  <div>[empty]</div>
+</div>
+
+<div class="row">
+  <div class="three-fourth">.three-fourth</div>
+  <div>[empty]</div>
+</div>
+
+<div class="row">
+  <div class="four-fifth">.four-fifth</div>
+  <div>[empty]</div>
+</div>
     </div>
   </section>
-    
+
   
   
   <h2>Subscribe</h2>

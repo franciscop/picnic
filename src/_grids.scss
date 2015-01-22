@@ -1,5 +1,7 @@
 /* From ungrid ( http://chrisnager.github.io/ungrid/ )  */
 .row {
+
+    max-width: 100%;
     width: 100%;
     display: table;
     table-layout: fixed;

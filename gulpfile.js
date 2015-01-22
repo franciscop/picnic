@@ -23,7 +23,8 @@ gulp.task('build', ['normal', 'flat'], function() {
 		.pipe(gulp.dest('./releases'))
 		.pipe(minify())
 		.pipe(rename('latest.min.css'))
-		.pipe(gulp.dest('./test'));
+		.pipe(gulp.dest('./web/releases'))
+		.pipe(gulp.dest('./web/test'));
 });
 
 
@@ -39,7 +40,7 @@ gulp.task('normal', [], function() {
 	return gulp.src('./src/picnic.scss')
 		.pipe(sass())
 		.pipe(rename('latest.css'))
-		.pipe(gulp.dest('./test/'));;
+		.pipe(gulp.dest('./web/test/'));;
 });
 
 
@@ -48,5 +49,5 @@ gulp.task('flat', [], function() {
 	return gulp.src('./src/flat.scss')
 		.pipe(sass())
 		.pipe(rename('flat.css'))
-		.pipe(gulp.dest('./test/'));;
+		.pipe(gulp.dest('./web/test/'));;
 });
