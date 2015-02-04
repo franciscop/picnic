@@ -571,19 +571,18 @@ tr:nth-child(even) {
   background: rgba(0, 0, 0, 0.05); }
 
 /* From ungrid ( http://chrisnager.github.io/ungrid/ )  */
-@media (min-width: 50em) {
-  .row {
-    max-width: 100%;
-    width: 100%;
-    display: table;
-    table-layout: fixed;
-    border-spacing: 10px 0px;
-    margin-left: -10px;
-    /* No margin-right: http://www.smashingmagazine.com/2009/07/27/the-definitive-guide-to-using-negative-margins/ */
-    width: calc(100% + 2 * 10px); }
-  .row > * {
-    display: table-cell;
-    vertical-align: top; } }
+.row {
+  max-width: 100%;
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  border-spacing: 10px 0px;
+  margin-left: -10px;
+  /* No margin-right: http://www.smashingmagazine.com/2009/07/27/the-definitive-guide-to-using-negative-margins/ */
+  width: calc(100% + 2 * 10px); }
+
+.row > * {
+  display: table-cell; }
 
 .none {
   display: none; }
@@ -614,3 +613,208 @@ tr:nth-child(even) {
 
 .four-fifth {
   width: 80%; }
+
+/* Extra */
+nav {
+  width: 100%;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  background: #FFF;
+  box-shadow: 0 0 0.6em rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  transition: all 0.3s ease; }
+
+nav.transparent {
+  box-shadow: none;
+  background: none; }
+
+nav.transparent a {
+  color: #FFF; }
+
+nav a {
+  color: #333;
+  display: inline-block;
+  font-size: 1em;
+  height: 2em;
+  line-height: 2em;
+  padding: 0.5em 0.6em; }
+
+nav a:hover {
+  color: #0074D9; }
+
+nav a.button:hover {
+  color: #FFF; }
+
+nav .main, nav .menu {
+  margin: 0 0.5em; }
+
+nav .main {
+  font-weight: 700;
+  float: left;
+  max-width: 50%;
+  white-space: nowrap; }
+
+nav .main img {
+  height: 2em; }
+
+nav .menu {
+  float: right; }
+
+.burgercheck, .burgermenu {
+  display: none;
+  cursor: pointer; }
+
+.burgermenu {
+  display: inline-block;
+  position: relative;
+  height: 0.8em;
+  width: 0.4em;
+  margin: 0.35em;
+  display: none; }
+
+.burgermenu:before, .burgermenu:after {
+  display: none;
+  content: " ";
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-style: solid;
+  border-color: #333;
+  border-width: 0.14em 0; }
+
+.burgermenu:after {
+  top: 50%;
+  margin-top: -0.07em; }
+
+@media all and (max-width: 960px) {
+  [class*="icon-"]:before, [class*=" icon-"]:before {
+    display: none; } }
+
+@media all and (max-width: 750px) {
+  [class*="icon-"]:before {
+    display: inline-block; }
+  .burgercheck ~ label:before, .burgercheck ~ label:after {
+    display: block; }
+  .burgercheck ~ label {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    font-size: 2em;
+    line-height: 1.5em;
+    padding-right: 0.5em;
+    text-align: right;
+    transition: all 0.3s ease;
+    /* Avoid the burger menu to display while hiding */
+    transition: display 0s ease 0.3s; }
+  .burgercheck:checked ~ label:before, .burgercheck:checked ~ label:after {
+    display: none; }
+  .burgercheck:checked ~ label {
+    margin: 0;
+    right: 70%;
+    width: 30%;
+    height: 100%;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.7); }
+  nav .menu {
+    position: fixed;
+    width: 70%;
+    height: 100%;
+    right: -70%;
+    top: 0;
+    margin-right: 0;
+    background: #FFF;
+    box-shadow: 0 0 0.6em rgba(0, 0, 0, 0.3);
+    overflow: auto;
+    transition: all 0.3s ease; }
+  .burgercheck:checked ~ .menu {
+    right: 0;
+    transition: all 0.3s ease; }
+  nav .menu a {
+    display: block;
+    text-align: left; }
+  nav .menu .button, nav .menu button, nav .menu input[type='submit'], nav .menu input[type='button'], nav .menu input[type='image'], nav .menu input[type='reset'] {
+    margin: 0.5em;
+    float: left;
+    clear: left; }
+  nav .menu .button:hover, nav .menu button:hover, nav .menu input[type='submit']:hover, nav .menu input[type='button']:hover, nav .menu input[type='image']:hover, nav .menu input[type='reset']:hover {
+    margin: 0.6em 0.5em 0.5em; }
+  nav .menu .button:active, nav .menu button:active, nav .menu input[type='submit']:active, nav .menu input[type='button']:active, nav .menu input[type='image']:active, nav .menu input[type='reset']:active {
+    margin: 0.7em 0.5em 0.5em; }
+  .transparent .menu {
+    color: #333; } }
+
+/**
+ * Default footer height: 200px
+ * Change it, but you'll need some js to make it responsive
+ */
+body > footer {
+  color: #FFF;
+  background: #333;
+  margin: -1px 0px;
+  padding: 1px; }
+
+.modal > input {
+  display: none; }
+
+.modal > input ~ * {
+  /* Make it not visible */
+  opacity: 0;
+  /* Also hide it from iteraction */
+  max-height: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 0.2em;
+  box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.3);
+  background: white;
+  z-index: 10;
+  transition: all 0.3s ease; }
+
+.modal > input:checked + *, .modal > input:checked ~ .overlay {
+  display: block;
+  opacity: 1;
+  max-height: 10000px;
+  transition: all 0.3s ease; }
+
+.modal > input ~ .overlay {
+  -webkit-transform: none;
+  transform: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1; }
+
+.modal header, .modal footer {
+  display: block;
+  padding: 0.5em;
+  border-bottom: 1px solid #CCC; }
+
+.modal header {
+  font-weight: bold; }
+
+.modal footer {
+  border-width: 1px 0 0 0;
+  padding: 0.2em; }
+
+.modal header .close {
+  float: right;
+  padding-right: 0.6em;
+  cursor: pointer; }
+
+.modal header .close:hover {
+  color: #FF851B; }
+
+.modal .content {
+  display: block;
+  padding: 0.5em;
+  border-bottom: 1px solid #CCC; }

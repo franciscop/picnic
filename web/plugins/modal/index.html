@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <title>Picnic CSS - Testing</title>
+  <link rel="stylesheet" type="text/css" href="/releases/plugins.css">
+  <style>
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      }
+  </style>
+</head>
+<body>
+
+  <main>
+    <h1>Modal plugin</h1>
+
+    <p>If you want to modify the modal with jQuery, this is a fast way of doing so:</p>
+
+<pre>
+// Modify the title of the modal
+$(".modal .title").html("New title");
+
+// Change the content
+$(".modal .content").html("Some text for the content");
+
+// Modify the main button
+$(".modal .primary").html("Accept");
+</pre> 
+
+    <p>An example of the modal. Though something like this is better: <a href="http://tympanus.net/Development/DialogEffects/">Tympanus Dialog Effects</a></p>
+
+    <section>
+      <!-- MODAL -->
+      <div class="render">
+
+<!-- This is the part that triggers the modal -->
+<label for="modal_1" class="button">
+    Click me
+</label>
+
+<!-- This part can be anywhere in the root of <body> -->
+<div class="modal">
+  <input id="modal_1" type="checkbox" />
+  <article>
+    <header>
+      <label for="modal_1" class="close">⨯</label>
+      <div class="title">
+        Test title
+      </div>
+    </header>
+    <section class="content">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </section>
+    <footer>
+      <button class="primary">Accept</button>
+      <label for="modal_1" class="button error close">
+        Cancel
+      </label>
+    </footer>
+  </article>
+  <label for="modal_1" class="overlay"></label>
+</div>
+
+      </div>
+    </section>
+
+  <script>
+    // Show the code for each preview
+    String.prototype.entities = function() {
+      return this.toString().replace(
+        /[\u00A0-\u9999<>\&]/gim,
+        function(i) { return '&#'+i.charCodeAt(0)+';'; }
+        );
+      }
+    var sectionsCollection = document.getElementsByTagName("section");
+    // http://stackoverflow.com/a/222847/938236
+    var sections = [].slice.call(sectionsCollection);;
+    sections.forEach(function(section, index){
+      var render = section.getElementsByClassName('render')[0];
+      if (render) {
+        section.innerHTML += "<pre></pre>";
+        var pre = section.getElementsByTagName("pre")[0];
+        var html = render.innerHTML;
+        pre.innerHTML = html.trim().entities();
+        }
+      });
+  </script>
+</body>
+</html>

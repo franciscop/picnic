@@ -8,6 +8,9 @@
    It also overwrites normalize.css a bit */
 @import 'generic';
 
+/* Simple elements */
+@import 'link';
+@import 'button';
 
 /* Forms */
 @import 'input';
@@ -17,17 +20,5 @@
 @import 'radio';
 
 /* Components */
-@import 'link';
-@import 'button';
 @import 'table';
 @import 'grids';
-
-/* Extra */
-@import 'nav';
-@import 'footer';
-@import 'modal';
-
-
-
-
-

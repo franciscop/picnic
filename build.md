@@ -1,6 +1,6 @@
 # Build system
 
-This system is scheduled for 2.0. It'll let you build your own Picnic CSS implementation. It's based in another project that is currently on development, but the specifications are clear. I think the best way to show it is through some examples of urls.
+This system is scheduled for some point in the future. It'll let you build your own Picnic CSS implementation. It's based in another project that is currently on development, but the specifications are clear. I think the best way to show it is through some examples of urls.
 
 
 

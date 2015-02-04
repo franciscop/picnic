@@ -12,19 +12,20 @@ gulp.task('default', ['build'], function() {});
 // MAIN BUILD
 // First execute the tests
 // Then create the latest versions
-gulp.task('build', ['normal', 'flat'], function() {
+gulp.task('build', ['normal', 'flat', 'plugins'], function() {
 	return gulp.src('./src/picnic.scss')
 		.pipe(sass())
-		.pipe(rename('latest.css'))
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions'],
 			cascade: false
 		}))
+		.pipe(rename('latest.css'))
 		.pipe(gulp.dest('./releases'))
+		.pipe(gulp.dest('./web/releases'))
 		.pipe(minify())
 		.pipe(rename('latest.min.css'))
-		.pipe(gulp.dest('./web/releases'))
-		.pipe(gulp.dest('./web/test'));
+		.pipe(gulp.dest('./releases'))
+		.pipe(gulp.dest('./web/releases'));
 });
 
 
@@ -50,4 +51,19 @@ gulp.task('flat', [], function() {
 		.pipe(sass())
 		.pipe(rename('flat.css'))
 		.pipe(gulp.dest('./web/test/'));;
+});
+
+
+// Build flat mode
+gulp.task('plugins', [], function() {
+	return gulp.src('./src/plugins.scss')
+		.pipe(sass())
+		.pipe(rename('plugins.css'))
+		.pipe(gulp.dest('./releases'))
+		.pipe(gulp.dest('./web/releases'))
+		.pipe(gulp.dest('./web/test/'))
+		.pipe(minify())
+		.pipe(rename('plugins.min.css'))
+		.pipe(gulp.dest('./releases'))
+		.pipe(gulp.dest('./web/releases'));
 });

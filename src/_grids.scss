@@ -1,21 +1,23 @@
 /* From ungrid ( http://chrisnager.github.io/ungrid/ )  */
-.row {
+@media (min-width: 50em) {
+    .row {
 
-    max-width: 100%;
-    width: 100%;
-    display: table;
-    table-layout: fixed;
+        max-width: 100%;
+        width: 100%;
+        display: table;
+        table-layout: fixed;
 
-    border-spacing: $picnic-grid-gutter 0px;
-    margin-left: - $picnic-grid-gutter;
-    /* No margin-right: http://www.smashingmagazine.com/2009/07/27/the-definitive-guide-to-using-negative-margins/ */
-    width: calc(100% + 2 * #{$picnic-grid-gutter});
+        border-spacing: $picnic-grid-gutter 0px;
+        margin-left: - $picnic-grid-gutter;
+        /* No margin-right: http://www.smashingmagazine.com/2009/07/27/the-definitive-guide-to-using-negative-margins/ */
+        width: calc(100% + 2 * #{$picnic-grid-gutter});
+    }
+
+    .row > * {
+        display: table-cell;
+        vertical-align: top;
+    }
 }
-
-.row > * {
-    display: table-cell;
-}
-
 
 .none {
     display: none;
@@ -55,90 +57,4 @@
 
 .four-fifth {
     width: 80%;
-}
-
-/* Responsive grids: tablet+ */
-@media all and (min-width: $picnic-tablet-width) {
-    .m-none {
-        display: none;
-    }
-
-    .m-half {
-        width: 50%;
-    }
-
-    .m-third {
-        width: 33.333%;
-    }
-
-    .m-two-third {
-        width: 66.666%;
-    }
-
-    .m-fourth {
-        width: 25%;
-    }
-
-    .m-three-fourth {
-        width: 75%;
-    }
-
-    .m-fifth {
-        width: 20%;
-    }
-
-    .m-two-fifth {
-        width: 40%;
-    }
-
-    .m-three-fifth {
-        width: 60%;
-    }
-
-    .m-four-fifth {
-        width: 80%;
-    }
-}
-
-/* Responsive grids: laptop+ */
-@media all and (min-width: $picnic-laptop-width) {
-    .l-none {
-        display: none;
-    }
-
-    .l-half {
-        width: 50%;
-    }
-
-    .l-third {
-        width: 33.333%;
-    }
-
-    .l-two-third {
-        width: 66.666%;
-    }
-
-    .l-fourth {
-        width: 25%;
-    }
-
-    .l-three-fourth {
-        width: 75%;
-    }
-
-    .l-fifth {
-        width: 20%;
-    }
-
-    .l-two-fifth {
-        width: 40%;
-    }
-
-    .l-three-fifth {
-        width: 60%;
-    }
-
-    .l-four-fifth {
-        width: 80%;
-    }
 }

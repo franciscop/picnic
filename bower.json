@@ -18,7 +18,8 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "test",
-    "tests"
+    "web",
+    "app.js",
+    "package.json"
   ]
 }

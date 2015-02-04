@@ -325,9 +325,13 @@ td, th {
 /* Default element styles */
 /* Define the transitions */
 /* Colors */
+/* Default grid gutter */
 /* Border */
 /* Generic styles for things like <body>, <a> and others
    It also overwrites normalize.css a bit */
+* {
+  box-sizing: border-box; }
+
 html, body {
   height: 100%; }
 
@@ -373,6 +377,60 @@ blockquote {
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
   margin: 0; }
 
+/* Simple elements */
+a {
+  color: #0074D9;
+  text-decoration: none; }
+
+/* BUTTONS */
+.button, button, input[type='submit'], input[type='button'], input[type='image'], input[type='reset'], .toggle input + * {
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  margin: 0.3em;
+  padding: 0 0.9em;
+  vertical-align: middle;
+  background: #0074D9;
+  color: #FFF;
+  border: 0;
+  border-radius: 0.2em;
+  cursor: pointer;
+  transition: all 0.1s ease, box-shadow 0s ease;
+  box-shadow: inset 0 0 0 100em transparent, inset 0 -0.2em rgba(0, 0, 0, 0.3); }
+
+/* Interactivity */
+.button:hover, button:hover, input[type='submit']:hover, input[type='button']:hover, input[type='image']:hover, input[type='reset']:hover, .button:focus, button:focus, input[type='submit']:focus, input[type='button']:focus, input[type='image']:focus, input[type='reset']:focus, .toggle input:focus + * {
+  box-shadow: inset 0 0 0 100em rgba(0, 0, 0, 0.1);
+  height: 1.9em;
+  margin-top: 0.4em;
+  box-shadow: inset 0 0 0 100em rgba(0, 0, 0, 0.1), inset 0 -0.1em rgba(0, 0, 0, 0.3); }
+
+.button:active, button:active, input[type='submit']:active, input[type='button']:active, input[type='image']:active, input[type='reset']:active, .toggle input:active + *, .toggle input:checked + * {
+  box-shadow: inset 0 0 0 100em rgba(0, 0, 0, 0.3);
+  height: 1.8em;
+  margin-top: 0.5em;
+  box-shadow: inset 0 0 0 100em rgba(0, 0, 0, 0.3), inset 0 0.1em 0.1em rgba(0, 0, 0, 0.3); }
+
+/* Toggle button */
+.toggle input {
+  opacity: 0;
+  z-index: -10;
+  position: absolute; }
+
+/* Colors */
+.button.success, button.success, input.success[type='submit'], input.success[type='button'], input.success[type='image'], input.success[type='reset'], .toggle.success input + * {
+  background: #2ecc40; }
+
+.button.warning, button.warning, input.warning[type='submit'], input.warning[type='button'], input.warning[type='image'], input.warning[type='reset'], .toggle.warning input + * {
+  background: #FF851B; }
+
+.button.error, button.error, input.error[type='submit'], input.error[type='button'], input.error[type='image'], input.error[type='reset'], .toggle.error input + * {
+  background: #FF4136; }
+
+.button.dull, button.dull, input.dull[type='submit'], input.dull[type='button'], input.dull[type='image'], input.dull[type='reset'], .toggle.dull input + * {
+  background: #AAA; }
+
+/* This allows the invasiveness */
 /* Forms */
 /* Browser treats unknow type as "text", so we'll do the same */
 input, textarea {
@@ -381,7 +439,6 @@ input, textarea {
   padding: 0.3em 0.65em;
   border: 1px solid #AAA;
   border-radius: 0.2em;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease; }
 
 input[type=file], input[type=color] {
@@ -390,20 +447,16 @@ input[type=file], input[type=color] {
 
 input:focus, textarea:focus, input[type=file]:hover, input[type=color]:hover, input:invalid:focus, .select select:focus, .select select:hover {
   border-color: #7FDBFF;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   box-shadow: 0.1em 0.1em 0 rgba(0, 0, 0, 0.3); }
 
 /* Validation */
-input:invalid, textarea:invalid {
-  border-color: #FF851B;
-  box-shadow: none; }
-
 input:focus:invalid, textarea:focus:invalid {
+  box-shadow: none;
   border-color: #FF4136; }
 
 /* Reset the style for those that we actually know */
-input[type=radio]:focus, input[type=checkbox]:focus {
+input[type=radio]:focus, input[type=checkbox]:focus, input[type=range]:focus {
   box-shadow: none;
   border-color: initial; }
 
@@ -492,81 +545,11 @@ input[type=radio]:focus, input[type=checkbox]:focus {
   box-shadow: inset 0 0 0 0.2em #FFF, inset 0 0 0 100em #555; }
 
 /* Components */
-a, a:hover, a:active, a:visited {
-  color: #0074D9;
-  text-decoration: none; }
-
-/* BUTTONS */
-.button, button, input[type='submit'], input[type='button'], input[type='image'], input[type='reset'], a.button:visited, .toggle input + * {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border: none;
-  box-sizing: content-box;
-  display: inline-block;
-  font-size: 1em;
-  height: 1.5em;
-  line-height: 1.5em;
-  text-decoration: none;
-  vertical-align: middle;
-  background: #0074D9;
-  color: #FFF;
-  border-radius: 0.2em;
-  cursor: pointer;
-  margin: 0.3em;
-  padding: 0.3em 0.9em;
-  -webkit-transition: all 0.1s ease;
-  transition: all 0.1s ease;
-  height: 1.3em;
-  line-height: 1.5em;
-  padding: 0.3em 0.9em 0.5em;
-  margin: 0.3em 0.3em 0.3em;
-  box-shadow: inset 0 0 0 100em transparent, inset 0 -0.2em rgba(0, 0, 0, 0.3); }
-
-/* Interactivity */
-.button:hover, button:hover, input[type='submit']:hover, input[type='button']:hover, input[type='image']:hover, input[type='reset']:hover, .button:focus, button:focus, input[type='submit']:focus, input[type='button']:focus, input[type='image']:focus, input[type='reset']:focus, .toggle:hover input + *, .toggle input:focus + * {
-  color: #FFF;
-  -webkit-transition: all 0.1s ease, box-shadow 0s ease;
-  transition: all 0.1s ease, box-shadow 0s ease;
-  box-shadow: inset 0 0 0 100em rgba(0, 0, 0, 0.1);
-  margin: 0.4em 0.3em 0.3em;
-  padding: 0.3em 0.9em 0.4em;
-  box-shadow: inset 0 0 0 1000em rgba(0, 0, 0, 0.1), inset 0 -0.1em rgba(0, 0, 0, 0.3); }
-
-.button:active, button:active, input[type='submit']:active, input[type='button']:active, input[type='image']:active, input[type='reset']:active, .toggle input:active + *, .toggle input:checked + * {
-  box-shadow: inset 0 0 0 100em rgba(0, 0, 0, 0.3);
-  margin: 0.5em 0.3em 0.3em;
-  padding: 0.3em 0.9em;
-  box-shadow: inset 0 0 0 1000em rgba(0, 0, 0, 0.3), inset 0 0.1em 0.1em rgba(0, 0, 0, 0.3); }
-
-/* Toggle button */
-.toggle input {
-  opacity: 0;
-  z-index: -10;
-  position: absolute; }
-
-/* Colors */
-.button.success, button.success, input.success[type='submit'], input.success[type='button'], input.success[type='image'], input.success[type='reset'], .button.success:visited, button.success:visited, input.success[type='submit']:visited, input.success[type='button']:visited, input.success[type='image']:visited, input.success[type='reset']:visited, .toggle.success input + * {
-  background: #2ecc40; }
-
-.button.warning, button.warning, input.warning[type='submit'], input.warning[type='button'], input.warning[type='image'], input.warning[type='reset'], a.button.warning:visited, .toggle.warning input + * {
-  background: #FF851B; }
-
-.button.error, button.error, input.error[type='submit'], input.error[type='button'], input.error[type='image'], input.error[type='reset'], a.button.error:visited, .toggle.error input + * {
-  background: #FF4136; }
-
-.button.dull, button.dull, input.dull[type='submit'], input.dull[type='button'], input.dull[type='image'], input.dull[type='reset'], a.button.dull:visited, .toggle.dull input + * {
-  background: #AAA; }
-
-/* This allows for the invasiveness (default styling) */
-table {
-  text-align: left; }
-
 td, th {
   padding: 0.3em 2.4em 0.3em 0.6em; }
 
 th {
+  text-align: left;
   font-weight: 900;
   color: #FFF;
   background-color: #0074D9; }
@@ -583,35 +566,36 @@ th {
 .dull th {
   background-color: #AAA; }
 
+/* Zebra stripes */
 tr:nth-child(even) {
   background: rgba(0, 0, 0, 0.05); }
 
-.row {
-  position: relative;
-  display: block;
-  overflow: auto; }
-
-[class*="full"], [class*="half"], [class*="third"], [class*="fourth"], [class*="fifth"], [class*="sixth"] {
-  box-sizing: border-box;
-  float: left;
-  padding-left: 0;
-  padding-right: 0;
-  min-height: 1px; }
+/* From ungrid ( http://chrisnager.github.io/ungrid/ )  */
+@media (min-width: 50em) {
+  .row {
+    max-width: 100%;
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    border-spacing: 10px 0px;
+    margin-left: -10px;
+    /* No margin-right: http://www.smashingmagazine.com/2009/07/27/the-definitive-guide-to-using-negative-margins/ */
+    width: calc(100% + 2 * 10px); }
+  .row > * {
+    display: table-cell;
+    vertical-align: top; } }
 
 .none {
   display: none; }
-
-.full {
-  width: 100%; }
 
 .half {
   width: 50%; }
 
 .third {
-  width: 33.333%; }
+  width: 33.3333%; }
 
 .two-third {
-  width: 66.666%; }
+  width: 66.6666%; }
 
 .fourth {
   width: 25%; }
@@ -630,275 +614,3 @@ tr:nth-child(even) {
 
 .four-fifth {
   width: 80%; }
-
-.sixth {
-  width: 16.666%; }
-
-/* Responsive grids: tablet+ */
-@media all and (min-width: 750px) {
-  .m-none {
-    display: none; }
-  .m-full {
-    width: 100%; }
-  .m-half {
-    width: 50%; }
-  .m-third {
-    width: 33.333%; }
-  .m-two-third {
-    width: 66.666%; }
-  .m-fourth {
-    width: 25%; }
-  .m-three-fourth {
-    width: 75%; }
-  .m-fifth {
-    width: 20%; }
-  .m-two-fifth {
-    width: 40%; }
-  .m-three-fifth {
-    width: 60%; }
-  .m-four-fifth {
-    width: 80%; }
-  .m-sixth {
-    width: 16.666%; } }
-
-/* Responsive grids: laptop+ */
-@media all and (min-width: 1200px) {
-  .l-none {
-    display: none; }
-  .l-full {
-    width: 100%; }
-  .l-half {
-    width: 50%; }
-  .l-third {
-    width: 33.333%; }
-  .l-two-third {
-    width: 66.666%; }
-  .l-fourth {
-    width: 25%; }
-  .l-three-fourth {
-    width: 75%; }
-  .l-fifth {
-    width: 20%; }
-  .l-two-fifth {
-    width: 40%; }
-  .l-three-fifth {
-    width: 60%; }
-  .l-four-fifth {
-    width: 80%; }
-  .l-sixth {
-    width: 16.666%; } }
-
-nav {
-  width: 100%;
-  position: fixed;
-  text-align: center;
-  top: 0;
-  background: #FFF;
-  box-shadow: 0 0 0.6em rgba(0, 0, 0, 0.3);
-  z-index: 10;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
-
-nav.transparent {
-  box-shadow: none;
-  background: none; }
-
-nav.transparent a, nav.transparent a:visited {
-  color: #FFF; }
-
-nav a, nav a:visited {
-  color: #333;
-  display: inline-block;
-  font-size: 1em;
-  height: 2em;
-  line-height: 2em;
-  padding: 0.5em 0.6em; }
-
-nav a:hover {
-  color: #333;
-  box-shadow: inset 0 -0.2em 0 #7fdbff; }
-
-nav a.button, nav a.button:hover {
-  color: #FFF;
-  line-height: 1.4em; }
-
-nav .main, nav .menu {
-  margin: 0 0.5em; }
-
-nav .main {
-  font-weight: 700;
-  float: left;
-  max-width: 50%;
-  white-space: nowrap; }
-
-nav .main img {
-  height: 2em; }
-
-nav .menu {
-  float: right; }
-
-.burgercheck, .burgermenu {
-  display: none;
-  cursor: pointer; }
-
-.burgermenu {
-  display: inline-block;
-  position: relative;
-  height: 0.8em;
-  width: 0.4em;
-  margin: 0.35em;
-  display: none; }
-
-.burgermenu:before, .burgermenu:after {
-  display: none;
-  content: " ";
-  width: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  border-style: solid;
-  border-color: #333;
-  border-width: 0.14em 0; }
-
-.burgermenu:after {
-  top: 50%;
-  margin-top: -0.07em; }
-
-@media all and (max-width: 960px) {
-  [class*="icon-"]:before, [class*=" icon-"]:before {
-    display: none; } }
-
-@media all and (max-width: 750px) {
-  [class*="icon-"]:before {
-    display: inline-block; }
-  .burgercheck ~ label:before, .burgercheck ~ label:after {
-    display: block; }
-  .burgercheck ~ label {
-    position: fixed;
-    top: 0;
-    right: 0;
-    display: inline-block;
-    font-size: 2em;
-    line-height: 1.5em;
-    padding-right: 0.5em;
-    text-align: right;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    /* Avoid the burger menu to display while hiding */
-    -webkit-transition: display 0s ease 0.3s;
-    transition: display 0s ease 0.3s; }
-  .burgercheck:checked ~ label:before, .burgercheck:checked ~ label:after {
-    display: none; }
-  .burgercheck:checked ~ label {
-    margin: 0;
-    right: 70%;
-    width: 30%;
-    height: 100%;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.7); }
-  nav .menu {
-    position: fixed;
-    width: 70%;
-    height: 100%;
-    right: -70%;
-    top: 0;
-    margin-right: 0;
-    background: #FFF;
-    box-shadow: 0 0 0.6em rgba(0, 0, 0, 0.3);
-    overflow: auto;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease; }
-  .burgercheck:checked ~ .menu {
-    right: 0;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease; }
-  nav .menu a {
-    display: block;
-    text-align: left; }
-  nav .menu .button, nav .menu button, nav .menu input[type='submit'], nav .menu input[type='button'], nav .menu input[type='image'], nav .menu input[type='reset'] {
-    margin: 0.5em;
-    float: left;
-    clear: left; }
-  nav .menu .button:hover, nav .menu button:hover, nav .menu input[type='submit']:hover, nav .menu input[type='button']:hover, nav .menu input[type='image']:hover, nav .menu input[type='reset']:hover {
-    margin: 0.6em 0.5em 0.5em; }
-  nav .menu .button:active, nav .menu button:active, nav .menu input[type='submit']:active, nav .menu input[type='button']:active, nav .menu input[type='image']:active, nav .menu input[type='reset']:active {
-    margin: 0.7em 0.5em 0.5em; }
-  .transparent .menu {
-    color: #333; } }
-
-/**
- * Default footer height: 200px
- * Change it, but you'll need some js to make it responsive
- */
-body > footer {
-  color: #FFF;
-  background: #333;
-  margin: -1px 0px;
-  padding: 1px; }
-
-.modal > input {
-  display: none; }
-
-.modal > input ~ * {
-  /* Make it not visible */
-  opacity: 0;
-  /* Also hide it from iteraction */
-  max-height: 0;
-  overflow: hidden;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  border-radius: 0.2em;
-  box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.3);
-  background: white;
-  z-index: 10;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
-
-.modal > input:checked + *, .modal > input:checked ~ .overlay {
-  display: block;
-  opacity: 1;
-  max-height: 10000px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
-
-.modal > input ~ .overlay {
-  -webkit-transform: none;
-  transform: none;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: fixed;
-  background: rgba(0, 0, 0, 0.3);
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  z-index: 1; }
-
-.modal header, .modal footer {
-  display: block;
-  padding: 0.5em;
-  border-bottom: 1px solid #CCC; }
-
-.modal header {
-  font-weight: bold; }
-
-.modal footer {
-  border-width: 1px 0 0 0;
-  padding: 0.2em; }
-
-.modal header .close {
-  float: right;
-  padding-right: 0.6em;
-  cursor: pointer; }
-
-.modal header .close:hover {
-  color: #FF851B; }
-
-.modal .content {
-  display: block;
-  padding: 0.5em;
-  border-bottom: 1px solid #CCC; }

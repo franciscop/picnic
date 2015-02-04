@@ -4,9 +4,26 @@ Full number version mean significant features added / removed, with loss of back
 
 
 
-## Version 2.3 [planned]
+## Version 3.0 [on development]
 
-- `<main>`: Make it responsive by default
+The main difference here is that we separate Picnic CSS core from plugins. In this way we can make sure that we have a solid core and then some more experimental plugins. This is the new distribution
+
+### Core
+
+- normalize + variables + generic
+- links
+- buttons
+- form: input, select, radiobutton, checkbox
+- table
+- grids
+
+### Plugins
+
+- nav
+- footer
+- modal
+
+
 
 ## Version 2.2
 

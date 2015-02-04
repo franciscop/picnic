@@ -6,7 +6,7 @@
 
   <title>Picnic CSS - Unpack your meal and start coding</title>
   <link rel="stylesheet" type="text/css" href="/fontello.css">
-  <link rel="stylesheet" type="text/css" href="/releases/latest.min.css">
+  <link rel="stylesheet" type="text/css" href="/releases/plugins.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Unpack your mean and start coding. A lighweight CSS library with nice defaults to give you a fast start.">
   <meta name="keywords" content="css, library, css library, picnic, picnicss, html, html5">
@@ -76,6 +76,34 @@
 </head>
 
 <body>
+
+  <nav>
+    <a href="#" class="main">
+      Picnic CSS
+    </a>
+
+    <!-- responsive -->
+    <input id="bmenu" class="burgercheck" type="checkbox">
+    <label for="bmenu" class="burgermenu"></label>
+    <!-- /responsive -->
+
+    <div class="menu">
+      <a href="#buttons" class="icon-button">Buttons</a>
+      <a href="#input" class="icon-form">Form</a>
+      <a href="#table" class="icon-table">Table</a>
+      <a href="#grids" class="icon-grid">Grids</a>
+      <a href="#nav" class="icon-menu">Nav</a>
+      <a href="/test/" class="button primary">Test</a>
+      <a class="button primary" href="/demo/">
+          Demo
+        </a>
+      <a class="button warning primary" href="https://github.com/picnicss/picnic">
+          Github
+      </a>
+    </div>
+  </nav>
+
+
 
   <h1>Picnic CSS</h1>
   
@@ -246,10 +274,6 @@
     <h2 id="nav">Grid classes</h2>
     <p>Tweak the behaviour adding classes.</p>
     <div class="render">
-
-<div class="row">
-  <div>[empty]</div>
-</div>
 
 <div class="row">
   <div class="half">.half</div>

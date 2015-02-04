@@ -1,33 +1,3 @@
-/* Normalize.css (external library) */
-@import 'normalize';
-
-
-
 /* Operative variables */
 $picnic-deep: false;
-@import 'variables';
-
-
-
-
-/* Generic styles for things like <body>, <a> and others
-   It also overwrites normalize.css a bit */
-@import 'generic';
-
-
-/* Forms */
-@import 'input';
-@import 'select';
-@import 'radiocheckbox';
-@import 'checkbox';
-@import 'radio';
-
-/* Components */
-@import 'link';
-@import 'button';
-@import 'table';
-@import 'grids';
-
-@import 'nav';
-@import 'footer';
-@import 'modal';
+@import 'picnic.scss';
