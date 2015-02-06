@@ -1,6 +1,6 @@
 {
   "name": "picnic",
-  "version": "2.3.0",
+  "version": "3.0.0",
   "description": "Semantic HTML5 & nice CSS3",
   "main": "app.js",
   "scripts": {
