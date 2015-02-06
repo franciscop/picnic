@@ -4,7 +4,7 @@ Full number version mean significant features added / removed, with loss of back
 
 
 
-## Version 3.0 [on development]
+## Version 3 [on development]
 
 The main difference here is that we separate Picnic CSS core from plugins. In this way we can make sure that we have a solid core and then some more experimental plugins. This is the new distribution
 

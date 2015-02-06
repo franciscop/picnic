@@ -37,9 +37,10 @@ module.exports = function(req, res){
   var picnic = parseUrl(req.params.full);
 
   var newsass = "@import '../../src/" + picnic.version + "';\n\n";
-  picnic.plugins.forEach(function(plugin){
-    newsass += "@import '../../plugins/" + plugin + "';\n";
-  });
+  if(picnic.plugins && picnic.plugins.length > 0)
+    picnic.plugins.forEach(function(plugin){
+      newsass += "@import '../../plugins/" + plugin + "';\n";
+    });
 
   // Write it to a file
   fs.writeFileSync(__dirname + '/nut/' + picnic.full + '.scss', newsass);

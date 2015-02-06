@@ -1,3 +1,13 @@
+/* Operative variables */
+/* Style by default the <button>, <input type="submit">, etc? */
+/* Not fully implemented */
+/* Make buttons and other things slightly 3d */
+/* Media query breakpoints */
+/* Default element styles */
+/* Define the transitions */
+/* Colors */
+/* Default grid gutter */
+/* Border */
 /* Normalize.css (external library) */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
@@ -317,16 +327,6 @@ table {
 td, th {
   padding: 0; }
 
-/* Operative variables */
-/* Style by default the <button>, <input type="submit">, etc? */
-/* Not fully implemented */
-/* Make buttons and other things slightly 3d */
-/* Media query breakpoints */
-/* Default element styles */
-/* Define the transitions */
-/* Colors */
-/* Default grid gutter */
-/* Border */
 /* Generic styles for things like <body>, <a> and others
    It also overwrites normalize.css a bit */
 * {
