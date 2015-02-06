@@ -48,14 +48,16 @@
 }
 .modal header {
     font-weight: bold;
+    position: relative;
 }
 .modal footer {
     border-width: 1px 0 0 0;
     padding: .2em .2em .4em;
 }
 .modal header .close {
-    float: right;
-    padding-right: .3em;
+    position: absolute;
+    right: .8em;
+    top: .5em;
     cursor: pointer;
 }
 .modal header .close:hover {
