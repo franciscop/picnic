@@ -9,16 +9,16 @@
 @import 'generic';
 
 /* Simple elements */
-@import 'link';
-@import 'button';
+@import '../plugins/link';
+@import '../plugins/button';
 
 /* Forms */
-@import 'input';
-@import 'select';
-@import 'radiocheckbox';
-@import 'checkbox';
-@import 'radio';
+@import '../plugins/input';
+@import '../plugins/select';
+@import '../plugins/radiocheckbox';
+@import '../plugins/checkbox';
+@import '../plugins/radio';
 
 /* Components */
-@import 'table';
-@import 'grids';
+@import '../plugins/table';
+@import '../plugins/grids';

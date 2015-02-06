@@ -1,0 +1,45 @@
+/* Style by default the <button>, <input type="submit">, etc? */
+/* Not fully implemented */
+$picnic-invasive: true !default;
+
+/* Make buttons and other things slightly 3d */
+$picnic-deep: true !default;
+
+/* Media query breakpoints */
+$picnic-tablet-width: 750px !default;
+$picnic-laptop-width: 1200px !default;
+
+/* Default element styles */
+$picnic-radius: .2em !default;
+$picnic-margin: .3em !default;
+$picnic-padding: .3em !default;
+$picnic-text-height: 1.5em !default;
+$picnic-padding-text: $picnic-padding $picnic-padding * 1.5 + .2em !default;
+
+/* Define the transitions */
+$picnic-transition-fast: all .1s ease !default;
+$picnic-transition-slow: all .3s ease !default;
+
+/* Colors */
+$picnic-white: #FFF !default;
+$picnic-black: #333 !default;
+$picnic-light-black: #555 !default;
+$picnic-light-gray: #CCC !default;
+$picnic-primary: #0074D9 !default;
+$picnic-light-primary: #7FDBFF !default;
+$picnic-success: #2ecc40 !default;
+$picnic-warning: #FF851B !default;
+$picnic-error: #FF4136 !default;
+$picnic-dull: #AAA !default;
+$picnic-aqua: #7fdbff !default;
+$picnic-dark-overlay: rgba(0, 0, 0, .3) !default;
+$picnic-soft-dark-overlay: rgba(0, 0, 0, .1) !default;
+$picnic-clear-overlay: rgba(255, 255, 255, .3) !default;
+
+/* Default grid gutter */
+$picnic-grid-gutter: 10px !default;
+
+/* Border */
+$picnic-border-color: $picnic-dull !default;
+$picnic-border-weight: 1px !default;
+$picnic-border: $picnic-border-weight solid $picnic-border-color;

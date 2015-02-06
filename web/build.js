@@ -4,20 +4,27 @@ var sass = require('node-sass');
 var uglify = require('uglifycss');
 
 
+// Fetch the information of the intended file
 function parseUrl(url) {
 
+  // The object to store the information
   var picnic = {};
 
+  // The full requested file
   picnic.full = url;
   var sides = picnic.full.split(".");
 
   // Retrieve the version to be used
   var parts = sides.shift().split("+");
+
+  // The version of Picnic CSS
   picnic.version = parts.shift();
 
   // "core+modal", "min", "css"
   picnic.options = sides;
   if (parts.length) {
+
+    // Store all plugins
     picnic.plugins = parts;
     }
   return picnic;
@@ -26,12 +33,12 @@ function parseUrl(url) {
 
 
 module.exports = function(req, res){
-
+  
   var picnic = parseUrl(req.params.full);
 
   var newsass = "@import '../../src/" + picnic.version + "';\n\n";
   picnic.plugins.forEach(function(plugin){
-    newsass += "@import '../../src/plugins/" + plugin + "';\n";
+    newsass += "@import '../../plugins/" + plugin + "';\n";
   });
 
   // Write it to a file
