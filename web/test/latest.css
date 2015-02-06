@@ -1,13 +1,21 @@
 /* Operative variables */
+/**
+ * COLOR VARIABLES
+ * - Cool
+ * - Warm
+ * - Gray Scale
+ * 
+ * clrs, from https://github.com/mrmrs/colors
+ */
 /* Style by default the <button>, <input type="submit">, etc? */
 /* Not fully implemented */
 /* Make buttons and other things slightly 3d */
-/* Media query breakpoints */
-/* Default element styles */
-/* Define the transitions */
+/* Media query breakpoint */
+/* Default inline element styles */
 /* Colors */
-/* Default grid gutter */
+/* Default space between objects gutter */
 /* Border */
+/* Define the transitions */
 /* Normalize.css (external library) */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
@@ -340,10 +348,10 @@ html, body {
 
 /* Delete the outline when links are active */
 body {
-  color: #333;
+  color: #111;
   font-size: 1.1em;
   line-height: 1.5em;
-  background: #FFF; }
+  background: #fff; }
 
 /* Hide the default focus effect */
 :focus {
@@ -362,19 +370,18 @@ li {
 /* The <pre> doesn't have a nice style from Normalize.css */
 pre {
   text-align: left;
-  border: rgba(0, 0, 0, 0.1);
-  background: rgba(0, 0, 0, 0.05);
-  padding: 0.3em; }
+  padding: 0.3em;
+  background: #EEE; }
 
 code {
-  background: #EEE;
   padding: 3px 5px;
-  font-size: 0.8em; }
+  font-size: 0.8em;
+  background: #EEE; }
 
 blockquote {
   padding: 0 0 0 1em;
   margin: 0 0 0 0.1em;
-  box-shadow: inset 5px 0px rgba(0, 0, 0, 0.3); }
+  box-shadow: inset 5px 0px rgba(17, 17, 17, 0.3); }
 
 /* Nice fontello trick from Ronen Ackerman ( http://stackoverflow.com/a/17561467 ) */
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
@@ -394,25 +401,25 @@ a {
   padding: 0 0.9em;
   vertical-align: middle;
   background: #0074D9;
-  color: #FFF;
+  color: #fff;
   border: 0;
   border-radius: 0.2em;
   cursor: pointer;
-  transition: all 0.1s ease, box-shadow 0s ease;
-  box-shadow: inset 0 0 0 100em transparent, inset 0 -0.2em rgba(0, 0, 0, 0.3); }
+  transition: all 0.1s ease;
+  box-shadow: inset 0 0 0 100em transparent, inset 0 -0.2em rgba(17, 17, 17, 0.3); }
 
 /* Interactivity */
-.button:hover, button:hover, input[type='submit']:hover, input[type='button']:hover, input[type='image']:hover, input[type='reset']:hover, .button:focus, button:focus, input[type='submit']:focus, input[type='button']:focus, input[type='image']:focus, input[type='reset']:focus, .toggle input:focus + * {
-  box-shadow: inset 0 0 0 100em rgba(0, 0, 0, 0.1);
+.button:hover, button:hover, input[type='submit']:hover, input[type='button']:hover, input[type='image']:hover, input[type='reset']:hover, .button:focus, button:focus, input[type='submit']:focus, input[type='button']:focus, input[type='image']:focus, input[type='reset']:focus, .toggle input:hover + *, .toggle input:focus + * {
+  box-shadow: inset 0 0 0 100em rgba(17, 17, 17, 0.1);
   height: 1.9em;
   margin-top: 0.4em;
-  box-shadow: inset 0 0 0 100em rgba(0, 0, 0, 0.1), inset 0 -0.1em rgba(0, 0, 0, 0.3); }
+  box-shadow: inset 0 0 0 100em rgba(17, 17, 17, 0.1), inset 0 -0.1em rgba(17, 17, 17, 0.3); }
 
 .button:active, button:active, input[type='submit']:active, input[type='button']:active, input[type='image']:active, input[type='reset']:active, .toggle input:active + *, .toggle input:checked + * {
-  box-shadow: inset 0 0 0 100em rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 0 100em rgba(17, 17, 17, 0.3);
   height: 1.8em;
   margin-top: 0.5em;
-  box-shadow: inset 0 0 0 100em rgba(0, 0, 0, 0.3), inset 0 0.1em 0.1em rgba(0, 0, 0, 0.3); }
+  box-shadow: inset 0 0 0 100em rgba(17, 17, 17, 0.3), inset 0 0.1em 0.1em rgba(17, 17, 17, 0.3); }
 
 /* Toggle button */
 .toggle input {
@@ -449,9 +456,9 @@ input[type=file], input[type=color] {
   cursor: pointer; }
 
 input:focus, textarea:focus, input[type=file]:hover, input[type=color]:hover, input:invalid:focus, .select select:focus, .select select:hover {
-  border-color: #7FDBFF;
+  border-color: #0074D9;
   transition: all 0.3s ease;
-  box-shadow: 0.1em 0.1em 0 rgba(0, 0, 0, 0.3); }
+  box-shadow: 0.1em 0.1em 0 rgba(17, 17, 17, 0.3); }
 
 /* Validation */
 input:focus:invalid, textarea:focus:invalid {
@@ -471,7 +478,7 @@ input[type=radio]:focus, input[type=checkbox]:focus, input[type=range]:focus {
 
 .select:after {
   padding: 1.2% 0 0 0;
-  background: #FFF;
+  background: #fff;
   content: "\25BC";
   display: block;
   position: absolute;
@@ -498,7 +505,7 @@ input[type=radio]:focus, input[type=checkbox]:focus, input[type=range]:focus {
 
 .select select:-moz-focusring {
   color: transparent;
-  text-shadow: 0 0 0 #333; }
+  text-shadow: 0 0 0 #111; }
 
 .select select option {
   padding: 0.2em 0.5em; }
@@ -524,11 +531,11 @@ input[type=radio]:focus, input[type=checkbox]:focus, input[type=range]:focus {
   line-height: 0.9em;
   margin: 0 0.48em 0 0.375em;
   color: transparent;
-  background: #FFF;
+  background: #fff;
   border: 1px solid #AAA; }
 
 .checkbox input:focus + *:before, .checkbox input:hover + *:before, .radio input:focus + *:before, .radio input:hover + *:before {
-  border-color: #7fdbff; }
+  border-color: #7FDBFF; }
 
 .radio input, .checkbox input {
   opacity: 0;
@@ -539,13 +546,13 @@ input[type=radio]:focus, input[type=checkbox]:focus, input[type=range]:focus {
   text-align: right; }
 
 .checkbox input:checked + *:before {
-  color: #555; }
+  color: #2b2b2b; }
 
 .radio input + *:before {
   border-radius: 100em; }
 
 .radio input:checked + *:before {
-  box-shadow: inset 0 0 0 0.2em #FFF, inset 0 0 0 100em #555; }
+  box-shadow: inset 0 0 0 0.2em #fff, inset 0 0 0 100em #2b2b2b; }
 
 /* Components */
 td, th {
@@ -554,7 +561,7 @@ td, th {
 th {
   text-align: left;
   font-weight: 900;
-  color: #FFF;
+  color: #fff;
   background-color: #0074D9; }
 
 .success th {

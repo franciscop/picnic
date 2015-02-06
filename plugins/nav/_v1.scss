@@ -4,7 +4,7 @@ nav {
     text-align: center;
     top: 0;
     background: #FFF;
-    box-shadow: 0 0 .6em $picnic-dark-overlay;
+    box-shadow: 0 0 .6em rgba($black, 3 * $picnic-transparency);
     z-index: 10;
     transition: all .3s ease;
 }
@@ -15,11 +15,11 @@ nav.transparent {
 }
 
 nav.transparent a {
-    color: $picnic-white;
+    color: $white;
 }
 
 nav a {
-    color: $picnic-black;
+    color: $black;
     display: inline-block;
     font-size: 1em;
     height: 2em;
@@ -32,7 +32,7 @@ nav a:hover {
 }
 
 nav a.button:hover {
-    color: $picnic-white;
+    color: $white;
 }
 
 nav .main,
@@ -87,13 +87,7 @@ nav .menu {
     margin-top: -.07em;
 }
 
-@media all and (max-width: 960px) {
-    [class*="icon-"]:before,[class*=" icon-"]:before {
-        display: none;
-    }
-}
-
-@media all and (max-width: $picnic-tablet-width) {
+@media all and (max-width: $picnic-breakpoint) {
     [class*="icon-"]:before {
         display: inline-block;
     }
@@ -136,8 +130,8 @@ nav .menu {
         right: -70%;
         top: 0;
         margin-right: 0;
-        background: $picnic-white;
-        box-shadow: 0 0 .6em $picnic-dark-overlay;
+        background: $white;
+        box-shadow: 0 0 .6em darken($black, 3 * $picnic-transparency);
         overflow: auto;
         transition: all .3s ease;
     }
@@ -167,6 +161,6 @@ nav .menu {
     }
 
     .transparent .menu {
-        color: $picnic-black;
+        color: $black;
     }
 }

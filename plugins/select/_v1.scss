@@ -7,7 +7,7 @@
 
 .select:after {
     padding: 1.2% 0 0 0;
-    background: $picnic-white;
+    background: $white;
     content: "\25BC";
     display: block;
     position: absolute;
@@ -38,7 +38,7 @@
 
 .select select:-moz-focusring {
     color: transparent;
-    text-shadow: 0 0 0 $picnic-black;
+    text-shadow: 0 0 0 $black;
 }
 
 .select select option {

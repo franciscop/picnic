@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'fontello';
-  src: url('font/fontello.eot?23217981');
-  src: url('font/fontello.eot?23217981#iefix') format('embedded-opentype'),
-       url('font/fontello.woff?23217981') format('woff'),
-       url('font/fontello.ttf?23217981') format('truetype'),
-       url('font/fontello.svg?23217981#fontello') format('svg');
+  src: url('../font/fontello.eot?3923866');
+  src: url('../font/fontello.eot?3923866#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff?3923866') format('woff'),
+       url('../font/fontello.ttf?3923866') format('truetype'),
+       url('../font/fontello.svg?3923866#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,7 +14,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?23217981#fontello') format('svg');
+    src: url('../font/fontello.svg?3923866#fontello') format('svg');
   }
 }
 */
@@ -28,7 +28,7 @@
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
-  margin-right: .5em;
+  margin-right: .2em;
   text-align: center;
   /* opacity: .8; */
  
@@ -41,7 +41,7 @@
  
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
-  margin-left: 0;
+  margin-left: .2em;
  
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
@@ -50,11 +50,9 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
-.icon-grid:before { content: '\e800'; } /* 'î €' */
-.icon-heart:before { content: '\e801'; } /* 'î ' */
-.icon-menu:before { content: '\e802'; } /* 'î ‚' */
-.icon-form:before { content: '\e803'; } /* 'î ƒ' */
-.icon-table:before { content: '\e804'; } /* 'î „' */
-.icon-button:before { content: '\e805'; } /* 'î …' */
-.icon-download:before { content: '\e806'; } /* 'î †' */
-.icon-umbrella:before { content: '\e807'; } /* 'î ‡' */
+.icon-table:before { content: '\e800'; } /* '' */
+.icon-form:before { content: '\e801'; } /* '' */
+.icon-demo2:before { content: '\e802'; } /* '' */
+.icon-grid:before { content: '\e803'; } /* '' */
+.icon-demo:before { content: '\e804'; } /* '' */
+.icon-test:before { content: '\e805'; } /* '' */

@@ -8,7 +8,10 @@ var uglify = require('uglifycss');
 function parseUrl(url) {
 
   // The object to store the information
-  var picnic = {};
+  var picnic = {
+    minimize: false,
+    writeFile: true,
+    };
 
   // The full requested file
   picnic.full = url;
@@ -22,6 +25,17 @@ function parseUrl(url) {
 
   // "core+modal", "min", "css"
   picnic.options = sides;
+
+  // Parse options (post-process)
+  if (picnic.options.length) {
+    if (picnic.options.indexOf('min') !== -1) {
+      picnic.minimize = true;
+    }
+    if (picnic.options.indexOf('fresh')) {
+      picnic.writeFile = false;
+    }
+  }
+
   if (parts.length) {
 
     // Store all plugins
@@ -38,8 +52,8 @@ module.exports = function(req, res){
 
   var newsass = "@import '../../src/" + picnic.version + "';\n\n";
   if(picnic.plugins && picnic.plugins.length > 0)
-    picnic.plugins.forEach(function(plugin){
-      newsass += "@import '../../plugins/" + plugin + "';\n";
+    picnic.plugins.forEach(function(plugin) {
+      newsass += "@import '../../plugins/" + plugin + "/v1';\n";
     });
 
   // Write it to a file
@@ -53,16 +67,16 @@ module.exports = function(req, res){
     success: function(result){
       var finalCSS = result.css;
 
-      // Options (post-process)
-      if (picnic.options.length){
-        if (picnic.options.indexOf('min') !== -1){
-          finalCSS = uglify.processString(finalCSS)
-        }
-      }
+      if (picnic.minimize)
+        finalCSS = uglify.processString(finalCSS);
       
       res.writeHead(200, {'Content-Type': 'text/css'});
       res.write(finalCSS);
-      fs.writeFile(__dirname + '/nut/' + picnic.full, finalCSS);
+      res.end();
+
+      if (picnic.writeFile) {
+        fs.writeFile(__dirname + '/nut/' + picnic.full, finalCSS);
+        }
       },
     error: function(error) {
       // error is an object: v2 change

@@ -1,0 +1,243 @@
+extends layout
+
+block content
+  main
+    h1 Picnic CSS
+    p.slogan Tiny and flexible CSS3 library
+    
+    section.limit
+      h2#input Buttons
+      p Inspired by <a href="http://tympanus.net/Development/CreativeButtons/">tympanus</a> and colors from <a href="http://clrs.cc/">crls.com</a>
+      div.render
+        <button>Normal</button>
+        <button class="success">Success</button>
+        <button class="warning">Warning</button>
+        <button class="error">Error</button>
+        <button class="dull">Dull</button>
+    
+    section.limit
+      h2 Button types
+      div.render.
+        <button>Button</button>
+        <a class="button">Link</a>
+        <input type="submit" value="Submit" />
+        <label class="toggle">
+          <input type="checkbox" />
+          <span>Toggle</span>
+        </label>
+
+    section.limit
+      h2 Input
+      div.render.
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+    
+    section.limit
+      h2 Select
+      div.render.
+        <label class="select">
+          <select>
+            <option>Select an option</option>
+            <option>Good option</option>
+            <option>Nice option</option>
+            <option>Cheap option</option>
+          </select>
+        </label>
+    
+    section.limit
+      h2 Checkboxes & Radiobuttons
+      div.render.
+        <div class="checks">
+          <label class="checkbox">
+            <input type="checkbox">
+            <span>Check me out (;</span>
+          </label>
+          <br>
+          <label class="radio">
+            <input type="radio" name="takeme">
+            <span>Choose me</span>
+          </label>
+          <br>
+          <label class="radio">
+            <input type="radio" name="takeme">
+            <span>or choose me</span>
+          </label>
+        </div>
+    
+    section.limit
+      h2 Table
+      div.render.
+        <table class="primary">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>City</th>
+              <th>Age</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Francisco</td>
+              <td>Valencia, Spain</td>
+              <td>23</td>
+            </tr>
+            <tr>
+              <td>Eve</td>
+              <td>San Francisco, USA</td>
+              <td>22</td>
+            </tr>
+            <tr>
+              <td>Martin</td>
+              <td>New York, USA</td>
+              <td>45</td>
+            </tr>
+            <tr>
+              <td>Sarah</td>
+              <td>London, UK</td>
+              <td>25</td>
+            </tr>
+          </tbody>
+        </table>
+    
+    section
+      h2 Evenly stacked grids
+      p Built on top of <a href="http://chrisnager.github.io/ungrid/">ungrid</a>
+      p Note: colors added for a dramatic effect
+      div.render.
+        <div class="row">
+          <div>[one]</div>
+        </div>
+        
+        <div class="row">
+          <div>[two]</div>
+          <div>[two]</div>
+        </div>
+        
+        <div class="row">
+          <div>[three]</div>
+          <div>[three]</div>
+          <div>[three]</div>
+        </div>
+        
+        <div class="row">
+          <div>[four]</div>
+          <div>[four]</div>
+          <div>[four]</div>
+          <div>[four]</div>
+        </div>
+        
+        <div class="row">
+          <div>[five]</div>
+          <div>[five]</div>
+          <div>[five]</div>
+          <div>[five]</div>
+          <div>[five]</div>
+        </div>
+        
+        ...
+    
+    section
+      h2 Evenly stacked grids
+      p Tweak the behaviour adding classes
+      div.render.
+        <div class="row">
+          <div class="half">.half</div>
+          <div>[empty]</div>
+        </div>
+        
+        <div class="row">
+          <div class="third">.third</div>
+          <div>[empty]</div>
+        </div>
+        
+        <div class="row">
+          <div class="fourth">.fourth</div>
+          <div>[empty]</div>
+        </div>
+        
+        <div class="row">
+          <div class="fifth">.fifth</div>
+          <div>[empty]</div>
+        </div>
+        
+        <div class="row">
+          <div class="two-fifth">.two-fifth</div>
+          <div>[empty]</div>
+        </div>
+        
+        <div class="row">
+          <div class="three-fifth">.three-fifth</div>
+          <div>[empty]</div>
+        </div>
+        
+        <div class="row">
+          <div class="two-third">.two-third</div>
+          <div>[empty]</div>
+        </div>
+        
+        <div class="row">
+          <div class="three-fourth">.three-fourth</div>
+          <div>[empty]</div>
+        </div>
+        
+        <div class="row">
+          <div class="four-fifth">.four-fifth</div>
+          <div>[empty]</div>
+        </div>
+    
+    h2 Subscribe
+    p Subscribe with mailchimp to receive updates:
+    
+    <!-- Begin MailChimp Signup Form -->
+    form(action="//francisco.us9.list-manage.com/subscribe/post?u=8f634b4eeb27e1bb51438f11f&amp;id=2a237ff297", method="post", name="mc-embedded-subscribe-form", target="_blank")
+      input(style="position: absolute; left: -5000px;", name="b_8f634b4eeb27e1bb51438f11f_2a237ff297", tabindex="-1", value="")
+      
+      input(type="email", name="EMAIL", placeholder="Email address", required)
+      input(type="submit", name="subscribe", value="Subscribe")
+
+
+
+    h2 Advantages
+
+    ul.text
+      li 2.0kb when minimized and zipped last time I checked.
+      li Semantic HTML5. <i>Your</i> code stays highly semantic.
+      li Normalize.css is used, achieving a solid foundation.
+      li Support: IE 9+ and others. No fancy CSS3 on IE 8.
+      li Responsive: The nav and the grids are responsive.
+
+
+    h2 Some love
+    p Where I take my inspiration from:
+    a.button(href="http://purecss.io", target="_blank") PureCSS
+    a.button(href="http://fontello.com/", target="_blank") Fontello
+    
+    
+    h2 Social Networks
+    
+    a.button(href="https://www.facebook.com/picnic.css3") Facebook
+    a.button(href="https://www.twitter.com/intent/tweet?text=Picnic+CSS.+An+invasive+CSS+library+to+get+your+style+started.+http%3A%2F%2Fpicnicss.com%2F") Twitter
+
+
+
+
+    script.
+      // Show the code for each preview
+      String.prototype.entities = function() {
+        return this.toString().replace(
+          /[\u00A0-\u9999<>\&]/gim,
+          function(i) { return '&#'+i.charCodeAt(0)+';'; }
+          );
+        }
+      var sectionsCollection = document.getElementsByTagName("section");.limit
+      // http://stackoverflow.com/a/222847/938236
+      var sections = [].slice.call(sectionsCollection);;.limit
+      sections.forEach(function(section, index){.limit
+        var render = section.getElementsByClassName('render')[0];.limit
+        if (render) {
+          section.innerHTML += "<pre></pre>";.limit
+          var pre = section.getElementsByTagName("pre")[0];.limit
+          var html = render.innerHTML;
+          pre.innerHTML = html.trim().entities();
+          }
+        });

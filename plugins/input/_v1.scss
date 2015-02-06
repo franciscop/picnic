@@ -20,11 +20,11 @@ input[type=color]:hover,
 input:invalid:focus,
 .select select:focus,
 .select select:hover {
-    border-color: $picnic-light-primary;
+    border-color: $picnic-primary;
     transition: $picnic-transition-slow;
 
     @if $picnic-deep == true {
-        box-shadow: .1em .1em 0 $picnic-dark-overlay;
+        box-shadow: .1em .1em 0 rgba($black, 3 * $picnic-transparency);
     }
 }
 

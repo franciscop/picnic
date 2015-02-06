@@ -22,7 +22,7 @@
     // Gives it the same margin as other elements with font = 1em
     margin: 0 $picnic-margin * 1.6 0 $picnic-margin / .8;
     color: transparent;
-    background: $picnic-white;
+    background: $white;
     border: $picnic-border;
 }
 
@@ -30,7 +30,7 @@
 .checkbox input:hover + *:before,
 .radio input:focus + *:before,
 .radio input:hover + *:before {
-    border-color: $picnic-aqua;
+    border-color: $aqua;
 }
 
 .radio input,

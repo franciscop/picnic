@@ -8,10 +8,10 @@ html, body {
 
 /* Delete the outline when links are active */
 body {
-    color: $picnic-black;
+    color: $black;
     font-size: 1.1em;
     line-height: $picnic-text-height;
-    background: $picnic-white;
+    background: $white;
 }
 
 /* Hide the default focus effect */
@@ -37,19 +37,18 @@ li {
 /* The <pre> doesn't have a nice style from Normalize.css */
 pre {
     text-align: left;
-    border: $picnic-soft-dark-overlay;
-    background: rgba(0,0,0,.05);
     padding: .3em;
+    background: #EEE;
 }
 code {
-    background: #EEE;
     padding: 3px 5px;
     font-size: .8em;
+    background: #EEE;
 }
 blockquote {
     padding: 0 0 0 1em;
     margin: 0 0 0 .1em;
-    box-shadow: inset 5px 0px $picnic-dark-overlay;
+    box-shadow: inset 5px 0px rgba($black, 0.3);
 }
 
 /* Nice fontello trick from Ronen Ackerman ( http://stackoverflow.com/a/17561467 ) */

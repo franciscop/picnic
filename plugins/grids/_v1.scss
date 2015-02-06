@@ -1,5 +1,7 @@
 /* From ungrid ( http://chrisnager.github.io/ungrid/ )  */
-@media (min-width: 50em) {
+@media (min-width: $picnic-breakpoint) {
+
+    // Each of the rows
     .row {
 
         max-width: 100%;
@@ -7,18 +9,20 @@
         display: table;
         table-layout: fixed;
 
-        border-spacing: $picnic-grid-gutter 0px;
-        margin-left: - $picnic-grid-gutter;
+        border-spacing: $picnic-separation 0px;
+        margin-left: - $picnic-separation;
         /* No margin-right: http://www.smashingmagazine.com/2009/07/27/the-definitive-guide-to-using-negative-margins/ */
-        width: calc(100% + 2 * #{$picnic-grid-gutter});
+        width: calc(100% + 2 * #{$picnic-separation});
     }
 
+    // For every child directly below row
     .row > * {
         display: table-cell;
         vertical-align: top;
     }
 }
 
+// Don't display this one
 .none {
     display: none;
 }
