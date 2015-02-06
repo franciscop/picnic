@@ -2,7 +2,6 @@ var express = require('express');
 var path = require('path');
 var compress = require('compression');
 var controller = require('./web/controller');
-var build = require('./web/build');
 
 var app = express();
 
@@ -13,7 +12,7 @@ app.use(compress());
 app.use(express.static(__dirname + '/web'));
 
 // Routing
-app.use('/nut/:full', build);
+app.use('/nut/:full', controller.nut);
 app.use('/plugins/:name', controller.plugin);
 app.use('/plugins/', controller.plugin);
 app.use('/', controller.index);

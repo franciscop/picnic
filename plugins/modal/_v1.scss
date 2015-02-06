@@ -12,11 +12,10 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%) scale(0.2, 0.2);
     border-radius: .2em;
     box-shadow: 0 0 .3em rgba($black, 3 * $picnic-transparency);
-    background: white;
-    z-index: 10;
+    background: $white;
     transition: $picnic-transition-slow;
     z-index: 100;
 }
@@ -26,6 +25,9 @@
     opacity: 1;
     max-height: 10000px;
     transition: $picnic-transition-slow;
+}
+.modal > input:checked + * {
+    transform: translateX(-50%) translateY(-50%) scale(1, 1);
 }
 .modal > input ~ .overlay {
     transform: none;
@@ -49,11 +51,11 @@
 }
 .modal footer {
     border-width: 1px 0 0 0;
-    padding: .2em;
+    padding: .2em .2em .4em;
 }
 .modal header .close {
     float: right;
-    padding-right: .6em;
+    padding-right: .3em;
     cursor: pointer;
 }
 .modal header .close:hover {
@@ -61,6 +63,5 @@
 }
 .modal .content {
     display: block;
-    padding: .5em;
-    border-bottom: 1px solid lighten($silver, $picnic-color-variation);
+    padding: .6em;
 }

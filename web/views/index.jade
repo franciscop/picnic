@@ -7,7 +7,7 @@ block content
     
     section.limit
       h2#input Buttons
-      p Inspired by <a href="http://tympanus.net/Development/CreativeButtons/">tympanus</a> and colors from <a href="http://clrs.cc/">crls.com</a>
+      p Inspired by <a href="http://tympanus.net/Development/CreativeButtons/">tympanus.net</a> and <a href="http://clrs.cc/">crls.com</a>
       div.render
         <button>Normal</button>
         <button class="success">Success</button>
@@ -229,14 +229,14 @@ block content
           function(i) { return '&#'+i.charCodeAt(0)+';'; }
           );
         }
-      var sectionsCollection = document.getElementsByTagName("section");.limit
+      var sectionsCollection = document.getElementsByTagName("section");
       // http://stackoverflow.com/a/222847/938236
-      var sections = [].slice.call(sectionsCollection);;.limit
-      sections.forEach(function(section, index){.limit
-        var render = section.getElementsByClassName('render')[0];.limit
+      var sections = [].slice.call(sectionsCollection);
+      sections.forEach(function(section, index){
+        var render = section.getElementsByClassName('render')[0];
         if (render) {
-          section.innerHTML += "<pre></pre>";.limit
-          var pre = section.getElementsByTagName("pre")[0];.limit
+          section.innerHTML += "<pre></pre>";
+          var pre = section.getElementsByTagName("pre")[0];
           var html = render.innerHTML;
           pre.innerHTML = html.trim().entities();
           }
