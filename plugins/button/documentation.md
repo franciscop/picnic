@@ -1,6 +1,6 @@
 # Buttons
 
-These buttons are inspired by [tympanus buttons](http://tympanus.net/Development/CreativeButtons/). Buttons can be of different types and different colors.
+Inspired by [tympanus.net](http://tympanus.net/Development/CreativeButtons/) and [clrs.cc](http://clrs.cc/). Buttons can be of different types and different colors.
 
 
 ## Installation
