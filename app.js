@@ -15,6 +15,8 @@ app.use(express.static(__dirname + '/web'));
 app.use('/nut/:full', controller.nut);
 app.use('/plugins/:name', controller.plugin);
 app.use('/plugins/', controller.plugin);
+app.use('/:full', controller.nut);
 app.use('/', controller.index);
+
 
 app.listen(process.env.PORT || 3000);

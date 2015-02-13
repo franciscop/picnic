@@ -111,18 +111,19 @@ html
         text-align: left;
       }
   body
-    nav
-      a.main(href="/") Picnic CSS
+    block nav
+      nav
+        a.main(href="/") Picnic CSS
 
-      // responsive
-      input#bmenu.burgercheck(type="checkbox")
-      label.burgermenu(for="bmenu")
+        // responsive
+        input#bmenu.burgercheck(type="checkbox")
+        label.burgermenu(for="bmenu")
 
-      div.menu
-        a.icon-grid(href="/plugins/") Plugins
-        a.icon-demo(href="/demo/") Demo
-        a.icon-test(href="/test/") Test
-        a.button(href="/build/") Personalize
-        a.button.warning(href="https://github.com/picnicss/picnic") Github
+        div.menu
+          a.icon-grid(href="/plugins/") Plugins
+          a.icon-demo(href="/demo/") Demo
+          a.icon-test(href="/test/") Test
+          a.button(href="/build/") Personalize
+          a.button.warning(href="https://github.com/picnicss/picnic") Github
 
     block content

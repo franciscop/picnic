@@ -2,10 +2,8 @@
 .button,
 .toggle input + * {
     display: inline-block;
-    height: 2em;
-    line-height: 2em;
     margin: $picnic-margin;
-    padding: 0 $picnic-padding * 3; 
+    padding: $picnic-padding $picnic-padding * 3; 
     vertical-align: middle;
     background: $picnic-primary;
     color: $white;
@@ -13,8 +11,11 @@
     border-radius: $picnic-radius;
     cursor: pointer;
     transition: $picnic-transition-fast;
+}
     
-    @if $picnic-deep == true {
+@if $picnic-deep == true {
+    .button,
+    .toggle input + * {
         box-shadow: 
           inset 0 0 0 100em transparent,
           inset 0 -.2em rgba($black, 3 * $picnic-transparency);
@@ -25,8 +26,8 @@
 
 /* Interactivity */
 .button:hover,
-.toggle input:hover +  {
-    box-shadow: inset 0 0 0 100em rgba($black, $picnic-transparency);
+.toggle input:hover + * {
+    box-shadow: inset 0 0 0 100em rgba($white, $picnic-transparency);
 }
 
 @if $picnic-deep == true {
@@ -38,7 +39,7 @@
             margin-top: $picnic-margin + .1em;
             box-shadow:
               inset 0 0 0 100em rgba($black, $picnic-transparency),
-              inset 0 -.1em rgba($black, 3 * $picnic-transparency);
+              inset 0 -.1em rgba($black, $picnic-transparency);
     } 
 }
 
@@ -88,6 +89,20 @@
     background: $picnic-dull;
 }
 
+
+/* Groups */
+.button.group {
+    border-radius: 0;
+    margin: $picnic-margin 0 $picnic-margin -.33em;
+}
+
+.button.group:first-child {
+    border-radius: $picnic-radius 0 0 $picnic-radius;
+}
+
+.button.group:last-child {
+    border-radius: 0 $picnic-radius $picnic-radius 0;
+}
 
 
 /* This allows the invasiveness */

@@ -3,7 +3,7 @@
 
     // Each of the rows
     .row {
-
+        
         max-width: 100%;
         width: 100%;
         display: table;
@@ -20,45 +20,45 @@
         display: table-cell;
         vertical-align: top;
     }
-}
 
-// Don't display this one
-.none {
-    display: none;
-}
+    // Don't display this one
+    .none {
+        display: none;
+    }
 
-.half {
-    width: 50%;
-}
+    .half {
+        width: 50%;
+    }
 
-.third {
-    width: 33.3333%;
-}
+    .third {
+        width: 33.3333%;
+    }
 
-.two-third {
-    width: 66.6666%;
-}
+    .two-third {
+        width: 66.6666%;
+    }
 
-.fourth {
-    width: 25%;
-}
+    .fourth {
+        width: 25%;
+    }
 
-.three-fourth {
-    width: 75%;
-}
+    .three-fourth {
+        width: 75%;
+    }
 
-.fifth {
-    width: 20%;
-}
+    .fifth {
+        width: 20%;
+    }
 
-.two-fifth {
-    width: 40%;
-}
+    .two-fifth {
+        width: 40%;
+    }
 
-.three-fifth {
-    width: 60%;
-}
+    .three-fifth {
+        width: 60%;
+    }
 
-.four-fifth {
-    width: 80%;
+    .four-fifth {
+        width: 80%;
+    }
 }
