@@ -1,6 +1,17 @@
 extends layout
 
 block content
+  style.
+    .row {
+      margin: .5em auto;
+    }
+    .row > * {
+      padding: .3em .6em;
+      background: #6C7;
+    }
+    .row > *:nth-child(even){
+      background: #7DF;
+    }
   main
     h1 Picnic CSS
     p.slogan Tiny and flexible CSS3 library
@@ -25,15 +36,6 @@ block content
           <input type="checkbox" />
           <span>Toggle</span>
         </label>
-    
-    section.limit
-      h2 Button group
-      div.render.
-        <a class="button group">Normal</a>
-        <a class="button group success">Success</a>
-        <a class="button group warning">Warning</a>
-        <a class="button group error">Error</a>
-        <a class="button group dull">Dull</a>
 
     section.limit
       h2 Input
@@ -146,7 +148,7 @@ block content
         ...
     
     section
-      h2 Evenly stacked grids
+      h2 Grid classes
       p Tweak the behaviour adding classes
       div.render.
         <div class="row">

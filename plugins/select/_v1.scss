@@ -1,6 +1,7 @@
 .select {
     position: relative;
     display: inline-block;
+    margin: $picnic-margin;
     border: $picnic-border;
     border-radius: $picnic-radius;
 }
@@ -23,10 +24,10 @@
 }
 
 .select select {
-    padding:0.23em 0 0.23em 0.23em;
+    font-size: inherit;
     background: none;
-    //vendor prefixes required, see:
-    //https://github.com/postcss/autoprefixer#why-doesnt-autoprefixer-support-appearance
+    /* vendor prefixes required, see: */
+    /* https://github.com/postcss/autoprefixer#why-doesnt-autoprefixer-support-appearance */
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
@@ -34,6 +35,8 @@
     min-width: 14em;
     border-radius: $picnic-radius;
     cursor: pointer;
+    width: calc(#{$picnic-input-width} - 2px);
+    padding: calc(#{$picnic-padding} - 2px) calc(#{2 * $picnic-padding} - 2px);
 }
 
 .select select:-moz-focusring {

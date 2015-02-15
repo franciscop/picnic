@@ -1,6 +1,8 @@
+<link rel='stylesheet' href='/plugins/button/style.css'>
+
 # Buttons
 
-Inspired by [tympanus.net](http://tympanus.net/Development/CreativeButtons/) and [clrs.cc](http://clrs.cc/). Buttons can be of different types and different colors.
+They can be of different types and [different colors](http://clrs.cc/).
 
 
 ## Installation
@@ -52,8 +54,23 @@ There are different button types for different situations. These are.
     </label>
 
 
-## Flat buttons
 
-They can also have a flat style. For this, you should include `flat.css` instead of `picnic.css`. Example:
+## Hack it
 
-    http://nut.picnicss.com/flat.css
+You only have to define a single color base for new colors. The `:hover` and `:active` status are handled as overlays for consistency and simplicity
+
+<button class="myCoolButton">
+    My Cool Button
+</button>
+
+    .myCoolButton {
+        background: #85144b;
+    }
+    
+    <button class="myCoolButton">
+        My Cool Button
+    </button>
+
+
+
+

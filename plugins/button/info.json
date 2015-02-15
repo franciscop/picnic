@@ -1,7 +1,6 @@
 {
   "id": "button",
   "name": "Button",
-  "description": "This is a really cool button plugin",
   "install": "[installed]",
   "test": "test.html"
 }

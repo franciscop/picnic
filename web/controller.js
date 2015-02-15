@@ -20,7 +20,8 @@ module.exports.plugin = function(req, res) {
       name: value,
       install: "[installed]",
       description: "No description",
-      documentation: "**No documentation**",
+      documentation: "No documentation",
+      partial: false
       };
     plugin.id = value;
     plugin.folder = __dirname + "/../plugins/" + plugin.id + "/";
@@ -29,14 +30,27 @@ module.exports.plugin = function(req, res) {
       plugin.name = info.name;
       plugin.description = info.description;
       plugin.install = info.install;
+      plugin.partial = info.partial || false;
+      plugin.doc = info.documentation ? info.documentation : "documentation.md";
+      }
+    
+    if (fs.existsSync(plugin.folder + "description.html")) {
+      plugin.description = fs.readFileSync(plugin.folder + "description.html", 'utf-8');
       }
 
-    if (fs.existsSync(plugin.folder + "documentation.md")) {
-      var docRaw = fs.readFileSync(plugin.folder + "documentation.md", 'utf-8');
-      plugin.documentation = marked(docRaw);
+    if (fs.existsSync(plugin.folder + plugin.doc)) {
+      var docRaw = fs.readFileSync(plugin.folder + plugin.doc, 'utf-8');
+      
+      if (plugin.doc.split('.').pop() == "md") {
+        plugin.documentation = marked(docRaw, {sanitize: false});
+        }
+      else {
+        plugin.documentation = docRaw;
+        }
       }
 
-    plugins.push(plugin);
+    if (!plugin.partial)
+      plugins.push(plugin);
     });
 
   if (req.params.name && req.params.name.length) {
@@ -91,6 +105,8 @@ module.exports.nut = function(req, res) {
       console.log(error.code);
       console.log(error.line);
       console.log(error.column); // new in v2
+
+      res.render(404);
       },  
     });
   };

@@ -1,0 +1,7 @@
+{
+  "id": "fontello",
+  "name": "Fontello",
+  "description": "It overwrites some styles from fontello for better integration",
+  "install": "[installed]",
+  "partial": true
+}

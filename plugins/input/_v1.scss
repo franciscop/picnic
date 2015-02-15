@@ -2,10 +2,11 @@
 input, textarea {
     line-height: $picnic-text-height;
     margin: $picnic-margin;
-    padding: $picnic-padding-text;
+    padding: $picnic-padding 2 * $picnic-padding;
     border: $picnic-border;
     border-radius: $picnic-radius;
     transition: $picnic-transition-slow;
+    width: $picnic-input-width;
 }
 
 input[type=file],

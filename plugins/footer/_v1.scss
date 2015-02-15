@@ -2,9 +2,8 @@
  * Default footer height: 200px
  * Change it, but you'll need some js to make it responsive
  */
-body > footer {
-    color: $picnic-white;
-    background: $picnic-black;
-    margin: -1px 0px;
-    padding: 1px;
+.footer {
+    color: $white;
+    background: $black;
+    padding: $picnic-padding 2 * $picnic-padding;
 }

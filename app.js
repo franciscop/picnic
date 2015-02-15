@@ -10,6 +10,7 @@ app.set('view engine', 'jade');
 
 app.use(compress());
 app.use(express.static(__dirname + '/web'));
+app.use("/plugins", express.static(__dirname + "/plugins"));
 
 // Routing
 app.use('/nut/:full', controller.nut);

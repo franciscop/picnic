@@ -1,0 +1,7 @@
+{
+  "id": "stack",
+  "name": "Stack",
+  "description": "This is a really cool button plugin",
+  "install": "+stack",
+  "test": "test.html"
+}

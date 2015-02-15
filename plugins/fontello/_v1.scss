@@ -1,0 +1,8 @@
+// Fontello
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    margin: 0 2 * $picnic-margin 0 0;
+}
+/* Nice fontello trick from Ronen Ackerman ( http://stackoverflow.com/a/17561467 ) */
+i[class^="icon-"]:before,i[class*=" icon-"]:before {
+    margin: 0;
+}

@@ -1,0 +1,7 @@
+{
+  "id": "radiocheckbox",
+  "name": "Radiocheckbox",
+  "description": "The foundation for radio and checkbox",
+  "install": "[installed]",
+  "partial": true
+}

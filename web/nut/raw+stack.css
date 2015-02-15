@@ -1,0 +1,44 @@
+/**
+ * Raw File
+ * This file only imports variables. It doesn't import anything that does real work
+ * Allows to dynamically load plugins of Picnic CSS
+ */
+/**
+ * Colors
+ * The colors as defined in clrs.com
+ */
+/**
+ * COLOR VARIABLES
+ * - Cool
+ * - Warm
+ * - Gray Scale
+ * 
+ * clrs, from https://github.com/mrmrs/colors
+ */
+/**
+ * Variables
+ * The configuration of the current build of Picnic
+ */
+/* Style by default the <button>, <input type="submit">, etc? */
+/* Not fully implemented */
+/* Make buttons and other things slightly 3d */
+/* Media query breakpoint */
+/* Default space between objects */
+/* Default inline element styles */
+/* Colors */
+/* Border */
+/* Define the transitions */
+/* Stack */
+.stack, .toggle.stack input + * {
+  display: block;
+  border-radius: 0;
+  margin: 0;
+  max-width: 100%; }
+
+.stack:first-child, .toggle.stack:first-child input + * {
+  border-top-left-radius: 0.2em;
+  border-top-right-radius: 0.2em; }
+
+.stack:last-child, .toggle.stack:last-child input + * {
+  border-bottom-left-radius: 0.2em;
+  border-bottom-right-radius: 0.2em; }

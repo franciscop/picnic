@@ -1,9 +1,10 @@
+<link rel="stylesheet" href="/nut/raw+modal.fresh.css">
+
 # Modal
 
 The modal is pure CSS, which makes the html quite ugly actually. However it does work. To try it, press the button:
 
 <p>
-<link rel="stylesheet" href="/nut/raw+modal.fresh.css">
 
 <label for="modal_1" class="button">
 Show modal

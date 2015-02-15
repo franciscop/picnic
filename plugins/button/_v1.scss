@@ -10,6 +10,7 @@
     border: 0;
     border-radius: $picnic-radius;
     cursor: pointer;
+    width: auto;
     transition: $picnic-transition-fast;
 }
     
@@ -87,21 +88,6 @@
 .button.dull,
 .toggle.dull input + * {
     background: $picnic-dull;
-}
-
-
-/* Groups */
-.button.group {
-    border-radius: 0;
-    margin: $picnic-margin 0 $picnic-margin -.33em;
-}
-
-.button.group:first-child {
-    border-radius: $picnic-radius 0 0 $picnic-radius;
-}
-
-.button.group:last-child {
-    border-radius: 0 $picnic-radius $picnic-radius 0;
 }
 
 

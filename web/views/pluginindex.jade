@@ -2,12 +2,13 @@ extends layout
 
 block content
   h1 Plugins
-  p A list of all the plugins that you can add to Picnic CSS.
+  p.slogan A list of all the plugins that you can add to Picnic CSS.
 
 
   each plugin in plugins
     article.plugin
-      a(href="/plugins/" + plugin.id)
-        h2= plugin.name
-        div.install= plugin.install
-        div.description= plugin.description
+      header
+        a(href="/plugins/" + plugin.id)
+          h2= plugin.name
+          div.install= plugin.install
+      div.description!= plugin.description

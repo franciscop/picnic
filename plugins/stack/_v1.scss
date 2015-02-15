@@ -1,0 +1,20 @@
+/* Stack */
+.stack,
+.toggle.stack input + * {
+    display: block;
+    border-radius: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+.stack:first-child,
+.toggle.stack:first-child input + * {
+    border-top-left-radius: $picnic-radius;
+    border-top-right-radius: $picnic-radius;
+}
+
+.stack:last-child,
+.toggle.stack:last-child input + * {
+    border-bottom-left-radius: $picnic-radius;
+    border-bottom-right-radius: $picnic-radius;
+}

@@ -1,0 +1,6 @@
+{
+  "id": "grids",
+  "name": "Grids",
+  "description": "Simple grid system based on ungrid",
+  "install": "[installed]"
+}

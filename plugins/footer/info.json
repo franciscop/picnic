@@ -1,0 +1,6 @@
+{
+  "id": "footer",
+  "name": "Footer",
+  "install": "+footer",
+  "test": "test.html"
+}

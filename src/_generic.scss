@@ -33,6 +33,11 @@ li {
 }
 
 
+a {
+    color: $picnic-primary;
+    text-decoration: none;
+}
+
 
 /* The <pre> doesn't have a nice style from Normalize.css */
 pre {
@@ -49,9 +54,4 @@ blockquote {
     padding: 0 0 0 1em;
     margin: 0 0 0 .1em;
     box-shadow: inset 5px 0px rgba($black, 0.3);
-}
-
-/* Nice fontello trick from Ronen Ackerman ( http://stackoverflow.com/a/17561467 ) */
-i[class^="icon-"]:before,i[class*=" icon-"]:before {
-    margin: 0;
 }

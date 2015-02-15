@@ -13,7 +13,7 @@
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%) scale(0.2, 0.2);
-    border-radius: .2em;
+    border-radius: $picnic-radius;
     box-shadow: 0 0 .3em rgba($black, 3 * $picnic-transparency);
     background: $white;
     transition: $picnic-transition-slow;

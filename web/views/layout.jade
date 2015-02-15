@@ -63,17 +63,6 @@ html
       .main img {
         vertical-align: middle;
       }
-
-      .row {
-        margin: .5em auto;
-      }
-      .row > * {
-        padding: .3em .6em;
-        background: #6C7;
-      }
-      .row > *:nth-child(even){
-        background: #7DF;
-      }
       .text {
         max-width: 500px;
         text-align: left;
@@ -91,23 +80,25 @@ html
       .plugin {
         width: 100%;
         max-width: 500px;
-        margin: 30px auto 20px;
-        overflow: auto;
+        margin: 40px auto 20px;
+      }
+      .plugin header {
+        text-align: left;
+        display: block;
       }
       .plugin h2 {
-        float: left;
+        display: inline-block;
         margin-top: 0;
         padding: 0;
       }
       .plugin .install {
-        float: left;
-        margin-left: 10px;
+        float: right;
       }
 
       .plugin .description {
         width: 100%;
         display: block;
-        margin-top: 30px;
+        margin-top: 10px;
         text-align: left;
       }
   body
@@ -120,10 +111,9 @@ html
         label.burgermenu(for="bmenu")
 
         div.menu
-          a.icon-grid(href="/plugins/") Plugins
           a.icon-demo(href="/demo/") Demo
           a.icon-test(href="/test/") Test
-          a.button(href="/build/") Personalize
+          a.button.icon-grid(href="/plugins/") Plugins
           a.button.warning(href="https://github.com/picnicss/picnic") Github
 
     block content
