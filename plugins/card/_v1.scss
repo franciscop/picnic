@@ -1,0 +1,28 @@
+.card {
+  box-shadow: 0 0 $picnic-separation rgba($black, 2 * $picnic-transparency);
+  border-radius: $picnic-radius;
+  overflow: hidden;
+  margin: $picnic-margin;
+}
+
+.card * {
+  max-width: 100%;
+}
+
+.card header,
+.card footer {
+  padding: $picnic-separation;
+}
+
+.card .error {
+  float: right;
+}
+
+.card h1,
+.card h2 {
+  padding: $picnic-padding;
+}
+
+.card p {
+  margin: $picnic-margin;
+}
