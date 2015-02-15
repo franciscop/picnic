@@ -1,4 +1,3 @@
-<style>
 .row.demo {
 margin-top: .5em;
 }
@@ -9,4 +8,11 @@ background: #6C7;
 .row.demo > *:nth-child(even){
 background: #7DF;
 }
-</style>
+
+.myCoolGrid {
+  width: 31.56%;
+}
+
+.myGreatGrid {
+  width: 500px;
+}

@@ -1,34 +1,35 @@
 <link rel='stylesheet' href='/plugins/grids/style.css'>
 
+
 ## Grids
 
 A simple and responsive grid based on [ungrid](http://chrisnager.github.io/ungrid/).
+Note: the class `.demo` is added for the fancy colors.
 
 
-
-<div class="row">
+<div class="row demo">
   <div>[one]</div>
 </div>
 
-<div class="row">
+<div class="row demo">
   <div>[two]</div>
   <div>[two]</div>
 </div>
 
-<div class="row">
+<div class="row demo">
   <div>[three]</div>
   <div>[three]</div>
   <div>[three]</div>
 </div>
 
-<div class="row">
+<div class="row demo">
   <div>[four]</div>
   <div>[four]</div>
   <div>[four]</div>
   <div>[four]</div>
 </div>
 
-<div class="row">
+<div class="row demo">
   <div>[five]</div>
   <div>[five]</div>
   <div>[five]</div>
@@ -36,47 +37,47 @@ A simple and responsive grid based on [ungrid](http://chrisnager.github.io/ungri
   <div>[five]</div>
 </div>
 
-<div class="row">
+<div class="row demo">
   <div class="half">.half</div>
   <div>[empty]</div>
 </div>
 
-<div class="row">
+<div class="row demo">
   <div class="third">.third</div>
   <div>[empty]</div>
 </div>
 
-<div class="row">
+<div class="row demo">
   <div class="fourth">.fourth</div>
   <div>[empty]</div>
 </div>
 
-<div class="row">
+<div class="row demo">
   <div class="fifth">.fifth</div>
   <div>[empty]</div>
 </div>
 
-<div class="row">
+<div class="row demo">
   <div class="two-fifth">.two-fifth</div>
   <div>[empty]</div>
 </div>
 
-<div class="row">
+<div class="row demo">
   <div class="three-fifth">.three-fifth</div>
   <div>[empty]</div>
 </div>
 
-<div class="row">
+<div class="row demo">
   <div class="two-third">.two-third</div>
   <div>[empty]</div>
 </div>
 
-<div class="row">
+<div class="row demo">
   <div class="three-fourth">.three-fourth</div>
   <div>[empty]</div>
 </div>
 
-<div class="row">
+<div class="row demo">
   <div class="four-fifth">.four-fifth</div>
   <div>[empty]</div>
 </div>
@@ -93,29 +94,29 @@ Grids are already included with Picnic CSS
 
 To display few grids with the same width, just do:
 
-<div class="row">
+<div class="row demo">
   <div>[one]</div>
 </div>
 
-<div class="row">
+<div class="row demo">
   <div>[two]</div>
   <div>[two]</div>
 </div>
 
-<div class="row">
+<div class="row demo">
   <div>[three]</div>
   <div>[three]</div>
   <div>[three]</div>
 </div>
 
-<div class="row">
+<div class="row demo">
   <div>[four]</div>
   <div>[four]</div>
   <div>[four]</div>
   <div>[four]</div>
 </div>
 
-<div class="row">
+<div class="row demo">
   <div>[five]</div>
   <div>[five]</div>
   <div>[five]</div>
@@ -161,47 +162,47 @@ More fine-grain control over grids
 
 
 
-<div class="row">
+<div class="row demo">
   <div class="half">.half</div>
   <div>[empty]</div>
 </div>
 
-<div class="row">
+<div class="row demo">
   <div class="third">.third</div>
   <div>[empty]</div>
 </div>
 
-<div class="row">
+<div class="row demo">
   <div class="fourth">.fourth</div>
   <div>[empty]</div>
 </div>
 
-<div class="row">
+<div class="row demo">
   <div class="fifth">.fifth</div>
   <div>[empty]</div>
 </div>
 
-<div class="row">
+<div class="row demo">
   <div class="two-fifth">.two-fifth</div>
   <div>[empty]</div>
 </div>
 
-<div class="row">
+<div class="row demo">
   <div class="three-fifth">.three-fifth</div>
   <div>[empty]</div>
 </div>
 
-<div class="row">
+<div class="row demo">
   <div class="two-third">.two-third</div>
   <div>[empty]</div>
 </div>
 
-<div class="row">
+<div class="row demo">
   <div class="three-fourth">.three-fourth</div>
   <div>[empty]</div>
 </div>
 
-<div class="row">
+<div class="row demo">
   <div class="four-fifth">.four-fifth</div>
   <div>[empty]</div>
 </div>
@@ -251,9 +252,13 @@ More fine-grain control over grids
 	  <div>[empty]</div>
 	</div>
 
-This allows for also doing things like this:
 
-<div class="row">
+
+## Hack it
+
+Combine a class with several cells for this distribution:
+
+<div class="row demo">
   <div class="half">.half</div>
   <div>[empty]</div>
   <div>[empty]</div>
@@ -264,3 +269,25 @@ This allows for also doing things like this:
 	  <div>[empty]</div>
 	  <div>[empty]</div>
 	</div>
+
+
+Set your own width for your grid in any unit you want:
+
+<div class="row demo">
+  <div class=".myCoolGrid">.myCoolGrid</div>
+  <div>[empty]</div>
+</div>
+
+<div class="row demo">
+  <div class="myGreatGrid">.myGreatGrid</div>
+  <div>[empty]</div>
+</div>
+
+
+    .myCoolGrid {
+      width: 31.56%;
+    }
+
+    .myGreatGrid {
+      width: 500px;
+    }
