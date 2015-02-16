@@ -4,7 +4,7 @@
     display: block;
     border-radius: 0;
     margin: 0;
-    max-width: 100%;
+    width: 100%;
 }
 
 .stack:first-child,
@@ -17,4 +17,12 @@
 .toggle.stack:last-child input + * {
     border-bottom-left-radius: $picnic-radius;
     border-bottom-right-radius: $picnic-radius;
+}
+
+input.stack {
+    transition: border-bottom 0s ease 0s;
+    border-bottom-width: 0;
+}
+input.stack:focus + input {
+    border-top-color: #0074D9;
 }

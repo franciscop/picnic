@@ -5,6 +5,7 @@
   margin: $picnic-margin;
 }
 
+/* Make sure that the image doesn't overflow */
 .card * {
   max-width: 100%;
 }
