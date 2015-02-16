@@ -23,6 +23,11 @@ input.stack {
     transition: border-bottom 0s ease 0s;
     border-bottom-width: 0;
 }
+
+input.stack:last-child {
+    border-bottom-width: 1px;
+}
+
 input.stack:focus + input {
     border-top-color: #0074D9;
 }
