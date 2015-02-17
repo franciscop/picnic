@@ -8,15 +8,15 @@ A vertical group of different elements.
   <div>
     <label class="toggle stack">
       <input type="radio" name="stack" />
-      <span class="icon-grid">Plugins</span>
+      <span class="icon-puzzle">Plugins</span>
     </label>
     <label class="toggle stack">
       <input type="radio" name="stack" />
-      <span class="icon-demo">Demo</span>
+      <span class="icon-picture">Demo</span>
     </label>
     <label class="toggle stack">
       <input type="radio" name="stack" />
-      <span class="icon-test">Test</span>
+      <span class="icon-help-circled">Test</span>
     </label>
   </div>
   <div>
@@ -26,7 +26,7 @@ A vertical group of different elements.
   <div>
     <input class="stack" placeholder="Name" />
     <input class="stack" placeholder="Email" />
-    <button class="stack">
+    <button class="stack icon-paper-plane">
         Send
     </button>
   </div>
@@ -148,8 +148,8 @@ Create nice and packed forms. [jsfiddle](http://jsfiddle.net/ddmv3dsr/4/)
       <input class="stack" placeholder="Password" />
       <input class="stack" placeholder="Repeat password" />
       <textarea class="stack" placeholder="Biography"></textarea>
-      <button class="stack">
-          Save
+      <button class="stack icon-paper-plane">
+          Send
       </button>
   </div>
 </div>
@@ -164,8 +164,9 @@ Create nice and packed forms. [jsfiddle](http://jsfiddle.net/ddmv3dsr/4/)
     <div>
         <input class="stack" placeholder="Password" />
         <input class="stack" placeholder="Repeat password" />
-        <button class="stack">
-            Save
+        <!-- Note: also using fontello -->
+        <button class="stack icon-paper-plane">
+            Send
         </button>
     </div>
 
@@ -203,3 +204,32 @@ Just set up your super simple  gallery with this and the grids
     <a class="button stack">Add</a>
   </div>
 </div>
+
+    <div class="row">
+      <div>
+        <img class="stack" src="/img/forest.jpg">
+        <a class="button stack">Add</a>
+      </div>
+      <div>
+        <img class="stack" src="/img/forest.jpg">
+        <a class="button stack">Add</a>
+      </div>
+      <div>
+        <img class="stack" src="/img/forest.jpg">
+        <a class="button stack error">Remove</a>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <img class="stack" src="/img/forest.jpg">
+        <a class="button stack">Add</a>
+      </div>
+      <div>
+        <img class="stack" src="/img/forest.jpg">
+        <a class="button stack error">Remove</a>
+      </div>
+      <div>
+        <img class="stack" src="/img/forest.jpg">
+        <a class="button stack">Add</a>
+      </div>
+    </div>

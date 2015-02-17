@@ -9,13 +9,18 @@ block content
     .row > *:nth-child(even){
       background: #7DF;
     }
+    form {
+      text-align: left;
+      margin-left: calc(50% - 120px - .3em);
+    }
   main
     h1 Picnic CSS
-    p.slogan Tiny and flexible CSS3 library
+    p.slogan Tiny and <a href="/plugins">modular</a> CSS3 library
+    pre
+      code= '<link rel="stylesheet" href="http://picnicss.com/nut/picnic.min.css">'
     
-    section.limit
+    section
       h2#input Buttons
-      p Inspired by <a href="http://clrs.cc/">clrs.cc</a>
       div.render
         <button>Normal</button>
         <button class="success">Success</button>
@@ -23,56 +28,36 @@ block content
         <button class="error">Error</button>
         <button class="dull">Dull</button>
     
-    section.limit
-      h2 Button types
+    section
+      h2 Form elements
       div.render.
-        <button>Button</button>
-        <a class="button">Link</a>
-        <input type="submit" value="Submit" />
-        <label class="toggle">
-          <input type="checkbox" />
-          <span>Toggle</span>
-        </label>
-
-    section.limit
-      h2 Input
-      div.render.
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Password" />
-    
-    section.limit
-      h2 Select
-      div.render.
-        <label class="select">
-          <select>
-            <option>Select an option</option>
-            <option>Good option</option>
-            <option>Nice option</option>
-            <option>Cheap option</option>
-          </select>
-        </label>
-    
-    section.limit
-      h2 Checkboxes & Radiobuttons
-      div.render.
-        <div class="checks">
+        <form>
+          <input type="email" placeholder="Email" /><br>
+          <input type="password" placeholder="Password" /><br>
+          <label class="select">
+            <select name="options">
+              <option>Select an option</option>
+              <option>Good option</option>
+              <option>Nice option</option>
+              <option>Cheap option</option>
+            </select>
+          </label><br>
           <label class="checkbox">
             <input type="checkbox">
             <span>Check me out (;</span>
-          </label>
-          <br>
+          </label><br>
           <label class="radio">
             <input type="radio" name="takeme">
             <span>Choose me</span>
-          </label>
-          <br>
+          </label><br>
           <label class="radio">
             <input type="radio" name="takeme">
             <span>or choose me</span>
           </label>
-        </div>
+        </form>
     
-    section.limit
+    
+    section
       h2 Table
       div.render.
         <table class="primary">
@@ -108,9 +93,7 @@ block content
         </table>
     
     section
-      h2 Evenly stacked grids
-      p Built on top of <a href="http://chrisnager.github.io/ungrid/">ungrid</a>
-      p Note: colors added for a dramatic effect
+      h2 Responsive grid
       div.render.
         <div class="row">
           <div>[one]</div>
@@ -142,67 +125,10 @@ block content
           <div>[five]</div>
         </div>
         
-        ...
     
-    section
-      h2 Grid classes
-      p Tweak the behaviour adding classes
-      div.render.
-        <div class="row">
-          <div class="half">.half</div>
-          <div>[empty]</div>
-        </div>
-        
-        <div class="row">
-          <div class="third">.third</div>
-          <div>[empty]</div>
-        </div>
-        
-        <div class="row">
-          <div class="fourth">.fourth</div>
-          <div>[empty]</div>
-        </div>
-        
-        <div class="row">
-          <div class="fifth">.fifth</div>
-          <div>[empty]</div>
-        </div>
-        
-        <div class="row">
-          <div class="two-fifth">.two-fifth</div>
-          <div>[empty]</div>
-        </div>
-        
-        <div class="row">
-          <div class="three-fifth">.three-fifth</div>
-          <div>[empty]</div>
-        </div>
-        
-        <div class="row">
-          <div class="two-third">.two-third</div>
-          <div>[empty]</div>
-        </div>
-        
-        <div class="row">
-          <div class="three-fourth">.three-fourth</div>
-          <div>[empty]</div>
-        </div>
-        
-        <div class="row">
-          <div class="four-fifth">.four-fifth</div>
-          <div>[empty]</div>
-        </div>
-    
-    h2 Subscribe
-    p Subscribe with mailchimp to receive updates:
-    
-    <!-- Begin MailChimp Signup Form -->
-    form(action="//francisco.us9.list-manage.com/subscribe/post?u=8f634b4eeb27e1bb51438f11f&amp;id=2a237ff297", method="post", name="mc-embedded-subscribe-form", target="_blank")
-      input(style="position: absolute; left: -5000px;", name="b_8f634b4eeb27e1bb51438f11f_2a237ff297", tabindex="-1", value="")
-      
-      input(type="email", name="EMAIL", placeholder="Email address", required)
-      input(type="submit", name="subscribe", value="Subscribe")
-
+    h2 Many more plugins!
+    p To check them out, visit the plugin page:
+    a.button(href="/plugins/") Check out the plugins
 
 
     h2 Advantages
@@ -210,7 +136,7 @@ block content
     p Main advantages of using Picnic CSS:
 
     ul.text
-      li 2.0kb when minimized and zipped last time I checked.
+      li 3.0kb when minimized and zipped.
       li Semantic HTML5. <i>Your</i> code stays highly semantic.
       li Normalize.css is used, achieving a solid foundation.
       li Support: IE 9+ and others. No fancy CSS3 on IE 8.
@@ -218,24 +144,3 @@ block content
 
 
     
-
-    script.
-      // Show the code for each preview
-      String.prototype.entities = function() {
-        return this.toString().replace(
-          /[\u00A0-\u9999<>\&]/gim,
-          function(i) { return '&#'+i.charCodeAt(0)+';'; }
-          );
-        }
-      var sectionsCollection = document.getElementsByTagName("section");
-      // http://stackoverflow.com/a/222847/938236
-      var sections = [].slice.call(sectionsCollection);
-      sections.forEach(function(section, index){
-        var render = section.getElementsByClassName('render')[0];
-        if (render) {
-          section.innerHTML += "<pre></pre>";
-          var pre = section.getElementsByTagName("pre")[0];
-          var html = render.innerHTML;
-          pre.innerHTML = html.trim().entities();
-          }
-        });

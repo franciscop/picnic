@@ -97,6 +97,7 @@ module.exports.nut = function(req, res) {
 
       if (picnic.writeFile) {
         fs.writeFile(__dirname + '/nut/' + picnic.full, finalCSS);
+        fs.writeFile(__dirname + '/n/' + picnic.full, finalCSS);
         }
       },
     error: function(error) {
@@ -111,6 +112,13 @@ module.exports.nut = function(req, res) {
     });
   };
 
+
+
+// Showcase Picnic CSS with a demo
+module.exports.demo = function(req, res){
+
+  res.render("demo");
+  }
 
 
 

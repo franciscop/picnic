@@ -1,0 +1,28 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'>
+	<radialGradient id='g' cx='50%' cy='50%' r='50%'>
+		<stop offset='0%' style='stop-color:#52c5ff;' />
+		<stop offset='50%' style='stop-color:#52a8ff;' />
+		<stop offset='100%' style='stop-color:#529aff;' />
+	</radialGradient>
+	<rect width='100%' height='100%' fill='url(#g)'/>
+	<svg x='50%' y='50%' overflow='visible'>
+		<rect width='2000%' height='2000%' fill-opacity='0.1' fill='#ffffff' transform='rotate(20)'/>
+		<rect width='2000%' height='2000%' fill-opacity='0.1' fill='#ffffff' transform='rotate(40)'/>
+		<rect width='2000%' height='2000%' fill-opacity='0.1' fill='#ffffff' transform='rotate(60)'/>
+		<rect width='2000%' height='2000%' fill-opacity='0.1' fill='#ffffff' transform='rotate(80)'/>
+		<rect width='2000%' height='2000%' fill-opacity='0.1' fill='#ffffff' transform='rotate(100)'/>
+		<rect width='2000%' height='2000%' fill-opacity='0.1' fill='#ffffff' transform='rotate(120)'/>
+		<rect width='2000%' height='2000%' fill-opacity='0.1' fill='#ffffff' transform='rotate(140)'/>
+		<rect width='2000%' height='2000%' fill-opacity='0.1' fill='#ffffff' transform='rotate(160)'/>
+		<rect width='2000%' height='2000%' fill-opacity='0.1' fill='#ffffff' transform='rotate(180)'/>
+		<rect width='2000%' height='2000%' fill-opacity='0.1' fill='#ffffff' transform='rotate(200)'/>
+		<rect width='2000%' height='2000%' fill-opacity='0.1' fill='#ffffff' transform='rotate(220)'/>
+		<rect width='2000%' height='2000%' fill-opacity='0.1' fill='#ffffff' transform='rotate(240)'/>
+		<rect width='2000%' height='2000%' fill-opacity='0.1' fill='#ffffff' transform='rotate(260)'/>
+		<rect width='2000%' height='2000%' fill-opacity='0.1' fill='#ffffff' transform='rotate(280)'/>
+		<rect width='2000%' height='2000%' fill-opacity='0.1' fill='#ffffff' transform='rotate(300)'/>
+		<rect width='2000%' height='2000%' fill-opacity='0.1' fill='#ffffff' transform='rotate(320)'/>
+		<rect width='2000%' height='2000%' fill-opacity='0.1' fill='#ffffff' transform='rotate(340)'/>
+		<rect width='2000%' height='2000%' fill-opacity='0.1' fill='#ffffff' transform='rotate(360)'/>
+	</svg>
+</svg>

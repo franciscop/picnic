@@ -35,10 +35,10 @@ html
       }
       pre {
         text-align: left;
-        max-width: 500px;
+        max-width: 600px;
         margin: 20px auto;
         border: 1px solid #CCC;
-        padding: 10px;
+        padding: 8px 10px;
         background: #FAFAFA;
       }
       pre code {
@@ -47,10 +47,6 @@ html
       }
       table {
         margin: 20px auto;
-      }
-      .limit {
-        max-width: 600px;
-        margin: 0 auto;
       }
       main,
       main.limit {
@@ -68,11 +64,6 @@ html
       .text {
         max-width: 500px;
         text-align: left;
-        margin: 0 auto;
-      }
-      .checks {
-        text-align: left;
-        width: 300px;
         margin: 0 auto;
       }
       a {
@@ -103,6 +94,10 @@ html
         margin-top: 10px;
         text-align: left;
       }
+      section {
+          max-width: 600px;
+          margin: 0 auto;
+      }
   body
     block nav
       nav
@@ -113,9 +108,9 @@ html
         label.burgermenu(for="bmenu")
 
         div.menu
-          a.icon-demo(href="/demo/") Demo
-          a.icon-test(href="/test/") Test
-          a.button.icon-grid(href="/plugins/") Plugins
-          a.button.warning(href="https://github.com/picnicss/picnic") Github
+          a.icon-picture(href="/demo/") Demo
+          a.icon-help-circled(href="/test/") Test
+          a.icon-g(href="https://github.com/picnicss/picnic" target="_blank") Github
+          a.button.icon-puzzle(href="/plugins/") Plugins
 
     block content
