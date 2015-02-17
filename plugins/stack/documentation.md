@@ -1,40 +1,42 @@
 # Stack
+<link rel="stylesheet" href="/nut/raw+stack.fresh.css">
 
-A vertical group of different elements. They are all considered as parts of a whole thing.
+
+A vertical group of different elements.
 
 <div class="row">
   <div>
-    <a class="button stack">First</a>
-    <a class="button stack">Second</a>
-    <a class="button stack">Third</a>
+    <label class="toggle stack">
+      <input type="radio" name="stack" />
+      <span class="icon-grid">Plugins</span>
+    </label>
+    <label class="toggle stack">
+      <input type="radio" name="stack" />
+      <span class="icon-demo">Demo</span>
+    </label>
+    <label class="toggle stack">
+      <input type="radio" name="stack" />
+      <span class="icon-test">Test</span>
+    </label>
   </div>
   <div>
     <img class="stack" src="/img/forest.jpg">
     <a class="button stack">Full size</a>
   </div>
   <div>
-    <label class="toggle stack">
-      <input type="radio" name="stack" />
-      <span class="icon-grid">Tab 1</span>
-    </label>
-    <label class="toggle stack">
-      <input type="radio" name="stack" />
-      <span class="icon-demo">Tab 2</span>
-    </label>
-    <label class="toggle stack">
-      <input type="radio" name="stack" />
-      <span class="icon-test">Tab 3</span>
-    </label>
+    <input class="stack" placeholder="Name" />
+    <input class="stack" placeholder="Email" />
+    <button class="stack">
+        Send
+    </button>
   </div>
 </div>
-
 
 
 ## Installation
 
 Add `+stack` to your current url
 
-<link rel="stylesheet" href="/nut/raw+stack.fresh.css">
 
 
 
@@ -43,11 +45,13 @@ Add `+stack` to your current url
 A vertical stack of buttons
 
 <div style="width: 150px; margin: 0 auto;">
-  <a class="button stack">First</a>
-  <a class="button stack">Second</a>
-  <a class="button stack">Third</a>
+  <a class="button stack">Normal</a>
+  <a class="button stack success">Success</a>
   <a class="button stack warning">Warning</a>
+  <a class="button stack error">Error</a>
+  <a class="button stack dull">Dull</a>
 </div>
+
 
     <div style="width: 150px; margin: 0 auto;">
       <a class="button stack">Normal</a>
@@ -129,10 +133,47 @@ Same as stack, but they can be individually checked/unchecked
     </div>
 
 
+## Forms
 
-## Images
+Create nice and packed forms. [jsfiddle](http://jsfiddle.net/ddmv3dsr/4/)
 
-Just set up your super simple library with this and the grids
+<div style="max-width: 250px; margin: 0 auto">
+  <div>
+      <input class="stack" placeholder="First name" />
+      <input class="stack" placeholder="Last name" />
+      <input class="stack" placeholder="Email" />
+  </div><br>
+
+  <div>
+      <input class="stack" placeholder="Password" />
+      <input class="stack" placeholder="Repeat password" />
+      <textarea class="stack" placeholder="Biography"></textarea>
+      <button class="stack">
+          Save
+      </button>
+  </div>
+</div>
+
+
+    <div>
+        <input class="stack" placeholder="First name" />
+        <input class="stack" placeholder="Last name" />
+        <input class="stack" placeholder="Email" />
+    </div><br>
+    
+    <div>
+        <input class="stack" placeholder="Password" />
+        <input class="stack" placeholder="Repeat password" />
+        <button class="stack">
+            Save
+        </button>
+    </div>
+
+
+
+## Gallery
+
+Just set up your super simple  gallery with this and the grids
 
 <div class="row">
   <div>

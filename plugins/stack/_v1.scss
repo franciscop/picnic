@@ -3,18 +3,25 @@
 .toggle.stack input + * {
     display: block;
     border-radius: 0;
+    margin: 0 $picnic-margin;
+    width: calc(100% - 2 * #{$picnic-margin});
+}
+
+.toggle.stack input + * {
     margin: 0;
     width: 100%;
 }
 
 .stack:first-child,
 .toggle.stack:first-child input + * {
+    margin-top: $picnic-margin;
     border-top-left-radius: $picnic-radius;
     border-top-right-radius: $picnic-radius;
 }
 
 .stack:last-child,
 .toggle.stack:last-child input + * {
+    margin-bottom: $picnic-margin;
     border-bottom-left-radius: $picnic-radius;
     border-bottom-right-radius: $picnic-radius;
 }
@@ -28,6 +35,7 @@ input.stack:last-child {
     border-bottom-width: 1px;
 }
 
-input.stack:focus + input {
+input.stack:focus + input,
+input.stack:focus + textarea {
     border-top-color: #0074D9;
 }
