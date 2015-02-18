@@ -30,7 +30,6 @@ Many libraries rely upon adding classes to your already existing html elements, 
 
 This setup works neatly for newly created projects or for pages that you have to build quick from scratch.
 
-> Another note: the sass version has a parameter called `$invasive`. Set it to `false` and you'll need to add classes like `button` to your elements to have this style.
 
 
 ## Browser support IE9+
