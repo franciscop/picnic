@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/nut/raw+modal.fresh.css">
+<link href="/nut/raw+modal.fresh.css" rel="stylesheet">
 
 # Modal
 
