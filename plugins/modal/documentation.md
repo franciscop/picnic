@@ -34,9 +34,9 @@ Cancel
 
 ## Installation
 
-Include it by adding `+modal` to your current [hazelnut](http://www.picnicss.com/hazelnut) installation:
+Include it by adding `+modal` to your current installation:
 
-    http://nut.picnicss.com/picnic+modal.css
+    http://www.picnicss.com/picnic+modal.css
 
 
 

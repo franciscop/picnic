@@ -5,7 +5,6 @@
 The modal is pure CSS, which makes the html quite ugly actually. However it does work. To try it, press the button:
 
 <p>
-
 <label for="modal_1" class="button">
 Show modal
 </label>
@@ -36,7 +35,7 @@ Cancel
 
 Include it by adding `+modal` to your current [hazelnut](http://www.picnicss.com/hazelnut) installation:
 
-    http://nut.picnicss.com/picnic+modal.css
+    http://www.picnicss.com/nut/picnic+modal.css
 
 
 

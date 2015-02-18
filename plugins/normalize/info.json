@@ -2,6 +2,6 @@
   "id": "normalize",
   "name": "Normalize",
   "description": "The foundation of Picnic CSS",
-  "install": "[installed]",
+  "install": "[included]",
   "partial": true
 }

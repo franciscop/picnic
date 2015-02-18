@@ -2,7 +2,7 @@
   "id": "checkbox",
   "name": "Checkbox",
   "description": "This is a really cool checkbox plugin",
-  "install": "[installed]",
+  "install": "[included]",
   "partial": true,
   "dependencies": {
     }

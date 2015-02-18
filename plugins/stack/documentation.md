@@ -35,7 +35,9 @@ A vertical group of different elements.
 
 ## Installation
 
-Add `+stack` to your current url
+Include it by adding `+stack` to your current installation:
+
+    http://www.picnicss.com/picnic+stack.min.css
 
 
 
