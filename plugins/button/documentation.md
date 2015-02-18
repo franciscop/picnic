@@ -72,5 +72,39 @@ You only have to define a single color base for new colors. The `:hover` and `:a
     </button>
 
 
+To create a larger button you only need to make the font inside it larger. The paddings are set in *em* so the whole button stays in great shape:
+
+<style>
+    .mainButton {
+        font-size: 1.5em;
+    }
+    .shyButton {
+        font-size: .75em;
+    }
+</style>
+<button class="mainButton">
+    Large button
+</button>
+<button>
+    Normal button
+</button>
+<button class="shyButton">
+    Small button
+</button>
+
+    .mainButton {
+        font-size: 1.5em;
+    }
+    .shyButton {
+        font-size: .75em;
+    }
+    
+    <button class="mainButton">
+        Large button
+    </button>
+    <button class="shyButton">
+        Small button
+    </button>
+
 
 

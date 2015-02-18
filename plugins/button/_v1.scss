@@ -3,7 +3,7 @@
 .toggle input + * {
     display: inline-block;
     margin: $picnic-margin;
-    padding: $picnic-padding $picnic-padding * 3; 
+    padding: $picnic-padding * 1.5 $picnic-padding * 3;
     vertical-align: middle;
     background: $picnic-primary;
     color: $white;
@@ -12,6 +12,7 @@
     cursor: pointer;
     width: auto;
     transition: $picnic-transition-fast;
+    line-height: normal;
 }
 
 
