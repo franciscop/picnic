@@ -8,7 +8,7 @@ Unpack your meal and get coding. An invasive CSS library to get your style start
 
 Include the following line in your `<head>`:
 
-    <link href="http://www.picnicss.com/nut/picnic_3.min.css" rel="stylesheet" type="text/css">
+    <link href="http://www.picnicss.com/nut/picnic_3.min.css" rel="stylesheet">
 
 Alternatively:
 
