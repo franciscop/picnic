@@ -8,7 +8,7 @@ Unpack your meal and get coding. An invasive CSS library to get your style start
 
 Include the following line in your `<head>`:
 
-    <link href="http://picnicss.com/releases/v2.4.min.css" rel="stylesheet" type="text/css">
+    <link href="http://www.picnicss.com/nut/picnic_3.min.css" rel="stylesheet" type="text/css">
 
 Alternatively:
 
@@ -26,7 +26,7 @@ Created by [Francisco Presencia](https://github.com/FranciscoP). SASS from [Jord
 
 ## Wait, *invasive*?
 
-Many libraries rely upon adding classes to your already existing html elements, resulting in bloated code like `<button class = "btn btn-primary">Hey</button>`. It would be easier if the buttons knew they are, well, *buttons*. Crazy eh?
+Many libraries rely upon adding classes to your already existing html elements, resulting in bloated code like `<button class="btn btn-primary">Hey</button>`. It would be easier if the buttons knew they are, well, *buttons*. Crazy eh?
 
 This setup works neatly for newly created projects or for pages that you have to build quick from scratch.
 
