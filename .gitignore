@@ -1,1 +1,3 @@
 node_modules
+web/nut/*.scss
+web/nut/*.css
