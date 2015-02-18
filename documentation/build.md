@@ -8,32 +8,40 @@ This system is scheduled for some point in the future. It'll let you build your 
 
 Picnic CSS core:
 
-    http://nut.picnicss.com/version2.min.css
+    http://www.picnicss.com/nut/picnic_3.min.css
 
 The development code (non-minimized):
 
-    http://nut.picnicss.com/version2.css
+    http://www.picnicss.com/nut/picnic_3.css
 
 
 
 ## Plugins
 
+For a complete list of the plugins, visit http://www.picnicss.com/
+
 Include Picnic core and navigation:
 
-    http://nut.picnicss.com/version2+nav.min.css
+    http://www.picnicss.com/nut/picnic_3+nav.min.css
 
 Include Picnic core, navigation and slider:
 
-    http://nut.picnicss.com/version2+nav+slider.min.css
+    http://www.picnicss.com/nut/picnic_3+nav+slider.min.css
 
 
 
-## With your resources
+## Options
 
-Picnic core and your own resource
+Right now there are only two options to choose from. They are at the end of the url, just before `.css`.
 
-    http://nut.picnicss.com/version2+3223634.min.css
+### .min
 
-Picnic core, nav and your own resource
+Minify the resulting css:
 
-    http://nut.picnicss.com/version2+nav+3223634.min.css
+    http://www.picnicss.com/nut/picnic_3.min.css
+
+### .fresh
+
+Update the code on each load. Not recommended for production (it takes some ms to do so), but great for developing new plugins
+
+    http://www.picnicss.com/nut/picnic_3.fresh.css
