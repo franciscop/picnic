@@ -114,11 +114,20 @@ module.exports.nut = function(req, res) {
 
 
 
+// Render all of the tests
+module.exports.test = function(req, res){
+
+  res.render("test");
+  }
+
+
+
 // Showcase Picnic CSS with a demo
 module.exports.demo = function(req, res){
 
   res.render("demo");
   }
+
 
 
 
