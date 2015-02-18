@@ -76,11 +76,12 @@ module.exports.nut = function(req, res) {
   var picnic = parseUrl(req.params.full);
 
   var newsass = "@import '../../src/" + picnic.version + "';\n\n";
+
   if(picnic.plugins && picnic.plugins.length > 0)
     picnic.plugins.forEach(function(plugin, index) {
-
-      var infoFile = __dirname + "../../plugins/" + plugin + "info.json";
-      if (fs.existsSync(info)) {
+      
+      var infoFile = __dirname + "/../plugins/" + plugin + "/info.json";
+      if (fs.existsSync(infoFile)) {
         var info = JSON.parse(fs.readFileSync(infoFile, 'utf-8'));
         var dependencies = info.dependencies || [];
         if (dependencies.length > 0) {
@@ -89,6 +90,8 @@ module.exports.nut = function(req, res) {
             });
           }
         }
+      else
+        console.log("Couldn't find info.json, " + infoFile);
 
       newsass += "@import '../../plugins/" + plugin + "/v1';\n";
     });

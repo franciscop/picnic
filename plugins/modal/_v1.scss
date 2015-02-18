@@ -29,7 +29,6 @@
     background: rgba($black, 3 * $picnic-transparency);
     transition: $picnic-transition-slow;
     z-index: 99;
-    transform: none;
 
     // All of the elements that follow the overlay (the modals)
     ~ * {
