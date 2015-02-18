@@ -9,7 +9,7 @@ html
     meta(name="description" content="Unpack your mean and start coding. A lighweight CSS library with nice defaults to give you a fast start.")
     link(rel='stylesheet', href='/font/fontello.css')
     link(rel='stylesheet', href='/nut/picnic+nav.min.fresh.css')
-    link(rel="icon", href="/basket.png", type="image/png")
+    link(rel="icon", href="/img/basket.png", type="image/png")
     
     style.
       body {
@@ -24,14 +24,14 @@ html
       .slogan {
         margin-top: -10px;
       }
-      h2 {
-        margin-top: 0;
-        padding: 30px 0 0;
-      }
       .render {
-        margin: 20px 0;
+        margin: 10px 0;
         max-width: 100%;
         overflow: hidden;
+      }
+      section {
+        max-width: 620px;
+        margin: 10px auto 30px;
       }
       pre {
         text-align: left;
@@ -46,7 +46,7 @@ html
         padding: 0;
       }
       table {
-        margin: 20px auto;
+        margin: auto;
       }
       main,
       main.limit {
@@ -76,16 +76,14 @@ html
         margin: 40px auto 20px;
       }
       .plugin header {
+        position: relative;
         text-align: left;
         display: block;
       }
-      .plugin h2 {
-        display: inline-block;
-        margin-top: 0;
-        padding: 0;
-      }
       .plugin .install {
-        float: right;
+        position: absolute;
+        right: 0px;
+        top: .9em;
       }
 
       .plugin .description {
@@ -93,10 +91,6 @@ html
         display: block;
         margin-top: 10px;
         text-align: left;
-      }
-      section {
-          max-width: 600px;
-          margin: 0 auto;
       }
   body
     block nav

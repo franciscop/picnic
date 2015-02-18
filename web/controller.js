@@ -59,7 +59,10 @@ module.exports.plugin = function(req, res) {
       if (plugins[key].id == req.params.name)
         plugin = plugins[key];
     }
-    res.render("plugin", { plugin: plugin });
+    if (plugin)
+      res.render("plugin", { plugin: plugin });
+    else
+      res.status(404).render("404", { plugin: plugin });
     }
   else {
     res.render("pluginindex", { plugins: plugins });

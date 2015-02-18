@@ -19,13 +19,9 @@ body {
     outline: none;
 }
 
-h1 {
-    line-height: $picnic-text-height;
-}
-
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
-    padding: $picnic-padding * 3 0 $picnic-padding * 2;
+    padding: $picnic-padding * 2 0;
 }
 
 li {

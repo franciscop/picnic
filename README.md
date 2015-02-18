@@ -18,17 +18,11 @@ Clone it: `git clone https://github.com/picnicss/picnic.git`
 
 
 
-## Authors
-
-Created by [Francisco Presencia](https://github.com/FranciscoP). SASS from [Jordan Wallwork](https://github.com/jordanwallwork). Significant fixes from [Alex Galushka](https://github.com/galulex). Tons of help in several parts of the project from [Emilio Coppola](https://github.com/Coppolaemilio).
-
-
-
 ## Wait, *invasive*?
 
 Many libraries rely upon adding classes to your already existing html elements, resulting in bloated code like `<button class="btn btn-primary">Hey</button>`. It would be easier if the buttons knew they are, well, *buttons*. Crazy eh?
 
-This setup works neatly for newly created projects or for pages that you have to build quick from scratch.
+This setup works neatly for newly created projects or for pages that you have to build quick from scratch. It also allows for a much more intuitive extension of base elements.
 
 
 
@@ -78,17 +72,17 @@ If you don't see anything that seems *picnic.css exclusive*, that's because ther
 - **Responsive**: The nav and the grids are responsive.
 
 
-\* Except for the grids and a bit of the nav :(
+\* Except for the grids :(
 
 
 
 ## Disadvantages
 
-- `select`, `radiobutton` and `checkbox` support is not great, however it's better than most of the similar solutions listed below. This is solved by making it optional. To make them work they require the use of a wrapper with a class. These are: `select` for `<select>`, `radio` for `<input type="radio">` and `checkbox` for `<input type="checkbox">`.
+- `select`, `radiobutton` and `checkbox` support is not great, however it's better than most of the similar solutions listed below. This is solved by making them optional. To make them work they require the use of a wrapper with a class. These are: `.select` for `<select>`, `.radio` for `<input type="radio">` and `.checkbox` for `<input type="checkbox">`. Pretty simple (:
 
-- Difficult to drop in an already created project. This is what I meant by *invasive*. This is solved with the optional `$invasive` SASS variable.
+- Difficult to drop in an already created project. This is what I meant by *invasive*. This is not within the new scope of the project.
 
-- The grids introduce an unsemantic component to your HTML5 if you decide to use them. Need further investigation to solve it.
+- The grids introduce an unsemantic component to your HTML5 if you decide to use them. Not really a way to solve it, however the unsemantic bit is only a class called `.row`
 
 
 
@@ -102,11 +96,9 @@ If you don't see anything that seems *picnic.css exclusive*, that's because ther
 
 
 
-## Building
+## Authors
 
-- Install dependencies using `npm install`
-- To build once, run `gulp`
-- For development, run `gulp watch` to rebuild whenever any of the sass files are changed
+Created by [Francisco Presencia](https://github.com/FranciscoP). SASS from [Jordan Wallwork](https://github.com/jordanwallwork). Significant fixes from [Alex Galushka](https://github.com/galulex). Tons of help in several parts of the project from [Emilio Coppola](https://github.com/Coppolaemilio).
 
 
 
