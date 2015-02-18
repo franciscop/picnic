@@ -1,79 +1,111 @@
 .modal {
-    text-align: center;
-}
+  text-align: center;
 
-.modal > input {
+  // This is the elemet that allows for show/hide without requiring javascript
+  > input {
+
+    // The input is only for functionality, so hide it
     display: none;
-}
-.modal > input ~ * {
-    /* Make it not visible */
-    opacity: 0;
-    
-    /* Also hide it from iteraction */
-    max-height: 0;
-    overflow: hidden;
-    
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%) scale(0.2, 0.2);
-    border-radius: $picnic-radius;
-    box-shadow: 0 0 .3em rgba($black, 3 * $picnic-transparency);
-    background: $white;
-    transition: $picnic-transition-slow;
-    z-index: 100;
-}
-.modal > input:checked + *,
-.modal > input:checked ~ .overlay {
-    display: block;
-    opacity: 1;
-    max-height: 10000px;
-    transition: $picnic-transition-slow;
-}
-.modal > input:checked + * {
-    transform: translateX(-50%) translateY(-50%) scale(1, 1);
-}
-.modal > input ~ .overlay {
-    transform: none;
+
+    ~ * {
+
+      // By default, they are not visible
+      opacity: 0;
+      
+      // Also hide it from any iteraction
+      max-height: 0;
+      overflow: hidden;
+    }
+  }
+
+  .overlay {
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     position: fixed;
+    margin: 0;
+    border-radius: 0;
     background: rgba($black, 3 * $picnic-transparency);
     transition: $picnic-transition-slow;
     z-index: 99;
-}
-.modal header,
-.modal footer {
-    display: block;
-    padding: .5em;
-    border-bottom: 1px solid lighten($silver, $picnic-color-variation);
-}
-.modal header {
+    transform: none;
+
+    // All of the elements that follow the overlay (the modals)
+    ~ * {
+
+      // They are of type .card (see /plugins/card ) 
+      @extend %card;
+      
+      // Position it in the middle of the screen on top of everything
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%) scale(.2, .2);
+      z-index: 100;
+
+      // Hiding effect
+      transition: $picnic-transition-slow;
+      }
+    }
+
+  // When the checkbox is checked (modal should be showing)
+  > input:checked {
+
+    // All the visible elements
+    ~ * {
+      display: block;
+      opacity: 1;
+      max-height: 10000px;
+      transition: $picnic-transition-slow;
+    }
+
+    // This position is only for the modal, not for the overlay
+    // It says: grab everything that is after the overlay after the input
+    ~ .overlay ~ * {
+      max-height: 90%;
+      overflow: auto;
+      transform: translateX(-50%) translateY(-50%) scale(1, 1);
+    }
+  }
+
+
+  header,
+  footer,
+  section {
+    padding: $picnic-padding;
+  }
+
+  // The first part from the modal
+  header {
     font-weight: bold;
     position: relative;
-}
-.modal footer {
-    border-width: 1px 0 0 0;
-    padding: .2em .2em .4em;
-}
-.modal header .close {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      display: inline-block;
+    }
+  }
+
+  .close {
     position: absolute;
-    right: .8em;
-    top: .5em;
+    top: .2em;
+    right: 0;
+    margin-right: $picnic-separation;
     cursor: pointer;
-}
-.modal header .close:hover {
-    color: $picnic-error;
-}
-.modal .content {
-    display: block;
-    padding: .6em;
+
+    &:hover {
+      color: $picnic-error;
+    }
+  }
 }
 
 @media (max-width: $picnic-breakpoint) {
-    .modal > input + * {
-        min-width: 90%;
-    }
+  .modal .overlay ~ * {
+    min-width: 90%;
+  }
 }

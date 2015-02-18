@@ -2,7 +2,13 @@
 
 # Buttons
 
-They can be of different types and [different colors](http://clrs.cc/).
+They can be of different types and <a href="http://clrs.cc/" target="_blank">colors</a>.
+
+<button>Button</button>
+<button class='success'>Success</button>
+<button class='warning'>Warning</button>
+<button class='error'>Error</button>
+<button class='dull'>Dull</button>
 
 
 ## Installation

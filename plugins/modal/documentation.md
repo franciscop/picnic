@@ -1,4 +1,4 @@
-<link href="/nut/raw+modal.fresh.css" rel="stylesheet">
+<link href="/nut/raw+card+modal.fresh.css" rel="stylesheet">
 
 # Modal
 
@@ -11,24 +11,25 @@ Show modal
 </label>
 
 <div class="modal">
-<input id="modal_1" type="checkbox" />
-<article>
-<header>
-<label for="modal_1" class="close">⨯</label>
-Great offer
-</header>
-<section class="content">
-We have a special offer for you. I am sure you will love it! However this does look spammy...
-</section>
-<footer>
-<a class="button" href="#">See offer</a>
-<label for="modal_1" class="button error close">
-Cancel
-</label>
-</footer>
-</article>
-<label for="modal_1" class="overlay"></label>
+  <input id="modal_1" type="checkbox" />
+  <label for="modal_1" class="overlay"></label>
+  <article>
+    <header>
+      <h3>Great offer</h3>
+      <label for="modal_1" class="close">⨯</label>
+    </header>
+    <section class="content">
+      We have a special offer for you. I am sure you will love it! However this does look spammy...
+    </section>
+    <footer>
+      <a class="button" href="#">See offer</a>
+      <label for="modal_1" class="button error">
+        Cancel
+      </label>
+    </footer>
+  </article>
 </div>
+
 </p>
 
 
@@ -71,4 +72,84 @@ This is the markup for the example above:
 
 ## Multiple modals
 
-In theory you can display multiple modals. However this hasn't been properly tested
+<label for="modal_2" class="button">
+  Another modal
+</label>
+
+<div class="modal">
+  <input id="modal_2" type="checkbox" />
+  <label for="modal_2" class="overlay"></label>
+  <article>
+    <header>
+      <h3>Great offer 2</h3>
+      <label for="modal_2" class="close">⨯</label>
+    </header>
+    <section class="content">
+      We have a special offer for you. I am sure you will love it! However this does look spammy...
+    </section>
+    <footer>
+      <a class="button" href="#">See offer</a>
+      <label for="modal_2" class="button error">
+        Cancel
+      </label>
+    </footer>
+  </article>
+</div>
+
+<label for="modal_3" class="button">
+  Modalception
+</label>
+
+<div class="modal">
+  <input id="modal_3" type="checkbox" />
+  <label for="modal_3" class="overlay"></label>
+  <article>
+    <header>
+      <h3>Modal inside modal</h3>
+      <label for="modal_3" class="close">⨯</label>
+    </header>
+    <section class="content">
+      Shows another modal on top of this one
+      </label>
+    </section>
+    <footer>
+      <label for="modal_4" class="button">
+        Show modal
+      </label>
+      <label for="modal_3" class="button error">
+        Cancel
+      </label>
+    </footer>
+  </article>
+</div>
+
+
+<div class="modal">
+  <input id="modal_4" type="checkbox" />
+  <label for="modal_4" class="overlay"></label>
+  <article>
+    <header>
+      <h3>Modalception</h3>
+      <label for="modal_4" class="close">⨯</label>
+    </header>
+    <section class="content">
+      You've reached within. We could keep going, you know?
+    </section>
+    <footer>
+      <label for="modal_2" class="button">
+        Another modal
+      </label>
+      <label for="modal_4" class="button error">
+        Cancel
+      </label>
+    </footer>
+  </article>
+</div>
+
+
+
+## Javascript
+
+As always, there is **no javascript**. However, a little bit of javascript could enhance the experience allowing to close the modal by pressing `ESC`.
+
+

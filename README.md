@@ -96,6 +96,12 @@ If you don't see anything that seems *picnic.css exclusive*, that's because ther
 
 
 
+## Contributing
+
+You are encouraged to contribute to Picnic CSS. To write a new plugin, just copy one of the existing ones (specially recommend "button") and modify the files. The code must be linted with scss-lint, except the `PropertySortOrder` which is ignored for a better code structure.
+
+
+
 ## Authors
 
 Created by [Francisco Presencia](https://github.com/FranciscoP). SASS from [Jordan Wallwork](https://github.com/jordanwallwork). Significant fixes from [Alex Galushka](https://github.com/galulex). Tons of help in several parts of the project from [Emilio Coppola](https://github.com/Coppolaemilio).

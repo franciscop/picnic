@@ -2,7 +2,7 @@
   "id": "checkbox",
   "name": "Checkbox",
   "install": "[included]",
-  "dependencies": {
-    "radiocheckbox": "v1"
-    }
+  "dependencies": [
+    "radiocheckbox/v1"
+    ]
 }

@@ -1,29 +1,46 @@
-.card {
+// Card
+// This represents a self-contained, replicable entity
+// http://8gramgorilla.com/mastering-sass-extends-and-placeholders/
+.card,
+%card {
   box-shadow: 0 0 $picnic-separation rgba($black, 2 * $picnic-transparency);
   border-radius: $picnic-radius;
   overflow: hidden;
   margin: $picnic-margin;
-}
+  text-align: left;
+  background: $white;
 
-/* Make sure that nothing overflows */
-.card * {
-  max-width: 100%;
-}
+  // Make sure that nothing overflows
+  > * {
+    max-width: 100%;
+    display: block;
+  }
 
-.card header,
-.card footer {
-  padding: $picnic-separation;
-}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    padding: 0;
+  }
 
-.card .error {
-  float: right;
-}
+  header,
+  footer,
+  section,
+  .spaced {
+    margin: $picnic-separation;
+  }
 
-.card h1,
-.card h2 {
-  padding: $picnic-padding;
-}
+  p {
+    margin: $picnic-margin 0;
+  }
 
-.card p {
-  margin: $picnic-margin;
+  .button {
+    margin: 0;
+  }
+
+  .error {
+    float: right;
+  }
 }

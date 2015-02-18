@@ -30,6 +30,7 @@ module.exports.plugin = function(req, res) {
       plugin.name = info.name;
       plugin.description = info.description;
       plugin.install = info.install;
+      plugin.dependencies = info.dependencies || false;
       plugin.partial = info.partial || false;
       plugin.doc = info.documentation ? info.documentation : "documentation.md";
       }
@@ -76,7 +77,19 @@ module.exports.nut = function(req, res) {
 
   var newsass = "@import '../../src/" + picnic.version + "';\n\n";
   if(picnic.plugins && picnic.plugins.length > 0)
-    picnic.plugins.forEach(function(plugin) {
+    picnic.plugins.forEach(function(plugin, index) {
+
+      var infoFile = __dirname + "../../plugins/" + plugin + "info.json";
+      if (fs.existsSync(info)) {
+        var info = JSON.parse(fs.readFileSync(infoFile, 'utf-8'));
+        var dependencies = info.dependencies || [];
+        if (dependencies.length > 0) {
+          dependencies.forEach(function(dep){
+            newsass += "@import '../../plugins/" + dep + "';\n";
+            });
+          }
+        }
+
       newsass += "@import '../../plugins/" + plugin + "/v1';\n";
     });
 
