@@ -1,40 +1,60 @@
-/* Browser treats unknow type as "text", so we'll do the same */
-input, textarea {
-    line-height: $picnic-text-height;
-    margin: $picnic-margin;
-    padding: $picnic-padding 2 * $picnic-padding;
-    border: $picnic-border;
-    border-radius: $picnic-radius;
-    transition: $picnic-transition-slow;
-    width: $picnic-input-width;
+// Browser treats unknow type as "text", so we'll do the same
+input,
+textarea {
+  line-height: $picnic-text-height;
+  margin: $picnic-margin;
+  padding: $picnic-padding 2 * $picnic-padding;
+  border: $picnic-border;
+  border-radius: $picnic-radius;
+  transition: $picnic-transition-slow;
+  width: $picnic-input-width;
 }
 
-input[type=file],
-input[type=color] {
-    padding: $picnic-padding;
-    cursor: pointer;
+[type=file],
+[type=color] {
+  padding: $picnic-padding;
+  cursor: pointer;
 }
 
-input:focus, textarea:focus,
-input[type=file]:hover,
-input[type=color]:hover,
+input:focus,
+textarea:focus,
+[type=file]:hover,
+[type=color]:hover,
 input:invalid:focus,
 .select select:focus,
 .select select:hover {
-    border-color: $picnic-primary;
-    transition: $picnic-transition-slow;
+  border-color: $picnic-primary;
+  transition: $picnic-transition-slow;
 }
 
-/* Validation */
-input:focus:invalid, textarea:focus:invalid {
-    box-shadow: none;
-    border-color: $picnic-error;
+// Validation
+input:focus:invalid,
+textarea:focus:invalid {
+  box-shadow: none;
+  border-color: $picnic-error;
 }
 
-/* Reset the style for those that we actually know */
-input[type=radio]:focus,
-input[type=checkbox]:focus,
-input[type=range]:focus {
-    box-shadow: none;
-    border-color: initial;
+// Reset the style for those that we actually know 
+[type=radio]:focus,
+[type=checkbox]:focus,
+[type=range]:focus {
+  box-shadow: none;
+  border-color: initial;
+}
+
+.addon {
+  vertical-align: middle;
+  
+  + * {
+    position: absolute;
+    width: 240px;
+    margin: .66em .4em 0 -260px;
+    vertical-align: middle;
+    text-align: right;
+    pointer-events: none;
+
+    &:before {
+      margin: 0;
+    }
+  }
 }
