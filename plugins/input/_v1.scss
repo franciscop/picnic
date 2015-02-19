@@ -48,7 +48,8 @@ textarea:focus:invalid {
   + * {
     position: absolute;
     width: 240px;
-    margin: .66em .4em 0 -260px;
+    margin: $picnic-margin 0 0 calc(-240px - #{$picnic-margin});
+    padding: $picnic-padding $picnic-padding * 2 $picnic-padding $picnic-padding;
     vertical-align: middle;
     text-align: right;
     pointer-events: none;
