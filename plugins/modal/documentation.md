@@ -16,7 +16,7 @@ Show modal
   <article>
     <header>
       <h3>Great offer</h3>
-      <label for="modal_1" class="close">⨯</label>
+      <label for="modal_1" class="close">&times;</label>
     </header>
     <section class="content">
       We have a special offer for you. I am sure you will love it! However this does look spammy...
@@ -53,7 +53,7 @@ This is the markup for the example above:
         <input id="modal_1" type="checkbox" />
         <article>
             <header>
-                <label for="modal_1" class="close">⨯</label>
+                <label for="modal_1" class="close">&times;</label>
                 Great offer
             </header>
             <section class="content">
@@ -82,7 +82,7 @@ This is the markup for the example above:
   <article>
     <header>
       <h3>Great offer 2</h3>
-      <label for="modal_2" class="close">⨯</label>
+      <label for="modal_2" class="close">&times;</label>
     </header>
     <section class="content">
       We have a special offer for you. I am sure you will love it! However this does look spammy...
@@ -106,7 +106,7 @@ This is the markup for the example above:
   <article>
     <header>
       <h3>Modal inside modal</h3>
-      <label for="modal_3" class="close">⨯</label>
+      <label for="modal_3" class="close">&times;</label>
     </header>
     <section class="content">
       Shows another modal on top of this one
@@ -130,7 +130,7 @@ This is the markup for the example above:
   <article>
     <header>
       <h3>Modalception</h3>
-      <label for="modal_4" class="close">⨯</label>
+      <label for="modal_4" class="close">&times;</label>
     </header>
     <section class="content">
       You've reached within. We could keep going, you know?
