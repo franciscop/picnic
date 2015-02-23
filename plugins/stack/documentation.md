@@ -37,7 +37,7 @@ A vertical group of different elements.
 
 Include it by adding `+stack` to your current installation:
 
-    http://www.picnicss.com/picnic+stack.min.css
+    http://www.picnicss.com/nut/picnic_3+stack.min.css
 
 
 
