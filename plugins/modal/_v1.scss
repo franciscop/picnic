@@ -42,6 +42,7 @@
       left: 50%;
       transform: translateX(-50%) translateY(-50%) scale(.2, .2);
       z-index: 100;
+      padding: $picnic-padding;
 
       // Hiding effect
       transition: $picnic-transition-slow;
