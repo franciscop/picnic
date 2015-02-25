@@ -1,32 +1,36 @@
+table {
+  text-align: left;
+}
+
 td,
 th {
-    padding: $picnic-padding 2.4em $picnic-padding $picnic-padding * 2;
+  padding: $picnic-padding 2.4em $picnic-padding $picnic-padding * 2;
 }
 
 th {
-    text-align: left;
-    font-weight: 900;
-    color: $white;
-    background-color: $picnic-primary;
+  text-align: left;
+  font-weight: 900;
+  color: $white;
+  background-color: $picnic-primary;
 }
 
 .success th {
-    background-color: $picnic-success;
+  background-color: $picnic-success;
 }
 
 .warning th {
-    background-color: $picnic-warning;
+  background-color: $picnic-warning;
 }
 
 .error th {
-    background-color: $picnic-error;
+  background-color: $picnic-error;
 }
 
 .dull th {
-    background-color: $picnic-dull;
+  background-color: $picnic-dull;
 }
 
-/* Zebra stripes */
+// Zebra stripes
 tr:nth-child(even) {
-    background: rgba(0,0,0,.05);
+  background: rgba(0, 0, 0, .05);
 }
