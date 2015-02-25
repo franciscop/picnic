@@ -1,42 +1,43 @@
-/* Stack */
+// Stacking elements one of top of another
 .stack,
 .toggle.stack input + * {
-    display: block;
-    text-align: left;
-    border-radius: 0;
-    margin: 0 $picnic-margin;
-    width: calc(100% - 2 * #{$picnic-margin});
-}
+  display: block;
+  text-align: left;
+  border-radius: 0;
+  margin: 0 $picnic-margin;
+  width: calc(100% - 2 * #{$picnic-margin});
+  }
 
 .toggle.stack input + * {
-    margin: 0;
-    width: 100%;
-}
+  margin: 0;
+  width: 100%;
+  }
 
 .stack:first-child,
 .toggle.stack:first-child input + * {
-    margin-top: $picnic-margin;
-    border-top-left-radius: $picnic-radius;
-    border-top-right-radius: $picnic-radius;
-}
+  margin-top: $picnic-margin;
+  border-top-left-radius: $picnic-radius;
+  border-top-right-radius: $picnic-radius;
+  }
 
 .stack:last-child,
 .toggle.stack:last-child input + * {
-    margin-bottom: $picnic-margin;
-    border-bottom-left-radius: $picnic-radius;
-    border-bottom-right-radius: $picnic-radius;
-}
+  margin-bottom: $picnic-margin;
+  border-bottom-left-radius: $picnic-radius;
+  border-bottom-right-radius: $picnic-radius;
+  }
 
 input.stack {
-    transition: border-bottom 0s ease 0s;
-    border-bottom-width: 0;
-}
+  transition: border-bottom 0s ease 0s;
+  border-bottom-width: 0;
 
-input.stack:last-child {
+  &:last-child {
     border-bottom-width: 1px;
-}
+    }
 
-input.stack:focus + input,
-input.stack:focus + textarea {
-    border-top-color: #0074D9;
-}
+  &:focus + input,
+  &:focus + textarea {
+    border-top-color: #0074d9;
+    }
+  }
+
