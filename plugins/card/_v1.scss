@@ -30,17 +30,21 @@
   section,
   .spaced {
     margin: 0;
-  }
+    }
 
   p {
     margin: $picnic-margin 0;
-  }
+    }
 
-  footer .button {
-    margin: 0;
-  }
+  footer {
+    overflow: auto;
 
-  .error {
-    float: right;
+    .button {
+      margin: 0;
+      }
+
+    .error {
+      float: right;
+      }
+    }
   }
-}
