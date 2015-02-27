@@ -27,12 +27,6 @@ input:invalid:focus,
   transition: $picnic-transition-slow;
 }
 
-// Validation
-input:focus:invalid,
-textarea:focus:invalid {
-  box-shadow: none;
-  border-color: $picnic-error;
-}
 
 // Reset the style for those that we actually know 
 [type=radio]:focus,
