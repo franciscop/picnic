@@ -1,4 +1,3 @@
-/* Operative variables */
 /**
  * COLOR VARIABLES
  * - Cool
@@ -7,16 +6,6 @@
  * 
  * clrs, from https://github.com/mrmrs/colors
  */
-/* Style by default the <button>, <input type="submit">, etc? */
-/* Not fully implemented */
-/* Make buttons and other things slightly 3d */
-/* Media query breakpoint */
-/* Default inline element styles */
-/* Colors */
-/* Default space between objects gutter */
-/* Border */
-/* Define the transitions */
-/* Normalize.css (external library) */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -335,8 +324,6 @@ table {
 td, th {
   padding: 0; }
 
-/* Generic styles for things like <body>, <a> and others
-   It also overwrites normalize.css a bit */
 * {
   box-sizing: border-box; }
 
@@ -354,15 +341,16 @@ body {
 :focus {
   outline: none; }
 
-h1 {
-  line-height: 1.5em; }
-
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  padding: 0.9em 0 0.6em; }
+  padding: 0.6em 0; }
 
 li {
   margin: 0 0 0.3em; }
+
+a {
+  color: #0074D9;
+  text-decoration: none; }
 
 /* The <pre> doesn't have a nice style from Normalize.css */
 pre {
@@ -380,43 +368,34 @@ blockquote {
   margin: 0 0 0 0.1em;
   box-shadow: inset 5px 0px rgba(17, 17, 17, 0.3); }
 
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  margin: 0 0.6em 0 0; }
+
 /* Nice fontello trick from Ronen Ackerman ( http://stackoverflow.com/a/17561467 ) */
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
   margin: 0; }
 
-/* Simple elements */
-a {
-  color: #0074D9;
-  text-decoration: none; }
-
 /* BUTTONS */
 .button, button, input[type='submit'], input[type='button'], input[type='image'], input[type='reset'], .toggle input + * {
   display: inline-block;
-  height: 2em;
-  line-height: 2em;
   margin: 0.3em;
-  padding: 0 0.9em;
+  padding: 0.45em 0.9em;
   vertical-align: middle;
   background: #0074D9;
   color: #fff;
   border: 0;
   border-radius: 0.2em;
   cursor: pointer;
+  width: auto;
   transition: all 0.1s ease;
-  box-shadow: inset 0 0 0 100em transparent, inset 0 -0.2em rgba(17, 17, 17, 0.3); }
+  line-height: normal; }
 
 /* Interactivity */
-.button:hover, button:hover, input[type='submit']:hover, input[type='button']:hover, input[type='image']:hover, input[type='reset']:hover, .button:focus, button:focus, input[type='submit']:focus, input[type='button']:focus, input[type='image']:focus, input[type='reset']:focus, .toggle input:hover + *, .toggle input:focus + * {
-  box-shadow: inset 0 0 0 100em rgba(17, 17, 17, 0.1);
-  height: 1.9em;
-  margin-top: 0.4em;
-  box-shadow: inset 0 0 0 100em rgba(17, 17, 17, 0.1), inset 0 -0.1em rgba(17, 17, 17, 0.3); }
+.button:hover, button:hover, input[type='submit']:hover, input[type='button']:hover, input[type='image']:hover, input[type='reset']:hover, .button:active, button:active, input[type='submit']:active, input[type='button']:active, input[type='image']:active, input[type='reset']:active, .toggle input:hover + *, .toggle input:active + * {
+  box-shadow: inset 0 0 0 100em rgba(255, 255, 255, 0.1); }
 
 .button:active, button:active, input[type='submit']:active, input[type='button']:active, input[type='image']:active, input[type='reset']:active, .toggle input:active + *, .toggle input:checked + * {
-  box-shadow: inset 0 0 0 100em rgba(17, 17, 17, 0.3);
-  height: 1.8em;
-  margin-top: 0.5em;
-  box-shadow: inset 0 0 0 100em rgba(17, 17, 17, 0.3), inset 0 0.1em 0.1em rgba(17, 17, 17, 0.3); }
+  box-shadow: inset 0 0 0 100em rgba(17, 17, 17, 0.3); }
 
 /* Toggle button */
 .toggle input {
@@ -426,7 +405,7 @@ a {
 
 /* Colors */
 .button.success, button.success, input.success[type='submit'], input.success[type='button'], input.success[type='image'], input.success[type='reset'], .toggle.success input + * {
-  background: #2ecc40; }
+  background: #2ECC40; }
 
 .button.warning, button.warning, input.warning[type='submit'], input.warning[type='button'], input.warning[type='image'], input.warning[type='reset'], .toggle.warning input + * {
   background: #FF851B; }
@@ -435,42 +414,48 @@ a {
   background: #FF4136; }
 
 .button.dull, button.dull, input.dull[type='submit'], input.dull[type='button'], input.dull[type='image'], input.dull[type='reset'], .toggle.dull input + * {
-  background: #AAA; }
+  background: #aaa; }
 
 /* This allows the invasiveness */
-/* Forms */
-/* Browser treats unknow type as "text", so we'll do the same */
 input, textarea {
   line-height: 1.5em;
   margin: 0.3em;
-  padding: 0.3em 0.65em;
-  border: 1px solid #AAA;
+  padding: 0.3em 0.6em;
+  border: 1px solid #aaa;
   border-radius: 0.2em;
-  transition: all 0.3s ease; }
+  transition: all 0.3s ease;
+  width: 240px; }
 
-input[type=file], input[type=color] {
+[type=file], [type=color] {
   padding: 0.3em;
   cursor: pointer; }
 
-input:focus, textarea:focus, input[type=file]:hover, input[type=color]:hover, input:invalid:focus, .select select:focus, .select select:hover {
+input:focus, textarea:focus, [type=file]:hover, [type=color]:hover, input:invalid:focus, .select select:focus, .select select:hover {
   border-color: #0074D9;
-  transition: all 0.3s ease;
-  box-shadow: 0.1em 0.1em 0 rgba(17, 17, 17, 0.3); }
+  transition: all 0.3s ease; }
 
-/* Validation */
-input:focus:invalid, textarea:focus:invalid {
-  box-shadow: none;
-  border-color: #FF4136; }
-
-/* Reset the style for those that we actually know */
-input[type=radio]:focus, input[type=checkbox]:focus, input[type=range]:focus {
+[type=radio]:focus, [type=checkbox]:focus, [type=range]:focus {
   box-shadow: none;
   border-color: initial; }
+
+.addon {
+  vertical-align: middle; }
+  .addon + * {
+    position: absolute;
+    width: 240px;
+    margin: 0.3em 0 0 calc(-240px - 0.3em);
+    padding: 0.3em 0.6em 0.3em 0.3em;
+    vertical-align: middle;
+    text-align: right;
+    pointer-events: none; }
+    .addon + *:before {
+      margin: 0; }
 
 .select {
   position: relative;
   display: inline-block;
-  border: 1px solid #AAA;
+  margin: 0.3em;
+  border: 1px solid #aaa;
   border-radius: 0.2em; }
 
 .select:after {
@@ -490,15 +475,19 @@ input[type=radio]:focus, input[type=checkbox]:focus, input[type=range]:focus {
   border-radius: 0.2em; }
 
 .select select {
-  padding: 0.23em 0 0.23em 0.23em;
+  font-size: inherit;
   background: none;
+  /* vendor prefixes required, see: */
+  /* https://github.com/postcss/autoprefixer#why-doesnt-autoprefixer-support-appearance */
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
   border: none;
   min-width: 14em;
   border-radius: 0.2em;
-  cursor: pointer; }
+  cursor: pointer;
+  width: calc(240px - 2px);
+  padding: calc(0.3em - 2px) calc(0.6em - 2px); }
 
 .select select:-moz-focusring {
   color: transparent;
@@ -529,7 +518,7 @@ input[type=radio]:focus, input[type=checkbox]:focus, input[type=range]:focus {
   margin: 0 0.48em 0 0.375em;
   color: transparent;
   background: #fff;
-  border: 1px solid #AAA; }
+  border: 1px solid #aaa; }
 
 .checkbox input:focus + *:before, .checkbox input:hover + *:before, .radio input:focus + *:before, .radio input:hover + *:before {
   border-color: #7FDBFF; }
@@ -551,7 +540,9 @@ input[type=radio]:focus, input[type=checkbox]:focus, input[type=range]:focus {
 .radio input:checked + *:before {
   box-shadow: inset 0 0 0 0.2em #fff, inset 0 0 0 100em #2b2b2b; }
 
-/* Components */
+table {
+  text-align: left; }
+
 td, th {
   padding: 0.3em 2.4em 0.3em 0.6em; }
 
@@ -562,7 +553,7 @@ th {
   background-color: #0074D9; }
 
 .success th {
-  background-color: #2ecc40; }
+  background-color: #2ECC40; }
 
 .warning th {
   background-color: #FF851B; }
@@ -571,53 +562,41 @@ th {
   background-color: #FF4136; }
 
 .dull th {
-  background-color: #AAA; }
+  background-color: #aaa; }
 
-/* Zebra stripes */
 tr:nth-child(even) {
   background: rgba(0, 0, 0, 0.05); }
 
 /* From ungrid ( http://chrisnager.github.io/ungrid/ )  */
 @media (min-width: 50em) {
   .row {
-    max-width: 100%;
-    width: 100%;
+    /* No margin-right: http://www.smashingmagazine.com/2009/07/27/the-definitive-guide-to-using-negative-margins/ */
+    width: calc(100% + 2 * 0.6em);
     display: table;
     table-layout: fixed;
-    border-spacing: 10px 0px;
-    margin-left: -10px;
-    /* No margin-right: http://www.smashingmagazine.com/2009/07/27/the-definitive-guide-to-using-negative-margins/ */
-    width: calc(100% + 2 * 10px); }
+    border-spacing: 0.6em 0px;
+    margin-left: -0.6em;
+    margin-bottom: 0.6em; }
   .row > * {
     display: table-cell;
-    vertical-align: top; } }
-
-.none {
-  display: none; }
-
-.half {
-  width: 50%; }
-
-.third {
-  width: 33.3333%; }
-
-.two-third {
-  width: 66.6666%; }
-
-.fourth {
-  width: 25%; }
-
-.three-fourth {
-  width: 75%; }
-
-.fifth {
-  width: 20%; }
-
-.two-fifth {
-  width: 40%; }
-
-.three-fifth {
-  width: 60%; }
-
-.four-fifth {
-  width: 80%; }
+    vertical-align: top; }
+  .none {
+    display: none; }
+  .half {
+    width: 50%; }
+  .third {
+    width: 33.3333%; }
+  .two-third {
+    width: 66.6666%; }
+  .fourth {
+    width: 25%; }
+  .three-fourth {
+    width: 75%; }
+  .fifth {
+    width: 20%; }
+  .two-fifth {
+    width: 40%; }
+  .three-fifth {
+    width: 60%; }
+  .four-fifth {
+    width: 80%; } }
