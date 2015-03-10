@@ -20,7 +20,6 @@ input:focus,
 textarea:focus,
 [type=file]:hover,
 [type=color]:hover,
-input:invalid:focus,
 .select select:focus,
 .select select:hover {
   border-color: $picnic-primary;
