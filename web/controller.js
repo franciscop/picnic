@@ -79,6 +79,13 @@ module.exports.nut = function(req, res) {
 
   if(picnic.plugins && picnic.plugins.length > 0)
     picnic.plugins.forEach(function(plugin, index) {
+
+      var version = 1;
+      if (plugin.match('_')) {
+        pluginparts = plugin.split('_');
+        plugin = pluginparts.unshift();
+        version = pluginparts.join('_');
+        }
       
       var infoFile = __dirname + "/../plugins/" + plugin + "/info.json";
       if (fs.existsSync(infoFile)) {
@@ -93,7 +100,8 @@ module.exports.nut = function(req, res) {
       else
         console.log("Couldn't find info.json, " + infoFile);
 
-      newsass += "@import '../../plugins/" + plugin + "/v1';\n";
+
+      newsass += "@import '../../plugins/" + plugin + "/v" + version + "';\n";
     });
 
   // Write it to a file

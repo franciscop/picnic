@@ -1,6 +1,5 @@
 // BUTTONS
-.button,
-.toggle input + * {
+.button {
   display: inline-block;
   margin: $picnic-margin;
   padding: $picnic-padding * 1.5 $picnic-padding * 3;
@@ -19,11 +18,9 @@
 
 // Interactivity
 .button:hover,
-// Usability
-.button:active,
 .toggle input:hover + *,
 .toggle input:active + * {
-  box-shadow: inset 0 0 0 100em rgba($white, $picnic-transparency);
+  box-shadow: inset 0 0 0 100em rgba($white, 2 * $picnic-transparency);
   }
 
 
@@ -31,7 +28,7 @@
 .button:active,
 .toggle input:active + *,
 .toggle input:checked + * {
-  box-shadow: inset 0 0 0 100em rgba($black, 3 * $picnic-transparency);
+  box-shadow: inset 0 0 0 100em rgba($black, 2 * $picnic-transparency);
 
   @if $picnic-deep == true {
     height: 1.8em;
@@ -77,9 +74,34 @@
 
 // This allows the invasiveness
 button,
-input[type='submit'],
-input[type='button'],
-input[type='image'],
-input[type='reset'] {
+.button,
+.toggle input + *,
+[type='submit'],
+[type='button'],
+[type='image'],
+[type='reset'] {
   @extend .button;
+
+  &.pseudo:hover {
+    box-shadow: inset 0 0 0 100em rgba($black, $picnic-transparency);
+    }
+
+  &.pseudo:active {
+    box-shadow: inset 0 0 0 100em rgba($black, 2 * $picnic-transparency);
+    }
   }
+
+.pseudo,
+.pseudo input + * {
+  background: transparent;
+  color: $black;
+  }
+
+.pseudo input:hover + * {
+  box-shadow: inset 0 0 0 100em rgba($black, $picnic-transparency);
+  }
+
+.pseudo input:checked + * {
+  box-shadow: inset 0 0 0 100em rgba($black, 2 * $picnic-transparency);
+  }
+

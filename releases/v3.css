@@ -330,12 +330,14 @@ td, th {
 html, body {
   height: 100%; }
 
+/* Delete the outline when links are active */
 body {
   color: #111;
   font-size: 1.1em;
   line-height: 1.5em;
   background: #fff; }
 
+/* Hide the default focus effect */
 :focus {
   outline: none; }
 
@@ -350,23 +352,21 @@ a {
   color: #0074D9;
   text-decoration: none; }
 
+/* The <pre> doesn't have a nice style from Normalize.css */
 pre {
   text-align: left;
   padding: 0.3em;
-  background: #eee; }
+  background: #EEE; }
 
 code {
   padding: 3px 5px;
   font-size: 0.8em;
-  background: #eee; }
+  background: #EEE; }
 
 blockquote {
   padding: 0 0 0 1em;
   margin: 0 0 0 0.1em;
   box-shadow: inset 5px 0px rgba(17, 17, 17, 0.3); }
-
-label {
-  cursor: pointer; }
 
 [class^="icon-"]:before, [class*=" icon-"]:before {
   margin: 0 0.6em 0 0; }
@@ -375,6 +375,7 @@ label {
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
   margin: 0; }
 
+/* BUTTONS */
 .button, button, input[type='submit'], input[type='button'], input[type='image'], input[type='reset'], .toggle input + * {
   display: inline-block;
   margin: 0.3em;
@@ -389,17 +390,20 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
   transition: all 0.1s ease;
   line-height: normal; }
 
+/* Interactivity */
 .button:hover, button:hover, input[type='submit']:hover, input[type='button']:hover, input[type='image']:hover, input[type='reset']:hover, .button:active, button:active, input[type='submit']:active, input[type='button']:active, input[type='image']:active, input[type='reset']:active, .toggle input:hover + *, .toggle input:active + * {
   box-shadow: inset 0 0 0 100em rgba(255, 255, 255, 0.1); }
 
 .button:active, button:active, input[type='submit']:active, input[type='button']:active, input[type='image']:active, input[type='reset']:active, .toggle input:active + *, .toggle input:checked + * {
   box-shadow: inset 0 0 0 100em rgba(17, 17, 17, 0.3); }
 
+/* Toggle button */
 .toggle input {
   opacity: 0;
   z-index: -10;
   position: absolute; }
 
+/* Colors */
 .button.success, button.success, input.success[type='submit'], input.success[type='button'], input.success[type='image'], input.success[type='reset'], .toggle.success input + * {
   background: #2ECC40; }
 
@@ -412,6 +416,7 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .button.dull, button.dull, input.dull[type='submit'], input.dull[type='button'], input.dull[type='image'], input.dull[type='reset'], .toggle.dull input + * {
   background: #aaa; }
 
+/* This allows the invasiveness */
 input, textarea {
   line-height: 1.5em;
   margin: 0.3em;
@@ -425,7 +430,7 @@ input, textarea {
   padding: 0.3em;
   cursor: pointer; }
 
-input:focus, textarea:focus, [type=file]:hover, [type=color]:hover, .select select:focus, .select select:hover {
+input:focus, textarea:focus, [type=file]:hover, [type=color]:hover, input:invalid:focus, .select select:focus, .select select:hover {
   border-color: #0074D9;
   transition: all 0.3s ease; }
 

@@ -1,5 +1,3 @@
-<link rel='stylesheet' href='/plugins/button/style.css'>
-
 # Buttons
 
 They can be of different types and <a href="http://clrs.cc/" target="_blank">colors</a>.
@@ -19,7 +17,7 @@ It is already included in every build from Picnic CSS.
 
 ## Colors
 
-The default color is dark blue. In total there are 5 colors.
+The default color is dark blue. There are 5 colors:
 
 <p>
 <button>Normal</button>
@@ -60,11 +58,38 @@ There are different button types for different situations. These are.
     </label>
 
 
+## Pseudo buttons
+
+Note: added in Picnic 3.1
+
+Allows for seemingly links to behave as buttons:
+
+<div>
+<button class="pseudo">Button</button>
+<a class="pseudo button">Link</a>
+<label class="toggle pseudo">
+<input type="checkbox">
+<span>Toggle</span>
+</label>
+</div>
+
+    <button class="pseudo">Button</button>
+    <a class="pseudo button">Link</a>
+    <label class="toggle pseudo">
+        <input type="checkbox">
+        <span>Toggle</span>
+    </label>
+
 
 ## Hack it
 
 You only have to define a single color base for new colors. The `:hover` and `:active` status are handled as overlays for consistency and simplicity
 
+<style>
+    .myCoolButton {
+        background: #85144b;
+        }
+</style>
 <button class="myCoolButton">
     My Cool Button
 </button>
@@ -113,4 +138,24 @@ To create a larger button you only need to make the font inside it larger. The p
     </button>
 
 
+To change the color of the pseudo-color on hover:
 
+<style>
+    .pseudoCool:hover,
+    .pseudoCool:active {
+        background: #cff;
+    }
+</style>
+<button class="pseudo pseudoCool">
+    Pseudo personal
+</button>
+
+
+    .pseudoCool:hover,
+    .pseudoCool:active {
+        background: #cff;
+    }
+
+    <button class="pseudo pseudoCool">
+        Pseudo personal
+    </button>
