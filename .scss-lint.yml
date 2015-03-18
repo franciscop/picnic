@@ -1,3 +1,5 @@
 linters:
   PropertySortOrder:
     enabled: false
+  PlaceholderInExtend:
+    enabled: false

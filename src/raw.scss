@@ -1,17 +1,12 @@
-/**
- * Raw File
- * This file only imports variables. It doesn't import anything that does real work
- * Allows to dynamically load plugins of Picnic CSS
- */
+// Raw File
+// This file only imports variables. It doesn't import anything that does real work
+// Allows to dynamically load plugins of Picnic CSS
+// http://www.picnicss.com/nut/raw+modal.min.css
 
-/**
- * Colors
- * The colors as defined in clrs.com
- */
+// Colors
+// The colors as defined in clrs.com
 @import '../plugins/colors/v2_1';
 
-/**
- * Variables
- * The configuration of the current build of Picnic
- */
-@import 'variables';
+// Variables
+// The configuration of the current build of Picnic
+@import '../themes/default/v1';

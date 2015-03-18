@@ -2,14 +2,14 @@
 
 // Operative variables
 @import '../plugins/colors/v2_1';
-@import 'variables';
+@import '../themes/default/v1';
 
 // Normalize.css (external library)
 @import '../plugins/normalize/v3';
 
 // Generic styles for things like <body>, <a> and others
 // It also overwrites normalize.css a bit */
-@import 'generic';
+@import '../plugins/generic/v1';
 @import '../plugins/fontello/v1';
 
 // Simple elements

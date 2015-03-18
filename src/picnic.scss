@@ -1,25 +1,25 @@
-/* Operative variables */
+// Operative variables
 @import '../plugins/colors/v2_1';
-@import 'variables';
+@import '../themes/default/v1';
 
-/* Normalize.css (external library) */
+// Normalize.css (external library)
 @import '../plugins/normalize/v3';
 
-/* Generic styles for things like <body>, <a> and others
-   It also overwrites normalize.css a bit */
-@import 'generic';
+// Generic styles for things like <body>, <a> and others
+// It also overwrites normalize.css a bit
+@import '../plugins/generic/v1';
 @import '../plugins/fontello/v1';
 
-/* Simple elements */
+// Simple elements
 @import '../plugins/button/v2';
 
-/* Forms */
+// Forms
 @import '../plugins/input/v1';
 @import '../plugins/select/v1';
 @import '../plugins/radiocheckbox/v1';
 @import '../plugins/checkbox/v1';
 @import '../plugins/radio/v1';
 
-/* Components */
+// Components
 @import '../plugins/table/v1';
 @import '../plugins/grids/v1';

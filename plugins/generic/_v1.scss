@@ -7,7 +7,6 @@ body {
   height: 100%;
 }
 
-// Delete the outline when links are active
 body {
   color: $black;
   font-size: 1.1em;
@@ -56,7 +55,7 @@ code {
 blockquote {
   padding: 0 0 0 1em;
   margin: 0 0 0 .1em;
-  box-shadow: inset 5px 0px rgba($black, .3);
+  box-shadow: inset 5px 0 rgba($black, .3);
   }
 
 label {
