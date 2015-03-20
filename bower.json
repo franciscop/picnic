@@ -6,12 +6,14 @@
     "Francisco Presencia <developerfrancisco@hotmail.com>"
   ],
   "description": "Semantic HTML5 & nice CSS3",
-  "main": "releases/latest.min.css",
+  "main": "releases/picnic.min.css",
   "keywords": [
     "css",
+    "css3",
     "semantic",
     "html5",
-    "framework"
+    "framework",
+    "library"
   ],
   "license": "MIT",
   "ignore": [

@@ -4,7 +4,16 @@ Full number version mean significant features added / removed, with loss of back
 
 
 
-## Version 3 [on development]
+
+## Version 3.2 [on development]
+
+
+## Version 3.1
+
+Added the class `.pseudo` to the plugin `button`. Now you can use it in stock picnic.
+
+
+## Version 3
 
 The main difference here is that we separate Picnic CSS core from plugins. In this way we can make sure that we have a solid core and then some more experimental plugins. This is the new distribution
 
@@ -22,7 +31,7 @@ The main difference here is that we separate Picnic CSS core from plugins. In th
 - nav
 - footer
 - modal
-
+- ...
 
 
 ## Version 2.2

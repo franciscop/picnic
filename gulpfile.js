@@ -11,17 +11,17 @@ gulp.task('default', ['build'], function() {});
 // MAIN BUILD
 // Create the latest versions
 gulp.task('build', function() {
-	return gulp.src('./src/picnic_3.scss')
+	return gulp.src('./src/picnic_3_1.scss')
 		.pipe(sass())
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions'],
 			cascade: false
 		}))
-		.pipe(rename('latest.css'))
+		.pipe(rename('picnic.css'))
 		.pipe(gulp.dest('./releases'))
 		.pipe(gulp.dest('./web/releases'))
 		.pipe(minify())
-		.pipe(rename('latest.min.css'))
+		.pipe(rename('picnic.min.css'))
 		.pipe(gulp.dest('./releases'))
 		.pipe(gulp.dest('./web/releases'));
 	});

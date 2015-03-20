@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/picnicss/picnic/issues"
   },
-  "homepage": "https://picnicss.com/",
+  "homepage": "https://www.picnicss.com/",
   "devDependencies": {
     "gulp": "^3.8.8",
     "gulp-autoprefixer": "^1.0.1",

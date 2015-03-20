@@ -1,3 +1,4 @@
+/*! Picnic 3.1: //www.picnicss.com/nut/picnic_3_1.min.css */
 /**
  * COLOR VARIABLES
  * - Cool
@@ -374,7 +375,7 @@ label {
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
   margin: 0; }
 
-.button, button, input[type='submit'], input[type='button'], input[type='image'], input[type='reset'], .toggle input + * {
+.button, button, .toggle input + *, [type='submit'], [type='button'], [type='image'], [type='reset'] {
   display: inline-block;
   margin: 0.3em;
   padding: 0.45em 0.9em;
@@ -388,28 +389,43 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
   transition: all 0.1s ease;
   line-height: normal; }
 
-.button:hover, button:hover, input[type='submit']:hover, input[type='button']:hover, input[type='image']:hover, input[type='reset']:hover, .button:active, button:active, input[type='submit']:active, input[type='button']:active, input[type='image']:active, input[type='reset']:active, .toggle input:hover + *, .toggle input:active + * {
-  box-shadow: inset 0 0 0 100em rgba(255, 255, 255, 0.1); }
+.button:hover, button:hover, .toggle input + :hover, [type='submit']:hover, [type='button']:hover, [type='image']:hover, [type='reset']:hover, .button:focus, button:focus, .toggle input + :focus, [type='submit']:focus, [type='button']:focus, [type='image']:focus, [type='reset']:focus, .toggle input:hover + *, .toggle input:active + * {
+  box-shadow: inset 0 0 0 100em rgba(255, 255, 255, 0.2); }
 
-.button:active, button:active, input[type='submit']:active, input[type='button']:active, input[type='image']:active, input[type='reset']:active, .toggle input:active + *, .toggle input:checked + * {
-  box-shadow: inset 0 0 0 100em rgba(17, 17, 17, 0.3); }
+.button:active, button:active, .toggle input + :active, [type='submit']:active, [type='button']:active, [type='image']:active, [type='reset']:active, .toggle input:active + *, .toggle input:checked + * {
+  box-shadow: inset 0 0 0 100em rgba(17, 17, 17, 0.2); }
 
 .toggle input {
   opacity: 0;
   z-index: -10;
   position: absolute; }
 
-.button.success, button.success, input.success[type='submit'], input.success[type='button'], input.success[type='image'], input.success[type='reset'], .toggle.success input + * {
+.button.success, button.success, .success.button, .toggle input + .success, .success[type='submit'], .success[type='button'], .success[type='image'], .success[type='reset'], .toggle.success input + * {
   background: #2ECC40; }
 
-.button.warning, button.warning, input.warning[type='submit'], input.warning[type='button'], input.warning[type='image'], input.warning[type='reset'], .toggle.warning input + * {
+.button.warning, button.warning, .warning.button, .toggle input + .warning, .warning[type='submit'], .warning[type='button'], .warning[type='image'], .warning[type='reset'], .toggle.warning input + * {
   background: #FF851B; }
 
-.button.error, button.error, input.error[type='submit'], input.error[type='button'], input.error[type='image'], input.error[type='reset'], .toggle.error input + * {
+.button.error, button.error, .error.button, .toggle input + .error, .error[type='submit'], .error[type='button'], .error[type='image'], .error[type='reset'], .toggle.error input + * {
   background: #FF4136; }
 
-.button.dull, button.dull, input.dull[type='submit'], input.dull[type='button'], input.dull[type='image'], input.dull[type='reset'], .toggle.dull input + * {
+.button.dull, button.dull, .dull.button, .toggle input + .dull, .dull[type='submit'], .dull[type='button'], .dull[type='image'], .dull[type='reset'], .toggle.dull input + * {
   background: #aaa; }
+
+button.pseudo:hover, .button.pseudo:hover, button.pseudo:hover, .pseudo.button:hover, .toggle input + .pseudo:hover, .pseudo[type='submit']:hover, .pseudo[type='button']:hover, .pseudo[type='image']:hover, .pseudo[type='reset']:hover, .toggle input + *.pseudo:hover, [type='submit'].pseudo:hover, [type='button'].pseudo:hover, [type='image'].pseudo:hover, [type='reset'].pseudo:hover {
+  box-shadow: inset 0 0 0 100em rgba(17, 17, 17, 0.1); }
+button.pseudo:active, .button.pseudo:active, button.pseudo:active, .pseudo.button:active, .toggle input + .pseudo:active, .pseudo[type='submit']:active, .pseudo[type='button']:active, .pseudo[type='image']:active, .pseudo[type='reset']:active, .toggle input + *.pseudo:active, [type='submit'].pseudo:active, [type='button'].pseudo:active, [type='image'].pseudo:active, [type='reset'].pseudo:active {
+  box-shadow: inset 0 0 0 100em rgba(17, 17, 17, 0.2); }
+
+.pseudo, .pseudo input + * {
+  background: transparent;
+  color: #111; }
+
+.pseudo input:hover + * {
+  box-shadow: inset 0 0 0 100em rgba(17, 17, 17, 0.1); }
+
+.pseudo input:checked + * {
+  box-shadow: inset 0 0 0 100em rgba(17, 17, 17, 0.2); }
 
 input, textarea {
   line-height: 1.5em;

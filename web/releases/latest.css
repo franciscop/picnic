@@ -363,7 +363,7 @@ code {
 blockquote {
   padding: 0 0 0 1em;
   margin: 0 0 0 0.1em;
-  box-shadow: inset 5px 0px rgba(17, 17, 17, 0.3); }
+  box-shadow: inset 5px 0 rgba(17, 17, 17, 0.3); }
 
 label {
   cursor: pointer; }
@@ -371,7 +371,6 @@ label {
 [class^="icon-"]:before, [class*=" icon-"]:before {
   margin: 0 0.6em 0 0; }
 
-/* Nice fontello trick from Ronen Ackerman ( http://stackoverflow.com/a/17561467 ) */
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
   margin: 0; }
 
