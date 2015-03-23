@@ -22,6 +22,7 @@
     "bower_components",
     "web",
     "app.js",
-    "package.json"
+    "package.json",
+    "Procfile"
   ]
 }

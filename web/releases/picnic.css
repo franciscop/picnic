@@ -448,18 +448,16 @@ input:focus, textarea:focus, [type=file]:hover, [type=color]:hover, .select sele
   box-shadow: none;
   border-color: initial; }
 
-.addon {
-  vertical-align: middle; }
-  .addon + * {
-    position: absolute;
-    width: 240px;
-    margin: 0.3em 0 0 calc(-240px - 0.3em);
-    padding: 0.3em 0.6em 0.3em 0.3em;
-    vertical-align: middle;
-    text-align: right;
-    pointer-events: none; }
-    .addon + *:before {
-      margin: 0; }
+.addon + * {
+  position: absolute;
+  width: 240px;
+  margin: 0.3em 0 0 calc(-240px - 0.3em);
+  padding: 0.3em 0.6em 0.3em 0.3em;
+  vertical-align: middle;
+  text-align: right;
+  pointer-events: none; }
+  .addon + *:before {
+    margin: 0; }
 
 .select {
   position: relative;
