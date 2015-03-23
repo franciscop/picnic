@@ -1,0 +1,17 @@
+nav {
+  margin-bottom: 30px;
+}
+
+nav.demo {
+  position: relative;
+  z-index: 9;
+}
+
+.imponent {
+  padding: 2em 0;
+}
+
+.imponent .logo {
+  height: 3em;
+}
+

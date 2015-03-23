@@ -1,28 +1,36 @@
 <link href="/nut/raw+nav_2.fresh.css" rel="stylesheet">
+<link href="/plugins/nav/style.css" rel="stylesheet">
+
 
 # Nav
 
 A responsive, pure css navigation menu:
 
-<nav style="position: relative; overflow: auto; z-index: 9">
-  <a href="/" class="main">Picnic CSS</a>
+> On these smaller versions it might have small glitches. Please see the top, page-wide nav to see the actual effect.  
+
+<nav class="demo">
+  <a href="#" class="brand">
+    <img class="logo" src="/img/basket.png" />
+    <span>Picnic CSS</span>
+  </a>
   
   <!-- responsive-->
-  <input id="bmenu" type="checkbox" class="burgercheck">
-  <label for="bmenu" class="burgermenu"></label>
+  <input id="bmenub" type="checkbox" class="show">
+  <label for="bmenub" class="burger pseudo button">menu</label>
 
   <div class="menu">
-    <a href="/demo/" class="pseudo button icon-picture">Demo</a>
-    <a href="/plugins/" class="button icon-puzzle">Plugins</a>
+    <a href="#" class="pseudo button icon-picture">Demo</a>
+    <a href="#" class="button icon-puzzle">Plugins</a>
   </div>
 </nav>
 
 
+
 ## Installation
 
-Include it by adding `+modal` to your current installation:
+Include it by adding `+nav` to your current installation:
 
-    http://www.picnicss.com/nut/picnic_3+modal.min.css
+    http://www.picnicss.com/nut/picnic_3+nav.min.css
 
 
 
@@ -30,111 +38,136 @@ Include it by adding `+modal` to your current installation:
 
 This is the markup for the example above:
 
-    <label for="modal_1" class="button">
-    Show modal
-    </label>
 
-    <div class="modal">
-      <input id="modal_1" type="checkbox" />
-      <label for="modal_1" class="overlay"></label>
-      <article>
-        <header>
-          <h3>Great offer</h3>
-          <label for="modal_1" class="close">&times;</label>
-        </header>
-        <section class="content">
-          We have a special offer for you. I am sure you will love it! However this does look spammy...
-        </section>
-        <footer>
-          <a class="button" href="#">See offer</a>
-          <label for="modal_1" class="button error">
-            Cancel
-          </label>
-        </footer>
-      </article>
+    <nav class="demo">
+      <a href="#" class="brand">
+        <img class="logo" src="/img/basket.png" />
+        <span>Picnic CSS</span>
+      </a>
+      
+      <!-- responsive-->
+      <input id="bmenub" type="checkbox" class="show">
+      <label for="bmenub" class="burger pseudo button">menu</label>
+
+      <div class="menu">
+        <a href="#" class="pseudo button icon-picture">Demo</a>
+        <a href="#" class="button icon-puzzle">Plugins</a>
+      </div>
+    </nav>
+
+
+## Responsive
+
+The nav is responsive by default. The text inside the `<label>` can be changed for the following characters for a different effect ([source](https://css-tricks.com/three-line-menu-navicon/)):
+
+### IDENTICAL TO (&#8801; `&#8801;`)
+
+Safe on mobile. Example (resize window):
+
+<nav class="demo">
+  <a href="#" class="brand">Picnic CSS</a>
+  
+  <!-- responsive-->
+  <input id="bmenuc" type="checkbox" class="show">
+  <label for="bmenuc" class="burger pseudo button">&#8801;</label>
+
+  <div class="menu">
+    <a href="#" class="pseudo button icon-picture">Demo</a>
+    <a href="#" class="button icon-puzzle">Plugins</a>
+  </div>
+</nav>  
+
+### TRIGRAM FOR HEAVEN (&#9776; `&#9776;`)
+
+Example (resize window):
+
+<nav class="demo">
+  <a href="#" class="brand">Picnic CSS</a>
+  
+  <!-- responsive-->
+  <input id="bmenud" type="checkbox" class="show">
+  <label for="bmenud" class="burger pseudo button">&#9776;</label>
+
+  <div class="menu">
+    <a href="#" class="pseudo button icon-picture">Demo</a>
+    <a href="#" class="button icon-puzzle">Plugins</a>
+  </div>
+</nav>
+
+### Any other
+
+Font awesome's cog through fontello:
+
+<nav class="demo">
+  <a href="#" class="brand">Picnic CSS</a>
+  
+  <!-- responsive-->
+  <input id="bmenue" type="checkbox" class="show">
+  <label for="bmenue" class="burger pseudo button"><i class="icon-cog"></i></label>
+
+  <div class="menu">
+    <a href="#" class="pseudo button icon-picture">Demo</a>
+    <a href="#" class="button icon-puzzle">Plugins</a>
+  </div>
+</nav>
+
+
+## Hackable
+
+### Different height and big logo
+
+Thanks to a [vertical-align trick](http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/), you can set it up to any height you want:
+
+<nav class="demo imponent">
+  <a href="#" class="brand"><img class="logo" src="/img/basket.png" /><span>Picnic CSS</span></a>
+  
+  <!-- responsive-->
+  <input id="bmenuf" type="checkbox" class="show">
+  <label for="bmenuf" class="burger pseudo button">&#8801;</label>
+
+  <div class="menu">
+    <a href="#" class="pseudo button icon-picture">Demo</a>
+    <a href="#" class="button icon-puzzle">Plugins</a>
+  </div>
+</nav>
+
+
+### Form elements
+
+Just get anything you want inside the nav, most things should worl
+
+<nav class="demo imponent">
+  <a href="#" class="brand">Picnic CSS</a>
+  
+  <!-- responsive-->
+  <input id="bmenug" type="checkbox" class="show">
+  <label for="bmenug" class="burger pseudo button">&#8801;</label>
+
+  <div class="menu">
+    <input placeholder="Search plugins" />
+    <a href="#" class="button icon-puzzle">Find</a>
+  </div>
+</nav>
+
+<nav class="demo imponent">
+  <a href="#" class="brand">Picnic CSS</a>
+  
+  <!-- responsive-->
+  <input id="bmenug" type="checkbox" class="show">
+  <label for="bmenug" class="burger pseudo button">&#8801;</label>
+
+  <div class="menu">
+    <div class="select">
+      <select>
+        <option>Choose an option</option>
+        <option>Option 1</option>
+        <option>Option 2</option>
+      </select>
     </div>
-
-
-## Multiple modals
-
-<label for="modal_2" class="button">
-  Another modal
-</label>
-
-<div class="modal">
-  <input id="modal_2" type="checkbox" />
-  <label for="modal_2" class="overlay"></label>
-  <article>
-    <header>
-      <h3>Great offer 2</h3>
-      <label for="modal_2" class="close">&times;</label>
-    </header>
-    <section class="content">
-      We have a special offer for you. I am sure you will love it! However this does look spammy...
-    </section>
-    <footer>
-      <a class="button" href="#">See offer</a>
-      <label for="modal_2" class="button error">
-        Cancel
-      </label>
-    </footer>
-  </article>
-</div>
-
-<label for="modal_3" class="button">
-  Modalception
-</label>
-
-<div class="modal">
-  <input id="modal_3" type="checkbox" />
-  <label for="modal_3" class="overlay"></label>
-  <article>
-    <header>
-      <h3>Modal inside modal</h3>
-      <label for="modal_3" class="close">&times;</label>
-    </header>
-    <section class="content">
-      Shows another modal on top of this one
-      </label>
-    </section>
-    <footer>
-      <label for="modal_4" class="button">
-        Show modal
-      </label>
-      <label for="modal_3" class="button error">
-        Cancel
-      </label>
-    </footer>
-  </article>
-</div>
-
-
-<div class="modal">
-  <input id="modal_4" type="checkbox" />
-  <label for="modal_4" class="overlay"></label>
-  <article>
-    <header>
-      <h3>Modalception</h3>
-      <label for="modal_4" class="close">&times;</label>
-    </header>
-    <section class="content">
-      You've reached within. We could keep going, you know?
-    </section>
-    <footer>
-      <label for="modal_2" class="button">
-        Another modal
-      </label>
-      <label for="modal_4" class="button error">
-        Cancel
-      </label>
-    </footer>
-  </article>
-</div>
+  </div>
+</nav>
 
 
 
-## Javascript
-
-As always, there is **no javascript**. However, a little bit of javascript could enhance the experience allowing to close the modal by pressing `ESC`.
 
 
