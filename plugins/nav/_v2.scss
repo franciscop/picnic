@@ -1,0 +1,136 @@
+nav {
+  width: 100%;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  background: #fff;
+  box-shadow: 0 0 .6em rgba($black, 3 * $picnic-transparency);
+  z-index: 10;
+  transition: all .3s ease;
+
+  a {
+    color: $black;
+    display: inline-block;
+    padding: .5em .6em;
+    }
+
+  .main,
+  .menu {
+    margin: 0 .5em;
+    }
+
+  .main {
+    font-weight: 700;
+    float: left;
+    max-width: 50%;
+    white-space: nowrap;
+
+    img {
+      height: 2em;
+      }
+    }
+
+  .menu {
+    float: right;
+    }
+  }
+
+.burgercheck,
+.burgermenu {
+  display: none;
+  cursor: pointer;
+  }
+
+.burgermenu {
+  display: none;
+  position: relative;
+  height: .6em;
+  width: .4em;
+  margin: .35em;
+  }
+
+.burgermenu:before,
+.burgermenu:after {
+  display: none;
+  content: ' ';
+  width: .8em;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: .14em;
+  border-style: solid;
+  border-color: #333;
+  border-width: .12em 0;
+  }
+
+.burgermenu:after {
+  top: 50%;
+  margin-top: -.04em;
+  }
+
+@media all and (max-width: $picnic-breakpoint) {
+  .burgercheck ~ label:before,
+  .burgercheck ~ label:after {
+    border-color: #333;
+    display: block;
+    transition: border-color 0s ease 1s;
+    }
+
+  .burgercheck ~ label {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    font-size: 2em;
+    line-height: 1.5em;
+    padding-right: .5em;
+    text-align: right;
+    }
+
+  .burgercheck:checked ~ label:before,
+  .burgercheck:checked ~ label:after {
+    border-color: transparent;
+    }
+
+  .burgercheck:checked ~ label {
+    margin: 0;
+    right: 70%;
+    width: 30%;
+    height: 100%;
+    transition: all .3s ease;
+    background: rgba(255, 255, 255, .7);
+    }
+
+  nav .menu {
+    position: fixed;
+    width: 70%;
+    height: 100%;
+    right: calc(-70% - .6em);
+    top: 0;
+    margin-right: 0;
+    background: $white;
+    box-shadow: 0 0 .6em rgba($black, 2 * $picnic-transparency);
+    overflow: auto;
+    transition: all .3s ease;
+    }
+
+  .burgercheck:checked ~ .menu {
+    right: 0;
+    transition: all .3s ease;
+    }
+
+  nav .menu a {
+    display: block;
+    text-align: left;
+    }
+
+  nav .menu .button {
+    margin: .5em;
+    float: left;
+    clear: left;
+    }
+
+  .transparent .menu {
+    color: $black;
+    }
+  }

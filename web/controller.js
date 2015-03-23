@@ -83,7 +83,7 @@ module.exports.nut = function(req, res) {
       var version = 1;
       if (plugin.match('_')) {
         pluginparts = plugin.split('_');
-        plugin = pluginparts.unshift();
+        plugin = pluginparts.shift();
         version = pluginparts.join('_');
         }
       
