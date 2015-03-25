@@ -145,7 +145,6 @@ Just get anything you want inside the nav, most things should worl
 
   <div class="menu">
     <input placeholder="Search plugins" />
-    <a href="#" class="button icon-puzzle">Find</a>
   </div>
 </nav>
 

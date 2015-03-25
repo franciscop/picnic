@@ -1,0 +1,78 @@
+// Variables
+$picnic-select-height: 2.2em;
+$picnic-select-margin: $picnic-separation / 2;
+
+
+// Code
+.select {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  border-radius: $picnic-radius;
+  width: 100%;
+  height: $picnic-select-height;
+
+  select {
+    background: none;
+    // vendor prefixes required, see:
+    // https://github.com/postcss/autoprefixer#why-doesnt-autoprefixer-support-appearance
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: $picnic-border;
+    border-radius: $picnic-radius;
+    cursor: pointer;
+    width: 100%;
+    height: $picnic-select-height;
+    box-sizing: border-box;
+    padding: $picnic-separation / 2 $picnic-separation * .75;
+    transition: outline 0 ease;
+
+    &:focus {
+      outline: 0 transparent;
+      transition: outline 0 ease;
+      }
+
+    &:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 $picnic-black;
+      }
+
+    option {
+      font-size: inherit;
+      padding: $picnic-separation / 2 $picnic-separation * .75;
+      }
+    }
+  }
+
+.select:before {
+  background: $picnic-white;
+  content: '';
+  display: block;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  bottom: 1px;
+  width: 30px;
+  height: calc(100% - 2px);
+  pointer-events: none;
+  border-radius: $picnic-radius;
+  }
+
+.select:after {
+  background: transparent;
+  content: '\25BC';
+  display: block;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  bottom: 1px;
+  padding: 0;
+  width: 30px;  
+  text-align: center;
+  font-size: .8em;
+  height: calc(100% - 2px);
+  line-height: $picnic-select-height / .8;
+  pointer-events: none;
+  }
+

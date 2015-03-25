@@ -1,0 +1,45 @@
+// Variables
+$picnic-input-height: 2.2em;
+$picnic-input-padding: $picnic-separation / 2 $picnic-separation;
+
+
+// Browser treats unknow type as "text", so we'll do the same
+input,
+textarea {
+  line-height: 1.5em;
+  margin: 0;
+  padding: $picnic-input-padding;
+  border: $picnic-border;
+  border-radius: $picnic-radius;
+  transition: $picnic-transition;
+  width: 100%;
+  }
+
+input {
+  height: $picnic-input-height;
+  }
+
+[type=file],
+[type=color] {
+  padding: $picnic-input-padding;
+  cursor: pointer;
+  }
+
+input:focus,
+textarea:focus,
+[type=file]:hover,
+[type=color]:hover,
+.select select:focus,
+.select select:hover {
+  border-color: $picnic-primary;
+  transition: $picnic-transition;
+  }
+
+
+// Reset the style for those that we actually know 
+[type=radio]:focus,
+[type=checkbox]:focus,
+[type=range]:focus {
+  box-shadow: none;
+  border-color: initial;
+  }

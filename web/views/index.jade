@@ -2,16 +2,20 @@ extends layout
 
 block content
   style.
-    .row > * {
+    .row.demo > * {
       padding: .3em .6em;
       background: #6C7;
     }
-    .row > *:nth-child(even){
+    .row.demo > *:nth-child(even){
       background: #7DF;
+    }
+    button {
+      text-align: center;
     }
     form {
       text-align: left;
-      margin-left: calc(50% - 120px - .3em);
+      width: 80%;
+      margin: 0 10%;
     }
   main
     h1 Picnic CSS
@@ -22,28 +26,34 @@ block content
     section
       h2#input Buttons
       div.render
-        <button>Normal</button>
-        <button class="success">Success</button>
-        <button class="warning">Warning</button>
-        <button class="error">Error</button>
-        <button class="dull">Dull</button>
+        <a class="button">Normal</a>
+        <a class="button success">Success</a>
+        <a class="button warning">Warning</a>
+        <a class="button error">Error</a>
+        <a class="button dull">Dull</a>
     
     section
       h2 Form elements
       div.render.
         <form>
-          <input class="addon" placeholder="Email" />
-          <span>@</span>
-          <input class="addon" placeholder="Github project" />
-          <span class="icon-g"></span><br>
-          <label class="select">
-            <select name="options">
-              <option>Select an option</option>
-              <option>Good option</option>
-              <option>Nice option</option>
-              <option>Cheap option</option>
-            </select>
-          </label><br>
+          <div class="row">
+            <div>
+              <input class="addon" placeholder="Name" />
+            </div>
+            <div>
+              <label class="select">
+                <select name="options">
+                  <option>Select an option</option>
+                  <option>Good option</option>
+                  <option>Nice option</option>
+                  <option>Cheap option</option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <textarea placeholder="Biography"></textarea>
+          </div>
           <label class="checkbox">
             <input type="checkbox">
             <span>Check me out (;</span>
@@ -97,29 +107,29 @@ block content
     section
       h2 Responsive grid
       div.render.
-        <div class="row">
+        <div class="row demo">
           <div>[one]</div>
         </div>
         
-        <div class="row">
+        <div class="row demo">
           <div>[two]</div>
           <div>[two]</div>
         </div>
         
-        <div class="row">
+        <div class="row demo">
           <div>[three]</div>
           <div>[three]</div>
           <div>[three]</div>
         </div>
         
-        <div class="row">
+        <div class="row demo">
           <div>[four]</div>
           <div>[four]</div>
           <div>[four]</div>
           <div>[four]</div>
         </div>
         
-        <div class="row">
+        <div class="row demo">
           <div>[five]</div>
           <div>[five]</div>
           <div>[five]</div>

@@ -1,22 +1,22 @@
 # Stack
-<link rel="stylesheet" href="/nut/raw+stack.fresh.css">
+<link rel="stylesheet" href="/nut/raw+stack_2.fresh.css">
 
 
 A vertical group of different elements.
 
 <div class="row">
   <div>
-    <label class="toggle stack">
-      <input type="radio" name="stack" />
-      <span class="icon-puzzle">Plugins</span>
+    <label class="stack">
+      <input class="toggle" type="radio" name="stack" />
+      <span class="button icon-puzzle">Plugins</span>
     </label>
-    <label class="toggle stack">
-      <input type="radio" name="stack" />
-      <span class="icon-picture">Demo</span>
+    <label class="stack">
+      <input class="toggle" type="radio" name="stack" />
+      <span class="button icon-picture">Demo</span>
     </label>
-    <label class="toggle stack">
-      <input type="radio" name="stack" />
-      <span class="icon-help-circled">Test</span>
+    <label class="stack">
+      <input class="toggle" type="radio" name="stack" />
+      <span class="button icon-help-circled">Test</span>
     </label>
   </div>
   <div>
@@ -44,95 +44,106 @@ Include it by adding `+stack` to your current installation:
 
 ## Buttons
 
-A vertical stack of buttons
+A vertical stack of buttons. You can use any type of button:
 
-<div style="width: 150px; margin: 0 auto;">
-  <a class="button stack">Normal</a>
-  <a class="button stack success">Success</a>
-  <a class="button stack warning">Warning</a>
-  <a class="button stack error">Error</a>
-  <a class="button stack dull">Dull</a>
+<div class="row">
+  
+  <!-- Color buttons -->
+  <div>
+    <a class="stack button">Normal</a>
+    <a class="stack button success">Success</a>
+    <a class="stack button warning">Warning</a>
+  </div>
+  
+  <!-- Pseudo buttons -->
+  <div>
+    <a class="stack pseudo button">First</a>
+    <a class="stack pseudo button">Second</a>
+    <a class="stack pseudo button">Third</a>
+  </div>
+
+  <!-- Toggle buttons (choose one) -->
+  <div>
+    <label class="stack">
+      <input class="toggle" type="radio" name="stack" />
+      <span class="button">Tab 1</span>
+    </label>
+    <label class="stack">
+      <input class="toggle" type="radio" name="stack" />
+      <span class="button">Tab 2</span>
+    </label>
+    <label class="stack">
+      <input class="toggle" type="radio" name="stack" />
+      <span class="button">Tab 3</span>
+    </label>
+  </div>
+
+  <!-- Toggle buttons (choose one) -->
+  <div>
+    <label class="stack">
+      <input class="toggle" type="checkbox" name="stack" />
+      <span class="button">Option 1</span>
+    </label>
+    <label class="stack">
+      <input class="toggle" type="checkbox" name="stack" />
+      <span class="button">Option 2</span>
+    </label>
+    <label class="stack">
+      <input class="toggle" type="checkbox" name="stack" />
+      <span class="button">Option 3</span>
+    </label>
+  </div>
 </div>
 
 
-    <div style="width: 150px; margin: 0 auto;">
-      <a class="button stack">Normal</a>
-      <a class="button stack success">Success</a>
-      <a class="button stack warning">Warning</a>
-      <a class="button stack error">Error</a>
-      <a class="button stack dull">Dull</a>
+    <!-- Color buttons -->
+    <div>
+      <a class="stack button">Normal</a>
+      <a class="stack button success">Success</a>
+      <a class="stack button warning">Warning</a>
+    </div>
+    
+    <!-- Pseudo buttons -->
+    <div>
+      <a class="stack pseudo button">First</a>
+      <a class="stack pseudo button">Second</a>
+      <a class="stack pseudo button">Third</a>
+    </div>
+
+    <!-- Toggle buttons (choose one) -->
+    <div>
+      <label class="stack">
+        <input class="toggle" type="radio" name="stack" />
+        <span class="button">Tab 1</span>
+      </label>
+      <label class="stack">
+        <input class="toggle" type="radio" name="stack" />
+        <span class="button">Tab 2</span>
+      </label>
+      <label class="stack">
+        <input class="toggle" type="radio" name="stack" />
+        <span class="button">Tab 3</span>
+      </label>
+    </div>
+
+    <!-- Toggle buttons (choose one) -->
+    <div>
+      <label class="stack">
+        <input class="toggle" type="checkbox" name="stack" />
+        <span class="button">Option 1</span>
+      </label>
+      <label class="stack">
+        <input class="toggle" type="checkbox" name="stack" />
+        <span class="button">Option 2</span>
+      </label>
+      <label class="stack">
+        <input class="toggle" type="checkbox" name="stack" />
+        <span class="button">Option 3</span>
+      </label>
     </div>
 
 
 
-## Button tabs
-
-Same as stack, but one (and only one) can be selected
-
-<div style="width: 150px; margin: 0 auto;">
-  <label class="toggle stack">
-    <input type="radio" name="stack" />
-    <span>Tab 1</span>
-  </label>
-  <label class="toggle stack">
-    <input type="radio" name="stack" />
-    <span>Tab 2</span>
-  </label>
-  <label class="toggle stack">
-    <input type="radio" name="stack" />
-    <span>Tab 3</span>
-  </label>
-</div>
-
-    <div style="width: 150px; margin: 0 auto;">
-      <label class="toggle stack">
-        <input type="radio" name="stack" />
-        <span>Tab 1</span>
-      </label>
-      <label class="toggle stack">
-        <input type="radio" name="stack" />
-        <span>Tab 2</span>
-      </label>
-      <label class="toggle stack">
-        <input type="radio" name="stack" />
-        <span>Tab 3</span>
-      </label>
-    </div>
-
-
-## Stack options
-
-Same as stack, but they can be individually checked/unchecked
-
-<div style="width: 150px; margin: 0 auto;">
-  <label class="toggle stack">
-    <input type="checkbox" name="stack" />
-    <span>Option 1</span>
-  </label>
-  <label class="toggle stack">
-    <input type="checkbox" name="stack" />
-    <span>Option 2</span>
-  </label>
-  <label class="toggle stack">
-    <input type="checkbox" name="stack" />
-    <span>Option 3</span>
-  </label>
-</div>
-
-    <div style="width: 150px; margin: 0 auto;">
-      <label class="toggle stack">
-        <input type="radio" name="stack" />
-        <span>Option 1</span>
-      </label>
-      <label class="toggle stack">
-        <input type="radio" name="stack" />
-        <span>Option 2</span>
-      </label>
-      <label class="toggle stack">
-        <input type="radio" name="stack" />
-        <span>Option 3</span>
-      </label>
-    </div>
 
 
 ## Forms
@@ -144,7 +155,7 @@ Create nice and packed forms. [jsfiddle](http://jsfiddle.net/ddmv3dsr/4/)
       <input class="stack" placeholder="First name" />
       <input class="stack" placeholder="Last name" />
       <input class="stack" placeholder="Email" />
-  </div><br>
+  </div><br><!-- aham -->
 
   <div>
       <input class="stack" placeholder="Password" />
@@ -161,7 +172,7 @@ Create nice and packed forms. [jsfiddle](http://jsfiddle.net/ddmv3dsr/4/)
         <input class="stack" placeholder="First name" />
         <input class="stack" placeholder="Last name" />
         <input class="stack" placeholder="Email" />
-    </div><br>
+    </div><br><!-- aham -->
     
     <div>
         <input class="stack" placeholder="Password" />
@@ -184,26 +195,12 @@ Just set up your super simple  gallery with this and the grids
     <a class="button stack">Add</a>
   </div>
   <div>
-    <img class="stack" src="/img/forest.jpg">
+    <img class="stack" src="/img/halong.jpg">
     <a class="button stack">Add</a>
   </div>
   <div>
-    <img class="stack" src="/img/forest.jpg">
+    <img class="stack" src="/img/lake.jpg">
     <a class="button stack error">Remove</a>
-  </div>
-</div>
-<div class="row">
-  <div>
-    <img class="stack" src="/img/forest.jpg">
-    <a class="button stack">Add</a>
-  </div>
-  <div>
-    <img class="stack" src="/img/forest.jpg">
-    <a class="button stack error">Remove</a>
-  </div>
-  <div>
-    <img class="stack" src="/img/forest.jpg">
-    <a class="button stack">Add</a>
   </div>
 </div>
 
@@ -213,25 +210,18 @@ Just set up your super simple  gallery with this and the grids
         <a class="button stack">Add</a>
       </div>
       <div>
-        <img class="stack" src="/img/forest.jpg">
+        <img class="stack" src="/img/halong.jpg">
         <a class="button stack">Add</a>
       </div>
       <div>
-        <img class="stack" src="/img/forest.jpg">
+        <img class="stack" src="/img/lake.jpg">
         <a class="button stack error">Remove</a>
       </div>
     </div>
-    <div class="row">
-      <div>
-        <img class="stack" src="/img/forest.jpg">
-        <a class="button stack">Add</a>
-      </div>
-      <div>
-        <img class="stack" src="/img/forest.jpg">
-        <a class="button stack error">Remove</a>
-      </div>
-      <div>
-        <img class="stack" src="/img/forest.jpg">
-        <a class="button stack">Add</a>
-      </div>
-    </div>
+
+
+## Hack it
+
+
+
+

@@ -4,6 +4,6 @@
 
 .radio input:checked + *:before {
     box-shadow:
-      inset 0 0 0 .2em $white,
-      inset 0 0 0 100em lighten($black, $picnic-color-variation);
+      inset 0 0 0 .2em $picnic-white,
+      inset 0 0 0 100em lighten($picnic-black, $picnic-color-variation);
 }

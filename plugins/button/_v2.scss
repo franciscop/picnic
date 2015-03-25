@@ -1,108 +1,58 @@
-// BUTTONS
+// Buttons
+
+
+// Variables
+$picnic-button-padding: $picnic-label-padding;
+$picnic-button-hover: inset 0 0 0 100em rgba($picnic-white, 2 * $picnic-transparency);
+$picnic-button-click: inset 0 0 0 100em rgba($picnic-black, 2 * $picnic-transparency);
+$picnic-button-transition: $picnic-transition;
+
+
+
+// Styles
 .button {
-  display: inline-block;
-  margin: $picnic-margin;
-  padding: $picnic-padding * 1.5 $picnic-padding * 3;
-  vertical-align: middle;
-  background: $picnic-primary;
-  color: $white;
-  border: 0;
-  border-radius: $picnic-radius;
+  @extend .label;
+
+  transition: $picnic-button-transition;
   cursor: pointer;
-  width: auto;
-  transition: $picnic-transition-fast;
-  line-height: normal;
   }
 
-
-
-// Interactivity
+// Hover
 .button:hover,
 .button:focus,
-.toggle input:hover + *,
-.toggle input:active + * {
-  box-shadow: inset 0 0 0 100em rgba($white, 2 * $picnic-transparency);
+.toggle:focus + * {
+  box-shadow: $picnic-button-hover;
   }
 
+.pseudo:hover,
+.pseudo:focus,
+.toggle:focus + .pseudo {
+  box-shadow: inset 0 0 0 100em rgba($picnic-black, $picnic-transparency);
+  }
 
-
+// Click
 .button:active,
-.toggle input:active + *,
-.toggle input:checked + * {
-  box-shadow: inset 0 0 0 100em rgba($black, 2 * $picnic-transparency);
-
-  @if $picnic-deep == true {
-    height: 1.8em;
-    margin-top: $picnic-margin + .2em;
-    box-shadow: 
-      inset 0 0 0 100em rgba($black, 3 * $picnic-transparency),
-      inset 0 .1em .1em rgba($black, 3 * $picnic-transparency);
-    }
+.toggle:checked + *,
+.toggle:focus:checked + .button {
+  box-shadow: $picnic-button-click;
   }
 
 
-
-// Toggle button
-.toggle input {
+// Hide the checkbox/radio from the toggle button
+.toggle {
   opacity: 0;
   z-index: -10;
+  width: 0;
   position: absolute;
   }
 
-
-
-// Colors
-.button.success,
-.toggle.success input + * {
-  background: $picnic-success;
-  }
-
-.button.warning,
-.toggle.warning input + * {
-  background: $picnic-warning;
-  }
-
-.button.error,
-.toggle.error input + * {
-  background: $picnic-error;
-  }
-
-.button.dull,
-.toggle.dull input + * {
-  background: $picnic-dull;
-  }
-
-
 // This allows the invasiveness
 button,
-.button,
-.toggle input + *,
 [type='submit'],
 [type='button'],
 [type='image'],
-[type='reset'] {
+[type='reset'],
+.pseudo {
   @extend .button;
-
-  &.pseudo:hover {
-    box-shadow: inset 0 0 0 100em rgba($black, $picnic-transparency);
-    }
-
-  &.pseudo:active {
-    box-shadow: inset 0 0 0 100em rgba($black, 2 * $picnic-transparency);
-    }
-  }
-
-.pseudo,
-.pseudo input + * {
-  background: transparent;
-  color: $black;
-  }
-
-.pseudo input:hover + * {
-  box-shadow: inset 0 0 0 100em rgba($black, $picnic-transparency);
-  }
-
-.pseudo input:checked + * {
-  box-shadow: inset 0 0 0 100em rgba($black, 2 * $picnic-transparency);
   }
 

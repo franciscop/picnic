@@ -1,17 +1,19 @@
 * {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 html,
 body {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
   height: 100%;
 }
 
 body {
-  color: $black;
+  color: $picnic-black;
   font-size: 1.1em;
   line-height: 1.5em;
-  background: $white;
+  background: $picnic-white;
 }
 
 // Hide the default focus effect
@@ -26,11 +28,11 @@ h4,
 h5,
 h6 {
   margin: 0;
-  padding: $picnic-padding * 2 0;
+  padding: $picnic-separation 0;
   }
 
 li {
-  margin: 0 0 $picnic-margin;
+  margin: 0 0 $picnic-separation / 2;
   }
 
 a {
@@ -55,7 +57,7 @@ code {
 blockquote {
   padding: 0 0 0 1em;
   margin: 0 0 0 .1em;
-  box-shadow: inset 5px 0 rgba($black, .3);
+  box-shadow: inset 5px 0 rgba($picnic-black, .3);
   }
 
 label {

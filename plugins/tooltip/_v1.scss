@@ -1,3 +1,9 @@
+// Variables for the tooltips
+$picnic-tooltip-background: $picnic-black;
+$picnic-tooltip-size: .8em;
+
+
+// Only display the tooltip for elements with <element data-tooltip="blabla">
 [data-tooltip] {
   position: relative;
 
@@ -22,21 +28,22 @@
     margin-top: 12px;
     }
 
+  // This is the acutal label-like element
   &:after {
+
+    // Style
+    @extend .label;
+    font-size: $picnic-tooltip-size;
+    background: $picnic-tooltip-background;
 
     // Content
     content: attr(data-tooltip);
 
-    // Size
-    font-size: .8em;
+    // Behaviour
     white-space: nowrap;
-
-    // Style
-    background: $black;
-    color: $white;
-    border-radius: $picnic-radius;
     }
 
+  // This is the small arrow
   &:before {
     content: '';
     width: 0;
@@ -45,7 +52,7 @@
     border-style: solid;
 
     // Bottom one (default)
-    border-color: transparent transparent $black;
+    border-color: transparent transparent $picnic-tooltip-background;
     margin-top: 0;
     left: 15px;
     }
@@ -61,7 +68,7 @@
 
   &:hover:after,
   &:focus:after {
-    padding: $picnic-padding * 1.5 $picnic-padding * 3;
+    padding: $picnic-separation * .75 $picnic-separation * 1.5;
     }
   }
 
@@ -78,7 +85,7 @@
     }
 
   &:before {
-    border-color: $black transparent transparent;
+    border-color: $picnic-tooltip-background transparent transparent;
     margin-bottom: 0;
     left: 15px;
     }
@@ -95,7 +102,7 @@
     }
 
   &:before {
-    border-color: transparent $black transparent transparent;
+    border-color: transparent $picnic-tooltip-background transparent transparent;
     margin-left: -6px;
     left: 100%;
     top: 7px;
@@ -114,7 +121,7 @@
     }
 
   &:before {
-    border-color: transparent transparent transparent $black;
+    border-color: transparent transparent transparent $picnic-tooltip-background;
     margin-right: -6px;
     right: 100%;
     top: 7px;

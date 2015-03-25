@@ -1,5 +1,8 @@
 {
   "id": "tooltip",
   "name": "Tooltip",
-  "install": "+tooltip"
+  "install": "+tooltip",
+  "dependencies": [
+    "label/v1"
+    ]
 }

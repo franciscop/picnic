@@ -9,18 +9,14 @@ A card is a self-contained, highly-replicated class. It works great with other o
     <img src="/img/forest.jpg">
     <footer>
       <h3>Misty Forest</h3>
-      <p>
-        <button>Like</button>
-      </p>
+      <button>Like</button>
     </footer>
   </article>
   <article class="card">
     <img src="/img/lake.jpg">
     <footer>
       <h3>Sunset Lake</h3>
-      <p>
-        <button>Like</button>
-      </p>
+      <button>Like</button>
     </footer>
   </article>
 </div>
@@ -87,7 +83,8 @@ A card can also combine several, very different elements.
     <!-- To stop the html and the link -->
     <pre>&lt;img src="http:&#47;&#47;example.com/forest.jpg" &gt;</pre>
     <p>Did you find it useful?</p>
-    <button>Yeah!</button><button class="warning">No...</button>
+    <button>Yeah!</button>
+    <button class="warning">No...</button>
   </footer>
 </article>
 

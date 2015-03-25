@@ -1,11 +1,3 @@
-/**
- * COLOR VARIABLES
- * - Cool
- * - Warm
- * - Gray Scale
- * 
- * clrs, from https://github.com/mrmrs/colors
- */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -325,9 +317,11 @@ td, th {
   padding: 0; }
 
 * {
-  box-sizing: border-box; }
+  box-sizing: inherit; }
 
 html, body {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
   height: 100%; }
 
 body {
@@ -347,7 +341,7 @@ li {
   margin: 0 0 0.3em; }
 
 a {
-  color: #0074D9;
+  color: #0074d9;
   text-decoration: none; }
 
 pre {
@@ -374,121 +368,137 @@ label {
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
   margin: 0; }
 
-.button, button, input[type='submit'], input[type='button'], input[type='image'], input[type='reset'], .toggle input + * {
+.label, .button, button, [type='submit'], [type='button'], [type='image'], [type='reset'], .pseudo {
   display: inline-block;
-  margin: 0.3em;
-  padding: 0.45em 0.9em;
+  text-align: center;
+  margin: 0;
+  padding: 0.48em 1.08em;
   vertical-align: middle;
-  background: #0074D9;
+  background: #0074d9;
   color: #fff;
   border: 0;
   border-radius: 0.2em;
-  cursor: pointer;
   width: auto;
-  transition: all 0.1s ease;
-  line-height: normal; }
+  line-height: normal;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .label.success, .success.button, button.success, .success[type='submit'], .success[type='button'], .success[type='image'], .success[type='reset'], .success.pseudo {
+    background: #2ecc40; }
+  .label.warning, .warning.button, button.warning, .warning[type='submit'], .warning[type='button'], .warning[type='image'], .warning[type='reset'], .warning.pseudo {
+    background: #ff851b; }
+  .label.error, .error.button, button.error, .error[type='submit'], .error[type='button'], .error[type='image'], .error[type='reset'], .error.pseudo {
+    background: #ff4136; }
+  .label.dull, .dull.button, button.dull, .dull[type='submit'], .dull[type='button'], .dull[type='image'], .dull[type='reset'], .dull.pseudo {
+    background: #aaa; }
+  .label.pseudo, .pseudo.button, button.pseudo, .pseudo[type='submit'], .pseudo[type='button'], .pseudo[type='image'], .pseudo[type='reset'], .pseudo {
+    background: transparent;
+    color: #111; }
 
-.button:hover, button:hover, input[type='submit']:hover, input[type='button']:hover, input[type='image']:hover, input[type='reset']:hover, .button:active, button:active, input[type='submit']:active, input[type='button']:active, input[type='image']:active, input[type='reset']:active, .toggle input:hover + *, .toggle input:active + * {
-  box-shadow: inset 0 0 0 100em rgba(255, 255, 255, 0.1); }
+.button, button, [type='submit'], [type='button'], [type='image'], [type='reset'], .pseudo {
+  transition: all 0.2s ease;
+  cursor: pointer; }
 
-.button:active, button:active, input[type='submit']:active, input[type='button']:active, input[type='image']:active, input[type='reset']:active, .toggle input:active + *, .toggle input:checked + * {
-  box-shadow: inset 0 0 0 100em rgba(17, 17, 17, 0.3); }
+.button:hover, button:hover, [type='submit']:hover, [type='button']:hover, [type='image']:hover, [type='reset']:hover, .pseudo:hover, .button:focus, button:focus, [type='submit']:focus, [type='button']:focus, [type='image']:focus, [type='reset']:focus, .pseudo:focus, .toggle:focus + * {
+  box-shadow: inset 0 0 0 100em rgba(255, 255, 255, 0.2); }
 
-.toggle input {
+.pseudo:hover, .pseudo:focus, .toggle:focus + .pseudo {
+  box-shadow: inset 0 0 0 100em rgba(17, 17, 17, 0.1); }
+
+.button:active, button:active, [type='submit']:active, [type='button']:active, [type='image']:active, [type='reset']:active, .pseudo:active, .toggle:checked + *, .toggle:focus:checked + .button, .toggle:focus:checked + button, .toggle:focus:checked + [type='submit'], .toggle:focus:checked + [type='button'], .toggle:focus:checked + [type='image'], .toggle:focus:checked + [type='reset'], .toggle:focus:checked + .pseudo {
+  box-shadow: inset 0 0 0 100em rgba(17, 17, 17, 0.2); }
+
+.toggle {
   opacity: 0;
   z-index: -10;
+  width: 0;
   position: absolute; }
-
-.button.success, button.success, input.success[type='submit'], input.success[type='button'], input.success[type='image'], input.success[type='reset'], .toggle.success input + * {
-  background: #2ECC40; }
-
-.button.warning, button.warning, input.warning[type='submit'], input.warning[type='button'], input.warning[type='image'], input.warning[type='reset'], .toggle.warning input + * {
-  background: #FF851B; }
-
-.button.error, button.error, input.error[type='submit'], input.error[type='button'], input.error[type='image'], input.error[type='reset'], .toggle.error input + * {
-  background: #FF4136; }
-
-.button.dull, button.dull, input.dull[type='submit'], input.dull[type='button'], input.dull[type='image'], input.dull[type='reset'], .toggle.dull input + * {
-  background: #aaa; }
 
 input, textarea {
   line-height: 1.5em;
-  margin: 0.3em;
+  margin: 0;
   padding: 0.3em 0.6em;
   border: 1px solid #aaa;
   border-radius: 0.2em;
-  transition: all 0.3s ease;
-  width: 240px; }
+  transition: all 0.2s ease;
+  width: 100%; }
+
+input {
+  height: 2.2em; }
 
 [type=file], [type=color] {
-  padding: 0.3em;
+  padding: 0.3em 0.6em;
   cursor: pointer; }
 
 input:focus, textarea:focus, [type=file]:hover, [type=color]:hover, .select select:focus, .select select:hover {
-  border-color: #0074D9;
-  transition: all 0.3s ease; }
+  border-color: #0074d9;
+  transition: all 0.2s ease; }
 
 [type=radio]:focus, [type=checkbox]:focus, [type=range]:focus {
   box-shadow: none;
   border-color: initial; }
 
-.addon {
-  vertical-align: middle; }
-  .addon + * {
-    position: absolute;
-    width: 240px;
-    margin: 0.3em 0 0 calc(-240px - 0.3em);
-    padding: 0.3em 0.6em 0.3em 0.3em;
-    vertical-align: middle;
-    text-align: right;
-    pointer-events: none; }
-    .addon + *:before {
-      margin: 0; }
-
 .select {
   position: relative;
   display: inline-block;
-  margin: 0.3em;
-  border: 1px solid #aaa;
+  margin: 0;
+  border-radius: 0.2em;
+  width: 100%;
+  height: 2.2em; }
+  .select select {
+    background: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid #aaa;
+    border-radius: 0.2em;
+    cursor: pointer;
+    width: 100%;
+    height: 2.2em;
+    box-sizing: border-box;
+    padding: 0.3em 0.45em;
+    transition: outline 0 ease; }
+    .select select:focus {
+      outline: 0 transparent;
+      transition: outline 0 ease; }
+    .select select:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 #111; }
+    .select select option {
+      font-size: inherit;
+      padding: 0.3em 0.45em; }
+
+.select:before {
+  background: #fff;
+  content: '';
+  display: block;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  bottom: 1px;
+  width: 30px;
+  height: calc(100% - 2px);
+  pointer-events: none;
   border-radius: 0.2em; }
 
 .select:after {
-  padding: 1.2% 0 0 0;
-  background: #fff;
-  content: "\25BC";
+  background: transparent;
+  content: '\25BC';
   display: block;
   position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 2.3em;
-  pointer-events: none;
-  font-size: 0.8em;
-  line-height: 2.3em;
+  right: 1px;
+  top: 1px;
+  bottom: 1px;
+  padding: 0;
+  width: 30px;
   text-align: center;
-  border-radius: 0.2em; }
-
-.select select {
-  font-size: inherit;
-  background: none;
-  /* vendor prefixes required, see: */
-  /* https://github.com/postcss/autoprefixer#why-doesnt-autoprefixer-support-appearance */
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  border: none;
-  min-width: 14em;
-  border-radius: 0.2em;
-  cursor: pointer;
-  width: calc(240px - 2px);
-  padding: calc(0.3em - 2px) calc(0.6em - 2px); }
-
-.select select:-moz-focusring {
-  color: transparent;
-  text-shadow: 0 0 0 #111; }
-
-.select select option {
-  padding: 0.2em 0.5em; }
+  font-size: 0.8em;
+  height: calc(100% - 2px);
+  line-height: 2.75em;
+  pointer-events: none; }
 
 .radio, .checkbox {
   position: relative;
@@ -497,12 +507,12 @@ input:focus, textarea:focus, [type=file]:hover, [type=color]:hover, .select sele
   min-height: 1.25em;
   line-height: 1em;
   margin: 0.1em 0 -0.1em;
-  outline: 0px none;
+  outline: 0 none;
   vertical-align: middle;
   cursor: pointer; }
 
 .radio input + *:before, .checkbox input + *:before {
-  content: "\2714";
+  content: '\2714';
   /* Tick */
   display: inline-block;
   font-size: 0.8em;
@@ -515,7 +525,7 @@ input:focus, textarea:focus, [type=file]:hover, [type=color]:hover, .select sele
   border: 1px solid #aaa; }
 
 .checkbox input:focus + *:before, .checkbox input:hover + *:before, .radio input:focus + *:before, .radio input:hover + *:before {
-  border-color: #7FDBFF; }
+  border-color: #0074d9; }
 
 .radio input, .checkbox input {
   opacity: 0;
@@ -544,16 +554,16 @@ th {
   text-align: left;
   font-weight: 900;
   color: #fff;
-  background-color: #0074D9; }
+  background-color: #0074d9; }
 
 .success th {
-  background-color: #2ECC40; }
+  background-color: #2ecc40; }
 
 .warning th {
-  background-color: #FF851B; }
+  background-color: #ff851b; }
 
 .error th {
-  background-color: #FF4136; }
+  background-color: #ff4136; }
 
 .dull th {
   background-color: #aaa; }
@@ -562,7 +572,7 @@ tr:nth-child(even) {
   background: rgba(0, 0, 0, 0.05); }
 
 /* From ungrid ( http://chrisnager.github.io/ungrid/ )  */
-@media (min-width: 50em) {
+@media (min-width: 60em) {
   .row {
     /* No margin-right: http://www.smashingmagazine.com/2009/07/27/the-definitive-guide-to-using-negative-margins/ */
     width: calc(100% + 2 * 0.6em);

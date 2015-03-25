@@ -15,7 +15,7 @@ nav {
 
   // Make it look like a hovering bar
   background: #fff;
-  box-shadow: 0 0 .6em rgba($black, 3 * $picnic-transparency);
+  box-shadow: 0 0 .6em rgba($picnic-black, 3 * $picnic-transparency);
   z-index: 10;
 
   // Everything happens slow-ish  
@@ -42,7 +42,7 @@ nav {
     padding: 0 .6em;
     max-width: 50%;
     white-space: nowrap;
-    color: $black;
+    color: $picnic-black;
 
     * {
       vertical-align: middle;
@@ -58,6 +58,10 @@ nav {
     height: calc(100% - 1px);
     padding: 0;
     line-height: 2.4em;
+    }
+
+  .menu > * {
+    margin-right: .3em;
     }
   }
 
@@ -86,7 +90,7 @@ nav {
       right: 0;
       bottom: -1000em;
       margin: 0;
-      background: $white;
+      background: $picnic-white;
       transition: all .3s ease;
       transform: none;
       }
@@ -107,13 +111,13 @@ nav {
 
     .menu > * {
       display: block;
-      margin: $picnic-separation;
+      margin: $picnic-separation / 2;
       width: calc(100% - 1em);
       text-align: left;
       }
 
     .menu > a {
-      padding: $picnic-padding * 1.5 $picnic-padding * 3;
+      padding: $picnic-separation / 2 $picnic-separation * 1.5;
       }
     }
   }

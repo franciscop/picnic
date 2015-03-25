@@ -11,7 +11,7 @@ gulp.task('default', ['build'], function() {});
 // MAIN BUILD
 // Create the latest versions
 gulp.task('build', function() {
-	return gulp.src('./src/picnic_3_1.scss')
+	return gulp.src('./src/picnic_3_2.scss')
 		.pipe(sass())
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions'],

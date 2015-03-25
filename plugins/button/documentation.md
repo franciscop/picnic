@@ -34,7 +34,6 @@ The default color is dark blue. There are 5 colors:
     <button class="dull">Dull</button>
 
 
-
 ## Types
 
 There are different button types for different situations. These are.
@@ -43,9 +42,9 @@ There are different button types for different situations. These are.
 <button>Button</button>
 <a class="button">Link</a>
 <input value="Submit" type="submit">
-<label class="toggle">
-<input type="checkbox">
-<span>Toggle</span>
+<label>
+<input class="toggle" type="checkbox">
+<span class="button">Toggle</span>
 </label>
 </p>
 
@@ -142,7 +141,8 @@ To change the color of the pseudo-color on hover:
 
 <style>
     .pseudoCool:hover,
-    .pseudoCool:active {
+    .pseudoCool:active,
+    .pseudoCool:focus {
         background: #cff;
     }
 </style>
@@ -152,7 +152,8 @@ To change the color of the pseudo-color on hover:
 
 
     .pseudoCool:hover,
-    .pseudoCool:active {
+    .pseudoCool:active,
+    .pseudoCool:focus {
         background: #cff;
     }
 
