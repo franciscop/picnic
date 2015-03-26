@@ -1,5 +1,5 @@
 // Label of text
-$picnic-label-padding: $picnic-separation * .8 $picnic-separation * 1.8;
+$picnic-label-padding: $picnic-separation / 2 $picnic-separation * 1.5;
 
 // Styles
 .label {
@@ -13,7 +13,6 @@ $picnic-label-padding: $picnic-separation * .8 $picnic-separation * 1.8;
   border: 0;
   border-radius: $picnic-radius;
   width: auto;
-  line-height: normal;
 
   -webkit-touch-callout: none;
   -webkit-user-select: none;
