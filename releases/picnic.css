@@ -372,14 +372,13 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
   display: inline-block;
   text-align: center;
   margin: 0;
-  padding: 0.48em 1.08em;
+  padding: 0.3em 0.9em;
   vertical-align: middle;
   background: #0074d9;
   color: #fff;
   border: 0;
   border-radius: 0.2em;
   width: auto;
-  line-height: normal;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -513,13 +512,12 @@ input:focus, textarea:focus, [type=file]:hover, [type=color]:hover, .select sele
 
 .radio input + *:before, .checkbox input + *:before {
   content: '\2714';
-  /* Tick */
   display: inline-block;
   font-size: 0.8em;
   width: 0.9em;
   height: 0.9em;
   line-height: 0.9em;
-  margin: 0 0.48em 0 0.375em;
+  margin: 0 0.48em 0 0;
   color: transparent;
   background: #fff;
   border: 1px solid #aaa; }

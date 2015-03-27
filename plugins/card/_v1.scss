@@ -1,33 +1,20 @@
 // Card
 // This represents a self-contained, replicable entity
-
-
-// Variables
-$picnic-card-shadow: 0 0 $picnic-separation rgba($picnic-black, 2 * $picnic-transparency) !default;
-$picnic-card-border: 0 !default;
-$picnic-card-padding: $picnic-separation !default;
-
-
-
-// Styles
-
 // http://8gramgorilla.com/mastering-sass-extends-and-placeholders/
 .card,
 %card {
-  box-shadow: $picnic-card-shadow;
+  box-shadow: 0 0 $picnic-separation rgba($black, 2 * $picnic-transparency);
   border-radius: $picnic-radius;
-  border: $picnic-card-border;
   overflow: hidden;
-  margin: $picnic-separation / 2;
+  margin: $picnic-margin;
   text-align: left;
-  background: $picnic-white;
-  padding: $picnic-card-padding;
+  background: $white;
 
   // Make sure that nothing overflows
   > * {
-    width: 100%;
+    max-width: 100%;
     display: block;
-  }
+    }
 
   h1,
   h2,
@@ -36,26 +23,29 @@ $picnic-card-padding: $picnic-separation !default;
   h5,
   h6 {
     padding: 0;
-    margin: $picnic-separation / 2 0;
-  }
+    }
 
-  header *:first-child {
-    margin-top: 0;
-  }
-
-  footer *:last-child {
-    margin-bottom: 0;
-  }
+  header,
+  footer,
+  section,
+  .spaced {
+    margin: $picnic-margin;
+    }
 
   p {
-    margin: $picnic-separation / 2 0;
+    margin: $picnic-margin 0;
     }
 
   footer {
     overflow: auto;
+  
+    .button {
+      margin: 0;
+      }
 
     .error {
       float: right;
       }
     }
   }
+

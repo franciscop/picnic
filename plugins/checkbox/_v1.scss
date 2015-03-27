@@ -4,5 +4,5 @@
 }
 
 .checkbox input:checked + *:before {
-    color: lighten($picnic-black, $picnic-color-variation);
+    color: lighten($black, $picnic-color-variation);
 }

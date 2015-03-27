@@ -26,8 +26,8 @@
     position: fixed;
     margin: 0;
     border-radius: 0;
-    background: rgba($black, 3 * $picnic-transparency);
-    transition: $picnic-transition-slow;
+    background: rgba($picnic-black, 3 * $picnic-transparency);
+    transition: $picnic-transition;
     z-index: 99;
 
     // All of the elements that follow the overlay (the modals)
@@ -35,6 +35,8 @@
 
       // They are of type .card (see /plugins/card ) 
       @extend %card;
+
+      border: 0;
       
       // Position it in the middle of the screen on top of everything
       position: fixed;
@@ -42,10 +44,10 @@
       left: 50%;
       transform: translateX(-50%) translateY(-50%) scale(.2, .2);
       z-index: 100;
-      padding: $picnic-padding;
+      padding: $picnic-separation / 2;
 
       // Hiding effect
-      transition: $picnic-transition-slow;
+      transition: $picnic-transition;
       }
     }
 
@@ -57,7 +59,7 @@
       display: block;
       opacity: 1;
       max-height: 10000px;
-      transition: $picnic-transition-slow;
+      transition: $picnic-transition;
     }
 
     // This position is only for the modal, not for the overlay
@@ -73,7 +75,7 @@
   header,
   footer,
   section {
-    padding: $picnic-padding;
+    padding: $picnic-separation / 2;
   }
 
   // The first part from the modal

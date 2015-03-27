@@ -1,0 +1,8 @@
+.checkbox input + *:before {
+  border-radius: $picnic-radius;
+  text-align: right;
+  }
+
+.checkbox input:checked + *:before {
+  color: lighten($picnic-black, $picnic-color-variation);
+  }
