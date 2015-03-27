@@ -3,6 +3,6 @@
   "name": "Radiobutton",
   "install": "[included]",
   "dependencies": [
-    "radiocheckbox/v1"
+    "radiocheckbox/v2"
     ]
 }
