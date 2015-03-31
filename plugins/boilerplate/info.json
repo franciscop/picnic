@@ -1,0 +1,14 @@
+{
+  "id": "boilerplate",
+  "version": "1",
+  "picnic": "3.x",
+  "name": "Boilerplate",
+  "install": "[included]",
+  "partial": false,
+  "dependencies": [
+    "card/v2"
+    ],
+  "test": [
+    "test.html"
+    ]
+}

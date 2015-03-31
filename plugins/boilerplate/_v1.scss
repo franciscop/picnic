@@ -1,0 +1,47 @@
+// Boilerplate plugin
+
+
+// Variables
+// Explanation of how the first variable is going to be used
+$picnic-boilerplate-color: #fff;
+
+// Explanation of how the second variable is going to be used
+$picnic-boilerplate-margin: 0;
+
+// ...
+
+
+
+// Styles
+// It is preferred to only use one top-level class or element
+// It can be combined with other, specific classes with &.another
+.boilerplate {
+
+  // Plugin-specific styles
+  background: $picnic-warning;
+  color: $picnic-white;
+  transition: $picnic-transition;
+  padding: $picnic-separation;
+  margin-bottom: $picnic-separation * 3;
+  cursor: pointer;
+
+
+  // Variations of the plugin
+  &.warning {
+    background: $picnic-warning;
+    }
+
+
+  // Pseudo selectors
+  &:hover {
+    background: $picnic-primary;
+    }
+
+
+  // Styles for some children elements
+  a {
+    text-decoration: none;
+    color: $picnic-primary;
+    }
+  }
+
