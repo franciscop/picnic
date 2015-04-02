@@ -1,4 +1,4 @@
-<link href="/nut/raw+card+modal.fresh.css" rel="stylesheet">
+<link href="/nut/raw+modal_2.fresh.css" rel="stylesheet">
 
 # Modal
 
