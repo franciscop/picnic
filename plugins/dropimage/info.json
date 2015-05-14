@@ -1,0 +1,11 @@
+{
+  "id": "dropimage",
+  "version": "1",
+  "picnic": "3.x",
+  "name": "Dropimage",
+  "install": "[included]",
+  "partial": false,
+  "test": [
+    "test.html"
+    ]
+}

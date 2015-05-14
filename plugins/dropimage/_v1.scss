@@ -1,0 +1,50 @@
+// Dropimage plugin
+
+
+// Variables
+// Height for the image plugin
+$picnic-dropimage-height: 200px !default;
+
+
+
+// Styles
+// It is preferred to only use one top-level class or element
+// It can be combined with other, specific classes with &.another
+.dropimage {
+
+  display: block;
+  position: relative;
+  height: $picnic-dropimage-height;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  border: $picnic-border;
+
+
+  // Variations of the plugin
+  &.loaded {
+    border: 0;
+  }
+
+  // Subelements
+  input {
+    float: left;
+    width: 100%;
+    height: 0;
+    padding: 0 0 200px;
+    border: 0;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    z-index: 5;
+    }
+
+  img {
+    margin: 100px 0 0;
+    width: 100%;
+    min-height: 200px;
+    transform: translateY(-50%);
+    transition: all .3s ease;
+    }
+  }
+

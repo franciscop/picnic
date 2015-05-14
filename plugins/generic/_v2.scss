@@ -42,16 +42,22 @@ a {
 
 
 // The <pre> doesn't have a nice style from Normalize.css
-pre {
-  text-align: left;
-  padding: .3em;
-  background: #eee;
-  }
 
 code {
-  padding: 3px 5px;
+  padding: $picnic-separation / 2 $picnic-separation;
   font-size: .8em;
-  background: #eee;
+  background: #f5f5f5;
+  }
+
+pre {
+  text-align: left;
+  padding: $picnic-separation / 2 $picnic-separation;
+  background: #f5f5f5;
+  border-radius: $picnic-radius;
+
+  code {
+    padding: 0;
+    }
   }
 
 blockquote {
