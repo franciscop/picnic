@@ -1,6 +1,6 @@
 {
   "name": "picnic",
-  "version": "3.4.0",
+  "version": "3.4.1",
   "description": "Semantic HTML5 & nice CSS3",
   "engines": {
     "node": "0.10.x"
