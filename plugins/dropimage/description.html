@@ -12,13 +12,15 @@
 </div>
 
 <script>
-  [].forEach.call(document.querySelectorAll('.dropimage'), function(img) {
-    img.onchange = function(e){
-      var inputfile = this, reader = new FileReader();
-      reader.onloadend = function(){
-        inputfile.style['background-image'] = 'url(' + reader.result + ')';
+  window.onload = function(){
+    [].forEach.call(document.querySelectorAll('.dropimage'), function(img){
+      img.onchange = function(){
+        var inputfile = this, reader = new FileReader();
+        reader.onloadend = function(){
+          inputfile.style['background-image'] = 'url('+reader.result+')';
+        }
+        reader.readAsDataURL(e.target.files[0]);
       }
-      reader.readAsDataURL(e.target.files[0]);
-    }
-  });
+    });
+  };
 </script>
