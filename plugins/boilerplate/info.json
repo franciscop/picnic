@@ -4,7 +4,7 @@
   "picnic": "3.x",
   "name": "Boilerplate",
   "install": "[included]",
-  "partial": false,
+  "partial": true,
   "dependencies": [
     "card/v2"
     ],
