@@ -2,8 +2,12 @@ var express = require('express');
 var path = require('path');
 var compress = require('compression');
 var controller = require('./web/controller');
+var info = require('./package.json');
 
 var app = express();
+
+// Pass the info to all of the
+app.locals.info = info;
 
 app.set('views', path.join(__dirname, 'web/views'));
 app.set('view engine', 'jade');
