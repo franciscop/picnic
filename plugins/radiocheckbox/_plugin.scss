@@ -1,0 +1,40 @@
+.radio,
+.checkbox {
+  position: relative;
+  display: inline-block;
+  min-width: 1em;
+  min-height: 1.25em;
+  line-height: 1em;
+  margin: .1em 0 -.1em;
+  outline: 0 none;
+  vertical-align: middle;
+  cursor: pointer;
+  }
+
+.radio input + *:before,
+.checkbox input + *:before {
+  content: '\2714';           // Tick
+  display: inline-block;
+  font-size: .8em;
+  width: .9em;
+  height: .9em;
+  line-height: .9em;
+  // Gives it the same margin as other elements with font = 1em
+  margin: 0 $picnic-separation * .8 0 0;
+  color: transparent;
+  background: $picnic-white;
+  border: $picnic-border;
+  }
+
+.checkbox input:focus + *:before,
+.checkbox input:hover + *:before,
+.radio input:focus + *:before,
+.radio input:hover + *:before {
+  border-color: $picnic-primary;
+}
+
+.radio input,
+.checkbox input {
+  opacity: 0;
+  position: absolute;
+}

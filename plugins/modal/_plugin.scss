@@ -1,0 +1,116 @@
+.modal {
+  text-align: center;
+
+  // This is the elemet that allows for show/hide without requiring javascript
+  > input {
+
+    // The input is only for functionality, so hide it
+    display: none;
+
+    ~ * {
+
+      // By default, they are not visible
+      opacity: 0;
+      
+      // Also hide it from any iteraction
+      max-height: 0;
+      overflow: hidden;
+    }
+  }
+
+  .overlay {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    margin: 0;
+    border-radius: 0;
+    background: rgba($picnic-black, 3 * $picnic-transparency);
+    transition: $picnic-transition;
+    z-index: 99;
+
+    // All of the elements that follow the overlay (the modals)
+    ~ * {
+
+      // They are of type .card (see /plugins/card ) 
+      @extend %card;
+
+      border: 0;
+      
+      // Position it in the middle of the screen on top of everything
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translateX(-50%) translateY(-50%) scale(.2, .2);
+      transform: translateX(-50%) translateY(-50%) scale(.2, .2);
+      z-index: 100;
+      padding: $picnic-separation / 2;
+
+      // Hiding effect
+      transition: $picnic-transition;
+      }
+    }
+
+  // When the checkbox is checked (modal should be showing)
+  > input:checked {
+
+    // All the visible elements
+    ~ * {
+      display: block;
+      opacity: 1;
+      max-height: 10000px;
+      transition: $picnic-transition;
+    }
+
+    // This position is only for the modal, not for the overlay
+    // It says: grab everything that is after the overlay after the input
+    ~ .overlay ~ * {
+      max-height: 90%;
+      overflow: auto;
+      -webkit-transform: translateX(-50%) translateY(-50%) scale(1, 1);
+      transform: translateX(-50%) translateY(-50%) scale(1, 1);
+    }
+  }
+
+
+  header,
+  footer,
+  section {
+    padding: $picnic-separation / 2;
+  }
+
+  // The first part from the modal
+  header {
+    font-weight: bold;
+    position: relative;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      display: inline-block;
+      margin-right: 2em;
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: .2em;
+    right: 0;
+    margin-right: $picnic-separation;
+    cursor: pointer;
+
+    &:hover {
+      color: $picnic-error;
+    }
+  }
+}
+
+@media (max-width: $picnic-breakpoint) {
+  .modal .overlay ~ * {
+    min-width: 90%;
+  }
+}

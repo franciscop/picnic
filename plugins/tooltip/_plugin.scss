@@ -1,0 +1,132 @@
+// Variables for the tooltips
+$picnic-tooltip-background: $picnic-black;
+$picnic-tooltip-size: .8em;
+
+
+// Only display the tooltip for elements with <element data-tooltip="blabla">
+[data-tooltip] {
+  position: relative;
+
+  &:after,
+  &:before {
+    // Position
+    position: absolute;
+
+    // Hide it by default
+    opacity: 0;
+    border-width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+
+    // Transition
+    transition: opacity .6s ease, height 0s ease .6s;
+
+    // Bottom one (default)
+    top: 85%;
+    left: 0;
+    margin-top: 12px;
+    }
+
+  // This is the acutal label-like element
+  &:after {
+
+    // Style
+    @extend .label;
+    font-size: $picnic-tooltip-size;
+    background: $picnic-tooltip-background;
+
+    // Content
+    content: attr(data-tooltip);
+
+    // Behaviour
+    white-space: nowrap;
+    }
+
+  // This is the small arrow
+  &:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-width: 0;
+    border-style: solid;
+
+    // Bottom one (default)
+    border-color: transparent transparent $picnic-tooltip-background;
+    margin-top: 0;
+    left: 15px;
+    }
+
+  &:hover:after,
+  &:focus:after,
+  &:hover:before,
+  &:focus:before {
+    opacity: 1;
+    border-width: 6px;
+    height: auto;
+    }
+
+  &:hover:after,
+  &:focus:after {
+    padding: $picnic-separation * .75 $picnic-separation * 1.5;
+    }
+  }
+
+
+
+// Top
+.tooltip-top {
+  &:after,
+  &:before {
+    top: auto;
+    bottom: 85%;
+    left: 0;
+    margin-bottom: 12px;
+    }
+
+  &:before {
+    border-color: $picnic-tooltip-background transparent transparent;
+    margin-bottom: 0;
+    left: 15px;
+    }
+  }
+
+// Right
+.tooltip-right {
+  &:after,
+  &:before {
+    left: 100%;
+    margin-left: 6px;
+    margin-top: 0;
+    top: 0;
+    }
+
+  &:before {
+    border-color: transparent $picnic-tooltip-background transparent transparent;
+    margin-left: -6px;
+    left: 100%;
+    top: 7px;
+    }
+  }
+
+// Left
+.tooltip-left {
+  &:after,
+  &:before {
+    right: 100%;
+    margin-right: 6px;
+    left: auto;
+    margin-top: 0;
+    top: 0;
+    }
+
+  &:before {
+    border-color: transparent transparent transparent $picnic-tooltip-background;
+    margin-right: -6px;
+    right: 100%;
+    top: 7px;
+    }
+  }
+
+
+

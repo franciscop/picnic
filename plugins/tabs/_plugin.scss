@@ -1,0 +1,11 @@
+.tab {
+  display: none;
+
+  + * {
+    display: none;
+    }
+
+  &:checked + * {
+    display: block;
+    }
+  }

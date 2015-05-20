@@ -1,0 +1,12 @@
+// Fontello
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  margin: 0 $picnic-separation 0 0;
+  }
+
+// Nice fontello trick from Ronen Ackerman ( http://stackoverflow.com/a/17561467 )
+// Note: purposefully avoiding lint
+i[class^="icon-"]:before,
+i[class*=" icon-"]:before {
+  margin: 0;
+  }
