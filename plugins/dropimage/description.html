@@ -14,7 +14,7 @@
 <script>
   window.onload = function(){
     [].forEach.call(document.querySelectorAll('.dropimage'), function(img){
-      img.onchange = function(){
+      img.onchange = function(e){
         var inputfile = this, reader = new FileReader();
         reader.onloadend = function(){
           inputfile.style['background-image'] = 'url('+reader.result+')';
