@@ -562,14 +562,12 @@ th {
 tr:nth-child(even) {
   background: rgba(0, 0, 0, 0.05); }
 
-/* From ungrid ( http://chrisnager.github.io/ungrid/ )  */
 @media (min-width: 60em) {
   .row {
-    /* No margin-right: http://www.smashingmagazine.com/2009/07/27/the-definitive-guide-to-using-negative-margins/ */
     width: calc(100% + 2 * 0.6em);
     display: table;
     table-layout: fixed;
-    border-spacing: 0.6em 0px;
+    border-spacing: 0.6em 0;
     margin-left: -0.6em;
     margin-bottom: 0.6em; }
   .row > * {

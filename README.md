@@ -10,6 +10,8 @@ Include the following line in your `<head>`:
 
     <link href="http://www.picnicss.com/nut/picnic_3.min.css" rel="stylesheet">
 
+You can also [try it live in Codepen](http://codepen.io/FranciscoP/pen/ZGpzbL?editors=110).
+
 Alternatively:
 
 With bower: `bower install picnic`

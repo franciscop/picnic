@@ -1,5 +1,3 @@
-/* Operative variables */
-/* Normalize.css (external library) */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -151,7 +149,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -258,19 +255,6 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
   height: auto; }
 
 /**
- * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
- *    (include `-moz` to future-proof).
- */
-input[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  /* 2 */
-  box-sizing: content-box; }
-
-/**
  * Remove inner padding and search cancel button in Safari and Chrome on OS X.
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
@@ -321,188 +305,192 @@ table {
 td, th {
   padding: 0; }
 
-/* Operative variables */
-/* Style by default the <button>, <input type="submit">, etc? */
-/* Not fully implemented */
-/* Make buttons and other things slightly 3d */
-/* Media query breakpoints */
-/* Default element styles */
-/* Define the transitions */
-/* Colors */
-/* Default grid gutter */
-/* Border */
-/* Generic styles for things like <body>, <a> and others
-   It also overwrites normalize.css a bit */
 * {
-  box-sizing: border-box; }
+  box-sizing: inherit; }
 
 html, body {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
   height: 100%; }
 
-/* Delete the outline when links are active */
 body {
-  color: #333;
+  color: #111;
   font-size: 1.1em;
   line-height: 1.5em;
-  background: #FFF; }
+  background: #fff; }
 
-/* Hide the default focus effect */
 :focus {
   outline: none; }
 
-h1 {
-  line-height: 1.5em; }
-
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  padding: 0.9em 0 0.6em; }
+  padding: 0.6em 0; }
 
 li {
   margin: 0 0 0.3em; }
 
-/* The <pre> doesn't have a nice style from Normalize.css */
-pre {
-  text-align: left;
-  border: rgba(0, 0, 0, 0.1);
-  background: rgba(0, 0, 0, 0.05);
-  padding: 0.3em; }
+a {
+  color: #0074d9;
+  text-decoration: none; }
 
 code {
-  background: #EEE;
-  padding: 3px 5px;
-  font-size: 0.8em; }
+  padding: 0.3em 0.6em;
+  font-size: 0.8em;
+  background: #f5f5f5; }
+
+pre {
+  text-align: left;
+  padding: 0.3em 0.6em;
+  background: #f5f5f5;
+  border-radius: 0.2em; }
+  pre code {
+    padding: 0; }
 
 blockquote {
   padding: 0 0 0 1em;
   margin: 0 0 0 0.1em;
-  box-shadow: inset 5px 0px rgba(0, 0, 0, 0.3); }
+  box-shadow: inset 5px 0 rgba(17, 17, 17, 0.3); }
 
-/* Nice fontello trick from Ronen Ackerman ( http://stackoverflow.com/a/17561467 ) */
+label {
+  cursor: pointer; }
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  margin: 0 0.6em 0 0; }
+
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
   margin: 0; }
 
-/* Simple elements */
-a {
-  color: #0074D9;
-  text-decoration: none; }
-
-/* BUTTONS */
-.button, button, input[type='submit'], input[type='button'], input[type='image'], input[type='reset'], .toggle input + * {
+.label, .button, button, [type='submit'], [type='button'], [type='image'], [type='reset'], .pseudo {
   display: inline-block;
-  height: 2em;
-  line-height: 2em;
-  margin: 0.3em;
-  padding: 0 0.9em;
+  text-align: center;
+  margin: 0;
+  padding: 0.3em 0.9em;
   vertical-align: middle;
-  background: #0074D9;
-  color: #FFF;
+  background: #0074d9;
+  color: #fff;
   border: 0;
   border-radius: 0.2em;
-  cursor: pointer;
-  transition: all 0.1s ease, box-shadow 0s ease;
-  box-shadow: inset 0 0 0 100em transparent, inset 0 -0.2em rgba(0, 0, 0, 0.3); }
+  width: auto;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .label.success, .success.button, button.success, .success[type='submit'], .success[type='button'], .success[type='image'], .success[type='reset'], .success.pseudo {
+    background: #2ecc40; }
+  .label.warning, .warning.button, button.warning, .warning[type='submit'], .warning[type='button'], .warning[type='image'], .warning[type='reset'], .warning.pseudo {
+    background: #ff851b; }
+  .label.error, .error.button, button.error, .error[type='submit'], .error[type='button'], .error[type='image'], .error[type='reset'], .error.pseudo {
+    background: #ff4136; }
+  .label.dull, .dull.button, button.dull, .dull[type='submit'], .dull[type='button'], .dull[type='image'], .dull[type='reset'], .dull.pseudo {
+    background: #aaa; }
+  .label.pseudo, .pseudo.button, button.pseudo, .pseudo[type='submit'], .pseudo[type='button'], .pseudo[type='image'], .pseudo[type='reset'], .pseudo {
+    background: transparent;
+    color: #111; }
 
-/* Interactivity */
-.button:hover, button:hover, input[type='submit']:hover, input[type='button']:hover, input[type='image']:hover, input[type='reset']:hover, .button:focus, button:focus, input[type='submit']:focus, input[type='button']:focus, input[type='image']:focus, input[type='reset']:focus, .toggle input:focus + * {
-  box-shadow: inset 0 0 0 100em rgba(0, 0, 0, 0.1);
-  height: 1.9em;
-  margin-top: 0.4em;
-  box-shadow: inset 0 0 0 100em rgba(0, 0, 0, 0.1), inset 0 -0.1em rgba(0, 0, 0, 0.3); }
-
-.button:active, button:active, input[type='submit']:active, input[type='button']:active, input[type='image']:active, input[type='reset']:active, .toggle input:active + *, .toggle input:checked + * {
-  box-shadow: inset 0 0 0 100em rgba(0, 0, 0, 0.3);
-  height: 1.8em;
-  margin-top: 0.5em;
-  box-shadow: inset 0 0 0 100em rgba(0, 0, 0, 0.3), inset 0 0.1em 0.1em rgba(0, 0, 0, 0.3); }
-
-/* Toggle button */
-.toggle input {
-  opacity: 0;
-  z-index: -10;
-  position: absolute; }
-
-/* Colors */
-.button.success, button.success, input.success[type='submit'], input.success[type='button'], input.success[type='image'], input.success[type='reset'], .toggle.success input + * {
-  background: #2ecc40; }
-
-.button.warning, button.warning, input.warning[type='submit'], input.warning[type='button'], input.warning[type='image'], input.warning[type='reset'], .toggle.warning input + * {
-  background: #FF851B; }
-
-.button.error, button.error, input.error[type='submit'], input.error[type='button'], input.error[type='image'], input.error[type='reset'], .toggle.error input + * {
-  background: #FF4136; }
-
-.button.dull, button.dull, input.dull[type='submit'], input.dull[type='button'], input.dull[type='image'], input.dull[type='reset'], .toggle.dull input + * {
-  background: #AAA; }
-
-/* This allows the invasiveness */
-/* Forms */
-/* Browser treats unknow type as "text", so we'll do the same */
-input, textarea {
-  line-height: 1.5em;
-  margin: 0.3em;
-  padding: 0.3em 0.65em;
-  border: 1px solid #AAA;
-  border-radius: 0.2em;
-  transition: all 0.3s ease; }
-
-input[type=file], input[type=color] {
-  padding: 0.3em;
+.button, button, [type='submit'], [type='button'], [type='image'], [type='reset'], .pseudo {
+  transition: all 0.2s ease;
   cursor: pointer; }
 
-input:focus, textarea:focus, input[type=file]:hover, input[type=color]:hover, input:invalid:focus, .select select:focus, .select select:hover {
-  border-color: #7FDBFF;
-  transition: all 0.3s ease;
-  box-shadow: 0.1em 0.1em 0 rgba(0, 0, 0, 0.3); }
+.button:hover, button:hover, [type='submit']:hover, [type='button']:hover, [type='image']:hover, [type='reset']:hover, .pseudo:hover, .button:focus, button:focus, [type='submit']:focus, [type='button']:focus, [type='image']:focus, [type='reset']:focus, .pseudo:focus, .toggle:focus + * {
+  box-shadow: inset 0 0 0 100em rgba(255, 255, 255, 0.2); }
 
-/* Validation */
-input:focus:invalid, textarea:focus:invalid {
-  box-shadow: none;
-  border-color: #FF4136; }
+.pseudo:hover, .pseudo:focus, .toggle:focus + .pseudo {
+  box-shadow: inset 0 0 0 100em rgba(17, 17, 17, 0.1); }
 
-/* Reset the style for those that we actually know */
-input[type=radio]:focus, input[type=checkbox]:focus, input[type=range]:focus {
+.button:active, button:active, [type='submit']:active, [type='button']:active, [type='image']:active, [type='reset']:active, .pseudo:active, .toggle:checked + *, .toggle:focus:checked + .button, .toggle:focus:checked + button, .toggle:focus:checked + [type='submit'], .toggle:focus:checked + [type='button'], .toggle:focus:checked + [type='image'], .toggle:focus:checked + [type='reset'], .toggle:focus:checked + .pseudo {
+  box-shadow: inset 0 0 0 100em rgba(17, 17, 17, 0.2); }
+
+.toggle {
+  opacity: 0;
+  z-index: -10;
+  width: 0;
+  position: absolute; }
+
+input, textarea {
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0.3em 0.6em;
+  border: 1px solid #aaa;
+  border-radius: 0.2em;
+  transition: all 0.2s ease;
+  width: 100%; }
+
+input {
+  height: 2.2em; }
+
+[type=file], [type=color] {
+  padding: 0.3em 0.6em;
+  cursor: pointer; }
+
+input:focus, textarea:focus, [type=file]:hover, [type=color]:hover, .select select:focus, .select select:hover {
+  outline: 0;
+  border-color: #0074d9;
+  transition: all 0.2s ease, outline 0; }
+
+[type=radio]:focus, [type=checkbox]:focus, [type=range]:focus {
   box-shadow: none;
   border-color: initial; }
 
 .select {
   position: relative;
   display: inline-block;
-  border: 1px solid #AAA;
+  margin: 0;
+  border-radius: 0.2em;
+  width: 100%;
+  height: 2.2em; }
+  .select select {
+    background: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid #aaa;
+    border-radius: 0.2em;
+    cursor: pointer;
+    width: 100%;
+    height: 2.2em;
+    box-sizing: border-box;
+    padding: 0.3em 0.45em;
+    transition: outline 0 ease; }
+    .select select:focus {
+      outline: none;
+      transition: outline 0 ease; }
+    .select select:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 #111; }
+    .select select option {
+      font-size: inherit;
+      padding: 0.3em 0.45em; }
+
+.select:before {
+  background: #fff;
+  content: '';
+  display: block;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  bottom: 1px;
+  width: 30px;
+  height: calc(100% - 2px);
+  pointer-events: none;
   border-radius: 0.2em; }
 
 .select:after {
-  padding: 1.2% 0 0 0;
-  background: #FFF;
-  content: "\25BC";
+  background: transparent;
+  content: '\25BC';
   display: block;
   position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 2.3em;
-  pointer-events: none;
-  font-size: 0.8em;
-  line-height: 2.3em;
+  right: 1px;
+  top: 1px;
+  bottom: 1px;
+  padding: 0;
+  width: 30px;
   text-align: center;
-  border-radius: 0.2em; }
-
-.select select {
-  padding: 0.23em 0 0.23em 0.23em;
-  background: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  border: none;
-  min-width: 14em;
-  border-radius: 0.2em;
-  cursor: pointer; }
-
-.select select:-moz-focusring {
-  color: transparent;
-  text-shadow: 0 0 0 #333; }
-
-.select select option {
-  padding: 0.2em 0.5em; }
+  font-size: 0.8em;
+  height: calc(100% - 2px);
+  line-height: 2.75em;
+  pointer-events: none; }
 
 .radio, .checkbox {
   position: relative;
@@ -511,25 +499,24 @@ input[type=radio]:focus, input[type=checkbox]:focus, input[type=range]:focus {
   min-height: 1.25em;
   line-height: 1em;
   margin: 0.1em 0 -0.1em;
-  outline: 0px none;
+  outline: 0 none;
   vertical-align: middle;
   cursor: pointer; }
 
 .radio input + *:before, .checkbox input + *:before {
-  content: "\2714";
-  /* Tick */
+  content: '\2714';
   display: inline-block;
   font-size: 0.8em;
   width: 0.9em;
   height: 0.9em;
   line-height: 0.9em;
-  margin: 0 0.48em 0 0.375em;
+  margin: 0 0.48em 0 0;
   color: transparent;
-  background: #FFF;
-  border: 1px solid #AAA; }
+  background: #fff;
+  border: 1px solid #aaa; }
 
 .checkbox input:focus + *:before, .checkbox input:hover + *:before, .radio input:focus + *:before, .radio input:hover + *:before {
-  border-color: #7fdbff; }
+  border-color: #0074d9; }
 
 .radio input, .checkbox input {
   opacity: 0;
@@ -540,284 +527,228 @@ input[type=radio]:focus, input[type=checkbox]:focus, input[type=range]:focus {
   text-align: right; }
 
 .checkbox input:checked + *:before {
-  color: #555; }
+  color: #2b2b2b; }
 
 .radio input + *:before {
   border-radius: 100em; }
 
 .radio input:checked + *:before {
-  box-shadow: inset 0 0 0 0.2em #FFF, inset 0 0 0 100em #555; }
+  box-shadow: inset 0 0 0 0.2em #fff, inset 0 0 0 100em #2b2b2b; }
 
-/* Components */
+table {
+  text-align: left; }
+
 td, th {
   padding: 0.3em 2.4em 0.3em 0.6em; }
 
 th {
   text-align: left;
   font-weight: 900;
-  color: #FFF;
-  background-color: #0074D9; }
+  color: #fff;
+  background-color: #0074d9; }
 
 .success th {
   background-color: #2ecc40; }
 
 .warning th {
-  background-color: #FF851B; }
+  background-color: #ff851b; }
 
 .error th {
-  background-color: #FF4136; }
+  background-color: #ff4136; }
 
 .dull th {
-  background-color: #AAA; }
+  background-color: #aaa; }
 
-/* Zebra stripes */
 tr:nth-child(even) {
   background: rgba(0, 0, 0, 0.05); }
 
-/* From ungrid ( http://chrisnager.github.io/ungrid/ )  */
-@media (min-width: 50em) {
+@media (min-width: 60em) {
   .row {
-    max-width: 100%;
-    width: 100%;
+    width: calc(100% + 2 * 0.6em);
     display: table;
     table-layout: fixed;
-    border-spacing: 10px 0px;
-    margin-left: -10px;
-    /* No margin-right: http://www.smashingmagazine.com/2009/07/27/the-definitive-guide-to-using-negative-margins/ */
-    width: calc(100% + 2 * 10px); }
+    border-spacing: 0.6em 0;
+    margin-left: -0.6em;
+    margin-bottom: 0.6em; }
   .row > * {
     display: table-cell;
-    vertical-align: top; } }
-
-.none {
-  display: none; }
-
-.half {
-  width: 50%; }
-
-.third {
-  width: 33.3333%; }
-
-.two-third {
-  width: 66.6666%; }
-
-.fourth {
-  width: 25%; }
-
-.three-fourth {
-  width: 75%; }
-
-.fifth {
-  width: 20%; }
-
-.two-fifth {
-  width: 40%; }
-
-.three-fifth {
-  width: 60%; }
-
-.four-fifth {
-  width: 80%; }
-
-/* Plugins */
-nav {
-  width: 100%;
-  position: fixed;
-  text-align: center;
-  top: 0;
-  background: #FFF;
-  box-shadow: 0 0 0.6em rgba(0, 0, 0, 0.3);
-  z-index: 10;
-  transition: all 0.3s ease; }
-
-nav.transparent {
-  box-shadow: none;
-  background: none; }
-
-nav.transparent a {
-  color: #FFF; }
-
-nav a {
-  color: #333;
-  display: inline-block;
-  font-size: 1em;
-  height: 2em;
-  line-height: 2em;
-  padding: 0.5em 0.6em; }
-
-nav a:hover {
-  color: #0074D9; }
-
-nav a.button:hover {
-  color: #FFF; }
-
-nav .main, nav .menu {
-  margin: 0 0.5em; }
-
-nav .main {
-  font-weight: 700;
-  float: left;
-  max-width: 50%;
-  white-space: nowrap; }
-
-nav .main img {
-  height: 2em; }
-
-nav .menu {
-  float: right; }
-
-.burgercheck, .burgermenu {
-  display: none;
-  cursor: pointer; }
-
-.burgermenu {
-  display: inline-block;
-  position: relative;
-  height: 0.8em;
-  width: 0.4em;
-  margin: 0.35em;
-  display: none; }
-
-.burgermenu:before, .burgermenu:after {
-  display: none;
-  content: " ";
-  width: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  border-style: solid;
-  border-color: #333;
-  border-width: 0.14em 0; }
-
-.burgermenu:after {
-  top: 50%;
-  margin-top: -0.07em; }
-
-@media all and (max-width: 960px) {
-  [class*="icon-"]:before, [class*=" icon-"]:before {
-    display: none; } }
-
-@media all and (max-width: 750px) {
-  [class*="icon-"]:before {
-    display: inline-block; }
-  .burgercheck ~ label:before, .burgercheck ~ label:after {
-    display: block; }
-  .burgercheck ~ label {
-    position: fixed;
-    top: 0;
-    right: 0;
-    display: inline-block;
-    font-size: 2em;
-    line-height: 1.5em;
-    padding-right: 0.5em;
-    text-align: right;
-    transition: all 0.3s ease;
-    /* Avoid the burger menu to display while hiding */
-    transition: display 0s ease 0.3s; }
-  .burgercheck:checked ~ label:before, .burgercheck:checked ~ label:after {
+    vertical-align: top; }
+  .none {
     display: none; }
-  .burgercheck:checked ~ label {
-    margin: 0;
-    right: 70%;
-    width: 30%;
-    height: 100%;
-    transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.7); }
-  nav .menu {
-    position: fixed;
-    width: 70%;
-    height: 100%;
-    right: -70%;
-    top: 0;
-    margin-right: 0;
-    background: #FFF;
-    box-shadow: 0 0 0.6em rgba(0, 0, 0, 0.3);
-    overflow: auto;
-    transition: all 0.3s ease; }
-  .burgercheck:checked ~ .menu {
-    right: 0;
-    transition: all 0.3s ease; }
-  nav .menu a {
-    display: block;
-    text-align: left; }
-  nav .menu .button, nav .menu button, nav .menu input[type='submit'], nav .menu input[type='button'], nav .menu input[type='image'], nav .menu input[type='reset'] {
-    margin: 0.5em;
-    float: left;
-    clear: left; }
-  nav .menu .button:hover, nav .menu button:hover, nav .menu input[type='submit']:hover, nav .menu input[type='button']:hover, nav .menu input[type='image']:hover, nav .menu input[type='reset']:hover {
-    margin: 0.6em 0.5em 0.5em; }
-  nav .menu .button:active, nav .menu button:active, nav .menu input[type='submit']:active, nav .menu input[type='button']:active, nav .menu input[type='image']:active, nav .menu input[type='reset']:active {
-    margin: 0.7em 0.5em 0.5em; }
-  .transparent .menu {
-    color: #333; } }
+  .half {
+    width: 50%; }
+  .third {
+    width: 33.3333%; }
+  .two-third {
+    width: 66.6666%; }
+  .fourth {
+    width: 25%; }
+  .three-fourth {
+    width: 75%; }
+  .fifth {
+    width: 20%; }
+  .two-fifth {
+    width: 40%; }
+  .three-fifth {
+    width: 60%; }
+  .four-fifth {
+    width: 80%; } }
 
-/**
- * Default footer height: 200px
- * Change it, but you'll need some js to make it responsive
- */
-body > footer {
-  color: #FFF;
-  background: #333;
-  margin: -1px 0px;
-  padding: 1px; }
-
-.modal > input {
-  display: none; }
-
-.modal > input ~ * {
-  /* Make it not visible */
-  opacity: 0;
-  /* Also hide it from iteraction */
-  max-height: 0;
-  overflow: hidden;
+nav {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  border-radius: 0.2em;
-  box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.3);
-  background: white;
-  z-index: 10;
-  transition: all 0.3s ease; }
-
-.modal > input:checked + *, .modal > input:checked ~ .overlay {
-  display: block;
-  opacity: 1;
-  max-height: 10000px;
-  transition: all 0.3s ease; }
-
-.modal > input ~ .overlay {
-  transform: none;
   top: 0;
   left: 0;
-  bottom: 0;
   right: 0;
-  position: fixed;
-  background: rgba(0, 0, 0, 0.3);
+  height: 3em;
+  background: #fff;
+  box-shadow: 0 0 0.6em rgba(17, 17, 17, 0.3);
+  z-index: 10;
   transition: all 0.3s ease;
-  z-index: 1; }
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
+  nav .brand, nav .menu, nav .burger {
+    margin: 0 0.5em;
+    float: right;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  nav .brand {
+    font-weight: 700;
+    float: left;
+    padding: 0 0.6em;
+    max-width: 50%;
+    white-space: nowrap;
+    color: #111; }
+    nav .brand * {
+      vertical-align: middle; }
+  nav .logo {
+    height: 2em;
+    margin-right: 0.3em; }
+  nav .select::after {
+    height: calc(100% - 1px);
+    padding: 0;
+    line-height: 2.4em; }
+  nav .menu > * {
+    margin-right: 0.3em; }
 
-.modal header, .modal footer {
+.show, .burger {
+  display: none; }
+
+@media all and (max-width: 60em) {
+  nav .burger {
+    display: inline-block;
+    cursor: pointer;
+    bottom: -1000em; }
+  nav .menu, nav .show:checked ~ .burger {
+    position: fixed;
+    min-height: 100%;
+    width: 0;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: -1000em;
+    margin: 0;
+    background: #fff;
+    transition: all 0.3s ease;
+    -webkit-transform: none;
+    transform: none; }
+  nav .show:checked ~ .burger {
+    color: transparent;
+    width: 100%;
+    border-radius: 0;
+    background: rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease; }
+  nav .show:checked ~ .menu {
+    width: 70%;
+    overflow: auto;
+    transition: all 0.3s ease; }
+  nav .menu > * {
+    display: block;
+    margin: 0.3em;
+    width: calc(100% - 1em);
+    text-align: left; }
+  nav .menu > a {
+    padding: 0.3em 0.9em; } }
+
+.modal {
+  text-align: center; }
+  .modal > input {
+    display: none; }
+    .modal > input ~ * {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden; }
+  .modal .overlay {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    margin: 0;
+    border-radius: 0;
+    background: rgba(17, 17, 17, 0.3);
+    transition: all 0.2s ease;
+    z-index: 99; }
+    .modal .overlay ~ * {
+      border: 0;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translateX(-50%) translateY(-50%) scale(0.2, 0.2);
+      transform: translateX(-50%) translateY(-50%) scale(0.2, 0.2);
+      z-index: 100;
+      padding: 0.3em;
+      transition: all 0.2s ease; }
+  .modal > input:checked ~ * {
+    display: block;
+    opacity: 1;
+    max-height: 10000px;
+    transition: all 0.2s ease; }
+  .modal > input:checked ~ .overlay ~ * {
+    max-height: 90%;
+    overflow: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(1, 1);
+    transform: translateX(-50%) translateY(-50%) scale(1, 1); }
+  .modal header, .modal footer, .modal section {
+    padding: 0.3em; }
+  .modal header {
+    font-weight: bold;
+    position: relative; }
+    .modal header h1, .modal header h2, .modal header h3, .modal header h4, .modal header h5, .modal header h6 {
+      display: inline-block;
+      margin-right: 2em; }
+  .modal .close {
+    position: absolute;
+    top: 0.2em;
+    right: 0;
+    margin-right: 0.6em;
+    cursor: pointer; }
+    .modal .close:hover {
+      color: #ff4136; }
+
+@media (max-width: 60em) {
+  .modal .overlay ~ * {
+    min-width: 90%; } }
+
+.stack, .stack .toggle + * {
   display: block;
-  padding: 0.5em;
-  border-bottom: 1px solid #CCC; }
+  text-align: left;
+  border-radius: 0;
+  width: 100%; }
 
-.modal header {
-  font-weight: bold; }
+.stack:first-child, .stack:first-child .toggle + * {
+  border-top-left-radius: 0.2em;
+  border-top-right-radius: 0.2em; }
 
-.modal footer {
-  border-width: 1px 0 0 0;
-  padding: 0.2em; }
+.stack:last-child, .stack:last-child .toggle + * {
+  border-bottom-left-radius: 0.2em;
+  border-bottom-right-radius: 0.2em; }
 
-.modal header .close {
-  float: right;
-  padding-right: 0.6em;
-  cursor: pointer; }
-
-.modal header .close:hover {
-  color: #FF4136; }
-
-.modal .content {
-  display: block;
-  padding: 0.5em;
-  border-bottom: 1px solid #CCC; }
+input.stack {
+  transition: border-bottom 0 ease 0;
+  border-bottom-width: 0; }
+  input.stack:last-child {
+    border-bottom-width: 1px; }
+  input.stack:focus + input, input.stack:focus + textarea {
+    border-top-color: #0074d9; }
