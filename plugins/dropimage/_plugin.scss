@@ -4,6 +4,8 @@
 // Variables
 // Height for the image plugin
 $picnic-dropimage-height: 200px !default;
+// The ratio for the images (responsive by default)
+$picnic-dropimage-ratio: 16 / 9 !default;
 
 
 
@@ -12,39 +14,31 @@ $picnic-dropimage-height: 200px !default;
 // It can be combined with other, specific classes with &.another
 .dropimage {
 
-  display: block;
+  @extend .button;
+
   position: relative;
-  height: $picnic-dropimage-height;
+  display: block;
+  padding: 0;
+  // Hack from http://stackoverflow.com/a/13976732/938236
+  padding-bottom: percentage(1 / $picnic-dropimage-ratio);
   border-radius: 4px;
   overflow: hidden;
   cursor: pointer;
-  border: $picnic-border;
+  border: 0;
 
-
-  // Variations of the plugin
-  &.loaded {
-    border: 0;
-  }
+  background-color: #eee;
+  background-size: cover;
+  background-position: center center;
 
   // Subelements
   input {
-    float: left;
+    left: 0;
     width: 100%;
-    height: 0;
-    padding: 0 0 200px;
+    height: 100%;
     border: 0;
     margin: 0;
     opacity: 0;
     position: absolute;
-    z-index: 5;
-    }
-
-  img {
-    margin: 100px 0 0;
-    width: 100%;
-    min-height: 200px;
-    transform: translateY(-50%);
-    transition: all .3s ease;
     }
   }
 
