@@ -42,6 +42,7 @@
       position: fixed;
       top: 50%;
       left: 50%;
+      -webkit-transform: translateX(-50%) translateY(-50%) scale(.2, .2);
       transform: translateX(-50%) translateY(-50%) scale(.2, .2);
       z-index: 100;
       padding: $picnic-separation / 2;
@@ -67,6 +68,7 @@
     ~ .overlay ~ * {
       max-height: 90%;
       overflow: auto;
+      -webkit-transform: translateX(-50%) translateY(-50%) scale(1, 1);
       transform: translateX(-50%) translateY(-50%) scale(1, 1);
     }
   }
