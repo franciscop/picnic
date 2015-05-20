@@ -29,7 +29,7 @@ $picnic-select-margin: $picnic-separation / 2;
     transition: outline 0 ease;
 
     &:focus {
-      outline: 0 transparent;
+      outline: none;
       transition: outline 0 ease;
       }
 

@@ -31,8 +31,9 @@ textarea:focus,
 [type=color]:hover,
 .select select:focus,
 .select select:hover {
+  outline: 0;
   border-color: $picnic-primary;
-  transition: $picnic-transition;
+  transition: $picnic-transition, outline 0;
   }
 
 

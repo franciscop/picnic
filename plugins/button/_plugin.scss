@@ -1,0 +1,58 @@
+// Buttons
+
+
+// Variables
+$picnic-button-padding: $picnic-label-padding;
+$picnic-button-hover: inset 0 0 0 100em rgba($picnic-white, 2 * $picnic-transparency);
+$picnic-button-click: inset 0 0 0 100em rgba($picnic-black, 2 * $picnic-transparency);
+$picnic-button-transition: $picnic-transition;
+
+
+
+// Styles
+.button {
+  @extend .label;
+
+  transition: $picnic-button-transition;
+  cursor: pointer;
+  }
+
+// Hover
+.button:hover,
+.button:focus,
+.toggle:focus + * {
+  box-shadow: $picnic-button-hover;
+  }
+
+.pseudo:hover,
+.pseudo:focus,
+.toggle:focus + .pseudo {
+  box-shadow: inset 0 0 0 100em rgba($picnic-black, $picnic-transparency);
+  }
+
+// Click
+.button:active,
+.toggle:checked + *,
+.toggle:focus:checked + .button {
+  box-shadow: $picnic-button-click;
+  }
+
+
+// Hide the checkbox/radio from the toggle button
+.toggle {
+  opacity: 0;
+  z-index: -10;
+  width: 0;
+  position: absolute;
+  }
+
+// This allows the invasiveness
+button,
+[type='submit'],
+[type='button'],
+[type='image'],
+[type='reset'],
+.pseudo {
+  @extend .button;
+  }
+
