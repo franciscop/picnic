@@ -316,7 +316,7 @@ html, body {
 body {
   color: #111;
   font-size: 1.1em;
-  line-height: 1.5em;
+  line-height: 1.5;
   background: #fff; }
 
 :focus {

@@ -48,13 +48,13 @@ There are different button types for different situations. These are.
 </label>
 </p>
 
-    <button>Button</button>
-    <a class="button">Link</a>
-    <input value="Submit" type="submit">
-    <label class="toggle">
-      <input type="checkbox">
-      <span>Toggle</span>
-    </label>
+        <button>Button</button>
+        <a class="button">Link</a>
+        <input value="Submit" type="submit">
+        <label>
+        <input type="checkbox">
+        <span class="toggle button">Toggle</span>
+        </label>
 
 
 ## Pseudo buttons
@@ -74,12 +74,13 @@ Allows for seemingly links to behave as buttons:
 
 </div>
 
-    <button class="pseudo">Button</button>
-    <a class="pseudo button">Link</a>
-    <label class="toggle pseudo">
-        <input type="checkbox">
-        <span>Toggle</span>
-    </label>
+        <button class="pseudo">Button</button>
+        <a class="pseudo button">Link</a>
+
+        <label>
+            <input type="checkbox">
+            <span class="toggle pseudo button">Toggle</span>
+        </label>
 
 
 ## Hack it
