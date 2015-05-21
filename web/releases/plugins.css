@@ -678,17 +678,17 @@ nav {
   nav .menu > a {
     padding: 0.3em 0.9em; } }
 
-.stack, .stack .toggle + * {
+.stack, .stack .toggle {
   display: block;
   text-align: left;
   border-radius: 0;
   width: 100%; }
 
-.stack:first-child, .stack:first-child .toggle + * {
+.stack:first-child, .stack:first-child .toggle {
   border-top-left-radius: 0.2em;
   border-top-right-radius: 0.2em; }
 
-.stack:last-child, .stack:last-child .toggle + * {
+.stack:last-child, .stack:last-child .toggle {
   border-bottom-left-radius: 0.2em;
   border-bottom-right-radius: 0.2em; }
 
@@ -745,6 +745,8 @@ input.stack {
     background: rgba(17, 17, 17, 0.3);
     transition: all 0.2s ease;
     z-index: 99; }
+    .modal .overlay:before, .modal .overlay:after {
+      display: none; }
     .modal .overlay ~ * {
       border: 0;
       position: fixed;
@@ -809,11 +811,11 @@ input.stack {
     position: absolute; }
 
 .tab {
-  display: none; }
-  .tab + * {
-    display: none; }
-  .tab:checked + * {
-    display: block; }
+  display: none;
+  padding: 10px; }
+
+:checked + .tab {
+  display: block; }
 
 [data-tooltip] {
   position: relative; }

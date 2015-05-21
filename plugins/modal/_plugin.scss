@@ -30,6 +30,11 @@
     transition: $picnic-transition;
     z-index: 99;
 
+    &:before,
+    &:after {
+      display: none;
+    }
+
     // All of the elements that follow the overlay (the modals)
     ~ * {
 

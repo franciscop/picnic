@@ -1,6 +1,6 @@
 // Stacking elements one of top of another
 .stack,
-.stack .toggle + * {
+.stack .toggle {
   display: block;
   text-align: left;
   border-radius: 0;
@@ -11,13 +11,13 @@
 // Because if it was border-radius: $picnic-radius $picnic-radius 0 0;
 // then they would all behave as last-child
 .stack:first-child,
-.stack:first-child .toggle + * {
+.stack:first-child .toggle {
   border-top-left-radius: $picnic-radius;
   border-top-right-radius: $picnic-radius;
   }
 
 .stack:last-child,
-.stack:last-child .toggle + * {
+.stack:last-child .toggle {
   border-bottom-left-radius: $picnic-radius;
   border-bottom-right-radius: $picnic-radius;
   }

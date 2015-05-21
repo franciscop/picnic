@@ -143,7 +143,17 @@ module.exports.nut = function(req, res) {
 // Render all of the tests
 module.exports.test = function(req, res){
 
-  res.render("test");
+  function getDirectories(srcpath) {
+    return 
+    }
+
+  var plugins = fs.readdirSync('plugins').filter(function(file) {
+      return fs.existsSync('plugins/' + file + '/test.html');
+      }).map(function(pluginName){
+        return fs.readFileSync('plugins/' + pluginName + '/test.html');
+      });
+
+  res.render("test", { plugins: plugins });
   }
 
 

@@ -1,85 +1,118 @@
 <!-- Testing the module -->
-<h2>Button types and colors</h2>
+<h2>Stack</h2>
 
-<div>
-  <button>Button</button>
-  <button class="success">Button</button>
-  <button class="warning">Button</button>
-  <button class="error"  >Button</button>
-  <button class="dull">Button</button>
-</div>
-<div>
-  <a href="#" class="button">Link</a>
-  <a href="#" class="button success">Link</a>
-  <a href="#" class="button warning">Link</a>
-  <a href="#" class="button error">Link</a>
-  <a href="#" class="button dull">Link</a>
-</div>
-<div>
-  <input type="submit" value = "Submit" />
-  <input type="submit" class="success" value="Submit" />
-  <input type="submit" class="warning" value="Submit" />
-  <input type="submit" class="error" value="Submit" />
-  <input type="submit" class="dull" value="Submit" />
-</div>
-<div>
-  <label class="toggle">
-    <input type="checkbox" />
-    <span>Toggle</span>
-  </label>
-  <label class="toggle success">
-    <input type="checkbox" />
-    <span>Toggle</span>
-  </label>
-  <label class="toggle warning">
-    <input type="checkbox" />
-    <span>Toggle</span>
-  </label>
-  <label class="toggle error">
-    <input type="checkbox" />
-    <span>Toggle</span>
-  </label>
-  <label class="toggle dull">
-    <input type="checkbox" />
-    <span>Toggle</span>
-  </label>
+<h3>Buttons stack</h3>
+
+<div class="row">
+  <div>
+    <span class="stack button icon-puzzle">Plugins</span>
+    <span class="stack button icon-picture">Demo</span>
+    <span class="stack button icon-help-circled">Test</span>
+  </div>
+  <div>
+    <label class="stack">
+      <input type="radio" name="stack" checked/>
+      <span class="button toggle icon-puzzle">Plugins</span>
+    </label>
+    <label class="stack">
+      <input type="radio" name="stack" />
+      <span class="button toggle icon-picture">Demo</span>
+    </label>
+    <label class="stack">
+      <input type="radio" name="stack" />
+      <span class="button toggle icon-help-circled">Test</span>
+    </label>
+  </div>
+  <div>
+    <label class="stack">
+      <input type="checkbox" checked/>
+      <span class="button toggle icon-puzzle">Plugins</span>
+    </label>
+    <label class="stack">
+      <input type="checkbox" checked/>
+      <span class="button toggle icon-picture">Demo</span>
+    </label>
+    <label class="stack">
+      <input type="checkbox"/>
+      <span class="button toggle icon-help-circled">Test</span>
+    </label>
+  </div>
+  <div>
+    <span class="stack pseudo button icon-puzzle">Plugins</span>
+    <span class="stack pseudo button icon-picture">Demo</span>
+    <span class="stack pseudo button icon-help-circled">Test</span>
+  </div>
 </div>
 
+<h3>Image stack</h3>
 
-    section.limit
-      h2 Button group
-      div.render.
-        <a class="button group">First</a>
-        <a class="button group">Second</a>
-        <a class="button group">Third</a>
-        <a class="button group warning">Warning</a>
-        
-        <a class="button group">First</a>
-        <a class="button group">Second</a>
-        <a class="button group">Third</a>
-        <a class="button group warning">Warning</a>
-    
-    section.limit
-      h2 Button stack
-      div.render.
-        <div style="width: 150px; margin: 0 auto;">
-          <a class="button stack">Normal</a>
-          <a class="button stack success">Success</a>
-          <a class="button stack warning">Warning</a>
-          <a class="button stack error">Error</a>
-          <a class="button stack dull">Dull</a>
-        </div>
-        <div style="width: 150px; margin: 0 auto;">
-          <label class="toggle stack">
-            <input type="radio" name="stack" />
-            <span>Toggle</span>
-          </label>
-          <label class="toggle stack">
-            <input type="radio" name="stack" />
-            <span>Toggle</span>
-          </label>
-          <label class="toggle stack">
-            <input type="radio" name="stack" />
-            <span>Toggle</span>
-          </label>
-        </div>
+<div class="row">
+  <div>
+    <img class="stack" src="/img/forest.jpg">
+    <a class="stack button">Forest</a>
+  </div>
+  <div>
+    <img class="stack" src="/img/balloon.jpg">
+    <a class="stack button">Balloon</a>
+  </div>
+  <div>
+    <img class="stack" src="/img/lake.jpg">
+    <a class="stack button">Lake</a>
+  </div>
+  <div>
+    <img class="stack" src="/img/halong.jpg">
+    <a class="stack button">Halong bay</a>
+  </div>
+</div>
+
+<h3>Form stack</h3>
+
+<div class="row">
+  <div>
+    <input class="stack" placeholder="Name" />
+    <input class="stack" type="email" placeholder="Email" />
+    <input class="stack" type="password" placeholder="Password" />
+  </div>
+  <div>
+    <label class="select stack">
+      <select>
+        <option>Select an option</option>
+        <option>Good option</option>
+        <option>Nice option</option>
+        <option>Cheap option</option>
+      </select>
+    </label>
+    <label class="select stack">
+      <select>
+        <option>Select an option</option>
+        <option>Good option</option>
+        <option>Nice option</option>
+        <option>Cheap option</option>
+      </select>
+    </label>
+    <label class="select stack">
+      <select>
+        <option>Select an option</option>
+        <option>Good option</option>
+        <option>Nice option</option>
+        <option>Cheap option</option>
+      </select>
+    </label>
+  </div>
+  <div>
+    <textarea class="stack" placeholder="Textarea"></textarea>
+    <textarea class="stack" placeholder="Textarea"></textarea>
+    <textarea class="stack" placeholder="Textarea"></textarea>
+  </div>
+  <div>
+    <label class="dropimage stack" style="background-image: url('/plugins/dropimage/camera.png');">
+      <input name="filea" title="Drop image or click me" type="file">
+    </label>
+    <label class="dropimage stack" style="background-image: url('/plugins/dropimage/camera.png');">
+      <input name="filea" title="Drop image or click me" type="file">
+    </label>
+    <label class="dropimage stack" style="background-image: url('/plugins/dropimage/camera.png');">
+      <input name="filea" title="Drop image or click me" type="file">
+    </label>
+  </div>
+</div>

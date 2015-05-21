@@ -1,11 +1,8 @@
 .tab {
   display: none;
-
-  + * {
-    display: none;
-    }
-
-  &:checked + * {
-    display: block;
-    }
+  padding: 10px;
   }
+
+:checked + .tab {
+  display: block;
+}
