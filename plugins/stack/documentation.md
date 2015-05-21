@@ -1,6 +1,4 @@
 # Stack
-<link rel="stylesheet" href="/nut/raw+stack_2.fresh.css">
-
 
 A vertical group of different elements.
 

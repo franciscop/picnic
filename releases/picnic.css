@@ -360,7 +360,7 @@ label {
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
   margin: 0; }
 
-.label, .button, button, [type='submit'], [type='button'], [type='image'], [type='reset'], .button.toggle, .pseudo {
+.label, button, .button, [type='submit'] {
   display: inline-block;
   text-align: center;
   margin: 0;
@@ -377,33 +377,38 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-  .label.success, .success.button, button.success, .success[type='submit'], .success[type='button'], .success[type='image'], .success[type='reset'], .success.button.toggle, .success.pseudo {
+  .label.success, button.success, .success.button, .success[type='submit'] {
     background: #2ecc40; }
-  .label.warning, .warning.button, button.warning, .warning[type='submit'], .warning[type='button'], .warning[type='image'], .warning[type='reset'], .warning.button.toggle, .warning.pseudo {
+  .label.warning, button.warning, .warning.button, .warning[type='submit'] {
     background: #ff851b; }
-  .label.error, .error.button, button.error, .error[type='submit'], .error[type='button'], .error[type='image'], .error[type='reset'], .error.button.toggle, .error.pseudo {
+  .label.error, button.error, .error.button, .error[type='submit'] {
     background: #ff4136; }
-  .label.dull, .dull.button, button.dull, .dull[type='submit'], .dull[type='button'], .dull[type='image'], .dull[type='reset'], .dull.button.toggle, .dull.pseudo {
+  .label.dull, button.dull, .dull.button, .dull[type='submit'] {
     background: #aaa; }
-  .label.pseudo, .pseudo.button, button.pseudo, .pseudo[type='submit'], .pseudo[type='button'], .pseudo[type='image'], .pseudo[type='reset'], .pseudo.button.toggle, .pseudo {
+  .label.pseudo, button.pseudo, .pseudo.button, .pseudo[type='submit'] {
     background: transparent;
     color: #111; }
 
-.button, button, [type='submit'], [type='button'], [type='image'], [type='reset'], .button.toggle, .pseudo {
+button, .button, [type='submit'] {
   transition: all 0.2s ease;
   cursor: pointer;
   height: auto; }
+  button:hover, .button:hover, [type='submit']:hover, button:focus, .button:focus, [type='submit']:focus {
+    box-shadow: inset 0 0 0 100em rgba(255, 255, 255, 0.2); }
+  button.pseudo:hover, .button.pseudo:hover, [type='submit'].pseudo:hover, button.pseudo:focus, .button.pseudo:focus, [type='submit'].pseudo:focus {
+    box-shadow: inset 0 0 0 100em rgba(17, 17, 17, 0.1); }
+  button:active, .button:active, [type='submit']:active, button.pseudo:active, .button.pseudo:active, [type='submit'].pseudo:active {
+    box-shadow: inset 0 0 0 100em rgba(17, 17, 17, 0.2); }
 
-.button:hover, button:hover, [type='submit']:hover, [type='button']:hover, [type='image']:hover, [type='reset']:hover, .button.toggle:hover, .pseudo:hover, .button:focus, button:focus, [type='submit']:focus, [type='button']:focus, [type='image']:focus, [type='reset']:focus, .button.toggle:focus, .pseudo:focus, :checked + .button.toggle, :checked + button.toggle, :checked + .toggle[type='submit'], :checked + .toggle[type='button'], :checked + .toggle[type='image'], :checked + .toggle[type='reset'], :checked + .toggle.button, :checked + .toggle.pseudo {
-  box-shadow: inset 0 0 0 100em rgba(255, 255, 255, 0.2); }
-
-.pseudo:hover, .pseudo:focus, .pseudo.toggle:hover, :focus + .pseudo.toggle {
-  box-shadow: inset 0 0 0 100em rgba(17, 17, 17, 0.1); }
-
-.button:active, button:active, [type='submit']:active, [type='button']:active, [type='image']:active, [type='reset']:active, .button.toggle:active, .pseudo:active, :checked + .button.toggle, :checked + button.toggle, :checked + .toggle[type='submit'], :checked + .toggle[type='button'], :checked + .toggle[type='image'], :checked + .toggle[type='reset'], :checked + .toggle.button, :checked + .toggle.pseudo, :focus:checked + .button.toggle, :focus:checked + button.toggle, :focus:checked + .toggle[type='submit'], :focus:checked + .toggle[type='button'], :focus:checked + .toggle[type='image'], :focus:checked + .toggle[type='reset'], :focus:checked + .toggle.button, :focus:checked + .toggle.pseudo {
+:checked + button, :checked + .button, :checked + [type='submit'], :checked + button:hover, :checked + .button:hover, :checked + [type='submit']:hover {
   box-shadow: inset 0 0 0 100em rgba(17, 17, 17, 0.2); }
 
-input, textarea {
+[type] + button, [type] + .button, [type] + [type='submit'] {
+  padding: 0.3em 0.9em; }
+  [type] + button:after, [type] + .button:after, [type] + [type='submit']:after, [type] + button:before, [type] + .button:before, [type] + [type='submit']:before {
+    display: none; }
+
+input, textarea, .select select {
   line-height: 1.5em;
   margin: 0;
   padding: 0.3em 0.6em;
@@ -411,6 +416,10 @@ input, textarea {
   border-radius: 0.2em;
   transition: all 0.2s ease;
   width: 100%; }
+  input:focus, textarea:focus, .select select:focus {
+    outline: 0;
+    border-color: #0074d9;
+    transition: border 0.2s, outline 0s; }
 
 input {
   height: 2.2em; }
@@ -418,15 +427,6 @@ input {
 [type=file], [type=color] {
   padding: 0.3em 0.6em;
   cursor: pointer; }
-
-input:focus, textarea:focus, [type=file]:hover, [type=color]:hover, .select select:focus, .select select:hover {
-  outline: 0;
-  border-color: #0074d9;
-  transition: all 0.2s ease, outline 0; }
-
-[type=radio]:focus, [type=checkbox]:focus, [type=range]:focus {
-  box-shadow: none;
-  border-color: initial; }
 
 .select {
   position: relative;
@@ -490,14 +490,14 @@ input:focus, textarea:focus, [type=file]:hover, [type=color]:hover, .select sele
 [type=radio], [type=checkbox] {
   opacity: 0;
   width: 0;
-  position: absolute; }
+  position: absolute;
+  display: inline-block; }
   [type=radio] + *:hover:before, [type=checkbox] + *:hover:before, [type=radio]:focus + *:before, [type=checkbox]:focus + *:before {
     border: 1px solid #0074d9; }
   [type=radio] + *, [type=checkbox] + * {
     position: relative;
-    display: inline;
-    padding-left: 1.5em;
-    cursor: pointer; }
+    cursor: pointer;
+    padding-left: 1.5em; }
     [type=radio] + *:before, [type=checkbox] + *:before, [type=radio] + *:after, [type=checkbox] + *:after {
       content: '';
       position: absolute;
@@ -518,25 +518,20 @@ input:focus, textarea:focus, [type=file]:hover, [type=color]:hover, .select sele
       transition: all 0.2s ease; }
     [type=radio] + *:before, [type=checkbox] + *:before {
       border: 1px solid #aaa; }
-  [type=radio] + .toggle, [type=checkbox] + .toggle {
-    position: static;
-    padding-left: auto; }
-    [type=radio] + .toggle:before, [type=checkbox] + .toggle:before, [type=radio] + .toggle:after, [type=checkbox] + .toggle:after {
-      display: none; }
   [type=radio]:checked + *:after, [type=checkbox]:checked + *:after {
     background: #555;
     -webkit-transform: scale(0.5) translateY(-100%);
     transform: scale(0.5) translateY(-100%); }
 
 [type=checkbox] + *:before {
-  border-radius: 3px; }
+  border-radius: 0.2em; }
 [type=checkbox] + *:after {
   content: '\2714';
   background: none;
   -webkit-transform: scale(2) translateY(-25%);
   transform: scale(2) translateY(-25%); }
 [type=checkbox]:checked + *:after {
-  color: #000;
+  color: #111;
   background: none;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);

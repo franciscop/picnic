@@ -2,8 +2,6 @@
 
 A card is a self-contained, highly-replicated class. It works great with other of its kind.
 
-<link rel='stylesheet' href='/nut/raw+card.fresh.css'>
-
 <div class="row">
   <article class="card">
     <img src="/img/forest.jpg">

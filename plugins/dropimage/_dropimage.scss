@@ -1,9 +1,12 @@
 // Dropimage plugin
+// Allow to upload images in a sensible manner
 
 
 // Variables
+
 // The ratio for the images (responsive by default)
 $picnic-dropimage-ratio: 16 / 9 !default;
+
 // The percentage of height (respect of width)
 $picnic-dropimage-height: percentage(1 / $picnic-dropimage-ratio) !default;
 
@@ -12,9 +15,9 @@ $picnic-dropimage-height: percentage(1 / $picnic-dropimage-ratio) !default;
 // Styles
 // It is preferred to only use one top-level class or element
 // It can be combined with other, specific classes with &.another
-.dropimage {
+%dropimage {
 
-  @extend .button;
+  @extend %button;
 
   position: relative;
   display: block;
@@ -40,5 +43,10 @@ $picnic-dropimage-height: percentage(1 / $picnic-dropimage-ratio) !default;
     opacity: 0;
     position: absolute;
     }
+  }
+
+
+.dropimage {
+  @extend %dropimage;
   }
 

@@ -1,6 +1,6 @@
 // Variables for the tooltips
-$picnic-tooltip-background: $picnic-black;
-$picnic-tooltip-size: .8em;
+$picnic-tooltip-background: $picnic-black !default;
+$picnic-tooltip-size: .8em !default;
 
 
 // Only display the tooltip for elements with <element data-tooltip="blabla">

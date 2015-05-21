@@ -1,5 +1,3 @@
-<link href="/nut/raw+tabs.fresh.css" rel="stylesheet">
-
 ## Tabs
 
 A simple tab system inspired by [Components CSS Tabs](www.felipefialho.com/css-components/#component-tab).

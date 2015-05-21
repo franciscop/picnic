@@ -1,8 +1,8 @@
 // Label of text
-$picnic-label-padding: $picnic-separation / 2 $picnic-separation * 1.5;
+$picnic-label-padding: $picnic-separation / 2 $picnic-separation * 1.5 !default;
 
 // Styles
-.label {
+%label {
   display: inline-block;
   text-align: center;
   margin: 0;
@@ -42,4 +42,8 @@ $picnic-label-padding: $picnic-separation / 2 $picnic-separation * 1.5;
     background: transparent;
     color: $picnic-black;
     }
+  }
+
+.label {
+  @extend %label;
   }

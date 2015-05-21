@@ -5,24 +5,23 @@
 @import 'raw';
 
 // Normalize.css (external library)
-@import '../plugins/normalize/plugin';
+@import '../plugins/normalize/normalize';
 
 // Generic styles for things like <body>, <a> and others
 // It also overwrites normalize.css a bit
-@import '../plugins/generic/plugin';
-@import '../plugins/fontello/plugin';
+@import '../plugins/generic/generic';
+@import '../plugins/fontello/fontello';
 
 // Simple elements
-@import '../plugins/label/plugin';
-@import '../plugins/button/plugin';
+@import '../plugins/label/label';
+@import '../plugins/button/button';
 
 // Forms
-//$picnic-separation: 1em;
-@import '../plugins/input/plugin';
-@import '../plugins/select/plugin';
-@import '../plugins/radio/plugin'; 
-@import '../plugins/checkbox/plugin'; 
+@import '../plugins/input/input';
+@import '../plugins/select/select';
+@import '../plugins/radio/radio'; 
+@import '../plugins/checkbox/checkbox'; 
 
 // // Components
-@import '../plugins/table/plugin';
-@import '../plugins/grids/plugin';
+@import '../plugins/table/table';
+@import '../plugins/grids/grids';

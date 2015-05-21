@@ -1,5 +1,3 @@
-<link href="/nut/raw+modal_2.fresh.css" rel="stylesheet">
-
 # Modal
 
 The modal is pure CSS, which makes the html quite ugly actually. However it does work. To try it, press the button:

@@ -1,0 +1,65 @@
+// Buttons
+
+
+// Variables
+$picnic-button-padding: $picnic-label-padding !default;
+$picnic-button-hover: inset 0 0 0 100em rgba($picnic-white, 2 * $picnic-transparency) !default;
+$picnic-button-click: inset 0 0 0 100em rgba($picnic-black, 2 * $picnic-transparency) !default;
+$picnic-button-pseudo-hover: inset 0 0 0 100em rgba($picnic-black, $picnic-transparency) !default;
+$picnic-button-transition: $picnic-transition !default;
+
+
+
+// Styles
+%button {
+  @extend %label;
+
+  transition: $picnic-button-transition;
+  cursor: pointer;
+
+  // Avoid the input { height: 2.2 }
+  height: auto;
+
+  &:hover,
+  &:focus {
+    box-shadow: $picnic-button-hover;
+    }
+
+  &.pseudo:hover,
+  &.pseudo:focus {
+    box-shadow: $picnic-button-pseudo-hover;
+    }
+
+  &:active,
+  &.pseudo:active {
+    box-shadow: $picnic-button-click;
+    }
+  }
+
+// For the toggle buttons
+:checked + %button,
+:checked + %button:hover {
+  box-shadow: $picnic-button-click;
+  }
+
+// Hide the checkbox/radiobutton
+// Handle with care
+[type] + %button {
+  padding: $picnic-button-padding;
+  
+  &:after,
+  &:before {
+    display: none;
+    }
+  }
+
+
+
+// Implement the abstract class for real elements
+button,
+.button,
+[type='submit'] {
+  @extend %button;
+  }
+
+

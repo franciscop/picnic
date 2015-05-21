@@ -1,7 +1,0 @@
-{
-  "id": "footer",
-  "name": "Footer",
-  "install": "+footer",
-  "partial": true,
-  "test": "test.html"
-}

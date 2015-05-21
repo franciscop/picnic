@@ -1,4 +1,4 @@
-
+// 
 
 $picnic-radio-size: 1em !default;
 $picnic-radio-border: 1px solid #aaa !default;
@@ -7,6 +7,7 @@ $picnic-radio-border: 1px solid #aaa !default;
   opacity: 0;
   width: 0;
   position: absolute;
+  display: inline-block;
   
   + *:hover:before,
   &:focus + *:before {
@@ -15,9 +16,8 @@ $picnic-radio-border: 1px solid #aaa !default;
   
   + * {
     position: relative;
-    display: inline;
-    padding-left: $picnic-radio-size * 1.5;
     cursor: pointer;
+    padding-left: $picnic-radio-size * 1.5;
         
     &:before,
     &:after {
@@ -44,16 +44,6 @@ $picnic-radio-border: 1px solid #aaa !default;
       }
     }
 
-  + .toggle {
-    position: static;
-    padding-left: auto;
-
-    &:before,
-    &:after {
-      display: none;
-      }
-    }
-
   &:checked + *:after {
     background: #555;
     transform: scale(.5) translateY(-100%);
@@ -63,4 +53,5 @@ $picnic-radio-border: 1px solid #aaa !default;
 
 [type=radio] {
   @extend %radio;
-}
+  }
+

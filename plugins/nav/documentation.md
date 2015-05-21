@@ -1,8 +1,23 @@
-<link href="/nut/raw+nav_2.fresh.css" rel="stylesheet">
-<link href="/plugins/nav/style.css" rel="stylesheet">
-
-
 # Nav
+
+<style>
+nav {
+  margin-bottom: 30px;
+}
+
+nav.demo {
+  position: relative;
+  z-index: 9;
+}
+
+.imponent {
+  padding: 2em 0;
+}
+
+.imponent .logo {
+  height: 3em;
+}
+</style>
 
 A responsive, pure css navigation menu:
 

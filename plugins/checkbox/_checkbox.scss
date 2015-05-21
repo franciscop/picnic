@@ -1,19 +1,25 @@
+// Checkbox
 
+// Variables
+$picnic-checkbox-character: '\2714' !default;
+$picnic-checkbox-radius: $picnic-radius !default;
+
+// Styles
 [type=checkbox] {
   @extend %radio;
     
   + *:before {
-    border-radius: 3px;
+    border-radius: $picnic-checkbox-radius;
     }
 
   + *:after {
-    content: '\2714';
+    content: $picnic-checkbox-character;
     background: none;
     transform: scale(2) translateY(-25%);
     }
 
   &:checked + *:after {
-    color: #000;
+    color: $picnic-black;
     background: none;
     transform: translateY(-50%);
     transition: $picnic-transition;
