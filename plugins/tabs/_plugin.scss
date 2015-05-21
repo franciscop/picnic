@@ -3,6 +3,11 @@
   padding: 10px;
   }
 
+.tab:before,
+.tab:after {
+  display: none;
+}
+
 :checked + .tab {
   display: block;
 }

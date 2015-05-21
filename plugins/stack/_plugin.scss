@@ -2,9 +2,9 @@
 .stack,
 .stack .toggle {
   display: block;
+  width: 100%;
   text-align: left;
   border-radius: 0;
-  width: 100%;
   }
 
 // This is in this way to allow for individual stack items
@@ -22,17 +22,22 @@
   border-bottom-right-radius: $picnic-radius;
   }
 
-input.stack {
-  transition: border-bottom 0 ease 0;
-  border-bottom-width: 0;
+// To avoid the double border of input and textarea
+input,
+textarea {
 
-  &:last-child {
-    border-bottom-width: 1px;
-    }
+  &.stack {
+    transition: border-bottom 0 ease 0;
+    border-bottom-width: 0;
 
-  &:focus + input,
-  &:focus + textarea {
-    border-top-color: #0074d9;
+    &:last-child {
+      border-bottom-width: 1px;
+      }
+
+    &:focus + input,
+    &:focus + textarea {
+      border-top-color: #0074d9;
+      }
     }
   }
 

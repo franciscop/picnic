@@ -1,7 +1,7 @@
-$picnic-radiocheckbox-size: 1em !default;
-$picnic-radiocheckbox-border-color: #aaa !default;
+$picnic-radio-size: 1em !default;
+$picnic-radio-border: 1px solid #aaa !default;
 
-%checkable {
+%radio {
   opacity: 0;
   width: 0;
   position: absolute;
@@ -14,7 +14,7 @@ $picnic-radiocheckbox-border-color: #aaa !default;
   + * {
     position: relative;
     display: inline;
-    padding-left: $picnic-radiocheckbox-size * 1.5;
+    padding-left: $picnic-radio-size * 1.5;
     cursor: pointer;
         
     &:before,
@@ -25,20 +25,20 @@ $picnic-radiocheckbox-border-color: #aaa !default;
       left: 0;
       top: 50%;
       transform: translateY(-50%);
-      font-size: $picnic-radiocheckbox-size;
-      line-height: $picnic-radiocheckbox-size;
+      font-size: $picnic-radio-size;
+      line-height: $picnic-radio-size;
       color: transparent;
       font-family: sans;
       text-align: center;
       box-sizing: border-box;
-      width: $picnic-radiocheckbox-size;
-      height: $picnic-radiocheckbox-size;
+      width: $picnic-radio-size;
+      height: $picnic-radio-size;
       border-radius: 50%;
-      transition: all .2s ease;
+      transition: $picnic-transition;
       }
 
     &:before {            
-      border: 1px solid $picnic-radiocheckbox-border-color;
+      border: $picnic-radio-border;
       }
     }
 
@@ -60,27 +60,5 @@ $picnic-radiocheckbox-border-color: #aaa !default;
 
 
 [type=radio] {
-  @extend %checkable;
+  @extend %radio;
 }
-
-[type=checkbox] {
-  @extend %checkable;
-    
-  + *:before {
-    border-radius: 3px;
-    }
-
-  + *:after {
-    content: '\2714';
-    background: none;
-    transform: scale(2) translateY(-25%);
-    }
-
-  &:checked + *:after {
-    color: #000;
-    background: none;
-    transform: translateY(-50%);
-    transition: all .3s ease;
-    }
-  }
-

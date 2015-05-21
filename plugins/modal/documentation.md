@@ -23,7 +23,7 @@ Show modal
     </section>
     <footer>
       <a class="button" href="#">See offer</a>
-      <label for="modal_1" class="button error">
+      <label for="modal_1" class="button dangerous">
         Cancel
       </label>
     </footer>
@@ -62,7 +62,7 @@ This is the markup for the example above:
         </section>
         <footer>
           <a class="button" href="#">See offer</a>
-          <label for="modal_1" class="button error">
+          <label for="modal_1" class="button dangerous">
             Cancel
           </label>
         </footer>
@@ -89,7 +89,7 @@ This is the markup for the example above:
     </section>
     <footer>
       <a class="button" href="#">See offer</a>
-      <label for="modal_2" class="button error">
+      <label for="modal_2" class="button dangerous">
         Cancel
       </label>
     </footer>
@@ -116,7 +116,7 @@ This is the markup for the example above:
       <label for="modal_4" class="button">
         Show modal
       </label>
-      <label for="modal_3" class="button error">
+      <label for="modal_3" class="button dangerous">
         Cancel
       </label>
     </footer>
@@ -139,7 +139,7 @@ This is the markup for the example above:
       <label for="modal_2" class="button">
         Another modal
       </label>
-      <label for="modal_4" class="button error">
+      <label for="modal_4" class="button dangerous">
         Cancel
       </label>
     </footer>

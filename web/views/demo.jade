@@ -4,8 +4,6 @@ block title
   title Picnic CSS Demo
 
 block content
-  
-  link(href="/nut/raw+modal_2.min.fresh.css", rel="stylesheet")
 
   style.
     /* Structure */
@@ -76,7 +74,7 @@ block content
       div.content
         h1 Picnic CSS
         p.slogan Unpack your meal and start coding
-        a.button.warning(href="/nut/picnic.min.css" target="_blank" download="picnic.min.css") Download
+        a.button.warning(href="https://raw.githubusercontent.com/picnicss/picnic/master/releases/picnic.min.css" target="_blank") Download
 
     
 
@@ -118,7 +116,7 @@ block content
         h3 Fast & lightweight
         p Handcrafted with mobile in mind, Picnic CSS will never be larger than 5kb when minimized and compressed.
         p The ability to add only the plugins that you want is what makes Picnic so lightweight. <a href="https://github.com/picnicss/picnic">Github</a>. To see the current state check out the:
-        a.button(href="/nut/picnic.min.css", download="picnic.min.css") Download
+        a.button(href="https://raw.githubusercontent.com/picnicss/picnic/master/releases/picnic.min.css", target="_blank") Download
       div.img
         i.featured.icon-leaf
 
@@ -129,6 +127,8 @@ block content
         h2 Open Source
         p With the MIT license we can make sure that you can use Picnic however you want and that every contribution you make to the library is shared with others.
         a.button.icon-g(href="https://github.com/picnicss/picnic", target="_blank") Github
+        // F*** jade (this is to put an space)
+        | 
         label.button.warning(for="modal_mit") MIT License
 
     

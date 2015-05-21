@@ -21,7 +21,6 @@ $picnic-dropimage-height: percentage(1 / $picnic-dropimage-ratio) !default;
   padding: 0;
   // Hack from http://stackoverflow.com/a/13976732/938236
   padding-bottom: $picnic-dropimage-height;
-  border-radius: 4px;
   overflow: hidden;
   cursor: pointer;
   border: 0;

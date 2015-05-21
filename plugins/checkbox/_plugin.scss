@@ -1,8 +1,21 @@
-.checkbox input + *:before {
-  border-radius: $picnic-radius;
-  text-align: right;
-  }
 
-.checkbox input:checked + *:before {
-  color: lighten($picnic-black, $picnic-color-variation);
+[type=checkbox] {
+  @extend %radio;
+    
+  + *:before {
+    border-radius: 3px;
+    }
+
+  + *:after {
+    content: '\2714';
+    background: none;
+    transform: scale(2) translateY(-25%);
+    }
+
+  &:checked + *:after {
+    color: #000;
+    background: none;
+    transform: translateY(-50%);
+    transition: $picnic-transition;
+    }
   }

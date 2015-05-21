@@ -77,41 +77,6 @@
       transform: translateX(-50%) translateY(-50%) scale(1, 1);
     }
   }
-
-
-  header,
-  footer,
-  section {
-    padding: $picnic-separation / 2;
-  }
-
-  // The first part from the modal
-  header {
-    font-weight: bold;
-    position: relative;
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      display: inline-block;
-      margin-right: 2em;
-    }
-  }
-
-  .close {
-    position: absolute;
-    top: .2em;
-    right: 0;
-    margin-right: $picnic-separation;
-    cursor: pointer;
-
-    &:hover {
-      color: $picnic-error;
-    }
-  }
 }
 
 @media (max-width: $picnic-breakpoint) {

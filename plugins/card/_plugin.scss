@@ -12,16 +12,17 @@ $picnic-card-padding: $picnic-separation !default;
 // Styles
 
 // http://8gramgorilla.com/mastering-sass-extends-and-placeholders/
-.card,
 %card {
+
+  position: relative;
   box-shadow: $picnic-card-shadow;
   border-radius: $picnic-radius;
   border: $picnic-card-border;
   overflow: hidden;
-  margin: $picnic-separation / 2;
   text-align: left;
   background: $picnic-white;
-  padding: $picnic-card-padding;
+  margin-bottom: $picnic-separation;
+  padding: 0;
 
   // Make sure that nothing overflows
   > * {
@@ -29,33 +30,80 @@ $picnic-card-padding: $picnic-separation !default;
     display: block;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    padding: 0;
-    margin: $picnic-separation / 2 0;
+  // The first part from the card
+  header,
+  section,
+  > p {
+    padding: .6em .8em;
+    }
+
+  header {
+    font-weight: bold;
+    position: relative;
+    border-bottom: 1px solid #eee;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      padding: 0;
+      margin-right: 2em;
+      line-height: 1;
+      display: inline-block;
+    }
   }
 
-  header *:first-child {
-    margin-top: 0;
-  }
-
-  footer *:last-child {
-    margin-bottom: 0;
-  }
+  footer {
+    padding: .8em;
+    }
 
   p {
     margin: $picnic-separation / 2 0;
-    }
 
-  footer {
-    overflow: auto;
+    &:first-child {
+      margin-top: 0;
+      }
 
-    .error {
-      float: right;
+    &:last-child {
+      margin-bottom: 0;
       }
     }
+
+  > p {
+    margin: 0;
+    padding-right: 2.5em;
+    }
+
+  .close {
+    position: absolute;
+    top: .4em;
+    right: .3em;
+    font-size: 1.2em;
+    padding: 0 .5em;
+    cursor: pointer;
+    width: auto;
+
+    &:hover {
+      color: $picnic-error;
+      }
+    }
+
+  h1 + .close {
+    margin: .3em;
+    }
+
+  h2 + .close {
+    margin: .1em;
+    }
+
+  .dangerous {
+    @extend .error;
+    float: right;
+    }
+  }
+
+.card {
+  @extend %card;
   }

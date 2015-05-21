@@ -34,7 +34,7 @@ A card can consist of only one element. It can be expressed as something really 
 <article class="card">
   <header>
     <button>Love</button>
-    <button class="error">Hate</button>
+    <button class="dangerous">Hate</button>
   </header>
 </article><br>
 
@@ -56,7 +56,7 @@ A card can consist of only one element. It can be expressed as something really 
     <article class="card">
       <header>
         <button>Love</button>
-        <button class="error">Hate</button>
+        <button class="dangerous">Hate</button>
       </header>
     </article><br>
 
