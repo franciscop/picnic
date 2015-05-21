@@ -43,8 +43,8 @@ There are different button types for different situations. These are.
 <a class="button">Link</a>
 <input value="Submit" type="submit">
 <label>
-<input class="toggle" type="checkbox">
-<span class="button">Toggle</span>
+<input type="checkbox">
+<span class="toggle button">Toggle</span>
 </label>
 </p>
 
@@ -66,10 +66,12 @@ Allows for seemingly links to behave as buttons:
 <div>
 <button class="pseudo">Button</button>
 <a class="pseudo button">Link</a>
-<label class="toggle pseudo">
-<input type="checkbox">
-<span>Toggle</span>
+
+<label>
+    <input type="checkbox">
+    <span class="toggle pseudo button">Toggle</span>
 </label>
+
 </div>
 
     <button class="pseudo">Button</button>

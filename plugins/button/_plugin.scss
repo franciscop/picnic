@@ -20,31 +20,25 @@ $picnic-button-transition: $picnic-transition;
 // Hover
 .button:hover,
 .button:focus,
-.toggle:focus + * {
+:checked + .button.toggle {
   box-shadow: $picnic-button-hover;
   }
 
 .pseudo:hover,
 .pseudo:focus,
-.toggle:focus + .pseudo {
+.pseudo.toggle:hover,
+:focus + .pseudo.toggle {
   box-shadow: inset 0 0 0 100em rgba($picnic-black, $picnic-transparency);
   }
 
 // Click
 .button:active,
-.toggle:checked + *,
-.toggle:focus:checked + .button {
+:checked + .button.toggle,
+:focus:checked + .button.toggle {
   box-shadow: $picnic-button-click;
   }
 
 
-// Hide the checkbox/radio from the toggle button
-.toggle {
-  opacity: 0;
-  z-index: -10;
-  width: 0;
-  position: absolute;
-  }
 
 // This allows the invasiveness
 button,
@@ -52,6 +46,7 @@ button,
 [type='button'],
 [type='image'],
 [type='reset'],
+.button.toggle,
 .pseudo {
   @extend .button;
   }

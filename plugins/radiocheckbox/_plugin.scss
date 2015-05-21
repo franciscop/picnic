@@ -1,40 +1,86 @@
-.radio,
-.checkbox {
-  position: relative;
-  display: inline-block;
-  min-width: 1em;
-  min-height: 1.25em;
-  line-height: 1em;
-  margin: .1em 0 -.1em;
-  outline: 0 none;
-  vertical-align: middle;
-  cursor: pointer;
-  }
+$picnic-radiocheckbox-size: 1em !default;
+$picnic-radiocheckbox-border-color: #aaa !default;
 
-.radio input + *:before,
-.checkbox input + *:before {
-  content: '\2714';           // Tick
-  display: inline-block;
-  font-size: .8em;
-  width: .9em;
-  height: .9em;
-  line-height: .9em;
-  // Gives it the same margin as other elements with font = 1em
-  margin: 0 $picnic-separation * .8 0 0;
-  color: transparent;
-  background: $picnic-white;
-  border: $picnic-border;
-  }
-
-.checkbox input:focus + *:before,
-.checkbox input:hover + *:before,
-.radio input:focus + *:before,
-.radio input:hover + *:before {
-  border-color: $picnic-primary;
-}
-
-.radio input,
-.checkbox input {
+%checkable {
   opacity: 0;
+  width: 0;
   position: absolute;
+  
+  + *:hover:before,
+  &:focus + *:before {
+    border: 1px solid $picnic-primary;
+    }
+  
+  + * {
+    position: relative;
+    display: inline;
+    padding-left: $picnic-radiocheckbox-size * 1.5;
+    cursor: pointer;
+        
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: $picnic-radiocheckbox-size;
+      line-height: $picnic-radiocheckbox-size;
+      color: transparent;
+      font-family: sans;
+      text-align: center;
+      box-sizing: border-box;
+      width: $picnic-radiocheckbox-size;
+      height: $picnic-radiocheckbox-size;
+      border-radius: 50%;
+      transition: all .2s ease;
+      }
+
+    &:before {            
+      border: 1px solid $picnic-radiocheckbox-border-color;
+      }
+    }
+
+  + .toggle {
+    position: static;
+    padding-left: auto;
+
+    &:before,
+    &:after {
+      display: none;
+      }
+    }
+
+  &:checked + *:after {
+    background: #555;
+    transform: scale(.5) translateY(-100%);
+    }
+  }
+
+
+[type=radio] {
+  @extend %checkable;
 }
+
+[type=checkbox] {
+  @extend %checkable;
+    
+  + *:before {
+    border-radius: 3px;
+    }
+
+  + *:after {
+    content: '\2714';
+    background: none;
+    transform: scale(2) translateY(-25%);
+    }
+
+  &:checked + *:after {
+    color: #000;
+    background: none;
+    transform: translateY(-50%);
+    transition: all .3s ease;
+    }
+  }
+

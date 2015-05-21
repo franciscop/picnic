@@ -10,7 +10,7 @@ gulp.task('default', ['build'], function() {});
 
 // MAIN BUILD
 // Create the latest versions
-gulp.task('build', ['picnic', 'plugins']);
+gulp.task('build', ['plugins', 'picnic']);
 
 
 // PICNIC BUILD
@@ -54,5 +54,5 @@ gulp.task('plugins', function() {
 
 // WATCH
 gulp.task('watch', ['build'], function() {
-	gulp.watch(['./plugins/*/*.scss', './src/*.scss'], ['build']);
+	gulp.watch(['./plugins/*/*.scss', './src/*.scss'], ['plugins']);
 	});
