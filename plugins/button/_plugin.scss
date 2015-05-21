@@ -15,6 +15,9 @@ $picnic-button-transition: $picnic-transition;
 
   transition: $picnic-button-transition;
   cursor: pointer;
+
+  // Avoid the input { height: 2.2 }
+  height: auto;
   }
 
 // Hover
@@ -40,12 +43,13 @@ $picnic-button-transition: $picnic-transition;
 
 
 
-// This allows the invasiveness
+// This allows the invasiveness on other elements
 button,
 [type='submit'],
 [type='button'],
 [type='image'],
 [type='reset'],
+// Needed for specifity race
 .button.toggle,
 .pseudo {
   @extend .button;

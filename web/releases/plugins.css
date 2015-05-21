@@ -391,7 +391,8 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 
 .button, button, [type='submit'], [type='button'], [type='image'], [type='reset'], .button.toggle, .pseudo, .dropimage {
   transition: all 0.2s ease;
-  cursor: pointer; }
+  cursor: pointer;
+  height: auto; }
 
 .button:hover, button:hover, [type='submit']:hover, [type='button']:hover, [type='image']:hover, [type='reset']:hover, .button.toggle:hover, .pseudo:hover, .dropimage:hover, .button:focus, button:focus, [type='submit']:focus, [type='button']:focus, [type='image']:focus, [type='reset']:focus, .button.toggle:focus, .pseudo:focus, .dropimage:focus, :checked + .button.toggle, :checked + button.toggle, :checked + .toggle[type='submit'], :checked + .toggle[type='button'], :checked + .toggle[type='image'], :checked + .toggle[type='reset'], :checked + .toggle.button, :checked + .toggle.pseudo, :checked + .toggle.dropimage {
   box-shadow: inset 0 0 0 100em rgba(255, 255, 255, 0.2); }
