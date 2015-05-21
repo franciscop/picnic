@@ -3,18 +3,47 @@
 Unpack your meal and get coding. An invasive CSS library to get your style started.
 
 
-
 ## Getting started
 
-Include the following line in your `<head>`:
+There are many ways of using Picnic CSS in your projects. Here a brief introduction of the recommended two methods:
 
-    <link href="http://www.picnicss.com/nut/picnic_3.min.css" rel="stylesheet">
+
+### CDN - just give me the file
+
+Use [Picnic CSS in the CDN jsDelivr](http://www.jsdelivr.com/#!picnicss) for linking to the static file. Include the following line in your `<head>`:
+
+    <link href="//cdn.jsdelivr.net/picnicss/3.4.2/picnic.min.css" rel="stylesheet">
+
+
+### Bower - to personalize Picnic
+
+To install Picnic with bower just write this in your terminal (you'll need bower installed):
+
+    bower install picnic
+
+Then, to use it within your scss development cycle, just do:
+
+    // Here go any variables you want to overwrite
+    $picnic-primary: #faa;
+    
+    // Now import picnic and a couple of plugins
+    @import 'BOWER_PATH/picnic/src/picnic';
+    @import 'BOWER_PATH/picnic/plugins/nav/plugin';
+    @import 'BOWER_PATH/picnic/plugins/modal/plugin';
+
+
+
+### Other ways
+
+You can always download the latest minimized version from github, clone the repository or download it.
+
+
 
 You can also [try it live in Codepen](http://codepen.io/FranciscoP/pen/ZGpzbL?editors=110).
 
 Alternatively:
 
-With bower: `bower install picnic`
+With bower: 
 
 Clone it: `git clone https://github.com/picnicss/picnic.git`
 
