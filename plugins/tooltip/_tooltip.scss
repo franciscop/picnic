@@ -6,6 +6,7 @@ $picnic-tooltip-size: .8em !default;
 // Only display the tooltip for elements with <element data-tooltip="blabla">
 [data-tooltip] {
   position: relative;
+  z-index: 1;
 
   &:after,
   &:before {

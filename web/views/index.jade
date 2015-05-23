@@ -1,164 +1,404 @@
 extends layout
 
 block content
+
   style.
-    .row.demo > * {
-      padding: .3em .6em;
-      background: #6C7;
-    }
-    .row.demo > *:nth-child(even){
-      background: #7DF;
-    }
-    button {
-      text-align: center;
-    }
-    form {
-      text-align: left;
-      width: 80%;
-      margin: 0 10%;
+    /* Structure */
+    html, body, main {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      z-index: 5;
+      }
+
+    nav {
+      color: #fff;
+      background: none;
+      transition: all .5s;
+      }
+
+    nav .brand,
+    nav .pseudo.button {
+      color: inherit;
+      }
+
+    nav .pseudo.button:hover {
+      background: rgba(255, 255, 255, .2);
+      }
+
+    nav.normal {
+      color: inherit;
+      background: #fff;
+      background: rgba(255, 255, 255, .95);
+      }
+
+    nav.normal .pseudo.button:hover {
+      background: none;
+      }
+
+
+    
+    /* HERO */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      color: #FFF;
+      background: #07071d url("/img/galaxy.svg") no-repeat center center fixed;
+      background-size: cover;
+      box-shadow: 0px 0px 0px 10000em rgba(0, 0, 0, 0.05) inset;
+      }
+    
+    /* Vertical center for the HERO */
+    .hero .content {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
     }
 
-  
+    .hero h1,
+    .hero p {
+      text-shadow: .05em .05em .1em rgba(0,0,0,0.8);
+    }
+    
+    .hero h1 {
+      font-size: 3em;
+      line-height: 1;
+      padding: 0;
+      }
+    .hero p {
+      margin: 0;
+      }
+    .hero .slogan {
+      font-size: 1.3em;
+      }
+
+    .hero .bower {
+      width: 300px;
+      color: #000;
+      margin-bottom: 0;
+      text-align: center;
+      border-radius: 0;
+      margin: 1.3em auto .3em;
+      }
+
+    .hero .links a {
+      color: #fff;
+      box-shadow: 0 2px rgba(255, 255, 255, .5);
+      transition: all .3s;
+      }
+
+    .hero .links a:hover {
+      box-shadow: 0 2px rgba(255, 255, 255, .8);
+      }
+
+    .hero .keepgoing {
+      font-size: .7em;
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      }
+
+    .keepgoing {
+      transition: all .5s;
+      }
+
+    nav.normal ~ * .keepgoing {
+      opacity: 0;
+      transition: all .3s;
+      }
+
+
+
+
+    .fill {
+      width: 100%;
+      }
+
+    .dropimage {
+      background-image:url('/plugins/dropimage/camera.svg');
+      padding-bottom: 75%;
+      }
+
+    .row.demo > * {
+      padding: 0.3em 0.6em;
+      background: #6C7 none repeat scroll 0% 0%;
+      }
+
+    .row.demo > :nth-child(2n) {
+      background: #7DF none repeat scroll 0% 0%;
+      }
+
+    .description {
+      text-align: left;
+      width: 100%;
+      max-width: 960px;
+      margin: 80px auto 80px;
+      }
+
+    .description > div {
+      padding: 20px;
+      }
+
+    .description .content {
+      padding: 0 20px 0 0;
+      }
+
+    .description > .card {
+      padding-top: 20px;
+      }
+
+    .description .card p {
+      padding: 0;
+      margin: 0 0 1em 0;
+      }
+
+    .description label {
+      margin-right: 20px;
+      }
+
+    .card {
+      overflow: visible;
+      }
+
+    .gallery {
+      margin-bottom: 0;
+      }
+
+    .gallery .card {
+      box-shadow: 0 0 5px -2px #888;
+      }
+
+    .gallery .card img {
+      border-radius: inherit;
+      }
+    
+    h2 {
+      margin: 0;
+      padding: 0;
+    }
+
+    i.featured {
+      font-size: 10em;
+    }
+
+    @media all and (max-width: 960px) {
+      nav .menu {
+        color: #333;
+        }
+      .description {
+        margin-top: 0;
+        padding: 20px;
+        }
+      }
+
+
   main
 
-    h1 Picnic CSS
-    p.slogan Tiny and <a href="/plugins">modular</a> CSS3 library
-    pre
-      code= '<link href="//cdn.jsdelivr.net/picnicss/' + info.version + '/picnic.min.css" rel="stylesheet">'
+    header.hero
+      div.content
+        h1 Picnic CSS
+        p.slogan Unpack your meal and start coding
+        pre.bower bower install picnic
+
+        p.links
+          a.cdn(href="http://www.jsdelivr.com/#!picnicss" target="_blank") CDN
+          span  | 
+          a.github(href="https://raw.githubusercontent.com/picnicss/picnic/master/releases/picnic.min.css" target="_blank") Download
+          span  | 
+          a.github(href="https://github.com/picnicss/picnic" target="_blank") Github
+      div.keepgoing Keep going<br>▼
+
+
+    div.description.row
+      div.content
+        h2 Default html beauty
+        p The native html elements get a boost so you don't need to write presentation classes mixed with your html.
+        p Picnic is completely modular so you can easily modify and test each part:
+        a.button.icon-puzzle Plugins
+      div.card
+        p
+          button Normal
+          |  
+          button.success Success
+          |  
+          button.warning Warning
+          |  
+          button.error Error
+        p
+          input(type="email" placeholder="Email")
+        div
+          div.row.gallery
+            article.card.tooltip-bottom(data-tooltip="Click me to upload a new image")
+              label.dropimage
+                input(title="" type="file")
+            article.card.tooltip-bottom(data-tooltip="Click me to upload a new image")
+              label.dropimage(style="background-image: url(/img/forest.jpg)")
+                input(title="" type="file")
+            article.card.tooltip-bottom(data-tooltip="Click me to upload a new image")
+              label.dropimage(style="background-image: url(/img/lake.jpg)")
+                input(title="" type="file")
+
+
+    div.description.row
+      div.content
+        h2 Made for the hackers
+        p Install it with bower and you will be able to integrate Picnic in any project and make it work for you.
+        p Picnic is written in SCSS with <a href="#">many variables</a> and <a href="#"><em>classes</em> (placeholders)</a> to make it easy to extend.
+        a.button.icon-file-code Documentation
+        | 
+        a.button.icon-g Github
+      pre.
+        // Define your own main color
+        $picnic-primary: #faa;
+
+        // Add picnic to your codebase
+        @include 'bower/picnic/src/picnic';
+
+        // Create a new element
+        .callToAction {
+          @extends %button;
+          }
+
+    div.description.row
+      div.content
+        h2 It's alive!
+        p Get the best experience for your users with many subtle css transitions and the extreme care for the details.
+      div.card
+        p
+          label.button.tooltip-top(for="modal_demo" data-tooltip="Tooltip says: Just click me already!") Show Modal
+        p
+          div.select
+            select
+              option Choose wisely
+              option Golden grail
+              option Silver glass
+              option Carpenter cup
+        p
+          label
+            input(type="radio" name="radio")
+            span Radio 1
+          label
+            input(type="radio" name="radio")
+            span Radio 2
+          label
+            input(type="checkbox" name="check")
+            span Checkbox
+
+
+
+    div.description.row
+      div.content
+        h2 For your mobile
+        p Picnic mission is to be under 5kb of compressed css for a <a href="https://www.youtube.com/watch?v=GDpmVUEjagg" target="_blank">better and faster</a> mobile load, it's also responsive.
+        p Check the network usage of this page (F12), everything together is under 200kb.
+      div
+        div
+          div.row.demo
+            div  
+          div.row.demo
+            div 
+            div 
+          div.row.demo
+            div 
+            div 
+            div 
+          div.row.demo
+            div 
+            div 
+            div 
+            div 
+          div.row.demo
+            div 
+            div 
+            div 
+            div 
+            div 
+
+
+
+    div.description.row
+      div.content
+        h2 Open Source
+        label.button(for="modal_mit") MIT License
+      div.content
+        h2 Special thanks
+        label MIT License
     
-    p Note: the old, <code>/nut</code> build system is 
-      a(href="https://github.com/picnicss/picnic/issues/39") deprecated and it will be soon discontinued
-
-    section
-      h2#input Buttons
-      div.render
-        <a class="button">Normal</a>
-        <a class="button success">Success</a>
-        <a class="button warning">Warning</a>
-        <a class="button error">Error</a>
-        <a class="button dull">Dull</a>
-    
-    section
-      h2 Form elements
-      div.render.
-        <form>
-          <div class="row">
-            <div>
-              <input class="addon" placeholder="Name" />
-            </div>
-            <div>
-              <label class="select">
-                <select name="options">
-                  <option>Select an option</option>
-                  <option>Good option</option>
-                  <option>Nice option</option>
-                  <option>Cheap option</option>
-                </select>
-              </label>
-            </div>
-          </div>
-          <div class="row">
-            <textarea placeholder="Biography"></textarea>
-          </div>
-          <label class="checkbox">
-            <input type="checkbox">
-            <span>Check me out (;</span>
-          </label><br>
-          <label class="radio">
-            <input type="radio" name="takeme">
-            <span>Choose me</span>
-          </label><br>
-          <label class="radio">
-            <input type="radio" name="takeme">
-            <span>or choose me</span>
-          </label>
-        </form>
-    
-    
-    section
-      h2 Table
-      div.render.
-        <table class="primary">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>City</th>
-              <th>Age</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Francisco</td>
-              <td>Valencia, Spain</td>
-              <td>23</td>
-            </tr>
-            <tr>
-              <td>Eve</td>
-              <td>San Francisco, USA</td>
-              <td>22</td>
-            </tr>
-            <tr>
-              <td>Martin</td>
-              <td>New York, USA</td>
-              <td>45</td>
-            </tr>
-            <tr>
-              <td>Sarah</td>
-              <td>London, UK</td>
-              <td>25</td>
-            </tr>
-          </tbody>
-        </table>
-    
-    section
-      h2 Responsive grid
-      div.render.
-        <div class="row demo">
-          <div>[one]</div>
-        </div>
-        
-        <div class="row demo">
-          <div>[two]</div>
-          <div>[two]</div>
-        </div>
-        
-        <div class="row demo">
-          <div>[three]</div>
-          <div>[three]</div>
-          <div>[three]</div>
-        </div>
-        
-        <div class="row demo">
-          <div>[four]</div>
-          <div>[four]</div>
-          <div>[four]</div>
-          <div>[four]</div>
-        </div>
-        
-        <div class="row demo">
-          <div>[five]</div>
-          <div>[five]</div>
-          <div>[five]</div>
-          <div>[five]</div>
-          <div>[five]</div>
-        </div>
-        
-    
-    h2 Many more plugins!
-    p To check them out, visit the plugin page:
-    a.button(href="/plugins/") Check out the plugins
 
 
-    h2 Advantages
+  div.modal
+    input#modal_demo(type="checkbox")
+    label.overlay(for="modal_demo")
+    article
+      header
+        h3 I am a pure CSS modal
+        label.close(for="modal_demo") ⨯
+      section.content
+        p Just showing what I am capable of doing. Do you like it?
+      footer
+        label.button.success(for="modal_demo") Yes!
+        a.button.dangerous.tooltip-top(href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank") It sucks
 
-    p Main advantages of using Picnic CSS:
-
-    ul.text
-      li 3.0kb when minimized and zipped.
-      li Semantic HTML5. <i>Your</i> code stays highly semantic.
-      li Normalize.css is used, achieving a solid foundation.
-      li Support: IE 9+ and others. No fancy CSS3 on IE 8.
-      li Responsive: The nav and the grids are responsive.
 
 
-  
+  div.modal
+    input#modal_mit(type="checkbox")
+    label.overlay(for="modal_mit")
+    article
+      header
+        h3 The MIT License (MIT)
+        label.close(for="modal_mit") ⨯
+      section.content
+        p Copyright (c) 2014 Francisco Presencia Fandos
+
+        p.
+          Permission is hereby granted, free of charge, to any person obtaining a copy
+          of this software and associated documentation files (the "Software"), to deal
+          in the Software without restriction, including without limitation the rights
+          to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+          copies of the Software, and to permit persons to whom the Software is
+          furnished to do so, subject to the following conditions:
+
+        p.
+          The above copyright notice and this permission notice shall be included in
+          all copies or substantial portions of the Software.
+
+        p.
+          THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+          IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+          FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+          AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+          LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+          OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+          THE SOFTWARE.
+
+    //-     footer
+    //-       label.button(for="modal_mit") Great!
+
+  script.
+    var nav = document.getElementsByTagName('nav')[0];
+    window.onscroll=function(e){
+      if (e.pageY > 20) {
+        nav.classList.add('normal');
+        }
+      else {
+        nav.classList.remove('normal');
+        }
+      };
+
+
+    window.onload = function(){
+      [].forEach.call(document.querySelectorAll('.dropimage'), function(img){
+        img.onchange = function(e){
+          var inputfile = this, reader = new FileReader();
+          reader.onloadend = function(){
+            inputfile.style['background-image'] = 'url('+reader.result+')';
+            }
+          reader.readAsDataURL(e.target.files[0]);
+          }
+        });
+      };

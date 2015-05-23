@@ -422,7 +422,7 @@ input, textarea, .select select {
     transition: border 0.2s, outline 0s; }
 
 input {
-  height: 2.2em; }
+  height: 2.1em; }
 
 [type=file], [type=color] {
   padding: 0.3em 0.6em;
@@ -434,7 +434,7 @@ input {
   margin: 0;
   border-radius: 0.2em;
   width: 100%;
-  height: 2.2em; }
+  height: 2.1em; }
   .select select {
     background: none;
     -moz-appearance: none;
@@ -444,7 +444,7 @@ input {
     border-radius: 0.2em;
     cursor: pointer;
     width: 100%;
-    height: 2.2em;
+    height: 2.1em;
     box-sizing: border-box;
     padding: 0.3em 0.45em;
     transition: outline 0 ease; }
@@ -484,7 +484,7 @@ input {
   text-align: center;
   font-size: 0.8em;
   height: calc(100% - 2px);
-  line-height: 2.75em;
+  line-height: 2.625em;
   pointer-events: none; }
 
 [type=radio], [type=checkbox] {
@@ -828,7 +828,8 @@ input.stack, textarea.stack {
   display: block; }
 
 [data-tooltip] {
-  position: relative; }
+  position: relative;
+  z-index: 1; }
   [data-tooltip]:after, [data-tooltip]:before {
     position: absolute;
     opacity: 0;
