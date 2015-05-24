@@ -12,84 +12,233 @@ html
     link(rel="icon", href="/img/basket.png", type="image/png")
     
     style.
-      body {
+
+      /* Structure */
+      html, body, main {
         display: block;
-        text-align: center;
         color: #333;
-        background: #FFF;
-        margin: 80px auto 500px;
+        background: #fff;
         width: 100%;
-      }
-      .render {
-        margin: 10px 0;
-        max-width: 100%;
-      }
-      main > section {
-        max-width: 620px;
-        margin: 10px auto 30px;
-      }
-      pre {
-        max-width: 650px;
-        margin: 20px auto;
-      }
-      table {
-        margin: auto;
-      }
-      main,
-      main.limit {
-        margin-bottom: 300px
-      }
-      input {
-        vertical-align: top;
-      }
-      form input[type=submit] {
-        font-size: 1.05em;
-      }
-      .main img {
-        vertical-align: middle;
-      }
-      .text {
-        max-width: 500px;
-        text-align: left;
-        margin: 0 auto;
-      }
-      a {
-        color: #0074d9;
-        text-decoration: none;
-      }
+        height: 100%;
+        margin: 0;
+        z-index: 5;
+        }
+
+      .intro {
+        padding: 10px;
+        max-width: 800px;
+        width: 100%;
+        margin: 80px auto 500px;
+        }
+
+
+      /* ELEMENTS */
+
       .plugin {
         width: 100%;
-        max-width: 600px;
         margin: 40px auto 20px;
-      }
+        }
+
       .plugin header {
         position: relative;
         text-align: left;
         display: block;
-      }
+        }
+
       .plugin .install {
         position: absolute;
         right: 0px;
         top: .9em;
-      }
+        }
 
       .plugin .description {
         width: 100%;
         display: block;
         margin-top: 10px;
         text-align: left;
+        }
+      
+
+
+
+
+
+
+
+      /* HERO */
+      .hero {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        min-height: 300px;
+        color: #FFF;
+        background: #07071d url("/img/galaxy.svg") no-repeat center center fixed;
+        background-size: cover;
+        box-shadow: 0px 0px 0px 10000em rgba(0, 0, 0, 0.05) inset;
+        }
+      
+      /* Vertical center for the HERO */
+      .hero .content {
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
       }
+
+      .hero h1,
+      .hero p {
+        text-shadow: .05em .05em .1em rgba(0,0,0,0.8);
+      }
+      
+      .hero h1 {
+        font-size: 3em;
+        line-height: 1;
+        padding: 0;
+        }
+      .hero p {
+        margin: 0;
+        }
+      .hero .slogan {
+        font-size: 1.3em;
+        }
+
+      .hero .bower {
+        width: 300px;
+        color: #000;
+        margin-bottom: 0;
+        text-align: center;
+        border-radius: 0;
+        margin: 1.3em auto .3em;
+        }
+
+      .hero .links a {
+        color: #fff;
+        box-shadow: 0 2px rgba(255, 255, 255, .5);
+        transition: all .3s;
+        }
+
+      .hero .links a:hover {
+        box-shadow: 0 2px rgba(255, 255, 255, .8);
+        }
+
+      .hero .keepgoing {
+        font-size: .7em;
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+        }
+
+      .keepgoing {
+        transition: all .5s;
+        }
+
+      nav.normal ~ * .keepgoing {
+        opacity: 0;
+        transition: all .3s;
+        }
+
+
+
+
+      .fill {
+        width: 100%;
+        }
+
+      .dropimage {
+        background-image:url('/plugins/dropimage/camera.svg');
+        padding-bottom: 75%;
+        }
+
+      .row.demo > * {
+        padding: 0.3em 0.6em;
+        background: #6C7 none repeat scroll 0% 0%;
+        }
+
+      .row.demo > :nth-child(2n) {
+        background: #7DF none repeat scroll 0% 0%;
+        }
+
+      .row.description {
+        text-align: left;
+        width: 100%;
+        max-width: 960px;
+        margin: 80px auto 80px;
+        }
+
+      .row.description > div {
+        padding: 20px;
+        }
+
+      .row.description .content {
+        padding: 0 20px 0 0;
+        }
+
+      .row.description > .card {
+        padding-top: 20px;
+        }
+
+      .row.description .card p {
+        padding: 0;
+        margin: 0 0 1em 0;
+        }
+
+      .row.description label {
+        margin-right: 20px;
+        }
+
+      .card {
+        overflow: visible;
+        }
+
+      .description .card > *:last-child,
+      .description .card > * *:last-child {
+        margin-bottom: 0;
+        }
+
+      .gallery .card {
+        box-shadow: 0 0 5px -2px #888;
+        }
+
+      .gallery .card img {
+        border-radius: inherit;
+        }
+
+      li {
+        list-style-type: circle;
+        }
+      
+      h2 {
+        margin: 0;
+        padding: 0;
+      }
+
+      i.featured {
+        font-size: 10em;
+      }
+
+      @media all and (max-width: 960px) {
+        nav .menu {
+          color: #333;
+          }
+        .description {
+          margin-top: 0;
+          padding: 20px;
+          }
+        }
+
   body
     block nav
       nav
         a.brand(href="/") Picnic CSS
 
-        // responsive
+        // responsiveness
         input#bmenu.show(type="checkbox")
         label.burger.pseudo.button(for="bmenu") menu
 
         div.menu
-          a.pseudo.button.icon-file-code(href="#") [soon] Documentation
+          a.pseudo.button.icon-file-code(href="/documentation/") Documentation
           a.pseudo.button.icon-help-circled(href="/test/") Test
           a.pseudo.button.icon-g(href="https://github.com/picnicss/picnic" target="_blank") Github
           a.button.icon-puzzle(href="/plugins/") Plugins
