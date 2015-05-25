@@ -1,11 +1,15 @@
 // Navigation bar
+$picnic-nav-shadow: $picnic-shadow !default;
+
+$picnic-nav-position: fixed !default;
+
 
 // Vertical align based on
 // http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
 nav {
 
   // Position it on the top, full width
-  position: fixed;
+  position: $picnic-nav-position;
   top: 0;
   left: 0;
   right: 0;
@@ -15,7 +19,7 @@ nav {
 
   // Make it look like a hovering bar
   background: #fff;
-  box-shadow: 0 0 .6em rgba($picnic-black, 3 * $picnic-transparency);
+  box-shadow: $picnic-nav-shadow;
   z-index: 10;
 
   // Everything happens slow-ish  
@@ -33,7 +37,6 @@ nav {
 
     position: relative;
     top: 50%;
-    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     }
 

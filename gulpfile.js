@@ -54,5 +54,5 @@ gulp.task('plugins', function() {
 
 // WATCH
 gulp.task('watch', ['build'], function() {
-	gulp.watch(['./plugins/*/*.scss', './src/*.scss'], ['build']);
+	gulp.watch(['./plugins/*/*.scss', './src/*.scss', './themes/*/*.scss'], ['build']);
 	});

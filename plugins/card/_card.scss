@@ -3,7 +3,7 @@
 
 
 // Variables
-$picnic-card-shadow: 0 0 $picnic-separation rgba($picnic-black, $picnic-transparency) !default;
+$picnic-card-shadow: $picnic-shadow !default;
 $picnic-card-border: 1px solid rgba(0, 0, 0, .1) !default;
 
 
@@ -27,7 +27,7 @@ $picnic-card-border: 1px solid rgba(0, 0, 0, .1) !default;
   > * {
     width: 100%;
     display: block;
-  }
+    }
 
   // The first part from the card
   header,

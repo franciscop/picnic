@@ -330,7 +330,7 @@ li {
   margin: 0 0 0.3em; }
 
 a {
-  color: #0074d9;
+  color: #29b737;
   text-decoration: none; }
 
 code {
@@ -342,7 +342,7 @@ pre {
   text-align: left;
   padding: 0.3em 0.6em;
   background: #f5f5f5;
-  border-radius: 0.2em; }
+  border-radius: 0; }
   pre code {
     padding: 0; }
 
@@ -366,10 +366,10 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
   margin: 0;
   padding: 0.3em 0.9em;
   vertical-align: middle;
-  background: #0074d9;
+  background: #29b737;
   color: #fff;
   border: 0;
-  border-radius: 0.2em;
+  border-radius: 0;
   width: auto;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -378,7 +378,7 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
   -ms-user-select: none;
   user-select: none; }
   .label.success, button.success, .success.button, .success[type='submit'] {
-    background: #2ecc40; }
+    background: #0074d9; }
   .label.warning, button.warning, .warning.button, .warning[type='submit'] {
     background: #ff851b; }
   .label.error, button.error, .error.button, .error[type='submit'] {
@@ -413,12 +413,12 @@ input, textarea, .select select {
   margin: 0;
   padding: 0.3em 0.6em;
   border: 1px solid #ccc;
-  border-radius: 0.2em;
+  border-radius: 0;
   transition: all 0.2s ease;
   width: 100%; }
   input:focus, textarea:focus, .select select:focus {
     outline: 0;
-    border-color: #0074d9;
+    border-color: #29b737;
     transition: border 0.2s, outline 0s; }
 
 input {
@@ -432,7 +432,7 @@ input {
   position: relative;
   display: inline-block;
   margin: 0;
-  border-radius: 0.2em;
+  border-radius: 0;
   width: 100%;
   height: 2.1em; }
   .select select {
@@ -441,7 +441,7 @@ input {
     -webkit-appearance: none;
     appearance: none;
     border: 1px solid #ccc;
-    border-radius: 0.2em;
+    border-radius: 0;
     cursor: pointer;
     width: 100%;
     height: 2.1em;
@@ -469,7 +469,7 @@ input {
   width: 30px;
   height: calc(100% - 2px);
   pointer-events: none;
-  border-radius: 0.2em; }
+  border-radius: 0; }
 
 .select:after {
   background: transparent;
@@ -493,7 +493,7 @@ input {
   position: absolute;
   display: inline-block; }
   [type=radio] + *:hover:before, [type=checkbox] + *:hover:before, [type=radio]:focus + *:before, [type=checkbox]:focus + *:before {
-    border: 1px solid #0074d9; }
+    border: 1px solid #29b737; }
   [type=radio] + *, [type=checkbox] + * {
     position: relative;
     cursor: pointer;
@@ -525,7 +525,7 @@ input {
     transform: scale(0.5) translateY(-100%); }
 
 [type=checkbox] + *:before {
-  border-radius: 0.2em; }
+  border-radius: 0; }
 [type=checkbox] + *:after {
   content: '\2714';
   background: none;
@@ -548,10 +548,10 @@ th {
   text-align: left;
   font-weight: 900;
   color: #fff;
-  background-color: #0074d9; }
+  background-color: #29b737; }
 
 .success th {
-  background-color: #2ecc40; }
+  background-color: #0074d9; }
 
 .warning th {
   background-color: #ff851b; }
