@@ -2,41 +2,7 @@ extends layout
 
 block content
 
-  style.
-    html, body, main {
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      z-index: 5;
-      }
-    nav {
-      color: #fff;
-      background: none;
-      transition: all .5s;
-      }
-
-    nav .brand,
-    nav .pseudo.button {
-      color: inherit;
-      }
-
-    nav .pseudo.button:hover {
-      background: rgba(255, 255, 255, .2);
-      }
-
-    nav.normal {
-      color: inherit;
-      background: #fff;
-      background: rgba(255, 255, 255, .95);
-      }
-
-    nav.normal .pseudo.button:hover {
-      background: none;
-      }
-
-
   main
-
     header.hero
       div.content
         h1 Picnic CSS
@@ -49,10 +15,11 @@ block content
           a.github(href="https://raw.githubusercontent.com/picnicss/picnic/master/releases/picnic.min.css" target="_blank") Download
           span  | 
           a.github(href="https://github.com/picnicss/picnic" target="_blank") Github
+
       div.keepgoing Keep going<br>▼
 
 
-    div.description.row
+    div.visual.row
       div.content
         h2 Default html beauty
         p The native html elements get a boost so you don't need to write presentation classes mixed with your html.
@@ -75,14 +42,14 @@ block content
               label.dropimage
                 input(title="" type="file")
             article.card.tooltip-bottom(data-tooltip="Click me to upload a new image")
-              label.dropimage(style="background-image: url(/img/forest.jpg)")
+              label.dropimage(style="background-image: url(/img/galaxy.svg)")
                 input(title="" type="file")
             article.card.tooltip-bottom(data-tooltip="Click me to upload a new image")
-              label.dropimage(style="background-image: url(/img/lake.jpg)")
+              label.dropimage(style="background-image: url(/img/galaxy.svg)")
                 input(title="" type="file")
 
 
-    div.description.row
+    div.visual.row
       div.content
         h2 Made for the hackers
         p Install it with bower and you will be able to integrate Picnic in any project and make it work for you.
@@ -102,7 +69,7 @@ block content
           @extends %button;
         }
 
-    div.description.row
+    div.visual.row
       div.content
         h2 It's alive!
         p Get the best experience for your users with many subtle css transitions and the extreme care for the details.
@@ -135,7 +102,7 @@ block content
 
 
 
-    div.description.row
+    div.visual.row
       div.content
         h2 For your mobile
         p Picnic mission is to be under 5kb of compressed css for a <a href="https://www.youtube.com/watch?v=GDpmVUEjagg" target="_blank">better and faster</a> mobile load, it's also responsive.
@@ -164,7 +131,7 @@ block content
 
 
 
-    div.description.row
+    div.visual.row
       div.content
         h2 Open Source
         label.button(for="modal_mit") MIT License
@@ -222,29 +189,12 @@ block content
           OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
           THE SOFTWARE.
 
-    //-     footer
-    //-       label.button(for="modal_mit") Great!
-
   script.
-    var nav = document.getElementsByTagName('nav')[0];
-    window.onscroll=function(e){
-      if (e.pageY > 20) {
-        nav.classList.add('normal');
-        }
-      else {
-        nav.classList.remove('normal');
-        }
+    
+    // Transparent nav handler
+    var nav = document.querySelector('nav');
+    function navScroll(){
+      nav.classList[window.scrollY ? 'remove' : 'add']('transparent');
       };
-
-
-    window.onload = function(){
-      [].forEach.call(document.querySelectorAll('.dropimage'), function(img){
-        img.onchange = function(e){
-          var inputfile = this, reader = new FileReader();
-          reader.onloadend = function(){
-            inputfile.style['background-image'] = 'url('+reader.result+')';
-            }
-          reader.readAsDataURL(e.target.files[0]);
-          }
-        });
-      };
+    window.onscroll = navScroll;
+    navScroll();

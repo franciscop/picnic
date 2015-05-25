@@ -1,0 +1,296 @@
+/* Font */
+@font-face {
+  font-family: 'fontello';
+  src: url('font/fontello.eot?34694727');
+  src: url('font/fontello.eot?34694727#iefix') format('embedded-opentype'),
+       url('font/fontello.woff?34694727') format('woff'),
+       url('font/fontello.ttf?34694727') format('truetype'),
+       url('font/fontello.svg?34694727#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  }
+ 
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  }
+ 
+.icon-picture:before { content: '\e800'; }
+.icon-help-circled:before { content: '\e801'; }
+.icon-puzzle:before { content: '\e802'; }
+.icon-mobile:before { content: '\e803'; }
+.icon-link:before { content: '\e804'; }
+.icon-video:before { content: '\e805'; }
+.icon-file-code:before { content: '\e806'; }
+.icon-leaf:before { content: '\e807'; }
+.icon-globe:before { content: '\e808'; }
+.icon-paper-plane:before { content: '\e809'; }
+.icon-g:before { content: '\e80a'; }
+.icon-cog:before { content: '\e80b'; }
+
+
+
+
+
+
+
+/* Elements */
+h1, h2 {
+  margin: 0;
+  padding: 0;
+  }
+
+h1 {
+  margin: .6em 0 0;
+  }
+
+li {
+  list-style-type: circle;
+  }
+
+
+
+
+
+
+
+/* Structure */
+html, body, main {
+  display: block;
+  color: #333;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  z-index: 5;
+  }
+
+.intro {
+  padding: 10px;
+  max-width: 960px;
+  width: 100%;
+  margin: 80px auto 500px;
+  }
+
+nav {
+  transition: all .5s;
+  }
+
+nav.transparent {
+  color: #fff;
+  box-shadow: none;
+  background: none;
+  }
+
+nav.transparent .brand,
+nav.transparent .pseudo.button {
+  color: inherit;
+  }
+
+nav.transparent .pseudo.button:hover {
+  background: rgba(255, 255, 255, .2);
+  }
+
+
+
+
+
+/* Each of the plugins */
+.plugin {
+  width: 100%;
+  margin: 40px auto 20px;
+  }
+
+.plugin > header {
+  margin: 20px 0 10px;
+  position: relative;
+  text-align: left;
+  display: block;
+  }
+
+.plugin h2,
+.plugin .install {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+  }
+
+
+
+
+
+
+
+
+
+
+/* Hero from the main page */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  min-height: 300px;
+  color: #FFF;
+  padding: 1px 0;
+  background: #07071d url("/img/galaxy.svg") no-repeat center center fixed;
+  background-size: cover;
+  box-shadow: 0px 0px 0px 10000em rgba(0, 0, 0, 0.05) inset;
+  }
+
+/* Vertical center for the HERO */
+.hero .content {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.hero h1,
+.hero p {
+  text-shadow: .05em .05em .1em rgba(0,0,0,0.8);
+}
+
+.hero h1 {
+  font-size: 3em;
+  line-height: 1;
+  padding: 0;
+  }
+.hero p {
+  margin: 0;
+  }
+.hero .slogan {
+  font-size: 1.3em;
+  }
+
+.hero .bower {
+  width: 300px;
+  color: #000;
+  margin-bottom: 0;
+  text-align: center;
+  border-radius: 0;
+  margin: 1.3em auto .3em;
+  }
+
+.hero .links a {
+  color: #fff;
+  box-shadow: 0 2px rgba(255, 255, 255, .5);
+  transition: all .3s;
+  }
+
+.hero .links a:hover {
+  box-shadow: 0 2px rgba(255, 255, 255, .8);
+  }
+
+.hero .keepgoing {
+  font-size: .7em;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: all .5s;
+  }
+
+/* Hack to hide the hero without js (reusing nav's js) */
+nav.transparent ~ * .keepgoing {
+  opacity: 1;
+  }
+
+
+
+
+
+
+/* Overwrite the plugin dropimage */
+.dropimage {
+  background-image:url('/plugins/dropimage/camera.svg');
+  padding-bottom: 75%;
+  }
+
+/* Display the grid with colors */
+.row.demo > * {
+  padding: 0.3em 0.6em;
+  background: #6C7 none repeat scroll 0% 0%;
+  }
+
+.row.demo > :nth-child(2n) {
+  background: #7DF none repeat scroll 0% 0%;
+  }
+
+
+
+.visual {
+  text-align: left;
+  width: 100%;
+  max-width: 960px;
+  margin: 80px auto 80px;
+  }
+
+.visual > div {
+  padding: 20px;
+  }
+
+.visual .content {
+  padding: 0 20px 0 0;
+  }
+
+.visual > .card {
+  padding-top: 20px;
+  }
+
+.visual .card p {
+  padding: 0;
+  margin: 0 0 1em 0;
+  }
+
+.visual label {
+  margin-right: 20px;
+  }
+
+.card {
+  overflow: visible;
+  }
+
+.description .card > *:last-child,
+.description .card > * *:last-child {
+  margin-bottom: 0;
+  }
+
+.gallery .card {
+  box-shadow: 0 0 5px -2px #888;
+  }
+
+.gallery .card img {
+  border-radius: inherit;
+  }
+
+@media all and (max-width: 960px) {
+  nav .menu {
+    color: #333;
+    }
+  .description {
+    margin-top: 0;
+    padding: 20px;
+    }
+  }

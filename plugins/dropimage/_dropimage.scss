@@ -11,6 +11,11 @@ $picnic-dropimage-ratio: 16 / 9 !default;
 $picnic-dropimage-height: percentage(1 / $picnic-dropimage-ratio) !default;
 
 
+$picnic-dropimage-background-color: #ddd;
+
+$picnic-dropimage-background-image: '/plugins/dropimage/camera.svg';
+
+
 
 // Styles
 // It is preferred to only use one top-level class or element
@@ -28,9 +33,10 @@ $picnic-dropimage-height: percentage(1 / $picnic-dropimage-ratio) !default;
   cursor: pointer;
   border: 0;
 
-  background-color: #f5f5f5;
+  background-color: $picnic-dropimage-background-color;
   background-size: cover;
   background-position: center center;
+  background-image: url($picnic-dropimage-background-image);
 
   // Subelements
   input {

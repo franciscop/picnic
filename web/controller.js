@@ -1,69 +1,56 @@
 var fs = require('fs');
 var marked = require('marked');
-var sass = require('node-sass');
-var uglify = require('uglifycss');
 
-// Render the view
+// Get all of the plugins
+function getPlugins(){
+  return fs.readdirSync('plugins').filter(function(file) {
+      return fs.existsSync('plugins/' + file + '/info.json');
+    }).map(function(name){
+      var plugin = JSON.parse(fs.readFileSync('plugins/' + name + '/info.json', 'utf-8'));
+      plugin.id = name;
+      plugin.name = plugin.name || name;
+      plugin.description = fs.existsSync('plugins/' + name + '/description.html')
+        ? fs.readFileSync('plugins/' + name + '/description.html', 'utf-8')
+        : "No description";
+      plugin.test = fs.existsSync('plugins/' + name + '/test.html')
+        ? fs.readFileSync('plugins/' + name + '/test.html', 'utf-8')
+        : false;
+      plugin.documentation = fs.existsSync('plugins/' + name + '/documentation.md')
+        ? marked(fs.readFileSync('plugins/' + name + '/documentation.md', 'utf-8'))
+        : "No documentation";
+      plugin.install = plugin.install || '[installed]';
+      plugin.dependencies = plugin.dependencies || false;
+      plugin.partial = plugin.partial || false;
+      return plugin;
+    }).filter(function(plugin){ return !plugin.partial; });
+  }
+
+var plugins = getPlugins();
+
+
+// Home page
 module.exports.index = function(req, res) {
-  
-  res.render("index");
+  res.render("index", { transparent: 'transparent' });
   };
 
 
-module.exports.plugin = function(req, res) {
 
-  var pluginsText = getDirs(__dirname + "/../plugins");
-  var plugins = [];
+// One or many plugins
+module.exports.plugins = function(req, res) {
 
-  pluginsText.forEach(function(value, i){
-    var plugin = {
-      name: value,
-      install: "[installed]",
-      description: "No description",
-      documentation: "No documentation",
-      partial: false
-      };
-    plugin.id = value;
-    plugin.folder = __dirname + "/../plugins/" + plugin.id + "/";
-    if (fs.existsSync(plugin.folder + "info.json")) {
-      var info = JSON.parse(fs.readFileSync(plugin.folder + "info.json", 'utf-8'));
-      plugin.name = info.name;
-      plugin.description = info.description;
-      plugin.install = info.install;
-      plugin.dependencies = info.dependencies || false;
-      plugin.partial = info.partial || false;
-      plugin.doc = info.documentation ? info.documentation : "documentation.md";
-      }
-    
-    if (fs.existsSync(plugin.folder + "description.html")) {
-      plugin.description = fs.readFileSync(plugin.folder + "description.html", 'utf-8');
-      }
-
-    if (fs.existsSync(plugin.folder + plugin.doc)) {
-      var docRaw = fs.readFileSync(plugin.folder + plugin.doc, 'utf-8');
-      
-      if (plugin.doc.split('.').pop() == "md") {
-        plugin.documentation = marked(docRaw, {sanitize: false});
-        }
-      else {
-        plugin.documentation = docRaw;
-        }
-      }
-
-    if (!plugin.partial)
-      plugins.push(plugin);
-    });
-
+  plugins = getPlugins();
+  
+  // If the url is /plugins/:name
   if (req.params.name && req.params.name.length) {
-    var plugin;
-    for (var key in plugins){
-      if (plugins[key].id == req.params.name)
-        plugin = plugins[key];
-    }
-    if (plugin)
-      res.render("plugin", { plugin: plugin });
-    else
-      res.status(404).render("404", { plugin: plugin });
+    var left = plugins.filter(function(value){
+      return value.id == req.params.name;
+      });
+    if (left.length) {
+      res.render("plugin", { plugin: left[0] });
+      }
+    else {
+      res.status(404).render("404");
+      }
     }
   else {
     res.render("pluginindex", { plugins: plugins });
@@ -71,161 +58,31 @@ module.exports.plugin = function(req, res) {
   };
 
 
-module.exports.nut = function(req, res) {
-  
-  var picnic = parseUrl(req.params.full);
-
-  var newsass = "@import '../../src/" + picnic.version + "';\n\n";
-
-  if(picnic.plugins && picnic.plugins.length > 0)
-    picnic.plugins.forEach(function(plugin, index) {
-
-      var version = 1;
-      if (plugin.match('_')) {
-        pluginparts = plugin.split('_');
-        plugin = pluginparts.shift();
-        version = pluginparts.join('_');
-        }
-      
-      var infoFile = __dirname + "/../plugins/" + plugin + "/info.json";
-      if (fs.existsSync(infoFile)) {
-        var info = JSON.parse(fs.readFileSync(infoFile, 'utf-8'));
-        var dependencies = info.dependencies || [];
-        if (dependencies.length > 0) {
-          dependencies.forEach(function(dep){
-            newsass += "@import '../../plugins/" + dep + "';\n";
-            });
-          }
-        }
-      else
-        console.log("Couldn't find info.json, " + infoFile);
-
-
-      newsass += "@import '../../plugins/" + plugin + "/v" + version + "';\n";
-    });
-
-  // Write it to a file
-  fs.writeFileSync(__dirname + '/nut/' + picnic.full + '.scss', newsass);
-
-  // nut normal one
-  sass.render({
-
-    // Compile it from the previous file
-    file: __dirname + '/nut/' + picnic.full + '.scss',
-    success: function(result){
-      var finalCSS = result.css;
-
-      if (picnic.minimize)
-        finalCSS = uglify.processString(finalCSS);
-      
-      res.writeHead(200, {'Content-Type': 'text/css'});
-      res.write(finalCSS);
-      res.end();
-
-      if (picnic.writeFile) {
-        fs.writeFile(__dirname + '/nut/' + picnic.full, finalCSS);
-        }
-      },
-    error: function(error) {
-      // error is an object: v2 change
-      console.log(error.message);
-      console.log(error.code);
-      console.log(error.line);
-      console.log(error.column); // new in v2
-
-      res.render(404);
-      },  
-    });
-  };
-
-
 
 // Render all of the tests
 module.exports.test = function(req, res){
+  
+  plugins = getPlugins();
 
-  function getDirectories(srcpath) {
-    return 
-    }
+  // Retrieve all of the tests available
+  var tests = plugins.reduce(function(tests, plugin){
+    return plugin.test ? tests.concat(plugin.test) : tests;
+    }, []);
 
-  var plugins = fs.readdirSync('plugins').filter(function(file) {
-      return fs.existsSync('plugins/' + file + '/test.html');
-      }).map(function(pluginName){
-        return fs.readFileSync('plugins/' + pluginName + '/test.html');
-      });
+  // Retrieve all of the tests available
+  var tests = plugins.filter(function(plugin) {
+      return plugin.test.length;
+    }).map(function(plugin){
+      return plugin.test;
+    });
 
-  res.render("test", { plugins: plugins });
+  res.render("test", { plugins: tests });
   }
 
 
 
 // Showcase Picnic CSS with a demo
-module.exports.demo = function(req, res){
+module.exports.documentation = function(req, res){
 
-  res.render("demo");
+  res.render("documentation");
   }
-
-
-
-
-
-function getDirs(rootDir){
-  var files = fs.readdirSync(rootDir);
-  var dirs = [];
-
-  for(var key in files) {
-    var file = files[key];
-
-    if (file[0] != '.') {
-      filePath = rootDir + "/" + file;
-      stat = fs.statSync(filePath);
-      }
-
-    if (stat.isDirectory()) {
-      dirs.push(file);
-      }
-    }
-
-  return dirs;
-  }
-
-
-
-// Fetch the information of the intended file
-function parseUrl(url) {
-
-  // The object to store the information
-  var picnic = {
-    minimize: false,
-    writeFile: true
-    };
-
-  // The full requested file
-  picnic.full = url;
-  var sides = picnic.full.split(".");
-
-  // Retrieve the version to be used
-  var parts = sides.shift().split("+");
-
-  // The version of Picnic CSS
-  picnic.version = parts.shift();
-
-  // "core+modal", "min", "css"
-  picnic.options = sides;
-
-  // Parse options (post-process)
-  if (picnic.options.length) {
-    if (picnic.options.indexOf('min') !== -1) {
-      picnic.minimize = true;
-    }
-    if (picnic.options.indexOf('fresh') !== -1) {
-      picnic.writeFile = false;
-    }
-  }
-
-  if (parts.length) {
-
-    // Store all plugins
-    picnic.plugins = parts;
-    }
-  return picnic;
-};

@@ -36,6 +36,10 @@ $picnic-card-border: 0 !default;
     padding: .6em .8em;
     }
 
+  section {
+    padding: .6em .8em 0;
+  }
+
   header {
     font-weight: bold;
     position: relative;
@@ -48,7 +52,7 @@ $picnic-card-border: 0 !default;
     h5,
     h6 {
       padding: 0;
-      margin-right: 2em;
+      margin: 0 2em 0 0;
       line-height: 1;
       display: inline-block;
     }

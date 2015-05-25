@@ -1,5 +1,6 @@
 ## Tabs
 
+Note: http://jsfiddle.net/franciscop/wwfby2y8/
 A simple tab system inspired by [Components CSS Tabs](www.felipefialho.com/css-components/#component-tab).
 
 <div style="text-align: left;">

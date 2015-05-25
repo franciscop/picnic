@@ -714,13 +714,15 @@ input.stack, textarea.stack {
     display: block; }
   .card header, .modal .overlay ~ * header, .card section, .modal .overlay ~ * section, .card > p, .modal .overlay ~ * > p {
     padding: 0.6em 0.8em; }
+  .card section, .modal .overlay ~ * section {
+    padding: 0.6em 0.8em 0; }
   .card header, .modal .overlay ~ * header {
     font-weight: bold;
     position: relative;
     border-bottom: 1px solid #eee; }
     .card header h1, .modal .overlay ~ * header h1, .card header h2, .modal .overlay ~ * header h2, .card header h3, .modal .overlay ~ * header h3, .card header h4, .modal .overlay ~ * header h4, .card header h5, .modal .overlay ~ * header h5, .card header h6, .modal .overlay ~ * header h6 {
       padding: 0;
-      margin-right: 2em;
+      margin: 0 2em 0 0;
       line-height: 1;
       display: inline-block; }
   .card footer, .modal .overlay ~ * footer {
@@ -804,9 +806,10 @@ input.stack, textarea.stack {
   overflow: hidden;
   cursor: pointer;
   border: 0;
-  background-color: #f5f5f5;
+  background-color: #ddd;
   background-size: cover;
-  background-position: center center; }
+  background-position: center center;
+  background-image: url('/plugins/dropimage/camera.svg'); }
   .dropimage input {
     left: 0;
     width: 100%;
@@ -817,15 +820,54 @@ input.stack, textarea.stack {
     opacity: 0;
     position: absolute; }
 
-.tab {
-  display: none;
-  padding: 10px; }
-
-.tab:before, .tab:after {
-  display: none; }
-
-:checked + .tab {
-  display: block; }
+.tabs {
+  position: relative;
+  overflow: hidden; }
+  .tabs > .row {
+    width: calc(100% + 2 * .6em);
+    display: table;
+    table-layout: fixed;
+    margin-left: -0.6em;
+    margin-bottom: 0.6em;
+    position: relative;
+    padding-left: 0;
+    transition: all 0.3s;
+    border-spacing: 0;
+    margin: 0.6em 0; }
+    .tabs > .row:before, .tabs > .row:after {
+      display: none; }
+    .tabs > .row > *, .tabs > .row img {
+      display: table-cell;
+      vertical-align: top;
+      margin: 0;
+      width: 100%; }
+  .tabs > input {
+    display: none; }
+    .tabs > input + * {
+      width: 100%; }
+    .tabs > input + label {
+      width: auto; }
+  .tabs.two .row {
+    width: 200%;
+    left: -100%; }
+  .tabs.two input:nth-of-type(1):checked ~ .row {
+    margin-left: 100%; }
+  .tabs.three .row {
+    width: 300%;
+    left: -200%; }
+  .tabs.three input:nth-of-type(1):checked ~ .row {
+    margin-left: 200%; }
+  .tabs.three input:nth-of-type(2):checked ~ .row {
+    margin-left: 100%; }
+  .tabs.four .row {
+    width: 400%;
+    left: -300%; }
+  .tabs.four input:nth-of-type(1):checked ~ .row {
+    margin-left: 300%; }
+  .tabs.four input:nth-of-type(2):checked ~ .row {
+    margin-left: 200%; }
+  .tabs.four input:nth-of-type(3):checked ~ .row {
+    margin-left: 100%; }
 
 [data-tooltip] {
   position: relative;
