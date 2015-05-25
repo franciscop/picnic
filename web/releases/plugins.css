@@ -568,7 +568,7 @@ tr:nth-child(even) {
 .row > * {
   margin: 0.6em 0; }
 
-@media (min-width: calc($picnic-breakpoint 1px)) {
+@media (min-width: 60em) {
   .row {
     width: calc(100% + 2 * 0.6em);
     display: table;

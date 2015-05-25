@@ -3,7 +3,7 @@
   }
 
 // From ungrid ( http://chrisnager.github.io/ungrid/ )
-@media (min-width: calc($picnic-breakpoint 1px)) {
+@media (min-width: $picnic-breakpoint) {
 
   // Each of the rows
   .row {
