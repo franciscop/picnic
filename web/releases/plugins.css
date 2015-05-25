@@ -497,7 +497,8 @@ input {
   [type=radio] + *, [type=checkbox] + * {
     position: relative;
     cursor: pointer;
-    padding-left: 1.5em; }
+    padding-left: 1.5em;
+    margin-right: 0.6em; }
     [type=radio] + *:before, [type=checkbox] + *:before, [type=radio] + *:after, [type=checkbox] + *:after {
       content: '';
       position: absolute;

@@ -83,6 +83,6 @@ module.exports.test = function(req, res){
 
 // Showcase Picnic CSS with a demo
 module.exports.documentation = function(req, res){
-
-  res.render("documentation");
+  var doc = marked(fs.readFileSync('documentation.md', 'utf-8'));
+  res.render("documentation", { documentation: doc });
   }

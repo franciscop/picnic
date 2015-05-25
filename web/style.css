@@ -268,12 +268,20 @@ nav.transparent ~ * .keepgoing {
   margin-right: 20px;
   }
 
+.visual .tabs label {
+  margin-right: 0;
+  }
+
 .card {
   overflow: visible;
   }
 
 .description .card > *:last-child,
 .description .card > * *:last-child {
+  margin-bottom: 0;
+  }
+
+.gallery {
   margin-bottom: 0;
   }
 
