@@ -6,12 +6,12 @@ $picnic-tooltip-size: .8em !default;
 // Only display the tooltip for elements with <element data-tooltip="blabla">
 [data-tooltip] {
   position: relative;
-  z-index: 1;
 
   &:after,
   &:before {
     // Position
     position: absolute;
+    z-index: 10;
 
     // Hide it by default
     opacity: 0;
@@ -24,7 +24,7 @@ $picnic-tooltip-size: .8em !default;
     transition: opacity .6s ease, height 0s ease .6s;
 
     // Bottom one (default)
-    top: 85%;
+    top: calc(100% - 6px);
     left: 0;
     margin-top: 12px;
     }
@@ -80,7 +80,7 @@ $picnic-tooltip-size: .8em !default;
   &:after,
   &:before {
     top: auto;
-    bottom: 85%;
+    bottom: calc(100% - 6px);
     left: 0;
     margin-bottom: 12px;
     }

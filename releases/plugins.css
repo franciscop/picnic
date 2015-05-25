@@ -871,17 +871,17 @@ input.stack, textarea.stack {
     margin-left: 100%; }
 
 [data-tooltip] {
-  position: relative;
-  z-index: 1; }
+  position: relative; }
   [data-tooltip]:after, [data-tooltip]:before {
     position: absolute;
+    z-index: 10;
     opacity: 0;
     border-width: 0;
     height: 0;
     padding: 0;
     overflow: hidden;
     transition: opacity 0.6s ease, height 0s ease 0.6s;
-    top: 85%;
+    top: calc(100% - 6px);
     left: 0;
     margin-top: 12px; }
   [data-tooltip]:after {
@@ -907,7 +907,7 @@ input.stack, textarea.stack {
 
 .tooltip-top:after, .tooltip-top:before {
   top: auto;
-  bottom: 85%;
+  bottom: calc(100% - 6px);
   left: 0;
   margin-bottom: 12px; }
 .tooltip-top:before {

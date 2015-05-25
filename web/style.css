@@ -295,6 +295,7 @@ nav.transparent ~ * .keepgoing {
 
 .gallery .card {
   box-shadow: none;
+  border: 0;
   }
 
 .gallery .card img {
