@@ -286,7 +286,7 @@ nav.transparent ~ * .keepgoing {
   }
 
 .gallery .card {
-  box-shadow: 0 0 5px -2px #888;
+  box-shadow: 0;
   }
 
 .gallery .card img {
