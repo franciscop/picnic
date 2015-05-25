@@ -301,4 +301,13 @@ nav.transparent ~ * .keepgoing {
     margin-top: 0;
     padding: 20px;
     }
+
+  .visual {
+    padding: 20px 20px;
+    margin: 0 auto;
+    }
+
+  .visual .content {
+    margin-bottom: 20px;
+    }
   }
