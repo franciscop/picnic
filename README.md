@@ -1,5 +1,7 @@
 # Picnic CSS
-  
+
+> Note: If your site breaks please read the [deprecation notice](https://github.com/picnicss/picnic/issues/42) (and I apologize for it).
+
 Unpack your meal and get coding. An invasive CSS library to get your style started.
 
 
