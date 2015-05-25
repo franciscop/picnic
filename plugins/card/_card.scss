@@ -3,8 +3,8 @@
 
 
 // Variables
-$picnic-card-shadow: 0 0 $picnic-separation rgba($picnic-black, 2 * $picnic-transparency) !default;
-$picnic-card-border: 0 !default;
+$picnic-card-shadow: 0 0 $picnic-separation rgba($picnic-black, $picnic-transparency) !default;
+$picnic-card-border: 1px solid rgba(0, 0, 0, .1) !default;
 
 
 

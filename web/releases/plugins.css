@@ -412,7 +412,7 @@ input, textarea, .select select {
   line-height: 1.5em;
   margin: 0;
   padding: 0.3em 0.6em;
-  border: 1px solid #aaa;
+  border: 1px solid #ccc;
   border-radius: 0.2em;
   transition: all 0.2s ease;
   width: 100%; }
@@ -440,7 +440,7 @@ input {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-    border: 1px solid #aaa;
+    border: 1px solid #ccc;
     border-radius: 0.2em;
     cursor: pointer;
     width: 100%;
@@ -702,9 +702,9 @@ input.stack, textarea.stack {
 
 .card, .modal .overlay ~ * {
   position: relative;
-  box-shadow: 0 0 0.6em rgba(17, 17, 17, 0.2);
+  box-shadow: 0 0 0.6em rgba(17, 17, 17, 0.1);
   border-radius: 0.2em;
-  border: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: left;
   background: #fff;
