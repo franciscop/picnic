@@ -412,7 +412,7 @@ input, textarea, .select select {
   line-height: 1.5em;
   margin: 0;
   padding: 0.3em 0.6em;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   border-radius: 0;
   transition: all 0.2s ease;
   width: 100%; }
@@ -440,7 +440,7 @@ input {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 0;
     cursor: pointer;
     width: 100%;
