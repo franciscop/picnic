@@ -272,6 +272,14 @@ nav.transparent ~ * .keepgoing {
   margin-right: 0;
   }
 
+.visual .love,
+.visual .name {
+  display: block;
+  text-align: center;
+  padding: 0;
+  font-weight: bold;
+  }
+
 .card {
   overflow: visible;
   }
