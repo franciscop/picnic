@@ -92,24 +92,6 @@ html, body, main {
   margin: 80px auto 500px;
   }
 
-nav {
-  transition: all .5s;
-  }
-
-nav.transparent {
-  color: #fff;
-  box-shadow: none;
-  background: none;
-  }
-
-nav.transparent .brand,
-nav.transparent .pseudo.button {
-  color: inherit;
-  }
-
-nav.transparent .pseudo.button:hover {
-  background: rgba(255, 255, 255, .2);
-  }
 
 
 

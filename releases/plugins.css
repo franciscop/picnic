@@ -610,7 +610,7 @@ nav {
   background: #fff;
   box-shadow: none;
   z-index: 10;
-  transition: all 0.3s ease;
+  transition: all 0.3s;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d; }
   nav .brand, nav .menu, nav .burger {
@@ -638,6 +638,14 @@ nav {
     line-height: 2.4em; }
   nav .menu > * {
     margin-right: 0.3em; }
+  nav.transparent {
+    color: #fff;
+    box-shadow: none;
+    background: none; }
+    nav.transparent .brand, nav.transparent .pseudo.button {
+      color: inherit; }
+    nav.transparent .pseudo.button:hover {
+      background: rgba(255, 255, 255, 0.2); }
 
 .show, .burger {
   display: none; }
@@ -937,3 +945,9 @@ input.stack, textarea.stack {
   margin-right: -6px;
   right: 100%;
   top: 7px; }
+
+nav {
+  background: transparent;
+  transition: 0; }
+  nav .brand, nav .pseudo.button {
+    color: #fff; }
