@@ -5,6 +5,7 @@
 // Variables
 $picnic-card-shadow: $picnic-shadow !default;
 $picnic-card-border: $picnic-border !default;
+$picnic-card-radius: $picnic-radius !default;
 
 
 
@@ -15,7 +16,7 @@ $picnic-card-border: $picnic-border !default;
 
   position: relative;
   box-shadow: $picnic-card-shadow;
-  border-radius: $picnic-radius;
+  border-radius: $picnic-card-radius;
   border: $picnic-card-border;
   overflow: hidden;
   text-align: left;
@@ -27,6 +28,10 @@ $picnic-card-border: $picnic-border !default;
   > * {
     width: 100%;
     display: block;
+
+    &:last-child {
+      margin-bottom: 0;
+      }
     }
 
   // The first part from the card

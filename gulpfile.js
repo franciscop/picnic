@@ -51,8 +51,25 @@ gulp.task('plugins', function() {
 	});
 
 
+// WEBSITE BUILD
+// Create the latest version with all the plugins and the web code
+gulp.task('web', function() {
+	return gulp.src('./web/style/style.scss')
+		.pipe(sass())
+		.pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
+		}))
+		.pipe(rename('style.css'))
+		.pipe(gulp.dest('./web/style'))
+		.pipe(minify())
+		.pipe(rename('style.min.css'))
+		.pipe(gulp.dest('./web/style'));
+	});
+
+
 
 // WATCH
-gulp.task('watch', ['build'], function() {
-	gulp.watch(['./plugins/*/*.scss', './src/*.scss', './themes/*/*.scss'], ['build']);
+gulp.task('watch', ['build', 'web'], function() {
+	gulp.watch(['./plugins/*/*.scss', './src/*.scss', './themes/*/*.scss', './web/style/*.scss', '.web/style/*/*.scss'], ['build', 'web']);
 	});

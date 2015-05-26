@@ -1,0 +1,256 @@
+
+// Get the icons from fontello
+// You need to import this first
+@import 'font/fontello';
+
+// Get the library picnic css
+@import '../../src/plugins';
+
+
+
+// Elements
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  }
+
+h1 {
+  margin: .6em 0 0;
+  }
+
+li {
+  list-style-type: circle;
+  }
+
+
+
+
+
+
+
+// Structure
+html,
+body,
+main {
+  display: block;
+  color: #333;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  z-index: 5;
+  }
+
+.intro {
+  padding: 10px;
+  max-width: 960px;
+  width: 100%;
+  margin: 80px auto 500px;
+  }
+
+
+
+
+
+
+// Each of the plugins
+.plugin {
+  width: 100%;
+  margin: 40px auto 20px;
+
+  > header {
+    margin: 20px 0 10px;
+    position: relative;
+    text-align: left;
+    display: block;
+    }
+
+  h2,
+  .install {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    }
+
+  }
+
+
+
+// Hero from the main page
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  min-height: 300px;
+  color: #fff;
+  padding: 1px 0;
+  background: #07071d url('/img/galaxy.svg') no-repeat center center fixed;
+  background-size: cover;
+
+  // Add a soft shadow to the hero
+  box-shadow: 0 0 0 10000em rgba(0, 0, 0, .05) inset;
+  
+
+  // Vertical center for the content
+  .content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    }
+
+  h1,
+  p {
+    text-shadow: .05em .05em .1em rgba(0, 0, 0, .8);
+    }
+
+  h1 {
+    font-size: 3em;
+    line-height: 1;
+    padding: 0;
+    }
+
+  p {
+    margin: 0;
+    }
+
+  .slogan {
+    font-size: 1.3em;
+    }
+
+  .bower {
+    width: 300px;
+    color: #000;
+    margin-bottom: 0;
+    text-align: center;
+    border-radius: 0;
+    margin: 1.3em auto .3em;
+    }
+
+  .links a {
+    color: #fff;
+    box-shadow: 0 2px rgba(255, 255, 255, .5);
+    transition: all .3s;
+    }
+
+  .links a:hover {
+    box-shadow: 0 2px rgba(255, 255, 255, .8);
+    }
+
+  .keepgoing {
+    font-size: .7em;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    }
+  }
+
+// Hack to hide the hero without js (reusing nav's js)
+.transparent ~ .hero .keepgoing {
+  opacity: 1;
+  }
+
+
+
+// Overwrite the plugin dropimage
+.dropimage {
+  background-image: url('/plugins/dropimage/camera.svg');
+  padding-bottom: 75%;
+  }
+
+
+
+// Display the grid with colors
+.row.demo > * {
+  padding: .3em .6em;
+  background: $green;
+  }
+
+.row.demo > :nth-child(2n) {
+  background: $aqua;
+  }
+
+
+
+// The visual is each of the text+content sections in the home
+.visual {
+  text-align: left;
+  width: 100%;
+  max-width: 960px;
+  margin: 80px auto;
+
+  > div {
+    padding: 20px;
+    }
+
+  .content {
+    padding: 0 20px 0 0;
+    }
+
+  > .card {
+    padding-top: 20px;
+
+    p {
+      padding: 0;
+      margin: 0 0 1em;
+      }
+    }
+
+  label {
+    margin-right: 20px;
+    }
+
+  .tabs label {
+    margin-right: 0;
+    }
+
+  .love,
+  .name {
+    display: block;
+    text-align: center;
+    padding: 0;
+    font-weight: bold;
+    }
+
+  .card {
+    overflow: visible;
+    }
+  }
+
+
+
+.gallery {
+  margin-bottom: 0;
+
+  .card {
+    box-shadow: none;
+    border: 0;
+
+    img {
+      border-radius: inherit;
+      }
+    }
+  }
+
+@media all and (max-width: 960px) {
+  nav .menu {
+    color: #333;
+    }
+  .description {
+    margin-top: 0;
+    padding: 20px;
+    }
+
+  .visual {
+    padding: 20px 20px;
+    margin: 0 auto;
+    }
+
+  .visual .content {
+    margin-bottom: 20px;
+    }
+  }

@@ -36,7 +36,7 @@ textarea {
 
     &:focus + input,
     &:focus + textarea {
-      border-top-color: #0074d9;
+      border-top-color: $picnic-primary;
       }
     }
   }
