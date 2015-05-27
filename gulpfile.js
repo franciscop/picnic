@@ -24,11 +24,9 @@ gulp.task('picnic', function() {
 		}))
 		.pipe(rename('picnic.css'))
 		.pipe(gulp.dest('./releases'))
-		.pipe(gulp.dest('./web/releases'))
 		.pipe(minify())
 		.pipe(rename('picnic.min.css'))
-		.pipe(gulp.dest('./releases'))
-		.pipe(gulp.dest('./web/releases'));
+		.pipe(gulp.dest('./releases'));
 	});
 
 
@@ -43,11 +41,9 @@ gulp.task('plugins', function() {
 		}))
 		.pipe(rename('plugins.css'))
 		.pipe(gulp.dest('./releases'))
-		.pipe(gulp.dest('./web/releases'))
 		.pipe(minify())
 		.pipe(rename('plugins.min.css'))
-		.pipe(gulp.dest('./releases'))
-		.pipe(gulp.dest('./web/releases'));
+		.pipe(gulp.dest('./releases'));
 	});
 
 

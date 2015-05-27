@@ -422,6 +422,8 @@ input, textarea, .select select {
   border-radius: 0.2em;
   transition: all 0.3s;
   width: 100%; }
+  input:focus, textarea:focus, .select select:focus {
+    border: 1px solid #0074d9; }
 
 input {
   height: 2.1em; }
@@ -665,6 +667,17 @@ nav {
   nav .menu > a {
     padding: 0.3em 0.9em; } }
 
+.stack.select select, .stack .toggle.select select {
+  border-radius: 0;
+  border-bottom-width: 0; }
+.stack.select:first-child select, .stack .toggle.select:first-child select {
+  border-top-left-radius: 0.2em;
+  border-top-right-radius: 0.2em; }
+.stack.select:last-child select, .stack .toggle.select:last-child select {
+  border-bottom-left-radius: 0.2em;
+  border-bottom-right-radius: 0.2em;
+  border-bottom-width: 1px; }
+
 .stack, .stack .toggle {
   display: block;
   width: 100%;
@@ -739,7 +752,7 @@ input.stack, textarea.stack {
     .card .close:hover, .modal .overlay ~ * .close:hover {
       color: #ff4136; }
   .card h1 + .close, .modal .overlay ~ * h1 + .close {
-    margin: 0.3em; }
+    margin: 0.2em; }
   .card h2 + .close, .modal .overlay ~ * h2 + .close {
     margin: 0.1em; }
   .card .dangerous, .modal .overlay ~ * .dangerous {

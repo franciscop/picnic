@@ -17,6 +17,10 @@ $picnic-input-padding: $picnic-separation / 2 $picnic-separation !default;
   border-radius: $picnic-radius;
   transition: $picnic-transition;
   width: 100%;
+
+  &:focus {
+    border: 1px solid $picnic-primary;
+    }
   }
 
 

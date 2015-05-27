@@ -1,6 +1,29 @@
+
+
+%stack {
+
+  &.select select {
+    border-radius: 0;
+    border-bottom-width: 0;
+    }
+
+  &.select:first-child select {
+    border-top-left-radius: $picnic-radius;
+    border-top-right-radius: $picnic-radius;
+    }
+
+  &.select:last-child select {
+    border-bottom-left-radius: $picnic-radius;
+    border-bottom-right-radius: $picnic-radius;
+    border-bottom-width: 1px;
+    }
+  }
+
+
 // Stacking elements one of top of another
 .stack,
 .stack .toggle {
+  @extend %stack;
   display: block;
   width: 100%;
   text-align: left;

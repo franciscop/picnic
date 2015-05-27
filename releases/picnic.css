@@ -422,6 +422,8 @@ input, textarea, .select select {
   border-radius: 0.2em;
   transition: all 0.3s;
   width: 100%; }
+  input:focus, textarea:focus, .select select:focus {
+    border: 1px solid #0074d9; }
 
 input {
   height: 2.1em; }
