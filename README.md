@@ -14,7 +14,11 @@ There are many ways of using Picnic CSS in your projects. Here a brief introduct
 
 Use [Picnic CSS in the CDN jsDelivr](http://www.jsdelivr.com/#!picnicss) for linking to the static file. Include the following line in your `<head>`:
 
+    // Include Picnic and the core plugins
     <link href="//cdn.jsdelivr.net/picnicss/3.4.2/picnic.min.css" rel="stylesheet">
+
+    // Include Picnic and all of the plugins
+    <link href="//cdn.jsdelivr.net/picnicss/3.4.2/plugins.min.css" rel="stylesheet">
 
 
 ### Bower - to personalize Picnic
