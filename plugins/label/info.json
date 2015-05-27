@@ -1,6 +1,7 @@
 {
   "id": "label",
   "name": "Label",
-  "description": "Label",
-  "install": "[included]"
+  "summary": "An element to display some short relevant information",
+  "affected": ".label",
+  "included": true
 }

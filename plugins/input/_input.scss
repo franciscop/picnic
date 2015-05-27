@@ -17,12 +17,6 @@ $picnic-input-padding: $picnic-separation / 2 $picnic-separation !default;
   border-radius: $picnic-radius;
   transition: $picnic-transition;
   width: 100%;
-
-  &:focus {
-    outline: 0;
-    border-color: $picnic-primary;
-    transition: border .2s, outline 0s;
-    }
   }
 
 

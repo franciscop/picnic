@@ -1,0 +1,7 @@
+{
+  "id": "tabs",
+  "name": "Tabs",
+  "summary": "Tab system for webpage",
+  "affected": ".tabs",
+  "included": false
+}

@@ -70,9 +70,11 @@ This is the markup for the example above:
 
 ## Multiple modals
 
-<label for="modal_2" class="button">
-  Another modal
-</label>
+<p>
+  <label for="modal_2" class="button">
+    Another modal
+  </label>
+</p>
 
 <div class="modal">
   <input id="modal_2" type="checkbox" />
@@ -94,9 +96,11 @@ This is the markup for the example above:
   </article>
 </div>
 
-<label for="modal_3" class="button">
-  Modalception
-</label>
+<p>
+  <label for="modal_3" class="button">
+    Modalception
+  </label>
+</p>
 
 <div class="modal">
   <input id="modal_3" type="checkbox" />
@@ -149,5 +153,27 @@ This is the markup for the example above:
 ## Javascript
 
 As always, there is **no javascript**. However, a little bit of javascript could enhance the experience allowing to close the modal by pressing `ESC`.
+
+<script>
+  document.onkeydown = function(e){
+    if (e.keyCode == 27) {
+      var modals = document.querySelectorAll('.modal > [type=checkbox]');
+      for (var i = 0; i < modals.length; i++) {
+        modals[i].checked = false;
+        }
+      }
+    }
+</script>
+
+    document.onkeydown = function(e){
+      if (e.keyCode == 27) {
+        var modals = document.querySelectorAll('.modal > [type=checkbox]');
+        for (var i = 0; i < modals.length; i++) {
+          modals[i].checked = false;
+          }
+        }
+      }
+
+
 
 

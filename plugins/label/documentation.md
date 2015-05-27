@@ -1,0 +1,36 @@
+# Label
+
+An element to display some short relevant information on the side of other element
+
+<h1>h1 is important
+  <span class="label">Normal</span>
+</h1>
+<h2>h2 is important too
+  <span class="label success">Success</span>
+</h2>
+<h3>Is h3 important?
+  <span class="label warning">Warning</span>
+</h3>
+<h4>h4 is not so important
+  <span class="label error">Error</span>
+</h4>
+<p>p is normal text
+  <span class="label">Normal</span>
+</p>
+
+    <h1>h1 is important
+      <span class="label">Normal</span>
+    </h1>
+    <h2>h2 is important too
+      <span class="label success">Success</span>
+    </h2>
+    <h3>Is h3 important?
+      <span class="label warning">Warning</span>
+    </h3>
+    <h4>h4 is not so important
+      <span class="label error">Error</span>
+    </h4>
+    <p>p is normal text
+      <span class="label">Normal</span>
+    </p>
+

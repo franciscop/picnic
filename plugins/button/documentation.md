@@ -44,7 +44,7 @@ There are different button types for different situations. These are.
 <input value="Submit" type="submit">
 <label>
     <input type="checkbox">
-    <span class="button">Toggle</span>
+    <span class="toggle button">Toggle</span>
 </label>
 </p>
 

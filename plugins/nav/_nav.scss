@@ -1,7 +1,9 @@
 // Navigation bar
-$picnic-nav-shadow: $picnic-shadow !default;
 
+
+$picnic-nav-shadow: $picnic-shadow !default;
 $picnic-nav-position: fixed !default;
+$picnic-nav-sides: .6em;
 
 
 // Vertical align based on
@@ -16,6 +18,7 @@ $picnic-nav-position: fixed !default;
 
   // Total height
   height: 3em;
+  padding: 0 $picnic-nav-sides;
 
   // Make it look like a hovering bar
   background: #fff;
@@ -32,7 +35,6 @@ $picnic-nav-position: fixed !default;
   .brand,
   .menu,
   .burger {
-    margin: 0 .5em;
     float: right;
 
     position: relative;
@@ -67,25 +69,6 @@ $picnic-nav-position: fixed !default;
   .menu > * {
     margin-right: .3em;
     }
-
-
-
-
-
-  &.transparent {
-    color: #fff;
-    box-shadow: none;
-    background: none;
-
-    .brand,
-    .pseudo.button {
-      color: inherit;
-      }
-
-    .pseudo.button:hover {
-      background: rgba(255, 255, 255, .2);
-      }
-    }
   }
 
 
@@ -98,7 +81,6 @@ nav {
 
 
 
-.show,
 .burger {
   display: none;
   }
@@ -111,7 +93,7 @@ nav {
       display: inline-block;
       cursor: pointer;
       bottom: -1000em;
-    }
+      }
 
     .menu,
     .show:checked ~ .burger {

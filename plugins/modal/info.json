@@ -2,7 +2,10 @@
   "id": "modal",
   "name": "Modal",
   "description": "Fancy modal for the new web",
-  "install": "+modal",
+  "install": "plugin",
+  "included": false,
+  "affected": ".modal",
+  "summary": "A pop-up like element that displays important information and focuses user's attention on it.",
   "dependencies": [
     "card/v2"
     ]

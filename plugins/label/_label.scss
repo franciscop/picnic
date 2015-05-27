@@ -35,10 +35,6 @@ $picnic-label-radius: $picnic-radius !default;
     background: $picnic-error;
     }
 
-  &.dull {
-    background: $picnic-dull;
-    }
-
   &.pseudo {
     background: transparent;
     color: $picnic-black;
@@ -47,4 +43,9 @@ $picnic-label-radius: $picnic-radius !default;
 
 .label {
   @extend %label;
+
+  font-size: .6em;
+  padding: .4em .6em;
+  margin-left: 1em;
+  line-height: 1;
   }

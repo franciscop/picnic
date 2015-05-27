@@ -1,7 +1,7 @@
 {
   "id": "stack",
   "name": "Stack",
-  "description": "This is a really cool button plugin",
-  "install": "+stack",
-  "test": "test.html"
+  "affected": ".stack",
+  "summary": "Allow to set one element on top of each other and gives them a sense of unity.",
+  "included": false
 }

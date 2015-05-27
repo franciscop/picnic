@@ -13,7 +13,7 @@ $picnic-warning: $orange !default;
 $picnic-error: $red !default;
 $picnic-dull: $gray !default;
 $picnic-color-variation: 10% !default;
-$picnic-transparency: .1 !default;
+$picnic-transparency: .2 !default;
 
 
 // Spaces
@@ -24,7 +24,7 @@ $picnic-breakpoint: 60em !default;
 // Shapes
 $picnic-radius: .2em !default;
 $picnic-border: 1px solid #ccc !default;
-$picnic-shadow: 0 0 .2em rgba($picnic-black, 2 * $picnic-transparency) !default;
+$picnic-shadow: 0 0 .2em rgba($picnic-black, $picnic-transparency) !default;
 
 // Transitions
-$picnic-transition: all .2s ease;
+$picnic-transition: all .3s;

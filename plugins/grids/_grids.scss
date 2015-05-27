@@ -14,9 +14,8 @@
     table-layout: fixed;
 
     border-spacing: $picnic-separation 0;
-    margin-left: - $picnic-separation;
-    margin-bottom: $picnic-separation;
-  }
+    margin: $picnic-separation 0 $picnic-separation #{-$picnic-separation};
+    }
 
   // For every child directly below row
   .row > * {

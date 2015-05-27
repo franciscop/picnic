@@ -1,5 +1,7 @@
 {
   "id": "nav",
   "name": "Navigation bar",
-  "install": "+nav"
+  "affected": "nav",
+  "summary": "Gives access to common links of the website in an easy way from the top of the page.",
+  "included": false
 }

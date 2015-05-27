@@ -3,7 +3,7 @@
 
 
 // Variables
-$picnic-card-shadow: $picnic-shadow !default;
+$picnic-card-shadow: 0 !default;
 $picnic-card-border: $picnic-border !default;
 $picnic-card-radius: $picnic-radius !default;
 
@@ -60,8 +60,12 @@ $picnic-card-radius: $picnic-radius !default;
       margin: 0 2em 0 0;
       line-height: 1;
       display: inline-block;
+      }
+    
+    &:last-child {
+      border-bottom: 0;
+      }
     }
-  }
 
   footer {
     padding: .8em;
@@ -107,7 +111,7 @@ $picnic-card-radius: $picnic-radius !default;
     }
 
   .dangerous {
-    @extend .error;
+    background: $picnic-error;
     float: right;
     }
   }

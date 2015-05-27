@@ -1,5 +1,6 @@
 {
   "id": "table",
   "name": "Table",
-  "install": "[included]"
+  "affected": "table",
+  "included": true
 }

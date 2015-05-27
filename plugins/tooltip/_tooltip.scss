@@ -34,6 +34,7 @@ $picnic-tooltip-size: .8em !default;
 
     // Style
     @extend .label;
+    margin-left: 0;
     font-size: $picnic-tooltip-size;
     background: $picnic-tooltip-background;
 
@@ -55,7 +56,7 @@ $picnic-tooltip-size: .8em !default;
     // Bottom one (default)
     border-color: transparent transparent $picnic-tooltip-background;
     margin-top: 0;
-    left: 15px;
+    left: 10px;
     }
 
   &:hover:after,
@@ -88,7 +89,7 @@ $picnic-tooltip-size: .8em !default;
   &:before {
     border-color: $picnic-tooltip-background transparent transparent;
     margin-bottom: 0;
-    left: 15px;
+    left: 10px;
     }
   }
 

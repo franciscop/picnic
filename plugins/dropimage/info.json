@@ -1,9 +1,10 @@
 {
   "id": "dropimage",
-  "version": "1",
-  "picnic": "3.x",
   "name": "Dropimage",
-  "install": "+dropimage",
+  "affected": ".dropimage",
+  "summary": "Allows you to click the element or drop an image on it to upload the image and display a preview.",
+  "included": false,
+  "javascript": true,
   "partial": false,
   "test": [
     "test.html"

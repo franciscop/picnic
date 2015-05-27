@@ -6,17 +6,17 @@
   <button class="success">Button</button>
   <button class="warning">Button</button>
   <button class="error"  >Button</button>
-  <button class="dull">Button</button>
   <button class="pseudo">Button</button>
+  <button disabled>Button</button>
 </p>
 
 <p>
-  <a href="#" class="button">Link</a>
-  <a href="#" class="button success">Link</a>
-  <a href="#" class="button warning">Link</a>
-  <a href="#" class="button error">Link</a>
-  <a href="#" class="button dull">Link</a>
-  <a href="#" class="button pseudo">Link</a>
+  <a class="button">Link</a>
+  <a class="button success">Link</a>
+  <a class="button warning">Link</a>
+  <a class="button error">Link</a>
+  <a class="button pseudo">Link</a>
+  <a class="button" disabled>Link</a>
 </p>
 
 <p>
@@ -24,8 +24,8 @@
   <input type="submit" class="success" value="Submit" />
   <input type="submit" class="warning" value="Submit" />
   <input type="submit" class="error" value="Submit" />
-  <input type="submit" class="dull" value="Submit" />
   <input type="submit" class="pseudo" value="Submit" />
+  <input disabled type="submit" value="Submit" />
 </p>
 
 <p>
@@ -47,10 +47,10 @@
   </label>
   <label>
     <input type="checkbox" />
-    <span class="toggle button dull">Toggle</span>
+    <span class="toggle button pseudo">Toggle</span>
   </label>
   <label>
-    <input type="checkbox" />
-    <span class="toggle button pseudo">Toggle</span>
+    <input disabled type="checkbox" />
+    <span disabled class="toggle button">Toggle</span>
   </label>
 </p>

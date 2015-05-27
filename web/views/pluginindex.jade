@@ -12,9 +12,23 @@ block content
 
 
     each plugin in plugins
-      article.plugin
-        header
-          a(href="/plugins/" + plugin.id)
+      div.card.visual.newplugin
+        div.row
+          div.content
             h2= plugin.name
-            div.install= plugin.install
-        div.description!= plugin.description
+              span.installed
+                if (plugin.included)
+                  span included
+                else
+                  span + plugin
+                if (plugin.javascript)
+                  span.label.error(title="This plugin requires some javascript") JS
+            div.affected= plugin.affected
+            p= plugin.summary
+            footer
+              a.button.icon-file-code(href="/plugins/" + plugin.id) Docs
+              span.extra
+                a.pseudo.button.icon-help-circled(href="/test#" + plugin.id) Test
+                | 
+                a.pseudo.button.icon-g(href="https://github.com/picnicss/picnic/plugins/" + plugin.id) Source
+          div.display!= plugin.description

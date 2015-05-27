@@ -1,5 +1,9 @@
 {
   "id": "input",
   "name": "Input and textarea",
-  "install": "[included]"
+  "affected": "input, textarea",
+  
+  "summary-comment": "purposefuly empty",
+  "summary": "",
+  "included": true
 }

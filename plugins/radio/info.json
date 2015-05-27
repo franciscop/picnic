@@ -1,8 +1,7 @@
 {
   "id": "radio",
   "name": "Radiobutton",
-  "install": "[included]",
-  "dependencies": [
-    "radiocheckbox/v2"
-    ]
+  "included": true,
+  "affected": "[type=radio]",
+  "summary": "Allows to choose one element from several of them."
 }

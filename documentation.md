@@ -20,7 +20,7 @@ Picnic comes in two compiled flavours, `picnic.css` (the library) and `plugins.c
 
 Small guide for developers to take advantage of the modular nature of Picnic.
 
-### Example (for fast reference)
+### Example for reference
 
     // Picnic generic variables
     $picnic-primary: #faa;
@@ -48,7 +48,7 @@ Small guide for developers to take advantage of the modular nature of Picnic.
       background-color: $picnic-warning;
       }
 
-    // Your code ...
+    // Your styles here
 
 
     
@@ -59,6 +59,30 @@ Notes:
 - If you want to use **fontello**, it should be **included before the library**.
 
 
+
+### Variables
+
+> Variables should be used **before importing the library**
+
+The **generic variables** can be found in **[`/themes/default/_theme.scss`](https://github.com/picnicss/picnic)** and they look like this:
+
+    $picnic-border: 1px solid #aaa;
+    $picnic-transition: all .2s;
+
+The **plugin variables** can be found in the documentation and source code of each plugin. They are namespaced with `$picnic-PLUGINNAME` and look like this:
+
+    $picnic-card-border: 1px solid #aaa;
+    $picnic-button-transition: all 0s;
+
+
+When a plugin wants to use a generic variable it also namespaces it so you get a finer control of them. In this way you can overwrite one generic variable to change all of the plugins or only a single plugin variable. Example:
+
+    // Delete all of the borders but keep it in card
+    $picnic-border: 0;
+    $picnic-card-border: 1px solid #aaa;
+
+
+
 ### Include the library
 
 There are three files, located in `/src/`, that you can use within your sass project:
@@ -67,36 +91,15 @@ There are three files, located in `/src/`, that you can use within your sass pro
 - **picnic.scss**: extends `raw.scss` and includes some of css modules. You can [just read it](https://github.com/picnicss/picnic/blob/master/src/picnic.scss) to see which modules it includes.
 - **plugins.scss**: this includes all of the plugins needed.
 
-So, to include it, you just need to do this in your sass:
+So, to include it, you just need to do this in your sass with the library you want:
 
     @import 'bower_path/picnic/src/plugins';
-
-
-### Variables
-
-The **generic variables** can be found in **[`/themes/default/_theme.scss`](https://github.com/picnicss/picnic)** and they look like this:
-
-    $picnic-border: 1px solid #aaa;
-    $picnic-transition: all .2s;
-
-When you overwrite one, all of the places in the code where it is used are also overwritten.
-
-The **plugin variables** can be found in the documentation and source code of each plugin. They are namespaced with `$picnic-PLUGINNAME` and look like this:
-
-    $picnic-card-border: 1px solid #aaa;
-    $picnic-button-transition: all 0s;
-
-
-When a plugin wants to use a generic variable it also namespaces it so you get a finer control of them. In this way, if you overwrite a generic variable you can overwrite all of the plugins using it, but then you can also modify each of the plugin's variables individually.
-
-    $picnic-border: 0;
-    $picnic-card-border: 1px solid #aaa;
 
 
 
 ## Plugins
 
-Each plugin documentation is within their own page. Plase visit the plugins pages to see it:
+Each plugin documentation has its own page. Plase visit them to see it:
 
 <a href="/plugins" class="button icon-puzzle">Plugins</a>
 

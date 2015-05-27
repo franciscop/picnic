@@ -7,7 +7,7 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(name="keywords" content="css, library, css library, picnic, picnicss, html, html5, light, plugin")
     meta(name="description" content="A lighweight CSS library with nice defaults to give you a fast start in any project.")
-    link(rel='stylesheet', href='/style/style.min.css')
+    link(rel='stylesheet', href='/style/style.css')
     link(rel="icon", href="/img/basket.png", type="image/png")
 
   body
@@ -16,7 +16,7 @@ html
 
       // responsiveness
       input#bmenu.show(type="checkbox")
-      label.burger.pseudo.button(for="bmenu") menu
+      label.burger.toggle.pseudo.button(for="bmenu") menu
 
       div.menu
         a.pseudo.button.icon-file-code(href="/documentation/") Documentation
