@@ -2,20 +2,35 @@
 
 %stack {
 
-  &.select select {
-    border-radius: 0;
-    border-bottom-width: 0;
-    }
 
-  &.select:first-child select {
-    border-top-left-radius: $picnic-radius;
-    border-top-right-radius: $picnic-radius;
-    }
+  &.select {
+    margin-top: 0px;
 
-  &.select:last-child select {
-    border-bottom-left-radius: $picnic-radius;
-    border-bottom-right-radius: $picnic-radius;
-    border-bottom-width: 1px;
+    select {
+      position: relative;
+      border-radius: 0;
+      height: calc(#{$picnic-select-height} + 1px);
+
+      &:focus {
+        z-index: 2;
+        }
+      }
+
+    &:first-child {
+      margin-top: 0;
+      }
+
+
+    &:first-child select {
+      border-top-left-radius: $picnic-radius;
+      border-top-right-radius: $picnic-radius;
+      }
+
+
+    &:last-child select {
+      border-bottom-left-radius: $picnic-radius;
+      border-bottom-right-radius: $picnic-radius;
+      }
     }
   }
 

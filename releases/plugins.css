@@ -423,7 +423,8 @@ input, textarea, .select select {
   transition: all 0.3s;
   width: 100%; }
   input:focus, textarea:focus, .select select:focus {
-    border: 1px solid #0074d9; }
+    border: 1px solid #0074d9;
+    outline: 0; }
 
 input {
   height: 2.1em; }
@@ -667,16 +668,22 @@ nav {
   nav .menu > a {
     padding: 0.3em 0.9em; } }
 
-.stack.select select, .stack .toggle.select select {
-  border-radius: 0;
-  border-bottom-width: 0; }
-.stack.select:first-child select, .stack .toggle.select:first-child select {
-  border-top-left-radius: 0.2em;
-  border-top-right-radius: 0.2em; }
-.stack.select:last-child select, .stack .toggle.select:last-child select {
-  border-bottom-left-radius: 0.2em;
-  border-bottom-right-radius: 0.2em;
-  border-bottom-width: 1px; }
+.stack.select, .stack .toggle.select {
+  margin-top: 0px; }
+  .stack.select select, .stack .toggle.select select {
+    position: relative;
+    border-radius: 0;
+    height: calc(2.1em + 1px); }
+    .stack.select select:focus, .stack .toggle.select select:focus {
+      z-index: 2; }
+  .stack.select:first-child, .stack .toggle.select:first-child {
+    margin-top: 0; }
+  .stack.select:first-child select, .stack .toggle.select:first-child select {
+    border-top-left-radius: 0.2em;
+    border-top-right-radius: 0.2em; }
+  .stack.select:last-child select, .stack .toggle.select:last-child select {
+    border-bottom-left-radius: 0.2em;
+    border-bottom-right-radius: 0.2em; }
 
 .stack, .stack .toggle {
   display: block;

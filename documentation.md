@@ -5,18 +5,18 @@ A brief introduction to Picnic CSS. This guide is written in a manner to make it
 
 ## Getting started
 
-Picnic comes in two compiled flavours, `picnic.css` (the library) and `plugins.css` (library + plugins). Also, you can get the developer SCSS files to personalize your website as much as you want. To install it:
+Picnic comes in two compiled flavours, `picnic.css` (the library) and `plugins.css` (library + all plugins). Also, you can get the developer SCSS files to personalize your website as much as you want. To install it:
 
 **Bower**: the package manager is the easiest way to install Picnic's developer files:
 
     bower install picnic
 
-**CDN**: use **[Picnic from jsdelivr](http://www.jsdelivr.com/#!picnicss)** to get the compiled and minimized file.
+**CDN**: use **[Picnic from jsdelivr](http://www.jsdelivr.com/#!picnicss)** to get the compiled and minimized file from a CDN.
 
 **Github**: use **[the minimized file](https://raw.githubusercontent.com/picnicss/picnic/master/releases/picnic.min.css)** or **[the whole project](https://github.com/picnicss/picnic)**.
 
 
-## SASS
+## SCSS
 
 Small guide for developers to take advantage of the modular nature of Picnic.
 
@@ -64,12 +64,12 @@ Notes:
 
 > Variables should be used **before importing the library**
 
-The **generic variables** can be found in **[`/themes/default/_theme.scss`](https://github.com/picnicss/picnic)** and they look like this:
+The **generic variables** are namespaced with `$picnic-`, can be found in **[`/themes/default/_theme.scss`](https://github.com/picnicss/picnic)** and look like this:
 
     $picnic-border: 1px solid #aaa;
     $picnic-transition: all .2s;
 
-The **plugin variables** can be found in the documentation and source code of each plugin. They are namespaced with `$picnic-PLUGINNAME` and look like this:
+The **plugin variables** can be found in the documentation and source code of each plugin. They are namespaced with `$picnic-PLUGIN-` and look like this:
 
     $picnic-card-border: 1px solid #aaa;
     $picnic-button-transition: all 0s;
@@ -87,14 +87,23 @@ When a plugin wants to use a generic variable it also namespaces it so you get a
 
 There are three files, located in `/src/`, that you can use within your sass project:
 
-- **raw.scss**: just import the variables and the theme, but it doesn't declare any style.
-- **picnic.scss**: extends `raw.scss` and includes some of css modules. You can [just read it](https://github.com/picnicss/picnic/blob/master/src/picnic.scss) to see which modules it includes.
+- **raw.scss**: just import the variables and the theme, but it doesn't declare any style. Useful when you only want one or two handpicked plugins.
+- **picnic.scss**: extends `raw.scss` and includes some of css modules. You can [just read it](https://github.com/picnicss/picnic/blob/master/src/picnic.scss) to see which modules are included.
 - **plugins.scss**: this includes all of the plugins needed.
 
 So, to include it, you just need to do this in your sass with the library you want:
 
     @import 'bower_path/picnic/src/plugins';
 
+
+
+### Including individial plugins
+
+To add a plugin, just reference the file called `_plugin.scss` within that plugin folder. Like this:
+
+    @import 'bower_path/picnic/plugins/card/plugin';
+
+This should be done after loading any of the three files from the library. Please note that **some of the plugins might have dependencies**, which should be stated clearly in the file `info.json` in each plugin folder. There's some talk in SASS' github that would allow to include the dependencies automaticly, but it's been going on for 4 years and still not solved so don't expect this soon.
 
 
 ## Plugins

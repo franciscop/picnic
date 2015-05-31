@@ -1,7 +1,7 @@
 // Variables
 $picnic-select-height: 2.1em !default;
 $picnic-select-margin: $picnic-separation / 2 !default;
-
+$picnic-select-padding: $picnic-separation / 2 $picnic-separation * .75;
 
 // Code
 .select {
@@ -50,7 +50,7 @@ $picnic-select-margin: $picnic-separation / 2 !default;
     width: 100%;
     height: $picnic-select-height;
     box-sizing: border-box;
-    padding: $picnic-separation / 2 $picnic-separation * .75;
+    padding: $picnic-select-padding;
     
 
     &:focus,

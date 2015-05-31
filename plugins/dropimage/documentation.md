@@ -4,33 +4,21 @@
 
 Allows you to add a file input element that can receive an image drop and clicks with native elements. However, it needs some javascript to show the dropped image:
 
-
-<div class="row">
-  <div>
-    <label class="dropimage" style="background-image:url('camera.png');">
-      <input title="Drop image or click me" type="file">
-    </label>
-  </div>
-  <div>
-    <label class="dropimage" style="background-image:url('camera.png');">
-      <input title="Drop image or click me" type="file">
-    </label>
-  </div>
+<div class="demo">
+  <label class="dropimage" style="background-image:url('camera.png');">
+    <input title="Drop image or click me" type="file">
+  </label>
 </div>
 
+<style>
+  .demo {
+    width: 30%;
+    }
+</style>
 
-    <div class="row">
-      <div>
-        <label class="dropimage" style="background-image:url('camera.png');">
-          <input title="Drop image or click me" type="file">
-        </label>
-      </div>
-      <div>
-        <label class="dropimage" style="background-image:url('camera.png');">
-          <input title="Drop image or click me" type="file">
-        </label>
-      </div>
-    </div>
+    <label class="dropimage" style="background-image:url('camera.png');">
+      <input title="Drop image or click me" type="file">
+    </label>
 
 
 

@@ -20,6 +20,7 @@ $picnic-input-padding: $picnic-separation / 2 $picnic-separation !default;
 
   &:focus {
     border: 1px solid $picnic-primary;
+    outline: 0;
     }
   }
 

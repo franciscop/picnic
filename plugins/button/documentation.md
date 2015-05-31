@@ -69,7 +69,7 @@ Allows for seemingly links to behave as buttons:
 
 <label>
     <input type="checkbox">
-    <span class="pseudo button">Toggle</span>
+    <span class="pseudo button toggle">Toggle</span>
 </label>
 
 </div>

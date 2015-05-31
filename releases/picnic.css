@@ -423,7 +423,8 @@ input, textarea, .select select {
   transition: all 0.3s;
   width: 100%; }
   input:focus, textarea:focus, .select select:focus {
-    border: 1px solid #0074d9; }
+    border: 1px solid #0074d9;
+    outline: 0; }
 
 input {
   height: 2.1em; }
