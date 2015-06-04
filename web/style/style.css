@@ -1126,6 +1126,10 @@ html, body, main {
 .row.demo > :nth-child(2n) {
   background: #7fdbff; }
 
+.test h2 {
+  padding-top: 60px;
+  margin-top: 0; }
+
 .newplugin {
   text-decoration: none;
   margin: 30px 0;
