@@ -9,12 +9,6 @@ They can be of different types and <a href="http://clrs.cc/" target="_blank">col
 <button class='dull'>Dull</button>
 
 
-## Installation
-
-It is already included in every build from Picnic CSS.
-
-
-
 ## Colors
 
 The default color is dark blue. There are 5 colors:

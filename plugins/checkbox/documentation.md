@@ -5,21 +5,21 @@ Display an inline checkbox with a nice default style
 
 <label>
 	<input type="checkbox">
-	<span>Check me out (;</span>
+	<span class="checkbox">Check me out (;</span>
 </label>
 <br>
 <label>
   <input type="checkbox" checked>
-  <span>Uncheck me</span>
+  <span class="checkbox">Uncheck me</span>
 </label>
 
 	<label>
 		<input type="checkbox">
-		<span>Check me out (;</span>
+		<span class="checkbox">Check me out (;</span>
 	</label><br>
 	<label>
 		<input type="checkbox" checked>
-		<span>Uncheck me</span>
+		<span class="checkbox">Uncheck me</span>
 	</label>
 
 
@@ -30,7 +30,7 @@ This plugin, while experimental in the past, is mature now. Use a normal checkbo
 
 <label>
   <input type="checkbox">
-  <span>Checkbox text</span>
+  <span class="checkbox">Checkbox text</span>
 </label>
 
     <label>
@@ -41,7 +41,7 @@ This plugin, while experimental in the past, is mature now. Use a normal checkbo
 
 <p>
   <input id="checkboxdemo" type="checkbox">
-  <label for="checkboxdemo">Checkbox text</label>
+  <label for="checkboxdemo" class="checkbox">Checkbox text</label>
 </p>
 
     <input id="checkboxdemo" type="checkbox">
@@ -56,7 +56,7 @@ You do not need javascript since we are using the native elements and NOT settin
 <form>
   <label>
     <input class="tos" type="checkbox" />
-    <span>Accept TOS</span>
+    <span class="checkbox">Accept TOS</span>
   </label>
   <button>Send</button>
 </form>
@@ -74,7 +74,7 @@ HTML
 
     <label>
       <input class="tos" type="checkbox">
-      <span>Checkbox text</span>
+      <span class="checkbox">Checkbox text</span>
     </label>
 
 

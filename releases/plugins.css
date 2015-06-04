@@ -515,14 +515,14 @@ input {
     -webkit-transform: scale(0.5) translateY(-100%);
     transform: scale(0.5) translateY(-100%); }
 
-[type=checkbox] + *:before {
+[type=checkbox] + .checkbox:before {
   border-radius: 0.2em; }
-[type=checkbox] + *:after {
+[type=checkbox] + .checkbox:after {
   content: '\2714';
   background: none;
   -webkit-transform: scale(2) translateY(-25%);
   transform: scale(2) translateY(-25%); }
-[type=checkbox]:checked + *:after {
+[type=checkbox]:checked + .checkbox:after {
   color: #111;
   background: none;
   -webkit-transform: translateY(-50%);

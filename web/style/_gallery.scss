@@ -13,3 +13,14 @@
     }
   }
 
+@media all and (max-width: $picnic-breakpoint) {
+  
+  .gallery .card {
+    margin-top: 1.2em;
+    }
+
+  .gallery .card:last-child {
+    margin-bottom: 0;
+    }
+  }
+

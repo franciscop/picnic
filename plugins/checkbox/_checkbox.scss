@@ -8,17 +8,17 @@ $picnic-checkbox-radius: $picnic-radius !default;
 [type=checkbox] {
   @extend %radio;
     
-  + *:before {
+  + .checkbox:before {
     border-radius: $picnic-checkbox-radius;
     }
 
-  + *:after {
+  + .checkbox:after {
     content: $picnic-checkbox-character;
     background: none;
     transform: scale(2) translateY(-25%);
     }
 
-  &:checked + *:after {
+  &:checked + .checkbox:after {
     color: $picnic-black;
     background: none;
     transform: translateY(-50%);
