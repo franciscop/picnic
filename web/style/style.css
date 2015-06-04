@@ -452,7 +452,8 @@ button, .button, [type=submit], .dropimage {
   transition: all 0.3s;
   height: auto; }
   button:hover, .button:hover, [type=submit]:hover, .dropimage:hover, button:focus, .button:focus, [type=submit]:focus, .dropimage:focus {
-    box-shadow: inset 0 0 0 99em rgba(255, 255, 255, 0.2); }
+    box-shadow: inset 0 0 0 99em rgba(255, 255, 255, 0.2);
+    border: 0; }
   button.pseudo:hover, .button.pseudo:hover, [type=submit].pseudo:hover, .pseudo.dropimage:hover, button.pseudo:focus, .button.pseudo:focus, [type=submit].pseudo:focus, .pseudo.dropimage:focus {
     box-shadow: inset 0 0 0 99em rgba(17, 17, 17, 0.1); }
   button.active, .button.active, [type=submit].active, .active.dropimage, button:active, .button:active, [type=submit]:active, .dropimage:active, button.pseudo:active, .button.pseudo:active, [type=submit].pseudo:active, .pseudo.dropimage:active {
@@ -490,50 +491,28 @@ input {
   padding: 0.3em 0.6em;
   cursor: pointer; }
 
-.select {
-  position: relative;
-  display: inline-block;
-  margin: 0;
+select {
+  background: #fff url('/plugins/select/arrow.svg') no-repeat scroll calc(100% - 15px) center/10px 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid #ccc;
   border-radius: 0.2em;
+  cursor: pointer;
   width: 100%;
-  height: 2.1em; }
-  .select:after {
-    display: block;
-    content: '\25BC';
-    position: absolute;
-    right: 1px;
-    top: 1px;
-    bottom: 1px;
-    width: 30px;
-    height: calc(100% - 2px);
-    line-height: 2.625em;
-    padding: 0;
-    font-size: 0.8em;
-    background: #fff;
-    border-radius: 0.2em;
-    text-align: center;
-    pointer-events: none; }
-  .select select {
-    background: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-    border: 1px solid #ccc;
-    border-radius: 0.2em;
-    cursor: pointer;
-    width: 100%;
-    height: 2.1em;
-    box-sizing: border-box;
+  height: 2.1em;
+  box-sizing: border-box;
+  padding: 0.3em 0.45em; }
+  select:focus, select:active {
+    outline: none;
+    border: 1px solid #0074d9;
+    transition: outline 0s; }
+  select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #111; }
+  select option {
+    font-size: inherit;
     padding: 0.3em 0.45em; }
-    .select select:focus, .select select:active {
-      outline: none;
-      transition: outline 0s; }
-    .select select:-moz-focusring {
-      color: transparent;
-      text-shadow: 0 0 0 #111; }
-    .select select option {
-      font-size: inherit;
-      padding: 0.3em 0.45em; }
 
 [type=radio], [type=checkbox] {
   opacity: 0;
@@ -720,27 +699,9 @@ nav {
   nav .menu > * {
     display: block;
     margin: 0.3em;
-    width: calc(100% - 1em);
     text-align: left; }
   nav .menu > a {
     padding: 0.3em 0.9em; } }
-
-.stack.select, .stack .toggle.select {
-  margin-top: 0px; }
-  .stack.select select, .stack .toggle.select select {
-    position: relative;
-    border-radius: 0;
-    height: calc(2.1em + 1px); }
-    .stack.select select:focus, .stack .toggle.select select:focus {
-      z-index: 2; }
-  .stack.select:first-child, .stack .toggle.select:first-child {
-    margin-top: 0; }
-  .stack.select:first-child select, .stack .toggle.select:first-child select {
-    border-top-left-radius: 0.2em;
-    border-top-right-radius: 0.2em; }
-  .stack.select:last-child select, .stack .toggle.select:last-child select {
-    border-bottom-left-radius: 0.2em;
-    border-bottom-right-radius: 0.2em; }
 
 .stack, .stack .toggle {
   display: block;
@@ -756,12 +717,12 @@ nav {
   border-bottom-left-radius: 0.2em;
   border-bottom-right-radius: 0.2em; }
 
-input.stack, textarea.stack {
+input.stack, textarea.stack, select.stack {
   transition: border-bottom 0 ease 0;
   border-bottom-width: 0; }
-  input.stack:last-child, textarea.stack:last-child {
+  input.stack:last-child, textarea.stack:last-child, select.stack:last-child {
     border-bottom-width: 1px; }
-  input.stack:focus + input, input.stack:focus + textarea, textarea.stack:focus + input, textarea.stack:focus + textarea {
+  input.stack:focus + input, input.stack:focus + textarea, input.stack:focus + select, textarea.stack:focus + input, textarea.stack:focus + textarea, textarea.stack:focus + select, select.stack:focus + input, select.stack:focus + textarea, select.stack:focus + select {
     border-top-color: #0074d9; }
 
 .card, .modal .overlay ~ * {
@@ -1070,7 +1031,9 @@ nav.transparent {
 
 @media all and (max-width: 960px) {
   nav .menu {
-    color: #333; } }
+    color: #333; }
+  .hero {
+    background-attachment: scroll; } }
 
 .visual {
   text-align: left;
@@ -1208,10 +1171,11 @@ html, body, main {
     margin: 0 0 0.3em; }
   .newplugin {
     padding: 0; }
+    .newplugin > .row {
+      width: 100%; }
   .display {
     margin-top: 20px;
-    margin-bottom: 0;
-    padding-right: 20px; }
+    margin-bottom: 0; }
     .display > .row {
       width: 100%;
       margin-bottom: 0; }
@@ -1222,7 +1186,6 @@ html, body, main {
     margin-top: 0;
     padding-left: 0;
     padding-right: 0;
-    margin-right: 20px;
     border-bottom: 2px solid #eee; }
     .newplugin .content > footer {
       padding-bottom: 20px; }

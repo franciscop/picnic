@@ -1,6 +1,6 @@
 # Documentation
 
-A brief introduction to Picnic CSS. This guide is written in a manner to make it easy to maintain, so it might lack explicit links and versions in favour of pointing where you will find those.
+A brief introduction to Picnic CSS. Since right now it's mainly a person's project, this guide is written in a manner to make it easy to maintain by not making specific versions references (pointing out where to find them).
 
 
 ## Getting started
@@ -30,19 +30,19 @@ Small guide for developers to take advantage of the modular nature of Picnic.
     $picnic-card-border: 1px solid #aaa;
     $picnic-button-transition: all 0s;
 
-    // Now import the main library (raw, picnic, plugins)
-    @import 'bower_path/picnic/src/picnic';
+    // Use the library (raw, picnic, plugins)
+    @import 'bower/picnic/src/picnic';
 
     // Get a few plugins in your codebase
-    @import 'bower_path/picnic/plugins/nav/plugin';
-    @import 'bower_path/picnic/plugins/modal/plugin';
+    @import 'bower/picnic/plugins/nav/plugin';
+    @import 'bower/picnic/plugins/modal/plugin';
 
-    // Overwrite some of the styles. The joy of cascading
+    // Overwriting styles. The joy of cascading
     %button.pseudo {
       background: #eee;
       }
 
-    // One of your own elements extending a picnic element
+    // Your element extending a picnic element
     .call-to-action {
       @extend %button;
       background-color: $picnic-warning;
@@ -89,7 +89,7 @@ There are three files, located in `/src/`, that you can use within your sass pro
 
 - **raw.scss**: just import the variables and the theme, but it doesn't declare any style. Useful when you only want one or two handpicked plugins.
 - **picnic.scss**: extends `raw.scss` and includes some of css modules. You can [just read it](https://github.com/picnicss/picnic/blob/master/src/picnic.scss) to see which modules are included.
-- **plugins.scss**: this includes all of the plugins needed.
+- **plugins.scss**: this includes all of the plugins available in Picnic.
 
 So, to include it, you just need to do this in your sass with the library you want:
 
@@ -112,6 +112,84 @@ Each plugin documentation has its own page. Plase visit them to see it:
 
 <a href="/plugins" class="button icon-puzzle">Plugins</a>
 
+
+
+## Placeholders
+
+> If you just want to use Picnic plugins as they are, ignore this section. It goes into details of how to make your code more semantic and your css smaller, but it is extreme optimization for most cases.
+
+Each plugins is divided into two files, the placeholder (called `_class.scss`) and the implementation (`_plugin.scss`). If you want, for example, something to behave like a card but you want it to be called `.post` you would normally do something like this if you come from other CSS libraries:
+
+    <article class="card post">...</article>
+
+and then:
+
+    // Including definition and implementation
+    @import 'bower/picnic/plugins/card/plugin';
+
+    .post {
+        // some extra styles if needed
+        }
+
+A more semantic and direct way would be this:
+
+    <article class="post">...</article>
+
+and then:
+
+    // Including definition and implementation
+    @import 'bower/picnic/plugins/card/plugin';
+
+    .post {
+        @extend .card;
+
+        // some extra styles if needed
+        }
+
+
+However, in this way both `.card` and `.post` will be included in your css. Keep doing this with many elements and you get a fairly lot of css rules that you don't use. There's a better way with Picnic though:
+
+    <article class="post">...</article>
+
+SCSS:
+
+    // Including only the class (definition)
+    @import 'bower/picnic/plugins/card/class';
+
+    .post {
+        @extend %card;
+
+        // some extra styles if needed
+        }
+
+In this way, by taking advantage of the nature of SCSS placeholders, in the final css only `.post` will be created, but it will have the same styles in both cases.
+
+This is similar to some programming languages, where each object is the implementation of one class, but this class can extend several others. This keeps the code really DRY. We are using this ourselves:
+
+    // in plugins/button/_plugin.scss
+    button, .button, [type=submit] {
+        @extend %button;
+        }
+
+    // in plugins/button/_class.scss
+    %button {
+        @extend %label;
+
+        // interaction definition
+        }
+
+    // in plugins/label/_class.scss
+    %label {
+        // shape definition
+        }
+
+
+## Wrap up
+
+
+
+
+
+
+
 <br><br><br><br><br><br><br><br>
-
-

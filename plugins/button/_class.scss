@@ -26,6 +26,7 @@ $picnic-button-transition: $picnic-transition !default;
   &:hover,
   &:focus {
     box-shadow: $picnic-button-hover;
+    border: 0;
     }
 
   &.pseudo:hover,

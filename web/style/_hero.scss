@@ -103,5 +103,10 @@
   nav .menu {
     color: #333;
     }
+
+  // Since in mobiles the fixed one is sluggish
+  .hero {
+    background-attachment: scroll;
+    }
   }
 
