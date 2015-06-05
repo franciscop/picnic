@@ -96,7 +96,7 @@ If you don't see anything that seems *picnic.css exclusive*, that's because ther
 
 - **Only CSS3** is needed and your **HTML5** stays highly semantic*.
 
-- **3.3kb** when minimized and gzipped last time I checked.
+- **Under 3kb** when minimized and gzipped and under 5kb with all plugins.
 
 - **Normalize.css** is used as a base, achieving a solid foundation.
 

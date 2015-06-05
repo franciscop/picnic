@@ -5,7 +5,7 @@
 Allows you to add a file input element that can receive an image drop and clicks with native elements. However, it needs some javascript to show the dropped image:
 
 <div class="demo">
-  <label class="dropimage" style="background-image:url('camera.svg');">
+  <label class="dropimage">
     <input title="Drop image or click me" type="file">
   </label>
 </div>
@@ -16,7 +16,7 @@ Allows you to add a file input element that can receive an image drop and clicks
     }
 </style>
 
-    <label class="dropimage" style="background-image:url('camera.svg');">
+    <label class="dropimage">
       <input title="Drop image or click me" type="file">
     </label>
 
@@ -74,17 +74,17 @@ To get this:
 
 <div class="row">
   <div>
-    <label class="dropimage profile" style="background-image:url('camera.svg');">
+    <label class="dropimage profile">
       <input name="filea" title="Drop image or click me" type="file">
     </label>
   </div>
   <div>
-    <label class="dropimage profile" style="background-image:url('camera.svg');">
+    <label class="dropimage profile">
       <input name="fileb" title="Drop image or click me" type="file">
     </label>
   </div>
   <div>
-    <label class="dropimage profile" style="background-image:url('camera.svg');">
+    <label class="dropimage profile">
       <input name="fileb" title="Drop image or click me" type="file">
     </label>
   </div>
@@ -100,7 +100,7 @@ Make it smaller
       margin: 0 auto;        /* Center horizontally */
       width: 60%;            /* 60% width */
       padding-bottom: 60%;   /* 60% height */
-    }
+      }
 
 <style>
   .miniprofile {
@@ -113,17 +113,17 @@ Make it smaller
 
 <div class="row">
   <div>
-    <label class="dropimage miniprofile" style="background-image: url('camera.png');">
+    <label class="dropimage miniprofile">
       <input name="filea" title="Drop image or click me" type="file">
     </label>
   </div>
   <div>
-    <label class="dropimage miniprofile" style="background-image: url('camera.png');">
+    <label class="dropimage miniprofile">
       <input name="fileb" title="Drop image or click me" type="file">
     </label>
   </div>
   <div>
-    <label class="dropimage miniprofile" style="background-image: url('camera.png');">
+    <label class="dropimage miniprofile">
       <input name="fileb" title="Drop image or click me" type="file">
     </label>
   </div>
