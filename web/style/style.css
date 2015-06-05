@@ -495,7 +495,7 @@ textarea {
   height: auto; }
 
 select {
-  background: #fff url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyIiBoZWlnaHQ9IjMiPjxwYXRoIGQ9Im0gMCwxIDEsMiAxLC0yIHoiLz48L3N2Zz4=') no-repeat scroll 95% center/10px 15px;
+  background: #fff url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyIiBoZWlnaHQ9IjMiPjxwYXRoIGQ9Im0gMCwxIDEsMiAxLC0yIHoiLz48L3N2Zz4=) no-repeat scroll 95% center/10px 15px;
   background-position: calc(100% - 15px) center;
   border: 1px solid #ccc;
   border-radius: 0.2em;
@@ -520,19 +520,19 @@ select {
     font-size: inherit;
     padding: 0.3em 0.45em; }
 
-[type=radio], [type=checkbox] {
+[type=radio], [type=checkbox], [type=checkbox] {
   opacity: 0;
   width: 0;
   position: absolute;
   display: inline-block; }
-  [type=radio] + *:hover:before, [type=radio]:focus + *:before {
+  [type=radio] + .checkable:hover:before, [type=checkbox] + .checkable:hover:before, [type=radio]:focus + .checkable:before, [type=checkbox]:focus + .checkable:before {
     border: 1px solid #0074d9; }
-  [type=radio] + * {
+  [type=radio] + .checkable, [type=checkbox] + .checkable {
     position: relative;
     cursor: pointer;
     padding-left: 1.5em;
     margin-right: 0.6em; }
-    [type=radio] + *:before, [type=radio] + *:after {
+    [type=radio] + .checkable:before, [type=checkbox] + .checkable:before, [type=radio] + .checkable:after, [type=checkbox] + .checkable:after {
       content: '';
       position: absolute;
       display: inline-block;
@@ -550,21 +550,21 @@ select {
       height: 1em;
       border-radius: 50%;
       transition: all 0.3s; }
-    [type=radio] + *:before {
+    [type=radio] + .checkable:before, [type=checkbox] + .checkable:before {
       border: 1px solid #aaa; }
-  [type=radio]:checked + *:after {
+  [type=radio]:checked + .checkable:after, [type=checkbox]:checked + .checkable:after {
     background: #555;
     -webkit-transform: scale(0.5) translateY(-100%);
     transform: scale(0.5) translateY(-100%); }
 
-[type=checkbox] + .checkbox:before {
+[type=checkbox] + .checkable:before {
   border-radius: 0.2em; }
-[type=checkbox] + .checkbox:after {
+[type=checkbox] + .checkable:after {
   content: '\2714';
   background: none;
   -webkit-transform: scale(2) translateY(-25%);
   transform: scale(2) translateY(-25%); }
-[type=checkbox]:checked + .checkbox:after {
+[type=checkbox]:checked + .checkable:after {
   color: #111;
   background: none;
   -webkit-transform: translateY(-50%);

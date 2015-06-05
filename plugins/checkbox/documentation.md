@@ -5,43 +5,44 @@ Display an inline checkbox with a nice default style
 
 <label>
 	<input type="checkbox">
-	<span class="checkbox">Check me out (;</span>
+	<span class="checkable">Check me out (;</span>
 </label>
 <br>
 <label>
   <input type="checkbox" checked>
-  <span class="checkbox">Uncheck me</span>
+  <span class="checkable">Uncheck me</span>
 </label>
 
 	<label>
 		<input type="checkbox">
-		<span class="checkbox">Check me out (;</span>
+		<span class="checkable">Check me out (;</span>
 	</label><br>
 	<label>
 		<input type="checkbox" checked>
-		<span class="checkbox">Uncheck me</span>
+		<span class="checkable">Uncheck me</span>
 	</label>
 
 
 ## Usage
 
-This plugin, while experimental in the past, is mature now. Use a normal checkbox followed by any other element. It's still a bit fragile, the element that follows the checkbox will receive the pseudo classes so it should be able to do so. We recommend a `<span>`. Also, the label around them is needed for making the `<input>` change state when you click on this folowing element.
+This plugin, while experimental in the past, is mature now. Use a normal checkbox followed by any other element with the class `checkable`. The element that follows the checkbox will receive the pseudo classes so it should be able to do so. We recommend a `<span>` or `<label>`. Here we use the label around them for making the `<input>` change state when you click on this folowing element.
 
 
 <label>
   <input type="checkbox">
-  <span class="checkbox">Checkbox text</span>
+  <span class="checkable">Checkbox text</span>
 </label>
 
     <label>
       <input type="checkbox">
-      <span>Checkbox text</span>
+      <span class="checkable">Checkbox text</span>
     </label>
 
+But you can also use a label and reference the original input:
 
 <p>
   <input id="checkboxdemo" type="checkbox">
-  <label for="checkboxdemo" class="checkbox">Checkbox text</label>
+  <label for="checkboxdemo" class="checkable">Checkbox text</label>
 </p>
 
     <input id="checkboxdemo" type="checkbox">
@@ -51,12 +52,12 @@ This plugin, while experimental in the past, is mature now. Use a normal checkbo
 
 ## Javascript
 
-You do not need javascript since we are using the native elements and NOT setting `display: none` purposefully. However, you can still use javascript as normal to retrieve the checked elements.
+You do not need javascript since we are using the native elements and not setting `display: none` purposefully. However, you can still use javascript as normal to retrieve the checked elements.
 
 <form>
   <label>
     <input class="tos" type="checkbox" />
-    <span class="checkbox">Accept TOS</span>
+    <span class="checkable">Accept TOS</span>
   </label>
   <button>Send</button>
 </form>
