@@ -255,13 +255,13 @@ block content
 
       var className = 'transparent';
       if (window.scrollY > 0) {
-        if (el.classList)
+        if (nav.classList)
           nav.classList.remove(className);
         else
-          nav.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+          nav.className = nav.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
         }
       else {
-        if (el.classList)
+        if (nav.classList)
           nav.classList.remove(className);
         else
           nav.className += ' ' + className;
