@@ -328,7 +328,17 @@ li {
 
 a {
   color: #0074d9;
-  text-decoration: none; }
+  text-decoration: none;
+  box-shadow: none;
+  transition: all 0.3s; }
+
+a:hover, a:focus {
+  box-shadow: 0 2px 0 0 #0074d9; }
+
+a:active {
+  color: #fff;
+  background: #0074d9;
+  border-radius: 0.2em; }
 
 code {
   padding: 0.3em 0.6em;
