@@ -252,7 +252,7 @@ block content
     var nav = document.querySelector('nav');
     function navScroll(){
       var className = 'transparent';
-      var top = window.scrollY ? window.scrollY : window.scrollTop;
+      var top = window.scrollY ? window.scrollY : document.documentElement.scrollTop;
       console.log(top);
       if (top > 0) {
         if (nav.classList)
