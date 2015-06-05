@@ -251,6 +251,22 @@ block content
     // Transparent nav handler
     var nav = document.querySelector('nav');
     function navScroll(){
+      console.log('Scrolling');
+
+      var className = 'transparent';
+      if (window.scrollY > 0) {
+        if (el.classList)
+          nav.classList.remove(className);
+        else
+          nav.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+        }
+      else {
+        if (el.classList)
+          nav.classList.remove(className);
+        else
+          nav.className += ' ' + className;
+        }
+
       nav.classList[window.scrollY ? 'remove' : 'add']('transparent');
       };
     window.onscroll = navScroll;
