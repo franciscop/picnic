@@ -252,6 +252,7 @@ block content
     var nav = document.querySelector('nav');
     function navScroll(){
       var className = 'transparent';
+      console.log(window.scrollY);
       if (window.scrollY > 0) {
         if (nav.classList)
           nav.classList.remove(className);
@@ -260,7 +261,7 @@ block content
         }
       else {
         if (nav.classList)
-          nav.classList.remove(className);
+          nav.classList.add(className);
         else
           nav.className += ' ' + className;
         }
