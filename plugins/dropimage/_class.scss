@@ -49,9 +49,3 @@ $picnic-dropimage-background-image: '/plugins/dropimage/camera.svg' !default;
     position: absolute;
     }
   }
-
-
-.dropimage {
-  @extend %dropimage;
-  }
-

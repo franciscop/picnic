@@ -1,0 +1,7 @@
+// Import the select plugin
+@import 'class';
+
+// Implement the plugin for select
+select {
+  @extend %select;
+  }

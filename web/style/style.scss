@@ -65,6 +65,15 @@ main {
   }
 
 
+// To avoid the navbar to cover the document fragment
+.documentation {
+  h2,
+  h3 {
+    margin-top: -50px;
+    padding-top: 80px;
+    }
+  }
+
 
 // Each of the plugins
 .plugin {

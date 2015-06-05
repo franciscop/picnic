@@ -5,23 +5,23 @@
 @import 'raw';
 
 // Normalize.css (external library)
-@import '../plugins/normalize/normalize';
+@import '../plugins/normalize/plugin';
 
 // Generic styles for things like <body>, <a> and others
 // It also overwrites normalize.css a bit
-@import '../plugins/generic/generic';
-@import '../plugins/fontello/fontello';
+@import '../plugins/generic/plugin';
+@import '../plugins/fontello/plugin';
 
 // Simple elements
-@import '../plugins/label/label';
-@import '../plugins/button/button';
+@import '../plugins/label/plugin';
+@import '../plugins/button/plugin';
 
 // Forms
-@import '../plugins/input/input';
-@import '../plugins/select/select';
-@import '../plugins/radio/radio'; 
-@import '../plugins/checkbox/checkbox'; 
+@import '../plugins/input/plugin';
+@import '../plugins/select/plugin';
+@import '../plugins/radio/plugin'; 
+@import '../plugins/checkbox/plugin'; 
 
 // // Components
-@import '../plugins/table/table';
-@import '../plugins/grids/grids';
+@import '../plugins/table/plugin';
+@import '../plugins/grids/plugin';

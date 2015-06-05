@@ -5,8 +5,8 @@
 
 
 // Colors (from /themes/default/colors)
-$picnic-white: #fff;
-$picnic-black: #111;
+$picnic-white: #fff !default;
+$picnic-black: #111 !default;
 $picnic-primary: $blue !default;
 $picnic-success: $green !default;
 $picnic-warning: $orange !default;

@@ -1,0 +1,7 @@
+// Definition of card
+@import 'class';
+
+// Implementation of card
+.card {
+  @extend %card;
+  }

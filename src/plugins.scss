@@ -5,12 +5,12 @@
 @import 'picnic';
 
 
-@import '../plugins/nav/nav';
+@import '../plugins/nav/plugin';
 
-@import '../plugins/stack/stack';
-@import '../plugins/card/card';
-@import '../plugins/modal/modal';
+@import '../plugins/stack/plugin';
+@import '../plugins/card/plugin';
+@import '../plugins/modal/plugin';
 
-@import '../plugins/dropimage/dropimage';
-@import '../plugins/tabs/tabs';
-@import '../plugins/tooltip/tooltip';
+@import '../plugins/dropimage/plugin';
+@import '../plugins/tabs/plugin';
+@import '../plugins/tooltip/plugin';

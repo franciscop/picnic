@@ -106,15 +106,7 @@ To add a plugin, just reference the file called `_plugin.scss` within that plugi
 This should be done after loading any of the three files from the library. Please note that **some of the plugins might have dependencies**, which should be stated clearly in the file `info.json` in each plugin folder. There's some talk in SASS' github that would allow to include the dependencies automaticly, but it's been going on for 4 years and still not solved so don't expect this soon.
 
 
-## Plugins
-
-Each plugin documentation has its own page. Plase visit them to see it:
-
-<a href="/plugins" class="button icon-puzzle">Plugins</a>
-
-
-
-## Placeholders
+### Placeholders
 
 > If you just want to use Picnic plugins as they are, ignore this section. It goes into details of how to make your code more semantic and your css smaller, but it is extreme optimization for most cases.
 
@@ -184,9 +176,25 @@ This is similar to some programming languages, where each object is the implemen
         }
 
 
+
+
+
+## Plugins
+
+Each plugin documentation has its own page. Plase visit them to see it:
+
+<a href="/plugins" class="button icon-puzzle">Plugins</a>
+
+
+
+
+
 ## Wrap up
 
+Thank you for using Picnic CSS. If you find it useful or some part of this guide is confusing, please edit it through github. You are welcome here:
 
+<a class="button icon-g" href="https://github.com/picnicss/picnic">Github</a>
+<a class="button warning icon-help-circled" href="https://github.com/picnicss/picnic/issues">Issues</a>
 
 
 

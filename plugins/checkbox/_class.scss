@@ -4,10 +4,10 @@
 $picnic-checkbox-character: '\2714' !default;
 $picnic-checkbox-radius: $picnic-radius !default;
 
-// Styles
-[type=checkbox] {
+
+%checkbox {
   @extend %radio;
-    
+  
   + .checkbox:before {
     border-radius: $picnic-checkbox-radius;
     }

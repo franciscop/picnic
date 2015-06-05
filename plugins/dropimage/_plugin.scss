@@ -1,0 +1,9 @@
+// Dropimage
+// Allows you to click the element or drop an image on it to upload the image and display a preview.
+
+@import 'class';
+
+.dropimage {
+  @extend %dropimage;
+  }
+

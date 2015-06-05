@@ -5,7 +5,7 @@ block content
   main
     header.hero
       div.content
-        h1 Picnic CSS
+        h1 Picnic CSS 4.0
         p.slogan Unpack your meal and start coding
         pre.bower bower install picnic
 
@@ -40,20 +40,20 @@ block content
           div.row.gallery
             article.card.tooltip-bottom(data-tooltip="Click me to upload a new image")
               label.dropimage
-                input(title="" type="file")
+                input(type="file")
             article.card.tooltip-bottom(data-tooltip="Click me to upload a new image")
               label.dropimage(style="background-image: url(/img/galaxy.svg)")
-                input(title="" type="file")
+                input(type="file")
             article.card.tooltip-bottom(data-tooltip="Click me to upload a new image")
               label.dropimage(style="background-image: url(/img/galaxy.svg)")
-                input(title="" type="file")
+                input(type="file")
 
 
     div.visual.row
       div.content
         h2 Made for the hackers
         p Install it with bower and you will be able to integrate Picnic in any project and make it work for you.
-        p Picnic is written in SCSS with <a href="#">many variables</a> and <a href="#"><em>classes</em> (placeholders)</a> to make it easy to extend.
+        p Picnic is written in SCSS with <a href="/documentation#variables">many variables</a> and <a href="/documentation#placeholders"><em>classes</em> (placeholders)</a> to make it easy to extend.
         a.button.icon-file-code(href="/documentation/") Documentation
         | 
         a.button.icon-g(href="https://github.com/picnicss/picnic" target="_blank") Github
@@ -105,14 +105,13 @@ block content
                 div.card(style="margin: 10px 20px;")
                   header 
                     h3 Our relationship
-                  section 
-                    div.select
-                      select 
-                        option How did you find us?
-                        option(value="hackernews") Hacker News
-                        option(value="friends") Friends
-                        option(value="google") Google
-                        option(value="keysmash") Keyboard smashing
+                  section
+                    select 
+                      option How did you find us?
+                      option(value="hackernews") Hacker News
+                      option(value="friends") Friends
+                      option(value="google") Google
+                      option(value="keysmash") Keyboard smashing
                   section
                     label
                       input(type="radio" name="like" value="a lot")
