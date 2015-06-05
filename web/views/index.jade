@@ -266,8 +266,6 @@ block content
         else
           nav.className += ' ' + className;
         }
-
-      nav.classList[window.scrollY ? 'remove' : 'add']('transparent');
       };
     window.onscroll = navScroll;
     navScroll();
