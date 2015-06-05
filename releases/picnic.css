@@ -391,6 +391,7 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
   line-height: 1; }
 
 button, .button, [type=submit] {
+  margin: 0.3em 0;
   cursor: pointer;
   transition: all 0.3s;
   height: auto; }

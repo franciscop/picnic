@@ -4,6 +4,7 @@
 
 
 // Variables
+$picnic-button-margin: $picnic-separation / 2 0 !default;
 $picnic-button-padding: $picnic-label-padding !default;
 $picnic-button-hover: inset 0 0 0 99em rgba($picnic-white, $picnic-transparency) !default;
 $picnic-button-click: inset 0 0 0 99em rgba($picnic-black, $picnic-transparency) !default;
@@ -16,6 +17,7 @@ $picnic-button-transition: $picnic-transition !default;
 %button {
   @extend %label;
 
+  margin: $picnic-button-margin;
   cursor: pointer;
   transition: $picnic-button-transition;
 

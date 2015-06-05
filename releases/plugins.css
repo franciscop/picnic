@@ -391,6 +391,7 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
   line-height: 1; }
 
 button, .button, [type=submit], .dropimage {
+  margin: 0.3em 0;
   cursor: pointer;
   transition: all 0.3s;
   height: auto; }
@@ -653,6 +654,8 @@ nav {
     padding: 0.3em 0.9em; } }
 
 .stack, .stack .toggle {
+  margin-top: 0;
+  margin-bottom: 0;
   display: block;
   width: 100%;
   text-align: left;
