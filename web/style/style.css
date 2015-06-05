@@ -1137,8 +1137,8 @@ html, body, main {
   background: #7fdbff; }
 
 .test > h2 {
-  padding-top: 60px;
-  margin-top: 0; }
+  padding-top: 80px;
+  margin-top: -60px; }
 
 .newplugin {
   text-decoration: none;
