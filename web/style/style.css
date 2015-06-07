@@ -1036,6 +1036,9 @@ nav.transparent {
     transition: all 0.3s; }
   .hero .links a:hover {
     box-shadow: 0 2px rgba(255, 255, 255, 0.8); }
+  .hero .links a:active {
+    background: none;
+    border-radius: 0; }
   .hero .keepgoing {
     font-size: 0.7em;
     position: absolute;

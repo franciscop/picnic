@@ -80,6 +80,11 @@
     box-shadow: 0 2px rgba(255, 255, 255, .8);
     }
 
+  .links a:active {
+    background: none;
+    border-radius: 0;
+    }
+
   .keepgoing {
     font-size: .7em;
     position: absolute;
