@@ -1130,6 +1130,10 @@ html, body, main {
   width: 100%;
   margin: 100px auto 500px; }
 
+nav .brand:hover, nav .brand:active {
+  background: none;
+  box-shadow: none; }
+
 .documentation h2, .documentation h3 {
   margin-top: -50px;
   padding-top: 80px; }
