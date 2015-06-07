@@ -1,0 +1,33 @@
+<h2 id="dropimage">Dropimage</h2>
+
+<div class="row">
+  <div>
+    <label class="dropimage" style="background-image: url('/img/forest.jpg');">
+      <input name="filea" title="Drop image or click me" type="file">
+    </label>
+  </div>
+  <div>
+    <label class="dropimage">
+      <input name="fileb" title="Drop image or click me" type="file">
+    </label>
+  </div>
+  <div>
+    <label class="dropimage">
+      <input name="filec" title="Drop image or click me" type="file">
+    </label>
+  </div>
+</div>
+
+<script>
+  window.onload = function(){
+    [].forEach.call(document.querySelectorAll('.dropimage'), function(img){
+      img.onchange = function(e){
+        var inputfile = this, reader = new FileReader();
+        reader.onloadend = function(){
+          inputfile.style['background-image'] = 'url('+reader.result+')';
+        }
+        reader.readAsDataURL(e.target.files[0]);
+      }
+    });
+  };
+</script>

@@ -1,8 +1,5 @@
 // Raw File
 // This file only imports variables. It doesn't import anything that does real work
-// Allows to dynamically load plugins of Picnic CSS
-// http://www.picnicss.com/nut/raw+modal.min.css
 
 // Default theme to import
-//@import '../themes/default/v2';
-@import '../themes/default/v2';
+@import '../themes/default/theme';

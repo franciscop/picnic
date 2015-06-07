@@ -1,0 +1,63 @@
+// Visual displays some text and its description
+
+
+// The visual is each of the text+content sections in the home
+.visual {
+  text-align: left;
+  width: 100%;
+  max-width: 960px;
+  margin: 80px auto;
+
+  > div {
+    padding: 20px;
+    }
+
+  .content {
+    padding: 10px 20px 0 0;
+    }
+
+  .row {
+    margin-top: 0;
+    }
+
+  > .card {
+
+    p {
+      padding: 0;
+      margin: 0 0 1em;
+      }
+    }
+
+  label {
+    margin-right: 20px;
+    }
+
+  .tabs label {
+    margin-right: 0;
+    }
+
+  .love,
+  .name {
+    display: block;
+    text-align: center;
+    padding: 0;
+    font-weight: bold;
+    }
+
+  .card {
+    overflow: visible;
+    }
+  }
+
+
+@media all and (max-width: 960px) {
+  .visual {
+    padding: 20px;
+    margin: 0 auto;
+    }
+
+  .visual .content {
+    margin-bottom: 20px;
+    }
+  }
+

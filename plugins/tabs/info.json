@@ -1,6 +1,7 @@
 {
   "id": "tabs",
   "name": "Tabs",
-  "description": "Tab system for webpage",
-  "install": "+tabs"
+  "summary": "Tab system for webpage",
+  "affected": ".tabs",
+  "included": false
 }

@@ -1,7 +1,5 @@
 # Tooltip
 
-<link rel="stylesheet" href="/nut/raw+tooltip.fresh.css">
-
 Hover this element to show the tooltip:
 
 <button data-tooltip="This is a great tooltip" class="tooltip-top">

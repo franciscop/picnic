@@ -17,10 +17,9 @@ app.use(express.static(__dirname + '/web'));
 app.use("/plugins", express.static(__dirname + "/plugins"));
 
 // Routing
-app.use('/nut/:full', controller.nut);
-app.use('/plugins/:name', controller.plugin);
-app.use('/plugins/', controller.plugin);
-app.use('/demo/', controller.demo);
+app.use('/documentation/', controller.documentation);
+app.use('/plugins/:name', controller.plugins);
+app.use('/plugins/', controller.plugins);
 app.use('/test/', controller.test);
 app.use('/', controller.index);
 

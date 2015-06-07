@@ -12,14 +12,9 @@ body {
 body {
   color: $picnic-black;
   font-size: 1.1em;
-  line-height: 1.5em;
+  line-height: 1.5;
   background: $picnic-white;
 }
-
-// Hide the default focus effect
-:focus {
-  outline: none;
-  }
 
 h1,
 h2,
@@ -38,6 +33,19 @@ li {
 a {
   color: $picnic-primary;
   text-decoration: none;
+  box-shadow: none;
+  transition: $picnic-transition;
+  }
+
+a:hover,
+a:focus {
+  box-shadow: 0 2px 0 0 $picnic-primary;
+  }
+
+a:active {
+  color: $picnic-white;
+  background: $picnic-primary;
+  border-radius: $picnic-radius;
   }
 
 

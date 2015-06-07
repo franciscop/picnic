@@ -3,37 +3,94 @@
 Display an inline checkbox with a nice default style
 
 
-<label class="checkbox">
+<label>
 	<input type="checkbox">
-	<span>Check me out (;</span>
+	<span class="checkable">Check me out (;</span>
+</label>
+<br>
+<label>
+  <input type="checkbox" checked>
+  <span class="checkable">Uncheck me</span>
 </label>
 
-	<label class="checkbox">
+	<label>
 		<input type="checkbox">
-		<span>Check me out (;</span>
-	</label>
-
-<label class="checkbox">
-	<input type="checkbox" checked>
-	<span>Check me out (;</span>
-</label>
-
-	<label class="checkbox">
+		<span class="checkable">Check me out (;</span>
+	</label><br>
+	<label>
 		<input type="checkbox" checked>
-		<span>Check me out (;</span>
+		<span class="checkable">Uncheck me</span>
 	</label>
-
-## Installation
-
-Checkboxes are already included with Picnic CSS
-
 
 
 ## Usage
 
-Since this plugin implementation is more *experimental* than others, you are required to add them manually if you want Picnic CSS default. They require a wrapper class called "checkbox", which will defined wether or not you'll use it and a child called `<input>` and another one called `<span>`
+This plugin, while experimental in the past, is mature now. Use a normal checkbox followed by any other element with the class `checkable`. The element that follows the checkbox will receive the pseudo classes so it should be able to do so. We recommend a `<span>` or `<label>`. Here we use the label around them for making the `<input>` change state when you click on this folowing element.
 
-    <* class="checkbox">
-        <input type="checkbox">
-        <*>El texto del checkbox</*>
-    </*>
+
+<label>
+  <input type="checkbox">
+  <span class="checkable">Checkbox text</span>
+</label>
+
+    <label>
+      <input type="checkbox">
+      <span class="checkable">Checkbox text</span>
+    </label>
+
+But you can also use a label and reference the original input:
+
+<p>
+  <input id="checkboxdemo" type="checkbox">
+  <label for="checkboxdemo" class="checkable">Checkbox text</label>
+</p>
+
+    <input id="checkboxdemo" type="checkbox">
+    <label for="checkboxdemo">Checkbox text</label>
+
+
+
+## Javascript
+
+You do not need javascript since we are using the native elements and not setting `display: none` purposefully. However, you can still use javascript as normal to retrieve the checked elements.
+
+<form>
+  <label>
+    <input class="tos" type="checkbox" />
+    <span class="checkable">Accept TOS</span>
+  </label>
+  <button>Send</button>
+</form>
+<script>
+  // Pure javascript
+  document.querySelector('form').onsubmit = function(e){
+    e.preventDefault();
+    var tosAccepted = document.querySelector('.tos').checked;
+    alert(tosAccepted);
+    }
+</script>
+
+
+HTML
+
+    <label>
+      <input class="tos" type="checkbox">
+      <span class="checkbox">Checkbox text</span>
+    </label>
+
+
+Javascript
+
+    // Pure javascript
+    document.querySelector('form').onsubmit = function(e){
+      e.preventDefault();
+      var tosAccepted = document.querySelector('.tos').checked;
+      alert(tosAccepted);
+      }
+
+    // jQuery
+    $("form").on('submit', function(e){
+      e.preventDefault();
+      var tosAccepted = $('.tos').is(':checked');
+      alert(tosAccepted);
+      });

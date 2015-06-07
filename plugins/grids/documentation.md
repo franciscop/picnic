@@ -1,6 +1,3 @@
-<link rel='stylesheet' href='/plugins/grids/style.css'>
-
-
 ## Grids
 
 A simple and responsive grid based on [ungrid](http://chrisnager.github.io/ungrid/).
@@ -84,12 +81,6 @@ Note: the class `.demo` is added for the fancy colors.
 
 
 
-## Installation
-
-Grids are already included with Picnic CSS
-
-
-
 ## Evenly stacked grids
 
 To display few grids with the same width, just do:
@@ -156,11 +147,10 @@ To display few grids with the same width, just do:
 	</div>
 
 
+
 ## Grid classes
 
 More fine-grain control over grids
-
-
 
 <div class="row demo">
   <div class="half">.half</div>
@@ -283,11 +273,20 @@ Set your own width for your grid in any unit you want:
   <div>[empty]</div>
 </div>
 
+<style>
+.myCoolGrid {
+  width: 31.56%;
+}
+
+.myGreatGrid {
+  width: 700px;
+}
+</style>
 
     .myCoolGrid {
       width: 31.56%;
     }
 
     .myGreatGrid {
-      width: 500px;
+      width: 700px;
     }

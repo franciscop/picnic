@@ -5,97 +5,41 @@ html
       title Picnic CSS
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    meta(name="keywords" content="css, library, css library, picnic, picnicss, html, html5")
-    meta(name="description" content="Unpack your mean and start coding. A lighweight CSS library with nice defaults to give you a fast start.")
-    link(rel='stylesheet', href='/font/fontello.css')
-    link(rel='stylesheet', href='/nut/picnic_3_4+nav_2+stack.min.fresh.css')
+    meta(name="keywords" content="css, library, css library, picnic, picnicss, html, html5, light, plugin")
+    meta(name="description" content="A lighweight CSS library with nice defaults and many plugins to kickstart your projects")
+    link(rel='stylesheet', href='/style/style.min.css')
     link(rel="icon", href="/img/basket.png", type="image/png")
-    
-    style.
-      body {
-        display: block;
-        text-align: center;
-        font-size: 16px;
-        color: #333;
-        background: #FFF;
-        margin: 80px auto 500px;
-        width: 100%;
-      }
-      .render {
-        margin: 10px 0;
-        max-width: 100%;
-      }
-      main > section {
-        max-width: 620px;
-        margin: 10px auto 30px;
-      }
-      pre {
-        max-width: 650px;
-        margin: 20px auto;
-      }
-      table {
-        margin: auto;
-      }
-      main,
-      main.limit {
-        margin-bottom: 300px
-      }
-      input {
-        vertical-align: top;
-      }
-      form input[type=submit] {
-        font-size: 1.05em;
-      }
-      .main img {
-        vertical-align: middle;
-      }
-      .text {
-        max-width: 500px;
-        text-align: left;
-        margin: 0 auto;
-      }
-      a {
-        color: #0074d9;
-        text-decoration: none;
-      }
-      .plugin {
-        width: 100%;
-        max-width: 600px;
-        margin: 40px auto 20px;
-      }
-      .plugin header {
-        position: relative;
-        text-align: left;
-        display: block;
-      }
-      .plugin .install {
-        position: absolute;
-        right: 0px;
-        top: .9em;
-      }
 
-      .plugin .description {
-        width: 100%;
-        display: block;
-        margin-top: 10px;
-        text-align: left;
-      }
   body
-    block nav
-      nav
-        a.brand(href="/") Picnic CSS
+    nav(class=transparent)
+      a.brand(href="/") Picnic CSS
 
-        // responsive
-        input#bmenu.show(type="checkbox")
-        label.burger.pseudo.button(for="bmenu") menu
+      // responsiveness
+      input#bmenu.show(type="checkbox")
+      label.burger.toggle.pseudo.button(for="bmenu") menu
 
-        div.menu
-          a.pseudo.button.icon-picture(href="/demo/") Demo
-          a.pseudo.button.icon-help-circled(href="/test/") Test
-          a.pseudo.button.icon-g(href="https://github.com/picnicss/picnic" target="_blank") Github
-          a.button.icon-puzzle(href="/plugins/") Plugins
+      div.menu
+        a.pseudo.button.icon-file-code(href="/documentation/") Documentation
+        a.pseudo.button.icon-help-circled(href="/test/") Test
+        a.pseudo.button.icon-g(href="https://github.com/picnicss/picnic" target="_blank") Github
+        a.button.icon-puzzle(href="/plugins/") Plugins
 
     block content
+
+    script.
+      window.onload = function(){
+
+        // Dropimage handler
+        [].forEach.call(document.querySelectorAll('.dropimage'), function(img){
+          img.onchange = function(e){
+            var inputfile = this, reader = new FileReader();
+            reader.onloadend = function(){
+              inputfile.style['background-image'] = 'url('+reader.result+')';
+              }
+            reader.readAsDataURL(e.target.files[0]);
+            }
+          });
+        };
 
     script.
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

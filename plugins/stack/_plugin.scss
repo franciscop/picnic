@@ -1,38 +1,52 @@
+
+
+
+
 // Stacking elements one of top of another
 .stack,
-.stack .toggle + * {
+.stack .toggle {
+  @extend %stack;
+  margin-top: 0;
+  margin-bottom: 0;
   display: block;
+  width: 100%;
   text-align: left;
   border-radius: 0;
-  width: 100%;
   }
 
 // This is in this way to allow for individual stack items
 // Because if it was border-radius: $picnic-radius $picnic-radius 0 0;
 // then they would all behave as last-child
 .stack:first-child,
-.stack:first-child .toggle + * {
+.stack:first-child .toggle {
   border-top-left-radius: $picnic-radius;
   border-top-right-radius: $picnic-radius;
   }
 
 .stack:last-child,
-.stack:last-child .toggle + * {
+.stack:last-child .toggle {
   border-bottom-left-radius: $picnic-radius;
   border-bottom-right-radius: $picnic-radius;
   }
 
-input.stack {
-  transition: border-bottom 0 ease 0;
-  border-bottom-width: 0;
+// To avoid the double border of input and textarea
+input,
+textarea,
+select {
 
-  &:last-child {
-    border-bottom-width: 1px;
-    }
+  &.stack {
+    transition: border-bottom 0 ease 0;
+    border-bottom-width: 0;
 
-  &:focus + input,
-  &:focus + textarea {
-    border-top-color: #0074d9;
+    &:last-child {
+      border-bottom-width: 1px;
+      }
+
+    &:focus + input,
+    &:focus + textarea,
+    &:focus + select {
+      border-top-color: $picnic-primary;
+      }
     }
   }
 

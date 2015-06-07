@@ -1,0 +1,61 @@
+// Variables
+$picnic-select-height: 2.1em !default;
+$picnic-select-margin: $picnic-separation / 2 !default;
+$picnic-select-padding: $picnic-separation / 2 $picnic-separation * .75 !default;
+
+// This comes from arrow.svg. Converted with:
+// http://dopiaza.org/tools/datauri/index.php
+$picnic-select-dropimage: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyIiBoZWlnaHQ9IjMiPjxwYXRoIGQ9Im0gMCwxIDEsMiAxLC0yIHoiLz48L3N2Zz4=' !default;
+
+
+// Code
+%select {
+
+  // Compatible with old androids
+  background: #fff url(#{ $picnic-select-dropimage }) no-repeat scroll 95% center/ 10px 15px;
+
+  // Compatible with modern browsers
+  background-position: calc(100% - 15px) center;
+
+  
+  border: $picnic-border;
+  border-radius: $picnic-radius;
+  cursor: pointer;
+  width: 100%;
+  height: $picnic-select-height;
+  box-sizing: border-box;
+  padding: $picnic-select-padding;
+  transition: all .3s;
+  
+
+  // Hide dropdown arrow
+
+  // vendor prefixes required, see:
+  // https://github.com/postcss/autoprefixer#why-doesnt-autoprefixer-support-appearance
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  // Hide the arrow for IE (apparently IE10+)
+  // http://stackoverflow.com/a/21417591 method
+  // http://stackoverflow.com/a/15933790 version
+  &::-ms-expand {
+    display: none;
+    }
+
+  &:focus,
+  &:active {
+    border: 1px solid $picnic-primary;
+    transition: outline 0s;
+    }
+
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 $picnic-black;
+    }
+
+  option {
+    font-size: inherit;
+    padding: $picnic-separation / 2 $picnic-separation * .75;
+    }
+  }

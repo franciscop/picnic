@@ -1,0 +1,38 @@
+// Top level variables for Picnic CSS
+// Note: some others are available under each specific plugin
+
+@import 'colors';
+
+
+// Colors (from /themes/default/colors)
+$picnic-white: #fff;
+$picnic-black: #111;
+$picnic-primary: darken($green, 5%) !default;
+$picnic-success: $blue !default;
+$picnic-warning: $orange !default;
+$picnic-error: $red !default;
+$picnic-dull: $gray !default;
+$picnic-color-variation: 10% !default;
+$picnic-transparency: .1 !default;
+
+
+// Spaces
+$picnic-separation: .6em !default;
+$picnic-breakpoint: 60em !default;
+
+
+// Shapes
+$picnic-radius: 0 !default;
+$picnic-border: 1px solid #ddd !default;
+$picnic-shadow: none !default;
+
+
+// Transitions
+$picnic-transition: all .2s ease !default;
+
+
+
+
+
+// Plugins
+$picnic-nav-position: absolute !default;

@@ -1,0 +1,228 @@
+// Style for the website
+
+// Variables for this sass implementation
+$picnic-dropimage-ratio: 4 / 3 !default;
+
+
+
+// Get the icons from fontello
+// You need to import this first
+@import 'font/fontello';
+
+// Get the library picnic css
+@import '../../src/plugins';
+
+
+
+// Our own plugins, extending some of picnic's
+@import 'hero';
+@import 'visual';
+@import 'gallery';
+
+
+// Make a title and its text closer together
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: .6em 0 0;
+  line-height: 1;
+  }
+
+// And the first title goes up
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child {
+  padding-top: 0;
+  }
+
+li {
+  list-style-type: circle;
+  }
+
+
+
+// Structure
+html,
+body,
+main {
+  display: block;
+  color: #333;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  z-index: 5;
+  }
+
+.intro {
+  padding: 10px;
+  max-width: 960px;
+  width: 100%;
+  margin: 100px auto 500px;
+  }
+
+
+// To avoid the navbar to cover the document fragment
+.documentation {
+  h2,
+  h3 {
+    margin-top: -50px;
+    padding-top: 80px;
+    }
+  }
+
+
+// Each of the plugins
+.plugin {
+  margin: 40px auto;
+
+  > header {
+    margin: 0 0 15px;
+    }
+
+  // the header of the installer
+  h2,
+  .install {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    }
+
+  .install {
+    margin-left: 20px;
+    }
+  }
+
+
+
+// Display the grid with colors
+.row.demo > * {
+  padding: .3em .6em;
+  background: $green;
+  }
+
+.row.demo > :nth-child(2n) {
+  background: $aqua;
+  }
+
+.test > h2 {
+  padding-top: 80px;
+  margin-top: -60px;
+}
+
+.newplugin {
+  text-decoration: none;
+  margin: 30px 0;
+  overflow: visible;
+
+  .content {
+    position: relative;
+    padding-bottom: 60px;
+    padding-top: 0;
+
+    > footer {
+      position: absolute;
+      padding: 0;
+      bottom: 0;
+      width: 100%;
+      }
+
+    .extra {
+      margin-right: 20px;
+      }
+    }
+
+  .row {
+    display: table;
+    width: calc(100% + 1.2em);
+
+    .card,
+    .row:last-child {
+      margin-bottom: 0;
+      }
+    }
+
+  .installed {
+    font-size: .6em;
+    float: right;
+    margin: .2em 0;
+
+    .label {
+      font-size: .8em;
+      margin: 0 0 0 .6em;
+      padding: .4em .6em;
+      }
+    }
+
+  .affected {
+    background: #eee;
+    font-style: italic;
+    padding: 5px 10px;
+    margin: .6em 0;
+    }
+
+  label {
+    margin-right: 0;
+    }
+
+  p {
+    margin-bottom: .6em;
+    }
+
+  .extra {
+    float: right;
+    }
+  }
+
+
+@media all and (max-width: 960px) {
+
+  .newplugin {
+    padding: 0;
+
+    > .row {
+      width: 100%;
+      }
+    }
+
+  .display {
+    margin-top: 20px;
+    margin-bottom: 0;
+
+    > .row {
+      width: 100%;
+      margin-bottom: 0;
+
+      > * {
+        margin-bottom: 0;
+        margin-top: 1.2em;
+        }
+      }
+    }
+
+  .newplugin .content {
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: 2px solid #eee;
+
+    > footer {
+      padding-bottom: 20px;
+      }
+
+    .extra {
+      margin-right: 0;
+      }
+    }
+  }
+
+
+
+
+
+
+
+

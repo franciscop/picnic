@@ -1,27 +1,38 @@
-<link rel='stylesheet' href='/nut/raw+stack_2.fresh.css'>
-
 <div class="row">
   <div>
     <label class="stack">
-      <input class="toggle" type="radio" name="stack" />
-      <span class="button icon-puzzle">Plugins</span>
+      <input type="radio" name="stack" />
+      <span class="button toggle">
+        <span class="icon-picture"></span>
+        Home
+      </span>
     </label>
     <label class="stack">
-      <input class="toggle" type="radio" name="stack" />
-      <span class="button icon-picture">Demo</span>
+      <input type="radio" name="stack" />
+      <span class="button toggle">
+        <span class="icon-puzzle"></span>
+        Plugins
+      </span>
     </label>
     <label class="stack">
-      <input class="toggle" type="radio" name="stack" />
-      <span class="button icon-help-circled">Test</span>
+      <input type="radio" name="stack" />
+      <span class="button toggle">
+        <span class="icon-file-code"></span>
+        Documentation
+      </span>
     </label>
-  </div>
-  <div>
-    <img class="stack" src="/img/forest.jpg">
-    <a class="button stack">Full size</a>
+    <label class="stack">
+      <input type="radio" name="stack" />
+      <span class="button toggle">
+        <span class="icon-help-circled"></span>
+        Test
+      </span>
+    </label>
   </div>
   <div>
     <input class="stack" placeholder="Name" />
-    <input class="stack" placeholder="Email" />
+    <input class="stack" type="email" placeholder="Email" />
+    <input class="stack" type="password" placeholder="Password" />
     <button class="stack icon-paper-plane">
         Send
     </button>

@@ -1,0 +1,48 @@
+
+// Font
+@font-face {
+  font-family: 'fontello';
+  src: url('/style/font/fontello.eot?34694727');
+  src: url('/style/font/fontello.eot?34694727#iefix') format('embedded-opentype'),
+       url('/style/font/fontello.woff?34694727') format('woff'),
+       url('/style/font/fontello.ttf?34694727') format('truetype'),
+       url('/style/font/fontello.svg?34694727#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  }
+ 
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+ 
+  // For safety - reset parent styles, that can break glyph codes
+  font-variant: normal;
+  text-transform: none;
+ 
+  // Animation center compensation - margins should be symmetric
+  // remove if not needed
+  margin-left: .2em;
+  }
+ 
+.icon-picture:before { content: '\e800'; }
+.icon-help-circled:before { content: '\e801'; }
+.icon-puzzle:before { content: '\e802'; }
+.icon-mobile:before { content: '\e803'; }
+.icon-link:before { content: '\e804'; }
+.icon-video:before { content: '\e805'; }
+.icon-file-code:before { content: '\e806'; }
+.icon-leaf:before { content: '\e807'; }
+.icon-globe:before { content: '\e808'; }
+.icon-paper-plane:before { content: '\e809'; }
+.icon-g:before { content: '\e80a'; }
+.icon-cog:before { content: '\e80b'; }
+  

@@ -1,6 +1,6 @@
 // Variables for the tooltips
-$picnic-tooltip-background: $picnic-black;
-$picnic-tooltip-size: .8em;
+$picnic-tooltip-background: $picnic-black !default;
+$picnic-tooltip-size: .8em !default;
 
 
 // Only display the tooltip for elements with <element data-tooltip="blabla">
@@ -11,6 +11,7 @@ $picnic-tooltip-size: .8em;
   &:before {
     // Position
     position: absolute;
+    z-index: 10;
 
     // Hide it by default
     opacity: 0;
@@ -23,7 +24,7 @@ $picnic-tooltip-size: .8em;
     transition: opacity .6s ease, height 0s ease .6s;
 
     // Bottom one (default)
-    top: 85%;
+    top: calc(100% - 6px);
     left: 0;
     margin-top: 12px;
     }
@@ -33,6 +34,7 @@ $picnic-tooltip-size: .8em;
 
     // Style
     @extend .label;
+    margin-left: 0;
     font-size: $picnic-tooltip-size;
     background: $picnic-tooltip-background;
 
@@ -54,7 +56,7 @@ $picnic-tooltip-size: .8em;
     // Bottom one (default)
     border-color: transparent transparent $picnic-tooltip-background;
     margin-top: 0;
-    left: 15px;
+    left: 10px;
     }
 
   &:hover:after,
@@ -79,7 +81,7 @@ $picnic-tooltip-size: .8em;
   &:after,
   &:before {
     top: auto;
-    bottom: 85%;
+    bottom: calc(100% - 6px);
     left: 0;
     margin-bottom: 12px;
     }
@@ -87,7 +89,7 @@ $picnic-tooltip-size: .8em;
   &:before {
     border-color: $picnic-tooltip-background transparent transparent;
     margin-bottom: 0;
-    left: 15px;
+    left: 10px;
     }
   }
 

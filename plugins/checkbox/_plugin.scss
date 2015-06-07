@@ -1,8 +1,8 @@
-.checkbox input + *:before {
-  border-radius: $picnic-radius;
-  text-align: right;
-  }
+// Get the checkbox definition
+@import 'class';
 
-.checkbox input:checked + *:before {
-  color: lighten($picnic-black, $picnic-color-variation);
+// Define it for the element checkbox
+[type=checkbox] {
+  @extend %radio;
+  @extend %checkbox;
   }

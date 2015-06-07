@@ -1,7 +1,7 @@
 {
   "name": "picnic",
-  "version": "3.4.2",
-  "description": "Semantic HTML5 & nice CSS3",
+  "version": "4.0.0",
+  "description": "A lighweight CSS library with nice defaults and many plugins to kickstart your projects",
   "engines": {
     "node": "0.10.x"
   },

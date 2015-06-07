@@ -1,5 +1,3 @@
-<link href="/nut/raw+modal_2.fresh.css" rel="stylesheet">
-
 # Modal
 
 The modal is pure CSS, which makes the html quite ugly actually. However it does work. To try it, press the button:
@@ -23,7 +21,7 @@ Show modal
     </section>
     <footer>
       <a class="button" href="#">See offer</a>
-      <label for="modal_1" class="button error">
+      <label for="modal_1" class="button dangerous">
         Cancel
       </label>
     </footer>
@@ -62,7 +60,7 @@ This is the markup for the example above:
         </section>
         <footer>
           <a class="button" href="#">See offer</a>
-          <label for="modal_1" class="button error">
+          <label for="modal_1" class="button dangerous">
             Cancel
           </label>
         </footer>
@@ -72,9 +70,11 @@ This is the markup for the example above:
 
 ## Multiple modals
 
-<label for="modal_2" class="button">
-  Another modal
-</label>
+<p>
+  <label for="modal_2" class="button">
+    Another modal
+  </label>
+</p>
 
 <div class="modal">
   <input id="modal_2" type="checkbox" />
@@ -89,16 +89,18 @@ This is the markup for the example above:
     </section>
     <footer>
       <a class="button" href="#">See offer</a>
-      <label for="modal_2" class="button error">
+      <label for="modal_2" class="button dangerous">
         Cancel
       </label>
     </footer>
   </article>
 </div>
 
-<label for="modal_3" class="button">
-  Modalception
-</label>
+<p>
+  <label for="modal_3" class="button">
+    Modalception
+  </label>
+</p>
 
 <div class="modal">
   <input id="modal_3" type="checkbox" />
@@ -116,7 +118,7 @@ This is the markup for the example above:
       <label for="modal_4" class="button">
         Show modal
       </label>
-      <label for="modal_3" class="button error">
+      <label for="modal_3" class="button dangerous">
         Cancel
       </label>
     </footer>
@@ -139,7 +141,7 @@ This is the markup for the example above:
       <label for="modal_2" class="button">
         Another modal
       </label>
-      <label for="modal_4" class="button error">
+      <label for="modal_4" class="button dangerous">
         Cancel
       </label>
     </footer>
@@ -151,5 +153,27 @@ This is the markup for the example above:
 ## Javascript
 
 As always, there is **no javascript**. However, a little bit of javascript could enhance the experience allowing to close the modal by pressing `ESC`.
+
+<script>
+  document.onkeydown = function(e){
+    if (e.keyCode == 27) {
+      var modals = document.querySelectorAll('.modal > [type=checkbox]');
+      for (var i = 0; i < modals.length; i++) {
+        modals[i].checked = false;
+        }
+      }
+    }
+</script>
+
+    document.onkeydown = function(e){
+      if (e.keyCode == 27) {
+        var modals = document.querySelectorAll('.modal > [type=checkbox]');
+        for (var i = 0; i < modals.length; i++) {
+          modals[i].checked = false;
+          }
+        }
+      }
+
+
 
 

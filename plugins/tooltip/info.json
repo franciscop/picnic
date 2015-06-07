@@ -1,8 +1,8 @@
 {
   "id": "tooltip",
   "name": "Tooltip",
-  "install": "+tooltip",
-  "dependencies": [
-    "label/v1"
-    ]
+  "included": false,
+  "affected": "[data-tooltip]",
+  "summary": "An element that displays extra information when you put your mouse on it.",
+  "dependencies": [ "label" ]
 }

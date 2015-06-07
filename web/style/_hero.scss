@@ -1,0 +1,117 @@
+// Hero code
+
+
+%nav {
+  &.transparent {
+    color: #fff;
+    box-shadow: none;
+    background: none;
+
+    .brand,
+    .pseudo.button {
+      color: inherit;
+      }
+
+    .pseudo.button:hover {
+      background: rgba(255, 255, 255, .2);
+      }
+    }
+  }
+
+
+// Hero from the main page
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  min-height: 300px;
+  color: #fff;
+  padding: 1px 0;
+  background: #07071d url('/img/galaxy.svg') no-repeat center center fixed;
+  background-size: cover;
+
+  // Add a soft shadow to the hero
+  box-shadow: 0 0 0 10000em rgba(0, 0, 0, .05) inset;
+  
+
+  // Vertical center for the content
+  .content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    }
+
+  h1,
+  p {
+    text-shadow: .05em .05em .1em rgba(0, 0, 0, .8);
+    }
+
+  h1 {
+    font-size: 3em;
+    line-height: 1;
+    padding: 0;
+    }
+
+  p {
+    margin: 0;
+    }
+
+  .slogan {
+    font-size: 1.3em;
+    }
+
+  .bower {
+    width: 300px;
+    color: #000;
+    margin-bottom: 0;
+    text-align: center;
+    border-radius: 0;
+    margin: 1.3em auto .3em;
+    }
+
+  .links a {
+    color: #fff;
+    box-shadow: 0 2px rgba(255, 255, 255, .5);
+    transition: all .3s;
+    }
+
+  .links a:hover {
+    box-shadow: 0 2px rgba(255, 255, 255, .8);
+    }
+
+  .links a:active {
+    background: none;
+    border-radius: 0;
+    }
+
+  .keepgoing {
+    font-size: .7em;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    }
+  }
+
+// Hack to hide the hero without js (reusing nav's js)
+.transparent ~ .hero .keepgoing {
+  opacity: 1;
+  }
+
+
+
+
+@media all and (max-width: 960px) {
+  nav .menu {
+    color: #333;
+    }
+
+  // Since in mobiles the fixed one is sluggish
+  .hero {
+    background-attachment: scroll;
+    }
+  }
+

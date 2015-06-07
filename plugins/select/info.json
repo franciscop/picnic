@@ -1,5 +1,7 @@
 {
   "id": "select",
   "name": "Select",
-  "install": "[included]"
+  "affected": ".select",
+  "included": true,
+  "summary": "A typical dropdown, now enhanced with a custom down arrow and coherent style."
 }

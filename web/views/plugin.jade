@@ -1,7 +1,9 @@
 extends layout
 
+block title
+  title= plugin.name + ' - Picnic CSS Plugin'
+
 block content
   
-  main.limit
-    article.plugin
-      != plugin.documentation
+  main.intro
+    != plugin.documentation

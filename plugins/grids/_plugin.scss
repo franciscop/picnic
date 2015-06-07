@@ -1,3 +1,7 @@
+.row > * {
+  margin: $picnic-separation 0;
+  }
+
 // From ungrid ( http://chrisnager.github.io/ungrid/ )
 @media (min-width: $picnic-breakpoint) {
 
@@ -10,14 +14,14 @@
     table-layout: fixed;
 
     border-spacing: $picnic-separation 0;
-    margin-left: - $picnic-separation;
-    margin-bottom: $picnic-separation;
-  }
+    margin: $picnic-separation 0 $picnic-separation #{-$picnic-separation};
+    }
 
   // For every child directly below row
   .row > * {
     display: table-cell;
     vertical-align: top;
+    margin: 0;
   }
 
   // Don't display this one

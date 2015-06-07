@@ -1,63 +1,56 @@
-<link rel='stylesheet' href='/nut/picnic_3_2.min.fresh.css'>
-
 <!-- Testing the module -->
-<h2>Button types and colors</h2>
+<h2 id="button">Button types and colors</h2>
 
-<div class="row">
-  <div>
-    <button>Button</button>
-    <button class="success">Button</button>
-    <button class="warning">Button</button>
-    <button class="error"  >Button</button>
-    <button class="dull">Button</button>
-    <button class="pseudo">Button</button>
-  </div>
+<div>
+  <button>Button</button>
+  <button class="success">Button</button>
+  <button class="warning">Button</button>
+  <button class="error"  >Button</button>
+  <button class="pseudo">Button</button>
+  <button disabled>Button</button>
 </div>
-<div class="row">
-  <div>
-    <a href="#" class="button">Link</a>
-    <a href="#" class="button success">Link</a>
-    <a href="#" class="button warning">Link</a>
-    <a href="#" class="button error">Link</a>
-    <a href="#" class="button dull">Link</a>
-    <a href="#" class="button pseudo">Link</a>
-  </div>
+
+<div>
+  <a class="button">Link</a>
+  <a class="button success">Link</a>
+  <a class="button warning">Link</a>
+  <a class="button error">Link</a>
+  <a class="button pseudo">Link</a>
+  <a class="button" disabled>Link</a>
 </div>
-<div class="row">
-  <div>
-    <input type="submit" value = "Submit" />
-    <input type="submit" class="success" value="Submit" />
-    <input type="submit" class="warning" value="Submit" />
-    <input type="submit" class="error" value="Submit" />
-    <input type="submit" class="dull" value="Submit" />
-    <input type="submit" class="pseudo" value="Submit" />
-  </div>
+
+<div>
+  <input type="submit" value = "Submit" />
+  <input type="submit" class="success" value="Submit" />
+  <input type="submit" class="warning" value="Submit" />
+  <input type="submit" class="error" value="Submit" />
+  <input type="submit" class="pseudo" value="Submit" />
+  <input disabled type="submit" value="Submit" />
 </div>
-<div class="row">
-  <div>
-    <label>
-      <input class="toggle" type="checkbox" />
-      <span class="button">Toggle</span>
-    </label>
-    <label>
-      <input class="toggle" type="checkbox" />
-      <span class="button success">Toggle</span>
-    </label>
-    <label>
-      <input class="toggle" type="checkbox" />
-      <span class="button warning">Toggle</span>
-    </label>
-    <label>
-      <input class="toggle" type="checkbox" />
-      <span class="button error">Toggle</span>
-    </label>
-    <label>
-      <input class="toggle" type="checkbox" />
-      <span class="button dull">Toggle</span>
-    </label>
-    <label>
-      <input class="toggle" type="checkbox" />
-      <span class="button pseudo">Toggle</span>
-    </label>
-  </div>
+
+<div>
+  <label>
+    <input type="checkbox" />
+    <span class="toggle button">Toggle</span>
+  </label>
+  <label>
+    <input type="checkbox" />
+    <span class="toggle button success">Toggle</span>
+  </label>
+  <label>
+    <input type="checkbox" />
+    <span class="toggle button warning">Toggle</span>
+  </label>
+  <label>
+    <input type="checkbox" />
+    <span class="toggle button error">Toggle</span>
+  </label>
+  <label>
+    <input type="checkbox" />
+    <span class="toggle button pseudo">Toggle</span>
+  </label>
+  <label>
+    <input disabled type="checkbox" />
+    <span disabled class="toggle button">Toggle</span>
+  </label>
 </div>

@@ -2,8 +2,6 @@
 
 A card is a self-contained, highly-replicated class. It works great with other of its kind.
 
-<link rel='stylesheet' href='/nut/raw+card.fresh.css'>
-
 <div class="row">
   <article class="card">
     <img src="/img/forest.jpg">
@@ -34,7 +32,7 @@ A card can consist of only one element. It can be expressed as something really 
 <article class="card">
   <header>
     <button>Love</button>
-    <button class="error">Hate</button>
+    <button class="dangerous">Hate</button>
   </header>
 </article><br>
 
@@ -56,7 +54,7 @@ A card can consist of only one element. It can be expressed as something really 
     <article class="card">
       <header>
         <button>Love</button>
-        <button class="error">Hate</button>
+        <button class="dangerous">Hate</button>
       </header>
     </article><br>
 
