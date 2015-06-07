@@ -632,7 +632,8 @@ nav {
   nav .burger {
     display: inline-block;
     cursor: pointer;
-    bottom: -1000em; }
+    bottom: -1000em;
+    margin: 0; }
   nav .menu, nav .show:checked ~ .burger {
     position: fixed;
     min-height: 100%;
