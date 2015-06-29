@@ -6,7 +6,7 @@ They can be of different types and <a href="http://clrs.cc/" target="_blank">col
 <button class='success'>Success</button>
 <button class='warning'>Warning</button>
 <button class='error'>Error</button>
-<button class='dull'>Dull</button>
+<button disabled>Disabled</button>
 
 
 ## Colors
@@ -18,14 +18,14 @@ The default color is dark blue. There are 5 colors:
 <button class="success">Success</button>
 <button class="warning">Warning</button>
 <button class="error">Error</button>
-<button class="dull">Dull</button>
+<button disabled>Disabled</button>
 </p>
 
     <button>Normal</button>
     <button class="success">Success</button>
     <button class="warning">Warning</button>
     <button class="error">Error</button>
-    <button class="dull">Dull</button>
+    <button disabled>Disabled</button>
 
 
 ## Types
