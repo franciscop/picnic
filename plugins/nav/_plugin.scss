@@ -3,7 +3,7 @@
 
 $picnic-nav-shadow: $picnic-shadow !default;
 $picnic-nav-position: fixed !default;
-$picnic-nav-sides: .6em;
+$picnic-nav-sides: .6em !default;
 
 
 // Vertical align based on
@@ -18,7 +18,7 @@ $picnic-nav-sides: .6em;
 
   // Total height
   height: 3em;
-  padding: 0 $picnic-nav-sides;
+  padding: 0;
 
   // Make it look like a hovering bar
   background: #fff;
@@ -45,7 +45,7 @@ $picnic-nav-sides: .6em;
   .brand {
     font-weight: 700;
     float: left;
-    padding: 0 .6em;
+    padding: 0 $picnic-nav-sides;
     max-width: 50%;
     white-space: nowrap;
     color: $picnic-black;
@@ -67,7 +67,7 @@ $picnic-nav-sides: .6em;
     }
 
   .menu > * {
-    margin-right: .3em;
+    margin-right: $picnic-nav-sides;
     }
   }
 
