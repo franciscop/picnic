@@ -47,7 +47,7 @@
 
 
   &.two {
-    .row {
+    > .row {
       width: 200%;
       left: -100%;
       }
@@ -58,7 +58,7 @@
     }
 
   &.three {
-    .row {
+    > .row {
       width: 300%;
       left: -200%;
       }
@@ -73,7 +73,7 @@
     }
 
   &.four {
-    .row {
+    > .row {
       width: 400%;
       left: -300%;
       }
