@@ -38,7 +38,7 @@ Then, to use it within your scss development cycle, just do:
 Just do
 
 ```bash
-npm install picnic --save
+npm i -D picnic
 ```
 
 To add it to your repository. Then you can include it straight from your css like:
