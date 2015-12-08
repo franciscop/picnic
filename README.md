@@ -33,6 +33,24 @@ Then, to use it within your scss development cycle, just do:
 
 
 
+### NPM
+
+Just do
+
+```bash
+npm install picnic --save
+```
+
+To add it to your repository. Then you can include it straight from your css like:
+
+```css
+@import "../node_modules/picnic/releases/picnic.css";
+```
+
+Thanks to [chadoh](https://github.com/chadoh) for helping me in publishing it in NPM and for the instructions.
+
+
+
 ### Other ways
 
 You can always download the latest minimized version from github, clone the repository or download it.
@@ -40,10 +58,6 @@ You can always download the latest minimized version from github, clone the repo
 
 
 You can also [try it live in Codepen](http://codepen.io/FranciscoP/pen/ZGpzbL?editors=110).
-
-Alternatively:
-
-With bower: 
 
 Clone it: `git clone https://github.com/picnicss/picnic.git`
 
