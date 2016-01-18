@@ -1,0 +1,273 @@
+extends layout
+
+block content
+
+  main
+    header.hero
+      div.content
+        h1 Picnic CSS
+        p.slogan Lightweight and beautiful library
+        pre.bower bower install picnic
+
+        p.links
+          a.cdn(href="http://www.jsdelivr.com/#!picnicss" target="_blank") CDN
+          span  | 
+          a.github(href="https://raw.githubusercontent.com/picnicss/picnic/master/releases/picnic.min.css" target="_blank") Download
+          span  | 
+          a.github(href="https://github.com/picnicss/picnic" target="_blank") Github
+
+      div.keepgoing ▼
+
+
+    div.visual.row
+      div.content
+        h2 Default html beauty
+        p The native html elements get a boost so you don't need to write presentation classes mixed with your html.
+        p Picnic is completely modular so you can easily modify and test each part:
+        a.button.icon-puzzle Plugins
+      div.card
+        p
+          button Normal
+          |  
+          button.success Success
+          |  
+          button.warning Warning
+          |  
+          button.error Error
+        p
+          input(type="email" placeholder="Email")
+        div
+          div.row.gallery
+            article.card.tooltip-bottom(data-tooltip="Click me to upload a new image")
+              label.dropimage
+                input(type="file")
+            article.card.tooltip-bottom(data-tooltip="Click me to upload a new image")
+              label.dropimage(style="background-image: url(/img/galaxy.svg)")
+                input(type="file")
+            article.card.tooltip-bottom(data-tooltip="Click me to upload a new image")
+              label.dropimage(style="background-image: url(/img/galaxy.svg)")
+                input(type="file")
+
+
+    div.visual.row
+      div.content
+        h2 Made for the hackers
+        p Install it with bower and you will be able to integrate Picnic in any project and make it work for you.
+        p Picnic is written in SCSS with <a href="/documentation#variables">many variables</a> and <a href="/documentation#placeholders"><em>classes</em> (placeholders)</a> to make it easy to extend.
+        a.button.icon-file-code(href="/documentation/") Documentation
+        | 
+        a.button.icon-g(href="https://github.com/picnicss/picnic" target="_blank") Github
+      pre.
+        // Define your own main color
+        $picnic-primary: #faa;
+
+        // Add picnic to your codebase
+        @import 'bower/picnic/src/picnic';
+
+        // Create a new element
+        .call-to-action {
+          @extends %button;
+        }
+    div.visual.row
+      div.content
+        h2 It's alive!
+        p Get the best experience for your users with many subtle and carefully crafted css transitions.
+        p Fun fact: there's not a single line of javascript for controlling the multi step form on the right ⇒
+      div(style="padding: 0")
+        div.row
+          div.tabs.three(style="text-align: center;")
+            input#tabC-1(type='radio' name='tabgroupC' checked)
+            label.pseudo.button.toggle(for="tabC-1") 1
+            span  / 
+            input#tabC-2(type='radio' name='tabgroupC')
+            label.pseudo.button.toggle(for="tabC-2") 2
+            span  / 
+            input#tabC-3(type='radio' name='tabgroupC')
+            label.pseudo.button.toggle(for="tabC-3") 3
+            div.row(style="text-align: left;")
+              div
+                div.card(style="margin: 10px")
+                  header
+                    h3 Registration form example
+                  section Obviously agree with the 
+                    a
+                      strong
+                        label.tooltip-top.link(for="modal_demo" data-tooltip="Tooltip says: Please click me?") terms and condition
+                  section
+                    label
+                      input(type="checkbox" name="check")
+                      span.checkable I agree with them!
+                  footer
+                    label.button(for="tabC-2") Agree
+
+              div
+                div.card(style="margin: 10px 20px;")
+                  header 
+                    h3 Our relationship
+                  section
+                    select 
+                      option How did you find us?
+                      option(value="hackernews") Hacker News
+                      option(value="friends") Friends
+                      option(value="google") Google
+                      option(value="keysmash") Keyboard smashing
+                  section
+                    label
+                      input(type="radio" name="like" value="a lot")
+                      span.checkable I love Picnic!
+                    label
+                      input(type="radio" name="like" value="nothing")
+                      span.checkable I've seen better...
+                  footer 
+                    label.button(for="tabC-3") Next 
+                    label.button.dangerous(for="tabC-1") Back
+
+              div
+                div.card(style="margin: 10px 20px;")
+                  header 
+                    h3 Subscribe?
+                  section 
+                    input(type="text" placeholder="Full Name")
+                  section 
+                    input(type="email" placeholder="Email")
+                  footer 
+                    button.success Finish!
+                    label.button.dangerous(for="tabC-2") Back
+
+
+    div.visual.row
+      div.content
+        h2 For your mobile
+        p Picnic mission is to be <strong>under 5kb</strong> of responsive, compressed css for a <a href="https://www.youtube.com/watch?v=GDpmVUEjagg" target="_blank">better and faster</a> mobile load.
+        p Check the network usage of this page (F12), this page is under 50kb including images.
+      div
+        div.row.demo
+          div  
+        div.row.demo
+          div 
+          div 
+        div.row.demo
+          div 
+          div 
+          div 
+        div.row.demo
+          div 
+          div 
+          div 
+          div 
+        div.row.demo
+          div 
+          div 
+          div 
+          div 
+          div 
+
+
+
+    div.visual.row
+      div.content
+        h2 Open Source
+        p If you love something set it free. This license allows you to use Picnic in a broad variety of projects.
+        label.button(for="modal_mit") MIT License
+      div.content
+        h2 Special thanks
+        ul
+          li
+            strong
+              a(href="https://github.com/picnicss/picnic/graphs/contributors") Contributors
+            span : for helping Picnic improve
+          li
+            strong
+              a(href="http://news.ycombinator.com/" title="No target='_blank' since I know that you guys know how to use Ctrl (;") Hacker News
+            span : To the community
+          li 
+            strong 
+              a(href="http://tcfraser.com/" target="_blank") Thomas Coolican Fraser
+            span : Hero backgroud
+          li
+            strong
+              a(href="http://necolas.github.io/normalize.css/" target="_blank") Normalize.css
+            span : A modern alternative to resets
+          li
+            strong
+              a(href="http://clrs.cc/" target="_blank") Clrs.cc
+            span : A nicer color palette for the web.
+          li
+            strong
+              a(href="http://fontello.com/" target="_blank") Fontello
+            span : Icon font generator
+
+
+    div.visual
+      div.love With love,
+      a.name(href="http://francisco.io/") Francisco Presencia
+
+
+  div.modal
+    input#modal_demo(type="checkbox")
+    label.overlay(for="modal_demo")
+    article
+      header
+        h3 I am a pure CSS modal
+        label.close(for="modal_demo") ×
+      section.content
+        p Just showing what I am capable of doing. Do you like it?
+      footer
+        label.button.success(for="modal_demo") Yes!
+        a.button.dangerous.tooltip-top(href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank") It sucks
+
+
+
+  div.modal
+    input#modal_mit(type="checkbox")
+    label.overlay(for="modal_mit")
+    article
+      header
+        h3 The MIT License (MIT)
+        label.close(for="modal_mit") ×
+      section.content
+        p Copyright (c) 2014 Francisco Presencia Fandos
+
+        p.
+          Permission is hereby granted, free of charge, to any person obtaining a copy
+          of this software and associated documentation files (the "Software"), to deal
+          in the Software without restriction, including without limitation the rights
+          to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+          copies of the Software, and to permit persons to whom the Software is
+          furnished to do so, subject to the following conditions:
+
+        p.
+          The above copyright notice and this permission notice shall be included in
+          all copies or substantial portions of the Software.
+
+        p.
+          THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+          IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+          FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+          AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+          LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+          OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+          THE SOFTWARE.
+
+  script.
+    
+    // Transparent nav handler
+    var nav = document.querySelector('nav');
+    function navScroll(){
+      var className = 'transparent';
+      var top = window.scrollY ? window.scrollY : document.documentElement.scrollTop;
+      if (top > 0) {
+        if (nav.classList)
+          nav.classList.remove(className);
+        else
+          nav.className = nav.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+        }
+      else {
+        if (nav.classList)
+          nav.classList.add(className);
+        else
+          nav.className += ' ' + className;
+        }
+      };
+    window.onscroll = navScroll;
+    navScroll();
