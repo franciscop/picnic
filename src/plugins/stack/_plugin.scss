@@ -5,7 +5,7 @@
 // Stacking elements one of top of another
 .stack,
 .stack .toggle {
-  @extend %stack;
+  //@extend %stack;
   margin-top: 0;
   margin-bottom: 0;
   display: block;

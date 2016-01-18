@@ -7,9 +7,9 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(name="keywords" content="css, library, css library, picnic, picnicss, html, html5, light, plugin")
     meta(name="description" content="A lighweight CSS library with nice defaults and many plugins to kickstart your projects")
-    meta(property="og:image" content="http://www.picnicss.com/preview.png")
-    link(rel='stylesheet', href='/style/style.min.css')
-    link(rel="icon", href="/img/basket.png", type="image/png")
+    meta(property="og:image" content="http://www.picnicss.com/web/preview.png")
+    link(rel='stylesheet', href='/web/style/style.min.css')
+    link(rel="icon", href="/web/img/basket.png", type="image/png")
 
   body
     nav(class=transparent)
@@ -20,10 +20,9 @@ html
       label.burger.toggle.pseudo.button(for="bmenu") menu
 
       div.menu
-        a.pseudo.button.icon-file-code(href="/documentation/") Documentation
-        a.pseudo.button.icon-help-circled(href="/test/") Test
+        a.pseudo.button.icon-help-circled(href="/tests") Test
         a.pseudo.button.icon-g(href="https://github.com/picnicss/picnic" target="_blank") Github
-        a.button.icon-puzzle(href="/plugins/") Plugins
+        a.button.icon-file-code(href="/documentation") Documentation
 
     block content
 

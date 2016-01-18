@@ -10,7 +10,7 @@ $picnic-dropimage-ratio: 4 / 3 !default;
 @import 'font/fontello';
 
 // Get the library picnic css
-@import '../../src/plugins';
+@import '../../src/picnic';
 
 
 
@@ -95,9 +95,7 @@ main {
     margin-left: 20px;
     }
   }
-
-
-
+  
 // Display the grid with colors
 .row.demo > * {
   padding: .3em .6em;
@@ -112,6 +110,8 @@ main {
   padding-top: 80px;
   margin-top: -60px;
 }
+
+
 
 .newplugin {
   text-decoration: none;
@@ -176,6 +176,16 @@ main {
     float: right;
     }
   }
+  
+section.row {
+  width: 90%;
+  max-width: 960px;
+  margin: 80px auto;
+}
+
+section.row aside {
+  width: 200px;
+}
 
 
 @media all and (max-width: 960px) {

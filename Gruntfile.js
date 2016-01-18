@@ -1,4 +1,15 @@
-fs = require('fs');
+var fs = require('fs');
+var plugins = fs.readdirSync(__dirname + "/src/plugins").filter(function(one){
+  return fs.existsSync(__dirname + '/src/plugins/' + one + '/info.json')
+    && fs.existsSync(__dirname + '/src/plugins/' + one + '/description.html');
+}).map(function(one){
+  var base = __dirname + '/src/plugins/' + one + '/';
+  var info = require(base + 'info.json');
+  info.description = fs.readFileSync(base + 'description.html', 'utf8');
+  return info;
+});
+
+console.log("Plugins: ", plugins);
 
 // This builds the library itself
 module.exports = function (grunt) {
@@ -7,23 +18,33 @@ module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     
-    uglify: {
-      options: { banner: '/* Umbrella JS ' + require('./package').version + ' umbrellajs.com */\n'},
-      build: { src: 'umbrella.js', dest: 'umbrella.min.js' }
+    sass: {
+      dist: {
+        options: {
+          sourceMap: false,
+          style: 'compressed'
+        },
+        files: {
+          'web/style/style.min.css': 'web/style/style.scss',
+          'picnic.min.css': 'src/picnic.scss'
+        }
+      }
     },
-
+    
     watch: {
       scripts: {
         files: [
           'package.js', // To bump versions
           'Gruntfile.js',
-          'src/*.js',
+          'src/*.scss',
           'src/*.md',
-          'src/plugins/*.js',
+          'src/plugins/*.scss',
           'src/plugins/*.md',
-          'src/plugins/*/*.js',
+          'src/plugins/*/*.scss',
           'src/plugins/*/*.md',
           'web/*.jade',
+          'web/**/*.css',
+          'web/**/*.scss',
           'web/*'
         ],
         tasks: ['default'],
@@ -34,7 +55,10 @@ module.exports = function (grunt) {
     jade: {
       compile: {
         options: {
-          client: false
+          client: false,
+          data: {
+            plugins: plugins
+          }
         },
         files: [ {
           cwd: "web",
@@ -57,32 +81,27 @@ module.exports = function (grunt) {
     
     // get the current concat config
     var concat = {
-      main: { src: [ 'src/umbrella.js' ], dest: 'umbrella.js' },
-      test: { src: [ 'src/test.js' ], dest: 'test/test.js' },
-      docs: { src: [ 'src/documentation.md' ], dest: 'documentation.md' }
+      test: { src: [], dest: 'test/tests.html' },
+      docs: { src: [], dest: 'documentation.md' },
+      preview: { src: [], dest: 'preview.html' }
     };
     
     fs.readdirSync(__dirname + "/src/plugins").forEach(function(name, i){
-      var file = 'src/plugins/' + name + '/' + name + '.js';
-      var test = 'src/plugins/' + name + '/test.js';
+      var test = 'src/plugins/' + name + '/test.html';
       var doc = 'src/plugins/' + name + '/documentation.md';
+      var preview = 'src/plugins/' + name + '/description.html';
       
-      if (!fs.existsSync(file)) throw new Error("File '" + file + "' doesn't exist");
       
-      concat.main.src.push(file);
       concat.test.src.push(test);
       concat.docs.src.push(doc);
+      concat.preview.src.push(preview);
     });
+    
+    console.log(concat.preview);
     
     // save the new concat configuration
     grunt.config.set('concat', concat);
   });
-
-  // Concatenate
-  grunt.loadNpmTasks('grunt-contrib-concat');
-
-  // Minify
-  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // Watch
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -90,9 +109,12 @@ module.exports = function (grunt) {
   // Jade
   grunt.loadNpmTasks('grunt-contrib-jade');
   
-  // Testing
-  grunt.loadNpmTasks('grunt-mocha-phantomjs');
+  // SASS
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  
+  // SASS
+  grunt.loadNpmTasks('grunt-contrib-concat');
   
   // 4. Where we tell Grunt what to do when we type "grunt" into the terminal
-  grunt.registerTask('default', ['parse', 'concat', 'uglify', 'jade', 'mocha_phantomjs']);
+  grunt.registerTask('default', ['parse', 'concat', 'sass', 'jade']);
 };
