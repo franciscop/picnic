@@ -55,7 +55,7 @@ Small guide for developers to take advantage of the modular nature of Picnic.
 Notes:
 
 - **variables come before** importing the library and **placeholder overwriting comes afterwards**
-- **overwrite the placeholders**, since these are then extendend to all of the elements. If you extended `.button.pseudo` above, then `button.pseudo` and others wouldn't be extended.  
+- **overwrite the placeholders**, since these are then extended to all of the elements. If you extended `.button.pseudo` above, then `button.pseudo` and others wouldn't be extended.  
 - If you want to use **fontello**, it should be **included before the library**.
 
 
@@ -97,13 +97,13 @@ So, to include it, you just need to do this in your sass with the library you wa
 
 
 
-### Including individial plugins
+### Including individual plugins
 
 To add a plugin, just reference the file called `_plugin.scss` within that plugin folder. Like this:
 
     @import 'bower_path/picnic/plugins/card/plugin';
 
-This should be done after loading any of the three files from the library. Please note that **some of the plugins might have dependencies**, which should be stated clearly in the file `info.json` in each plugin folder. There's some talk in SASS' github that would allow to include the dependencies automaticly, but it's been going on for 4 years and still not solved so don't expect this soon.
+This should be done after loading any of the three files from the library. Please note that **some of the plugins might have dependencies**, which should be stated clearly in the file `info.json` in each plugin folder. There's some talk in SASS' Github that would allow to include the dependencies automatically, but it's been going on for 4 years and still not solved so don't expect this soon.
 
 
 ### Placeholders
@@ -181,7 +181,7 @@ This is similar to some programming languages, where each object is the implemen
 
 ## Plugins
 
-Each plugin documentation has its own page. Plase visit them to see it:
+Each plugin documentation has its own page. Please visit them to see it:
 
 <a href="/plugins" class="button icon-puzzle">Plugins</a>
 
@@ -191,7 +191,7 @@ Each plugin documentation has its own page. Plase visit them to see it:
 
 ## Wrap up
 
-Thank you for using Picnic CSS. If you find it useful or some part of this guide is confusing, please edit it through github. You are welcome here:
+Thank you for using Picnic CSS. If you find it useful or some part of this guide is confusing, please edit it through Github. You are welcome here:
 
 <a class="button icon-g" href="https://github.com/picnicss/picnic">Github</a>
 <a class="button warning icon-help-circled" href="https://github.com/picnicss/picnic/issues">Issues</a>
