@@ -9,8 +9,6 @@ var plugins = fs.readdirSync(__dirname + "/src/plugins").filter(function(one){
   return info;
 });
 
-console.log("Plugins: ", plugins);
-
 // This builds the library itself
 module.exports = function (grunt) {
 
@@ -82,13 +80,13 @@ module.exports = function (grunt) {
     // get the current concat config
     var concat = {
       test: { src: [], dest: 'test/tests.html' },
-      docs: { src: [], dest: 'documentation.md' },
+      docs: { src: ['src/readme.md'], dest: 'documentation.md' },
       preview: { src: [], dest: 'preview.html' }
     };
     
     fs.readdirSync(__dirname + "/src/plugins").forEach(function(name, i){
       var test = 'src/plugins/' + name + '/test.html';
-      var doc = 'src/plugins/' + name + '/documentation.md';
+      var doc = 'src/plugins/' + name + '/readme.md';
       var preview = 'src/plugins/' + name + '/description.html';
       
       

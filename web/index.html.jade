@@ -263,6 +263,7 @@ block content
           nav.className = nav.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
         }
       else {
+        nav.classList.add('transparent');
         if (nav.classList)
           nav.classList.add(className);
         else
@@ -271,3 +272,4 @@ block content
       };
     window.onscroll = navScroll;
     navScroll();
+    setTimeout(function(){ nav.classList.remove('loading'); }, 10);

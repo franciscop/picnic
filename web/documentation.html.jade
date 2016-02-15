@@ -2,28 +2,42 @@ extends layout
 
 block title
   title Plugins - Picnic CSS
-
+  
 block content
-
-  main.intro
-    h1 Documentation
-    p.slogan How to include Picnic CSS and what plugins are included
-
-
-    each plugin in plugins
-      div.card.visual.newplugin
-        div.row
-          div.content
-            h2= plugin.name
-              span.installed
-                if (plugin.javascript)
-                  span.label.error(title="This plugin requires some javascript") JS
-            div.affected= plugin.affected
-            p= plugin.summary
-            footer
-              a.button.icon-file-code(href="/plugins/" + plugin.id) Docs
-              span.extra
-                a.pseudo.button.icon-help-circled(href="/test#" + plugin.id) Test
-                | 
-                a.pseudo.button.icon-g(href="https://github.com/picnicss/picnic/tree/master/plugins/" + plugin.id) Code
-          div.display!= plugin.description
+  main.documentation
+    section.row
+      aside
+        h2 Contents
+      article
+        include:markdown ../documentation.md
+  
+  script(src="https://cdn.jsdelivr.net/umbrella/1/umbrella.min.js")
+  
+  script.
+    
+    u('h2[id]').each(function(node){
+      u(node).attr('id', u(node).attr('id').replace(/-/g, ''));
+    });
+    
+    u('article h2').each(function(node){
+      var href = 'href="#' + u(node).attr('id') + '" ';
+      var classes = 'class="pseudo button stack" ';
+      var html = u(node).html();
+      u('aside').append('<a ' + classes + href + '>' + html + '</a>');
+    });
+    
+    u('article p').addClass('two-third');
+    
+    u('pre .lang-html').parent().each(function(node){
+      var child = u(node).find('.lang-html').html();
+      var html = u(document.createElement('div')).html(child).first().textContent;
+      var pre = node.innerHTML.replace(/\&lt\;br\&gt\;/g, '');
+      u(node).before('<div class="row"><div><pre>' + pre + '</pre></div><div class="third">' + html + '</div></div>');
+      u(node).remove();
+    });
+    
+    u('pre .lang-css').parent().each(function(node){
+      var css = u(node).find('.lang-css').html();
+      u(node).before('<div class="row"><div><pre>' + node.innerHTML + '</pre></div><div class="third"><style>' + css + '</style></div></div>');
+      u(node).remove();
+    });

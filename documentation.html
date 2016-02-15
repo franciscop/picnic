@@ -1,306 +1,542 @@
-<!DOCTYPE html><html><head><title>Plugins - Picnic CSS</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="css, library, css library, picnic, picnicss, html, html5, light, plugin"><meta name="description" content="A lighweight CSS library with nice defaults and many plugins to kickstart your projects"><meta property="og:image" content="http://www.picnicss.com/web/preview.png"><link rel="stylesheet" href="/web/style/style.min.css"><link rel="icon" href="/web/img/basket.png" type="image/png"></head><body><nav><a href="/" class="brand">Picnic CSS</a><!-- responsiveness--><input id="bmenu" type="checkbox" class="show"><label for="bmenu" class="burger toggle pseudo button">menu</label><div class="menu"><a href="/tests" class="pseudo button icon-help-circled">Test</a><a href="https://github.com/picnicss/picnic" target="_blank" class="pseudo button icon-g">Github</a><a href="/documentation" class="button icon-file-code">Documentation</a></div></nav><main class="intro"><h1>Documentation</h1><p class="slogan">How to include Picnic CSS and what plugins are included</p><div class="card visual newplugin"><div class="row"><div class="content"><h2>Button<span class="installed"></span></h2><div class="affected">button, .button, [type=submit]</div><p>An element that looks like it can be clicked and will perform some action.</p><footer><a href="/plugins/button" class="button icon-file-code">Docs</a><span class="extra"><a href="/test#button" class="pseudo button icon-help-circled">Test</a> <a href="https://github.com/picnicss/picnic/tree/master/plugins/button" class="pseudo button icon-g">Code</a></span></footer></div><div class="display"><p>
-  <a class="button">Normal</a>
-  <a class="button success">Success</a>
-  <a class="button warning">Warning</a>
-  <a class="button error">Error</a>
-</p>
-
-<p>
-  <a class="button icon-puzzle">Icon</a>
+<!DOCTYPE html><html><head><title>Plugins - Picnic CSS</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="css, library, css library, picnic, picnicss, html, html5, light, plugin"><meta name="description" content="A lighweight CSS library with nice defaults and many plugins to kickstart your projects"><meta property="og:image" content="http://www.picnicss.com/web/preview.png"><link rel="stylesheet" href="/web/style/style.min.css"><link rel="icon" href="/web/img/picnic_test.png" type="image/png"></head><body><nav class="loading"><a href="/" class="brand"><span>Picnic CSS</span></a><!-- responsiveness--><input id="bmenu" type="checkbox" class="show"><label for="bmenu" class="burger toggle pseudo button">menu</label><div class="menu"><a href="/tests" class="pseudo button icon-help-circled">Test</a><a href="https://github.com/picnicss/picnic" target="_blank" class="pseudo button icon-g">Github</a><a href="/documentation" class="button icon-file-code">Documentation</a></div></nav><main class="documentation"><section class="row"><aside><h2>Contents</h2></aside><article><h1 id="picnic-css">Picnic CSS</h1>
+<p>Picnic CSS is a lightweight and beautiful CSS library</p>
+<h2 id="buttons">Buttons</h2>
+<p>They can be of different colors and types:</p>
+<pre><code class="lang-html">&lt;button&gt;Button&lt;/button&gt;
+&lt;button class=&#39;success&#39;&gt;Success&lt;/button&gt;
+&lt;button class=&#39;warning&#39;&gt;Warning&lt;/button&gt;
+&lt;button class=&#39;error&#39;&gt;Error&lt;/button&gt;
+&lt;button disabled&gt;Disabled&lt;/button&gt;
+</code></pre>
+<pre><code class="lang-html">&lt;button&gt;Button&lt;/button&gt;
+&lt;a class=&quot;button&quot;&gt;Link&lt;/a&gt;
+&lt;input value=&quot;Submit&quot; type=&quot;submit&quot;&gt;
+&lt;label&gt;
+  &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;span class=&quot;toggle button&quot;&gt;Toggle&lt;/span&gt;
+&lt;/label&gt;
+</code></pre>
+<h3 id="pseudo-buttons">Pseudo buttons</h3>
+<p>Allows for seemingly links to behave as buttons:</p>
+<pre><code class="lang-html">&lt;button class=&quot;pseudo&quot;&gt;Button&lt;/button&gt;
+&lt;a class=&quot;pseudo button&quot;&gt;Link&lt;/a&gt;
+&lt;input class=&quot;pseudo&quot; value=&quot;Submit&quot; type=&quot;submit&quot;&gt;
+&lt;label&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+    &lt;span class=&quot;toggle pseudo button&quot;&gt;Toggle&lt;/span&gt;
+&lt;/label&gt;
+</code></pre>
+<h3 id="hack-it">Hack it</h3>
+<p>You only have to define a single color base for new colors. The <code>:hover</code> and <code>:active</code> status are handled as overlays for consistency and simplicity</p>
+<pre><code class="lang-html">&lt;button class=&quot;myCoolButton&quot;&gt;My Cool Button&lt;/button&gt;
+</code></pre>
+<pre><code class="lang-css">.myCoolButton {
+    background: #85144b;
+}
+</code></pre>
+<p>To create a larger button you only need to make the font inside it larger. The paddings are set in <em>em</em> so the whole button stays in great shape:</p>
+<pre><code class="lang-html">&lt;button class=&quot;mainButton&quot;&gt;Large button&lt;/button&gt;&lt;br&gt;
+&lt;button&gt;Normal button&lt;/button&gt;&lt;br&gt;
+&lt;button class=&quot;shyButton&quot;&gt;Small button&lt;/button&gt;
+</code></pre>
+<pre><code class="lang-css">.mainButton {
+    font-size: 1.5em;
+}
+.shyButton {
+    font-size: .75em;
+}
+</code></pre>
+<p>To change the color of the pseudo-color on hover:</p>
+<pre><code class="lang-html">&lt;button class=&quot;pseudo cool&quot;&gt;Pseudo personal&lt;/button&gt;
+</code></pre>
+<pre><code class="lang-css">.cool:hover,
+.cool:active,
+.cool:focus {
+    background: #cff;
+}
+</code></pre>
+<h2 id="card">Card</h2>
+<p>A card is a self-contained, replicable type. It works great with other of its kind. It can consist of only one element or many of them:</p>
+<pre><code class="lang-html">&lt;article class=&quot;card&quot;&gt;
+  &lt;header&gt;
+    &lt;h3&gt;A really simple h3&lt;/h3&gt;
+  &lt;/header&gt;
+&lt;/article&gt;
+</code></pre>
+<pre><code class="lang-html">&lt;article class=&quot;card&quot;&gt;
+  &lt;header&gt;
+    &lt;button&gt;Love&lt;/button&gt;
+    &lt;button class=&quot;dangerous&quot;&gt;Hate&lt;/button&gt;
+  &lt;/header&gt;
+&lt;/article&gt;
+</code></pre>
+<pre><code class="lang-html">&lt;article class=&quot;card&quot;&gt;
+  &lt;header&gt;
+    &lt;h3&gt;Forest&lt;/h3&gt;
+  &lt;/header&gt;
+  &lt;footer&gt;
+    &lt;button&gt;Like&lt;/button&gt;
+  &lt;/footer&gt;
+&lt;/article&gt;
+</code></pre>
+<pre><code class="lang-html">&lt;article class=&quot;card&quot;&gt;
+  &lt;img src=&quot;/web/img/forest.jpg&quot;&gt;
+  &lt;footer&gt;
+    &lt;h3&gt;Misty Forest&lt;/h3&gt;
+    &lt;button&gt;Like&lt;/button&gt;
+  &lt;/footer&gt;
+&lt;/article&gt;
+</code></pre>
+<h2 id="checkbox">Checkbox</h2>
+<p>Display an inline checkbox with a nice default style</p>
+<pre><code class="lang-html">&lt;label&gt;
+  &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;span class=&quot;checkable&quot;&gt;Check me out (;&lt;/span&gt;
+&lt;/label&gt;
+</code></pre>
+<pre><code class="lang-html">&lt;label&gt;
+  &lt;input type=&quot;checkbox&quot; checked&gt;
+  &lt;span class=&quot;checkable&quot;&gt;Uncheck me&lt;/span&gt;
+&lt;/label&gt;
+</code></pre>
+<h3 id="usage">Usage</h3>
+<p>This plugin, while experimental in the past, is mature now. Use a normal checkbox followed by any other element with the class <code>checkable</code>. The element that follows the checkbox will receive the pseudo classes so it should be able to do so. We recommend a <code>&lt;span&gt;</code> or <code>&lt;label&gt;</code>. Here we use the label around them for making the <code>&lt;input&gt;</code> change state when you click on this folowing element.</p>
+<pre><code class="lang-html">&lt;label&gt;
+  &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;span class=&quot;checkable&quot;&gt;Checkbox text&lt;/span&gt;
+&lt;/label&gt;
+</code></pre>
+<p>But you can also use a label and reference the original input:</p>
+<pre><code class="lang-html">&lt;input id=&quot;checkboxdemo&quot; type=&quot;checkbox&quot;&gt;
+&lt;label for=&quot;checkboxdemo&quot; class=&quot;checkable&quot;&gt;Checkbox text&lt;/label&gt;
+</code></pre>
+<h3 id="javascript">Javascript</h3>
+<p>You do not need javascript since we are using the native elements and not setting <code>display: none</code> purposefully. However, you can still use javascript as normal to retrieve the checked elements.</p>
+<p><form>
   <label>
-    <input type="checkbox">
-    <span class="toggle button success">Toggle</span>
+    <input class="tos" type="checkbox" />
+    <span class="checkable">Accept TOS</span>
   </label>
-  <a class="button" disabled>Disabled</a>
-  <a class="pseudo button">Pseudo</a>
-</p></div></div></div><div class="card visual newplugin"><div class="row"><div class="content"><h2>Card<span class="installed"></span></h2><div class="affected">.card</div><p>A self-contained, independent element. It works great with others of its kind.</p><footer><a href="/plugins/card" class="button icon-file-code">Docs</a><span class="extra"><a href="/test#card" class="pseudo button icon-help-circled">Test</a> <a href="https://github.com/picnicss/picnic/tree/master/plugins/card" class="pseudo button icon-g">Code</a></span></footer></div><div class="display"><div class="row">
-  <div>
-    <article class="card">
-      <img src="/img/forest.jpg">
-      <footer>
-        <p>A quiet forest</p>
-        <button>Like</button>
-        <button class="dangerous">Unlike</button>
-      </footer>
-    </article>
-  </div>
-  <div>
-    <article class="card">
-      <img src="/img/lake.jpg">
-      <footer>
-        <p>The Albufera</p>
-        <button>Like</button>
-        <button class="dangerous">Unlike</button>
-      </footer>
-    </article>
-  </div>
-</div></div></div></div><div class="card visual newplugin"><div class="row"><div class="content"><h2>Checkbox<span class="installed"></span></h2><div class="affected">[type=checkbox]</div><p>The classical checkbox revisited for bigger and coherent shape.</p><footer><a href="/plugins/checkbox" class="button icon-file-code">Docs</a><span class="extra"><a href="/test#checkbox" class="pseudo button icon-help-circled">Test</a> <a href="https://github.com/picnicss/picnic/tree/master/plugins/checkbox" class="pseudo button icon-g">Code</a></span></footer></div><div class="display"><label class='checkbox'>
-	<input type='checkbox'>
-	<span class="checkable">Check me out (;</span>
-</label><br>
-<label class='checkbox'>
-	<input type='checkbox' checked>
-	<span class="checkable">Uncheck me</span>
-</label></div></div></div><div class="card visual newplugin"><div class="row"><div class="content"><h2>Dropimage<span class="installed"><span title="This plugin requires some javascript" class="label error">JS</span></span></h2><div class="affected">.dropimage</div><p>Allows you to click the element or drop an image on it to upload the image and display a preview.</p><footer><a href="/plugins/dropimage" class="button icon-file-code">Docs</a><span class="extra"><a href="/test#dropimage" class="pseudo button icon-help-circled">Test</a> <a href="https://github.com/picnicss/picnic/tree/master/plugins/dropimage" class="pseudo button icon-g">Code</a></span></footer></div><div class="display"><div class="row">
-  <div>
-    <label class="dropimage">
-      <input name="filea" title="Drop image or click me" type="file">
-    </label>
-  </div>
-  <div>
-    <label class="dropimage">
-      <input name="fileb" title="Drop image or click me" type="file">
-    </label>
-  </div>
-</div>
-
+  <button>Send</button>
+</form></p>
 <script>
-  window.onload = function(){
-    [].forEach.call(document.querySelectorAll('.dropimage'), function(img){
-      img.onchange = function(e){
-        var inputfile = this, reader = new FileReader();
-        reader.onloadend = function(){
-          inputfile.style['background-image'] = 'url('+reader.result+')';
-        }
-        reader.readAsDataURL(e.target.files[0]);
-      }
-    });
-  };
+  // Pure javascript
+  document.querySelector('form').onsubmit = function(e){
+    e.preventDefault();
+    alert(document.querySelector('.tos').checked);
+  }
 </script>
-</div></div></div><div class="card visual newplugin"><div class="row"><div class="content"><h2>Grids<span class="installed"></span></h2><div class="affected">.row</div><p></p><footer><a href="/plugins/grids" class="button icon-file-code">Docs</a><span class="extra"><a href="/test#grids" class="pseudo button icon-help-circled">Test</a> <a href="https://github.com/picnicss/picnic/tree/master/plugins/grids" class="pseudo button icon-g">Code</a></span></footer></div><div class="display"><div class="row demo">
-	<div>[half]</div>
-	<div>[half]</div>
-</div>
 
-<div class="row demo">
-	<div>[third]</div>
-	<div>[third]</div>
-	<div>[third]</div>
-</div>
 
-<div class="row demo">
-  <div>[fourth]</div>
-  <div>[fourth]</div>
-  <div>[fourth]</div>
-  <div>[fourth]</div>
-</div>
+<pre><code class="lang-js">// Pure javascript
+document.querySelector(&#39;form&#39;).onsubmit = function(e){
+  e.preventDefault();
+  alert(document.querySelector(&#39;input.tos&#39;).checked);
+}
 
-<div class="row demo">
-  <div>[fifth]</div>
-  <div>[fifth]</div>
-  <div>[fifth]</div>
-  <div>[fifth]</div>
-  <div>[fifth]</div>
-</div></div></div></div><div class="card visual newplugin"><div class="row"><div class="content"><h2>Input and textarea<span class="installed"></span></h2><div class="affected">input, textarea</div><p></p><footer><a href="/plugins/input" class="button icon-file-code">Docs</a><span class="extra"><a href="/test#input" class="pseudo button icon-help-circled">Test</a> <a href="https://github.com/picnicss/picnic/tree/master/plugins/input" class="pseudo button icon-g">Code</a></span></footer></div><div class="display"><div class="row">
-  <div>
-    <input placeholder="Name" />
-  </div>
-  <div>
-    <input type="number" placeholder="Ammount" />
-  </div>
-</div>
-<div class="row">
-  <div>
-    <input type="email" placeholder="Email" />
-  </div>
-  <div>
-    <input type="password" placeholder="Password" />
-  </div>
-</div>
-<div class="row">
-  <textarea placeholder="Biography"></textarea>
-</div>
-</div></div></div><div class="card visual newplugin"><div class="row"><div class="content"><h2>Label<span class="installed"></span></h2><div class="affected">.label</div><p>An element to display some short relevant information</p><footer><a href="/plugins/label" class="button icon-file-code">Docs</a><span class="extra"><a href="/test#label" class="pseudo button icon-help-circled">Test</a> <a href="https://github.com/picnicss/picnic/tree/master/plugins/label" class="pseudo button icon-g">Code</a></span></footer></div><div class="display"><h1>h1 is important
-  <span class="label">Normal</span>
-</h1>
-<h2>h2 is important too
-  <span class="label success">Success</span>
-</h2>
-<h3>Is h3 important?
-  <span class="label warning">Warning</span>
-</h3>
-<h4>h4 is not so important
-  <span class="label error">Error</span>
-</h4>
-<p>p is normal text
-  <span class="label">Normal</span>
-</p>
-</div></div></div><div class="card visual newplugin"><div class="row"><div class="content"><h2>Modal<span class="installed"></span></h2><div class="affected">.modal</div><p>A pop-up like element that displays important information and focuses user's attention on it.</p><footer><a href="/plugins/modal" class="button icon-file-code">Docs</a><span class="extra"><a href="/test#modal" class="pseudo button icon-help-circled">Test</a> <a href="https://github.com/picnicss/picnic/tree/master/plugins/modal" class="pseudo button icon-g">Code</a></span></footer></div><div class="display"><label for="modal_1" class="button">
-Show modal
-</label>
+// jQuery
+$(&quot;form&quot;).on(&#39;submit&#39;, function(e){
+  e.preventDefault();
+  alert($(&#39;input.tos&#39;).is(&#39;:checked&#39;));
+});
+</code></pre>
+<h2 id="drop-image">Drop image</h2>
+<p>Allows you to add a file input element that can receive an image drop and clicks with native elements. However, it needs some javascript to show the dropped image:</p>
+<pre><code class="lang-html">&lt;label class=&quot;dropimage&quot;&gt;
+  &lt;input title=&quot;Drop image or click me&quot; type=&quot;file&quot;&gt;
+&lt;/label&gt;
+</code></pre>
+<h3 id="javascript">Javascript</h3>
+<p>This is the javascript you need for multiple elements:</p>
+<pre><code class="lang-js">window.onload = function(){
+  [].forEach.call(document.querySelectorAll(&#39;.dropimage&#39;), function(img){
+    img.onchange = function(e){
+      var inputfile = this, reader = new FileReader();
+      reader.onloadend = function(){
+        inputfile.style[&#39;background-image&#39;] = &#39;url(&#39;+reader.result+&#39;)&#39;;
+      }
+      reader.readAsDataURL(e.target.files[0]);
+    }
+  });
+};
+</code></pre>
+<h3 id="hack-it">Hack it</h3>
+<p>Do you want round pictures? No problem, just do this:</p>
+<pre><code class="lang-css">.profile {
+  border-radius: 50%;     /* Make it a circle */
+  padding-bottom: 100%;   /* 100% height (ratio 1) */
+}
+</code></pre>
+<p>To get this:</p>
+<pre><code class="lang-html">&lt;label class=&quot;dropimage profile&quot;&gt;
+  &lt;input name=&quot;filea&quot; title=&quot;Drop image or click me&quot; type=&quot;file&quot;&gt;
+&lt;/label&gt;
+</code></pre>
+<p>Make it smaller</p>
+<pre><code class="lang-css">.miniprofile {
+  border-radius: 50%;    /* Make it a circle */
+  margin: 0 auto;        /* Center horizontally */
+  width: 60%;            /* 60% width */
+  padding-bottom: 60%;   /* 60% height */
+}
+</code></pre>
+<pre><code class="lang-html">&lt;label class=&quot;dropimage miniprofile&quot;&gt;
+  &lt;input name=&quot;filea&quot; title=&quot;Drop image or click me&quot; type=&quot;file&quot;&gt;
+&lt;/label&gt;
+</code></pre>
+<h2 id="grids">Grids</h2>
+<p>A simple and responsive grid based on <a href="http://chrisnager.github.io/ungrid/">ungrid</a>.
+Note: the class <code>.demo</code> is added for the fancy colors.</p>
+<h3 id="evenly-stacked-grids">Evenly stacked grids</h3>
+<p>To display few grids with the same width, just add as many grid elements as you want as children of <code>.row</code>:</p>
+<pre><code class="lang-html">&lt;div class=&quot;row demo&quot;&gt;
+  &lt;div&gt;[1]&lt;/div&gt;
+&lt;/div&gt;
 
-<div class="modal">
-  <input id="modal_1" type="checkbox" />
-  <label for="modal_1" class="overlay"></label>
-  <article>
-    <header>
-      <h3>Great offer</h3>
-      <label for="modal_1" class="close">&times;</label>
-    </header>
-    <section class="content">
+&lt;div class=&quot;row demo&quot;&gt;
+  &lt;div&gt;[2]&lt;/div&gt;&lt;div&gt;[2]&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row demo&quot;&gt;
+  &lt;div&gt;[3]&lt;/div&gt;&lt;div&gt;[3]&lt;/div&gt;&lt;div&gt;[3]&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row demo&quot;&gt;
+  &lt;div&gt;[4]&lt;/div&gt;&lt;div&gt;[4]&lt;/div&gt;&lt;div&gt;[4]&lt;/div&gt;&lt;div&gt;[4]&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="grid-classes">Grid classes</h3>
+<p>More fine-grain control over grids</p>
+<pre><code class="lang-html">&lt;div class=&quot;row demo&quot;&gt;
+  &lt;div class=&quot;half&quot;&gt;.half&lt;/div&gt; &lt;div&gt;[ ]&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row demo&quot;&gt;
+  &lt;div class=&quot;third&quot;&gt;.third&lt;/div&gt; &lt;div&gt;[ ]&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row demo&quot;&gt;
+  &lt;div class=&quot;fourth&quot;&gt;.fourth&lt;/div&gt; &lt;div&gt;[ ]&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row demo&quot;&gt;
+  &lt;div class=&quot;fifth&quot;&gt;.fifth&lt;/div&gt; &lt;div&gt;[ ]&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row demo&quot;&gt;
+  &lt;div class=&quot;two-fifth&quot;&gt;.two-fifth&lt;/div&gt; &lt;div&gt;[ ]&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row demo&quot;&gt;
+  &lt;div class=&quot;three-fifth&quot;&gt;.three-fifth&lt;/div&gt; &lt;div&gt;[ ]&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row demo&quot;&gt;
+  &lt;div class=&quot;two-third&quot;&gt;.two-third&lt;/div&gt; &lt;div&gt;[ ]&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row demo&quot;&gt;
+  &lt;div class=&quot;three-fourth&quot;&gt;.three-fourth&lt;/div&gt; &lt;div&gt;[ ]&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row demo&quot;&gt;
+  &lt;div class=&quot;four-fifth&quot;&gt;.four-fifth&lt;/div&gt; &lt;div&gt;[ ]&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="hack-it">Hack it</h3>
+<p>Combine a class with several cells for this distribution:</p>
+<pre><code class="lang-html">&lt;div class=&quot;row demo&quot;&gt;
+  &lt;div class=&quot;half&quot;&gt;.half&lt;/div&gt; &lt;div&gt;[ ]&lt;/div&gt; &lt;div&gt;[ ]&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Set your own width for your grid in any unit you want:</p>
+<pre><code class="lang-css">.myCoolGrid {
+  width: 213px;
+}
+</code></pre>
+<pre><code class="lang-html">&lt;div class=&quot;row demo&quot;&gt;
+  &lt;div class=&quot;.myCoolGrid&quot;&gt;.myCoolGrid&lt;/div&gt;&lt;div&gt;[ ]&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="input">Input</h2>
+<p>Simple (or not) text form elements:</p>
+<pre><code class="lang-html">&lt;input class=&quot;demo&quot; placeholder=&quot;Input&quot;&gt;
+&lt;textarea placeholder=&quot;Textarea&quot;&gt;&lt;/textarea&gt;
+</code></pre>
+<style>
+input.demo {
+  margin-bottom: .3em;
+}
+</style>
+
+
+<h2 id="label">Label</h2>
+<p>An element to display some short relevant information on the side of other element</p>
+<pre><code class="lang-html">&lt;h1&gt;header 1 &lt;span class=&quot;label&quot;&gt;Normal&lt;/span&gt;&lt;/h1&gt;
+&lt;h2&gt;header 2 &lt;span class=&quot;label success&quot;&gt;Success&lt;/span&gt;&lt;/h2&gt;
+&lt;h3&gt;header 3 &lt;span class=&quot;label warning&quot;&gt;Warning&lt;/span&gt;&lt;/h3&gt;
+&lt;h4&gt;header 4 &lt;span class=&quot;label error&quot;&gt;Error&lt;/span&gt;&lt;/h4&gt;
+&lt;p&gt;paragraph &lt;span class=&quot;label&quot;&gt;Normal&lt;/span&gt;&lt;/p&gt;
+</code></pre>
+<h2 id="modal">Modal</h2>
+<p>The modal is pure CSS, which makes the html quite ugly actually. However it does work. To try it, press the button:</p>
+<pre><code class="lang-html">&lt;label for=&quot;modal_1&quot; class=&quot;button&quot;&gt;Show modal&lt;/label&gt;
+
+&lt;div class=&quot;modal&quot;&gt;
+  &lt;input id=&quot;modal_1&quot; type=&quot;checkbox&quot; /&gt;
+  &lt;label for=&quot;modal_1&quot; class=&quot;overlay&quot;&gt;&lt;/label&gt;
+  &lt;article&gt;
+    &lt;header&gt;
+      &lt;h3&gt;Great offer&lt;/h3&gt;
+      &lt;label for=&quot;modal_1&quot; class=&quot;close&quot;&gt;&amp;times;&lt;/label&gt;
+    &lt;/header&gt;
+    &lt;section class=&quot;content&quot;&gt;
       We have a special offer for you. I am sure you will love it! However this does look spammy...
-    </section>
-    <footer>
-      <a class="button" href="#">See offer</a>
-      <label for="modal_1" class="button dangerous">
+    &lt;/section&gt;
+    &lt;footer&gt;
+      &lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;See offer&lt;/a&gt;
+      &lt;label for=&quot;modal_1&quot; class=&quot;button dangerous&quot;&gt;
         Cancel
-      </label>
-    </footer>
-  </article>
-</div></div></div></div><div class="card visual newplugin"><div class="row"><div class="content"><h2>Navigation bar<span class="installed"></span></h2><div class="affected">nav</div><p>Gives access to common links of the website in an easy way from the top of the page.</p><footer><a href="/plugins/nav" class="button icon-file-code">Docs</a><span class="extra"><a href="/test#nav" class="pseudo button icon-help-circled">Test</a> <a href="https://github.com/picnicss/picnic/tree/master/plugins/nav" class="pseudo button icon-g">Code</a></span></footer></div><div class="display"><nav style="position: relative; z-index: 9">
+      &lt;/label&gt;
+    &lt;/footer&gt;
+  &lt;/article&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="javascript">Javascript</h3>
+<p>As always, there is <strong>no javascript</strong>. However, a little bit of javascript could enhance the experience allowing to close the modal by pressing <code>ESC</code>.</p>
+<script>
+document.onkeydown = function(e){
+  if (e.keyCode == 27) {
+    var mods = document.querySelectorAll('.modal > [type=checkbox]');
+    [].forEach.call(mods, function(mod){ mod.checked = false; });
+  }
+}
+</script>
+
+<pre><code class="lang-js">document.onkeydown = function(e){
+  if (e.keyCode == 27) {
+    var mods = document.querySelectorAll(&#39;.modal &gt; [type=checkbox]&#39;);
+    [].forEach.call(mods, function(mod){ mod.checked = false; });
+  }
+}
+</code></pre>
+<h2 id="nav">Nav</h2>
+<style>
+nav.demo {
+  position: relative;
+  z-index: 9;
+  padding: 0 .6em;
+}
+</style>
+
+<p>A responsive, pure css navigation menu:</p>
+<blockquote>
+<p>On these smaller versions it might have small glitches. Please see the top, page-wide nav to see the actual effect.  </p>
+</blockquote>
+<nav class="demo">
   <a href="#" class="brand">
-    <img class="logo" src="/img/basket.png" />
+    <img class="logo" src="/web/img/basket.png" />
     <span>Picnic CSS</span>
   </a>
-  
+
   <!-- responsive-->
   <input id="bmenub" type="checkbox" class="show">
-  <label for="bmenu" class="burger pseudo button toggle">menu</label>
+  <label for="bmenub" class="burger pseudo button">menu</label>
 
   <div class="menu">
     <a href="#" class="pseudo button icon-picture">Demo</a>
     <a href="#" class="button icon-puzzle">Plugins</a>
   </div>
-</nav></div></div></div><div class="card visual newplugin"><div class="row"><div class="content"><h2>Radiobutton<span class="installed"></span></h2><div class="affected">[type=radio]</div><p>Allows to choose one element from several of them.</p><footer><a href="/plugins/radio" class="button icon-file-code">Docs</a><span class="extra"><a href="/test#radio" class="pseudo button icon-help-circled">Test</a> <a href="https://github.com/picnicss/picnic/tree/master/plugins/radio" class="pseudo button icon-g">Code</a></span></footer></div><div class="display"><p>
-  <label>
-    <input type='radio' name="radiodemo">
-    <span class="checkable">Select me</span>
-  </label>
-</p>
-<p>
-  <label>
-    <input checked type='radio' name="radiodemo">
-    <span class="checkable">Or me</span>
-  </label>
-</p></div></div></div><div class="card visual newplugin"><div class="row"><div class="content"><h2>Select<span class="installed"></span></h2><div class="affected">.select</div><p>A typical dropdown, now enhanced with a custom down arrow and coherent style.</p><footer><a href="/plugins/select" class="button icon-file-code">Docs</a><span class="extra"><a href="/test#select" class="pseudo button icon-help-circled">Test</a> <a href="https://github.com/picnicss/picnic/tree/master/plugins/select" class="pseudo button icon-g">Code</a></span></footer></div><div class="display"><select>
-  <option>Select an option</option>
-  <option>Good option</option>
-  <option>Nice option</option>
-  <option>Cheap option</option>
-</select></div></div></div><div class="card visual newplugin"><div class="row"><div class="content"><h2>Stack<span class="installed"></span></h2><div class="affected">.stack</div><p>Allow to set one element on top of each other and gives them a sense of unity.</p><footer><a href="/plugins/stack" class="button icon-file-code">Docs</a><span class="extra"><a href="/test#stack" class="pseudo button icon-help-circled">Test</a> <a href="https://github.com/picnicss/picnic/tree/master/plugins/stack" class="pseudo button icon-g">Code</a></span></footer></div><div class="display"><div class="row">
-  <div>
-    <label class="stack">
-      <input type="radio" name="stack" />
-      <span class="button toggle">
-        <span class="icon-picture"></span>
-        Home
-      </span>
-    </label>
-    <label class="stack">
-      <input type="radio" name="stack" />
-      <span class="button toggle">
-        <span class="icon-puzzle"></span>
-        Plugins
-      </span>
-    </label>
-    <label class="stack">
-      <input type="radio" name="stack" />
-      <span class="button toggle">
-        <span class="icon-file-code"></span>
-        Documentation
-      </span>
-    </label>
-    <label class="stack">
-      <input type="radio" name="stack" />
-      <span class="button toggle">
-        <span class="icon-help-circled"></span>
-        Test
-      </span>
-    </label>
-  </div>
-  <div>
-    <input class="stack" placeholder="Name" />
-    <input class="stack" type="email" placeholder="Email" />
-    <input class="stack" type="password" placeholder="Password" />
-    <button class="stack icon-paper-plane">
-        Send
-    </button>
-  </div>
-</div></div></div></div><div class="card visual newplugin"><div class="row"><div class="content"><h2>Table<span class="installed"></span></h2><div class="affected">table</div><p></p><footer><a href="/plugins/table" class="button icon-file-code">Docs</a><span class="extra"><a href="/test#table" class="pseudo button icon-help-circled">Test</a> <a href="https://github.com/picnicss/picnic/tree/master/plugins/table" class="pseudo button icon-g">Code</a></span></footer></div><div class="display"><table class="primary">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>City</th>
-      <th>Age</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Francisco</td>
-      <td>Valencia, Spain</td>
-      <td>23</td>
-    </tr>
-    <tr>
-      <td>Eve</td>
-      <td>San Francisco, USA</td>
-      <td>22</td>
-    </tr>
-    <tr>
-      <td>Martin</td>
-      <td>New York, USA</td>
-      <td>45</td>
-    </tr>
-    <tr>
-      <td>Sarah</td>
-      <td>London, UK</td>
-      <td>25</td>
-    </tr>
-  </tbody>
-</table></div></div></div><div class="card visual newplugin"><div class="row"><div class="content"><h2>Tabs<span class="installed"></span></h2><div class="affected">.tabs</div><p>Tab system for webpage</p><footer><a href="/plugins/tabs" class="button icon-file-code">Docs</a><span class="extra"><a href="/test#tabs" class="pseudo button icon-help-circled">Test</a> <a href="https://github.com/picnicss/picnic/tree/master/plugins/tabs" class="pseudo button icon-g">Code</a></span></footer></div><div class="display"><div class="tabs three" style="text-align: center;">
-  <input id='tab-1' type='radio' name='tabgroup' checked />
-  <label class="pseudo button toggle" for="tab-1">1</label>
-  <span> / </span>
-  <input id='tab-2' type='radio' name='tabgroup'>
-  <label class="pseudo button toggle" for="tab-2">2</label>
-  <span> / </span>
-  <input id='tab-3' type='radio' name='tabgroup'>
-  <label class="pseudo button toggle" for="tab-3">3</label>
-  <div class="row">
-    <div class="tab">
-      <div class='card' style="margin: 10px;">
-        <header>
-          <h2>First tab</h2>
-        </header>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-      </div>
-    </div>
+</nav>
 
-    <div class="tab">
-      <div class='card' style="margin: 10px;">
-        <header>
-          <h2>Second tab</h2>
-        </header>
-        <p>
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-      </div>
-    </div>
+<pre><code>&lt;nav class=&quot;demo&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;brand&quot;&gt;
+    &lt;img class=&quot;logo&quot; src=&quot;/web/img/basket.png&quot; /&gt;
+    &lt;span&gt;Picnic CSS&lt;/span&gt;
+  &lt;/a&gt;
 
-    <div class="tab">
-      <div class='card' style="margin: 10px;">
-        <header>
-          <h2>Third tab</h2>
-        </header>
-        <p>
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
-    </div>
+  &lt;!-- responsive--&gt;
+  &lt;input id=&quot;bmenub&quot; type=&quot;checkbox&quot; class=&quot;show&quot;&gt;
+  &lt;label for=&quot;bmenub&quot; class=&quot;burger pseudo button&quot;&gt;menu&lt;/label&gt;
+
+  &lt;div class=&quot;menu&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;pseudo button icon-picture&quot;&gt;Demo&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;button icon-puzzle&quot;&gt;Plugins&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+</code></pre><h3 id="responsive">Responsive</h3>
+<p>The nav is responsive by default. The text inside the <code>&lt;label&gt;</code> can be changed for the following characters for a different effect (<a href="https://css-tricks.com/three-line-menu-navicon/">source</a>):</p>
+<ul>
+<li>Identical to <code>&amp;#8801;</code> (safe on mobile): <label class="pseudo button">&#8801;</label></li>
+<li>Trigram for heaven <code>&amp;#9776;</code>: <label class="pseudo button">&#9776;</label></li>
+<li>Any other: <i class="pseudo button icon-cog"></i></li>
+</ul>
+<h3 id="different-height-and-big-logo">Different height and big logo</h3>
+<p>Thanks to a <a href="http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/">vertical-align trick</a>, you can set it up to any height you want:</p>
+<pre><code class="lang-css">nav.imponent {
+  padding: 2em 0;
+}
+
+.imponent .logo {
+  height: 3em;
+}
+</code></pre>
+<pre><code class="lang-html">&lt;nav class=&quot;demo imponent&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;brand&quot;&gt;
+    &lt;img class=&quot;logo&quot; src=&quot;/web/img/basket.png&quot; /&gt;
+    &lt;span&gt;Picnic CSS&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/nav&gt;
+</code></pre>
+<h3 id="form-elements">Form elements</h3>
+<p>Just get anything you want inside the nav, most things should worl</p>
+<nav class="demo">
+  <a href="#" class="brand">Picnic CSS</a>
+
+  <!-- responsive-->
+  <input id="bmenug" type="checkbox" class="show">
+  <label for="bmenug" class="burger pseudo button">&#8801;</label>
+
+  <div class="menu">
+    <input placeholder="Search plugins" />
   </div>
-</div></div></div></div><div class="card visual newplugin"><div class="row"><div class="content"><h2>Tooltip<span class="installed"></span></h2><div class="affected">[data-tooltip]</div><p>An element that displays extra information when you put your mouse on it.</p><footer><a href="/plugins/tooltip" class="button icon-file-code">Docs</a><span class="extra"><a href="/test#tooltip" class="pseudo button icon-help-circled">Test</a> <a href="https://github.com/picnicss/picnic/tree/master/plugins/tooltip" class="pseudo button icon-g">Code</a></span></footer></div><div class="display"><button data-tooltip="This is a great tooltip" class="tooltip-left">
-  Left
-</button>
-<button data-tooltip="This is a great tooltip">
-  Bottom (default)
-</button>
-<button data-tooltip="This is a great tooltip" class="tooltip-top">
-  Top
-</button>
-<button data-tooltip="This is a great tooltip" class="tooltip-right">
-  Right
-</button></div></div></div></main><script>window.onload = function(){
+</nav>
+
+<nav class="demo">
+  <a href="#" class="brand">Picnic CSS</a>
+
+  <!-- responsive-->
+  <input id="bmenug" type="checkbox" class="show">
+  <label for="bmenug" class="burger pseudo button">&#8801;</label>
+
+  <div class="menu">
+    <select>
+      <option>Choose an option</option>
+      <option>Option 1</option>
+      <option>Option 2</option>
+    </select>
+  </div>
+</nav>
+
+
+
+
+
+
+<h2 id="radio-button">Radio button</h2>
+<p>A simple way of using radiobuttons</p>
+<pre><code class="lang-html">&lt;label&gt;
+  &lt;input type=&#39;radio&#39; name=&quot;radiodemo&quot;&gt;
+  &lt;span class=&quot;checkable&quot;&gt;Select me&lt;/span&gt;
+&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;input id=&quot;radiodemo&quot; checked type=&#39;radio&#39; name=&quot;radiodemo&quot;&gt;
+&lt;label for=&quot;radiodemo&quot; class=&quot;checkable&quot;&gt;Or me&lt;/span&gt;
+</code></pre>
+<h2 id="select">Select</h2>
+<pre><code class="lang-html">&lt;select&gt;
+  &lt;option&gt;Select an option&lt;/option&gt;
+  &lt;option&gt;Good option&lt;/option&gt;
+  &lt;option&gt;Nice option&lt;/option&gt;
+  &lt;option&gt;Cheap option&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+<h2 id="stack">Stack</h2>
+<p>A vertical group of different elements.</p>
+<pre><code class="lang-html">&lt;span class=&quot;button stack icon-picture&quot;&gt;Home&lt;/span&gt;
+&lt;span class=&quot;button stack icon-puzzle&quot;&gt;Plugins&lt;/span&gt;
+&lt;span class=&quot;button stack icon-file-code&quot;&gt;Documentation&lt;/span&gt;
+&lt;span class=&quot;button stack icon-help-circled&quot;&gt;Test&lt;/span&gt;
+</code></pre>
+<p>They can also toggle:</p>
+<pre><code class="lang-html">&lt;div&gt;
+  &lt;label class=&quot;stack&quot;&gt;
+    &lt;input name=&quot;stack&quot; type=&quot;radio&quot;&gt;
+    &lt;span class=&quot;button toggle&quot;&gt;
+      &lt;span class=&quot;icon-picture&quot;&gt;&lt;/span&gt; Home
+    &lt;/span&gt;
+  &lt;/label&gt;
+  &lt;label class=&quot;stack&quot;&gt;
+    &lt;input name=&quot;stack&quot; type=&quot;radio&quot;&gt;
+    &lt;span class=&quot;button toggle&quot;&gt;
+      &lt;span class=&quot;icon-puzzle&quot;&gt;&lt;/span&gt; Plugins
+    &lt;/span&gt;
+  &lt;/label&gt;
+  &lt;label class=&quot;stack&quot;&gt;
+    &lt;input name=&quot;stack&quot; type=&quot;radio&quot;&gt;
+    &lt;span class=&quot;button toggle&quot;&gt;
+      &lt;span class=&quot;icon-file-code&quot;&gt;&lt;/span&gt; Documentation
+    &lt;/span&gt;
+  &lt;/label&gt;
+  &lt;label class=&quot;stack&quot;&gt;
+    &lt;input name=&quot;stack&quot; type=&quot;radio&quot;&gt;
+    &lt;span class=&quot;button toggle&quot;&gt;
+      &lt;span class=&quot;icon-help-circled&quot;&gt;&lt;/span&gt; Test
+    &lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Stack different kind of elements</p>
+<pre><code class="lang-html">&lt;div&gt;
+  &lt;img class=&quot;stack&quot; src=&quot;/web/img/forest.jpg&quot;&gt;
+  &lt;a class=&quot;button stack&quot;&gt;Full size&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+<p>A small form</p>
+<pre><code class="lang-html">&lt;div&gt;
+  &lt;input class=&quot;stack&quot; placeholder=&quot;Name&quot; /&gt;
+  &lt;input class=&quot;stack&quot; placeholder=&quot;Email&quot; /&gt;
+  &lt;button class=&quot;stack icon-paper-plane&quot;&gt;
+      Send
+  &lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Pseudo buttons:</p>
+<pre><code class="lang-html">&lt;a class=&quot;stack pseudo button&quot;&gt;First&lt;/a&gt;
+&lt;a class=&quot;stack pseudo button&quot;&gt;Second&lt;/a&gt;
+&lt;a class=&quot;stack pseudo button&quot;&gt;Third&lt;/a&gt;
+</code></pre>
+<h3 id="forms">Forms</h3>
+<p>Create nice and packed forms. <a href="http://jsfiddle.net/ddmv3dsr/4/">jsfiddle</a></p>
+<pre><code class="lang-html">&lt;div&gt;
+  &lt;input class=&quot;stack&quot; placeholder=&quot;First name&quot; /&gt;
+  &lt;input class=&quot;stack&quot; placeholder=&quot;Last name&quot; /&gt;
+  &lt;input class=&quot;stack&quot; placeholder=&quot;Email&quot; /&gt;
+&lt;/div&gt;&lt;br&gt;
+
+&lt;div&gt;
+  &lt;input class=&quot;stack&quot; placeholder=&quot;Password&quot; /&gt;
+  &lt;input class=&quot;stack&quot; placeholder=&quot;Repeat password&quot; /&gt;
+  &lt;textarea class=&quot;stack&quot; placeholder=&quot;Biography&quot;&gt;&lt;/textarea&gt;
+  &lt;button class=&quot;stack icon-paper-plane&quot;&gt;Send&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+</article></section></main><script src="https://cdn.jsdelivr.net/umbrella/1/umbrella.min.js"></script><script>u('h2[id]').each(function(node){
+  u(node).attr('id', u(node).attr('id').replace(/-/g, ''));
+});
+
+u('article h2').each(function(node){
+  var href = 'href="#' + u(node).attr('id') + '" ';
+  var classes = 'class="pseudo button stack" ';
+  var html = u(node).html();
+  u('aside').append('<a ' + classes + href + '>' + html + '</a>');
+});
+
+u('article p').addClass('two-third');
+
+u('pre .lang-html').parent().each(function(node){
+  var child = u(node).find('.lang-html').html();
+  var html = u(document.createElement('div')).html(child).first().textContent;
+  var pre = node.innerHTML.replace(/\&lt\;br\&gt\;/g, '');
+  u(node).before('<div class="row"><div><pre>' + pre + '</pre></div><div class="third">' + html + '</div></div>');
+  u(node).remove();
+});
+
+u('pre .lang-css').parent().each(function(node){
+  var css = u(node).find('.lang-css').html();
+  u(node).before('<div class="row"><div><pre>' + node.innerHTML + '</pre></div><div class="third"><style>' + css + '</style></div></div>');
+  u(node).remove();
+});</script><script>window.onload = function(){
 
   // Dropimage handler
   [].forEach.call(document.querySelectorAll('.dropimage'), function(img){
@@ -313,6 +549,12 @@ Show modal
       }
     });
   };
+</script><script>/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript */
+var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(\w+)\b/i,t=_self.Prism={util:{encode:function(e){return e instanceof n?new n(e.type,t.util.encode(e.content),e.alias):"Array"===t.util.type(e)?e.map(t.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},clone:function(e){var n=t.util.type(e);switch(n){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=t.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return t.util.clone(e)})}return e}},languages:{extend:function(e,n){var a=t.util.clone(t.languages[e]);for(var r in n)a[r]=n[r];return a},insertBefore:function(e,n,a,r){r=r||t.languages;var l=r[e];if(2==arguments.length){a=arguments[1];for(var i in a)a.hasOwnProperty(i)&&(l[i]=a[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==n)for(var i in a)a.hasOwnProperty(i)&&(o[i]=a[i]);o[s]=l[s]}return t.languages.DFS(t.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,n,a,r){r=r||{};for(var l in e)e.hasOwnProperty(l)&&(n.call(e,l,e[l],a||l),"Object"!==t.util.type(e[l])||r[e[l]]?"Array"!==t.util.type(e[l])||r[e[l]]||(r[e[l]]=!0,t.languages.DFS(e[l],n,l,r)):(r[e[l]]=!0,t.languages.DFS(e[l],n,null,r)))}},plugins:{},highlightAll:function(e,n){for(var a,r=document.querySelectorAll('code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'),l=0;a=r[l++];)t.highlightElement(a,e===!0,n)},highlightElement:function(n,a,r){for(var l,i,o=n;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1],i=t.languages[l]),n.className=n.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=n.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var s=n.textContent,u={element:n,language:l,grammar:i,code:s};if(!s||!i)return t.hooks.run("complete",u),void 0;if(t.hooks.run("before-highlight",u),a&&_self.Worker){var g=new Worker(t.filename);g.onmessage=function(e){u.highlightedCode=e.data,t.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),t.hooks.run("after-highlight",u),t.hooks.run("complete",u)},g.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=t.highlight(u.code,u.grammar,u.language),t.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(n),t.hooks.run("after-highlight",u),t.hooks.run("complete",u)},highlight:function(e,a,r){var l=t.tokenize(e,a);return n.stringify(t.util.encode(l),r)},tokenize:function(e,n){var a=t.Token,r=[e],l=n.rest;if(l){for(var i in l)n[i]=l[i];delete n.rest}e:for(var i in n)if(n.hasOwnProperty(i)&&n[i]){var o=n[i];o="Array"===t.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],g=u.inside,c=!!u.lookbehind,f=0,h=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var d=r[p];if(r.length>e.length)break e;if(!(d instanceof a)){u.lastIndex=0;var m=u.exec(d);if(m){c&&(f=m[1].length);var y=m.index-1+f,m=m[0].slice(f),v=m.length,k=y+v,b=d.slice(0,y+1),w=d.slice(k+1),P=[p,1];b&&P.push(b);var A=new a(i,g?t.tokenize(m,g):m,h);P.push(A),w&&P.push(w),Array.prototype.splice.apply(r,P)}}}}}return r},hooks:{all:{},add:function(e,n){var a=t.hooks.all;a[e]=a[e]||[],a[e].push(n)},run:function(e,n){var a=t.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(n)}}},n=t.Token=function(e,t,n){this.type=e,this.content=t,this.alias=n};if(n.stringify=function(e,a,r){if("string"==typeof e)return e;if("Array"===t.util.type(e))return e.map(function(t){return n.stringify(t,a,e)}).join("");var l={type:e.type,content:n.stringify(e.content,a,r),tag:"span",classes:["token",e.type],attributes:{},language:a,parent:r};if("comment"==l.type&&(l.attributes.spellcheck="true"),e.alias){var i="Array"===t.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}t.hooks.run("wrap",l);var o="";for(var s in l.attributes)o+=(o?" ":"")+s+'="'+(l.attributes[s]||"")+'"';return"<"+l.tag+' class="'+l.classes.join(" ")+'" '+o+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var n=JSON.parse(e.data),a=n.language,r=n.code,l=n.immediateClose;_self.postMessage(t.highlight(r,t.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var a=document.getElementsByTagName("script");return a=a[a.length-1],a&&(t.filename=a.src,document.addEventListener&&!a.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",t.highlightAll)),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+Prism.languages.markup={comment:/<!--[\w\W]*?-->/,prolog:/<\?[\w\W]+?\?>/,doctype:/<!DOCTYPE[\w\W]+?>/,cdata:/<!\[CDATA\[[\w\W]*?]]>/i,tag:{pattern:/<\/?(?!\d)[^\s>\/=.$<]+(?:\s+[^\s>\/=]+(?:=(?:("|')(?:\\\1|\\?(?!\1)[\w\W])*\1|[^\s'">=]+))?)*\s*\/?>/i,inside:{tag:{pattern:/^<\/?[^\s>\/]+/i,inside:{punctuation:/^<\/?/,namespace:/^[^\s>\/:]+:/}},"attr-value":{pattern:/=(?:('|")[\w\W]*?(\1)|[^\s>]+)/i,inside:{punctuation:/[=>"']/}},punctuation:/\/?>/,"attr-name":{pattern:/[^\s>\/]+/,inside:{namespace:/^[^\s>\/:]+:/}}}},entity:/&#?[\da-z]{1,8};/i},Prism.hooks.add("wrap",function(a){"entity"===a.type&&(a.attributes.title=a.content.replace(/&amp;/,"&"))}),Prism.languages.xml=Prism.languages.markup,Prism.languages.html=Prism.languages.markup,Prism.languages.mathml=Prism.languages.markup,Prism.languages.svg=Prism.languages.markup;
+Prism.languages.css={comment:/\/\*[\w\W]*?\*\//,atrule:{pattern:/@[\w-]+?.*?(;|(?=\s*\{))/i,inside:{rule:/@[\w-]+/}},url:/url\((?:(["'])(\\(?:\r\n|[\w\W])|(?!\1)[^\\\r\n])*\1|.*?)\)/i,selector:/[^\{\}\s][^\{\};]*?(?=\s*\{)/,string:/("|')(\\(?:\r\n|[\w\W])|(?!\1)[^\\\r\n])*\1/,property:/(\b|\B)[\w-]+(?=\s*:)/i,important:/\B!important\b/i,"function":/[-a-z0-9]+(?=\()/i,punctuation:/[(){};:]/},Prism.languages.css.atrule.inside.rest=Prism.util.clone(Prism.languages.css),Prism.languages.markup&&(Prism.languages.insertBefore("markup","tag",{style:{pattern:/(<style[\w\W]*?>)[\w\W]*?(?=<\/style>)/i,lookbehind:!0,inside:Prism.languages.css,alias:"language-css"}}),Prism.languages.insertBefore("inside","attr-value",{"style-attr":{pattern:/\s*style=("|').*?\1/i,inside:{"attr-name":{pattern:/^\s*style/i,inside:Prism.languages.markup.tag.inside},punctuation:/^\s*=\s*['"]|['"]\s*$/,"attr-value":{pattern:/.+/i,inside:Prism.languages.css}},alias:"language-css"}},Prism.languages.markup.tag));
+Prism.languages.clike={comment:[{pattern:/(^|[^\\])\/\*[\w\W]*?\*\//,lookbehind:!0},{pattern:/(^|[^\\:])\/\/.*/,lookbehind:!0}],string:/(["'])(\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,"class-name":{pattern:/((?:\b(?:class|interface|extends|implements|trait|instanceof|new)\s+)|(?:catch\s+\())[a-z0-9_\.\\]+/i,lookbehind:!0,inside:{punctuation:/(\.|\\)/}},keyword:/\b(if|else|while|do|for|return|in|instanceof|function|new|try|throw|catch|finally|null|break|continue)\b/,"boolean":/\b(true|false)\b/,"function":/[a-z0-9_]+(?=\()/i,number:/\b-?(?:0x[\da-f]+|\d*\.?\d+(?:e[+-]?\d+)?)\b/i,operator:/--?|\+\+?|!=?=?|<=?|>=?|==?=?|&&?|\|\|?|\?|\*|\/|~|\^|%/,punctuation:/[{}[\];(),.:]/};
+Prism.languages.javascript=Prism.languages.extend("clike",{keyword:/\b(as|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|finally|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|var|void|while|with|yield)\b/,number:/\b-?(0x[\dA-Fa-f]+|0b[01]+|0o[0-7]+|\d*\.?\d+([Ee][+-]?\d+)?|NaN|Infinity)\b/,"function":/[_$a-zA-Z\xA0-\uFFFF][_$a-zA-Z0-9\xA0-\uFFFF]*(?=\()/i}),Prism.languages.insertBefore("javascript","keyword",{regex:{pattern:/(^|[^\/])\/(?!\/)(\[.+?]|\\.|[^\/\\\r\n])+\/[gimyu]{0,5}(?=\s*($|[\r\n,.;})]))/,lookbehind:!0}}),Prism.languages.insertBefore("javascript","class-name",{"template-string":{pattern:/`(?:\\`|\\?[^`])*`/,inside:{interpolation:{pattern:/\$\{[^}]+\}/,inside:{"interpolation-punctuation":{pattern:/^\$\{|\}$/,alias:"punctuation"},rest:Prism.languages.javascript}},string:/[\s\S]+/}}}),Prism.languages.markup&&Prism.languages.insertBefore("markup","tag",{script:{pattern:/(<script[\w\W]*?>)[\w\W]*?(?=<\/script>)/i,lookbehind:!0,inside:Prism.languages.javascript,alias:"language-javascript"}}),Prism.languages.js=Prism.languages.javascript;
 </script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
