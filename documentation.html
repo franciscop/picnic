@@ -186,9 +186,23 @@ $(&quot;form&quot;).on(&#39;submit&#39;, function(e){
 </code></pre>
 <h2 id="grids">Grids</h2>
 <blockquote>
-<p>Deprecation notice: the css code is deprecated from version 5.1 onward and it will be removed in 6.0.0. Only the SCSS code will be available then.</p>
+<p>Deprecation notice: the css code for the class <code>row</code> is deprecated from 5.1 onward and it will be removed in 6.0.0</p>
 </blockquote>
 <p>An easy and flexible grid system. There are few mixins and a base %grid that allows adding breakpoints in a breeze.</p>
+<pre><code class="lang-html">&lt;div class=&quot;grid two demo&quot;&gt;
+  &lt;div&gt;-&lt;/div&gt;&lt;div&gt;-&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;grid three demo&quot;&gt;
+  &lt;div&gt;-&lt;/div&gt;&lt;div&gt;-&lt;/div&gt;&lt;div&gt;-&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;grid four demo&quot;&gt;
+  &lt;div&gt;-&lt;/div&gt;&lt;div&gt;-&lt;/div&gt;&lt;div&gt;-&lt;/div&gt;&lt;div&gt;-&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;grid equal demo&quot;&gt;
+  &lt;div&gt;-&lt;/div&gt;&lt;div&gt;-&lt;/div&gt;&lt;div&gt;-&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="scss">SCSS</h3>
 <pre><code class="lang-css">.grid {
   @extend %grid;
   @include grid-break(40em, 50%);

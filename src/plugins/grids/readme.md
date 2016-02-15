@@ -1,9 +1,25 @@
 ## Grids
 
-> Deprecation notice: the css code is deprecated from version 5.1 onward and it will be removed in 6.0.0. Only the SCSS code will be available then.
+> Deprecation notice: the css code for the class `row` is deprecated from 5.1 onward and it will be removed in 6.0.0
 
 An easy and flexible grid system. There are few mixins and a base %grid that allows adding breakpoints in a breeze.
 
+```html
+<div class="grid two demo">
+  <div>-</div><div>-</div>
+</div>
+<div class="grid three demo">
+  <div>-</div><div>-</div><div>-</div>
+</div>
+<div class="grid four demo">
+  <div>-</div><div>-</div><div>-</div><div>-</div>
+</div>
+<div class="grid equal demo">
+  <div>-</div><div>-</div><div>-</div>
+</div>
+```
+
+### SCSS
 
 ```css
 .grid {
