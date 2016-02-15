@@ -45,7 +45,7 @@ function navScroll(){
   };
 window.onscroll = navScroll;
 navScroll();
-nav.classList.remove('loading');</script><script>window.onload = function(){
+setTimeout(function(){ nav.classList.remove('loading'); }, 10);</script><script>window.onload = function(){
 
   // Dropimage handler
   [].forEach.call(document.querySelectorAll('.dropimage'), function(img){
