@@ -12,9 +12,7 @@ There are many ways of using Picnic CSS in your projects. Here a brief introduct
 
 ### CDN - just give me the file
 
-Use [Picnic CSS in the CDN jsDelivr](http://www.jsdelivr.com/#!picnicss) for linking to the static file. Include the following line in your `<head>`:
-
-    <link href="//cdn.jsdelivr.net/picnicss/3.4.2/picnic.min.css" rel="stylesheet">
+Use [Picnic CSS in the CDN jsDelivr](http://www.jsdelivr.com/#!picnicss) for linking to the static file.
 
 
 ### Bower - to personalize Picnic
@@ -35,6 +33,24 @@ Then, to use it within your scss development cycle, just do:
 
 
 
+### NPM
+
+Just do
+
+```bash
+npm i -D picnic
+```
+
+To add it to your repository. Then you can include it straight from your css like:
+
+```css
+@import "../node_modules/picnic/releases/picnic.css";
+```
+
+Thanks to [chadoh](https://github.com/chadoh) for helping me in publishing it in NPM and for the instructions.
+
+
+
 ### Other ways
 
 You can always download the latest minimized version from github, clone the repository or download it.
@@ -42,10 +58,6 @@ You can always download the latest minimized version from github, clone the repo
 
 
 You can also [try it live in Codepen](http://codepen.io/FranciscoP/pen/ZGpzbL?editors=110).
-
-Alternatively:
-
-With bower: 
 
 Clone it: `git clone https://github.com/picnicss/picnic.git`
 
@@ -61,7 +73,7 @@ This setup works neatly for newly created projects or for pages that you have to
 
 ## Browser support IE9+
 
-Bug reports and fixes only for IE9+. With IE8 usage [dropping *fast*](http://ux.stackexchange.com/a/64361) and with IE9 and IE10 usage even below their older mate, it is time to start thinking about not supporting them anymore. However, bug fixes for IE9 will be accepted and everything is expected to run smooth down to it. For Chrome, Firefox, Opera and Safari up to 2 previous versions are expected to be working, and everything that is not is definitely a bug.
+Bug reports and fixes only for IE9+. With IE8 usage [dropping *fast*](http://ux.stackexchange.com/a/643.61) and with IE9 and IE10 usage even below their older mate, it is time to start thinking about not supporting them anymore. However, bug fixes for IE9 will be accepted and everything is expected to run smooth down to it. For Chrome, Firefox, Opera and Safari up to 2 previous versions are expected to be working, and everything that is not is definitely a bug.
 
 
 

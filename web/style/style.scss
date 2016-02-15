@@ -64,6 +64,12 @@ main {
   margin: 100px auto 500px;
   }
 
+nav .brand:hover,
+nav .brand:active {
+  background: none;
+  box-shadow: none;
+  }
+
 
   
 // Display the grid with colors

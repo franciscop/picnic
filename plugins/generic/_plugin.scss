@@ -37,17 +37,6 @@ a {
   transition: $picnic-transition;
   }
 
-a:hover,
-a:focus {
-  box-shadow: 0 2px 0 0 $picnic-primary;
-  }
-
-a:active {
-  color: $picnic-white;
-  background: $picnic-primary;
-  border-radius: $picnic-radius;
-  }
-
 
 // The <pre> doesn't have a nice style from Normalize.css
 
