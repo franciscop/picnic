@@ -273,7 +273,7 @@ Make it smaller
 
 An easy and flexible grid system. There are few mixins and a base %grid that allows adding breakpoints in a breeze.
 
-```scss
+```css
 .grid {
   @extend %grid;
   @include grid-break(40em, 50%);
