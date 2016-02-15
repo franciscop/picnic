@@ -5,6 +5,9 @@
   "engines": {
     "node": "0.12.x"
   },
+  "scripts": {
+    "start": "http-server"
+  },
   "main": "app.js",
   "repository": {
     "type": "git",
