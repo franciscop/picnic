@@ -73,12 +73,12 @@ nav .brand:active {
 
   
 // Display the grid with colors
-.row.demo > * {
+.demo > * {
   padding: .3em .6em;
   background: $green;
   }
 
-.row.demo > :nth-child(2n) {
+.demo > :nth-child(2n) {
   background: $aqua;
   }
 

@@ -1,6 +1,8 @@
+@import 'class';
+
 .row > * {
-  margin: $picnic-separation 0;
-  }
+    margin: $picnic-separation 0;
+}
 
 // From ungrid ( http://chrisnager.github.io/ungrid/ )
 @media (min-width: $picnic-breakpoint) {

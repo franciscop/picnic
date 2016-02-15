@@ -185,8 +185,16 @@ $(&quot;form&quot;).on(&#39;submit&#39;, function(e){
 &lt;/label&gt;
 </code></pre>
 <h2 id="grids">Grids</h2>
-<p>A simple and responsive grid based on <a href="http://chrisnager.github.io/ungrid/">ungrid</a>.
-Note: the class <code>.demo</code> is added for the fancy colors.</p>
+<blockquote>
+<p>Deprecation notice: the css code is deprecated from version 5.1 onward and it will be removed in 6.0.0. Only the SCSS code will be available then.</p>
+</blockquote>
+<p>An easy and flexible grid system. There are few mixins and a base %grid that allows adding breakpoints in a breeze.</p>
+<pre><code class="lang-scss">.grid {
+  @extend %grid;
+  @include grid-break(40em, 50%);
+  @include grid-break(60em, 3);
+}
+</code></pre>
 <h3 id="evenly-stacked-grids">Evenly stacked grids</h3>
 <p>To display few grids with the same width, just add as many grid elements as you want as children of <code>.row</code>:</p>
 <pre><code class="lang-html">&lt;div class=&quot;row demo&quot;&gt;

@@ -1,0 +1,44 @@
+$picnic-grid-gutter: $picnic-separation !default;
+$picnic-grid-gutter-vertical: $picnic-grid-gutter !default;
+$picnic-grid-gutter-horizontal: $picnic-grid-gutter !default;
+
+
+// Find the width of each element according to the gutter
+@mixin grid-width($width) {
+  @if unitless($width) {
+    $width: 100% / $width;
+  }
+  width: calc(#{ $width } - #{ $picnic-grid-gutter-horizontal });
+}
+
+// Find the width of 
+@mixin grid-break($min, $width) {
+  @include breakpoint($min) {
+    > * {
+      @include grid-width($width);
+    }
+  }
+}
+
+
+%grid {
+  
+  display: block;
+  width: calc(100% + #{$picnic-grid-gutter-horizontal});
+  margin: 0 0 0 #{-$picnic-grid-gutter-horizontal};
+  
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+
+// For every child directly below row
+%grid > * {
+  float: left;
+  @include grid-width(100%);
+  margin: 0 0 $picnic-grid-gutter-vertical $picnic-grid-gutter-horizontal;
+}
+

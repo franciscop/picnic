@@ -1,7 +1,16 @@
 ## Grids
 
-A simple and responsive grid based on [ungrid](http://chrisnager.github.io/ungrid/).
-Note: the class `.demo` is added for the fancy colors.
+> Deprecation notice: the css code is deprecated from version 5.1 onward and it will be removed in 6.0.0. Only the SCSS code will be available then.
+
+An easy and flexible grid system. There are few mixins and a base %grid that allows adding breakpoints in a breeze.
+
+```scss
+.grid {
+  @extend %grid;
+  @include grid-break(40em, 50%);
+  @include grid-break(60em, 3);
+}
+```
 
 
 ### Evenly stacked grids
