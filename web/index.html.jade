@@ -57,17 +57,20 @@ block content
         a.button.icon-file-code(href="/documentation/") Documentation
         | 
         a.button.icon-g(href="https://github.com/picnicss/picnic" target="_blank") Github
-      pre.
-        // Define your own main color
-        $picnic-primary: #faa;
+      div
+        :markdown
+          ```js
+          // Define your own main color
+          $picnic-primary: #faa;
 
-        // Add picnic to your codebase
-        @import 'bower/picnic/src/picnic';
+          // Add picnic to your codebase
+          @import 'bower/picnic/src/picnic';
 
-        // Create a new element
-        .call-to-action {
-          @extends %button;
-        }
+          // Create a new element
+          .call-to-action {
+            @extends %button;
+          }
+          ```
     div.visual.row
       div.content
         h2 It's alive!
@@ -273,3 +276,4 @@ block content
       };
     window.onscroll = navScroll;
     navScroll();
+    nav.classList.remove('loading');
