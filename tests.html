@@ -55,13 +55,14 @@
   </label>
 </div>
 
+
 <h2 id="card">Card</h2>
 
 <p>
   <div class="row">
     <div>
       <article class="card">
-        <img src="/img/forest.jpg">
+        <img src="web/img/forest.jpg">
         <section>This is a nice forest. What do you want to do with it?</section>
         <footer>
           <button>Enjoy</button>
@@ -76,25 +77,30 @@
         </header>
         <section>It has some text</section>
         <footer>
-          And even a foter!
+          And even a footer!
         </footer>
       </article>
-      <article class="card">
-        <p>Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore...</p>
-        <a class="close">×</a>
-      </article>
+      <div>
+        <input type="checkbox" id="cardtoggle">
+        <article class="card">
+          <p>Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore...</p>
+          <label for="cardtoggle" class="close">×</a>
+        </article>
+      </div>
     </div>
     <div>
+      <input id="cardtoggle2" type="checkbox" name="name">
       <article class="card">
         <header>
           <h1>Header 1</h1>
-          <a class="close">×</a>
+          <label for="cardtoggle2" class="close">×</a>
         </header>
       </article>
+      <input id="cardtoggle3" type="checkbox" name="name2">
       <article class="card">
         <header>
           <h2>Header 2</h2>
-          <a class="close">×</a>
+          <label for="cardtoggle3" class="close">×</label>
         </header>
       </article>
       <article class="card">
@@ -122,6 +128,7 @@
 
 
 
+
 <h2 id="checkbox">Checkbox</h2>
 
 <label>
@@ -132,11 +139,12 @@
 <input id="checktest" type="checkbox" checked>
 <label for="checktest" class="checkable">Uncheck me</label>
 
+
 <h2 id="dropimage">Dropimage</h2>
 
 <div class="row">
   <div>
-    <label class="dropimage" style="background-image: url('/img/forest.jpg');">
+    <label class="dropimage" style="background-image: url('web/img/forest.jpg');">
       <input name="filea" title="Drop image or click me" type="file">
     </label>
   </div>
@@ -165,6 +173,7 @@
     });
   };
 </script>
+
 
 <h2 id="grid">Grid</h2>
 
@@ -241,6 +250,7 @@
   <div>[empty]</div>
 </div>
 
+
 <h2 id="input">Input</h2>
 
 <div class="row">
@@ -269,6 +279,7 @@
   <textarea placeholder="Full description"></textarea>
 </div>
 
+
 <h2 id="label">Label</h2>
 
 <p>
@@ -288,6 +299,7 @@
     <span class="label">Normal</span>
   </p>
 </p>
+
 <h2 id="modal">Modal</h2>
 
 <p>
@@ -316,12 +328,13 @@
   </article>
 </div>
 
+
 <h2 id="nav">Nav</h2>
 
 <p>
   <nav style="position: relative; z-index: 9">
     <a href="#" class="brand">
-      <img class="logo" src="/img/basket.png" />
+      <img class="logo" src="web/img/basket.png" />
       <span>Picnic CSS</span>
     </a>
     
@@ -335,6 +348,7 @@
     </div>
   </nav>
 </p>
+
 <h2 id="radio">Radio button</h2>
 
 <p>
@@ -349,6 +363,7 @@
     <span class="checkable">Or me</span>
   </label>
 </p>
+
 <h2 id="select">Select</h2>
 
 <p>
@@ -359,6 +374,7 @@
     <option>Cheap option</option>
   </select>
 </p>
+
 
 <!-- Testing the module -->
 <h2 id="stack">Stack</h2>
@@ -410,19 +426,19 @@
 
 <div class="row">
   <div>
-    <img class="stack" src="/img/forest.jpg">
+    <img class="stack" src="web/img/forest.jpg">
     <a class="stack button">Forest</a>
   </div>
   <div>
-    <img class="stack" src="/img/balloon.jpg">
+    <img class="stack" src="web/img/balloon.jpg">
     <a class="stack button">Balloon</a>
   </div>
   <div>
-    <img class="stack" src="/img/lake.jpg">
+    <img class="stack" src="web/img/lake.jpg">
     <a class="stack button">Lake</a>
   </div>
   <div>
-    <img class="stack" src="/img/halong.jpg">
+    <img class="stack" src="web/img/halong.jpg">
     <a class="stack button">Halong bay</a>
   </div>
 </div>
@@ -461,17 +477,18 @@
     <textarea class="stack" placeholder="Textarea"></textarea>
   </div>
   <div>
-    <label class="dropimage stack" style="background-image: url('/plugins/dropimage/camera.svg');">
+    <label class="dropimage stack">
       <input name="filea" title="Drop image or click me" type="file">
     </label>
-    <label class="dropimage stack" style="background-image: url('/plugins/dropimage/camera.svg');">
+    <label class="dropimage stack">
       <input name="filea" title="Drop image or click me" type="file">
     </label>
-    <label class="dropimage stack" style="background-image: url('/plugins/dropimage/camera.svg');">
+    <label class="dropimage stack">
       <input name="filea" title="Drop image or click me" type="file">
     </label>
   </div>
 </div>
+
 <h2 id="table">Table</h2>
 
 <table class="primary">
@@ -505,6 +522,7 @@
     </tr>
   </tbody>
 </table>
+
 <h2>Tab</h2>
 
 
@@ -519,15 +537,15 @@
     <label class="pseudo button toggle" for="tab-3">Balloon</label>
     <div class="row">
       <div>
-        <img src="/img/forest.jpg">
+        <img src="web/img/forest.jpg">
       </div>
 
       <div>
-        <img src="/img/lake.jpg">
+        <img src="web/img/lake.jpg">
       </div>
 
       <div>
-        <img src="/img/balloon.jpg">
+        <img src="web/img/balloon.jpg">
       </div>
     </div>
   </div>
@@ -681,6 +699,7 @@
     </div>
   </div>
 </div>
+
 
 
 <h2 id="tooltip">Tooltip</h2>

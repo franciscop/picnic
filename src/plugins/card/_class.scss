@@ -22,16 +22,25 @@ $picnic-card-radius: $picnic-radius !default;
   background: $picnic-white;
   margin-bottom: $picnic-separation;
   padding: 0;
-
+  transition: all .3s ease;
+  
+  &.hidden,
+  :checked + & {
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  
   // Make sure that nothing overflows
   > * {
-    width: 100%;
+    max-width: 100%;
     display: block;
 
     &:last-child {
       margin-bottom: 0;
-      }
     }
+  }
 
   // The first part from the card
   header,
