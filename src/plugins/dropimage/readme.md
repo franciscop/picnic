@@ -14,7 +14,7 @@ Allows you to add a file input element that can receive an image drop and clicks
 This is the javascript you need for multiple elements:
 
 ```js
-window.onload = function(){
+document.addEventListener("DOMContentLoaded", function() { 
   [].forEach.call(document.querySelectorAll('.dropimage'), function(img){
     img.onchange = function(e){
       var inputfile = this, reader = new FileReader();
@@ -24,7 +24,7 @@ window.onload = function(){
       reader.readAsDataURL(e.target.files[0]);
     }
   });
-};
+});
 ```
 
 

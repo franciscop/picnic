@@ -1,0 +1,115 @@
+// Tab definition
+%tabs {
+
+  position: relative;
+  overflow: hidden;
+  
+  > label img {
+    float: left;
+    margin-left: $picnic-separation;
+  }
+
+  > .row {
+    width: calc(100% + 2 * .6em);
+    display: table;
+    table-layout: fixed;
+
+    position: relative;
+    padding-left: 0;
+    transition: all .3s;
+    border-spacing: 0;
+    margin: 0;
+
+    &:before,
+    &:after {
+      display: none;
+      }
+
+    > *,
+    img {
+      display: table-cell;
+      vertical-align: top;
+      margin: 0;
+      width: 100%;
+      }
+    }
+
+  > input {
+    display: none;
+
+    + * {
+      width: 100%;
+      }
+
+    + label {
+      width: auto;
+      }
+    }
+
+
+
+  &.two {
+    > .row {
+      width: 200%;
+      left: -100%;
+    }
+
+    > input:nth-of-type(1):checked ~ .row {
+      margin-left: 100%;
+    }
+    
+    > label img {
+      width: 48%;
+      margin: 4% 0 4% 4%;
+    }
+  }
+
+  &.three {
+    > .row {
+      width: 300%;
+      left: -200%;
+    }
+
+    > input:nth-of-type(1):checked ~ .row {
+      margin-left: 200%;
+    }
+
+    > input:nth-of-type(2):checked ~ .row {
+      margin-left: 100%;
+    }
+    
+    > label img {
+      width: 30%;
+      margin: 5% 0 5% 5%;
+    }
+  }
+
+  &.four {
+    > .row {
+      width: 400%;
+      left: -300%;
+      }
+
+    > input:nth-of-type(1):checked ~ .row {
+      margin-left: 300%;
+      }
+
+    > input:nth-of-type(2):checked ~ .row {
+      margin-left: 200%;
+      }
+
+    > input:nth-of-type(3):checked ~ .row {
+      margin-left: 100%;
+    }
+      
+    > label img {
+      width: 22%;
+      margin: 4% 0 4% 4%;
+    }
+  }
+  
+    
+  >label:first-of-type img {
+    margin-left: 0;
+  }
+}

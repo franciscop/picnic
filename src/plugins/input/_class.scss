@@ -1,0 +1,25 @@
+
+// Variables
+$picnic-input-height: 2.1em !default;
+$picnic-input-padding: $picnic-separation / 2 $picnic-separation !default;
+$picnic-input-background: #fff !default;
+
+
+
+// Top level selector
+%input {
+  line-height: 1.5;
+  margin: 0;
+  height: $picnic-input-height;
+  padding: $picnic-input-padding;
+  border: $picnic-border;
+  background: $picnic-input-background;
+  border-radius: $picnic-radius;
+  transition: $picnic-transition;
+  width: 100%;
+
+  &:focus {
+    border: 1px solid $picnic-primary;
+    outline: 0;
+  }
+}

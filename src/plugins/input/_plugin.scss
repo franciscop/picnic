@@ -1,29 +1,7 @@
 // Input
 // Handle the writing of text and some other user-generated content
 
-// Variables
-$picnic-input-height: 2.1em !default;
-$picnic-input-padding: $picnic-separation / 2 $picnic-separation !default;
-
-
-
-
-// Top level selector
-%input {
-  line-height: 1.5;
-  margin: 0;
-  height: $picnic-input-height;
-  padding: $picnic-input-padding;
-  border: $picnic-border;
-  border-radius: $picnic-radius;
-  transition: $picnic-transition;
-  width: 100%;
-
-  &:focus {
-    border: 1px solid $picnic-primary;
-    outline: 0;
-    }
-  }
+@import 'class';
 
 
 // Browser treats unknow type as "text", so we'll do the same
@@ -31,18 +9,18 @@ input,
 textarea,
 .select select {
   @extend %input;
-  }
+}
 
 textarea {
   height: auto;
-  }
+}
 
 [type=file],
 [type=color] {
   cursor: pointer;
-  }
+}
 
 [type=file] {
   height: auto;
-  }
+}
 

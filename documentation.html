@@ -148,7 +148,7 @@ $(&quot;form&quot;).on(&#39;submit&#39;, function(e){
 </code></pre>
 <h3 id="javascript">Javascript</h3>
 <p>This is the javascript you need for multiple elements:</p>
-<pre><code class="lang-js">window.onload = function(){
+<pre><code class="lang-js">document.addEventListener(&quot;DOMContentLoaded&quot;, function() { 
   [].forEach.call(document.querySelectorAll(&#39;.dropimage&#39;), function(img){
     img.onchange = function(e){
       var inputfile = this, reader = new FileReader();
@@ -158,7 +158,7 @@ $(&quot;form&quot;).on(&#39;submit&#39;, function(e){
       reader.readAsDataURL(e.target.files[0]);
     }
   });
-};
+});
 </code></pre>
 <h3 id="hack-it">Hack it</h3>
 <p>Do you want round pictures? No problem, just do this:</p>
@@ -534,6 +534,133 @@ nav.demo {
   &lt;textarea class=&quot;stack&quot; placeholder=&quot;Biography&quot;&gt;&lt;/textarea&gt;
   &lt;button class=&quot;stack icon-paper-plane&quot;&gt;Send&lt;/button&gt;
 &lt;/div&gt;
+</code></pre>
+<h2 id="table">Table</h2>
+<pre><code class="lang-html">&lt;table class=&quot;primary&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;City&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Francisco&lt;/td&gt;
+      &lt;td&gt;Valencia, Spain&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Eve&lt;/td&gt;
+      &lt;td&gt;San Francisco, USA&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Martin&lt;/td&gt;
+      &lt;td&gt;New York, USA&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Sarah&lt;/td&gt;
+      &lt;td&gt;London, UK&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+<h2 id="tabs">Tabs</h2>
+<p>Note: <a href="http://jsfiddle.net/franciscop/wwfby2y8/">http://jsfiddle.net/franciscop/wwfby2y8/</a>
+A simple tab system inspired by <a href="www.felipefialho.com/css-components/#component-tab">Components CSS Tabs</a>.</p>
+<pre><code class="lang-html">&lt;div class=&quot;tabs three&quot;&gt;
+  &lt;input id=&#39;tab-1&#39; type=&#39;radio&#39; name=&#39;tabgroupB&#39; checked /&gt;
+  &lt;label class=&quot;pseudo button toggle&quot; for=&quot;tab-1&quot;&gt;Forest&lt;/label&gt;
+  &lt;input id=&#39;tab-2&#39; type=&#39;radio&#39; name=&#39;tabgroupB&#39;&gt;
+  &lt;label class=&quot;pseudo button toggle&quot; for=&quot;tab-2&quot;&gt;Lake&lt;/label&gt;
+  &lt;input id=&#39;tab-3&#39; type=&#39;radio&#39; name=&#39;tabgroupB&#39;&gt;
+  &lt;label class=&quot;pseudo button toggle&quot; for=&quot;tab-3&quot;&gt;Balloon&lt;/label&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div&gt;
+      &lt;img src=&quot;web/img/forest.jpg&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+      &lt;img src=&quot;web/img/lake.jpg&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+      &lt;img src=&quot;web/img/balloon.jpg&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="gallery-example">Gallery example</h3>
+<p>Create a gallery super-easy with thumbnails as tabs:</p>
+<pre><code class="lang-html">&lt;div class=&quot;tabs four&quot;&gt;
+  &lt;input id=&quot;tabC-1&quot; type=&#39;radio&#39; name=&#39;tabGroupC&#39; checked &gt;
+  &lt;input id=&quot;tabC-2&quot; type=&#39;radio&#39; name=&#39;tabGroupC&#39;&gt;
+  &lt;input id=&quot;tabC-3&quot; type=&#39;radio&#39; name=&#39;tabGroupC&#39;&gt;
+  &lt;input id=&quot;tabC-4&quot; type=&#39;radio&#39; name=&#39;tabGroupC&#39;&gt;
+  &lt;div class=&#39;row&#39;&gt;
+    &lt;div&gt;
+      &lt;img src=&quot;web/img/forest.jpg&quot;&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;img src=&quot;web/img/lake.jpg&quot;&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;img src=&quot;web/img/halong.jpg&quot;&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;img src=&quot;web/img/balloon.jpg&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;label for=&quot;tabC-1&quot;&gt;&lt;img src=&quot;web/img/forest.jpg&quot;&gt;&lt;/label&gt;
+  &lt;label for=&quot;tabC-2&quot;&gt;&lt;img src=&quot;web/img/lake.jpg&quot;&gt;&lt;/label&gt;
+  &lt;label for=&quot;tabC-3&quot;&gt;&lt;img src=&quot;web/img/halong.jpg&quot;&gt;&lt;/label&gt;
+  &lt;label for=&quot;tabC-4&quot;&gt;&lt;img src=&quot;web/img/balloon.jpg&quot;&gt;&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="sign-up-form-example">Sign up form example</h3>
+<pre><code class="lang-html">&lt;style&gt;
+  .signup .row {
+    margin-bottom: 2em;
+    }
+  .signup input + * input {
+    display: block;
+    margin: .6em auto;
+    }
+  .signup label:checked {
+    background: red;
+    }
+&lt;/style&gt;
+&lt;form method=&quot;POST&quot; class=&quot;signup&quot;&gt;
+  &lt;div class=&#39;row&#39;&gt;
+    &lt;label class=&#39;button&#39; for=&quot;signup-1&quot;&gt;Basic info&lt;/label&gt;
+    &lt;label class=&#39;button&#39; for=&quot;signup-2&quot;&gt;Login data&lt;/label&gt;
+    &lt;label class=&#39;button&#39; for=&quot;signup-3&quot;&gt;Billing&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;input id=&#39;signup-1&#39; class=&#39;tab&#39; type=&#39;radio&#39; name=&#39;signup&#39; checked &gt;
+  &lt;div&gt;
+    &lt;p&gt;Tell us something about yourself:&lt;/p&gt;
+    &lt;input placeholder=&quot;Firstname&quot;&gt;
+    &lt;input placeholder=&quot;Lastname&quot;&gt;
+    &lt;input type=&#39;number&#39; placeholder=&quot;Age&quot;&gt;
+    &lt;label class=&#39;button&#39; for=&quot;signup-2&quot;&gt;Continue&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;input id=&#39;signup-2&#39; class=&#39;tab&#39; type=&#39;radio&#39; name=&#39;signup&#39;&gt;
+  &lt;div&gt;
+    &lt;p&gt;Enter your details to be able to login later:&lt;/p&gt;
+    &lt;input type=&#39;email&#39; placeholder=&quot;Email&quot;&gt;
+    &lt;input type=&#39;password&#39; placeholder=&quot;Password&quot;&gt;
+    &lt;input type=&#39;password&#39; placeholder=&quot;Repeat password&quot;&gt;
+    &lt;label class=&#39;button&#39; for=&quot;signup-1&quot;&gt;Previous&lt;/label&gt;
+    &lt;label class=&#39;button&#39; for=&quot;signup-3&quot;&gt;Continue&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;input id=&#39;signup-3&#39; class=&#39;tab&#39; type=&#39;radio&#39; name=&#39;signup&#39;&gt;
+  &lt;div&gt;
+    &lt;p&gt;Tell us where to send the bills:&lt;/p&gt;
+    &lt;input placeholder=&quot;Address&quot;&gt;
+    &lt;input placeholder=&quot;City&quot;&gt;
+    &lt;input placeholder=&quot;Country&quot;&gt;
+    &lt;label class=&#39;button&#39; for=&quot;signup-2&quot;&gt;Previous&lt;/label&gt;
+    &lt;button class=&#39;warning&#39;&gt;Finish&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
 </code></pre>
 </article></section></main><script src="https://cdn.jsdelivr.net/umbrella/1/umbrella.min.js"></script><script>u('h2[id]').each(function(node){
   u(node).attr('id', u(node).attr('id').replace(/-/g, ''));
