@@ -1,7 +1,5 @@
 # Picnic CSS
 
-> Note: If your site breaks please read the [deprecation notice](https://github.com/picnicss/picnic/issues/42) (and I apologize for it).
-
 Unpack your meal and get coding. An invasive CSS library to get your style started.
 
 
@@ -19,18 +17,21 @@ Use [Picnic CSS in the CDN jsDelivr](http://www.jsdelivr.com/#!picnicss) for lin
 
 To install Picnic with bower just write this in your terminal (you'll need bower installed):
 
-    bower install picnic
+```
+bower install picnic
+```
 
 Then, to use it within your scss development cycle, just do:
 
-    // Here go any variables you want to overwrite
-    $picnic-primary: #faa;
-    
-    // Now import picnic and a couple of plugins
-    @import 'BOWER_PATH/picnic/src/picnic';
-    @import 'BOWER_PATH/picnic/plugins/nav/plugin';
-    @import 'BOWER_PATH/picnic/plugins/modal/plugin';
+```scss
+// Here go any variables you want to overwrite
+$picnic-primary: #faa;
 
+// Now import picnic and a couple of plugins
+@import 'BOWER_PATH/picnic/src/picnic';
+@import 'BOWER_PATH/picnic/plugins/nav/plugin';
+@import 'BOWER_PATH/picnic/plugins/modal/plugin';
+```
 
 
 ### NPM
@@ -38,7 +39,7 @@ Then, to use it within your scss development cycle, just do:
 Just do
 
 ```bash
-npm i -D picnic
+npm install picnic --save
 ```
 
 To add it to your repository. Then you can include it straight from your css like:
@@ -53,13 +54,7 @@ Thanks to [chadoh](https://github.com/chadoh) for helping me in publishing it in
 
 ### Other ways
 
-You can always download the latest minimized version from github, clone the repository or download it.
-
-
-
-You can also [try it live in Codepen](http://codepen.io/FranciscoP/pen/ZGpzbL?editors=110).
-
-Clone it: `git clone https://github.com/picnicss/picnic.git`
+You can always download the latest minimized version from github, clone the repository or download it. Or clone it: `git clone https://github.com/picnicss/picnic.git`
 
 
 
@@ -71,9 +66,9 @@ This setup works neatly for newly created projects or for pages that you have to
 
 
 
-## Browser support IE9+
+## Browser support IE11+
 
-Bug reports and fixes only for IE9+. With IE8 usage [dropping *fast*](http://ux.stackexchange.com/a/643.61) and with IE9 and IE10 usage even below their older mate, it is time to start thinking about not supporting them anymore. However, bug fixes for IE9 will be accepted and everything is expected to run smooth down to it. For Chrome, Firefox, Opera and Safari up to 2 previous versions are expected to be working, and everything that is not is definitely a bug.
+Bug reports and fixes only for IE11+. With IE8- usage [dropping *fast*](http://ux.stackexchange.com/a/643.61) and with IE9 and IE10 usage even below their older mate, it is time to start thinking about not supporting them anymore. For others, up to 2 previous versions are expected to be working, and everything that is not is definitely a bug.
 
 
 
@@ -85,7 +80,7 @@ After including the stylesheet as indicated in the `Getting started`:
 <form>
   What's your favourite Picnic CSS feature?
   
-  <label class="select">
+  <label>
     <select name="feature">
       <option value="semantic">    Semantic HTML5 </option>
       <option value="lightweight"> Lightweight    </option>
@@ -123,11 +118,7 @@ If you don't see anything that seems *picnic.css exclusive*, that's because ther
 
 ## Disadvantages
 
-- `select`, `radiobutton` and `checkbox` support is not great, however it's better than most of the similar solutions listed below. This is solved by making them optional. To make them work they require the use of a wrapper with a class. These are: `.select` for `<select>`, `.radio` for `<input type="radio">` and `.checkbox` for `<input type="checkbox">`. Pretty simple (:
-
 - Difficult to drop in an already created project. This is what I meant by *invasive*. This is not within the new scope of the project.
-
-- The grids introduce an unsemantic component to your HTML5 if you decide to use them. Not really a way to solve it, however the unsemantic bit is only a class called `.row`
 
 
 
@@ -158,7 +149,5 @@ Created by [Francisco Presencia](https://github.com/FranciscoP). SASS from [Jord
 - [Clrs](http://clrs.cc/) the new nice web palette (from HN) used for Picnic CSS.
 
 - [Fontello](http://fontello.com/) an icon library that plays really nice with others.
-
-- [Tympanus buttons](http://tympanus.net/Development/CreativeButtons/) so many hours exploring its amazing CSS designs.
 
 - [Normalize](http://necolas.github.io/normalize.css/) the foundation of Picnic CSS

@@ -16,6 +16,7 @@ $picnic-grid-gutter-horizontal: $picnic-grid-gutter !default;
   @include breakpoint($min) {
     > * {
       @include grid-width($width);
+      @content;
     }
   }
 }

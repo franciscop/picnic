@@ -80,37 +80,24 @@ module.exports = function (grunt) {
     // get the current concat config
     var concat = {
       test: { src: [], dest: 'test/tests.html' },
-      docs: { src: ['src/readme.md'], dest: 'documentation.md' },
-      preview: { src: [], dest: 'preview.html' }
+      docs: { src: ['src/readme.md'], dest: 'documentation.md' }
     };
     
     fs.readdirSync(__dirname + "/src/plugins").forEach(function(name, i){
       var test = 'src/plugins/' + name + '/test.html';
-      var doc = 'src/plugins/' + name + '/readme.md';
-      var preview = 'src/plugins/' + name + '/description.html';
-      
+      var doc = 'src/plugins/' + name + '/readme.md';      
       
       concat.test.src.push(test);
       concat.docs.src.push(doc);
-      concat.preview.src.push(preview);
     });
-    
-    console.log(concat.preview);
     
     // save the new concat configuration
     grunt.config.set('concat', concat);
   });
 
-  // Watch
   grunt.loadNpmTasks('grunt-contrib-watch');
-  
-  // Jade
   grunt.loadNpmTasks('grunt-contrib-jade');
-  
-  // SASS
   grunt.loadNpmTasks('grunt-contrib-sass');
-  
-  // SASS
   grunt.loadNpmTasks('grunt-contrib-concat');
   
   // 4. Where we tell Grunt what to do when we type "grunt" into the terminal

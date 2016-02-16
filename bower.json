@@ -6,7 +6,7 @@
     "Francisco Presencia <developerfrancisco@hotmail.com>"
   ],
   "description": "Semantic HTML5 & nice CSS3",
-  "main": "releases/picnic.min.css",
+  "main": "picnic.min.css",
   "keywords": [
     "css",
     "css3",
@@ -19,10 +19,7 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
     "web",
-    "app.js",
-    "package.json",
-    "Procfile"
+    "package.json"
   ]
 }
