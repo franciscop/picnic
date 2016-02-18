@@ -53,6 +53,12 @@ $picnic-card-radius: $picnic-radius !default;
     padding: .6em .8em 0;
   }
 
+  hr {
+    border: none;
+    height: 1px;
+    background-color: #eee;
+  }
+
   header {
     font-weight: bold;
     position: relative;
@@ -68,7 +74,7 @@ $picnic-card-radius: $picnic-radius !default;
       margin: 0 2em 0 0;
       line-height: 1;
       display: inline-block;
-      vertical-align: middle;
+      vertical-align: text-bottom;
       }
 
     &:last-child {
