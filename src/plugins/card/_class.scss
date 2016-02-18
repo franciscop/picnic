@@ -23,7 +23,7 @@ $picnic-card-radius: $picnic-radius !default;
   margin-bottom: $picnic-separation;
   padding: 0;
   transition: all .3s ease;
-  
+
   &.hidden,
   :checked + & {
     font-size: 0;
@@ -31,7 +31,7 @@ $picnic-card-radius: $picnic-radius !default;
     margin: 0;
     border: 0;
   }
-  
+
   // Make sure that nothing overflows
   > * {
     max-width: 100%;
@@ -68,8 +68,9 @@ $picnic-card-radius: $picnic-radius !default;
       margin: 0 2em 0 0;
       line-height: 1;
       display: inline-block;
+      vertical-align: middle;
       }
-    
+
     &:last-child {
       border-bottom: 0;
       }
