@@ -124,6 +124,8 @@ If you don't see anything that seems *picnic.css exclusive*, that's because ther
 
 ## Alternatives and why I still created Picnic CSS
 
+[Milligram](https://milligram.github.io/): A minimalist CSS framework
+
 [PureCSS](http://purecss.io/): Lightweight, nice package. The thing I would be using if I didn't build Picnic CSS and where I took the inspiration. However, no nice `<select>` out of the box and the non-responsive grid from the CDN feels like a stab on the back.
 
 [Bootstrap](http://getbootstrap.com/): Really comprehensive, but too many files and too heavy for most of the websites. It also relies too much on javascript. Still cannot get the `<select>` right out of the box.
