@@ -130,7 +130,7 @@ If you don't see anything that seems *picnic.css exclusive*, that's because ther
 
 [Bootstrap](http://getbootstrap.com/): Really comprehensive, but too many files and too heavy for most of the websites. It also relies too much on javascript. Still cannot get the `<select>` right out of the box.
 
-[Min](http://minfwk.com/): a tiny, basic css framework. It has great browser support. No `<select>` right, and it's too inexpressive.
+[Min](http://mincss.com/): a tiny, basic css framework. It has great browser support. No `<select>` right, and it's too inexpressive.
 
 
 
