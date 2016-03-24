@@ -1,8 +1,7 @@
 //! Picnic CSS http://www.picnicss.com/
-// Version 3
 
 // Imports the base variable styles
-@import '../themes/default/theme';
+@import './themes/default/theme';
 
 @import '../bower_components/compass-breakpoint/stylesheets/breakpoint';
 
@@ -21,8 +20,8 @@
 // Forms
 @import './plugins/input/plugin';
 @import './plugins/select/plugin';
-@import './plugins/radio/plugin'; 
-@import './plugins/checkbox/plugin'; 
+@import './plugins/radio/plugin';
+@import './plugins/checkbox/plugin';
 
 // Components
 @import './plugins/table/plugin';
