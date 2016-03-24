@@ -664,43 +664,25 @@ A simple tab system inspired by <a href="www.felipefialho.com/css-components/#co
 </code></pre>
 <h2 id="tooltip">Tooltip</h2>
 <p>Hover this element to show the tooltip:</p>
-<button data-tooltip="This is a great tooltip" class="tooltip-top">
+<pre><code class="lang-html">&lt;button data-tooltip=&quot;This is a great tooltip&quot; class=&quot;tooltip-top&quot;&gt;
   Hover for tooltip
-</button>
-
-
-
-<h3 id="installation">Installation</h3>
-<p>Include it by adding <code>+tooltip</code> to your current installation:</p>
-<pre><code>http://www.picnicss.com/nut/picnic_3+tooltip.min.css
-</code></pre><h3 id="positions">Positions</h3>
-<button data-tooltip="This is a great tooltip" class="tooltip-left">
-  Left
-</button>
-<button data-tooltip="This is a great tooltip">
-  Bottom (default)
-</button>
-<button data-tooltip="This is a great tooltip" class="tooltip-top">
+&lt;/button&gt;
+</code></pre>
+<h3 id="positions">Positions</h3>
+<pre><code class="lang-html">&lt;button data-tooltip=&quot;This is a great tooltip&quot; class=&quot;tooltip-top&quot;&gt;
   Top
-</button>
-<button data-tooltip="This is a great tooltip" class="tooltip-right">
-  Right
-</button>
-
-
-<pre><code>&lt;button data-tooltip=&quot;This is a great tooltip&quot; class=&quot;tooltip-left&quot;&gt;
-  Left
 &lt;/button&gt;
 &lt;button data-tooltip=&quot;This is a great tooltip&quot;&gt;
   Bottom (default)
 &lt;/button&gt;
-&lt;button data-tooltip=&quot;This is a great tooltip&quot; class=&quot;tooltip-top&quot;&gt;
-  Top
+&lt;button data-tooltip=&quot;This is a great tooltip&quot; class=&quot;tooltip-left&quot;&gt;
+  Left
 &lt;/button&gt;
 &lt;button data-tooltip=&quot;This is a great tooltip&quot; class=&quot;tooltip-right&quot;&gt;
   Right
 &lt;/button&gt;
-</code></pre></article></section></main><script src="https://cdn.jsdelivr.net/umbrella/1/umbrella.min.js"></script><script>u('h2[id]').each(function(node){
+</code></pre>
+</article></section></main><script src="https://cdn.jsdelivr.net/umbrella/1/umbrella.min.js"></script><script>u('h2[id]').each(function(node){
   u(node).attr('id', u(node).attr('id').replace(/-/g, ''));
 });
 
