@@ -3,7 +3,7 @@
 // Imports the base variable styles
 @import './themes/default/theme';
 
-@import '../bower_components/compass-breakpoint/stylesheets/breakpoint';
+@import './vendor/compass-breakpoint/stylesheets/breakpoint';
 
 // Normalize.css (external library)
 @import './plugins/normalize/plugin';
