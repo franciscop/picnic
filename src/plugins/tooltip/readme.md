@@ -1,4 +1,4 @@
-# Tooltip
+## Tooltip
 
 Hover this element to show the tooltip:
 
@@ -8,7 +8,7 @@ Hover this element to show the tooltip:
 
 
 
-## Installation
+### Installation
 
 Include it by adding `+tooltip` to your current installation:
 
@@ -16,7 +16,7 @@ Include it by adding `+tooltip` to your current installation:
 
 
 
-## Positions
+### Positions
 
 <button data-tooltip="This is a great tooltip" class="tooltip-left">
   Left
