@@ -45,7 +45,7 @@ npm install picnic --save
 To add it to your repository. Then you can include it straight from your css like:
 
 ```css
-@import "../node_modules/picnic/releases/picnic.css";
+@import "../node_modules/picnic/picnic.css";
 ```
 
 Thanks to [chadoh](https://github.com/chadoh) for helping me in publishing it in NPM and for the instructions.
