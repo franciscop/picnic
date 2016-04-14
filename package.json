@@ -6,7 +6,7 @@
     "node": "4.0.0"
   },
   "scripts": {
-    "postinstall": "git remote set-url --add --push origin git@github.com:picnicss/picnic.git && git remote set-url --add --push origin git@github.com:picnic/picnicss.github.io.git"
+    "postinstall": "git remote set-url --add --push origin git@github.com:picnicss/picnic.git && git remote set-url --add --push origin git@github.com:picnicss/picnicss.github.io.git"
   },
   "main": "picnic.min.css",
   "repository": {
