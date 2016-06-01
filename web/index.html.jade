@@ -16,10 +16,10 @@ block content
           span  | 
           a.github(href="https://github.com/picnicss/picnic" target="_blank") Github
 
-      div.keepgoing ▼
+      a.keepgoing(href="#content") ▼
 
 
-    div.visual.row
+    div.visual.row#content
       div.content
         h2 Default html beauty
         p The native html elements get a boost so you don't need to write presentation classes mixed with your html.
@@ -28,11 +28,11 @@ block content
       div.card
         p
           button Normal
-          |  
+          | 
           button.success Success
-          |  
+          | 
           button.warning Warning
-          |  
+          | 
           button.error Error
         p
           input(type="email" placeholder="Email")
@@ -42,10 +42,10 @@ block content
               label.dropimage
                 input(type="file")
             article.card.tooltip-bottom(data-tooltip="Click me to upload a new image")
-              label.dropimage(style="background-image: url(web/img/galaxy.svg)")
+              label.dropimage(style="background-image: url(web/img/demo.min.svg)")
                 input(type="file")
             article.card.tooltip-bottom(data-tooltip="Click me to upload a new image")
-              label.dropimage(style="background-image: url(web/img/galaxy.svg)")
+              label.dropimage(style="background-image: url(web/img/demo.min.svg)")
                 input(type="file")
 
 
@@ -80,10 +80,10 @@ block content
           div.tabs.three(style="text-align: center;")
             input#tabC-1(type='radio' name='tabgroupC' checked)
             label.pseudo.button.toggle(for="tabC-1") 1
-            span  /
+            span  / 
             input#tabC-2(type='radio' name='tabgroupC')
             label.pseudo.button.toggle(for="tabC-2") 2
-            span  /
+            span  / 
             input#tabC-3(type='radio' name='tabgroupC')
             label.pseudo.button.toggle(for="tabC-3") 3
             div.row(style="text-align: left;")
@@ -142,7 +142,7 @@ block content
       div.content
         h2 For your mobile
         p Picnic mission is to be <strong>under 5kb</strong> of responsive, compressed css for a <a href="https://www.youtube.com/watch?v=GDpmVUEjagg" target="_blank">better and faster</a> mobile load.
-        p Check the network usage of this page (F12), this page is under 50kb including images.
+        p Check the network usage of this page (F12), this page is under 20kb including images.
       div
         div.row.demo
           div
@@ -183,10 +183,6 @@ block content
             strong
               a(href="http://news.ycombinator.com/" title="No target='_blank' since I know that you guys know how to use Ctrl (;") Hacker News
             span : To the community
-          li
-            strong
-              a(href="http://tcfraser.com/" target="_blank") Thomas Coolican Fraser
-            span : Hero background
           li
             strong
               a(href="http://necolas.github.io/normalize.css/" target="_blank") Normalize.css
