@@ -142,7 +142,7 @@ block content
       div.content
         h2 For your mobile
         p Picnic mission is to be <strong>under 10kb</strong> of responsive, compressed css for a <a href="https://www.youtube.com/watch?v=GDpmVUEjagg" target="_blank">better and faster</a> mobile load.
-        p Check the network usage of this page (F12), this page is under 20kb including images.
+        p Check the network usage of this page (F12), this page is under 20kb including images (but [excluding the showcase](https://github.com/picnicss/picnic/issues/89)).
       div
         div.flex.demo
           div
@@ -187,11 +187,11 @@ block content
         div.flex.one.two-800
           div
             article.browser(data-title="Makers UPV")
-              iframe(src="http://www.makersupv.com/")
+              iframe(data-src="http://www.makersupv.com/")
             a.button(href="http://makersupv.com/" target="_blank") Makers UPV
           div
             article.browser(data-title="Umbrella JS")
-              iframe(src="http://umbrellajs.com/")
+              iframe(data-src="http://umbrellajs.com/")
             a.button(href="http://umbrellajs.com" target="_blank") Umbrella JS
 
 
@@ -284,19 +284,16 @@ block content
       var className = 'transparent';
       var top = window.scrollY ? window.scrollY : document.documentElement.scrollTop;
       if (top > 0) {
-        if (nav.classList)
-          nav.classList.remove(className);
-        else
-          nav.className = nav.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-        }
-      else {
+        nav.classList.remove(className);
+        [].forEach.call(document.querySelectorAll('[data-src]'), function(iframe){
+          iframe.setAttribute('src', iframe.getAttribute('data-src'));
+          iframe.removeAttribute('data-src');
+        });
+      } else {
         nav.classList.add('transparent');
-        if (nav.classList)
-          nav.classList.add(className);
-        else
-          nav.className += ' ' + className;
-        }
-      };
+        nav.classList.add(className);
+      }
+    };
     window.onscroll = navScroll;
     navScroll();
     setTimeout(function(){ nav.classList.remove('loading'); }, 10);
