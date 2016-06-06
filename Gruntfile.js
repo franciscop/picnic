@@ -33,7 +33,6 @@ module.exports = function (grunt) {
     copy: {
       main: {
         files: [
-          { src: 'picnic.min.css', dest: 'plugins.min.css' },
           { src: 'picnic.min.css', dest: 'releases/picnic.min.css' },
           { src: 'picnic.min.css', dest: 'releases/plugins.min.css' },
         ]
