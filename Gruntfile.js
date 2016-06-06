@@ -2,8 +2,6 @@ var fs = require('fs');
 
 module.exports = function (grunt) {
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
-    
     jade: {
       compile: {
         files: [{
@@ -11,7 +9,7 @@ module.exports = function (grunt) {
         }]
       }
     },
-    
+
     concat: {
       options: { separator: '\n\n' },
       basic_and_extras: {
@@ -21,7 +19,7 @@ module.exports = function (grunt) {
         }
       }
     },
-    
+
     sass: {
       dist: {
         options: { sourcemap: 'none', style: 'compressed' },
@@ -31,19 +29,51 @@ module.exports = function (grunt) {
         }
       }
     },
-    
+
+    copy: {
+      main: {
+        files: [
+          { src: 'picnic.min.css', dest: 'plugins.min.css' },
+          { src: 'picnic.min.css', dest: 'releases/picnic.min.css' },
+          { src: 'picnic.min.css', dest: 'releases/plugins.min.css' },
+        ]
+      }
+    },
+
+    usebanner: {
+      taskName: {
+        options: {
+          position: 'top',
+          banner: '/* Version ' + grunt.file.readJSON('package.json').version + ' */',
+          linebreak: true
+        },
+        files: { src: 'picnic.min.css' }
+      }
+    },
+
     watch: {
       scripts: {
         files: [ 'package.js', 'Gruntfile.js', 'src/**/*.*', 'web/**/*.*' ],
         tasks: ['default'],
         options: { spawn: false },
       }
+    },
+
+    bytesize: {
+      all: {
+        src: [
+          'picnic.min.css'
+        ]
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-jade');
-  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.registerTask('default', ['concat', 'sass', 'jade']);
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-banner');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-jade');
+  grunt.loadNpmTasks('grunt-bytesize');
+  grunt.registerTask('default', ['concat', 'sass', 'usebanner', 'copy', 'jade', 'bytesize']);
 };

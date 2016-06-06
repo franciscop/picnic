@@ -17,7 +17,7 @@ A responsive, pure css navigation menu:
     <img class="logo" src="/web/img/basket.png" />
     <span>Picnic CSS</span>
   </a>
-  
+
   <!-- responsive-->
   <input id="bmenub" type="checkbox" class="show">
   <label for="bmenub" class="burger pseudo button">menu</label>
@@ -34,7 +34,7 @@ A responsive, pure css navigation menu:
     <img class="logo" src="/web/img/basket.png" />
     <span>Picnic CSS</span>
   </a>
-  
+
   <!-- responsive-->
   <input id="bmenub" type="checkbox" class="show">
   <label for="bmenub" class="burger pseudo button">menu</label>
@@ -86,7 +86,7 @@ Just get anything you want inside the nav, most things should worl
 
 <nav class="demo">
   <a href="#" class="brand">Picnic CSS</a>
-  
+
   <!-- responsive-->
   <input id="bmenug" type="checkbox" class="show">
   <label for="bmenug" class="burger pseudo button">&#8801;</label>
@@ -98,7 +98,7 @@ Just get anything you want inside the nav, most things should worl
 
 <nav class="demo">
   <a href="#" class="brand">Picnic CSS</a>
-  
+
   <!-- responsive-->
   <input id="bmenug" type="checkbox" class="show">
   <label for="bmenug" class="burger pseudo button">&#8801;</label>
@@ -111,8 +111,3 @@ Just get anything you want inside the nav, most things should worl
     </select>
   </div>
 </nav>
-
-
-
-
-

@@ -1,113 +1,136 @@
 @import 'class';
 
-.grid {
-  @extend %grid;
-  
-  @include breakpoint($picnic-breakpoint) {
-    &.two > * {
-      @include grid-width(2);
-    }
-    &.three > * {
-      @include grid-width(3);
-    }
-    &.four > * {
-      @include grid-width(4);
-    }
-    &.five > * {
-      @include grid-width(5);
-    }
-    &.six > * {
-      @include grid-width(6);
-    }
-    
-    &.equal {
-      width: calc(100% + #{3 * $picnic-grid-gutter-horizontal});
-      
-      display: table;
-      table-layout: fixed;
+$picnic-grid-gutter: $picnic-separation !default;
+$picnic-grid-gutter-vertical: $picnic-grid-gutter !default;
+$picnic-grid-gutter-horizontal: $picnic-grid-gutter !default;
 
-      border-spacing: $picnic-grid-gutter-horizontal 0;
-      margin: 0 0 $picnic-grid-gutter-vertical #{-$picnic-grid-gutter-horizontal};
-      
-      > * {
-        display: table-cell;
-        vertical-align: top;
-        margin: 0;
-        float: none;
-        width: 100%;
-      }
+.flex {
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -$picnic-grid-gutter-horizontal;
+  width: calc(100% + #{$picnic-grid-gutter-horizontal});
+  flex-wrap: wrap;
+  transition: all .3s ease;
+}
+
+.flex > * {
+  box-sizing: border-box;
+  flex: 1 1 auto; /* Default for IE10 bug */
+  padding-left: $picnic-grid-gutter-horizontal;
+  padding-bottom: $picnic-grid-gutter-vertical;
+}
+
+.flex {
+  &[class*="one"],
+  &[class*="two"],
+  &[class*="three"],
+  &[class*="four"],
+  &[class*="five"],
+  &[class*="six"],
+  &[class*="seven"],
+  &[class*="eight"],
+  &[class*="nine"],
+  &[class*="ten"],
+  &[class*="eleven"],
+  &[class*="twelve"] {
+    > * {
+      flex-grow: 0;
     }
   }
 }
 
-
-
-
-
-.row > * {
-    margin: $picnic-separation 0;
+.flex.grow > * {
+  flex-grow: 1;
 }
 
-// From ungrid ( http://chrisnager.github.io/ungrid/ )
-@media (min-width: $picnic-breakpoint) {
+.center {
+  justify-content: center;
+}
 
-  // Each of the rows
-  .row {
-    width: calc(100% + 2 * #{$picnic-separation});
-    
-    display: table;
-    table-layout: fixed;
+.one > * { width: 100%; }
+.two > * { width: 50%; }
+.three > * { width: 33.33333%; }
+.four > * { width: 25%; }
+.five > * { width: 20%; }
+.six > * { width: 16.66666%; }
+.seven > * { width: 14.28571%; }
+.eight > * { width: 12.5%; }
+.nine > * { width: 11.11111%; }
+.ten > * { width: 10%; }
+.eleven > * { width: 9.09091%; }
+.twelve > * { width: 8.33333%; }
 
-    border-spacing: $picnic-separation 0;
-    margin: 0 0 $picnic-separation #{-$picnic-separation};
+@for $i from 5 through 20 {
+  @media all and (min-width: unquote($i + '00px')) {
+    .one-#{$i}00 > * { width: 100%; }
+    .two-#{$i}00 > * { width: 50%; }
+    .three-#{$i}00 > * { width: 33.33333%;}
+    .four-#{$i}00 > * { width: 25%; }
+    .five-#{$i}00 > * { width: 20%; }
+    .six-#{$i}00 > * { width: 16.66666%; }
+    .seven-#{$i}00 > * { width: 14.28571%; }
+    .eight-#{$i}00 > * { width: 12.5%; }
+    .nine-#{$i}00 > * { width: 11.11111%; }
+    .ten-#{$i}00 > * { width: 10%; }
+    .eleven-#{$i}00 > * { width: 9.09091%; }
+    .twelve-#{$i}00 > * { width: 8.33333%; }
   }
+}
 
-  // For every child directly below row
-  .row > * {
-    display: table-cell;
-    vertical-align: top;
-    margin: 0;
-    float: none;
+.full { width: 100%; }
+.half { width: 50%; }
+.third { width: 33.33333%; }
+.two-third { width: 66.66666%; }
+.fourth { width: 25%; }
+.three-fourth { width: 75%; }
+.fifth { width: 20%; }
+.two-fifth { width: 40%; }
+.three-fifth { width: 60%; }
+.four-fifth { width: 80%; }
+.sixth { width: 16.66666% }
+
+@for $i from 5 through 20 {
+  @media all and (min-width: unquote($i + '00px')) {
+    .full-#{$i}00 { width: 100%; }
+    .half-#{$i}00 { width: 50%; }
+    .third-#{$i}00 { width: 33.33333%; }
+    .two-third-#{$i}00 { width: 66.66666%; }
+    .fourth-#{$i}00 { width: 25%; }
+    .three-fourth-#{$i}00 { width: 75%; }
+    .fifth-#{$i}00 { width: 20%; }
+    .two-fifth-#{$i}00 { width: 40%; }
+    .three-fifth-#{$i}00 { width: 60%; }
+    .four-fifth-#{$i}00 { width: 80%; }
+    .sixth-#{$i}00 { width: 16.66666% }
   }
+}
 
-  // Don't display this one
-  .none {
-    display: none;
-  }
 
-  .half {
-    width: 50%;
-  }
+.off-half { margin-left: 50%; }
+.off-third { margin-left: 33.33333%; }
+.off-two-third { margin-left: 66.66666%; }
+.off-fourth { margin-left: 25%; }
+.off-three-fourth { margin-left: 75%; }
+.off-fifth { margin-left: 20%; }
+.off-two-fifth { margin-left: 40%; }
+.off-three-fifth { margin-left: 60%; }
+.off-four-fifth { margin-left: 80%; }
+.off-sixth { margin-left: 16.66666% }
+.off-none { margin-left: 0 }
 
-  .third {
-    width: 33.3333%;
-  }
-
-  .two-third {
-    width: 66.6666%;
-  }
-
-  .fourth {
-    width: 25%;
-  }
-
-  .three-fourth {
-    width: 75%;
-  }
-
-  .fifth {
-    width: 20%;
-  }
-
-  .two-fifth {
-    width: 40%;
-  }
-
-  .three-fifth {
-    width: 60%;
-  }
-
-  .four-fifth {
-    width: 80%;
+@for $i from 5 through 20 {
+  @media all and (min-width: unquote($i + '00px')) {
+    .off-full-#{$i}00 { margin-left: 100%; }
+    .off-half-#{$i}00 { margin-left: 50%; }
+    .off-third-#{$i}00 { margin-left: 33.33333%; }
+    .off-two-third-#{$i}00 { margin-left: 66.66666%; }
+    .off-fourth-#{$i}00 { margin-left: 25%; }
+    .off-three-fourth-#{$i}00 { margin-left: 75%; }
+    .off-fifth-#{$i}00 { margin-left: 20%; }
+    .off-two-fifth-#{$i}00 { margin-left: 40%; }
+    .off-three-fifth-#{$i}00 { margin-left: 60%; }
+    .off-four-fifth-#{$i}00 { margin-left: 80%; }
+    .off-sixth-#{$i}00 { margin-left: 16.66666% }
+    .off-none-#{$i}00 { margin-left: 0 }
   }
 }

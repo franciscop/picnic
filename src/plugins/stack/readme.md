@@ -45,7 +45,7 @@ They can also toggle:
 Stack different kind of elements
 
 ```html
-<div>
+<div class="third">
   <img class="stack" src="/web/img/forest.jpg">
   <a class="button stack">Full size</a>
 </div>
@@ -54,7 +54,7 @@ Stack different kind of elements
 A small form
 
 ```html
-<div>
+<div class="third">
   <input class="stack" placeholder="Name" />
   <input class="stack" placeholder="Email" />
   <button class="stack icon-paper-plane">
@@ -78,17 +78,16 @@ Pseudo buttons:
 Create nice and packed forms. [jsfiddle](http://jsfiddle.net/ddmv3dsr/4/)
 
 ```html
-<div>
+<div class="third">
   <input class="stack" placeholder="First name" />
   <input class="stack" placeholder="Last name" />
   <input class="stack" placeholder="Email" />
 </div><br>
 
-<div>
+<div class="third">
   <input class="stack" placeholder="Password" />
   <input class="stack" placeholder="Repeat password" />
   <textarea class="stack" placeholder="Biography"></textarea>
   <button class="stack icon-paper-plane">Send</button>
 </div>
 ```
-

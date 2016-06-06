@@ -71,18 +71,17 @@ nav .brand:active {
   }
 
 
-  
-// Display the grid with colors
-.grid, .row {
-  &.demo > * {
-    padding: .3em .6em;
-    background: $green;
-    text-align: center;
-    }
 
-  &.demo > :nth-child(2n) {
-    background: $aqua;
-  }
+// Display the grid with colors
+.flex.demo > * > * {
+  display: block;
+  padding: .3em 0;
+  background: $green;
+  text-align: center;
+}
+
+.flex.demo > *:nth-child(2n) > * {
+  background: $aqua;
 }
 
 .test > h2 {
@@ -149,9 +148,9 @@ section.row aside {
 
 
   .documentation {
-    
+
     article > h2 {
-      margin: 0 0 .6em;
+      margin: -2em 0 .6em;
       padding: 3em 0 0;
       line-height: 1;
     }
@@ -169,28 +168,30 @@ section.row aside {
     aside a.pseudo {
       color: #0074D9;
     }
-    
-    
-    // Also docs?
-    section.row {
+
+    > section {
       background: #fff;
       text-align: left;
       width: 90%;
-      max-width: 1200px;
+      max-width: 960px;
       margin: 0 auto;
       padding: 80px 0 0;
     }
-    
+
     article > h1 {
       margin: 0;
       padding: 0.6em 0;
       font-size: 2em;
       line-height: 1.5;
     }
-    
 
     aside a.button {
       display: block;
+    }
+
+    pre[class*="language-"] {
+      margin-top: 10px;
+      margin-bottom: 40px;
     }
 
     .index pre {
@@ -198,8 +199,8 @@ section.row aside {
       font-size: .9em;
     }
   }
-  
-  
+
+
   pre code {
     background: none;
   }
@@ -215,7 +216,7 @@ section.row aside {
 
 
 
-  
+
   /* Prism */
   /* http://prismjs.com/download.html?themes=prism&languages=markup+clike+javascript */
   /**
@@ -364,11 +365,3 @@ section.row aside {
     font-size: 1.2em;
     line-height: 1.3;
   }
-
-
-
-
-
-
-
-
