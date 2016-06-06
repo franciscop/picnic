@@ -9,13 +9,13 @@ $black: #333;
     .brand,
     .pseudo.button {
       color: inherit;
-      }
+    }
 
     .pseudo.button:hover {
       background: rgba(255, 255, 255, .2);
-      }
     }
   }
+}
 
 
 // Hero from the main page
@@ -29,9 +29,6 @@ $black: #333;
   padding: 1px 0;
   background: #B9DBFF url('/web/img/picnic.min.svg') no-repeat center center fixed;
   background-size: cover;
-
-  // Add a soft shadow to the hero
-  box-shadow: 0 0 0 10000em rgba(0, 0, 0, .05) inset;
 
 
   // Vertical center for the content

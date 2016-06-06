@@ -58,8 +58,8 @@ main {
 }
 
 // I like allowing scroll past end
-main {
-  padding-bottom: 100px;
+main .visual:last-child {
+  margin-bottom: 100px;
 }
 
 .intro {
