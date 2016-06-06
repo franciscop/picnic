@@ -79,7 +79,7 @@ After including the stylesheet as indicated in the `Getting started`:
 ```html
 <form>
   What's your favourite Picnic CSS feature?
-  
+
   <label>
     <select name="feature">
       <option value="semantic">    Semantic HTML5 </option>
@@ -88,9 +88,9 @@ After including the stylesheet as indicated in the `Getting started`:
       <option value="responsive">  Responsive     </option>
     </select>
   </label>
-  
+
   <input type="email" placeholder="Email to receive updates">
-  
+
   <button class="primary"> Subscribe! </button>
 </form>
 ```
@@ -103,7 +103,7 @@ If you don't see anything that seems *picnic.css exclusive*, that's because ther
 
 - **Only CSS3** is needed and your **HTML5** stays highly semantic*.
 
-- **Under 3kb** when minimized and gzipped and under 5kb with all plugins.
+- **Under 10kb** when minimized and gzipped with all plugins.
 
 - **Normalize.css** is used as a base, achieving a solid foundation.
 
