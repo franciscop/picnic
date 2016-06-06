@@ -19,7 +19,7 @@ block content
       a.keepgoing(href="#content") ▼
 
 
-    div.visual.flex.two#content
+    div.visual.flex.one.two-800#content
       div.content
         h2 Default html beauty
         p The native html elements get a boost so you don't need to write presentation classes mixed with your html.
@@ -52,7 +52,7 @@ block content
                   input(type="file")
 
 
-    div.visual.flex.two
+    div.visual.flex.one.two-800
       div.content
         h2 Made for the hackers
         p Install it with bower and you will be able to integrate Picnic in any project and make it work for you.
@@ -60,19 +60,16 @@ block content
         a.button.icon-g(href="https://github.com/picnicss/picnic" target="_blank") Github
       div
         :markdown
-          ```js
-          // Define your own main color
+          ```css
           $picnic-primary: #faa;
 
-          // Add picnic to your codebase
           @import 'bower/picnic/src/picnic';
 
-          // Create a new element
           .call-to-action {
             @extends %button;
           }
           ```
-    div.visual.flex.two
+    div.visual.flex.one.two-800
       div.content
         h2 It's alive!
         p Get the best experience for your users with many subtle and carefully crafted css transitions.
@@ -141,7 +138,7 @@ block content
                     label.button.dangerous(for="tabC-2") Back
 
 
-    div.visual.flex.two
+    div.visual.flex.one.two-800
       div.content
         h2 For your mobile
         p Picnic mission is to be <strong>under 10kb</strong> of responsive, compressed css for a <a href="https://www.youtube.com/watch?v=GDpmVUEjagg" target="_blank">better and faster</a> mobile load.
@@ -184,8 +181,21 @@ block content
             div
 
 
+    div.visual
+      div.content
+        h2 Showcase
+        div.flex.one.two-800
+          div
+            article.browser(data-title="Makers UPV")
+              iframe(src="http://www.makersupv.com/")
+            a.button(href="http://makersupv.com/" target="_blank") Makers UPV
+          div
+            article.browser(data-title="Umbrella JS")
+              iframe(src="http://umbrellajs.com/")
+            a.button(href="http://umbrellajs.com" target="_blank") Umbrella JS
 
-    div.visual.flex.two
+
+    div.visual.flex.one.two-800
       div.content
         h2 Open Source
         p If you love something set it free. This license allows you to use Picnic in a broad variety of projects.
