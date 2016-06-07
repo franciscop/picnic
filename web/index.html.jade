@@ -225,6 +225,11 @@ block content
     div.visual
       div.love With love,
       a.name(href="http://francisco.io/") Francisco Presencia
+      
+      
+    div.visual
+      div.love Hey Hacker News, interested on working with me?
+      a.email.name Hire me :)
 
 
   div.modal
@@ -294,3 +299,5 @@ block content
     window.onscroll = navScroll;
     navScroll();
     setTimeout(function(){ nav.classList.remove('loading'); }, 10);
+    var domain = 'francisco.io';
+    document.querySelector('.email').setAttribute('href', 'mailto:' + 'hire@' + domain);
