@@ -82,7 +82,7 @@ nav.imponent {
 
 ### Form elements
 
-Just get anything you want inside the nav, most things should worl
+Just get anything you want inside the nav, most things should work.
 
 <nav class="demo">
   <a href="#" class="brand">Picnic CSS</a>

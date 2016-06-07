@@ -92,17 +92,17 @@ $picnic-grid-gutter-horizontal: $picnic-grid-gutter !default;
 
 @for $i from 5 through 20 {
   @media all and (min-width: unquote($i + '00px')) {
-    .full-#{$i}00 { width: 100%; }
-    .half-#{$i}00 { width: 50%; }
-    .third-#{$i}00 { width: 33.33333%; }
-    .two-third-#{$i}00 { width: 66.66666%; }
-    .fourth-#{$i}00 { width: 25%; }
-    .three-fourth-#{$i}00 { width: 75%; }
-    .fifth-#{$i}00 { width: 20%; }
-    .two-fifth-#{$i}00 { width: 40%; }
-    .three-fifth-#{$i}00 { width: 60%; }
-    .four-fifth-#{$i}00 { width: 80%; }
-    .sixth-#{$i}00 { width: 16.66666%; }
+    .full-#{$i}00 { width: 100%; display: block; }
+    .half-#{$i}00 { width: 50%; display: block; }
+    .third-#{$i}00 { width: 33.33333%; display: block; }
+    .two-third-#{$i}00 { width: 66.66666%; display: block; }
+    .fourth-#{$i}00 { width: 25%; display: block; }
+    .three-fourth-#{$i}00 { width: 75%; display: block; }
+    .fifth-#{$i}00 { width: 20%; display: block; }
+    .two-fifth-#{$i}00 { width: 40%; display: block; }
+    .three-fifth-#{$i}00 { width: 60%; display: block; }
+    .four-fifth-#{$i}00 { width: 80%; display: block; }
+    .sixth-#{$i}00 { width: 16.66666%; display: block; }
     .none-#{$i}00 { display: none; }
   }
 }
