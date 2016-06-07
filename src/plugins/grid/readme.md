@@ -198,7 +198,11 @@ We have many classes like those. They are the size relative to the parent grid:
   <div><code>three-fifth</code></div>
   <div><code>four-fifth</code></div>
   <div><code>sixth</code></div>
+  <div><code>none</code></div>
 </div>
+
+The class `none` hides the element, useful for responsive layouts
+
 
 ### Responsive children
 
