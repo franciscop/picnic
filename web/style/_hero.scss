@@ -22,6 +22,8 @@ $black: #333;
 .hero {
   position: relative;
   width: 100%;
+
+  // http://stackoverflow.com/a/28151062/938236
   height: 100%;
   height: 100vh;
   transition: height 999999s;

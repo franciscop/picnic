@@ -88,6 +88,7 @@ $picnic-grid-gutter-horizontal: $picnic-grid-gutter !default;
 .three-fifth { width: 60%; }
 .four-fifth { width: 80%; }
 .sixth { width: 16.66666% }
+.none { display: none; }
 
 @for $i from 5 through 20 {
   @media all and (min-width: unquote($i + '00px')) {
@@ -101,7 +102,8 @@ $picnic-grid-gutter-horizontal: $picnic-grid-gutter !default;
     .two-fifth-#{$i}00 { width: 40%; }
     .three-fifth-#{$i}00 { width: 60%; }
     .four-fifth-#{$i}00 { width: 80%; }
-    .sixth-#{$i}00 { width: 16.66666% }
+    .sixth-#{$i}00 { width: 16.66666%; }
+    .none-#{$i}00 { display: none; }
   }
 }
 
