@@ -59,7 +59,7 @@
 <h2 id="card">Card</h2>
 
 <p>
-  <div class="row">
+  <div class="flex three">
     <div>
       <article class="card">
         <img src="web/img/forest.jpg">
@@ -117,7 +117,7 @@
       </article>
     </div>
   </div>
-  
+
   <div class="row">
     <div class="card">
       <p>This is a one line card</p>
@@ -125,8 +125,6 @@
     </div>
   </div>
 </p>
-
-
 
 
 <h2 id="checkbox">Checkbox</h2>
@@ -142,7 +140,7 @@
 
 <h2 id="dropimage">Dropimage</h2>
 
-<div class="row">
+<div class="flex three">
   <div>
     <label class="dropimage" style="background-image: url('web/img/forest.jpg');">
       <input name="filea" title="Drop image or click me" type="file">
@@ -177,106 +175,49 @@
 
 <h2 id="grid">Grid</h2>
 
-<div class="row demo">
-  <div>[half]</div>
-  <div>[half]</div>
-</div>
 
-<div class="row demo">
-  <div>[third]</div>
-  <div>[third]</div>
-  <div>[third]</div>
-</div>
-
-<div class="row demo">
-  <div>[fourth]</div>
-  <div>[fourth]</div>
-  <div>[fourth]</div>
-  <div>[fourth]</div>
-</div>
-
-<div class="row demo">
-  <div>[fifth]</div>
-  <div>[fifth]</div>
-  <div>[fifth]</div>
-  <div>[fifth]</div>
-  <div>[fifth]</div>
-</div>
-
-
-
-<div class="row demo">
-  <div class="half">.half</div>
-  <div>[empty]</div>
-</div>
-
-<div class="row demo">
-  <div class="third">.third</div>
-  <div>[empty]</div>
-</div>
-
-<div class="row demo">
-  <div class="fourth">.fourth</div>
-  <div>[empty]</div>
-</div>
-
-<div class="row demo">
-  <div class="fifth">.fifth</div>
-  <div>[empty]</div>
-</div>
-
-<div class="row demo">
-  <div class="two-fifth">.two-fifth</div>
-  <div>[empty]</div>
-</div>
-
-<div class="row demo">
-  <div class="three-fifth">.three-fifth</div>
-  <div>[empty]</div>
-</div>
-
-<div class="row demo">
-  <div class="two-third">.two-third</div>
-  <div>[empty]</div>
-</div>
-
-<div class="row demo">
-  <div class="three-fourth">.three-fourth</div>
-  <div>[empty]</div>
-</div>
-
-<div class="row demo">
-  <div class="four-fifth">.four-fifth</div>
-  <div>[empty]</div>
+<div class="flex two four-500 six-800 demo">
+  <div><span>1</span></div>
+  <div><span>2</span></div>
+  <div class="full half-500 third-800"><span>3</span></div>
+  <div><span>4</span></div>
+  <div><span>5</span></div>
+  <div><span>6</span></div>
+  <div><span>7</span></div>
+  <div><span>8</span></div>
+  <div><span>9</span></div>
+  <div class="off-half off-fourth-500 off-sixth-800"><span>10</span></div>
 </div>
 
 
 <h2 id="input">Input</h2>
 
-<div class="row">
+<div class="flex two">
   <div>
     <input placeholder="Full name" />
   </div><div>
     <input type="number" placeholder="Number" />
   </div>
 </div>
-<div class="row">
+<div class="flex two">
   <div>
     <input type="email" placeholder="Email"/>
   </div><div>
     <input type="password" placeholder="Password"/>
   </div>
 </div>
-<div class="row">
+<div class="flex two">
   <div>
     <input type="file"/>
   </div><div>
     <input type="color"/>
   </div>
 </div>
-  
-<div class="row">
-  <textarea placeholder="Full description"></textarea>
+
+<div class="flex one">
+  <div>
+    <textarea placeholder="Full description"></textarea>
+  </div>
 </div>
 
 
@@ -381,7 +322,7 @@
 
 <h3>Buttons stack</h3>
 
-<div class="row">
+<div class="flex four">
   <div>
     <span class="stack button icon-puzzle">Plugins</span>
     <span class="stack button icon-picture">Demo</span>
@@ -424,7 +365,7 @@
 
 <h3>Image stack</h3>
 
-<div class="row">
+<div class="flex four">
   <div>
     <img class="stack" src="web/img/forest.jpg">
     <a class="stack button">Forest</a>
@@ -445,7 +386,7 @@
 
 <h3>Form stack</h3>
 
-<div class="row">
+<div class="flex four">
   <div>
     <input class="stack" placeholder="Name" />
     <input class="stack" type="email" placeholder="Email" />
@@ -489,6 +430,7 @@
   </div>
 </div>
 
+
 <h2 id="table">Table</h2>
 
 <table class="primary">
@@ -526,7 +468,7 @@
 <h2>Tab</h2>
 
 
-<div class="row">
+<div class="flex two">
 
   <div class="tabs three">
     <input id='tab-1' type='radio' name='tabgroupB' checked />
@@ -622,7 +564,7 @@
 
 
 
-<div class="row">
+<div class="flex two">
 
   <div class="tabs two">
     <input id='tabA-1' type='radio' name='tabgroupA' checked />
@@ -648,7 +590,7 @@
         </div>
       </div>
     </div>
-  </div>  
+  </div>
 
 
 
@@ -699,7 +641,6 @@
     </div>
   </div>
 </div>
-
 
 
 <h2 id="tooltip">Tooltip</h2>
