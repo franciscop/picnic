@@ -68,7 +68,7 @@ This setup works neatly for newly created projects or for pages that you have to
 
 ## Browser support IE11+
 
-Bug reports and fixes only for IE11+. With IE8- usage [dropping *fast*](http://ux.stackexchange.com/a/643.61) and with IE9 and IE10 usage even below their older mate, it is time to start thinking about not supporting them anymore. For others, up to 2 previous versions are expected to be working, and everything that is not is definitely a bug.
+Bug reports and fixes only for IE11+. With IE8- usage [dropping *fast*](https://ux.stackexchange.com/questions/64250/do-websites-still-have-to-support-internet-explorer-8-and-below/#64361) and with IE9 and IE10 usage even below their older mate, it is time to start thinking about not supporting them anymore. For others, up to 2 previous versions are expected to be working, and everything that is not is definitely a bug.
 
 
 
