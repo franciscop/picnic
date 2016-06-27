@@ -28,7 +28,7 @@ The modal is pure CSS, which makes the html quite ugly actually. However it does
 
 
 
-### Javascript
+### JavaScript
 
 As always, there is **no javascript**. However, a little bit of javascript could enhance the experience allowing to close the modal by pressing `ESC`.
 

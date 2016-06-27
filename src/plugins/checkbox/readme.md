@@ -38,7 +38,7 @@ But you can also use a label and reference the original input:
 
 
 
-### Javascript
+### JavaScript
 
 You do not need javascript since we are using the native elements and not setting `display: none` purposefully. However, you can still use javascript as normal to retrieve the checked elements.
 

@@ -16,7 +16,7 @@ Other files in the root are:
 - CONTRIBUTING.md: this file
 - LICENSE: MIT license in here
 - Profcile: Heroku uses this to load the website
-- README.md: the file that shows some information for Github
+- README.md: the file that shows some information for GitHub
 - app.js: the website main file
 - bower.json: the package for using with bower
 - documentation.md: developer documentation
