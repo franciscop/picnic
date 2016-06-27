@@ -9,7 +9,7 @@ Allows you to add a file input element that can receive an image drop and clicks
 ```
 
 
-### Javascript
+### JavaScript
 
 This is the javascript you need for multiple elements:
 

@@ -60,7 +60,7 @@ You can always download the latest minimized version from github, clone the repo
 
 ## Wait, *invasive*?
 
-Many libraries rely upon adding classes to your already existing html elements, resulting in bloated code like `<button class="btn btn-primary">Hey</button>`. It would be easier if the buttons knew they are, well, *buttons*. Crazy eh?
+Many libraries rely upon adding classes to your already existing HTML elements, resulting in bloated code like `<button class="btn btn-primary">Hey</button>`. It would be easier if the buttons knew they are, well, *buttons*. Crazy eh?
 
 This setup works neatly for newly created projects or for pages that you have to build quick from scratch. It also allows for a much more intuitive extension of base elements.
 
