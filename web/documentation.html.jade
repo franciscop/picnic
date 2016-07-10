@@ -6,9 +6,10 @@ block title
 block content
   main.documentation#home
     section.flex.five
-      aside.none.fifth-1000
-        a.top.pseudo.button(href="#home" tabindex="-1") ▲ Up you go ▲
+      aside.full.fifth-1000
         h2 Contents
+        div.links.flex.two.three-500.five-800.one-1000
+        a.top.pseudo.button(href="#home" tabindex="-1") ▲ Up you go ▲
       article.full.four-fifth-1000
         include:markdown ../temp/readme.md
   
@@ -20,11 +21,11 @@ block content
       u(node).attr('id', u(node).attr('id').replace(/-/g, ''));
     });
     
-    u('aside').append(function(node){
-      return u('<a>')
-        .addClass('pseudo button stack')
+    u('aside .links').append(function(node){
+      return u('<div>').append(u('<a>')
+        .addClass('pseudo button')
         .attr('href', '#' + node.id)
-        .html(node.innerHTML);
+        .html(node.innerHTML));
     }, u('article h2'));
     
     u('pre .lang-html').each(function(node){

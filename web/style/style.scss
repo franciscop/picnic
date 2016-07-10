@@ -59,6 +59,21 @@ aside a.top.visible {
   font-size: 1em;
 }
 
+aside a.button {
+  text-align: left;
+}
+
+@media all and (max-width: 1000px) {
+  aside a.pseudo.top {
+    background: rgba(255, 255, 255, .8);
+    width: 100%;
+    left: 0;
+    text-align: center;
+    z-index: 100;
+  }
+}
+
+
 // Structure
 html,
 body,
