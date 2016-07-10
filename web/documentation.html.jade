@@ -1,12 +1,13 @@
 extends layout
 
 block title
-  title Plugins - Picnic CSS
+  title Documentation - Picnic CSS
   
 block content
-  main.documentation
+  main.documentation#home
     section.flex.five
       aside.none.fifth-1000
+        a.top.pseudo.button(href="#home" tabindex="-1") ▲ Up you go ▲
         h2 Contents
       article.full.four-fifth-1000
         include:markdown ../temp/readme.md
@@ -35,3 +36,17 @@ block content
       u(node).parent().before(u('<style>').html(u(node).parent().text()));
     });
     
+    
+    u('aside a').on('click', function(e){
+      try {
+        var to = u(e.currentTarget).attr('href');
+        u(to).first().scrollIntoView({behavior: "smooth"});
+        e.preventDefault();
+        history.replaceState(null, '', to);
+      } catch(err) {}
+    });
+  
+    u([window]).on('scroll', function(){
+      var top = this.scrollY || document.documentElement.scrollTop;
+      u('.top').toggleClass('visible', top > 1000);
+    }).trigger('scroll');

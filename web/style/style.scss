@@ -42,7 +42,22 @@ li {
   list-style-type: circle;
   }
 
+aside a.top {
+  font-size: 0;
+  position: fixed;
+  bottom: 0;
+  font-weight: bold;
+  width: 180px;
+  padding: .6em 0;
+  margin-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  transition: all .3s ease;
+}
 
+aside a.top.visible {
+  font-size: 1em;
+}
 
 // Structure
 html,

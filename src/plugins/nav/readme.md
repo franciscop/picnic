@@ -105,7 +105,7 @@ Just get anything you want inside the nav, most things should work.
 
 To set it on the top of the page instead of scrolling with the page, just do:
 
-```css
+```
 nav {
   position: absolute;
 }

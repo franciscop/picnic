@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><title>Plugins - Picnic CSS</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="css, library, css library, picnic, picnicss, html, html5, light, plugin"><meta name="description" content="A lighweight CSS library with nice defaults and many plugins to kickstart your projects"><meta property="og:image" content="http://picnicss.com/web/preview.png?1"><meta property="og:url" content="http://picnicss.com/"><meta property="og:title" content="Picnic CSS - A beautiful CSS library to kickstart your projects"><meta property="og:description" content="Includes buttons, cards, flexbox-based grid, responsive builder with a lot of options"><link rel="stylesheet" href="web/style/style.min.css"><link rel="icon" href="web/img/picnic_test.png" type="image/png"></head><body><nav class="loading"><a href="/" class="brand"><span>Picnic CSS</span></a><!-- responsiveness--><input id="bmenu" type="checkbox" class="show"><label for="bmenu" class="burger toggle pseudo button">menu</label><div class="menu"><a href="/tests" class="pseudo button icon-help-circled">Test</a><a href="https://github.com/picnicss/picnic" target="_blank" class="pseudo button icon-g">GitHub</a><a href="/documentation" class="button icon-file-code">Documentation</a></div></nav><main class="documentation"><section class="flex five"><aside class="none fifth-1000"><h2>Contents</h2></aside><article class="full four-fifth-1000"><h1 id="picnic-css">Picnic CSS</h1>
+<!DOCTYPE html><html><head><title>Documentation - Picnic CSS</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="css, library, css library, picnic, picnicss, html, html5, light, plugin"><meta name="description" content="A lighweight CSS library with nice defaults and many plugins to kickstart your projects"><meta property="og:image" content="http://picnicss.com/web/preview.png?1"><meta property="og:url" content="http://picnicss.com/"><meta property="og:title" content="Picnic CSS - A beautiful CSS library to kickstart your projects"><meta property="og:description" content="Includes buttons, cards, flexbox-based grid, responsive builder with a lot of options"><link rel="stylesheet" href="web/style/style.min.css"><link rel="icon" href="web/img/picnic_test.png" type="image/png"></head><body><nav class="loading"><a href="/" class="brand"><span>Picnic CSS</span></a><!-- responsiveness--><input id="bmenu" type="checkbox" class="show"><label for="bmenu" class="burger toggle pseudo button">menu</label><div class="menu"><a href="/tests" class="pseudo button icon-help-circled">Test</a><a href="https://github.com/picnicss/picnic" target="_blank" class="pseudo button icon-g">GitHub</a><a href="/documentation" class="button icon-file-code">Documentation</a></div></nav><main id="home" class="documentation"><section class="flex five"><aside class="none fifth-1000"><a href="#home" tabindex="-1" class="top pseudo button">▲ Up you go ▲</a><h2>Contents</h2></aside><article class="full four-fifth-1000"><h1 id="picnic-css">Picnic CSS</h1>
 <p>Picnic CSS is a lightweight and beautiful CSS library</p>
 <h2 id="buttons">Buttons</h2>
 <p>They can be of different colors and types:</p>
@@ -544,11 +544,10 @@ nav.demo {
 </code></pre>
 <h3 id="fixed-position">Fixed position</h3>
 <p>To set it on the top of the page instead of scrolling with the page, just do:</p>
-<pre><code class="lang-css">nav {
+<pre><code>nav {
   position: absolute;
 }
-</code></pre>
-<h2 id="radio-button">Radio button</h2>
+</code></pre><h2 id="radio-button">Radio button</h2>
 <p>A simple way of using radiobuttons</p>
 <pre><code class="lang-html">&lt;label&gt;
   &lt;input type=&#39;radio&#39; name=&quot;radiodemo&quot;&gt;
@@ -756,7 +755,22 @@ u('pre .lang-html').each(function(node){
 
 u('pre .lang-css').each(function(node){
   u(node).parent().before(u('<style>').html(u(node).parent().text()));
-});</script><script>window.onload = function(){
+});
+
+
+u('aside a').on('click', function(e){
+  try {
+    var to = u(e.currentTarget).attr('href');
+    u(to).first().scrollIntoView({behavior: "smooth"});
+    e.preventDefault();
+    history.replaceState(null, '', to);
+  } catch(err) {}
+});
+
+u([window]).on('scroll', function(){
+  var top = this.scrollY || document.documentElement.scrollTop;
+  u('.top').toggleClass('visible', top > 1000);
+}).trigger('scroll');</script><script>window.onload = function(){
 
   // Dropimage handler
   [].forEach.call(document.querySelectorAll('.dropimage'), function(img){
