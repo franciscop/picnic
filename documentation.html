@@ -472,23 +472,7 @@ nav.demo {
 <blockquote>
 <p>On these smaller versions it might have small glitches. Please see the top, page-wide nav to see the actual effect.  </p>
 </blockquote>
-<nav class="demo">
-  <a href="#" class="brand">
-    <img class="logo" src="/web/img/basket.png" />
-    <span>Picnic CSS</span>
-  </a>
-
-  <!-- responsive-->
-  <input id="bmenub" type="checkbox" class="show">
-  <label for="bmenub" class="burger pseudo button">menu</label>
-
-  <div class="menu">
-    <a href="#" class="pseudo button icon-picture">Demo</a>
-    <a href="#" class="button icon-puzzle">Plugins</a>
-  </div>
-</nav>
-
-<pre><code>&lt;nav class=&quot;demo&quot;&gt;
+<pre><code class="lang-html">&lt;nav class=&quot;demo&quot;&gt;
   &lt;a href=&quot;#&quot; class=&quot;brand&quot;&gt;
     &lt;img class=&quot;logo&quot; src=&quot;/web/img/basket.png&quot; /&gt;
     &lt;span&gt;Picnic CSS&lt;/span&gt;
@@ -503,7 +487,8 @@ nav.demo {
     &lt;a href=&quot;#&quot; class=&quot;button icon-puzzle&quot;&gt;Plugins&lt;/a&gt;
   &lt;/div&gt;
 &lt;/nav&gt;
-</code></pre><h3 id="responsive">Responsive</h3>
+</code></pre>
+<h3 id="responsive">Responsive</h3>
 <p>The nav is responsive by default. The text inside the <code>&lt;label&gt;</code> can be changed for the following characters for a different effect (<a href="https://css-tricks.com/three-line-menu-navicon/">source</a>):</p>
 <ul>
 <li>Identical to <code>&amp;#8801;</code> (safe on mobile): <label class="pseudo button">&#8801;</label></li>
@@ -529,35 +514,40 @@ nav.demo {
 </code></pre>
 <h3 id="form-elements">Form elements</h3>
 <p>Just get anything you want inside the nav, most things should work.</p>
-<nav class="demo">
-  <a href="#" class="brand">Picnic CSS</a>
+<pre><code class="lang-html">&lt;nav class=&quot;demo&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;brand&quot;&gt;Picnic CSS&lt;/a&gt;
 
-  <!-- responsive-->
-  <input id="bmenug" type="checkbox" class="show">
-  <label for="bmenug" class="burger pseudo button">&#8801;</label>
+  &lt;!-- responsive--&gt;
+  &lt;input id=&quot;bmenug&quot; type=&quot;checkbox&quot; class=&quot;show&quot;&gt;
+  &lt;label for=&quot;bmenug&quot; class=&quot;burger pseudo button&quot;&gt;&amp;#8801;&lt;/label&gt;
 
-  <div class="menu">
-    <input placeholder="Search plugins" />
-  </div>
-</nav>
+  &lt;div class=&quot;menu&quot;&gt;
+    &lt;input placeholder=&quot;Search plugins&quot; /&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+</code></pre>
+<pre><code class="lang-html">&lt;nav class=&quot;demo&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;brand&quot;&gt;Picnic CSS&lt;/a&gt;
 
-<nav class="demo">
-  <a href="#" class="brand">Picnic CSS</a>
+  &lt;!-- responsive--&gt;
+  &lt;input id=&quot;bmenug&quot; type=&quot;checkbox&quot; class=&quot;show&quot;&gt;
+  &lt;label for=&quot;bmenug&quot; class=&quot;burger pseudo button&quot;&gt;&amp;#8801;&lt;/label&gt;
 
-  <!-- responsive-->
-  <input id="bmenug" type="checkbox" class="show">
-  <label for="bmenug" class="burger pseudo button">&#8801;</label>
-
-  <div class="menu">
-    <select>
-      <option>Choose an option</option>
-      <option>Option 1</option>
-      <option>Option 2</option>
-    </select>
-  </div>
-</nav>
-
-
+  &lt;div class=&quot;menu&quot;&gt;
+    &lt;select&gt;
+      &lt;option&gt;Choose an option&lt;/option&gt;
+      &lt;option&gt;Option 1&lt;/option&gt;
+      &lt;option&gt;Option 2&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+</code></pre>
+<h3 id="fixed-position">Fixed position</h3>
+<p>To set it on the top of the page instead of scrolling with the page, just do:</p>
+<pre><code class="lang-css">nav {
+  position: absolute;
+}
+</code></pre>
 <h2 id="radio-button">Radio button</h2>
 <p>A simple way of using radiobuttons</p>
 <pre><code class="lang-html">&lt;label&gt;

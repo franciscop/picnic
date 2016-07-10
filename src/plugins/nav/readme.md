@@ -12,23 +12,7 @@ A responsive, pure css navigation menu:
 
 > On these smaller versions it might have small glitches. Please see the top, page-wide nav to see the actual effect.  
 
-<nav class="demo">
-  <a href="#" class="brand">
-    <img class="logo" src="/web/img/basket.png" />
-    <span>Picnic CSS</span>
-  </a>
-
-  <!-- responsive-->
-  <input id="bmenub" type="checkbox" class="show">
-  <label for="bmenub" class="burger pseudo button">menu</label>
-
-  <div class="menu">
-    <a href="#" class="pseudo button icon-picture">Demo</a>
-    <a href="#" class="button icon-puzzle">Plugins</a>
-  </div>
-</nav>
-
-```
+```html
 <nav class="demo">
   <a href="#" class="brand">
     <img class="logo" src="/web/img/basket.png" />
@@ -84,6 +68,7 @@ nav.imponent {
 
 Just get anything you want inside the nav, most things should work.
 
+```html
 <nav class="demo">
   <a href="#" class="brand">Picnic CSS</a>
 
@@ -95,7 +80,9 @@ Just get anything you want inside the nav, most things should work.
     <input placeholder="Search plugins" />
   </div>
 </nav>
+```
 
+```html
 <nav class="demo">
   <a href="#" class="brand">Picnic CSS</a>
 
@@ -111,3 +98,15 @@ Just get anything you want inside the nav, most things should work.
     </select>
   </div>
 </nav>
+```
+
+
+### Fixed position
+
+To set it on the top of the page instead of scrolling with the page, just do:
+
+```css
+nav {
+  position: absolute;
+}
+```
