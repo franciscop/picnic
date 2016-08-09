@@ -174,7 +174,8 @@ Or you can center them:
 
 ### Children sizing
 
-Now that we know how the parent (or grid) can modify itself and the elements below them, the children can also go rebel and behave on their own. Say that one children wants to be half of the size of the parent. Easy, just add the class `half`:
+Now that we know how the parent (or grid) can modify itself and the elements below them, the children can also go rebel and behave on their own. Say that a child wants to be half of the size of its parent element. Easy, just add the class `half`:
+
 
 ```html
 <div class="flex four demo">
