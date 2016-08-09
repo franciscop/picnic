@@ -200,8 +200,13 @@ section.row aside {
     line-height: 1;
   }
 
+  .flex > * {
+    padding-bottom: .3em;
+  }
+  
   aside a.pseudo {
     color: #0074D9;
+    margin: 0;
   }
 
   > section {
