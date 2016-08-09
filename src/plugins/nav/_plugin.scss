@@ -111,6 +111,10 @@ nav {
       transform: none;
       }
 
+    .menu {
+      z-index: 11;
+    }
+
     .show:checked ~ .burger {
       color: transparent;
       width: 100%;
