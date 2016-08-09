@@ -59,7 +59,7 @@ aside a.top.visible {
   font-size: 1em;
 }
 
-aside a.button {
+aside .links a.button {
   text-align: left;
 }
 
@@ -203,7 +203,7 @@ section.row aside {
   .flex > * {
     padding-bottom: .3em;
   }
-  
+
   aside a.pseudo {
     color: #0074D9;
     margin: 0;
