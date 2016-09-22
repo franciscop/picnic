@@ -155,13 +155,15 @@ $(&quot;form&quot;).on(&#39;submit&#39;, function(e){
 </code></pre>
 <h2 id="drop-image">Drop image</h2>
 <p>Allows you to add a file input element that can receive an image drop and clicks with native elements. However, it needs some javascript to show the dropped image:</p>
-<pre><code class="lang-html">&lt;label class=&quot;dropimage&quot;&gt;
-  &lt;input title=&quot;Drop image or click me&quot; type=&quot;file&quot;&gt;
-&lt;/label&gt;
+<pre><code class="lang-html">&lt;div style=&quot;width: 200px&quot;&gt; &lt;!-- this div just for demo display --&gt;
+  &lt;label class=&quot;dropimage&quot;&gt;
+    &lt;input title=&quot;Drop image or click me&quot; type=&quot;file&quot;&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
 </code></pre>
 <h3 id="javascript">JavaScript</h3>
 <p>This is the javascript you need for multiple elements:</p>
-<pre><code class="lang-js">document.addEventListener(&quot;DOMContentLoaded&quot;, function() { 
+<pre><code class="lang-js">document.addEventListener(&quot;DOMContentLoaded&quot;, function() {
   [].forEach.call(document.querySelectorAll(&#39;.dropimage&#39;), function(img){
     img.onchange = function(e){
       var inputfile = this, reader = new FileReader();

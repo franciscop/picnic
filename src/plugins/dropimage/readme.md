@@ -3,9 +3,11 @@
 Allows you to add a file input element that can receive an image drop and clicks with native elements. However, it needs some javascript to show the dropped image:
 
 ```html
-<label class="dropimage">
-  <input title="Drop image or click me" type="file">
-</label>
+<div style="width: 200px"> <!-- this div just for demo display -->
+  <label class="dropimage">
+    <input title="Drop image or click me" type="file">
+  </label>
+</div>
 ```
 
 
@@ -14,7 +16,7 @@ Allows you to add a file input element that can receive an image drop and clicks
 This is the javascript you need for multiple elements:
 
 ```js
-document.addEventListener("DOMContentLoaded", function() { 
+document.addEventListener("DOMContentLoaded", function() {
   [].forEach.call(document.querySelectorAll('.dropimage'), function(img){
     img.onchange = function(e){
       var inputfile = this, reader = new FileReader();
@@ -65,4 +67,3 @@ Make it smaller
   <input name="filea" title="Drop image or click me" type="file">
 </label>
 ```
-
