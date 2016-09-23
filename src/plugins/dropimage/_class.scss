@@ -16,6 +16,7 @@ $picnic-dropimage-background-color: #ddd !default;
 // http://dopiaza.org/tools/datauri/index.php
 $picnic-dropimage-background-image: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NDAiIGhlaWdodD0iNjQwIiB2ZXJzaW9uPSIxLjEiPjxnIHN0eWxlPSJmaWxsOiMzMzMiPjxwYXRoIGQ9Ik0gMTg3IDIzMCBDIDE3NSAyMzAgMTY1IDI0MCAxNjUgMjUyIEwgMTY1IDMwMCBMIDE2NSA0MDggQyAxNjUgNDIwIDE3NSA0MzAgMTg3IDQzMCBMIDQ2MyA0MzAgQyA0NzUgNDMwIDQ4NSA0MjAgNDg1IDQwOCBMIDQ4NSAzMDAgTCA0ODUgMjUyIEMgNDg1IDI0MCA0NzUgMjMwIDQ2MyAyMzAgTCAxODcgMjMwIHogTSAzNjAgMjU2IEEgNzAgNzIgMCAwIDEgNDMwIDMyOCBBIDcwIDcyIDAgMCAxIDM2MCA0MDAgQSA3MCA3MiAwIDAgMSAyOTAgMzI4IEEgNzAgNzIgMCAwIDEgMzYwIDI1NiB6Ii8+PGNpcmNsZSBjeD0iMzYwIiBjeT0iMzMwIiByPSI0MSIvPjxwYXRoIGQ9Im0yMDUgMjI1IDUtMTAgMjAgMCA1IDEwLTMwIDAiLz48cGF0aCBkPSJNMjg1IDIwMEwyNzAgMjI1IDM3NiAyMjUgMzYxIDIwMCAyODUgMjAwek0zMTAgMjA1TDMzNyAyMDUgMzM3IDIxOCAzMTAgMjE4IDMxMCAyMDV6Ii8+PHBhdGggZD0ibTQwNSAyMjUgNS0xMCAyMCAwIDUgMTAtMzAgMCIvPjwvZz48L3N2Zz4=' !default;
 
+$picnic-dropimage-radius: $picnic-button-radius !default;
 
 
 // Styles
@@ -25,6 +26,7 @@ $picnic-dropimage-background-image: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0ia
 
   @extend %button;
 
+
   position: relative;
   display: block;
   padding: 0;
@@ -33,6 +35,7 @@ $picnic-dropimage-background-image: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0ia
   overflow: hidden;
   cursor: pointer;
   border: 0;
+  border-radius: $picnic-dropimage-radius;
 
   background-color: $picnic-dropimage-background-color;
   background-size: cover;
@@ -48,6 +51,7 @@ $picnic-dropimage-background-image: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0ia
     margin: 0;
     padding: 0;
     opacity: 0;
+    cursor: pointer;
     position: absolute;
-    }
   }
+}

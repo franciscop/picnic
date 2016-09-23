@@ -10,6 +10,7 @@ $picnic-button-hover: inset 0 0 0 99em rgba($picnic-white, $picnic-transparency)
 $picnic-button-click: inset 0 0 0 99em rgba($picnic-black, $picnic-transparency) !default;
 $picnic-button-pseudo-hover: inset 0 0 0 99em rgba($picnic-black, $picnic-transparency / 2) !default;
 $picnic-button-transition: $picnic-transition !default;
+$picnic-button-radius: $picnic-label-radius !default;
 
 
 
@@ -20,10 +21,11 @@ $picnic-button-transition: $picnic-transition !default;
   margin: $picnic-button-margin;
   cursor: pointer;
   transition: $picnic-button-transition;
+  border-radius: $picnic-button-radius;
 
   // Avoid the input { height: 2.2 }
   height: auto;
-  
+
   // This avoids a nasty "hover" issue (slightly taller on hover)
   box-shadow: 0 0 rgba(0, 0, 0, 0) inset;
 
