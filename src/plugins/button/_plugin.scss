@@ -1,7 +1,4 @@
-// button, .button, [type="submit"]
-
-
-// Impor the important code
+// Inherit from the class
 @import 'class';
 
 
@@ -9,25 +6,23 @@
 :checked + .toggle,
 :checked + .toggle:hover {
   box-shadow: $picnic-button-click;
-  }
+}
 
 // Hide the checkbox/radiobutton
 // Handle with care
 [type] + .toggle {
   padding: $picnic-button-padding;
   margin-right: 0;
-  
+
   &:after,
   &:before {
     display: none;
-    }
   }
+}
 
 // Implement the abstract class for real elements
 button,
 .button,
 [type=submit] {
   @extend %button;
-  }
-
-
+}

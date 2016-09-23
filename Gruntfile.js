@@ -43,7 +43,7 @@ module.exports = function (grunt) {
       taskName: {
         options: {
           position: 'top',
-          banner: '/* Version ' + grunt.file.readJSON('package.json').version + ' */',
+          banner: '/* Picnic CSS v' + grunt.file.readJSON('package.json').version + ' http://picnicss.com/ */',
           linebreak: true
         },
         files: { src: 'picnic.min.css' }

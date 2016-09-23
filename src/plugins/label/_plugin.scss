@@ -1,45 +1,5 @@
-// Label of text
-$picnic-label-padding: $picnic-separation / 2 $picnic-separation * 1.5 !default;
-$picnic-label-radius: $picnic-radius !default;
-
-// Styles
-%label {
-  display: inline-block;
-  text-align: center;
-  margin: 0;
-  padding: $picnic-label-padding;
-  vertical-align: middle;
-  background: $picnic-primary;
-  color: $picnic-white;
-  border: 0;
-  border-radius: $picnic-label-radius;
-  width: auto;
-
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  
-  // Colors
-  &.success {
-    background: $picnic-success;
-    }
-
-  &.warning {
-    background: $picnic-warning;
-    }
-
-  &.error {
-    background: $picnic-error;
-    }
-
-  &.pseudo {
-    background: transparent;
-    color: $picnic-black;
-    }
-  }
+// Inherit from the class
+@import 'class';
 
 .label {
   @extend %label;
@@ -48,4 +8,4 @@ $picnic-label-radius: $picnic-radius !default;
   padding: .4em .6em;
   margin-left: 1em;
   line-height: 1;
-  }
+}
