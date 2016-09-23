@@ -39,9 +39,10 @@ $picnic-nav-sides: .6em !default;
 
     position: relative;
     top: 50%;
+    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
   }
-  
+
   .burger {
     display: none;
   }
@@ -49,7 +50,7 @@ $picnic-nav-sides: .6em !default;
   .brand {
     font-weight: 700;
     float: left;
-    padding: 0 .6em;
+    padding: 0 $picnic-nav-sides;
     max-width: 50%;
     white-space: nowrap;
     color: $picnic-black;
@@ -71,6 +72,6 @@ $picnic-nav-sides: .6em !default;
   }
 
   .menu > * {
-    margin-right: .3em;
+    margin-right: $picnic-nav-sides;
   }
 }
