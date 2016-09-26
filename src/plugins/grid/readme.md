@@ -26,7 +26,7 @@ You can create complex, flexible layouts with it. Just resize the browser to see
 ```
 
 
-### Equaly sized columns
+### Equally sized columns
 
 Let's start through the basics though. Just a container with equally sized children:
 
@@ -68,7 +68,7 @@ If instead you prefer certain column count, such as in a gallery where it can sp
 ```
 
 
-The columns will keep being equaly spaced, but this time with the width corresponding to the column counter. You can use any number as a class from one to twelve:
+The columns will keep being equally spaced, but this time with the width corresponding to the column counter. You can use any number as a class from one to twelve:
 
 
 <div class="flex six">
