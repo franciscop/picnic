@@ -16,6 +16,10 @@ body {
   background: $picnic-white;
 }
 
+main {
+  display: block;
+}
+
 h1,
 h2,
 h3,
@@ -24,18 +28,18 @@ h5,
 h6 {
   margin: 0;
   padding: $picnic-separation 0;
-  }
+}
 
 li {
   margin: 0 0 $picnic-separation / 2;
-  }
+}
 
 a {
   color: $picnic-primary;
   text-decoration: none;
   box-shadow: none;
   transition: $picnic-transition;
-  }
+}
 
 
 // The <pre> doesn't have a nice style from Normalize.css
@@ -44,7 +48,7 @@ code {
   padding: $picnic-separation / 2 $picnic-separation;
   font-size: .8em;
   background: #f5f5f5;
-  }
+}
 
 pre {
   text-align: left;
@@ -54,15 +58,15 @@ pre {
 
   code {
     padding: 0;
-    }
   }
+}
 
 blockquote {
   padding: 0 0 0 1em;
   margin: 0 0 0 .1em;
   box-shadow: inset 5px 0 rgba($picnic-black, .3);
-  }
+}
 
 label {
   cursor: pointer;
-  }
+}
