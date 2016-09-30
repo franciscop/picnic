@@ -78,13 +78,13 @@ block content
         a.button.icon-help-circled(href="/tests") Tests
       div
         div.tabs.three(style="text-align: center;")
-          input#tabC-1(type='radio' name='tabgroupC' checked)
+          input#tabC-1(type='radio' name='tabgroupC' checked aria-hidden="true")
           label.pseudo.button.toggle(for="tabC-1") 1
           span  / 
-          input#tabC-2(type='radio' name='tabgroupC')
+          input#tabC-2(type='radio' name='tabgroupC' aria-hidden="true")
           label.pseudo.button.toggle(for="tabC-2") 2
           span  / 
-          input#tabC-3(type='radio' name='tabgroupC')
+          input#tabC-3(type='radio' name='tabgroupC' aria-hidden="true")
           label.pseudo.button.toggle(for="tabC-3") 3
           div.row
             div.card
@@ -113,10 +113,10 @@ block content
                   option(value="keysmash") Keyboard smashing
               section
                 label
-                  input(type="radio" name="like" value="a lot")
+                  input(type="radio" name="like" value="a lot" aria-hidden="true")
                   span.checkable I love Picnic!
                 label
-                  input(type="radio" name="like" value="nothing")
+                  input(type="radio" name="like" value="nothing" aria-hidden="true")
                   span.checkable I've seen better...
               footer
                 label.button(for="tabC-3") Next
