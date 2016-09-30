@@ -4,6 +4,7 @@ $picnic-nav-height: 3em !default;
 $picnic-nav-shadow: $picnic-shadow !default;
 $picnic-nav-position: fixed !default;
 $picnic-nav-sides: .6em !default;
+$picnic-nav-responsive: true !default;
 
 
 // Vertical align based on
@@ -41,10 +42,6 @@ $picnic-nav-sides: .6em !default;
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-  }
-
-  .burger {
-    display: none;
   }
 
   .brand {

@@ -5,62 +5,64 @@ nav {
   @extend %nav;
 }
 
-.burger {
-  display: none;
+@if $picnic-nav-responsive {
+  nav .burger {
+    display: none;
   }
 
-@media all and (max-width: $picnic-breakpoint) {
+  @media all and (max-width: $picnic-breakpoint) {
 
-  nav {
-    .burger {
-      display: inline-block;
-      cursor: pointer;
-      bottom: -1000em;
-      margin: 0;
-    }
+    nav {
+      .burger {
+        display: inline-block;
+        cursor: pointer;
+        bottom: -1000em;
+        margin: 0;
+      }
 
-    .burger ~ .menu,
-    .show:checked ~ .burger {
-      position: fixed;
-      min-height: 100%;
-      width: 0;
-      overflow: hidden;
-      top: 0;
-      right: 0;
-      bottom: -1000em;
-      margin: 0;
-      background: $picnic-white;
-      transition: all .3s ease;
-      transform: none;
-    }
+      .burger ~ .menu,
+      .show:checked ~ .burger {
+        position: fixed;
+        min-height: 100%;
+        width: 0;
+        overflow: hidden;
+        top: 0;
+        right: 0;
+        bottom: -1000em;
+        margin: 0;
+        background: $picnic-white;
+        transition: all .3s ease;
+        transform: none;
+      }
 
-    .burger ~ .menu {
-      z-index: 11;
-    }
+      .burger ~ .menu {
+        z-index: 11;
+      }
 
-    .show:checked ~ .burger {
-      color: transparent;
-      width: 100%;
-      border-radius: 0;
-      background: rgba(0, 0, 0, .2);
-      transition: all .3s ease;
-    }
+      .show:checked ~ .burger {
+        color: transparent;
+        width: 100%;
+        border-radius: 0;
+        background: rgba(0, 0, 0, .2);
+        transition: all .3s ease;
+      }
 
-    .show:checked ~ .menu {
-      width: 70%;
-      overflow: auto;
-      transition: all .3s ease;
-      height: 100vh;
-    }
+      .show:checked ~ .menu {
+        width: 70%;
+        overflow: auto;
+        transition: all .3s ease;
+        height: 100vh;
+      }
 
-    .burger ~ .menu > * {
-      display: block;
-      margin: $picnic-separation / 2;
-      text-align: left;
-    }
+      .burger ~ .menu > * {
+        display: block;
+        margin: $picnic-separation / 2;
+        text-align: left;
+      }
 
-    .burger ~ .menu > a {
-      padding: $picnic-separation / 2 $picnic-separation * 1.5;
+      .burger ~ .menu > a {
+        padding: $picnic-separation / 2 $picnic-separation * 1.5;
+      }
     }
   }
 }

@@ -8,6 +8,8 @@ $picnic-grid-children: 1000;
 $picnic-grid-off: 500 800;
 $picnic-grid-count: one two three four five six;
 
+$picnic-nav-responsive: false;
+
 // Get the icons from fontello
 // You need to import this first
 //@import 'font/fontello';
@@ -131,6 +133,11 @@ section.row aside {
   width: 200px;
 }
 
+@media all and (max-width: 500px) {
+  .icon-help-circled {
+    display: none;
+  }
+}
 
 
 pre {
