@@ -7,10 +7,7 @@ $picnic-grid-sizes: 500 600 800 1000 1200;
 
 // Get the icons from fontello
 // You need to import this first
-@import 'font/fontello';
-
-// Get the library picnic css
-//@import '../../src/picnic';
+//@import 'font/fontello';
 
 // Imports the base variable styles
 @import '../../src/themes/default/theme';
@@ -21,7 +18,7 @@ $picnic-grid-sizes: 500 600 800 1000 1200;
 // Generic styles for things like <body>, <a> and others
 // It also overwrites normalize.css a bit
 @import '../../src/plugins/generic/plugin';
-@import '../../src/plugins/fontello/plugin';
+// @import '../../src/plugins/fontello/plugin';
 
 // Simple elements
 @import '../../src/plugins/label/plugin';
@@ -34,15 +31,15 @@ $picnic-grid-sizes: 500 600 800 1000 1200;
 @import '../../src/plugins/checkbox/plugin';
 
 // Components
-@import '../../src/plugins/table/plugin';
+//@import '../../src/plugins/table/plugin';
 @import '../../src/plugins/grid/plugin';
 
 // Extra
 @import '../../src/plugins/nav/plugin';
 
-@import '../../src/plugins/stack/plugin';
+//@import '../../src/plugins/stack/plugin';
 @import '../../src/plugins/card/plugin';
-@import '../../src/plugins/modal/plugin';
+//@import '../../src/plugins/modal/plugin';
 
 @import '../../src/plugins/dropimage/plugin';
 @import '../../src/plugins/tabs/plugin';
@@ -53,7 +50,6 @@ $picnic-grid-sizes: 500 600 800 1000 1200;
 // Our own plugins, extending some of picnic's
 @import 'hero';
 @import 'visual';
-@import 'gallery';
 
 
 // Make a title and its text closer together

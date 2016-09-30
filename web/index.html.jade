@@ -91,9 +91,8 @@ block content
               header
                 h3 Registration form example
               section Obviously agree with the 
-                a
-                  strong
-                    label.tooltip-top.link(for="modal_demo" data-tooltip="Tooltip says: Please click me?") terms and condition
+                a(href="#")
+                  strong(data-tooltip="Clicking me is futile") terms and condition
               section
                 label
                   input(type="checkbox" name="check")
@@ -226,18 +225,6 @@ block content
       div.love With love,
       a.name(href="http://francisco.io/") Francisco Presencia
 
-  div.modal
-    input#modal_demo(type="checkbox")
-    label.overlay(for="modal_demo")
-    article
-      header
-        h3 I am a pure CSS modal
-        label.close(for="modal_demo") ×
-      section.content
-        p Just showing what I am capable of doing. Do you like it?
-      footer
-        label.button.success(for="modal_demo") Yes!
-        a.button.dangerous.tooltip-top(href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank") It sucks
 
   script.
 
