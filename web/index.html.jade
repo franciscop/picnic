@@ -138,7 +138,7 @@ block content
       div.content
         h2 For your mobile
         p Picnic mission is to be <strong>under 10kb</strong> of responsive, compressed css for a <a href="https://www.youtube.com/watch?v=GDpmVUEjagg" target="_blank">better and faster</a> mobile load.
-        p Check the network usage of this page (F12), this page is under 20kb including images (but <a href="https://github.com/picnicss/picnic/issues/89">excluding the showcase</a>).
+        p Check the network usage of this page (F12), this page is under 10kb including images (but <a href="https://github.com/picnicss/picnic/issues/89">excluding the showcase</a>).
       div
         div.flex.demo
           div
@@ -218,24 +218,24 @@ block content
       a.name(href="http://francisco.io/") Francisco Presencia
 
 
-  script.
-
-    // Transparent nav handler
-    var nav = document.querySelector('nav');
-    function navScroll(){
-      var className = 'transparent';
-      var top = window.scrollY ? window.scrollY : document.documentElement.scrollTop;
-      if (top > 0) {
-        nav.classList.remove(className);
-        [].forEach.call(document.querySelectorAll('[data-src]'), function(iframe){
-          iframe.setAttribute('src', iframe.getAttribute('data-src'));
-          iframe.removeAttribute('data-src');
-        });
-      } else {
-        nav.classList.add('transparent');
-        nav.classList.add(className);
-      }
-    };
-    window.onscroll = navScroll;
-    navScroll();
-    setTimeout(function(){ nav.classList.remove('loading'); }, 10);
+  //- script.
+  //- 
+  //-   // Transparent nav handler
+  //-   var nav = document.querySelector('nav');
+  //-   function navScroll(){
+  //-     var className = 'transparent';
+  //-     var top = window.scrollY ? window.scrollY : document.documentElement.scrollTop;
+  //-     if (top > 0) {
+  //-       nav.classList.remove(className);
+  //-       [].forEach.call(document.querySelectorAll('[data-src]'), function(iframe){
+  //-         iframe.setAttribute('src', iframe.getAttribute('data-src'));
+  //-         iframe.removeAttribute('data-src');
+  //-       });
+  //-     } else {
+  //-       nav.classList.add('transparent');
+  //-       nav.classList.add(className);
+  //-     }
+  //-   };
+  //-   window.onscroll = navScroll;
+  //-   navScroll();
+  //-   setTimeout(function(){ nav.classList.remove('loading'); }, 10);
