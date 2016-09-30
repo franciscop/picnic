@@ -257,7 +257,7 @@ They can also have the minimum screen size when they start working:
 <div class="flex three four-1000 demo">
   <div><span>1</span></div>
   <div><span>2</span></div>
-  <div class="off-fourth-1000"><span>3</span></div>
+  <div class="off-fourth-800"><span>3</span></div>
 </div>
 ```
 

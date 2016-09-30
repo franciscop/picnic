@@ -12,7 +12,8 @@ html
       //- meta(property="og:url" content="http://picnicss.com/")
       //- meta(property="og:title" content="Picnic CSS - A beautiful CSS library to kickstart your projects")
       //- meta(property="og:description" content="Includes buttons, cards, flexbox-based grid, responsive builder with a lot of options")
-    link(rel='stylesheet', href='web/style/style.min.css')
+    link(rel='stylesheet' href='web/style/style.min.css')
+    link(rel='stylesheet' href='web/prism.css' media="bogus")
     link(rel="icon", href="web/img/picnic_test.png", type="image/png")
 
   body
@@ -46,10 +47,6 @@ html
           });
         };
     
-    //- Color for the code snippets
-    script(async defer src="web/prism.js")
-      /* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript */
-      
     //- script.
     //-   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     //-   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

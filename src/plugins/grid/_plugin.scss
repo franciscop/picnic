@@ -5,6 +5,8 @@ $picnic-grid-gutter-vertical: $picnic-grid-gutter !default;
 $picnic-grid-gutter-horizontal: $picnic-grid-gutter !default;
 
 $picnic-grid-sizes: 500 600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000 !default;
+$picnic-grid-children: $picnic-grid-sizes !default;
+$picnic-grid-off: $picnic-grid-sizes !default;
 
 .flex {
   display: -ms-flexbox;
@@ -92,7 +94,7 @@ $picnic-grid-sizes: 500 600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 
 .sixth { width: 16.66666% }
 .none { display: none; }
 
-@each $i in $picnic-grid-sizes {
+@each $i in $picnic-grid-children {
   @media all and (min-width: unquote($i + 'px')) {
     .full-#{$i} { width: 100%; display: block; }
     .half-#{$i} { width: 50%; display: block; }
@@ -122,7 +124,7 @@ $picnic-grid-sizes: 500 600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 
 .off-sixth { margin-left: 16.66666% }
 .off-none { margin-left: 0 }
 
-@each $i in $picnic-grid-sizes {
+@each $i in $picnic-grid-off {
   @media all and (min-width: unquote($i + 'px')) {
     .off-full-#{$i} { margin-left: 100%; }
     .off-half-#{$i} { margin-left: 50%; }
