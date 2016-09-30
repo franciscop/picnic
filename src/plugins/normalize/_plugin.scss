@@ -1,3 +1,7 @@
+$picnic-normalize-display: true !default;
+$picnic-normalize-ie: true !default;
+
+
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
@@ -27,19 +31,21 @@ body {
  * Correct `block` display not defined for `main` in IE 11.
  */
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
-  display: block;
+@if $picnic-normalize-display {
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  main,
+  nav,
+  section,
+  summary {
+    display: block;
+  }
 }
 
 /**
@@ -47,12 +53,14 @@ summary {
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
 
-audio,
-canvas,
-progress,
-video {
-  display: inline-block; /* 1 */
-  vertical-align: baseline; /* 2 */
+@if $picnic-normalize-display {
+  audio,
+  canvas,
+  progress,
+  video {
+    display: inline-block; /* 1 */
+    vertical-align: baseline; /* 2 */
+  }
 }
 
 /**
@@ -70,10 +78,13 @@ audio:not([controls]) {
  * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
  */
 
-[hidden],
-template {
-  display: none;
+@if $picnic-normalize-ie {
+  [hidden],
+  template {
+    display: none;
+  }
 }
+
 
 /* Links
    ========================================================================== */
@@ -82,8 +93,10 @@ template {
  * Remove the gray background color from active links in IE 10.
  */
 
-a {
-  background: transparent;
+@if $picnic-normalize-ie {
+  a {
+    background: transparent;
+  }
 }
 
 /**
@@ -102,8 +115,10 @@ a:hover {
  * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
 
-abbr[title] {
-  border-bottom: 1px dotted;
+@if $picnic-normalize-ie {
+  abbr[title] {
+    border-bottom: 1px dotted;
+  }
 }
 
 /**
@@ -137,9 +152,11 @@ h1 {
  * Address styling not present in IE 8/9.
  */
 
-mark {
-  background: #ff0;
-  color: #000;
+@if $picnic-normalize-ie {
+  mark {
+    background: #ff0;
+    color: #000;
+  }
 }
 
 /**
@@ -177,16 +194,20 @@ sub {
  * Remove border when inside `a` element in IE 8/9/10.
  */
 
-img {
-  border: 0;
+@if $picnic-normalize-ie {
+  img {
+    border: 0;
+  }
 }
 
 /**
  * Correct overflow not hidden in IE 9/10/11.
  */
 
-svg:not(:root) {
-  overflow: hidden;
+@if $picnic-normalize-ie {
+  svg:not(:root) {
+    overflow: hidden;
+  }
 }
 
 /* Grouping content
@@ -195,9 +216,10 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 8/9 and Safari.
  */
-
-figure {
-  margin: 1em 40px;
+@if $picnic-normalize-ie {
+  figure {
+    margin: 1em 40px;
+  }
 }
 
 /**
@@ -258,9 +280,10 @@ textarea {
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
-
-button {
-  overflow: visible;
+@if $picnic-normalize-ie {
+  button {
+    overflow: visible;
+  }
 }
 
 /**
@@ -326,11 +349,12 @@ input {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
+@if $picnic-normalize-ie {
+  input[type="checkbox"],
+  input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+  }
 }
 
 /**
@@ -367,18 +391,20 @@ fieldset {
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
-
-legend {
-  border: 0; /* 1 */
-  padding: 0; /* 2 */
+@if $picnic-normalize-ie {
+  legend {
+    border: 0; /* 1 */
+    padding: 0; /* 2 */
+  }
 }
 
 /**
  * Remove default vertical scrollbar in IE 8/9/10/11.
  */
-
-textarea {
-  overflow: auto;
+@if $picnic-normalize-ie {
+  textarea {
+    overflow: auto;
+  }
 }
 
 /**
