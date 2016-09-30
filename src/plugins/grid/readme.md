@@ -231,7 +231,7 @@ The children can also have one offset (empty space) before it. They are built ad
 
 We have many classes like those. They are the size of the offset relative to the parent grid:
 
-<div class="flex two three-600 six-1100 demo">
+<div class="flex two three-600 six-1200 demo">
   <div><code>off-none</code></div>
   <div><code>off-half</code></div>
   <div><code>off-third</code></div>

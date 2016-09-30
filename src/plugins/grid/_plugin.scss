@@ -4,6 +4,8 @@ $picnic-grid-gutter: $picnic-separation !default;
 $picnic-grid-gutter-vertical: $picnic-grid-gutter !default;
 $picnic-grid-gutter-horizontal: $picnic-grid-gutter !default;
 
+$picnic-grid-sizes: 500 600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000 !default;
+
 .flex {
   display: -ms-flexbox;
   display: flex;
@@ -60,20 +62,20 @@ $picnic-grid-gutter-horizontal: $picnic-grid-gutter !default;
 .eleven > * { width: 9.09091%; }
 .twelve > * { width: 8.33333%; }
 
-@for $i from 5 through 20 {
-  @media all and (min-width: unquote($i + '00px')) {
-    .one-#{$i}00 > * { width: 100%; }
-    .two-#{$i}00 > * { width: 50%; }
-    .three-#{$i}00 > * { width: 33.33333%;}
-    .four-#{$i}00 > * { width: 25%; }
-    .five-#{$i}00 > * { width: 20%; }
-    .six-#{$i}00 > * { width: 16.66666%; }
-    .seven-#{$i}00 > * { width: 14.28571%; }
-    .eight-#{$i}00 > * { width: 12.5%; }
-    .nine-#{$i}00 > * { width: 11.11111%; }
-    .ten-#{$i}00 > * { width: 10%; }
-    .eleven-#{$i}00 > * { width: 9.09091%; }
-    .twelve-#{$i}00 > * { width: 8.33333%; }
+@each $i in $picnic-grid-sizes {
+  @media all and (min-width: unquote($i + 'px')) {
+    .one-#{$i} > * { width: 100%; }
+    .two-#{$i} > * { width: 50%; }
+    .three-#{$i} > * { width: 33.33333%;}
+    .four-#{$i} > * { width: 25%; }
+    .five-#{$i} > * { width: 20%; }
+    .six-#{$i} > * { width: 16.66666%; }
+    .seven-#{$i} > * { width: 14.28571%; }
+    .eight-#{$i} > * { width: 12.5%; }
+    .nine-#{$i} > * { width: 11.11111%; }
+    .ten-#{$i} > * { width: 10%; }
+    .eleven-#{$i} > * { width: 9.09091%; }
+    .twelve-#{$i} > * { width: 8.33333%; }
   }
 }
 
@@ -90,20 +92,20 @@ $picnic-grid-gutter-horizontal: $picnic-grid-gutter !default;
 .sixth { width: 16.66666% }
 .none { display: none; }
 
-@for $i from 5 through 20 {
-  @media all and (min-width: unquote($i + '00px')) {
-    .full-#{$i}00 { width: 100%; display: block; }
-    .half-#{$i}00 { width: 50%; display: block; }
-    .third-#{$i}00 { width: 33.33333%; display: block; }
-    .two-third-#{$i}00 { width: 66.66666%; display: block; }
-    .fourth-#{$i}00 { width: 25%; display: block; }
-    .three-fourth-#{$i}00 { width: 75%; display: block; }
-    .fifth-#{$i}00 { width: 20%; display: block; }
-    .two-fifth-#{$i}00 { width: 40%; display: block; }
-    .three-fifth-#{$i}00 { width: 60%; display: block; }
-    .four-fifth-#{$i}00 { width: 80%; display: block; }
-    .sixth-#{$i}00 { width: 16.66666%; display: block; }
-    .none-#{$i}00 { display: none; }
+@each $i in $picnic-grid-sizes {
+  @media all and (min-width: unquote($i + 'px')) {
+    .full-#{$i} { width: 100%; display: block; }
+    .half-#{$i} { width: 50%; display: block; }
+    .third-#{$i} { width: 33.33333%; display: block; }
+    .two-third-#{$i} { width: 66.66666%; display: block; }
+    .fourth-#{$i} { width: 25%; display: block; }
+    .three-fourth-#{$i} { width: 75%; display: block; }
+    .fifth-#{$i} { width: 20%; display: block; }
+    .two-fifth-#{$i} { width: 40%; display: block; }
+    .three-fifth-#{$i} { width: 60%; display: block; }
+    .four-fifth-#{$i} { width: 80%; display: block; }
+    .sixth-#{$i} { width: 16.66666%; display: block; }
+    .none-#{$i} { display: none; }
   }
 }
 
@@ -120,19 +122,19 @@ $picnic-grid-gutter-horizontal: $picnic-grid-gutter !default;
 .off-sixth { margin-left: 16.66666% }
 .off-none { margin-left: 0 }
 
-@for $i from 5 through 20 {
-  @media all and (min-width: unquote($i + '00px')) {
-    .off-full-#{$i}00 { margin-left: 100%; }
-    .off-half-#{$i}00 { margin-left: 50%; }
-    .off-third-#{$i}00 { margin-left: 33.33333%; }
-    .off-two-third-#{$i}00 { margin-left: 66.66666%; }
-    .off-fourth-#{$i}00 { margin-left: 25%; }
-    .off-three-fourth-#{$i}00 { margin-left: 75%; }
-    .off-fifth-#{$i}00 { margin-left: 20%; }
-    .off-two-fifth-#{$i}00 { margin-left: 40%; }
-    .off-three-fifth-#{$i}00 { margin-left: 60%; }
-    .off-four-fifth-#{$i}00 { margin-left: 80%; }
-    .off-sixth-#{$i}00 { margin-left: 16.66666% }
-    .off-none-#{$i}00 { margin-left: 0 }
+@each $i in $picnic-grid-sizes {
+  @media all and (min-width: unquote($i + 'px')) {
+    .off-full-#{$i} { margin-left: 100%; }
+    .off-half-#{$i} { margin-left: 50%; }
+    .off-third-#{$i} { margin-left: 33.33333%; }
+    .off-two-third-#{$i} { margin-left: 66.66666%; }
+    .off-fourth-#{$i} { margin-left: 25%; }
+    .off-three-fourth-#{$i} { margin-left: 75%; }
+    .off-fifth-#{$i} { margin-left: 20%; }
+    .off-two-fifth-#{$i} { margin-left: 40%; }
+    .off-three-fifth-#{$i} { margin-left: 60%; }
+    .off-four-fifth-#{$i} { margin-left: 80%; }
+    .off-sixth-#{$i} { margin-left: 16.66666% }
+    .off-none-#{$i} { margin-left: 0 }
   }
 }

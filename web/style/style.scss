@@ -3,14 +3,50 @@
 // Variables for this sass implementation
 $picnic-dropimage-ratio: 4 / 3 !default;
 
-
+$picnic-grid-sizes: 500 600 800 1000 1200;
 
 // Get the icons from fontello
 // You need to import this first
 @import 'font/fontello';
 
 // Get the library picnic css
-@import '../../src/picnic';
+//@import '../../src/picnic';
+
+// Imports the base variable styles
+@import '../../src/themes/default/theme';
+
+// Normalize.css (external library)
+@import '../../src/plugins/normalize/plugin';
+
+// Generic styles for things like <body>, <a> and others
+// It also overwrites normalize.css a bit
+@import '../../src/plugins/generic/plugin';
+@import '../../src/plugins/fontello/plugin';
+
+// Simple elements
+@import '../../src/plugins/label/plugin';
+@import '../../src/plugins/button/plugin';
+
+// Forms
+@import '../../src/plugins/input/plugin';
+@import '../../src/plugins/select/plugin';
+@import '../../src/plugins/radio/plugin';
+@import '../../src/plugins/checkbox/plugin';
+
+// Components
+@import '../../src/plugins/table/plugin';
+@import '../../src/plugins/grid/plugin';
+
+// Extra
+@import '../../src/plugins/nav/plugin';
+
+@import '../../src/plugins/stack/plugin';
+@import '../../src/plugins/card/plugin';
+@import '../../src/plugins/modal/plugin';
+
+@import '../../src/plugins/dropimage/plugin';
+@import '../../src/plugins/tabs/plugin';
+@import '../../src/plugins/tooltip/plugin';
 
 
 
