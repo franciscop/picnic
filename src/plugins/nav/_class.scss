@@ -24,7 +24,7 @@ $picnic-nav-responsive: true !default;
   // Make it look like a hovering bar
   background: #fff;
   box-shadow: $picnic-nav-shadow;
-  z-index: 10;
+  z-index: 10000;
 
   // Everything happens slow-ish
   transition: all .3s;

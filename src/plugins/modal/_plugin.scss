@@ -11,7 +11,7 @@
 
       // By default, they are not visible
       opacity: 0;
-      
+
       // Also hide it from any iteraction
       max-height: 0;
       overflow: hidden;
@@ -28,7 +28,7 @@
     border-radius: 0;
     background: rgba($picnic-black, 3 * $picnic-transparency);
     transition: $picnic-transition;
-    z-index: 99;
+    z-index: 100000;
 
     &:before,
     &:after {
@@ -38,11 +38,11 @@
     // All of the elements that follow the overlay (the modals)
     ~ * {
 
-      // They are of type .card (see /plugins/card ) 
+      // They are of type .card (see /plugins/card )
       @extend %card;
 
       border: 0;
-      
+
       // Position it in the middle of the screen on top of everything
       position: fixed;
       top: 50%;
