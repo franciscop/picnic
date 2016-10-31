@@ -11,9 +11,9 @@ block content
 
         p.links
           a.cdn(href="http://www.jsdelivr.com/#!picnicss" target="_blank") CDN
-          span  | 
+          span  |
           a.github(href="https://raw.githubusercontent.com/picnicss/picnic/master/picnic.min.css" target="_blank") Download
-          span  | 
+          span  |
           a.github(href="https://github.com/picnicss/picnic" target="_blank") GitHub
 
       a.keepgoing(href="#content" aria-hidden="true") ▼
@@ -28,11 +28,11 @@ block content
       div.card
         section
           button Normal
-          | 
+          |= ' '
           button.success Success
-          | 
+          |= ' '
           button.warning Warning
-          | 
+          |= ' '
           button.error Error
         section
           input(type="email" placeholder="Email" aria-label="Email")
@@ -69,7 +69,7 @@ block content
           @extends %button;
         }
         ```
-    
+
     div.visual.flex.one.two-800
       div.content
         h2 It's alive!
@@ -80,17 +80,17 @@ block content
         div.tabs.three(style="text-align: center;")
           input#tabC-1(type='radio' name='tabgroupC' checked aria-hidden="true")
           label.pseudo.button.toggle(for="tabC-1") 1
-          span  / 
+          span  /
           input#tabC-2(type='radio' name='tabgroupC' aria-hidden="true")
           label.pseudo.button.toggle(for="tabC-2") 2
-          span  / 
+          span  /
           input#tabC-3(type='radio' name='tabgroupC' aria-hidden="true")
           label.pseudo.button.toggle(for="tabC-3") 3
           div.row
             div.card
               header
                 h3 Registration form example
-              section Obviously agree with the 
+              section Obviously agree with the
                 a(href="#")
                   strong(data-tooltip="Clicking me is futile") terms and condition
               section
@@ -210,31 +210,30 @@ block content
             strong
               a(href="http://clrs.cc/" target="_blank") Clrs.cc
             span : A nicer color palette for the web.
+          li
+            strong= 'With love, '
+              a(href="http://francisco.io/") Francisco Presencia
 
+    comment-box.visual.border(hackernews="8315616" add="hackernews" limit="50")
 
-    div.visual
-      div.love With love,
-      a.name(href="http://francisco.io/") Francisco Presencia
+  script.
 
-
-  //- script.
-  //- 
-  //-   // Transparent nav handler
-  //-   var nav = document.querySelector('nav');
-  //-   function navScroll(){
-  //-     var className = 'transparent';
-  //-     var top = window.scrollY ? window.scrollY : document.documentElement.scrollTop;
-  //-     if (top > 0) {
-  //-       nav.classList.remove(className);
-  //-       [].forEach.call(document.querySelectorAll('[data-src]'), function(iframe){
-  //-         iframe.setAttribute('src', iframe.getAttribute('data-src'));
-  //-         iframe.removeAttribute('data-src');
-  //-       });
-  //-     } else {
-  //-       nav.classList.add('transparent');
-  //-       nav.classList.add(className);
-  //-     }
-  //-   };
-  //-   window.onscroll = navScroll;
-  //-   navScroll();
-  //-   setTimeout(function(){ nav.classList.remove('loading'); }, 10);
+    // Transparent nav handler
+    var nav = document.querySelector('nav');
+    function navScroll(){
+      var className = 'transparent';
+      var top = window.scrollY ? window.scrollY : document.documentElement.scrollTop;
+      if (top > 0) {
+        nav.classList.remove(className);
+        [].forEach.call(document.querySelectorAll('[data-src]'), function(iframe){
+          iframe.setAttribute('src', iframe.getAttribute('data-src'));
+          iframe.removeAttribute('data-src');
+        });
+      } else {
+        nav.classList.add('transparent');
+        nav.classList.add(className);
+      }
+    };
+    window.onscroll = navScroll;
+    navScroll();
+    setTimeout(function(){ nav.classList.remove('loading'); }, 10);

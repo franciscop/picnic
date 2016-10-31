@@ -14,7 +14,7 @@ $picnic-normalize-ie: false;
 
 // Get the icons from fontello
 // You need to import this first
-//@import 'font/fontello';
+@import 'font/fontello';
 
 // Imports the base variable styles
 @import '../../src/themes/default/theme';
@@ -149,6 +149,12 @@ pre {
 pre code {
   background: none;
 }
+
+
+comment-box.visual {
+  margin-top: 60px;
+}
+
 
 // $browser-color: #ccc;
 // $browser-text: #333;

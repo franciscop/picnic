@@ -33,19 +33,19 @@ html(lang="en")
     block content
 
     script.
-      window.onload=function(){[].forEach.call(document.querySelectorAll(".dropimage"),function(a){a.onchange=function(a){var b=this,c=new FileReader;c.onloadend=function(){b.style["background-image"]="url("+c.result+")"},c.readAsDataURL(a.target.files[0])}})};
-    //- window.onload = function(){
-    //- 
-    //-   // Dropimage handler
-    //-   [].forEach.call(document.querySelectorAll('.dropimage'), function(img){
-    //-     img.onchange = function(e){
-    //-       var inputfile = this, reader = new FileReader();
-    //-       reader.onloadend = function(){
-    //-         inputfile.style['background-image'] = 'url('+reader.result+')';
-    //-         }
-    //-       reader.readAsDataURL(e.target.files[0]);
-    //-       }
-    //-     });
-    //-   };
-    
+      window.onload = function(){
+
+        // Dropimage handler
+        [].forEach.call(document.querySelectorAll('.dropimage'), function(img){
+          img.onchange = function(e){
+            var inputfile = this, reader = new FileReader();
+            reader.onloadend = function(){
+              inputfile.style['background-image'] = 'url('+reader.result+')';
+              }
+            reader.readAsDataURL(e.target.files[0]);
+            }
+          });
+        };
+
     script(src="/web/tracking.js" defer async)
+    script(src="https://comments.network/comments.js" defer async)
