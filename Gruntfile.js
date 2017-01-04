@@ -27,6 +27,12 @@ module.exports = function (grunt) {
           'web/style/style.min.css': 'web/style/style.scss',
           'picnic.min.css': 'src/picnic.scss'
         }
+      },
+      dev: {
+        options: { sourcemap: 'none', style: 'nested' },
+        files: {
+          'picnic.css': 'src/picnic.scss'
+        }
       }
     },
 
