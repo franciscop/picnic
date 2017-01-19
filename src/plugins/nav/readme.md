@@ -87,8 +87,8 @@ Just get anything you want inside the nav, most things should work.
   <a href="#" class="brand">Picnic CSS</a>
 
   <!-- responsive-->
-  <input id="bmenug" type="checkbox" class="show">
-  <label for="bmenug" class="burger pseudo button">&#8801;</label>
+  <input id="cmenug" type="checkbox" class="show">
+  <label for="cmenug" class="burger pseudo button">&#8801;</label>
 
   <div class="menu">
     <select>
