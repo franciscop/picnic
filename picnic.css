@@ -2690,7 +2690,8 @@ nav .burger {
   nav .burger ~ .menu > * {
     display: block;
     margin: 0.3em;
-    text-align: left; }
+    text-align: left;
+    max-width: calc(100% - 0.6em); }
   nav .burger ~ .menu > a {
     padding: 0.3em 0.9em; } }
 .stack,

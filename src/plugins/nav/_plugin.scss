@@ -58,6 +58,7 @@ nav {
         display: block;
         margin: $picnic-separation / 2;
         text-align: left;
+        max-width: calc(100% - #{$picnic-separation});
       }
 
       .burger ~ .menu > a {
