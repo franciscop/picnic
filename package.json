@@ -1,9 +1,9 @@
 {
   "name": "picnic",
-  "version": "6.3.1",
+  "version": "6.3.2",
   "description": "A lighweight CSS library with nice defaults and many plugins to kickstart your projects",
   "engines": {
-    "node": "4.0.0"
+    "node": ">=4.0.0"
   },
   "scripts": {
     "setremotes": "git remote set-url --add --push origin git@github.com:picnicss/picnic.git && git remote set-url --add --push origin git@github.com:picnicss/picnicss.github.io.git"
