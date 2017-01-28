@@ -503,7 +503,7 @@ textarea,
   height: 2.1em;
   padding: 0.3em 0.6em;
   border: 1px solid #ccc;
-  background: #fff;
+  background-color: #fff;
   border-radius: 0.2em;
   transition: all 0.3s;
   width: 100%; }
