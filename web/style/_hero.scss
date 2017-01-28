@@ -20,21 +20,20 @@ $black: #333;
   width: 100%;
 
   // http://stackoverflow.com/a/28151062/938236
-  height: 100%;
-  height: 100vh;
+  height: 70vh;
   transition: height 999999s;
   text-align: center;
   min-height: 300px;
   color: $black;
   padding: 1px 0;
-  background: #B9DBFF url('/web/img/optimised.svg') no-repeat center center fixed;
+  background: #B9DBFF url('/web/img/optimised.svg') no-repeat 50% center scroll;
   background-size: cover;
 
 
   // Vertical center for the content
   .content {
     position: relative;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
   }
 
@@ -52,7 +51,7 @@ $black: #333;
     font-size: 1.3em;
   }
 
-  .bower {
+  .npm {
     width: 300px;
     color: $black;
     margin-bottom: 0;
@@ -75,26 +74,6 @@ $black: #333;
     background: none;
     border-radius: 0;
   }
-
-  .keepgoing {
-    display: block;
-    color: #fff;
-    font-size: 2em;
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-    transition: all 0.5s ease 0s;
-    opacity: .7;
-    animation: bounce 1s ease infinite;
-  }
-
-  .keepgoing:active,
-  .keepgoing:focus {
-    box-shadow: none;
-    background: none;
-  }
-
 
   @keyframes bounce {
     from { bottom: 20px; }
