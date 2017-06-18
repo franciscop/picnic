@@ -27,7 +27,14 @@ nav {
         width: 0;
         overflow: hidden;
         top: 0;
-        right: 0;
+
+        @if $picnic-nav-open-left{
+          left: 0;
+        }
+        @else{
+          right: 0;
+        }
+        
         bottom: -1000em;
         margin: 0;
         background: $picnic-white;
