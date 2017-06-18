@@ -110,3 +110,8 @@ nav {
   position: absolute;
 }
 ```
+
+### Open nav menu from left
+
+change sass variable ```$picnic-nav-open-left: false !default;``` to
+``` picnic-nav-open-left: true !default; ``` inside src/plugins/nav/_class.scss file.
