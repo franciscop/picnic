@@ -1,0 +1,9 @@
+{
+  "id": "notifications",
+  "name": "Notifications",
+  "included": false,
+  "affected": ".notification-container, .show-top-left, .show-top-right,
+                .show-bottom-left, show-bottom-right, .notification,
+                .success, .info, .warning, .danger, .close",
+  "summary": "Notification can display short message on user's viewport."
+}

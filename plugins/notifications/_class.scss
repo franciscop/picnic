@@ -1,0 +1,105 @@
+//all the notification background color can be changed here
+$bgcolor-success: #2ecc40 !default;
+$bgcolor-info:  #add8e6 !default;
+$bgcolor-warning: #ff851b !default;
+$bgcolor-danger: #ff4136 !default;
+
+//all the notification text color can be changed here
+$color-success: #fff !default;
+$color-info: #fff !default;
+$color-warning: #fff !default;
+$color-danger: #fff !default;
+
+//notification text font size
+$font-size: .7em;
+
+//can turn off or on notification animation.
+$notification-animation: true !default;
+
+@mixin notification-style($color, $bg-color) {
+  background-color: $bg-color;
+  box-shadow: 2px 2px 2px $bg-color;
+  color: $color;
+}
+
+@mixin close-button-position($position) {
+  cursor: pointer;
+  float: $position;
+}
+
+%notification-container {
+  height: auto;
+  padding: 10px;
+  position: fixed;
+  width: 300px;
+  z-index: 1000000;
+}
+
+%show-top-left {
+  left: 0;
+  text-align: right;
+  top: 0;
+}
+
+%show-top-right {
+  right: 0;
+  top: 0;
+}
+
+%show-bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+%show-bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+%notification {
+  font-size: $font-size;
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 10px;
+  text-overflow: clip;
+  width: 250px;
+  @if $notification-animation {
+    animation-duration: 2s;
+    animation-name: fade-in;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+%success {
+  @include notification-style($color-success, $bgcolor-success);
+}
+
+%danger {
+  @include notification-style($color-danger, $bgcolor-danger);
+}
+
+%warning {
+  @include notification-style($color-warning, $bgcolor-warning);
+}
+
+%info {
+  @include notification-style($color-info, $bgcolor-info);
+}
+
+%close-left {
+  @include close-button-position(left);
+}
+
+%close-right {
+  @include close-button-position(right);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
