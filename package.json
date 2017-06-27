@@ -5,9 +5,6 @@
   "engines": {
     "node": ">=4.0.0"
   },
-  "scripts": {
-    "setremotes": "git remote set-url --add --push origin git@github.com:picnicss/picnic.git && git remote set-url --add --push origin git@github.com:picnicss/picnicss.github.io.git"
-  },
   "main": "picnic.min.css",
   "repository": {
     "type": "git",

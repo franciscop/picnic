@@ -12,7 +12,7 @@ For example:
 
 ### Contribute new plugin
 
-To add new plugin first create new directory(give any name you want that will your plugin name) inside plugins directory inside root directory. Here is list of required list of files your plugin must have
+To add new plugin first create new directory(give any name you want that will your plugin name) inside plugins directory inside root directory. Here is list of required list of files your plugin must have:
 
 
 1. `_class.scss` : file hold all the variables and placeholder for your plugin.
@@ -24,3 +24,9 @@ To add new plugin first create new directory(give any name you want that will yo
 4. `info.json` : A file containing all of the information for your plugin. Specially important are `id`, `name`, `included`, `affected` and `summary`.
 
 5. `readme.md` : this file conatain your plugins description and how to use it.
+
+
+
+## Extra
+
+- Singular names are preferred. `notification` instead of `notifications`, `button` instead of `buttons`, etc.

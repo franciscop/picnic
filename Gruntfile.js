@@ -5,7 +5,7 @@ module.exports = function (grunt) {
     jade: {
       compile: {
         files: [{
-          cwd: "web", src: "**/*.html.jade", dest: ".", expand: true, ext: ".html"
+          cwd: "docs", src: "**/*.html.jade", dest: "docs", expand: true, ext: ".html"
         }]
       }
     },
@@ -14,8 +14,8 @@ module.exports = function (grunt) {
       options: { separator: '\n\n' },
       basic_and_extras: {
         files: {
-          'temp/test.html': ['src/test.html', 'src/plugins/**/test.html'],
-          'temp/readme.md': ['src/readme.md', 'src/plugins/**/readme.md']
+          'temp/test.html': ['src/**/test.html', 'plugins/**/test.html'],
+          'temp/readme.md': ['src/readme.md', 'src/**/readme.md']
         }
       }
     },
@@ -24,14 +24,29 @@ module.exports = function (grunt) {
       dist: {
         options: { sourcemap: 'none', style: 'compressed' },
         files: {
-          'web/style/style.min.css': 'web/style/style.scss',
-          'picnic.min.css': 'src/picnic.scss'
+          'docs/style/style.min.css': 'docs/style/style.scss',
+          'picnic.min.css': 'picnic.scss'
         }
+      },
+      plugins: {
+        options: { sourcemap: 'none', style: 'compressed' },
+        files: [{
+          expand: true,         // Enable dynamic expansion.
+          cwd: 'plugins/',      // Src matches are relative to this path.
+          src: ['**/*.scss'],   // Actual pattern(s) to match.
+          dest: 'plugins',      // The folder where the plugins live
+          ext: '.min.css',      // Dest filepaths will have this extension.
+          // Make sure the main file is plugins/NAME/NAME.scss and no other
+          filter: (src) => {
+            let [folder, file] = src.replace(/^plugins\//, '').split('/');
+            return folder + '.scss' === file;
+          }
+        }],
       },
       dev: {
         options: { sourcemap: 'none', style: 'nested' },
         files: {
-          'picnic.css': 'src/picnic.scss'
+          'picnic.css': 'picnic.scss'
         }
       }
     },
@@ -58,7 +73,13 @@ module.exports = function (grunt) {
 
     watch: {
       scripts: {
-        files: [ 'package.js', 'Gruntfile.js', 'src/**/*.*', 'web/**/*.*' ],
+        files: [
+          '**/*.scss',
+          'package.js',
+          'Gruntfile.js',
+          'src/**/*.*',
+          'plugins/**/*.*',
+          'docs/**/*.*' ],
         tasks: ['default'],
         options: { spawn: false },
       }

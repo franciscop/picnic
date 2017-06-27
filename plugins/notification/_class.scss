@@ -1,0 +1,104 @@
+@import '../../variables';
+@import '../../src/normalize/normalize';
+
+// Inherites first from the user if set. Otherwise from Picnic Variables
+$picnic-notification-info: $picnic-primary !default;
+$picnic-notification-success: $picnic-success !default;
+$picnic-notification-warning: $picnic-warning !default;
+$picnic-notification-error: $picnic-error !default;
+
+//notification text font size
+$font-size: .7em;
+
+// Can turn off or on notification animation.
+$notification-animation: true !default;
+
+@mixin notification-style($color, $bg-color) {
+  background-color: $bg-color;
+  box-shadow: $picnic-shadow;
+  color: $color;
+}
+
+@mixin close-button-position($position) {
+  cursor: pointer;
+  float: $position;
+}
+
+%notification-container {
+  height: auto;
+  padding: 10px;
+  position: fixed;
+  width: 300px;
+  z-index: 1000000;
+}
+
+%show-top-left {
+  left: 0;
+  text-align: right;
+  top: 0;
+}
+
+%show-top-right {
+  right: 0;
+  top: 0;
+}
+
+%show-bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+%show-bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+%notification {
+  font-size: $font-size;
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 10px;
+  text-overflow: clip;
+  width: 250px;
+  border-radius: $picnic-radius;
+  @if $notification-animation {
+    animation-duration: 2s;
+    animation-name: fade-in;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+
+%info {
+  @include notification-style(#fff, $picnic-notification-info);
+}
+
+%success {
+  @include notification-style(#fff, $picnic-notification-success);
+}
+
+%error {
+  @include notification-style(#fff, $picnic-notification-error);
+}
+
+%warning {
+  @include notification-style(#fff, $picnic-notification-warning);
+}
+
+%close-left {
+  @include close-button-position(left);
+}
+
+%close-right {
+  @include close-button-position(right);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

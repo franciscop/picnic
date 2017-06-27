@@ -3,38 +3,38 @@
 // Imports the base variable styles
 @import 'variables';
 
-@import './src/vendor/compass-breakpoint/stylesheets/breakpoint';
+@import './vendor/compass-breakpoint/stylesheets/breakpoint';
 
 //=== Importing all core plugins ===
 // Normalize.css (external library)
-@import './src/core/normalize/normalize';
+@import './src/normalize/normalize';
 
 // Generic styles for things like <body>, <a> and others
 // It also overwrites normalize.css a bit
-@import './src/core/generic/generic';
-@import './src/core/fontello/fontello';
+@import './src/generic/generic';
+@import './src/fontello/fontello';
 
 // Simple elements
-@import './src/core/label/label';
-@import './src/core/button/button';
+@import './src/label/label';
+@import './src/button/button';
 
 // Forms
-@import './src/core/input/input';
-@import './src/core/select/select';
-@import './src/core/radio/radio';
-@import './src/core/checkbox/checkbox';
+@import './src/input/input';
+@import './src/select/select';
+@import './src/radio/radio';
+@import './src/checkbox/checkbox';
 
 // Components
-@import './src/core/table/table';
-@import './src/core/grid/grid';
+@import './src/table/table';
+@import './src/grid/grid';
 
 // Extra
-@import './src/core/nav/nav';
+@import './src/nav/nav';
 
-@import './src/core/stack/stack';
-@import './src/core/card/card';
-@import './src/core/modal/modal';
+@import './src/stack/stack';
+@import './src/card/card';
+@import './src/modal/modal';
 
-@import './src/core/dropimage/dropimage';
-@import './src/core/tabs/tabs';
-@import './src/core/tooltip/tooltip';
+@import './src/dropimage/dropimage';
+@import './src/tabs/tabs';
+@import './src/tooltip/tooltip';
