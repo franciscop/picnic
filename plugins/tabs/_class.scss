@@ -1,9 +1,12 @@
 // Tab definition
+@import '../../variables';
+@import '../../src/normalize/normalize';
+
 %tabs {
 
   position: relative;
   overflow: hidden;
-  
+
   > label img {
     float: left;
     margin-left: $picnic-separation;
@@ -57,7 +60,7 @@
     > input:nth-of-type(1):checked ~ .row {
       margin-left: 100%;
     }
-    
+
     > label img {
       width: 48%;
       margin: 4% 0 4% 4%;
@@ -77,7 +80,7 @@
     > input:nth-of-type(2):checked ~ .row {
       margin-left: 100%;
     }
-    
+
     > label img {
       width: 30%;
       margin: 5% 0 5% 5%;
@@ -101,14 +104,14 @@
     > input:nth-of-type(3):checked ~ .row {
       margin-left: 100%;
     }
-      
+
     > label img {
       width: 22%;
       margin: 4% 0 4% 4%;
     }
   }
-  
-    
+
+
   >label:first-of-type img {
     margin-left: 0;
   }
