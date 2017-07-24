@@ -15,7 +15,8 @@ module.exports = function (grunt) {
       basic_and_extras: {
         files: {
           'temp/test.html': ['src/**/test.html', 'plugins/**/test.html'],
-          'temp/readme.md': ['src/readme.md', 'src/**/readme.md']
+          'temp/readme.md': ['src/readme.md', 'src/**/readme.md'],
+          'temp/external_plugins_readme.md': ['plugins/readme.md','plugins/**/readme.md']
         }
       }
     },

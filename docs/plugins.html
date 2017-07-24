@@ -1,0 +1,276 @@
+<!DOCTYPE html><html lang="en"><head><title>Plugins - Picnic CSS</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="css, library, picnic, picnicss, light"><meta name="description" content="A lightweight CSS library"><link rel="stylesheet" href="style/style.min.css"><link rel="stylesheet" media="bogus"><style>aside a.top {
+  font-size: 0;
+  position: fixed;
+  bottom: 0;
+  font-weight: bold;
+  width: 180px;
+  padding: .6em 0;
+  margin-bottom: 0;
+  border-radius: .3em .3em 0 0;
+  transition: all .3s ease;
+}
+
+aside a.top.visible {
+  font-size: 1em;
+}
+
+aside .links a.button {
+  text-align: left;
+}
+
+@media all and (max-width: 1000px) {
+  aside a.pseudo.top {
+    background: rgba(255, 255, 255, .8);
+    width: 100%;
+    left: 0;
+    text-align: center;
+    z-index: 100;
+  }
+}
+
+.documentation article > h2 {
+  margin: -2em 0 .6em;
+  padding: 3em 0 0;
+  line-height: 1;
+}
+
+.documentation article > h3 {
+  margin-bottom: .6em;
+}
+
+.documentation aside h2 {
+  margin-top: 0;
+  padding: 1.25em 0;
+  line-height: 1;
+}
+
+.documentation .flex > * {
+  padding-bottom: .3em;
+}
+
+.documentation aside a.pseudo {
+  color: #0074D9;
+  margin: 0;
+}
+
+.documentation > section {
+  background: #fff;
+  text-align: left;
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 80px 0 0;
+}
+
+.documentation article > h1 {
+  margin: 0;
+  padding: 0.6em 0;
+  font-size: 2em;
+  line-height: 1.5;
+}
+
+.documentation aside a.button {
+  display: block;
+}
+
+.documentation pre[class*="language-"] {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.documentation .index pre {
+  margin: 0;
+  font-size: .9em;
+}
+</style></head><body><nav><a class="brand" href="/"><span>Picnic CSS</span></a><input class="show" id="bmenu" type="checkbox"><label class="burger toggle pseudo button" for="bmenu">menu</label><div class="menu"><a class="pseudo button icon-help-circled" href="/tests">Test</a><a class="pseudo button icon-g" href="https://github.com/franciscop/picnic" target="_blank">GitHub</a><a class="button icon-file-code" href="/documentation">Documentation</a><a class="button icon-puzzle" href="/plugins">Plugins</a></div></nav><main class="documentation" id="home"><section class="flex five"><aside class="full fifth-1000"><h2>Contents</h2><div class="links flex two three-500 five-800 one-1000"></div><a class="top pseudo button" href="#home" tabindex="-1">▲ Up you go ▲</a></aside><article class="full four-fifth-1000"><h3>Plugins</h3>
+<p>Plugins directory holds all the plugins for picnic css library.
+All the plugins in this directory will not be included by default in the compiled css file presented in root. You can include them just by importing in your scss file.</p>
+<p>For example:</p>
+<pre><code class="language-scss">@import './node_modules/picnic/src/picnic.scss';
+@import './node_modules/picnic/plugins/[PLUGIN NAME]/[plugin_name].scss'
+</code></pre>
+<blockquote>
+<p>Note: Always make sure you include <code>@import './node_modules/picnic/src/picnic.scss';</code> before including any plugin.</p>
+</blockquote>
+<h3>Contribute new plugin</h3>
+<p>To add new plugin first create new directory(give any name you want that will your plugin name) inside plugins directory inside root directory. Here is list of required list of files your plugin must have:</p>
+<ol>
+<li>
+<p><code>_class.scss</code> : file hold all the variables and placeholder for your plugin.</p>
+</li>
+<li>
+<p><code>[plugin_name].scss</code> : This file should include <code>_class.scss</code> file and extend them. the name of this file should be same as name of your plugin directory name(recommended).</p>
+</li>
+<li>
+<p><code>test.html</code> : In <code>test.html</code> Add some test for your plugin.</p>
+</li>
+<li>
+<p><code>info.json</code> : A file containing all of the information for your plugin. Specially important are <code>id</code>, <code>name</code>, <code>included</code>, <code>affected</code> and <code>summary</code>.</p>
+</li>
+<li>
+<p><code>readme.md</code> : this file conatain your plugins description and how to use it.</p>
+</li>
+</ol>
+<h2>Extra</h2>
+<ul>
+<li>Singular names are preferred. <code>notification</code> instead of <code>notifications</code>, <code>button</code> instead of <code>buttons</code>, etc.</li>
+</ul>
+<h2>Notifications</h2>
+<p>notifications can be used to show short messages on user's viewport.</p>
+<pre><code class="language-html">&lt;div class=&quot;notification-container show-top-right&quot;&gt;
+  &lt;div class=&quot;notification success&quot;&gt;
+    &lt;p&gt;My short message&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>In above example <code>notification-container</code> class makes container where you
+can place Notifications and <code>show-top-right</code> class place the container on the top of right side of window. There are four possible places where you can place the notification container.</p>
+<ol>
+<li>For top left use <code>show-top-left</code></li>
+<li>For top right <code>show-top-right</code></li>
+<li>For bottom left <code>show-bottom-left</code></li>
+<li>For bottom right <code>show-bottom-right</code></li>
+</ol>
+<p>Notification message can have four different background color</p>
+<pre><code class="language-html">&lt;div class=&quot;notification-container show-top-right&quot;&gt;
+  &lt;div class=&quot;notification success&quot;&gt;
+    &lt;p&gt;My short message&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;notification info&quot;&gt;
+    &lt;p&gt;My short message&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;notification warning&quot;&gt;
+    &lt;p&gt;My short message&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;notification danger&quot;&gt;
+    &lt;p&gt;My short message&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3>close button inside notification</h3>
+<p>close button can be place inside notification to close the notification although it will not work without javascript.</p>
+<pre><code class="language-html">&lt;div class=&quot;notification-container&quot;&gt;
+  &lt;div class=&quot;notification success&quot;&gt;
+    &lt;span class=&quot;close&quot;&gt;&amp;#10006;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>A possible solution with Javascript:</p>
+<pre><code class="language-js">document.addEventListener(&quot;DOMContentLoaded&quot;, function() {
+  [].forEach.call(document.querySelectorAll('.notification .close'), function(close){
+    close.addEventListener('click', function(e){
+      e.target.parentNode.remove();
+    });
+  });
+});
+</code></pre>
+<p>With jQuery it is even simpler:</p>
+<pre><code class="language-js">$(document).ready(function(){
+  $('.notification .close').on('click',function(e){
+    $(e.target).parent().remove();
+  });
+});
+</code></pre>
+<p>###Change notification's look</p>
+<p>There are many sass variable can be configured inside src/plugin/notification/_class.scss file.</p>
+<h2>Tabs</h2>
+<blockquote>
+<p>Original: http://jsfiddle.net/franciscop/wwfby2y8/</p>
+</blockquote>
+<p>A simple tab system inspired by <a href="www.felipefialho.com/css-components/#component-tab">Components CSS Tabs</a>.</p>
+<pre><code class="language-html">&lt;div class=&quot;tabs three&quot;&gt;
+  &lt;input id='tab-1' type='radio' name='tabgroupB' checked /&gt;
+  &lt;label class=&quot;pseudo button toggle&quot; for=&quot;tab-1&quot;&gt;Forest&lt;/label&gt;
+  &lt;input id='tab-2' type='radio' name='tabgroupB'&gt;
+  &lt;label class=&quot;pseudo button toggle&quot; for=&quot;tab-2&quot;&gt;Lake&lt;/label&gt;
+  &lt;input id='tab-3' type='radio' name='tabgroupB'&gt;
+  &lt;label class=&quot;pseudo button toggle&quot; for=&quot;tab-3&quot;&gt;Balloon&lt;/label&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div&gt;
+      &lt;img src=&quot;img/forest.jpg&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+      &lt;img src=&quot;img/lake.jpg&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+      &lt;img src=&quot;img/balloon.jpg&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3>Gallery example</h3>
+<p>Create a gallery super-easy with thumbnails as tabs:</p>
+<pre><code class="language-html">&lt;div class=&quot;tabs four&quot;&gt;
+  &lt;input id=&quot;tabC-1&quot; type='radio' name='tabGroupC' checked &gt;
+  &lt;input id=&quot;tabC-2&quot; type='radio' name='tabGroupC'&gt;
+  &lt;input id=&quot;tabC-3&quot; type='radio' name='tabGroupC'&gt;
+  &lt;input id=&quot;tabC-4&quot; type='radio' name='tabGroupC'&gt;
+  &lt;div class='row'&gt;
+    &lt;div&gt;
+      &lt;img src=&quot;img/forest.jpg&quot;&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;img src=&quot;img/lake.jpg&quot;&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;img src=&quot;img/halong.jpg&quot;&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;img src=&quot;img/balloon.jpg&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;label for=&quot;tabC-1&quot;&gt;&lt;img src=&quot;img/forest.jpg&quot;&gt;&lt;/label&gt;
+  &lt;label for=&quot;tabC-2&quot;&gt;&lt;img src=&quot;img/lake.jpg&quot;&gt;&lt;/label&gt;
+  &lt;label for=&quot;tabC-3&quot;&gt;&lt;img src=&quot;img/halong.jpg&quot;&gt;&lt;/label&gt;
+  &lt;label for=&quot;tabC-4&quot;&gt;&lt;img src=&quot;img/balloon.jpg&quot;&gt;&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+</article></section></main><script src="https://cdn.jsdelivr.net/umbrella/2.6/umbrella.min.js"></script><script src="/prism.js"></script><script>u('h2[id]').each(function(node){
+  u(node).attr('id', u(node).attr('id').replace(/-/g, ''));
+});
+
+u('aside .links').append(function(node){
+  return u('<div>').append(u('<a>')
+    .addClass('pseudo button')
+    .attr('href', '#' + node.id)
+    .html(node.innerHTML));
+}, u('article h2'));
+
+u('pre .lang-html').each(function(node){
+  // The <div> is needed because otherwise, `.before()` removes whitespaces
+  u(node).parent().before(u('<div>').html(u(node).parent().text()));
+});
+
+u('pre .lang-css').each(function(node){
+  u(node).parent().before(u('<style>').html(u(node).parent().text()));
+});
+
+
+u('aside a').on('click', function(e){
+  try {
+    var to = u(e.currentTarget).attr('href');
+    u(to).first().scrollIntoView({behavior: "smooth"});
+    e.preventDefault();
+    history.replaceState(null, '', to);
+  } catch(err) {}
+});
+
+u([window]).on('scroll', function(){
+  var top = this.scrollY || document.documentElement.scrollTop;
+  u('.top').toggleClass('visible', top > 1000);
+}).trigger('scroll');</script><script>window.onload = function(){
+
+  // Dropimage handler
+  [].forEach.call(document.querySelectorAll('.dropimage'), function(img){
+    img.onchange = function(e){
+      var inputfile = this, reader = new FileReader();
+      reader.onloadend = function(){
+        inputfile.style['background-image'] = 'url('+reader.result+')';
+        }
+      reader.readAsDataURL(e.target.files[0]);
+      }
+    });
+  };
+</script><script src="/tracking.js" defer async></script></body></html>
