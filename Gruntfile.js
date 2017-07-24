@@ -2,10 +2,10 @@ var fs = require('fs');
 
 module.exports = function (grunt) {
   grunt.initConfig({
-    jade: {
+    pug: {
       compile: {
         files: [{
-          cwd: "docs", src: "**/*.html.jade", dest: "docs", expand: true, ext: ".html"
+          cwd: "docs", src: "**/*.html.pug", dest: "docs", expand: true, ext: ".html"
         }]
       }
     },
@@ -99,7 +99,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-banner');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-jade');
+  grunt.loadNpmTasks('grunt-contrib-pug');
   grunt.loadNpmTasks('grunt-bytesize');
-  grunt.registerTask('default', ['concat', 'sass', 'usebanner', 'copy', 'jade', 'bytesize']);
+  grunt.registerTask('default', ['concat', 'sass', 'usebanner', 'copy', 'pug', 'bytesize']);
 };

@@ -98,38 +98,38 @@ block content
         div.links.flex.two.three-500.five-800.one-1000
         a.top.pseudo.button(href="#home" tabindex="-1") ▲ Up you go ▲
       article.full.four-fifth-1000
-        include:markdown ../temp/readme.md
-  
+        include:markdown-it ../temp/readme.md
+
   script(src="https://cdn.jsdelivr.net/umbrella/2.6/umbrella.min.js")
-  
+
   //- Color for the code snippets
   script(src="/prism.js")
   //- http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript
-    
-  
+
+
   script.
-    
+
     u('h2[id]').each(function(node){
       u(node).attr('id', u(node).attr('id').replace(/-/g, ''));
     });
-    
+
     u('aside .links').append(function(node){
       return u('<div>').append(u('<a>')
         .addClass('pseudo button')
         .attr('href', '#' + node.id)
         .html(node.innerHTML));
     }, u('article h2'));
-    
+
     u('pre .lang-html').each(function(node){
       // The <div> is needed because otherwise, `.before()` removes whitespaces
       u(node).parent().before(u('<div>').html(u(node).parent().text()));
     });
-    
+
     u('pre .lang-css').each(function(node){
       u(node).parent().before(u('<style>').html(u(node).parent().text()));
     });
-    
-    
+
+
     u('aside a').on('click', function(e){
       try {
         var to = u(e.currentTarget).attr('href');
@@ -138,7 +138,7 @@ block content
         history.replaceState(null, '', to);
       } catch(err) {}
     });
-  
+
     u([window]).on('scroll', function(){
       var top = this.scrollY || document.documentElement.scrollTop;
       u('.top').toggleClass('visible', top > 1000);

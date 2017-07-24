@@ -82,17 +82,17 @@ aside .links a.button {
   margin: 0;
   font-size: .9em;
 }
-</style></head><body><nav><a href="/" class="brand"><span>Picnic CSS</span></a><input id="bmenu" type="checkbox" class="show"><label for="bmenu" class="burger toggle pseudo button">menu</label><div class="menu"><a href="/tests" class="pseudo button icon-help-circled">Test</a><a href="https://github.com/franciscop/picnic" target="_blank" class="pseudo button icon-g">GitHub</a><a href="/documentation" class="button icon-file-code">Documentation</a></div></nav><main id="home" class="documentation"><section class="flex five"><aside class="full fifth-1000"><h2>Contents</h2><div class="links flex two three-500 five-800 one-1000"></div><a href="#home" tabindex="-1" class="top pseudo button">▲ Up you go ▲</a></aside><article class="full four-fifth-1000"><h1 id="picnic-css">Picnic CSS</h1>
+</style></head><body><nav><a class="brand" href="/"><span>Picnic CSS</span></a><input class="show" id="bmenu" type="checkbox"><label class="burger toggle pseudo button" for="bmenu">menu</label><div class="menu"><a class="pseudo button icon-help-circled" href="/tests">Test</a><a class="pseudo button icon-g" href="https://github.com/franciscop/picnic" target="_blank">GitHub</a><a class="button icon-file-code" href="/documentation">Documentation</a></div></nav><main class="documentation" id="home"><section class="flex five"><aside class="full fifth-1000"><h2>Contents</h2><div class="links flex two three-500 five-800 one-1000"></div><a class="top pseudo button" href="#home" tabindex="-1">▲ Up you go ▲</a></aside><article class="full four-fifth-1000"><h1>Picnic CSS</h1>
 <p>Picnic CSS is a lightweight and beautiful CSS library</p>
-<h2 id="buttons">Buttons</h2>
+<h2>Buttons</h2>
 <p>They can be of different colors and types:</p>
-<pre><code class="lang-html">&lt;button&gt;Button&lt;/button&gt;
-&lt;button class=&#39;success&#39;&gt;Success&lt;/button&gt;
-&lt;button class=&#39;warning&#39;&gt;Warning&lt;/button&gt;
-&lt;button class=&#39;error&#39;&gt;Error&lt;/button&gt;
+<pre><code class="language-html">&lt;button&gt;Button&lt;/button&gt;
+&lt;button class='success'&gt;Success&lt;/button&gt;
+&lt;button class='warning'&gt;Warning&lt;/button&gt;
+&lt;button class='error'&gt;Error&lt;/button&gt;
 &lt;button disabled&gt;Disabled&lt;/button&gt;
 </code></pre>
-<pre><code class="lang-html">&lt;button&gt;Button&lt;/button&gt;
+<pre><code class="language-html">&lt;button&gt;Button&lt;/button&gt;
 &lt;a class=&quot;button&quot;&gt;Link&lt;/a&gt;
 &lt;input value=&quot;Submit&quot; type=&quot;submit&quot;&gt;
 &lt;label&gt;
@@ -100,9 +100,9 @@ aside .links a.button {
   &lt;span class=&quot;toggle button&quot;&gt;Toggle&lt;/span&gt;
 &lt;/label&gt;
 </code></pre>
-<h3 id="pseudo-buttons">Pseudo buttons</h3>
+<h3>Pseudo buttons</h3>
 <p>Allows for seemingly links to behave as buttons:</p>
-<pre><code class="lang-html">&lt;button class=&quot;pseudo&quot;&gt;Button&lt;/button&gt;
+<pre><code class="language-html">&lt;button class=&quot;pseudo&quot;&gt;Button&lt;/button&gt;
 &lt;a class=&quot;pseudo button&quot;&gt;Link&lt;/a&gt;
 &lt;input class=&quot;pseudo&quot; value=&quot;Submit&quot; type=&quot;submit&quot;&gt;
 &lt;label&gt;
@@ -110,20 +110,20 @@ aside .links a.button {
     &lt;span class=&quot;toggle pseudo button&quot;&gt;Toggle&lt;/span&gt;
 &lt;/label&gt;
 </code></pre>
-<h3 id="hack-it">Hack it</h3>
+<h3>Hack it</h3>
 <p>You only have to define a single color base for new colors. The <code>:hover</code> and <code>:active</code> status are handled as overlays for consistency and simplicity</p>
-<pre><code class="lang-html">&lt;button class=&quot;myCoolButton&quot;&gt;My Cool Button&lt;/button&gt;
+<pre><code class="language-html">&lt;button class=&quot;myCoolButton&quot;&gt;My Cool Button&lt;/button&gt;
 </code></pre>
-<pre><code class="lang-css">.myCoolButton {
+<pre><code class="language-css">.myCoolButton {
     background: #85144b;
 }
 </code></pre>
 <p>To create a larger button you only need to make the font inside it larger. The paddings are set in <em>em</em> so the whole button stays in great shape:</p>
-<pre><code class="lang-html">&lt;button class=&quot;mainButton&quot;&gt;Large button&lt;/button&gt;&lt;br&gt;
+<pre><code class="language-html">&lt;button class=&quot;mainButton&quot;&gt;Large button&lt;/button&gt;&lt;br&gt;
 &lt;button&gt;Normal button&lt;/button&gt;&lt;br&gt;
 &lt;button class=&quot;shyButton&quot;&gt;Small button&lt;/button&gt;
 </code></pre>
-<pre><code class="lang-css">.mainButton {
+<pre><code class="language-css">.mainButton {
     font-size: 1.5em;
 }
 .shyButton {
@@ -131,30 +131,30 @@ aside .links a.button {
 }
 </code></pre>
 <p>To change the color of the pseudo-color on hover:</p>
-<pre><code class="lang-html">&lt;button class=&quot;pseudo cool&quot;&gt;Pseudo personal&lt;/button&gt;
+<pre><code class="language-html">&lt;button class=&quot;pseudo cool&quot;&gt;Pseudo personal&lt;/button&gt;
 </code></pre>
-<pre><code class="lang-css">.cool:hover,
+<pre><code class="language-css">.cool:hover,
 .cool:active,
 .cool:focus {
     background: #cff;
 }
 </code></pre>
-<h2 id="card">Card</h2>
+<h2>Card</h2>
 <p>A card is a self-contained, replicable type. It works great with other of its kind. It can consist of only one element or many of them:</p>
-<pre><code class="lang-html">&lt;article class=&quot;card&quot;&gt;
+<pre><code class="language-html">&lt;article class=&quot;card&quot;&gt;
   &lt;header&gt;
     &lt;h3&gt;A really simple h3&lt;/h3&gt;
   &lt;/header&gt;
 &lt;/article&gt;
 </code></pre>
-<pre><code class="lang-html">&lt;article class=&quot;card&quot;&gt;
+<pre><code class="language-html">&lt;article class=&quot;card&quot;&gt;
   &lt;header&gt;
     &lt;button&gt;Love&lt;/button&gt;
     &lt;button class=&quot;dangerous&quot;&gt;Hate&lt;/button&gt;
   &lt;/header&gt;
 &lt;/article&gt;
 </code></pre>
-<pre><code class="lang-html">&lt;article class=&quot;card&quot;&gt;
+<pre><code class="language-html">&lt;article class=&quot;card&quot;&gt;
   &lt;header&gt;
     &lt;h3&gt;Forest&lt;/h3&gt;
   &lt;/header&gt;
@@ -163,7 +163,7 @@ aside .links a.button {
   &lt;/footer&gt;
 &lt;/article&gt;
 </code></pre>
-<pre><code class="lang-html">&lt;div class=&quot;flex two&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;flex two&quot;&gt;
   &lt;div&gt;
     &lt;article class=&quot;card&quot;&gt;
       &lt;img src=&quot;/img/forest.jpg&quot;&gt;
@@ -184,113 +184,113 @@ aside .links a.button {
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-<h2 id="checkbox">Checkbox</h2>
+<h2>Checkbox</h2>
 <p>Display an inline checkbox with a nice default style</p>
-<pre><code class="lang-html">&lt;label&gt;
+<pre><code class="language-html">&lt;label&gt;
   &lt;input type=&quot;checkbox&quot;&gt;
   &lt;span class=&quot;checkable&quot;&gt;Check me out (;&lt;/span&gt;
 &lt;/label&gt;
 </code></pre>
-<pre><code class="lang-html">&lt;label&gt;
+<pre><code class="language-html">&lt;label&gt;
   &lt;input type=&quot;checkbox&quot; checked&gt;
   &lt;span class=&quot;checkable&quot;&gt;Uncheck me&lt;/span&gt;
 &lt;/label&gt;
 </code></pre>
-<h3 id="usage">Usage</h3>
+<h3>Usage</h3>
 <p>This plugin, while experimental in the past, is mature now. Use a normal checkbox followed by any other element with the class <code>checkable</code>. The element that follows the checkbox will receive the pseudo classes so it should be able to do so. We recommend a <code>&lt;span&gt;</code> or <code>&lt;label&gt;</code>. Here we use the label around them for making the <code>&lt;input&gt;</code> change state when you click on this folowing element.</p>
-<pre><code class="lang-html">&lt;label&gt;
+<pre><code class="language-html">&lt;label&gt;
   &lt;input type=&quot;checkbox&quot;&gt;
   &lt;span class=&quot;checkable&quot;&gt;Checkbox text&lt;/span&gt;
 &lt;/label&gt;
 </code></pre>
 <p>But you can also use a label and reference the original input:</p>
-<pre><code class="lang-html">&lt;input id=&quot;checkboxdemo&quot; type=&quot;checkbox&quot;&gt;
+<pre><code class="language-html">&lt;input id=&quot;checkboxdemo&quot; type=&quot;checkbox&quot;&gt;
 &lt;label for=&quot;checkboxdemo&quot; class=&quot;checkable&quot;&gt;Checkbox text&lt;/label&gt;
 </code></pre>
-<h3 id="javascript">JavaScript</h3>
+<h3>JavaScript</h3>
 <p>You do not need javascript since we are using the native elements and not setting <code>display: none</code> purposefully. However, you can still use javascript as normal to retrieve the checked elements.</p>
-<p><form>
-  <label>
-    <input class="tos" type="checkbox" />
-    <span class="checkable">Accept TOS</span>
-  </label>
-  <button>Send</button>
-</form></p>
-<script>
-  // Pure javascript
-  document.querySelector('form').onsubmit = function(e){
-    e.preventDefault();
-    alert(document.querySelector('.tos').checked);
-  }
-</script>
-
-
-<pre><code class="lang-js">// Pure javascript
-document.querySelector(&#39;form&#39;).onsubmit = function(e){
+<p>&lt;form&gt;
+&lt;label&gt;
+&lt;input class=&quot;tos&quot; type=&quot;checkbox&quot; /&gt;
+&lt;span class=&quot;checkable&quot;&gt;Accept TOS&lt;/span&gt;
+&lt;/label&gt;
+&lt;button&gt;Send&lt;/button&gt;
+&lt;/form&gt;
+&lt;script&gt;
+// Pure javascript
+document.querySelector('form').onsubmit = function(e){
+e.preventDefault();
+alert(document.querySelector('.tos').checked);
+}
+&lt;/script&gt;</p>
+<pre><code class="language-js">// Pure javascript
+document.querySelector('form').onsubmit = function(e){
   e.preventDefault();
-  alert(document.querySelector(&#39;input.tos&#39;).checked);
+  alert(document.querySelector('input.tos').checked);
 }
 
 // jQuery
-$(&quot;form&quot;).on(&#39;submit&#39;, function(e){
+$(&quot;form&quot;).on('submit', function(e){
   e.preventDefault();
-  alert($(&#39;input.tos&#39;).is(&#39;:checked&#39;));
+  alert($('input.tos').is(':checked'));
 });
 </code></pre>
-<h2 id="drop-image">Drop image</h2>
+<h2>Drop image</h2>
 <p>Allows you to add a file input element that can receive an image drop and clicks with native elements. However, it needs some javascript to show the dropped image:</p>
-<pre><code class="lang-html">&lt;div style=&quot;width: 200px&quot;&gt; &lt;!-- this div just for demo display --&gt;
+<pre><code class="language-html">&lt;div style=&quot;width: 200px&quot;&gt; &lt;!-- this div just for demo display --&gt;
   &lt;label class=&quot;dropimage&quot;&gt;
     &lt;input title=&quot;Drop image or click me&quot; type=&quot;file&quot;&gt;
   &lt;/label&gt;
 &lt;/div&gt;
 </code></pre>
-<h3 id="javascript">JavaScript</h3>
+<h3>JavaScript</h3>
 <p>This is the javascript you need for multiple elements:</p>
-<pre><code class="lang-js">document.addEventListener(&quot;DOMContentLoaded&quot;, function() {
-  [].forEach.call(document.querySelectorAll(&#39;.dropimage&#39;), function(img){
+<pre><code class="language-js">document.addEventListener(&quot;DOMContentLoaded&quot;, function() {
+  [].forEach.call(document.querySelectorAll('.dropimage'), function(img){
     img.onchange = function(e){
       var inputfile = this, reader = new FileReader();
       reader.onloadend = function(){
-        inputfile.style[&#39;background-image&#39;] = &#39;url(&#39;+reader.result+&#39;)&#39;;
+        inputfile.style['background-image'] = 'url('+reader.result+')';
       }
       reader.readAsDataURL(e.target.files[0]);
     }
   });
 });
 </code></pre>
-<h3 id="hack-it">Hack it</h3>
+<h3>Hack it</h3>
 <p>Do you want round pictures? No problem, just do this:</p>
-<pre><code class="lang-css">.profile {
+<pre><code class="language-css">.profile {
   border-radius: 50%;     /* Make it a circle */
   padding-bottom: 100%;   /* 100% height (ratio 1) */
 }
 </code></pre>
 <p>To get this:</p>
-<pre><code class="lang-html">&lt;label class=&quot;dropimage profile&quot;&gt;
+<pre><code class="language-html">&lt;label class=&quot;dropimage profile&quot;&gt;
   &lt;input name=&quot;filea&quot; title=&quot;Drop image or click me&quot; type=&quot;file&quot;&gt;
 &lt;/label&gt;
 </code></pre>
 <p>Make it smaller</p>
-<pre><code class="lang-css">.miniprofile {
+<pre><code class="language-css">.miniprofile {
   border-radius: 50%;    /* Make it a circle */
   margin: 0 auto;        /* Center horizontally */
   width: 60%;            /* 60% width */
   padding-bottom: 60%;   /* 60% height */
 }
 </code></pre>
-<pre><code class="lang-html">&lt;label class=&quot;dropimage miniprofile&quot;&gt;
+<pre><code class="language-html">&lt;label class=&quot;dropimage miniprofile&quot;&gt;
   &lt;input name=&quot;filea&quot; title=&quot;Drop image or click me&quot; type=&quot;file&quot;&gt;
 &lt;/label&gt;
 </code></pre>
-<h2 id="grids">Grids</h2>
+<h2>Grids</h2>
 <blockquote>
 <p>Note: the old <code>.row</code> and <code>.grid</code> have been replaced by the new <code>.flex</code>. You can still <a href="https://github.com/picnicss/picnic/blob/dcf3410125a861b3bf58ebfd06f73916ef9ae3db/src/plugins/grid/readme.md">see the old documentation in github</a>.</p>
+</blockquote>
+<blockquote>
 <p>Note 2: the children <code>&lt;span&gt;</code> are only for display purposes; you can put anything you want instead of them</p>
 </blockquote>
-<p>A flexbox grid implementation with breakpoints. Choose when to change your layout depending on your content instead of the device you want to show as recommended by <a href="https://developers.google.com/web/fundamentals/design-and-ui/responsive/fundamentals/how-to-choose-breakpoints">Google&#39;s RWD</a>, by <a href="https://www.smashingmagazine.com/2013/03/logical-breakpoints-responsive-design/">Smashing Magazine&#39;s Logical Breakpoints</a> and Picnic CSS.</p>
+<p>A flexbox grid implementation with breakpoints. Choose when to change your layout depending on your content instead of the device you want to show as recommended by <a href="https://developers.google.com/web/fundamentals/design-and-ui/responsive/fundamentals/how-to-choose-breakpoints">Google's RWD</a>, by <a href="https://www.smashingmagazine.com/2013/03/logical-breakpoints-responsive-design/">Smashing Magazine's Logical Breakpoints</a> and Picnic CSS.</p>
 <p>You can create complex, flexible layouts with it. Just resize the browser to see how powerful it is:</p>
-<pre><code class="lang-html">&lt;div class=&quot;flex two four-500 six-800 demo&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;flex two four-500 six-800 demo&quot;&gt;
   &lt;div&gt;&lt;span&gt;1&lt;/span&gt;&lt;/div&gt;
   &lt;div&gt;&lt;span&gt;2&lt;/span&gt;&lt;/div&gt;
   &lt;div class=&quot;full half-500 third-800&quot;&gt;&lt;span&gt;3&lt;/span&gt;&lt;/div&gt;
@@ -303,9 +303,9 @@ $(&quot;form&quot;).on(&#39;submit&#39;, function(e){
   &lt;div class=&quot;off-half off-fourth-500 off-sixth-800&quot;&gt;&lt;span&gt;10&lt;/span&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-<h3 id="equally-sized-columns">Equally sized columns</h3>
-<p>Let&#39;s start through the basics though. Just a container with equally sized children:</p>
-<pre><code class="lang-html">&lt;div class=&quot;flex demo&quot;&gt;
+<h3>Equally sized columns</h3>
+<p>Let's start through the basics though. Just a container with equally sized children:</p>
+<pre><code class="language-html">&lt;div class=&quot;flex demo&quot;&gt;
   &lt;div&gt;&lt;span&gt;1&lt;/span&gt;&lt;/div&gt;
   &lt;div&gt;&lt;span&gt;2&lt;/span&gt;&lt;/div&gt;
   &lt;div&gt;&lt;span&gt;3&lt;/span&gt;&lt;/div&gt;
@@ -315,15 +315,15 @@ $(&quot;form&quot;).on(&#39;submit&#39;, function(e){
 &lt;/div&gt;
 </code></pre>
 <p>With the class <code>flex</code>, smaller children will be spaced equally to fill all of the content. However, this only works with small children. If you have children bigger than their corresponding width (1/6th in the above) they will not be restricted:</p>
-<pre><code class="lang-html">&lt;div class=&quot;flex demo&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;flex demo&quot;&gt;
   &lt;div&gt;&lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/span&gt;&lt;/div&gt;
   &lt;div&gt;&lt;span&gt;2&lt;/span&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 <p>To fix this, manually set the number of columns as explained in the next point.</p>
-<h3 id="column-count">Column count</h3>
+<h3>Column count</h3>
 <p>If instead you prefer certain column count, such as in a gallery where it can span several rows, use a counter besides the class flex:</p>
-<pre><code class="lang-html">&lt;div class=&quot;flex three demo&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;flex three demo&quot;&gt;
   &lt;div&gt;&lt;span&gt;1&lt;/span&gt;&lt;/div&gt;
   &lt;div&gt;&lt;span&gt;2&lt;/span&gt;&lt;/div&gt;
   &lt;div&gt;&lt;span&gt;3&lt;/span&gt;&lt;/div&gt;
@@ -332,26 +332,24 @@ $(&quot;form&quot;).on(&#39;submit&#39;, function(e){
 &lt;/div&gt;
 </code></pre>
 <p>The columns will keep being equally spaced, but this time with the width corresponding to the column counter. You can use any number as a class from one to twelve:</p>
-<div class="flex six">
-  <div><code>one</code></div>
-  <div><code>two</code></div>
-  <div><code>three</code></div>
-  <div><code>four</code></div>
-  <div><code>five</code></div>
-  <div><code>six</code></div>
-  <div><code>seven</code></div>
-  <div><code>eight</code></div>
-  <div><code>nine</code></div>
-  <div><code>ten</code></div>
-  <div><code>eleven</code></div>
-  <div><code>twelve</code></div>
-</div>
-
-
+<p>&lt;div class=&quot;flex six&quot;&gt;
+&lt;div&gt;&lt;code&gt;one&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;two&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;three&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;four&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;five&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;six&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;seven&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;eight&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;nine&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;ten&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;eleven&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;twelve&lt;/code&gt;&lt;/div&gt;
+&lt;/div&gt;</p>
 <p>Most grid systems use a 12 grid system, but we wanted to use a more flexible system and allow you to choose the grid size.</p>
-<h3 id="responsive-column-count">Responsive column count</h3>
+<h3>Responsive column count</h3>
 <p>We follow a mobile-first design. Put the number of columns for mobile as explained in the previous point. Then, when things get too stretched, add a column counter with the number of pixels in 100 increments as follows:</p>
-<pre><code class="lang-html">&lt;div class=&quot;flex two three-600 six-1200 demo&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;flex two three-600 six-1200 demo&quot;&gt;
   &lt;div&gt;&lt;span&gt;1&lt;/span&gt;&lt;/div&gt;
   &lt;div&gt;&lt;span&gt;2&lt;/span&gt;&lt;/div&gt;
   &lt;div&gt;&lt;span&gt;3&lt;/span&gt;&lt;/div&gt;
@@ -363,30 +361,27 @@ $(&quot;form&quot;).on(&#39;submit&#39;, function(e){
 <p>The number after the column count as in <code>-600</code> or <code>-1200</code> are the breakpoints. When the <strong>website width is over that number</strong>, that column count will be used instead of the previous. If we use two or more, the largest column count will be used.</p>
 <p>For example, in a desktop with a screen of <code>1920x1080px</code> the previous one will display 6 columns. Any screen from 600px to 1200px will display three columns and smaller than 600px will display 2 columns.</p>
 <p>The increment is 100px and starts in 500px up to 2000px both included. You can use any of those suffixes for the column count class:</p>
-<div class="flex two five-800 ten-1200">
-  <div><code>-500</code></div>
-  <div><code>-600</code></div>
-  <div><code>-700</code></div>
-  <div><code>-800</code></div>
-  <div><code>-900</code></div>
-  <div><code>-1000</code></div>
-  <div><code>-1100</code></div>
-  <div><code>-1200</code></div>
-  <div><code>-1300</code></div>
-  <div><code>-1400</code></div>
-  <div><code>-1500</code></div>
-  <div><code>-1600</code></div>
-  <div><code>-1700</code></div>
-  <div><code>-1800</code></div>
-  <div><code>-1900</code></div>
-  <div><code>-2000</code></div>
-</div>
-
-
-
-<h3 id="remainders">Remainders</h3>
+<p>&lt;div class=&quot;flex two five-800 ten-1200&quot;&gt;
+&lt;div&gt;&lt;code&gt;-500&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;-600&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;-700&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;-800&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;-900&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;-1000&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;-1100&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;-1200&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;-1300&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;-1400&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;-1500&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;-1600&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;-1700&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;-1800&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;-1900&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;-2000&lt;/code&gt;&lt;/div&gt;
+&lt;/div&gt;</p>
+<h3>Remainders</h3>
 <p>You can also modify the remainder content as you wish with a couple of utility classes. This is the default:</p>
-<pre><code class="lang-html">&lt;div class=&quot;flex three demo&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;flex three demo&quot;&gt;
   &lt;div&gt;&lt;span&gt;1&lt;/span&gt;&lt;/div&gt;
   &lt;div&gt;&lt;span&gt;2&lt;/span&gt;&lt;/div&gt;
   &lt;div&gt;&lt;span&gt;3&lt;/span&gt;&lt;/div&gt;
@@ -395,7 +390,7 @@ $(&quot;form&quot;).on(&#39;submit&#39;, function(e){
 &lt;/div&gt;
 </code></pre>
 <p>You can grow them:</p>
-<pre><code class="lang-html">&lt;div class=&quot;flex three grow demo&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;flex three grow demo&quot;&gt;
   &lt;div&gt;&lt;span&gt;1&lt;/span&gt;&lt;/div&gt;
   &lt;div&gt;&lt;span&gt;2&lt;/span&gt;&lt;/div&gt;
   &lt;div&gt;&lt;span&gt;3&lt;/span&gt;&lt;/div&gt;
@@ -404,7 +399,7 @@ $(&quot;form&quot;).on(&#39;submit&#39;, function(e){
 &lt;/div&gt;
 </code></pre>
 <p>Or you can center them:</p>
-<pre><code class="lang-html">&lt;div class=&quot;flex three center demo&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;flex three center demo&quot;&gt;
   &lt;div&gt;&lt;span&gt;1&lt;/span&gt;&lt;/div&gt;
   &lt;div&gt;&lt;span&gt;2&lt;/span&gt;&lt;/div&gt;
   &lt;div&gt;&lt;span&gt;3&lt;/span&gt;&lt;/div&gt;
@@ -412,100 +407,96 @@ $(&quot;form&quot;).on(&#39;submit&#39;, function(e){
   &lt;div&gt;&lt;span&gt;5&lt;/span&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-<h3 id="children-sizing">Children sizing</h3>
+<h3>Children sizing</h3>
 <p>Now that we know how the parent (or grid) can modify itself and the elements below them, the children can also go rebel and behave on their own. Say that a child wants to be half of the size of its parent element. Easy, just add the class <code>half</code>:</p>
-<pre><code class="lang-html">&lt;div class=&quot;flex four demo&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;flex four demo&quot;&gt;
   &lt;div&gt;&lt;span&gt;1&lt;/span&gt;&lt;/div&gt;
   &lt;div&gt;&lt;span&gt;2&lt;/span&gt;&lt;/div&gt;
   &lt;div class=&quot;half&quot;&gt;&lt;span&gt;3&lt;/span&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 <p>We have many classes like those. They are the size relative to the parent grid:</p>
-<div class="flex six">
-  <div><code>full</code></div>
-  <div><code>half</code></div>
-  <div><code>third</code></div>
-  <div><code>two-third</code></div>
-  <div><code>fourth</code></div>
-  <div><code>three-fourth</code></div>
-  <div><code>fifth</code></div>
-  <div><code>two-fifth</code></div>
-  <div><code>three-fifth</code></div>
-  <div><code>four-fifth</code></div>
-  <div><code>sixth</code></div>
-  <div><code>none</code></div>
-</div>
-
+<p>&lt;div class=&quot;flex six&quot;&gt;
+&lt;div&gt;&lt;code&gt;full&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;half&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;third&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;two-third&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;fourth&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;three-fourth&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;fifth&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;two-fifth&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;three-fifth&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;four-fifth&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;sixth&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;none&lt;/code&gt;&lt;/div&gt;
+&lt;/div&gt;</p>
 <p>The class <code>none</code> hides the element, useful for responsive layouts</p>
-<h3 id="responsive-children">Responsive children</h3>
+<h3>Responsive children</h3>
 <p>They can also be fine-tuned in a way similar to the above:</p>
-<pre><code class="lang-html">&lt;div class=&quot;flex four demo&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;flex four demo&quot;&gt;
   &lt;div class=&quot;half fourth-1000&quot;&gt;&lt;span&gt;1&lt;/span&gt;&lt;/div&gt;
   &lt;div class=&quot;half fourth-1000&quot;&gt;&lt;span&gt;2&lt;/span&gt;&lt;/div&gt;
   &lt;div class=&quot;full half-1000&quot;&gt;&lt;span&gt;3&lt;/span&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-<h3 id="offsets">Offsets</h3>
+<h3>Offsets</h3>
 <p>The children can also have one offset (empty space) before it. They are built adding the class off-SIZE, similar to the size but prefixing off-:</p>
-<pre><code class="lang-html">&lt;div class=&quot;flex four demo&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;flex four demo&quot;&gt;
   &lt;div&gt;&lt;span&gt;1&lt;/span&gt;&lt;/div&gt;
   &lt;div&gt;&lt;span&gt;2&lt;/span&gt;&lt;/div&gt;
   &lt;div class=&quot;off-fourth&quot;&gt;&lt;span&gt;3&lt;/span&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 <p>We have many classes like those. They are the size of the offset relative to the parent grid:</p>
-<div class="flex two three-600 six-1200 demo">
-  <div><code>off-none</code></div>
-  <div><code>off-half</code></div>
-  <div><code>off-third</code></div>
-  <div><code>off-two-third</code></div>
-  <div><code>off-fourth</code></div>
-  <div><code>off-three-fourth</code></div>
-  <div><code>off-fifth</code></div>
-  <div><code>off-two-fifth</code></div>
-  <div><code>off-three-fifth</code></div>
-  <div><code>off-four-fifth</code></div>
-  <div><code>off-sixth</code></div>
-</div>
-
+<p>&lt;div class=&quot;flex two three-600 six-1200 demo&quot;&gt;
+&lt;div&gt;&lt;code&gt;off-none&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;off-half&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;off-third&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;off-two-third&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;off-fourth&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;off-three-fourth&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;off-fifth&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;off-two-fifth&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;off-three-fifth&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;off-four-fifth&lt;/code&gt;&lt;/div&gt;
+&lt;div&gt;&lt;code&gt;off-sixth&lt;/code&gt;&lt;/div&gt;
+&lt;/div&gt;</p>
 <blockquote>
 <p>Note: <code>offset-none</code> is useful for making responsive layouts as explained in the next point.</p>
 </blockquote>
-<h3 id="responsive-offsets">Responsive offsets</h3>
+<h3>Responsive offsets</h3>
 <p>They can also have the minimum screen size when they start working:</p>
-<pre><code class="lang-html">&lt;div class=&quot;flex three four-1000 demo&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;flex three four-1000 demo&quot;&gt;
   &lt;div&gt;&lt;span&gt;1&lt;/span&gt;&lt;/div&gt;
   &lt;div&gt;&lt;span&gt;2&lt;/span&gt;&lt;/div&gt;
   &lt;div class=&quot;off-fourth-800&quot;&gt;&lt;span&gt;3&lt;/span&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-<p>The main difference with the width classes is that it includes a none in case you want to hide the offset at certain sizes and that it doesn&#39;t include a full</p>
-<h2 id="input">Input</h2>
+<p>The main difference with the width classes is that it includes a none in case you want to hide the offset at certain sizes and that it doesn't include a full</p>
+<h2>Input</h2>
 <p>Simple (or not) text form elements:</p>
-<pre><code class="lang-html">&lt;fieldset class=&quot;flex two&quot;&gt;
+<pre><code class="language-html">&lt;fieldset class=&quot;flex two&quot;&gt;
   &lt;label&gt;&lt;input type=&quot;email&quot; placeholder=&quot;Email&quot;&gt;&lt;/label&gt;
   &lt;label&gt;&lt;input type=&quot;password&quot; placeholder=&quot;Password&quot;&gt;&lt;/label&gt;
 &lt;/fieldset&gt;
 &lt;textarea placeholder=&quot;Textarea&quot;&gt;&lt;/textarea&gt;
 </code></pre>
-<style>
+<p>&lt;style&gt;
 input.demo {
-  margin-bottom: .3em;
+margin-bottom: .3em;
 }
-</style>
-
-
-<h2 id="label">Label</h2>
+&lt;/style&gt;</p>
+<h2>Label</h2>
 <p>An element to display some short relevant information on the side of other element</p>
-<pre><code class="lang-html">&lt;h1&gt;header 1 &lt;span class=&quot;label&quot;&gt;Normal&lt;/span&gt;&lt;/h1&gt;
+<pre><code class="language-html">&lt;h1&gt;header 1 &lt;span class=&quot;label&quot;&gt;Normal&lt;/span&gt;&lt;/h1&gt;
 &lt;h2&gt;header 2 &lt;span class=&quot;label success&quot;&gt;Success&lt;/span&gt;&lt;/h2&gt;
 &lt;h3&gt;header 3 &lt;span class=&quot;label warning&quot;&gt;Warning&lt;/span&gt;&lt;/h3&gt;
 &lt;h4&gt;header 4 &lt;span class=&quot;label error&quot;&gt;Error&lt;/span&gt;&lt;/h4&gt;
 &lt;p&gt;paragraph &lt;span class=&quot;label&quot;&gt;Normal&lt;/span&gt;&lt;/p&gt;
 </code></pre>
-<h2 id="modal">Modal</h2>
+<h2>Modal</h2>
 <p>The modal is pure CSS, which makes the HTML quite ugly actually. However it does work. To try it, press the button:</p>
-<pre><code class="lang-html">&lt;label for=&quot;modal_1&quot; class=&quot;button&quot;&gt;Show modal&lt;/label&gt;
+<pre><code class="language-html">&lt;label for=&quot;modal_1&quot; class=&quot;button&quot;&gt;Show modal&lt;/label&gt;
 
 &lt;div class=&quot;modal&quot;&gt;
   &lt;input id=&quot;modal_1&quot; type=&quot;checkbox&quot; /&gt;
@@ -527,38 +518,36 @@ input.demo {
   &lt;/article&gt;
 &lt;/div&gt;
 </code></pre>
-<h3 id="javascript">JavaScript</h3>
+<h3>JavaScript</h3>
 <p>As always, there is <strong>no javascript</strong>. However, a little bit of javascript could enhance the experience allowing to close the modal by pressing <code>ESC</code>.</p>
-<script>
+<p>&lt;script&gt;
 document.onkeydown = function(e){
-  if (e.keyCode == 27) {
-    var mods = document.querySelectorAll('.modal > [type=checkbox]');
-    [].forEach.call(mods, function(mod){ mod.checked = false; });
-  }
+if (e.keyCode == 27) {
+var mods = document.querySelectorAll('.modal &gt; [type=checkbox]');
+[].forEach.call(mods, function(mod){ mod.checked = false; });
 }
-</script>
-
-<pre><code class="lang-js">document.onkeydown = function(e){
+}
+&lt;/script&gt;</p>
+<pre><code class="language-js">document.onkeydown = function(e){
   if (e.keyCode == 27) {
-    var mods = document.querySelectorAll(&#39;.modal &gt; [type=checkbox]&#39;);
+    var mods = document.querySelectorAll('.modal &gt; [type=checkbox]');
     [].forEach.call(mods, function(mod){ mod.checked = false; });
   }
 }
 </code></pre>
-<h2 id="nav">Nav</h2>
-<style>
+<h2>Nav</h2>
+<p>&lt;style&gt;
 nav.demo {
-  position: relative;
-  z-index: 9;
-  padding: 0 .6em;
+position: relative;
+z-index: 9;
+padding: 0 .6em;
 }
-</style>
-
+&lt;/style&gt;</p>
 <p>A responsive, pure css navigation menu:</p>
 <blockquote>
-<p>On these smaller versions it might have small glitches. Please see the top, page-wide nav to see the actual effect.  </p>
+<p>On these smaller versions it might have small glitches. Please see the top, page-wide nav to see the actual effect.</p>
 </blockquote>
-<pre><code class="lang-html">&lt;nav class=&quot;demo&quot;&gt;
+<pre><code class="language-html">&lt;nav class=&quot;demo&quot;&gt;
   &lt;a href=&quot;#&quot; class=&quot;brand&quot;&gt;
     &lt;img class=&quot;logo&quot; src=&quot;/img/basket.png&quot; /&gt;
     &lt;span&gt;Picnic CSS&lt;/span&gt;
@@ -574,16 +563,16 @@ nav.demo {
   &lt;/div&gt;
 &lt;/nav&gt;
 </code></pre>
-<h3 id="responsive">Responsive</h3>
+<h3>Responsive</h3>
 <p>The nav is responsive by default. The text inside the <code>&lt;label&gt;</code> can be changed for the following characters for a different effect (<a href="https://css-tricks.com/three-line-menu-navicon/">source</a>):</p>
 <ul>
-<li>Identical to <code>&amp;#8801;</code> (safe on mobile): <label class="pseudo button">&#8801;</label></li>
-<li>Trigram for heaven <code>&amp;#9776;</code>: <label class="pseudo button">&#9776;</label></li>
-<li>Any other: <i class="pseudo button icon-cog"></i></li>
+<li>Identical to <code>&amp;#8801;</code> (safe on mobile): &lt;label class=&quot;pseudo button&quot;&gt;≡&lt;/label&gt;</li>
+<li>Trigram for heaven <code>&amp;#9776;</code>: &lt;label class=&quot;pseudo button&quot;&gt;☰&lt;/label&gt;</li>
+<li>Any other: &lt;i class=&quot;pseudo button icon-cog&quot;&gt;&lt;/i&gt;</li>
 </ul>
-<h3 id="different-height-and-big-logo">Different height and big logo</h3>
+<h3>Different height and big logo</h3>
 <p>Thanks to a <a href="http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/">vertical-align trick</a>, you can set it up to any height you want:</p>
-<pre><code class="lang-css">nav.imponent {
+<pre><code class="language-css">nav.imponent {
   padding: 2em 0;
 }
 
@@ -591,16 +580,16 @@ nav.demo {
   height: 3em;
 }
 </code></pre>
-<pre><code class="lang-html">&lt;nav class=&quot;demo imponent&quot;&gt;
+<pre><code class="language-html">&lt;nav class=&quot;demo imponent&quot;&gt;
   &lt;a href=&quot;#&quot; class=&quot;brand&quot;&gt;
     &lt;img class=&quot;logo&quot; src=&quot;/img/basket.png&quot; /&gt;
     &lt;span&gt;Picnic CSS&lt;/span&gt;
   &lt;/a&gt;
 &lt;/nav&gt;
 </code></pre>
-<h3 id="form-elements">Form elements</h3>
+<h3>Form elements</h3>
 <p>Just get anything you want inside the nav, most things should work.</p>
-<pre><code class="lang-html">&lt;nav class=&quot;demo&quot;&gt;
+<pre><code class="language-html">&lt;nav class=&quot;demo&quot;&gt;
   &lt;a href=&quot;#&quot; class=&quot;brand&quot;&gt;Picnic CSS&lt;/a&gt;
 
   &lt;!-- responsive--&gt;
@@ -612,7 +601,7 @@ nav.demo {
   &lt;/div&gt;
 &lt;/nav&gt;
 </code></pre>
-<pre><code class="lang-html">&lt;nav class=&quot;demo&quot;&gt;
+<pre><code class="language-html">&lt;nav class=&quot;demo&quot;&gt;
   &lt;a href=&quot;#&quot; class=&quot;brand&quot;&gt;Picnic CSS&lt;/a&gt;
 
   &lt;!-- responsive--&gt;
@@ -628,41 +617,42 @@ nav.demo {
   &lt;/div&gt;
 &lt;/nav&gt;
 </code></pre>
-<h3 id="fixed-position">Fixed position</h3>
+<h3>Fixed position</h3>
 <p>To set it on the top of the page instead of scrolling with the page, just do:</p>
 <pre><code>nav {
   position: absolute;
 }
-</code></pre><h3 id="open-nav-menu-from-left">Open nav menu from left</h3>
+</code></pre>
+<h3>Open nav menu from left</h3>
 <p>change sass variable <code>$picnic-nav-open-left: false !default;</code> to
 <code>picnic-nav-open-left: true !default;</code> inside src/plugins/nav/_class.scss file.</p>
-<h2 id="radio-button">Radio button</h2>
+<h2>Radio button</h2>
 <p>A simple way of using radiobuttons</p>
-<pre><code class="lang-html">&lt;label&gt;
-  &lt;input type=&#39;radio&#39; name=&quot;radiodemo&quot;&gt;
+<pre><code class="language-html">&lt;label&gt;
+  &lt;input type='radio' name=&quot;radiodemo&quot;&gt;
   &lt;span class=&quot;checkable&quot;&gt;Select me&lt;/span&gt;
 &lt;/label&gt;&lt;br&gt;&lt;br&gt;
 
-&lt;input id=&quot;radiodemo&quot; checked type=&#39;radio&#39; name=&quot;radiodemo&quot;&gt;
+&lt;input id=&quot;radiodemo&quot; checked type='radio' name=&quot;radiodemo&quot;&gt;
 &lt;label for=&quot;radiodemo&quot; class=&quot;checkable&quot;&gt;Or me&lt;/span&gt;
 </code></pre>
-<h2 id="select">Select</h2>
-<pre><code class="lang-html">&lt;select&gt;
+<h2>Select</h2>
+<pre><code class="language-html">&lt;select&gt;
   &lt;option&gt;Select an option&lt;/option&gt;
   &lt;option&gt;Good option&lt;/option&gt;
   &lt;option&gt;Nice option&lt;/option&gt;
   &lt;option&gt;Cheap option&lt;/option&gt;
 &lt;/select&gt;
 </code></pre>
-<h2 id="stack">Stack</h2>
+<h2>Stack</h2>
 <p>A vertical group of different elements.</p>
-<pre><code class="lang-html">&lt;span class=&quot;button stack icon-picture&quot;&gt;Home&lt;/span&gt;
+<pre><code class="language-html">&lt;span class=&quot;button stack icon-picture&quot;&gt;Home&lt;/span&gt;
 &lt;span class=&quot;button stack icon-puzzle&quot;&gt;Plugins&lt;/span&gt;
 &lt;span class=&quot;button stack icon-file-code&quot;&gt;Documentation&lt;/span&gt;
 &lt;span class=&quot;button stack icon-help-circled&quot;&gt;Test&lt;/span&gt;
 </code></pre>
 <p>They can also toggle:</p>
-<pre><code class="lang-html">&lt;div&gt;
+<pre><code class="language-html">&lt;div&gt;
   &lt;label class=&quot;stack&quot;&gt;
     &lt;input name=&quot;stack&quot; type=&quot;radio&quot;&gt;
     &lt;span class=&quot;button toggle&quot;&gt;
@@ -690,13 +680,13 @@ nav.demo {
 &lt;/div&gt;
 </code></pre>
 <p>Stack different kind of elements</p>
-<pre><code class="lang-html">&lt;div class=&quot;third&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;third&quot;&gt;
   &lt;img class=&quot;stack&quot; src=&quot;/img/forest.jpg&quot;&gt;
   &lt;a class=&quot;button stack&quot;&gt;Full size&lt;/a&gt;
 &lt;/div&gt;
 </code></pre>
 <p>A small form</p>
-<pre><code class="lang-html">&lt;div class=&quot;third&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;third&quot;&gt;
   &lt;input class=&quot;stack&quot; placeholder=&quot;Name&quot; /&gt;
   &lt;input class=&quot;stack&quot; placeholder=&quot;Email&quot; /&gt;
   &lt;button class=&quot;stack icon-paper-plane&quot;&gt;
@@ -705,13 +695,13 @@ nav.demo {
 &lt;/div&gt;
 </code></pre>
 <p>Pseudo buttons:</p>
-<pre><code class="lang-html">&lt;a class=&quot;stack pseudo button&quot;&gt;First&lt;/a&gt;
+<pre><code class="language-html">&lt;a class=&quot;stack pseudo button&quot;&gt;First&lt;/a&gt;
 &lt;a class=&quot;stack pseudo button&quot;&gt;Second&lt;/a&gt;
 &lt;a class=&quot;stack pseudo button&quot;&gt;Third&lt;/a&gt;
 </code></pre>
-<h3 id="forms">Forms</h3>
+<h3>Forms</h3>
 <p>Create nice and packed forms. <a href="http://jsfiddle.net/ddmv3dsr/4/">jsfiddle</a></p>
-<pre><code class="lang-html">&lt;div class=&quot;third&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;third&quot;&gt;
   &lt;input class=&quot;stack&quot; placeholder=&quot;First name&quot; /&gt;
   &lt;input class=&quot;stack&quot; placeholder=&quot;Last name&quot; /&gt;
   &lt;input class=&quot;stack&quot; placeholder=&quot;Email&quot; /&gt;
@@ -724,8 +714,8 @@ nav.demo {
   &lt;button class=&quot;stack icon-paper-plane&quot;&gt;Send&lt;/button&gt;
 &lt;/div&gt;
 </code></pre>
-<h2 id="table">Table</h2>
-<pre><code class="lang-html">&lt;table class=&quot;primary&quot;&gt;
+<h2>Table</h2>
+<pre><code class="language-html">&lt;table class=&quot;primary&quot;&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;Name&lt;/th&gt;
@@ -752,14 +742,14 @@ nav.demo {
   &lt;/tbody&gt;
 &lt;/table&gt;
 </code></pre>
-<h2 id="tooltip">Tooltip</h2>
+<h2>Tooltip</h2>
 <p>Hover this element to show the tooltip:</p>
-<pre><code class="lang-html">&lt;button data-tooltip=&quot;This is a great tooltip&quot; class=&quot;tooltip-top&quot;&gt;
+<pre><code class="language-html">&lt;button data-tooltip=&quot;This is a great tooltip&quot; class=&quot;tooltip-top&quot;&gt;
   Hover for tooltip
 &lt;/button&gt;
 </code></pre>
-<h3 id="positions">Positions</h3>
-<pre><code class="lang-html">&lt;button data-tooltip=&quot;This is a great tooltip&quot; class=&quot;tooltip-top&quot;&gt;
+<h3>Positions</h3>
+<pre><code class="language-html">&lt;button data-tooltip=&quot;This is a great tooltip&quot; class=&quot;tooltip-top&quot;&gt;
   Top
 &lt;/button&gt;
 &lt;button data-tooltip=&quot;This is a great tooltip&quot;&gt;
@@ -772,8 +762,7 @@ nav.demo {
   Right
 &lt;/button&gt;
 </code></pre>
-</article></section></main><script src="https://cdn.jsdelivr.net/umbrella/2.6/umbrella.min.js"></script><script src="/prism.js"></script>
-<script>u('h2[id]').each(function(node){
+</article></section></main><script src="https://cdn.jsdelivr.net/umbrella/2.6/umbrella.min.js"></script><script src="/prism.js"></script><script>u('h2[id]').each(function(node){
   u(node).attr('id', u(node).attr('id').replace(/-/g, ''));
 });
 

@@ -21,7 +21,7 @@ $picnic-normalize-ie: false;
 
 // Normalize.css (external library)
 @import '../../picnic';
-
+@import '../../plugins/tabs/tabs';
 // // Generic styles for things like <body>, <a> and others
 // // It also overwrites normalize.css a bit
 // @import '../../src/plugins/generic/plugin';
