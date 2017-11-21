@@ -10,7 +10,9 @@ There are many ways of using Picnic CSS in your projects. Here a brief introduct
 
 ### CDN - just give me the file
 
-Use [Picnic CSS in the CDN jsDelivr](http://www.jsdelivr.com/#!picnicss) for linking to the static file.
+Use [Picnic CSS in the CDN jsDelivr](https://cdn.jsdelivr.net/npm/picnic/) for linking to the static file.
+
+Load latest 6.x version https://cdn.jsdelivr.net/npm/picnic@6
 
 
 ### Bower - to personalize Picnic
