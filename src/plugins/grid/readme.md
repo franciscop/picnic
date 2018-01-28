@@ -245,7 +245,7 @@ We have many classes like those. They are the size of the offset relative to the
   <div><code>off-sixth</code></div>
 </div>
 
-> Note: `offset-none` is useful for making responsive layouts as explained in the next point.
+> Note: `off-none` is useful for making responsive layouts as explained in the next point.
 
 
 
