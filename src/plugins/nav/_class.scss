@@ -50,7 +50,7 @@ $picnic-nav-open-left: false !default;
     padding: 0 $picnic-nav-sides;
     max-width: 50%;
     white-space: nowrap;
-    color: $picnic-black;
+    color: inherit;
 
     * {
       vertical-align: middle;
