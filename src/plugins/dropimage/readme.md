@@ -44,9 +44,11 @@ Do you want round pictures? No problem, just do this:
 To get this:
 
 ```html
-<label class="dropimage profile">
-  <input name="filea" title="Drop image or click me" type="file">
-</label>
+<div style="width: 200px"> <!-- this div just for demo display -->
+  <label class="dropimage profile">
+    <input name="filea" title="Drop image or click me" type="file">
+  </label>
+</div>
 ```
 
 
@@ -63,7 +65,9 @@ Make it smaller
 ```
 
 ```html
-<label class="dropimage miniprofile">
-  <input name="filea" title="Drop image or click me" type="file">
-</label>
+<div style="width: 200px"> <!-- this div just for demo display -->
+  <label class="dropimage miniprofile">
+    <input name="filea" title="Drop image or click me" type="file">
+  </label>
+</div>
 ```

@@ -44,10 +44,6 @@ aside .links a.button {
   line-height: 1;
 }
 
-.documentation .flex > * {
-  padding-bottom: .3em;
-}
-
 .documentation aside a.pseudo {
   color: #0074D9;
   margin: 0;
@@ -267,9 +263,11 @@ $(&quot;form&quot;).on(&#39;submit&#39;, function(e){
 }
 </code></pre>
 <p>To get this:</p>
-<pre><code class="lang-html">&lt;label class=&quot;dropimage profile&quot;&gt;
-  &lt;input name=&quot;filea&quot; title=&quot;Drop image or click me&quot; type=&quot;file&quot;&gt;
-&lt;/label&gt;
+<pre><code class="lang-html">&lt;div style=&quot;width: 200px&quot;&gt; &lt;!-- this div just for demo display --&gt;
+  &lt;label class=&quot;dropimage profile&quot;&gt;
+    &lt;input name=&quot;filea&quot; title=&quot;Drop image or click me&quot; type=&quot;file&quot;&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
 </code></pre>
 <p>Make it smaller</p>
 <pre><code class="lang-css">.miniprofile {
@@ -279,9 +277,11 @@ $(&quot;form&quot;).on(&#39;submit&#39;, function(e){
   padding-bottom: 60%;   /* 60% height */
 }
 </code></pre>
-<pre><code class="lang-html">&lt;label class=&quot;dropimage miniprofile&quot;&gt;
-  &lt;input name=&quot;filea&quot; title=&quot;Drop image or click me&quot; type=&quot;file&quot;&gt;
-&lt;/label&gt;
+<pre><code class="lang-html">&lt;div style=&quot;width: 200px&quot;&gt; &lt;!-- this div just for demo display --&gt;
+  &lt;label class=&quot;dropimage miniprofile&quot;&gt;
+    &lt;input name=&quot;filea&quot; title=&quot;Drop image or click me&quot; type=&quot;file&quot;&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
 </code></pre>
 <h2 id="grids">Grids</h2>
 <blockquote>
@@ -558,7 +558,9 @@ nav.demo {
 <blockquote>
 <p>On these smaller versions it might have small glitches. Please see the top, page-wide nav to see the actual effect.  </p>
 </blockquote>
-<pre><code class="lang-html">&lt;nav class=&quot;demo&quot;&gt;
+<pre><code class="lang-html">&lt;div style=&quot;overflow: hidden;height: 250px;&quot;&gt; &lt;!-- For Demo, Represents the body --&gt;
+
+&lt;nav class=&quot;demo&quot;&gt;
   &lt;a href=&quot;#&quot; class=&quot;brand&quot;&gt;
     &lt;img class=&quot;logo&quot; src=&quot;/web/img/basket.png&quot; /&gt;
     &lt;span&gt;Picnic CSS&lt;/span&gt;
@@ -573,6 +575,8 @@ nav.demo {
     &lt;a href=&quot;#&quot; class=&quot;button icon-puzzle&quot;&gt;Plugins&lt;/a&gt;
   &lt;/div&gt;
 &lt;/nav&gt;
+
+&lt;/div&gt;
 </code></pre>
 <h3 id="responsive">Responsive</h3>
 <p>The nav is responsive by default. The text inside the <code>&lt;label&gt;</code> can be changed for the following characters for a different effect (<a href="https://css-tricks.com/three-line-menu-navicon/">source</a>):</p>
@@ -600,7 +604,9 @@ nav.demo {
 </code></pre>
 <h3 id="form-elements">Form elements</h3>
 <p>Just get anything you want inside the nav, most things should work.</p>
-<pre><code class="lang-html">&lt;nav class=&quot;demo&quot;&gt;
+<pre><code class="lang-html">&lt;div style=&quot;overflow: hidden;height: 250px;&quot;&gt; &lt;!-- For Demo, Represents the body --&gt;
+
+&lt;nav class=&quot;demo&quot;&gt;
   &lt;a href=&quot;#&quot; class=&quot;brand&quot;&gt;Picnic CSS&lt;/a&gt;
 
   &lt;!-- responsive--&gt;
@@ -611,8 +617,12 @@ nav.demo {
     &lt;input placeholder=&quot;Search plugins&quot; /&gt;
   &lt;/div&gt;
 &lt;/nav&gt;
+
+&lt;/div&gt;
 </code></pre>
-<pre><code class="lang-html">&lt;nav class=&quot;demo&quot;&gt;
+<pre><code class="lang-html">&lt;div style=&quot;overflow: hidden;height: 250px;&quot;&gt; &lt;!-- For Demo, Represents the body --&gt;
+
+&lt;nav class=&quot;demo&quot;&gt;
   &lt;a href=&quot;#&quot; class=&quot;brand&quot;&gt;Picnic CSS&lt;/a&gt;
 
   &lt;!-- responsive--&gt;
@@ -627,6 +637,8 @@ nav.demo {
     &lt;/select&gt;
   &lt;/div&gt;
 &lt;/nav&gt;
+
+&lt;/div&gt;
 </code></pre>
 <h3 id="fixed-position">Fixed position</h3>
 <p>To set it on the top of the page instead of scrolling with the page, just do:</p>
@@ -634,8 +646,28 @@ nav.demo {
   position: absolute;
 }
 </code></pre><h3 id="open-nav-menu-from-left">Open nav menu from left</h3>
-<p>change sass variable <code>$picnic-nav-open-left: false !default;</code> to
-<code>picnic-nav-open-left: true !default;</code> inside src/plugins/nav/_class.scss file.</p>
+<p>Change sass variable <code>$picnic-nav-open-left: false !default;</code> to
+<code>$picnic-nav-open-left: true;</code> to open it from the left:</p>
+<pre><code class="lang-html">&lt;div style=&quot;overflow: hidden;height: 250px;&quot;&gt; &lt;!-- For Demo, Represents the body --&gt;
+
+&lt;nav class=&quot;demo&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;brand&quot;&gt;Picnic CSS&lt;/a&gt;
+
+  &lt;!-- responsive--&gt;
+  &lt;input id=&quot;cmenug&quot; type=&quot;checkbox&quot; class=&quot;show&quot;&gt;
+  &lt;label for=&quot;cmenug&quot; class=&quot;burger pseudo button&quot;&gt;&amp;#8801;&lt;/label&gt;
+
+  &lt;div class=&quot;menu&quot;&gt;
+    &lt;select&gt;
+      &lt;option&gt;Choose an option&lt;/option&gt;
+      &lt;option&gt;Option 1&lt;/option&gt;
+      &lt;option&gt;Option 2&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;/div&gt;
+</code></pre>
 <h2 id="radio-button">Radio button</h2>
 <p>A simple way of using radiobuttons</p>
 <pre><code class="lang-html">&lt;label&gt;

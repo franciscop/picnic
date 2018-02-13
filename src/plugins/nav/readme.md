@@ -13,6 +13,8 @@ A responsive, pure css navigation menu:
 > On these smaller versions it might have small glitches. Please see the top, page-wide nav to see the actual effect.  
 
 ```html
+<div style="overflow: hidden;height: 250px;"> <!-- For Demo, Represents the body -->
+
 <nav class="demo">
   <a href="#" class="brand">
     <img class="logo" src="/web/img/basket.png" />
@@ -28,6 +30,8 @@ A responsive, pure css navigation menu:
     <a href="#" class="button icon-puzzle">Plugins</a>
   </div>
 </nav>
+
+</div>
 ```
 
 
@@ -69,6 +73,8 @@ nav.imponent {
 Just get anything you want inside the nav, most things should work.
 
 ```html
+<div style="overflow: hidden;height: 250px;"> <!-- For Demo, Represents the body -->
+
 <nav class="demo">
   <a href="#" class="brand">Picnic CSS</a>
 
@@ -80,9 +86,13 @@ Just get anything you want inside the nav, most things should work.
     <input placeholder="Search plugins" />
   </div>
 </nav>
+
+</div>
 ```
 
 ```html
+<div style="overflow: hidden;height: 250px;"> <!-- For Demo, Represents the body -->
+
 <nav class="demo">
   <a href="#" class="brand">Picnic CSS</a>
 
@@ -98,6 +108,8 @@ Just get anything you want inside the nav, most things should work.
     </select>
   </div>
 </nav>
+
+</div>
 ```
 
 
@@ -113,5 +125,27 @@ nav {
 
 ### Open nav menu from left
 
-change sass variable ```$picnic-nav-open-left: false !default;``` to
-``` picnic-nav-open-left: true !default; ``` inside src/plugins/nav/_class.scss file.
+Change sass variable `$picnic-nav-open-left: false !default;` to
+`$picnic-nav-open-left: true;` to open it from the left:
+
+```html
+<div style="overflow: hidden;height: 250px;"> <!-- For Demo, Represents the body -->
+
+<nav class="demo">
+  <a href="#" class="brand">Picnic CSS</a>
+
+  <!-- responsive-->
+  <input id="cmenug" type="checkbox" class="show">
+  <label for="cmenug" class="burger pseudo button">&#8801;</label>
+
+  <div class="menu">
+    <select>
+      <option>Choose an option</option>
+      <option>Option 1</option>
+      <option>Option 2</option>
+    </select>
+  </div>
+</nav>
+
+</div>
+```

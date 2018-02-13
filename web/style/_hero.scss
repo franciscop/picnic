@@ -10,6 +10,10 @@ $black: #333;
     .pseudo.button {
       color: inherit;
     }
+
+    .show:checked ~ .burger {
+      color: transparent;
+    }
   }
 }
 

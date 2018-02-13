@@ -2665,14 +2665,12 @@ nav .burger {
   nav .show:checked ~ .burger {
     position: fixed;
     min-height: 100%;
-    width: 0;
-    overflow: hidden;
     top: 0;
     right: 0;
     bottom: -1000em;
     margin: 0;
     background: #fff;
-    transition: all .3s ease;
+    transition: all 0.5s ease;
     transform: none; }
   nav .burger ~ .menu {
     z-index: 11; }
@@ -2681,12 +2679,33 @@ nav .burger {
     width: 100%;
     border-radius: 0;
     background: rgba(0, 0, 0, 0.2);
-    transition: all .3s ease; }
-  nav .show:checked ~ .menu {
+    transition: all 0.5s ease; }
+  nav .show ~ .menu {
     width: 70%;
-    overflow: auto;
-    transition: all .3s ease;
-    height: 100vh; }
+    max-width: 300px;
+    transform-origin: center right;
+    transition: all 0.25s ease;
+    transform: scaleX(0); }
+    nav .show ~ .menu > * {
+      transform: translateX(100%);
+      transition: all 0s ease 0.5s; }
+  nav .show:checked ~ .menu > *:nth-child(1) {
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s; }
+  nav .show:checked ~ .menu > *:nth-child(2) {
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s; }
+  nav .show:checked ~ .menu > *:nth-child(3) {
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s; }
+  nav .show:checked ~ .menu > *:nth-child(4) {
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.3s; }
+  nav .show:checked ~ .menu > *:nth-child(5) {
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s; }
+  nav .show:checked ~ .menu > *:nth-child(6) {
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s; }
+  nav .show:checked ~ .menu {
+    transform: scaleX(1); }
+    nav .show:checked ~ .menu > * {
+      transform: translateX(0);
+      transition: all 0.5s ease-in-out 0.6s; }
   nav .burger ~ .menu > * {
     display: block;
     margin: 0.3em;
