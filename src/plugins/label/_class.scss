@@ -36,7 +36,7 @@ $picnic-label-radius: $picnic-radius !default;
   }
 
   &.pseudo {
-    background: transparent;
-    color: $picnic-black;
+    background-color: transparent;
+    color: inherit;
   }
 }
