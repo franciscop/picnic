@@ -25,6 +25,7 @@ $picnic-button-radius: $picnic-label-radius !default;
 
   // Avoid the input { height: 2.2 }
   height: auto;
+  vertical-align: baseline;
 
   // This avoids a nasty "hover" issue (slightly taller on hover)
   box-shadow: 0 0 rgba(0, 0, 0, 0) inset;
