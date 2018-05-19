@@ -54,7 +54,7 @@ Thanks to [chadoh](https://github.com/chadoh) for helping me in publishing it in
 
 ### Other ways
 
-You can always download the latest minimized version from github, clone the repository or download it. Or clone it: `git clone https://github.com/picnicss/picnic.git`
+You can always download the latest minimized version from github, clone the repository or download it. Or clone it: `git clone https://github.com/franciscop/picnic.git`
 
 
 

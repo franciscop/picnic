@@ -6,6 +6,7 @@ $picnic-label-radius: $picnic-radius !default;
 %label {
   display: inline-block;
   text-align: center;
+  letter-spacing: inherit;
   margin: 0;
   padding: $picnic-label-padding;
   vertical-align: middle;
@@ -36,7 +37,7 @@ $picnic-label-radius: $picnic-radius !default;
   }
 
   &.pseudo {
-    background: transparent;
-    color: $picnic-black;
+    background-color: transparent;
+    color: inherit;
   }
 }
