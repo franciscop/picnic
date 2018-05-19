@@ -410,6 +410,7 @@ i[class*=" icon-"]:before {
 [type=submit], .dropimage {
   display: inline-block;
   text-align: center;
+  letter-spacing: inherit;
   margin: 0;
   padding: 0.3em 0.9em;
   vertical-align: middle;
@@ -439,8 +440,8 @@ i[class*=" icon-"]:before {
   .pseudo.label, .pseudo[data-tooltip]:after, button.pseudo,
   .pseudo.button,
   .pseudo[type=submit], .pseudo.dropimage {
-    background: transparent;
-    color: #111; }
+    background-color: transparent;
+    color: inherit; }
 
 .label, [data-tooltip]:after {
   font-size: .6em;
@@ -456,6 +457,7 @@ button,
   transition: all 0.3s;
   border-radius: 0.2em;
   height: auto;
+  vertical-align: baseline;
   box-shadow: 0 0 transparent inset; }
   button:hover,
   .button:hover,
@@ -530,7 +532,7 @@ select {
   border-radius: 0.2em;
   cursor: pointer;
   width: 100%;
-  height: 2.1em;
+  height: 2.2em;
   box-sizing: border-box;
   padding: 0.3em 0.45em;
   transition: all .3s;
@@ -2639,7 +2641,7 @@ nav {
     padding: 0 0.6em;
     max-width: 50%;
     white-space: nowrap;
-    color: #111; }
+    color: inherit; }
     nav .brand * {
       vertical-align: middle; }
   nav .logo {
