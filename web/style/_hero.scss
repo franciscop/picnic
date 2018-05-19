@@ -62,6 +62,23 @@ $black: #333;
     text-align: center;
     border-radius: 0;
     margin: 1.3em auto .3em;
+
+    &.slim, &.wide {
+      display: none;
+    }
+
+    &.slim {
+      @media (max-width: 700px) {
+        display: block;
+        max-width: 400px;
+      }
+    }
+
+    &.wide {
+      @media (min-width: 700px) {
+        display: block;
+      }
+    }
   }
 
   .links a {
