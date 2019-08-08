@@ -1,6 +1,6 @@
 {
   "name": "picnic",
-  "version": "6.5.0",
+  "version": "6.5.1",
   "homepage": "https://github.com/picnicss/picnic",
   "authors": ["Francisco Presencia <public@francisco.io>"],
   "description": "Semantic HTML5 & nice CSS3",
