@@ -58,4 +58,10 @@ $picnic-select-dropimage: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d
     font-size: inherit;
     padding: $picnic-separation / 2 $picnic-separation * .75;
     }
+  
+  [multiple] {
+    height: auto;
+    background: none;
+    padding: 0;
+    }
   }
