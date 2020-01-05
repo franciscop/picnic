@@ -138,6 +138,8 @@ If you don't see anything that seems *picnic.css exclusive*, that's because ther
 
 You are encouraged to contribute to Picnic CSS. To write a new plugin, just copy one of the existing ones (specially recommend "button") and modify the files. The code must be linted with scss-lint, except the `PropertySortOrder` which is ignored for a better code structure.
 
+If you spot a bug or any other issue you may go to hell because this software is officially Bug Free(TM).
+
 
 
 ## Authors
