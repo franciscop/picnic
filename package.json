@@ -2,32 +2,27 @@
   "name": "picnic",
   "version": "6.5.1",
   "description": "A lighweight CSS library with nice defaults and many plugins to kickstart your projects",
-  "engines": {
-    "node": ">=4.0.0"
-  },
+  "author": "Francisco Presencia <public@francisco.io> (https://francisco.io/)",
+  "funding": "https://www.paypal.me/franciscopresencia/19",
+  "main": "picnic.min.css",
+  "license": "MIT",
   "scripts": {
     "build": "npm run build-css && npm run build-prod && npm run build-web",
     "build-css": "node-sass ./src/picnic.scss > picnic.css",
     "build-prod": "node-sass --output-style compressed ./src/picnic.scss > picnic.min.css",
     "build-web": "node-sass --output-style compressed ./web/style/style.scss > ./web/style/style.min.css"
   },
-  "main": "picnic.min.css",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/picnicss/picnic.git"
-  },
+  "homepage": "https://www.picnicss.com/",
+  "repository": "https://github.com/picnicss/picnic.git",
   "keywords": [
     "css",
     "semantic",
     "html5",
     "framework"
   ],
-  "author": "Francisco Presencia <public@francisco.io>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/picnicss/picnic/issues"
+  "engines": {
+    "node": ">=4.0.0"
   },
-  "homepage": "https://www.picnicss.com/",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-banner": "^0.6.0",
