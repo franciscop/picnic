@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><title>Picnic CSS Testing</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="css, library, picnic, picnicss, light"><meta name="description" content="A lightweight CSS library"><link rel="stylesheet" href="web/style/style.min.css"><link rel="icon" href="web/img/basket.png" type="image/png"><link rel="stylesheet" media="bogus"></head><body><nav><a href="/" class="brand"><span>Picnic CSS</span></a><input id="bmenu" type="checkbox" class="show"><label for="bmenu" class="burger toggle pseudo button">menu</label><div class="menu"><a href="/tests" class="pseudo button icon-help-circled">Test</a><a href="https://github.com/franciscop/picnic" target="_blank" class="pseudo button icon-g">GitHub</a><a href="/documentation" class="button icon-file-code">Documentation</a></div></nav><main class="intro test"><h1>Testing Picnic CSS</h1><p>A small testing page to see how elements behave across devices</p><!-- Testing the module -->
+<!DOCTYPE html><html lang="en"><head><title>Picnic CSS Testing</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="css, library, picnic, picnicss, light"><meta name="description" content="A lightweight CSS library"><link rel="stylesheet" href="/style.min.css"><link rel="icon" href="/img/basket.png" type="image/png"><link rel="stylesheet" media="bogus"></head><body><nav><a href="/" class="brand"><span>Picnic CSS</span></a><input id="bmenu" type="checkbox" class="show"><label for="bmenu" class="burger toggle pseudo button">menu</label><div class="menu"><a href="/tests" class="pseudo button icon-help-circled">Test</a><a href="https://github.com/franciscop/picnic" target="_blank" class="pseudo button icon-g">GitHub</a><a href="/documentation" class="button icon-file-code">Documentation</a></div></nav><main class="intro test"><h1>Testing Picnic CSS</h1><p>A small testing page to see how elements behave across devices</p><!-- Testing the module -->
 <h2 id="button">Button types and colors</h2>
 
 <div>
@@ -62,7 +62,7 @@
   <div class="flex three">
     <div>
       <article class="card">
-        <img src="web/img/forest.jpg">
+        <img src="img/forest.jpg">
         <section>This is a nice forest. What do you want to do with it?</section>
         <footer>
           <button>Enjoy</button>
@@ -142,32 +142,33 @@
 
 <div class="flex three">
   <div>
-    <label class="dropimage" style="background-image: url('web/img/forest.jpg');">
-      <input name="filea" title="Drop image or click me" type="file">
+    <label class="dropimage" style="background-image: url('img/forest.jpg');">
+      <input name="filea" title="Drop image or click me" type="file" />
     </label>
   </div>
   <div>
     <label class="dropimage">
-      <input name="fileb" title="Drop image or click me" type="file">
+      <input name="fileb" title="Drop image or click me" type="file" />
     </label>
   </div>
   <div>
     <label class="dropimage">
-      <input name="filec" title="Drop image or click me" type="file">
+      <input name="filec" title="Drop image or click me" type="file" />
     </label>
   </div>
 </div>
 
 <script>
-  window.onload = function(){
-    [].forEach.call(document.querySelectorAll('.dropimage'), function(img){
-      img.onchange = function(e){
-        var inputfile = this, reader = new FileReader();
-        reader.onloadend = function(){
-          inputfile.style['background-image'] = 'url('+reader.result+')';
-        }
+  window.onload = function() {
+    [].forEach.call(document.querySelectorAll(".dropimage"), function(img) {
+      img.onchange = function(e) {
+        var inputfile = this,
+          reader = new FileReader();
+        reader.onloadend = function() {
+          inputfile.style["background-image"] = "url(" + reader.result + ")";
+        };
         reader.readAsDataURL(e.target.files[0]);
-      }
+      };
     });
   };
 </script>
@@ -275,7 +276,7 @@
 <p>
   <nav style="position: relative; z-index: 9">
     <a href="#" class="brand">
-      <img class="logo" src="/web/img/basket.png" />
+      <img class="logo" src="/img/basket.png" />
       <span>Picnic CSS</span>
     </a>
 
@@ -342,7 +343,7 @@
   </div>
   <div>
     <label class="stack">
-      <input type="radio" name="stack" checked/>
+      <input type="radio" name="stack" checked />
       <span class="button toggle icon-puzzle">Plugins</span>
     </label>
     <label class="stack">
@@ -356,15 +357,15 @@
   </div>
   <div>
     <label class="stack">
-      <input type="checkbox" checked/>
+      <input type="checkbox" checked />
       <span class="button toggle icon-puzzle">Plugins</span>
     </label>
     <label class="stack">
-      <input type="checkbox" checked/>
+      <input type="checkbox" checked />
       <span class="button toggle icon-picture">Demo</span>
     </label>
     <label class="stack">
-      <input type="checkbox"/>
+      <input type="checkbox" />
       <span class="button toggle icon-help-circled">Test</span>
     </label>
   </div>
@@ -379,19 +380,18 @@
 
 <div class="flex four">
   <div>
-    <img class="stack" src="web/img/forest.jpg">
+    <img class="stack" src="img/forest.jpg" />
     <a class="stack button">Forest</a>
   </div>
   <div>
-    <img class="stack" src="web/img/balloon.jpg">
+    <img class="stack" src="img/balloon.jpg" />
     <a class="stack button">Balloon</a>
   </div>
   <div>
-    <img class="stack" src="web/img/lake.jpg">
-    <a class="stack button">Lake</a>
+    <img class="stack" src="img/lake.jpg" /> <a class="stack button">Lake</a>
   </div>
   <div>
-    <img class="stack" src="web/img/halong.jpg">
+    <img class="stack" src="img/halong.jpg" />
     <a class="stack button">Halong bay</a>
   </div>
 </div>
@@ -431,13 +431,13 @@
   </div>
   <div>
     <label class="dropimage stack">
-      <input name="filea" title="Drop image or click me" type="file">
+      <input name="filea" title="Drop image or click me" type="file" />
     </label>
     <label class="dropimage stack">
-      <input name="filea" title="Drop image or click me" type="file">
+      <input name="filea" title="Drop image or click me" type="file" />
     </label>
     <label class="dropimage stack">
-      <input name="filea" title="Drop image or click me" type="file">
+      <input name="filea" title="Drop image or click me" type="file" />
     </label>
   </div>
 </div>
@@ -479,62 +479,48 @@
 
 <h2>Tab</h2>
 
-
 <div class="flex two">
   <div>
     <div class="tabs three">
-      <input id='tab-1' type='radio' name='tabgroupB' checked />
+      <input id="tab-1" type="radio" name="tabgroupB" checked />
       <label class="pseudo button toggle" for="tab-1">Forest</label>
-      <input id='tab-2' type='radio' name='tabgroupB'>
+      <input id="tab-2" type="radio" name="tabgroupB" />
       <label class="pseudo button toggle" for="tab-2">Lake</label>
-      <input id='tab-3' type='radio' name='tabgroupB'>
+      <input id="tab-3" type="radio" name="tabgroupB" />
       <label class="pseudo button toggle" for="tab-3">Balloon</label>
       <div class="row">
-        <div>
-          <img src="web/img/forest.jpg">
-        </div>
+        <div><img src="img/forest.jpg" /></div>
 
-        <div>
-          <img src="web/img/lake.jpg">
-        </div>
+        <div><img src="img/lake.jpg" /></div>
 
-        <div>
-          <img src="web/img/balloon.jpg">
-        </div>
+        <div><img src="img/balloon.jpg" /></div>
       </div>
     </div>
   </div>
   <div>
     <div class="tabs three" style="text-align: center;">
-      <input id='tabC-1' type='radio' name='tabgroupC' checked />
-      <label class="pseudo button toggle" for="tabC-1">1</label>
-      /
-      <input id='tabC-2' type='radio' name='tabgroupC'>
-      <label class="pseudo button toggle" for="tabC-2">2</label>
-      /
-      <input id='tabC-3' type='radio' name='tabgroupC'>
+      <input id="tabC-1" type="radio" name="tabgroupC" checked />
+      <label class="pseudo button toggle" for="tabC-1">1</label> /
+      <input id="tabC-2" type="radio" name="tabgroupC" />
+      <label class="pseudo button toggle" for="tabC-2">2</label> /
+      <input id="tabC-3" type="radio" name="tabgroupC" />
       <label class="pseudo button toggle" for="tabC-3">3</label>
       <div class="row">
         <div>
           <div class="card" style="margin: 0 20px;">
-            <header>
-              <h3>Super important notice!</h3>
-            </header>
-            <p>Thank you for registering! By doing so you agree to the <a href="#">Terms and conditions</a></p>
-            <footer>
-              <label class="button" for="tabC-2">Agree</label>
-            </footer>
+            <header><h3>Super important notice!</h3></header>
+            <p>
+              Thank you for registering! By doing so you agree to the
+              <a href="#">Terms and conditions</a>
+            </p>
+            <footer><label class="button" for="tabC-2">Agree</label></footer>
           </div>
         </div>
 
         <div>
           <div class="card" style="margin: 0 20px;">
-            <header>
-              <h3>Your basic data</h3>
-            </header>
-            <section>
-              <input type="text" placeholder="Full Name">
-            </section>
+            <header><h3>Your basic data</h3></header>
+            <section><input type="text" placeholder="Full Name" /></section>
             <section>
               <div class="select">
                 <select>
@@ -554,15 +540,9 @@
 
         <div>
           <div class="card" style="margin: 0 20px;">
-            <header>
-              <h3>Create account</h3>
-            </header>
-            <section>
-              <input type="email" placeholder="Email">
-            </section>
-            <section>
-              <input type="password" placeholder="Password">
-            </section>
+            <header><h3>Create account</h3></header>
+            <section><input type="email" placeholder="Email" /></section>
+            <section><input type="password" placeholder="Password" /></section>
             <footer>
               <button class="success">Finish!</button>
               <label class="button dangerous" for="tabC-2">Back</label>
@@ -573,19 +553,19 @@
     </div>
   </div>
 
-  
   <div>
     <div class="tabs two">
-      <input id='tabA-1' type='radio' name='tabgroupA' checked />
+      <input id="tabA-1" type="radio" name="tabgroupA" checked />
       <label class="button toggle" for="tabA-1">Tab 1</label>
-      <input id='tabA-2' type='radio' name='tabgroupA'>
+      <input id="tabA-2" type="radio" name="tabgroupA" />
       <label class="button toggle" for="tabA-2">Tab 2</label>
       <div class="row">
-        <div class='tab'>
+        <div class="tab">
           <div>
             <h2>This is the first tab</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
         </div>
@@ -594,31 +574,33 @@
           <div>
             <h2>This is the second tab</h2>
             <p>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
             </p>
           </div>
         </div>
       </div>
     </div>
-
   </div>
   <div>
-
     <div class="tabs four">
-      <input id='tabD-1' type='radio' name='tabgroupD' checked />
+      <input id="tabD-1" type="radio" name="tabgroupD" checked />
       <label class="pseudo button toggle" for="tabD-1">•</label>
-      <input id='tabD-2' type='radio' name='tabgroupD'>
+      <input id="tabD-2" type="radio" name="tabgroupD" />
       <label class="pseudo button toggle" for="tabD-2">•</label>
-      <input id='tabD-3' type='radio' name='tabgroupD'>
+      <input id="tabD-3" type="radio" name="tabgroupD" />
       <label class="pseudo button toggle" for="tabD-3">•</label>
-      <input id='tabD-4' type='radio' name='tabgroupD'>
+      <input id="tabD-4" type="radio" name="tabgroupD" />
       <label class="pseudo button toggle" for="tabD-4">•</label>
       <div class="row">
-        <div class='tab'>
+        <div class="tab">
           <div>
             <h2>This is the first tab</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
         </div>
@@ -627,15 +609,19 @@
           <div>
             <h2>This is the second tab</h2>
             <p>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
             </p>
           </div>
         </div>
-        <div class='tab'>
+        <div class="tab">
           <div>
             <h2>This is the third tab</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
         </div>
@@ -644,7 +630,10 @@
           <div>
             <h2>This is the fourth tab</h2>
             <p>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
             </p>
           </div>
         </div>
@@ -684,4 +673,4 @@
       }
     });
   };
-</script><script src="/web/tracking.js" defer async></script></body></html>
+</script><script src="/tracking.js" defer async></script></body></html>

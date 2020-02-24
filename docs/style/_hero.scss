@@ -17,7 +17,6 @@ $black: #333;
   }
 }
 
-
 // Hero from the main page
 .hero {
   position: relative;
@@ -30,9 +29,8 @@ $black: #333;
   min-height: 300px;
   color: $black;
   padding: 1px 0;
-  background: #B9DBFF url('/web/img/optimised.svg') no-repeat 50% center scroll;
+  background: #b9dbff url("/img/optimised.svg") no-repeat 50% center scroll;
   background-size: cover;
-
 
   // Vertical center for the content
   .content {
@@ -61,9 +59,10 @@ $black: #333;
     margin-bottom: 0;
     text-align: center;
     border-radius: 0;
-    margin: 1.3em auto .3em;
+    margin: 1.3em auto 0.3em;
 
-    &.slim, &.wide {
+    &.slim,
+    &.wide {
       display: none;
     }
 
@@ -83,8 +82,8 @@ $black: #333;
 
   .links a {
     color: $black;
-    box-shadow: 0 2px rgba(0, 0, 0, .2);
-    transition: all .3s;
+    box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
   }
 
   .links a:hover {
@@ -97,9 +96,15 @@ $black: #333;
   }
 
   @keyframes bounce {
-    from { bottom: 20px; }
-    70% { bottom: 10px; }
-    to { bottom: 20px; }
+    from {
+      bottom: 20px;
+    }
+    70% {
+      bottom: 10px;
+    }
+    to {
+      bottom: 20px;
+    }
   }
 }
 
@@ -108,11 +113,7 @@ $black: #333;
   opacity: 1;
 }
 
-
-
-
 @media all and (max-width: 960px) {
-
   // Since in mobiles the fixed one is sluggish
   .hero {
     background-attachment: scroll;

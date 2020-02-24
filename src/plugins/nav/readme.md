@@ -17,7 +17,7 @@ A responsive, pure css navigation menu:
 
 <nav class="demo">
   <a href="#" class="brand">
-    <img class="logo" src="/web/img/basket.png" />
+    <img class="logo" src="/img/basket.png" />
     <span>Picnic CSS</span>
   </a>
 
@@ -61,7 +61,7 @@ nav.imponent {
 ```html
 <nav class="demo imponent">
   <a href="#" class="brand">
-    <img class="logo" src="/web/img/basket.png" />
+    <img class="logo" src="/img/basket.png" />
     <span>Picnic CSS</span>
   </a>
 </nav>

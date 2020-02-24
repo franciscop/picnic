@@ -34,7 +34,7 @@ A card is a self-contained, replicable type. It works great with other of its ki
 <div class="flex two">
   <div>
     <article class="card">
-      <img src="/web/img/forest.jpg">
+      <img src="/img/forest.jpg">
       <footer>
         <h3>Misty Forest</h3>
         <button>Like</button>
@@ -43,7 +43,7 @@ A card is a self-contained, replicable type. It works great with other of its ki
   </div>
   <div>
     <article class="card">
-      <img src="/web/img/forest.jpg">
+      <img src="/img/forest.jpg">
       <footer>
         <h3>Misty Forest</h3>
         <button>Like</button>

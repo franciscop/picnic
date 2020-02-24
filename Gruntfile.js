@@ -6,9 +6,9 @@ module.exports = function(grunt) {
       compile: {
         files: [
           {
-            cwd: "web",
+            cwd: "docs",
             src: "**/*.html.jade",
-            dest: ".",
+            dest: "docs/",
             expand: true,
             ext: ".html"
           }
@@ -51,7 +51,7 @@ module.exports = function(grunt) {
 
     watch: {
       scripts: {
-        files: ["package.js", "Gruntfile.js", "src/**/*.*", "web/**/*.*"],
+        files: ["package.js", "Gruntfile.js", "src/**/*.*", "docs/**/*.*"],
         tasks: ["default"],
         options: { spawn: false }
       }

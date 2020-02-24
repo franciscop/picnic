@@ -46,7 +46,7 @@ Stack different kind of elements
 
 ```html
 <div class="third">
-  <img class="stack" src="/web/img/forest.jpg">
+  <img class="stack" src="/img/forest.jpg">
   <a class="button stack">Full size</a>
 </div>
 ```

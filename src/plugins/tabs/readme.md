@@ -14,15 +14,15 @@ A simple tab system inspired by [Components CSS Tabs](www.felipefialho.com/css-c
   <label class="pseudo button toggle" for="tab-3">Balloon</label>
   <div class="row">
     <div>
-      <img src="web/img/forest.jpg">
+      <img src="img/forest.jpg">
     </div>
 
     <div>
-      <img src="web/img/lake.jpg">
+      <img src="img/lake.jpg">
     </div>
 
     <div>
-      <img src="web/img/balloon.jpg">
+      <img src="img/balloon.jpg">
     </div>
   </div>
 </div>
@@ -41,21 +41,21 @@ Create a gallery super-easy with thumbnails as tabs:
   <input id="tabC-4" type='radio' name='tabGroupC'>
   <div class='row'>
     <div>
-      <img src="web/img/forest.jpg">
+      <img src="img/forest.jpg">
     </div>
     <div>
-      <img src="web/img/lake.jpg">
+      <img src="img/lake.jpg">
     </div>
     <div>
-      <img src="web/img/halong.jpg">
+      <img src="img/halong.jpg">
     </div>
     <div>
-      <img src="web/img/balloon.jpg">
+      <img src="img/balloon.jpg">
     </div>
   </div>
-  <label for="tabC-1"><img src="web/img/forest.jpg"></label>
-  <label for="tabC-2"><img src="web/img/lake.jpg"></label>
-  <label for="tabC-3"><img src="web/img/halong.jpg"></label>
-  <label for="tabC-4"><img src="web/img/balloon.jpg"></label>
+  <label for="tabC-1"><img src="img/forest.jpg"></label>
+  <label for="tabC-2"><img src="img/lake.jpg"></label>
+  <label for="tabC-3"><img src="img/halong.jpg"></label>
+  <label for="tabC-4"><img src="img/balloon.jpg"></label>
 </div>
 ```
