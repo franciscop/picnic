@@ -54,7 +54,7 @@ $black: #333;
   }
 
   .npm {
-    max-width: 650px;
+    max-width: 720px;
     color: $black;
     margin-bottom: 0;
     text-align: center;
@@ -69,7 +69,7 @@ $black: #333;
     &.slim {
       @media (max-width: 700px) {
         display: block;
-        max-width: 400px;
+        max-width: 500px;
       }
     }
 
