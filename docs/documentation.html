@@ -547,6 +547,14 @@ document.onkeydown = function(e){
   }
 }
 </code></pre>
+<p>If you need to open or close the modal with javascript, you can use the following: </p>
+  <script>
+    document.getElementById('modal_1').checked = true; // open modal
+    document.getElementById('modal_1').checked = false; // close modal
+  </script>
+  <pre><code class="lang-js">document.getElementById(&#39;modal_1&#39;).checked = true; // open modal
+    document.getElementById(&#39;modal_1&#39;).checked = false; // close modal
+</code></pre>
 <h2 id="nav">Nav</h2>
 <style>
 nav.demo {
