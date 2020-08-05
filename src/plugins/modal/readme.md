@@ -52,12 +52,7 @@ document.onkeydown = function(e){
 
 ##### Toggling the modal with javascript
 
-If you want to be able to toggle the modal with javascript, you can use the following: 
-
-<script>
-document.getElementById('modal_1').checked = true; // open modal
-document.getElementById('modal_1').checked = false; // close modal
-</script>
+If you want to be able to toggle the modal with javascript, you can use the following:
 
 ```js
 document.getElementById('modal_1').checked = true; // open modal
