@@ -116,8 +116,8 @@ h1 {
  * Address styling not present in IE 8/9.
  */
 mark {
-  background: #ff0;
-  color: #000; }
+  background: #fff;
+  color: #111; }
 
 /**
  * Address inconsistent and variable font size in all browsers.
@@ -485,7 +485,7 @@ button,
   [disabled][type=submit], .dropimage[disabled] {
     cursor: default;
     box-shadow: none;
-    background: #bbb; }
+    background: #aaa; }
 
 :checked + .toggle,
 :checked + .toggle:hover {
@@ -504,7 +504,7 @@ textarea,
   margin: 0;
   height: 2.1em;
   padding: 0.3em 0.6em;
-  border: 1px solid #ccc;
+  border: 1px solid #aaa;
   background-color: #fff;
   border-radius: 0.2em;
   transition: all 0.3s;
@@ -528,7 +528,7 @@ textarea {
 select {
   background: #fff url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyIiBoZWlnaHQ9IjMiPjxwYXRoIGQ9Im0gMCwxIDEsMiAxLC0yIHoiLz48L3N2Zz4=) no-repeat scroll 95% center/10px 15px;
   background-position: calc(100% - 15px) center;
-  border: 1px solid #ccc;
+  border: 1px solid #aaa;
   border-radius: 0.2em;
   cursor: pointer;
   width: 100%;
@@ -589,7 +589,7 @@ select {
     [type=radio] + .checkable:before, [type=checkbox] + .checkable:before {
       border: 1px solid #aaa; }
   :checked[type=radio] + .checkable:after, :checked[type=checkbox] + .checkable:after {
-    background: #555;
+    background: #111;
     transform: scale(0.5) translateY(-100%); }
 
 [type=checkbox] + .checkable:before {
@@ -2199,7 +2199,7 @@ nav {
   height: 3em;
   padding: 0 0.6em;
   background: #fff;
-  box-shadow: 0 0 0.2em rgba(17, 17, 17, 0.2);
+  box-shadow: 0 0 0.2em rgba(170, 170, 170, 0.2);
   z-index: 10000;
   transition: all .3s;
   transform-style: preserve-3d; }
@@ -2335,7 +2335,7 @@ select.stack {
   position: relative;
   box-shadow: 0;
   border-radius: 0.2em;
-  border: 1px solid #ccc;
+  border: 1px solid #aaa;
   overflow: hidden;
   text-align: left;
   background: #fff;
@@ -2368,11 +2368,11 @@ select.stack {
   .card hr, .modal .overlay ~ * hr {
     border: none;
     height: 1px;
-    background-color: #eee; }
+    background-color: #aaa; }
   .card header, .modal .overlay ~ * header {
     font-weight: bold;
     position: relative;
-    border-bottom: 1px solid #eee; }
+    border-bottom: 1px solid #aaa; }
     .card header h1, .modal .overlay ~ * header h1,
     .card header h2,
     .modal .overlay ~ * header h2,

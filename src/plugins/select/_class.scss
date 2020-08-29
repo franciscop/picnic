@@ -10,7 +10,7 @@ $picnic-select-dropimage: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d
 // Code
 %select {
   // Compatible with old androids
-  background: #fff url(#{$picnic-select-dropimage}) no-repeat scroll 95% center/
+  background: $picnic-white url(#{$picnic-select-dropimage}) no-repeat scroll 95% center/
     10px 15px;
 
   // Compatible with modern browsers

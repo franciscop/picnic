@@ -56,13 +56,13 @@ $picnic-card-radius: $picnic-radius !default;
   hr {
     border: none;
     height: 1px;
-    background-color: #eee;
+    background-color: $picnic-dull;
   }
 
   header {
     font-weight: bold;
     position: relative;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid $picnic-dull;
 
     h1,
     h2,

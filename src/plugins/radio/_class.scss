@@ -2,7 +2,7 @@
 
 // Variables
 $picnic-radio-size: 1em !default;
-$picnic-radio-border: 1px solid #aaa !default;
+$picnic-radio-border: 1px solid $picnic-dull !default;
 
 // 
 %radio {
@@ -48,7 +48,7 @@ $picnic-radio-border: 1px solid #aaa !default;
     }
 
   &:checked + .checkable:after {
-    background: #555;
+    background: $picnic-black;
     transform: scale(.5) translateY(-100%);
     }
   }

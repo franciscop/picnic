@@ -5,8 +5,8 @@
 
 
 // Colors (from /themes/default/colors)
-$picnic-white: #fff !default;
-$picnic-black: #111 !default;
+$picnic-white: $white !default;
+$picnic-black: $black !default;
 $picnic-primary: $blue !default;
 $picnic-success: $green !default;
 $picnic-warning: $orange !default;
@@ -23,8 +23,8 @@ $picnic-breakpoint: 60em !default;
 
 // Shapes
 $picnic-radius: .2em !default;
-$picnic-border: 1px solid #ccc !default;
-$picnic-shadow: 0 0 .2em rgba($picnic-black, $picnic-transparency) !default;
+$picnic-border: 1px solid $picnic-dull !default;
+$picnic-shadow: 0 0 .2em rgba($picnic-dull, $picnic-transparency) !default;
 
 // Transitions
 $picnic-transition: all .3s;

@@ -23,7 +23,7 @@ $picnic-nav-timing: .5s !default;
   padding: 0 $picnic-nav-sides;
 
   // Make it look like a hovering bar
-  background: #fff;
+  background: $picnic-white;
   box-shadow: $picnic-nav-shadow;
   z-index: 10000;
 
