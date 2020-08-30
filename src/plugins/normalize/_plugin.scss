@@ -154,8 +154,8 @@ h1 {
 
 @if $picnic-normalize-ie {
   mark {
-    background: #ff0;
-    color: #000;
+    background: $picnic-white;
+    color: $picnic-black;
   }
 }
 

@@ -28,7 +28,7 @@ $picnic-button-radius: $picnic-label-radius !default;
   vertical-align: baseline;
 
   // This avoids a nasty "hover" issue (slightly taller on hover)
-  box-shadow: 0 0 rgba(0, 0, 0, 0) inset;
+  box-shadow: 0 0 rgba($picnic-black, 0) inset;
 
   // Methods
   &:hover,
@@ -51,7 +51,7 @@ $picnic-button-radius: $picnic-label-radius !default;
   &[disabled] {
     cursor: default;
     box-shadow: none;
-    background: #bbb;
+    background: $picnic-dull;
     }
   }
 
