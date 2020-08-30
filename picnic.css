@@ -636,7 +636,7 @@ th {
   background-color: #c9c0bb; }
 
 tr:nth-child(even) {
-  background: rgba(0, 0, 0, 0.05); }
+  background: rgba(238, 235, 217, 0.2); }
 
 .flex {
   display: -ms-flexbox;
