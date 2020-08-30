@@ -32,5 +32,5 @@ th {
 
 // Zebra stripes
 tr:nth-child(even) {
-  background: $picnic-overlay;
+  background: rgba($picnic-black, .05);
   }
