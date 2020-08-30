@@ -117,7 +117,7 @@ h1 {
  */
 mark {
   background: #191919;
-  color: #ebebeb; }
+  color: #ffffff; }
 
 /**
  * Address inconsistent and variable font size in all browsers.
@@ -350,7 +350,7 @@ body {
   height: 100%; }
 
 body {
-  color: #ebebeb;
+  color: #ffffff;
   font-size: 1.1em;
   line-height: 1.5;
   background: #191919; }
@@ -371,7 +371,7 @@ li {
   margin: 0 0 0.3em; }
 
 a {
-  color: #00afe9;
+  color: #58b1be;
   text-decoration: none;
   box-shadow: none;
   transition: all 0.3s; }
@@ -392,7 +392,7 @@ pre {
 blockquote {
   padding: 0 0 0 1em;
   margin: 0 0 0 .1em;
-  box-shadow: inset 5px 0 rgba(235, 235, 235, 0.3); }
+  box-shadow: inset 5px 0 rgba(255, 255, 255, 0.3); }
 
 label {
   cursor: pointer; }
@@ -414,7 +414,7 @@ i[class*=" icon-"]:before {
   margin: 0;
   padding: 0.3em 0.9em;
   vertical-align: middle;
-  background: #00afe9;
+  background: #58b1be;
   color: #191919;
   border: 0;
   border-radius: 0.2em;
@@ -428,15 +428,15 @@ i[class*=" icon-"]:before {
   .success.label, .success[data-tooltip]:after, button.success,
   .success.button,
   .success[type=submit], .success.dropimage {
-    background: #45e260; }
+    background: #79b25d; }
   .warning.label, .warning[data-tooltip]:after, button.warning,
   .warning.button,
   .warning[type=submit], .warning.dropimage {
-    background: #ffc228; }
+    background: #e18653; }
   .error.label, .error[data-tooltip]:after, button.error,
   .error.button,
   .error[type=submit], .error.dropimage {
-    background: #ff6251; }
+    background: #b7473c; }
   .pseudo.label, .pseudo[data-tooltip]:after, button.pseudo,
   .pseudo.button,
   .pseudo[type=submit], .pseudo.dropimage {
@@ -458,7 +458,7 @@ button,
   border-radius: 0.2em;
   height: auto;
   vertical-align: baseline;
-  box-shadow: 0 0 rgba(235, 235, 235, 0) inset; }
+  box-shadow: 0 0 rgba(255, 255, 255, 0) inset; }
   button:hover,
   .button:hover,
   :hover[type=submit], .dropimage:hover, button:focus,
@@ -471,7 +471,7 @@ button,
   .pseudo:hover[type=submit], .pseudo.dropimage:hover, button.pseudo:focus,
   .pseudo.button:focus,
   .pseudo:focus[type=submit], .pseudo.dropimage:focus {
-    box-shadow: inset 0 0 0 99em rgba(235, 235, 235, 0.1); }
+    box-shadow: inset 0 0 0 99em rgba(255, 255, 255, 0.1); }
   button.active,
   .active.button,
   .active[type=submit], .active.dropimage, button:active,
@@ -479,17 +479,17 @@ button,
   :active[type=submit], .dropimage:active, button.pseudo:active,
   .pseudo.button:active,
   .pseudo:active[type=submit], .pseudo.dropimage:active {
-    box-shadow: inset 0 0 0 99em rgba(235, 235, 235, 0.2); }
+    box-shadow: inset 0 0 0 99em rgba(255, 255, 255, 0.2); }
   button[disabled],
   .button[disabled],
   [disabled][type=submit], .dropimage[disabled] {
     cursor: default;
     box-shadow: none;
-    background: #d2d2d2; }
+    background: #515151; }
 
 :checked + .toggle,
 :checked + .toggle:hover {
-  box-shadow: inset 0 0 0 99em rgba(235, 235, 235, 0.2); }
+  box-shadow: inset 0 0 0 99em rgba(255, 255, 255, 0.2); }
 
 [type] + .toggle {
   padding: 0.3em 0.9em;
@@ -504,7 +504,7 @@ textarea,
   margin: 0;
   height: 2.1em;
   padding: 0.3em 0.6em;
-  border: 1px solid #d2d2d2;
+  border: 1px solid #515151;
   background-color: #191919;
   border-radius: 0.2em;
   transition: all 0.3s;
@@ -512,7 +512,7 @@ textarea,
   input:focus,
   textarea:focus,
   .select select:focus {
-    border: 1px solid #00afe9;
+    border: 1px solid #58b1be;
     outline: 0; }
 
 textarea {
@@ -528,7 +528,7 @@ textarea {
 select {
   background: #191919 url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyIiBoZWlnaHQ9IjMiPjxwYXRoIGQ9Im0gMCwxIDEsMiAxLC0yIHoiLz48L3N2Zz4=) no-repeat scroll 95% center/10px 15px;
   background-position: calc(100% - 15px) center;
-  border: 1px solid #d2d2d2;
+  border: 1px solid #515151;
   border-radius: 0.2em;
   cursor: pointer;
   width: 100%;
@@ -542,11 +542,11 @@ select {
   select::-ms-expand {
     display: none; }
   select:focus, select:active {
-    border: 1px solid #00afe9;
+    border: 1px solid #58b1be;
     transition: outline 0s; }
   select:-moz-focusring {
     color: transparent;
-    text-shadow: 0 0 0 #ebebeb; }
+    text-shadow: 0 0 0 #ffffff; }
   select option {
     font-size: inherit;
     padding: 0.45em; }
@@ -563,7 +563,7 @@ select {
   [type=radio] + .checkable:hover:before, [type=checkbox] + .checkable:hover:before,
   :focus[type=radio] + .checkable:before,
   :focus[type=checkbox] + .checkable:before {
-    border: 1px solid #00afe9; }
+    border: 1px solid #58b1be; }
   [type=radio] + .checkable, [type=checkbox] + .checkable {
     position: relative;
     cursor: pointer;
@@ -587,9 +587,9 @@ select {
       border-radius: 50%;
       transition: all 0.3s; }
     [type=radio] + .checkable:before, [type=checkbox] + .checkable:before {
-      border: 1px solid #d2d2d2; }
+      border: 1px solid #515151; }
   :checked[type=radio] + .checkable:after, :checked[type=checkbox] + .checkable:after {
-    background: #ebebeb;
+    background: #ffffff;
     transform: scale(0.5) translateY(-100%); }
 
 [type=checkbox] + .checkable:before {
@@ -603,7 +603,7 @@ select {
   opacity: 0; }
 
 :checked[type=checkbox] + .checkable:after {
-  color: #ebebeb;
+  color: #ffffff;
   background: none;
   transform: translateY(-50%);
   transition: all 0.3s;
@@ -621,22 +621,22 @@ th {
   text-align: left;
   font-weight: 900;
   color: #191919;
-  background-color: #00afe9; }
+  background-color: #58b1be; }
 
 .success th {
-  background-color: #45e260; }
+  background-color: #79b25d; }
 
 .warning th {
-  background-color: #ffc228; }
+  background-color: #e18653; }
 
 .error th {
-  background-color: #ff6251; }
+  background-color: #b7473c; }
 
 .dull th {
-  background-color: #d2d2d2; }
+  background-color: #515151; }
 
 tr:nth-child(even) {
-  background: rgba(235, 235, 235, 0.05); }
+  background: rgba(255, 255, 255, 0.05); }
 
 .flex {
   display: -ms-flexbox;
@@ -2199,7 +2199,7 @@ nav {
   height: 3em;
   padding: 0 0.6em;
   background: #191919;
-  box-shadow: 0 0 0.2em rgba(235, 235, 235, 0.2);
+  box-shadow: 0 0 0.2em rgba(255, 255, 255, 0.2);
   z-index: 10000;
   transition: all .3s;
   transform-style: preserve-3d; }
@@ -2329,13 +2329,13 @@ select.stack {
   select.stack:focus + input,
   select.stack:focus + textarea,
   select.stack:focus + select {
-    border-top-color: #00afe9; }
+    border-top-color: #58b1be; }
 
 .card, .modal .overlay ~ * {
   position: relative;
   box-shadow: 0;
   border-radius: 0.2em;
-  border: 1px solid #d2d2d2;
+  border: 1px solid #515151;
   overflow: hidden;
   text-align: left;
   background: #191919;
@@ -2368,11 +2368,11 @@ select.stack {
   .card hr, .modal .overlay ~ * hr {
     border: none;
     height: 1px;
-    background-color: #d2d2d2; }
+    background-color: #515151; }
   .card header, .modal .overlay ~ * header {
     font-weight: bold;
     position: relative;
-    border-bottom: 1px solid #d2d2d2; }
+    border-bottom: 1px solid #515151; }
     .card header h1, .modal .overlay ~ * header h1,
     .card header h2,
     .modal .overlay ~ * header h2,
@@ -2413,13 +2413,13 @@ select.stack {
     cursor: pointer;
     width: auto; }
     .card .close:hover, .modal .overlay ~ * .close:hover {
-      color: #ff6251; }
+      color: #b7473c; }
   .card h1 + .close, .modal .overlay ~ * h1 + .close {
     margin: .2em; }
   .card h2 + .close, .modal .overlay ~ * h2 + .close {
     margin: .1em; }
   .card .dangerous, .modal .overlay ~ * .dangerous {
-    background: #ff6251;
+    background: #b7473c;
     float: right; }
 
 .modal {
@@ -2570,7 +2570,7 @@ select.stack {
   [data-tooltip]:after {
     margin-left: 0;
     font-size: 0.8em;
-    background: #ebebeb;
+    background: #ffffff;
     content: attr(data-tooltip);
     white-space: nowrap; }
   [data-tooltip]:before {
@@ -2579,7 +2579,7 @@ select.stack {
     height: 0;
     border-width: 0;
     border-style: solid;
-    border-color: transparent transparent #ebebeb;
+    border-color: transparent transparent #ffffff;
     margin-top: 0;
     left: 10px; }
   [data-tooltip]:hover:after, [data-tooltip]:focus:after, [data-tooltip]:hover:before, [data-tooltip]:focus:before {
@@ -2596,7 +2596,7 @@ select.stack {
   margin-bottom: 12px; }
 
 .tooltip-top:before {
-  border-color: #ebebeb transparent transparent;
+  border-color: #ffffff transparent transparent;
   margin-bottom: 0;
   left: 10px; }
 
@@ -2607,7 +2607,7 @@ select.stack {
   top: 0; }
 
 .tooltip-right:before {
-  border-color: transparent #ebebeb transparent transparent;
+  border-color: transparent #ffffff transparent transparent;
   margin-left: -6px;
   left: 100%;
   top: 7px; }
@@ -2620,7 +2620,7 @@ select.stack {
   top: 0; }
 
 .tooltip-left:before {
-  border-color: transparent transparent transparent #ebebeb;
+  border-color: transparent transparent transparent #ffffff;
   margin-right: -6px;
   right: 100%;
   top: 7px; }
