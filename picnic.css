@@ -116,8 +116,8 @@ h1 {
  * Address styling not present in IE 8/9.
  */
 mark {
-  background: #fff;
-  color: #111; }
+  background: #353839;
+  color: #eeebd9; }
 
 /**
  * Address inconsistent and variable font size in all browsers.
@@ -350,10 +350,10 @@ body {
   height: 100%; }
 
 body {
-  color: #111;
+  color: #eeebd9;
   font-size: 1.1em;
   line-height: 1.5;
-  background: #fff; }
+  background: #353839; }
 
 main {
   display: block; }
@@ -371,10 +371,10 @@ li {
   margin: 0 0 0.3em; }
 
 a {
-  color: #29b739;
+  color: #eeebd9;
   text-decoration: none;
   box-shadow: none;
-  transition: all 0.2s ease; }
+  transition: all 0.3s; }
 
 code {
   padding: 0.3em 0.6em;
@@ -385,14 +385,14 @@ pre {
   text-align: left;
   padding: 0.3em 0.6em;
   background: #f5f5f5;
-  border-radius: 0; }
+  border-radius: 0.2em; }
   pre code {
     padding: 0; }
 
 blockquote {
   padding: 0 0 0 1em;
   margin: 0 0 0 .1em;
-  box-shadow: inset 5px 0 rgba(17, 17, 17, 0.3); }
+  box-shadow: inset 5px 0 rgba(238, 235, 217, 0.3); }
 
 label {
   cursor: pointer; }
@@ -414,10 +414,10 @@ i[class*=" icon-"]:before {
   margin: 0;
   padding: 0.3em 0.9em;
   vertical-align: middle;
-  background: #29b739;
-  color: #fff;
+  background: #eeebd9;
+  color: #353839;
   border: 0;
-  border-radius: 0;
+  border-radius: 0.2em;
   width: auto;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -428,15 +428,15 @@ i[class*=" icon-"]:before {
   .success.label, .success[data-tooltip]:after, button.success,
   .success.button,
   .success[type=submit], .success.dropimage {
-    background: #0074d9; }
+    background: #8abc2f; }
   .warning.label, .warning[data-tooltip]:after, button.warning,
   .warning.button,
   .warning[type=submit], .warning.dropimage {
-    background: #ff851b; }
+    background: #ff7800; }
   .error.label, .error[data-tooltip]:after, button.error,
   .error.button,
   .error[type=submit], .error.dropimage {
-    background: #ff4136; }
+    background: #ee204d; }
   .pseudo.label, .pseudo[data-tooltip]:after, button.pseudo,
   .pseudo.button,
   .pseudo[type=submit], .pseudo.dropimage {
@@ -454,8 +454,8 @@ button,
 [type=submit], .dropimage {
   margin: 0.3em 0;
   cursor: pointer;
-  transition: all 0.2s ease;
-  border-radius: 0;
+  transition: all 0.3s;
+  border-radius: 0.2em;
   height: auto;
   vertical-align: baseline;
   box-shadow: 0 0 rgba(0, 0, 0, 0) inset; }
@@ -464,14 +464,14 @@ button,
   :hover[type=submit], .dropimage:hover, button:focus,
   .button:focus,
   :focus[type=submit], .dropimage:focus {
-    box-shadow: inset 0 0 0 99em rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 0 99em rgba(53, 56, 57, 0.2);
     border: 0; }
   button.pseudo:hover,
   .pseudo.button:hover,
   .pseudo:hover[type=submit], .pseudo.dropimage:hover, button.pseudo:focus,
   .pseudo.button:focus,
   .pseudo:focus[type=submit], .pseudo.dropimage:focus {
-    box-shadow: inset 0 0 0 99em rgba(17, 17, 17, 0.05); }
+    box-shadow: inset 0 0 0 99em rgba(238, 235, 217, 0.1); }
   button.active,
   .active.button,
   .active[type=submit], .active.dropimage, button:active,
@@ -479,17 +479,17 @@ button,
   :active[type=submit], .dropimage:active, button.pseudo:active,
   .pseudo.button:active,
   .pseudo:active[type=submit], .pseudo.dropimage:active {
-    box-shadow: inset 0 0 0 99em rgba(17, 17, 17, 0.1); }
+    box-shadow: inset 0 0 0 99em rgba(238, 235, 217, 0.2); }
   button[disabled],
   .button[disabled],
   [disabled][type=submit], .dropimage[disabled] {
     cursor: default;
     box-shadow: none;
-    background: #aaa; }
+    background: #c9c0bb; }
 
 :checked + .toggle,
 :checked + .toggle:hover {
-  box-shadow: inset 0 0 0 99em rgba(17, 17, 17, 0.1); }
+  box-shadow: inset 0 0 0 99em rgba(238, 235, 217, 0.2); }
 
 [type] + .toggle {
   padding: 0.3em 0.9em;
@@ -504,15 +504,15 @@ textarea,
   margin: 0;
   height: 2.1em;
   padding: 0.3em 0.6em;
-  border: 1px solid #ddd;
-  background-color: #fff;
-  border-radius: 0;
-  transition: all 0.2s ease;
+  border: 1px solid #c9c0bb;
+  background-color: #353839;
+  border-radius: 0.2em;
+  transition: all 0.3s;
   width: 100%; }
   input:focus,
   textarea:focus,
   .select select:focus {
-    border: 1px solid #29b739;
+    border: 1px solid #eeebd9;
     outline: 0; }
 
 textarea {
@@ -526,10 +526,10 @@ textarea {
   height: auto; }
 
 select {
-  background: #fff url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyIiBoZWlnaHQ9IjMiPjxwYXRoIGQ9Im0gMCwxIDEsMiAxLC0yIHoiLz48L3N2Zz4=) no-repeat scroll 95% center/10px 15px;
+  background: #353839 url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyIiBoZWlnaHQ9IjMiPjxwYXRoIGQ9Im0gMCwxIDEsMiAxLC0yIHoiLz48L3N2Zz4=) no-repeat scroll 95% center/10px 15px;
   background-position: calc(100% - 15px) center;
-  border: 1px solid #ddd;
-  border-radius: 0;
+  border: 1px solid #c9c0bb;
+  border-radius: 0.2em;
   cursor: pointer;
   width: 100%;
   height: 2.2em;
@@ -542,11 +542,11 @@ select {
   select::-ms-expand {
     display: none; }
   select:focus, select:active {
-    border: 1px solid #29b739;
+    border: 1px solid #eeebd9;
     transition: outline 0s; }
   select:-moz-focusring {
     color: transparent;
-    text-shadow: 0 0 0 #111; }
+    text-shadow: 0 0 0 #eeebd9; }
   select option {
     font-size: inherit;
     padding: 0.45em; }
@@ -563,7 +563,7 @@ select {
   [type=radio] + .checkable:hover:before, [type=checkbox] + .checkable:hover:before,
   :focus[type=radio] + .checkable:before,
   :focus[type=checkbox] + .checkable:before {
-    border: 1px solid #29b739; }
+    border: 1px solid #eeebd9; }
   [type=radio] + .checkable, [type=checkbox] + .checkable {
     position: relative;
     cursor: pointer;
@@ -585,15 +585,15 @@ select {
       width: 1em;
       height: 1em;
       border-radius: 50%;
-      transition: all 0.2s ease; }
+      transition: all 0.3s; }
     [type=radio] + .checkable:before, [type=checkbox] + .checkable:before {
-      border: 1px solid #aaa; }
+      border: 1px solid #c9c0bb; }
   :checked[type=radio] + .checkable:after, :checked[type=checkbox] + .checkable:after {
-    background: #111;
+    background: #eeebd9;
     transform: scale(0.5) translateY(-100%); }
 
 [type=checkbox] + .checkable:before {
-  border-radius: 0; }
+  border-radius: 0.2em; }
 
 [type=checkbox] + .checkable:after {
   content: "✔";
@@ -603,10 +603,10 @@ select {
   opacity: 0; }
 
 :checked[type=checkbox] + .checkable:after {
-  color: #111;
+  color: #eeebd9;
   background: none;
   transform: translateY(-50%);
-  transition: all 0.2s ease;
+  transition: all 0.3s;
   visibility: visible;
   opacity: 1; }
 
@@ -620,20 +620,20 @@ th {
 th {
   text-align: left;
   font-weight: 900;
-  color: #fff;
-  background-color: #29b739; }
+  color: #353839;
+  background-color: #eeebd9; }
 
 .success th {
-  background-color: #0074d9; }
+  background-color: #8abc2f; }
 
 .warning th {
-  background-color: #ff851b; }
+  background-color: #ff7800; }
 
 .error th {
-  background-color: #ff4136; }
+  background-color: #ee204d; }
 
 .dull th {
-  background-color: #aaa; }
+  background-color: #c9c0bb; }
 
 tr:nth-child(even) {
   background: rgba(0, 0, 0, 0.05); }
@@ -2192,14 +2192,14 @@ tr:nth-child(even) {
     margin-left: 16.66666%; } }
 
 nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: 3em;
   padding: 0 0.6em;
-  background: #fff;
-  box-shadow: none;
+  background: #353839;
+  box-shadow: 0 0 0.2em rgba(201, 192, 187, 0.2);
   z-index: 10000;
   transition: all .3s;
   transform-style: preserve-3d; }
@@ -2247,7 +2247,7 @@ nav .burger {
     right: 0;
     bottom: -1000em;
     margin: 0;
-    background: #fff;
+    background: #353839;
     transition: all 0.5s ease;
     transform: none; }
   nav .burger ~ .menu {
@@ -2256,7 +2256,7 @@ nav .burger {
     color: transparent;
     width: 100%;
     border-radius: 0;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(238, 235, 217, 0.2);
     transition: all 0.5s ease; }
   nav .show ~ .menu {
     width: 70%;
@@ -2303,13 +2303,13 @@ nav .burger {
 
 .stack:first-child,
 .stack:first-child .toggle {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0; }
+  border-top-left-radius: 0.2em;
+  border-top-right-radius: 0.2em; }
 
 .stack:last-child,
 .stack:last-child .toggle {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0; }
+  border-bottom-left-radius: 0.2em;
+  border-bottom-right-radius: 0.2em; }
 
 input.stack,
 textarea.stack,
@@ -2329,16 +2329,16 @@ select.stack {
   select.stack:focus + input,
   select.stack:focus + textarea,
   select.stack:focus + select {
-    border-top-color: #29b739; }
+    border-top-color: #eeebd9; }
 
 .card, .modal .overlay ~ * {
   position: relative;
   box-shadow: 0;
-  border-radius: 0;
-  border: 1px solid #ddd;
+  border-radius: 0.2em;
+  border: 1px solid #c9c0bb;
   overflow: hidden;
   text-align: left;
-  background: #fff;
+  background: #353839;
   margin-bottom: 0.6em;
   padding: 0;
   transition: all .3s ease; }
@@ -2368,11 +2368,11 @@ select.stack {
   .card hr, .modal .overlay ~ * hr {
     border: none;
     height: 1px;
-    background-color: #aaa; }
+    background-color: #c9c0bb; }
   .card header, .modal .overlay ~ * header {
     font-weight: bold;
     position: relative;
-    border-bottom: 1px solid #aaa; }
+    border-bottom: 1px solid #c9c0bb; }
     .card header h1, .modal .overlay ~ * header h1,
     .card header h2,
     .modal .overlay ~ * header h2,
@@ -2413,13 +2413,13 @@ select.stack {
     cursor: pointer;
     width: auto; }
     .card .close:hover, .modal .overlay ~ * .close:hover {
-      color: #ff4136; }
+      color: #ee204d; }
   .card h1 + .close, .modal .overlay ~ * h1 + .close {
     margin: .2em; }
   .card h2 + .close, .modal .overlay ~ * h2 + .close {
     margin: .1em; }
   .card .dangerous, .modal .overlay ~ * .dangerous {
-    background: #ff4136;
+    background: #ee204d;
     float: right; }
 
 .modal {
@@ -2438,8 +2438,8 @@ select.stack {
     position: fixed;
     margin: 0;
     border-radius: 0;
-    background: rgba(17, 17, 17, 0.3);
-    transition: all 0.2s ease;
+    background: rgba(238, 235, 217, 0.2);
+    transition: all 0.3s;
     z-index: 100000; }
     .modal .overlay:before, .modal .overlay:after {
       display: none; }
@@ -2450,12 +2450,12 @@ select.stack {
       left: 50%;
       transform: translateX(-50%) translateY(-50%) scale(0.2, 0.2);
       z-index: 1000000;
-      transition: all 0.2s ease; }
+      transition: all 0.3s; }
   .modal > input:checked ~ * {
     display: block;
     opacity: 1;
     max-height: 10000px;
-    transition: all 0.2s ease; }
+    transition: all 0.3s; }
   .modal > input:checked ~ .overlay ~ * {
     max-height: 90%;
     overflow: auto;
@@ -2475,7 +2475,7 @@ select.stack {
   cursor: pointer;
   border: 0;
   margin: 0.3em 0;
-  border-radius: 0;
+  border-radius: 0.2em;
   background-color: #ddd;
   background-size: cover;
   background-position: center center;
@@ -2570,7 +2570,7 @@ select.stack {
   [data-tooltip]:after {
     margin-left: 0;
     font-size: 0.8em;
-    background: #111;
+    background: #eeebd9;
     content: attr(data-tooltip);
     white-space: nowrap; }
   [data-tooltip]:before {
@@ -2579,7 +2579,7 @@ select.stack {
     height: 0;
     border-width: 0;
     border-style: solid;
-    border-color: transparent transparent #111;
+    border-color: transparent transparent #eeebd9;
     margin-top: 0;
     left: 10px; }
   [data-tooltip]:hover:after, [data-tooltip]:focus:after, [data-tooltip]:hover:before, [data-tooltip]:focus:before {
@@ -2596,7 +2596,7 @@ select.stack {
   margin-bottom: 12px; }
 
 .tooltip-top:before {
-  border-color: #111 transparent transparent;
+  border-color: #eeebd9 transparent transparent;
   margin-bottom: 0;
   left: 10px; }
 
@@ -2607,7 +2607,7 @@ select.stack {
   top: 0; }
 
 .tooltip-right:before {
-  border-color: transparent #111 transparent transparent;
+  border-color: transparent #eeebd9 transparent transparent;
   margin-left: -6px;
   left: 100%;
   top: 7px; }
@@ -2620,7 +2620,7 @@ select.stack {
   top: 0; }
 
 .tooltip-left:before {
-  border-color: transparent transparent transparent #111;
+  border-color: transparent transparent transparent #eeebd9;
   margin-right: -6px;
   right: 100%;
   top: 7px; }
