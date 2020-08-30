@@ -116,8 +116,8 @@ h1 {
  * Address styling not present in IE 8/9.
  */
 mark {
-  background: #1d1f21;
-  color: #c5c8c6; }
+  background: #fff;
+  color: #111; }
 
 /**
  * Address inconsistent and variable font size in all browsers.
@@ -350,10 +350,10 @@ body {
   height: 100%; }
 
 body {
-  color: #c5c8c6;
+  color: #111;
   font-size: 1.1em;
   line-height: 1.5;
-  background: #1d1f21; }
+  background: #fff; }
 
 main {
   display: block; }
@@ -371,7 +371,7 @@ li {
   margin: 0 0 0.3em; }
 
 a {
-  color: #81a2be;
+  color: #0074d9;
   text-decoration: none;
   box-shadow: none;
   transition: all 0.3s; }
@@ -392,7 +392,7 @@ pre {
 blockquote {
   padding: 0 0 0 1em;
   margin: 0 0 0 .1em;
-  box-shadow: inset 5px 0 rgba(197, 200, 198, 0.3); }
+  box-shadow: inset 5px 0 rgba(17, 17, 17, 0.3); }
 
 label {
   cursor: pointer; }
@@ -414,8 +414,8 @@ i[class*=" icon-"]:before {
   margin: 0;
   padding: 0.3em 0.9em;
   vertical-align: middle;
-  background: #81a2be;
-  color: #1d1f21;
+  background: #0074d9;
+  color: #fff;
   border: 0;
   border-radius: 0.2em;
   width: auto;
@@ -428,15 +428,15 @@ i[class*=" icon-"]:before {
   .success.label, .success[data-tooltip]:after, button.success,
   .success.button,
   .success[type=submit], .success.dropimage {
-    background: #b5bd68; }
+    background: #2ecc40; }
   .warning.label, .warning[data-tooltip]:after, button.warning,
   .warning.button,
   .warning[type=submit], .warning.dropimage {
-    background: #de935f; }
+    background: #ff851b; }
   .error.label, .error[data-tooltip]:after, button.error,
   .error.button,
   .error[type=submit], .error.dropimage {
-    background: #cc6666; }
+    background: #ff4136; }
   .pseudo.label, .pseudo[data-tooltip]:after, button.pseudo,
   .pseudo.button,
   .pseudo[type=submit], .pseudo.dropimage {
@@ -458,20 +458,20 @@ button,
   border-radius: 0.2em;
   height: auto;
   vertical-align: baseline;
-  box-shadow: 0 0 rgba(197, 200, 198, 0) inset; }
+  box-shadow: 0 0 rgba(17, 17, 17, 0) inset; }
   button:hover,
   .button:hover,
   :hover[type=submit], .dropimage:hover, button:focus,
   .button:focus,
   :focus[type=submit], .dropimage:focus {
-    box-shadow: inset 0 0 0 99em rgba(29, 31, 33, 0.2);
+    box-shadow: inset 0 0 0 99em rgba(255, 255, 255, 0.2);
     border: 0; }
   button.pseudo:hover,
   .pseudo.button:hover,
   .pseudo:hover[type=submit], .pseudo.dropimage:hover, button.pseudo:focus,
   .pseudo.button:focus,
   .pseudo:focus[type=submit], .pseudo.dropimage:focus {
-    box-shadow: inset 0 0 0 99em rgba(197, 200, 198, 0.1); }
+    box-shadow: inset 0 0 0 99em rgba(17, 17, 17, 0.1); }
   button.active,
   .active.button,
   .active[type=submit], .active.dropimage, button:active,
@@ -479,17 +479,17 @@ button,
   :active[type=submit], .dropimage:active, button.pseudo:active,
   .pseudo.button:active,
   .pseudo:active[type=submit], .pseudo.dropimage:active {
-    box-shadow: inset 0 0 0 99em rgba(197, 200, 198, 0.2); }
+    box-shadow: inset 0 0 0 99em rgba(17, 17, 17, 0.2); }
   button[disabled],
   .button[disabled],
   [disabled][type=submit], .dropimage[disabled] {
     cursor: default;
     box-shadow: none;
-    background: #969896; }
+    background: #aaa; }
 
 :checked + .toggle,
 :checked + .toggle:hover {
-  box-shadow: inset 0 0 0 99em rgba(197, 200, 198, 0.2); }
+  box-shadow: inset 0 0 0 99em rgba(17, 17, 17, 0.2); }
 
 [type] + .toggle {
   padding: 0.3em 0.9em;
@@ -504,15 +504,15 @@ textarea,
   margin: 0;
   height: 2.1em;
   padding: 0.3em 0.6em;
-  border: 1px solid #969896;
-  background-color: #1d1f21;
+  border: 1px solid #aaa;
+  background-color: #fff;
   border-radius: 0.2em;
   transition: all 0.3s;
   width: 100%; }
   input:focus,
   textarea:focus,
   .select select:focus {
-    border: 1px solid #81a2be;
+    border: 1px solid #0074d9;
     outline: 0; }
 
 textarea {
@@ -526,9 +526,9 @@ textarea {
   height: auto; }
 
 select {
-  background: #1d1f21 url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyIiBoZWlnaHQ9IjMiPjxwYXRoIGQ9Im0gMCwxIDEsMiAxLC0yIHoiLz48L3N2Zz4=) no-repeat scroll 95% center/10px 15px;
+  background: #fff url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyIiBoZWlnaHQ9IjMiPjxwYXRoIGQ9Im0gMCwxIDEsMiAxLC0yIHoiLz48L3N2Zz4=) no-repeat scroll 95% center/10px 15px;
   background-position: calc(100% - 15px) center;
-  border: 1px solid #969896;
+  border: 1px solid #aaa;
   border-radius: 0.2em;
   cursor: pointer;
   width: 100%;
@@ -542,11 +542,11 @@ select {
   select::-ms-expand {
     display: none; }
   select:focus, select:active {
-    border: 1px solid #81a2be;
+    border: 1px solid #0074d9;
     transition: outline 0s; }
   select:-moz-focusring {
     color: transparent;
-    text-shadow: 0 0 0 #c5c8c6; }
+    text-shadow: 0 0 0 #111; }
   select option {
     font-size: inherit;
     padding: 0.45em; }
@@ -563,7 +563,7 @@ select {
   [type=radio] + .checkable:hover:before, [type=checkbox] + .checkable:hover:before,
   :focus[type=radio] + .checkable:before,
   :focus[type=checkbox] + .checkable:before {
-    border: 1px solid #81a2be; }
+    border: 1px solid #0074d9; }
   [type=radio] + .checkable, [type=checkbox] + .checkable {
     position: relative;
     cursor: pointer;
@@ -587,9 +587,9 @@ select {
       border-radius: 50%;
       transition: all 0.3s; }
     [type=radio] + .checkable:before, [type=checkbox] + .checkable:before {
-      border: 1px solid #969896; }
+      border: 1px solid #aaa; }
   :checked[type=radio] + .checkable:after, :checked[type=checkbox] + .checkable:after {
-    background: #c5c8c6;
+    background: #111;
     transform: scale(0.5) translateY(-100%); }
 
 [type=checkbox] + .checkable:before {
@@ -603,7 +603,7 @@ select {
   opacity: 0; }
 
 :checked[type=checkbox] + .checkable:after {
-  color: #c5c8c6;
+  color: #111;
   background: none;
   transform: translateY(-50%);
   transition: all 0.3s;
@@ -620,23 +620,23 @@ th {
 th {
   text-align: left;
   font-weight: 900;
-  color: #1d1f21;
-  background-color: #81a2be; }
+  color: #fff;
+  background-color: #0074d9; }
 
 .success th {
-  background-color: #b5bd68; }
+  background-color: #2ecc40; }
 
 .warning th {
-  background-color: #de935f; }
+  background-color: #ff851b; }
 
 .error th {
-  background-color: #cc6666; }
+  background-color: #ff4136; }
 
 .dull th {
-  background-color: #969896; }
+  background-color: #aaa; }
 
 tr:nth-child(even) {
-  background: rgba(197, 200, 198, 0.05); }
+  background: rgba(17, 17, 17, 0.05); }
 
 .flex {
   display: -ms-flexbox;
@@ -2198,8 +2198,8 @@ nav {
   right: 0;
   height: 3em;
   padding: 0 0.6em;
-  background: #1d1f21;
-  box-shadow: 0 0 0.2em rgba(197, 200, 198, 0.2);
+  background: #fff;
+  box-shadow: 0 0 0.2em rgba(170, 170, 170, 0.2);
   z-index: 10000;
   transition: all .3s;
   transform-style: preserve-3d; }
@@ -2247,7 +2247,7 @@ nav .burger {
     right: 0;
     bottom: -1000em;
     margin: 0;
-    background: #1d1f21;
+    background: #fff;
     transition: all 0.5s ease;
     transform: none; }
   nav .burger ~ .menu {
@@ -2256,7 +2256,7 @@ nav .burger {
     color: transparent;
     width: 100%;
     border-radius: 0;
-    background: rgba(29, 31, 33, 0.2);
+    background: rgba(17, 17, 17, 0.2);
     transition: all 0.5s ease; }
   nav .show ~ .menu {
     width: 70%;
@@ -2329,16 +2329,16 @@ select.stack {
   select.stack:focus + input,
   select.stack:focus + textarea,
   select.stack:focus + select {
-    border-top-color: #81a2be; }
+    border-top-color: #0074d9; }
 
 .card, .modal .overlay ~ * {
   position: relative;
   box-shadow: 0;
   border-radius: 0.2em;
-  border: 1px solid #969896;
+  border: 1px solid #aaa;
   overflow: hidden;
   text-align: left;
-  background: #1d1f21;
+  background: #fff;
   margin-bottom: 0.6em;
   padding: 0;
   transition: all .3s ease; }
@@ -2368,11 +2368,11 @@ select.stack {
   .card hr, .modal .overlay ~ * hr {
     border: none;
     height: 1px;
-    background-color: #969896; }
+    background-color: #aaa; }
   .card header, .modal .overlay ~ * header {
     font-weight: bold;
     position: relative;
-    border-bottom: 1px solid #969896; }
+    border-bottom: 1px solid #aaa; }
     .card header h1, .modal .overlay ~ * header h1,
     .card header h2,
     .modal .overlay ~ * header h2,
@@ -2413,13 +2413,13 @@ select.stack {
     cursor: pointer;
     width: auto; }
     .card .close:hover, .modal .overlay ~ * .close:hover {
-      color: #cc6666; }
+      color: #ff4136; }
   .card h1 + .close, .modal .overlay ~ * h1 + .close {
     margin: .2em; }
   .card h2 + .close, .modal .overlay ~ * h2 + .close {
     margin: .1em; }
   .card .dangerous, .modal .overlay ~ * .dangerous {
-    background: #cc6666;
+    background: #ff4136;
     float: right; }
 
 .modal {
@@ -2438,7 +2438,7 @@ select.stack {
     position: fixed;
     margin: 0;
     border-radius: 0;
-    background: rgba(29, 31, 33, 0.2);
+    background: rgba(17, 17, 17, 0.2);
     transition: all 0.3s;
     z-index: 100000; }
     .modal .overlay:before, .modal .overlay:after {
@@ -2570,7 +2570,7 @@ select.stack {
   [data-tooltip]:after {
     margin-left: 0;
     font-size: 0.8em;
-    background: #c5c8c6;
+    background: #111;
     content: attr(data-tooltip);
     white-space: nowrap; }
   [data-tooltip]:before {
@@ -2579,7 +2579,7 @@ select.stack {
     height: 0;
     border-width: 0;
     border-style: solid;
-    border-color: transparent transparent #c5c8c6;
+    border-color: transparent transparent #111;
     margin-top: 0;
     left: 10px; }
   [data-tooltip]:hover:after, [data-tooltip]:focus:after, [data-tooltip]:hover:before, [data-tooltip]:focus:before {
@@ -2596,7 +2596,7 @@ select.stack {
   margin-bottom: 12px; }
 
 .tooltip-top:before {
-  border-color: #c5c8c6 transparent transparent;
+  border-color: #111 transparent transparent;
   margin-bottom: 0;
   left: 10px; }
 
@@ -2607,7 +2607,7 @@ select.stack {
   top: 0; }
 
 .tooltip-right:before {
-  border-color: transparent #c5c8c6 transparent transparent;
+  border-color: transparent #111 transparent transparent;
   margin-left: -6px;
   left: 100%;
   top: 7px; }
@@ -2620,7 +2620,7 @@ select.stack {
   top: 0; }
 
 .tooltip-left:before {
-  border-color: transparent transparent transparent #c5c8c6;
+  border-color: transparent transparent transparent #111;
   margin-right: -6px;
   right: 100%;
   top: 7px; }
