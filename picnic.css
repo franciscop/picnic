@@ -458,7 +458,7 @@ button,
   border-radius: 0.2em;
   height: auto;
   vertical-align: baseline;
-  box-shadow: 0 0 rgba(0, 0, 0, 0) inset; }
+  box-shadow: 0 0 rgba(17, 17, 17, 0) inset; }
   button:hover,
   .button:hover,
   :hover[type=submit], .dropimage:hover, button:focus,
@@ -636,7 +636,7 @@ th {
   background-color: #aaa; }
 
 tr:nth-child(even) {
-  background: rgba(0, 0, 0, 0.05); }
+  background: rgba(17, 17, 17, 0.05); }
 
 .flex {
   display: -ms-flexbox;
