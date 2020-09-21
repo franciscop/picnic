@@ -2,7 +2,7 @@
 
 > Original: http://jsfiddle.net/franciscop/wwfby2y8/
 
-A simple tab system inspired by [Components CSS Tabs](www.felipefialho.com/css-components/#component-tab).
+A simple tab system inspired by [Components CSS Tabs](https://www.felipefialho.com/css-components/#component-tab).
 
 ```html
 <div class="tabs three">
