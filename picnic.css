@@ -2238,7 +2238,8 @@ nav .burger {
     display: inline-block;
     cursor: pointer;
     bottom: -1000em;
-    margin: 0; }
+    margin: 0;
+    -webkit-tap-highlight-color: transparent; }
   nav .burger ~ .menu,
   nav .show:checked ~ .burger {
     position: fixed;
@@ -2333,7 +2334,7 @@ select.stack {
 
 .card, .modal .overlay ~ * {
   position: relative;
-  box-shadow: 0;
+  box-shadow: none;
   border-radius: 0.2em;
   border: 1px solid #aaa;
   overflow: hidden;
