@@ -18,6 +18,8 @@ nav {
         cursor: pointer;
         bottom: -1000em;
         margin: 0;
+        // fix blue flash before animation in chrome
+        -webkit-tap-highlight-color: transparent;
       }
 
       .burger ~ .menu,
