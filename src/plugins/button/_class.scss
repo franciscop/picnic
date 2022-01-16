@@ -4,11 +4,11 @@
 
 
 // Variables
-$picnic-button-margin: $picnic-separation / 2 0 !default;
+$picnic-button-margin: math.div($picnic-separation, 2) 0 !default;
 $picnic-button-padding: $picnic-label-padding !default;
 $picnic-button-hover: inset 0 0 0 99em rgba($picnic-white, $picnic-transparency) !default;
 $picnic-button-click: inset 0 0 0 99em rgba($picnic-black, $picnic-transparency) !default;
-$picnic-button-pseudo-hover: inset 0 0 0 99em rgba($picnic-black, $picnic-transparency / 2) !default;
+$picnic-button-pseudo-hover: inset 0 0 0 99em rgba($picnic-black, math.div($picnic-transparency, 2)) !default;
 $picnic-button-transition: $picnic-transition !default;
 $picnic-button-radius: $picnic-label-radius !default;
 

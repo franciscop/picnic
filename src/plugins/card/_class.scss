@@ -87,7 +87,7 @@ $picnic-card-radius: $picnic-radius !default;
     }
 
   p {
-    margin: $picnic-separation / 2 0;
+    margin: math.div($picnic-separation, 2) 0;
 
     &:first-child {
       margin-top: 0;
