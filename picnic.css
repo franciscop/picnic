@@ -3808,6 +3808,49 @@ select.stack:focus + select {
   width: 22%;
   margin: 4% 0 4% 4%;
 }
+.five.tabs > .row {
+  width: 500%;
+  left: -400%;
+}
+.five.tabs > input:nth-of-type(1):checked ~ .row {
+  margin-left: 400%;
+}
+.five.tabs > input:nth-of-type(2):checked ~ .row {
+  margin-left: 300%;
+}
+.five.tabs > input:nth-of-type(3):checked ~ .row {
+  margin-left: 200%;
+}
+.five.tabs > input:nth-of-type(4):checked ~ .row {
+  margin-left: 100%;
+}
+.five.tabs > label img {
+  width: 18%;
+  margin: 2% 0 2% 2%;
+}
+.six.tabs > .row {
+  width: 600%;
+  left: -500%;
+}
+.six.tabs > input:nth-of-type(1):checked ~ .row {
+  margin-left: 500%;
+}
+.six.tabs > input:nth-of-type(2):checked ~ .row {
+  margin-left: 400%;
+}
+.six.tabs > input:nth-of-type(3):checked ~ .row {
+  margin-left: 300%;
+}
+.six.tabs > input:nth-of-type(4):checked ~ .row {
+  margin-left: 200%;
+}
+.six.tabs > input:nth-of-type(5):checked ~ .row {
+  margin-left: 100%;
+}
+.six.tabs > label img {
+  width: 12%;
+  margin: 1% 0 1% 1%;
+}
 .tabs > label:first-of-type img {
   margin-left: 0;
 }
