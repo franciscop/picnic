@@ -1,7 +1,8 @@
 // Style for the website
+@use 'sass:math';
 
 // Variables for this sass implementation
-$picnic-dropimage-ratio: 4 / 3 !default;
+$picnic-dropimage-ratio: math.div(4, 3) !default;
 
 $picnic-nav-responsive: true;
 
@@ -9,13 +10,13 @@ $picnic-normalize-ie: false;
 
 // Get the icons from fontello
 // You need to import this first
-@import 'font/fontello';
+@import "font/fontello";
 
 // Imports the base variable styles
-@import '../../src/themes/default/theme';
+@import "../../src/themes/default/theme";
 
 // Normalize.css (external library)
-@import '../../src/picnic';
+@import "../../src/picnic";
 
 // // Generic styles for things like <body>, <a> and others
 // // It also overwrites normalize.css a bit
@@ -47,12 +48,9 @@ $picnic-normalize-ie: false;
 // @import '../../src/plugins/tabs/plugin';
 // @import '../../src/plugins/tooltip/plugin';
 
-
-
 // Our own plugins, extending some of picnic's
-@import 'hero';
-@import 'visual';
-
+@import "hero";
+@import "visual";
 
 // Make a title and its text closer together
 h1,
@@ -63,7 +61,6 @@ h4 {
   padding: 0;
   line-height: 1;
 }
-
 
 // Structure
 html,
@@ -88,20 +85,18 @@ main .visual:last-child {
   max-width: 960px;
   width: 100%;
   margin: 100px auto 500px;
-  }
+}
 
 nav .brand:hover,
 nav .brand:active {
   background: none;
   box-shadow: none;
-  }
-
-
+}
 
 // Display the grid with colors
 .flex.demo > * > * {
   display: block;
-  padding: .3em 0;
+  padding: 0.3em 0;
   background: $green;
   text-align: center;
 }
@@ -136,7 +131,6 @@ section.row aside {
   }
 }
 
-
 pre {
   width: 100%;
 
@@ -145,11 +139,9 @@ pre {
   }
 }
 
-
 comment-box.visual {
   margin-top: 60px;
 }
-
 
 // $browser-color: #ccc;
 // $browser-text: #333;

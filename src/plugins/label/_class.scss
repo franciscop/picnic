@@ -1,5 +1,5 @@
 // Label of text
-$picnic-label-padding: $picnic-separation / 2 $picnic-separation * 1.5 !default;
+$picnic-label-padding: math.div($picnic-separation, 2) $picnic-separation * 1.5 !default;
 $picnic-label-radius: $picnic-radius !default;
 
 // Styles
