@@ -4,7 +4,7 @@ table {
 
 td,
 th {
-  padding: $picnic-separation / 2 2.4em $picnic-separation / 2 $picnic-separation;
+  padding: math.div($picnic-separation, 2) 2.4em math.div($picnic-separation, 2) $picnic-separation;
   }
 
 th {

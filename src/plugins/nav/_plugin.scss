@@ -62,7 +62,7 @@ nav {
         max-width: 300px;
         // max-width: 0;
         transform-origin: center right;
-        transition: all $picnic-nav-timing / 2 ease;
+        transition: all math.div($picnic-nav-timing, 2) ease;
 
         // opacity: 0;
         // width: 0;
@@ -108,13 +108,13 @@ nav {
 
       .burger ~ .menu > * {
         display: block;
-        margin: $picnic-separation / 2;
+        margin: math.div($picnic-separation, 2);
         text-align: left;
         max-width: calc(100% - #{$picnic-separation});
       }
 
       .burger ~ .menu > a {
-        padding: $picnic-separation / 2 $picnic-separation * 1.5;
+        padding: math.div($picnic-separation, 2) $picnic-separation * 1.5;
       }
     }
   }
