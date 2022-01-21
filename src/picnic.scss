@@ -1,10 +1,10 @@
 //! Picnic CSS http://www.picnicss.com/
 
-// Loads the Sass Math Module 
+// Loads the Sass Math Module
 @use 'sass:math';
 
 // Imports the base variable styles
-@import './themes/squared/theme';
+@import './themes/default/theme';
 
 @import './vendor/compass-breakpoint/stylesheets/breakpoint';
 
