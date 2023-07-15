@@ -1,6 +1,6 @@
 # Picnic CSS
 
-Unpack your meal and get coding. An invasive CSS library to get your style started.
+Unpack your meal and get coding. An invasive CSS library to get your style started. [Official webpage](https://picnicss.com) (with live demo/test). 
 
 
 ## Getting started
