@@ -28,3 +28,15 @@
   </tbody>
 </table>
 ```
+
+### Table Variations
+
+There are 4 variations `success`, `warning`, `error` and `dull`:
+
+```html
+<table>
+<table class="success">
+<table class="warning">
+<table class="error">
+<table class="dull">
+```
