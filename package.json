@@ -15,6 +15,14 @@
     "build-web": "sass --style compressed ./docs/style/style.scss > ./docs/style.min.css"
   },
   "homepage": "https://www.picnicss.com/",
+  "documentation": {
+    "menu": {
+      "Test": "https://picnicss.com/tests",
+      "Github": "https://github.com/franciscop/picnic",
+      "Documentation": "https://picnicss.com/documentation"
+    },
+    "pages": ["src/readme.md", "src/plugins"]
+  },
   "repository": "https://github.com/picnicss/picnic.git",
   "keywords": [
     "css",
