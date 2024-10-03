@@ -57,27 +57,27 @@ To create a larger button you only need to make the font inside it larger. The p
 <button class="mainButton">Large button</button><br>
 <button>Normal button</button><br>
 <button class="shyButton">Small button</button>
-```
 
-```css
+<style>
 .mainButton {
     font-size: 1.5em;
 }
 .shyButton {
     font-size: .75em;
 }
+</style>
 ```
 
 To change the color of the pseudo-color on hover:
 
 ```html
 <button class="pseudo cool">Pseudo personal</button>
-```
 
-```css
+<style>
 .cool:hover,
 .cool:active,
 .cool:focus {
     background: #cff;
 }
+</style>
 ```
