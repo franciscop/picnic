@@ -10,13 +10,13 @@ $picnic-normalize-ie: false;
 
 // Get the icons from fontello
 // You need to import this first
-@import "font/fontello";
+@import "fontello";
 
 // Imports the base variable styles
-@import "../../src/themes/default/theme";
+@import "../src/themes/default/theme";
 
 // Normalize.css (external library)
-@import "../../src/picnic";
+@import "../src/picnic";
 
 // Hero code
 $black: #333;
