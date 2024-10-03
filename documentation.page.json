@@ -1,8 +1,0 @@
-{
-  "menu": {
-    "Test": "https://picnicss.com/tests",
-    "Github": "https://github.com/franciscop/picnic",
-    "Documentation": "https://docs.picnicss.com/"
-  },
-  "pages": ["src/readme.md", "src/plugins"]
-}
