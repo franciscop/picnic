@@ -10,6 +10,8 @@ A card is a self-contained, replicable type. It works great with other of its ki
 </article>
 ```
 
+There are 
+
 ```html
 <article class="card">
   <header>
@@ -18,6 +20,10 @@ A card is a self-contained, replicable type. It works great with other of its ki
   </header>
 </article>
 ```
+
+### Split
+
+You can split it vertically by having a `<header>`, and then a `<section>` or a `<footer>`:
 
 ```html
 <article class="card">
@@ -29,6 +35,10 @@ A card is a self-contained, replicable type. It works great with other of its ki
   </footer>
 </article>
 ```
+
+### Grid of cards
+
+To display them as a grid, wrap them with [Picnic's `flex` system](#grids):
 
 ```html
 <div class="flex two">
