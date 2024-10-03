@@ -16,6 +16,8 @@
   },
   "homepage": "https://www.picnicss.com/",
   "documentation": {
+    "name": "Picnic CSS",
+    "title": "Picnic CSS - A lighweight CSS library with nice defaults and many plugins to kickstart your projects",
     "home": "docs/index.html",
     "menu": {
       "Test": "https://picnicss.com/tests",
