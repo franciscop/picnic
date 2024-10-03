@@ -4,10 +4,6 @@
 // Variables for this sass implementation
 $picnic-dropimage-ratio: math.div(4, 3) !default;
 
-$picnic-nav-responsive: true;
-
-$picnic-normalize-ie: false;
-
 // Get the icons from fontello
 // You need to import this first
 @import "font/fontello";
