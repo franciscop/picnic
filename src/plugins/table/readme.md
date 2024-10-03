@@ -1,7 +1,7 @@
 ## Table
 
 ```html
-<table class="primary">
+<table>
   <thead>
     <tr>
       <th>Name</th>
