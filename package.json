@@ -12,21 +12,21 @@
     "build": "grunt && npm run build-css && npm run build-prod && npm run build-web",
     "build-css": "sass ./src/picnic.scss > picnic.css",
     "build-prod": "sass --style compressed ./src/picnic.scss > picnic.min.css",
-    "build-web": "sass --style compressed ./docs/style/style.scss > ./docs/style.min.css"
+    "build-web": "sass --style compressed ./web/style/style.scss > ./web/style.min.css"
   },
   "homepage": "https://www.picnicss.com/",
   "documentation": {
     "name": "Picnic CSS",
     "title": "Picnic CSS - A lighweight CSS library with nice defaults and many plugins to kickstart your projects",
-    "landing": "docs/index.html",
+    "landing": "web/index.html",
     "menu": {
-      "Test": "https://picnicss.com/tests",
+      "Donate": "https://paypal.me/franciscopresencia/19",
       "Github": "https://github.com/franciscop/picnic",
       "Documentation": "https://picnicss.com/documentation"
     },
     "pages": ["src/readme.md", "src/plugins"]
   },
-  "repository": "https://github.com/picnicss/picnic.git",
+  "repository": "https://github.com/franciscop/picnic.git",
   "keywords": [
     "css",
     "semantic",

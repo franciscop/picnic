@@ -1,0 +1,276 @@
+// Style for the website
+@use 'sass:math';
+
+// Variables for this sass implementation
+$picnic-dropimage-ratio: math.div(4, 3) !default;
+
+// Get the icons from fontello
+// You need to import this first
+@import "font/fontello";
+
+// Imports the base variable styles
+@import "../src/themes/default/theme";
+
+// Normalize.css (external library)
+@import "../src/picnic";
+
+// Hero code
+$black: #333;
+
+%nav {
+  &.transparent {
+    box-shadow: none;
+    background: none;
+
+    .brand,
+    .pseudo.button {
+      color: inherit;
+    }
+
+    .show:checked ~ .burger {
+      color: transparent;
+    }
+  }
+}
+
+// Hero from the main page
+.hero {
+  position: relative;
+  width: 100%;
+
+  // http://stackoverflow.com/a/28151062/938236
+  height: 70vh;
+  transition: height 999999s;
+  text-align: center;
+  min-height: 300px;
+  color: $black;
+  padding: 1px 0;
+  background: #b9dbff url("/img/optimised.svg") no-repeat 50% center scroll;
+  background-size: cover;
+
+  // Vertical center for the content
+  .content {
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
+  }
+
+  h1 {
+    font-size: 3em;
+    line-height: 1;
+    padding: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .slogan {
+    font-size: 1.3em;
+  }
+
+  .npm {
+    max-width: 720px;
+    color: $black;
+    margin-bottom: 0;
+    text-align: center;
+    border-radius: 0;
+    margin: 1.3em auto 0.3em;
+
+    &.slim,
+    &.wide {
+      display: none;
+    }
+
+    &.slim {
+      @media (max-width: 700px) {
+        display: block;
+        max-width: 500px;
+      }
+    }
+
+    &.wide {
+      @media (min-width: 700px) {
+        display: block;
+      }
+    }
+  }
+
+  .links a {
+    color: $black;
+    box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+  }
+
+  .links a:hover {
+    box-shadow: 0 2px $black;
+  }
+
+  .links a:active {
+    background: none;
+    border-radius: 0;
+  }
+
+  @keyframes bounce {
+    from {
+      bottom: 20px;
+    }
+    70% {
+      bottom: 10px;
+    }
+    to {
+      bottom: 20px;
+    }
+  }
+}
+
+// Hack to hide the hero without js (reusing nav's js)
+.transparent ~ .hero .keepgoing {
+  opacity: 1;
+}
+
+@media all and (max-width: 960px) {
+  // Since in mobiles the fixed one is sluggish
+  .hero {
+    background-attachment: scroll;
+  }
+}
+
+// Visual displays some text and its description
+
+
+// The visual is each of the text+content sections in the home
+.visual {
+  text-align: left;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 80px 0 0;
+
+  .content {
+    padding: 10px 20px 0 0;
+    }
+
+  .row {
+    margin-top: 0;
+  }
+
+  .tabs label {
+    margin-right: 0;
+  }
+
+  .love,
+  .name {
+    display: block;
+    text-align: center;
+    padding: 0;
+    font-weight: bold;
+  }
+
+  .card {
+    overflow: visible;
+  }
+}
+
+
+@media all and (max-width: 960px) {
+  .visual {
+    padding: 20px;
+    margin: 0 auto;
+    }
+
+  .visual .content {
+    margin-bottom: 20px;
+  }
+}
+
+// Make a title and its text closer together
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+// Structure
+html,
+body,
+main {
+  display: block;
+  color: #333;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  z-index: 5;
+}
+
+// I like allowing scroll past end
+main .visual:last-child {
+  margin-bottom: 100px;
+}
+
+.intro {
+  padding: 10px;
+  max-width: 960px;
+  width: 100%;
+  margin: 100px auto 500px;
+}
+
+nav .brand:hover,
+nav .brand:active {
+  background: none;
+  box-shadow: none;
+}
+
+// Display the grid with colors
+.flex.demo > * > * {
+  display: block;
+  padding: 0.3em 0;
+  background: $green;
+  text-align: center;
+}
+
+.flex.demo > *:nth-child(2n) > * {
+  background: $aqua;
+}
+
+.test > h2 {
+  padding-top: 80px;
+  margin-top: -60px;
+}
+
+.loading,
+.loading * {
+  transition: all 0s;
+}
+
+section.row {
+  width: 90%;
+  max-width: 960px;
+  margin: 80px auto;
+}
+
+section.row aside {
+  width: 200px;
+}
+
+@media all and (max-width: 500px) {
+  .icon-help-circled {
+    display: none;
+  }
+}
+
+pre {
+  width: 100%;
+
+  code {
+    background: none;
+  }
+}
+
+comment-box.visual {
+  margin-top: 60px;
+}
