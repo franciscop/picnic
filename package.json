@@ -16,6 +16,7 @@
   },
   "homepage": "https://www.picnicss.com/",
   "documentation": {
+    "home": "docs/index.html",
     "menu": {
       "Test": "https://picnicss.com/tests",
       "Github": "https://github.com/franciscop/picnic",
