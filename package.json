@@ -1,6 +1,6 @@
 {
   "name": "picnic",
-  "version": "7.1.0",
+  "version": "7.1.1",
   "description": "A lighweight CSS library with nice defaults and many plugins to kickstart your projects",
   "homepage": "https://www.picnicss.com/",
   "repository": "github:franciscop/picnic",
