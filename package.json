@@ -24,9 +24,12 @@
       "Github": "https://github.com/franciscop/picnic",
       "Documentation": "https://picnicss.com/documentation"
     },
-    "pages": ["src/readme.md", "src/plugins"]
+    "pages": [
+      "src/readme.md",
+      "src/plugins"
+    ]
   },
-  "repository": "https://github.com/franciscop/picnic.git",
+  "repository": "github:franciscop/picnic",
   "keywords": [
     "css",
     "semantic",
@@ -48,5 +51,10 @@
     "grunt-contrib-watch": "^0.6.1",
     "marked": "^0.3.5",
     "sass": "^1.49.0"
-  }
+  },
+  "files": [
+    "picnic.css",
+    "picnic.min.css",
+    "src"
+  ]
 }
