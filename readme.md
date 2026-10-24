@@ -1,4 +1,4 @@
-# Picnic CSS
+# Picnic CSS [![gzip size](https://img.badgesize.io/franciscop/picnic/master/picnic.min.css.svg?label=gzip&logo=&compression=gzip)](https://github.com/franciscop/picnic/blob/master/picnic.min.css)
 
 Unpack your meal and get coding. An invasive CSS library to get your style started. [Official webpage](https://picnicss.com) (with live demo/test). 
 
