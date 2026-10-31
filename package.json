@@ -17,7 +17,7 @@
     "build": "grunt && npm run build-css && npm run build-prod && npm run build-web",
     "build-css": "sass ./src/picnic.scss > picnic.css",
     "build-prod": "sass --style compressed ./src/picnic.scss > picnic.min.css",
-    "build-web": "sass --style compressed ./web/style/style.scss > ./web/style.min.css"
+    "build-web": "sass --style compressed ./web/style.scss > ./web/style.min.css"
   },
   "main": "picnic.min.css",
   "files": [

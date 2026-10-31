@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><title>Documentation - Picnic CSS</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="css, library, picnic, picnicss, light"><meta name="description" content="A lightweight CSS library"><link rel="stylesheet" href="/style.min.css"><link rel="icon" href="/img/basket.png" type="image/png"><link rel="stylesheet" media="bogus"><style>aside a.top {
+<!DOCTYPE html><html lang="en"><head><title>Documentation - Picnic CSS</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="css, library, picnic, picnicss, light"><meta name="description" content="A lightweight CSS library"><link rel="stylesheet" href="https://raw.githubusercontent.com/franciscop/picnic/refs/heads/master/docs/style/style.min.css"><link rel="icon" href="/img/basket.png" type="image/png"><link rel="stylesheet" media="bogus"><style>aside a.top {
   font-size: 0;
   position: fixed;
   bottom: 0;
@@ -118,22 +118,26 @@ aside .links a.button {
 <pre><code class="lang-html">&lt;button class=&quot;mainButton&quot;&gt;Large button&lt;/button&gt;&lt;br&gt;
 &lt;button&gt;Normal button&lt;/button&gt;&lt;br&gt;
 &lt;button class=&quot;shyButton&quot;&gt;Small button&lt;/button&gt;
-</code></pre>
-<pre><code class="lang-css">.mainButton {
+
+&lt;style&gt;
+.mainButton {
     font-size: 1.5em;
 }
 .shyButton {
     font-size: .75em;
 }
+&lt;/style&gt;
 </code></pre>
 <p>To change the color of the pseudo-color on hover:</p>
 <pre><code class="lang-html">&lt;button class=&quot;pseudo cool&quot;&gt;Pseudo personal&lt;/button&gt;
-</code></pre>
-<pre><code class="lang-css">.cool:hover,
+
+&lt;style&gt;
+.cool:hover,
 .cool:active,
 .cool:focus {
     background: #cff;
 }
+&lt;/style&gt;
 </code></pre>
 <h2 id="card">Card</h2>
 <p>A card is a self-contained, replicable type. It works great with other of its kind. It can consist of only one element or many of them:</p>
@@ -143,6 +147,7 @@ aside .links a.button {
   &lt;/header&gt;
 &lt;/article&gt;
 </code></pre>
+<p>There are </p>
 <pre><code class="lang-html">&lt;article class=&quot;card&quot;&gt;
   &lt;header&gt;
     &lt;button&gt;Love&lt;/button&gt;
@@ -150,6 +155,8 @@ aside .links a.button {
   &lt;/header&gt;
 &lt;/article&gt;
 </code></pre>
+<h3 id="split">Split</h3>
+<p>You can split it vertically by having a <code>&lt;header&gt;</code>, and then a <code>&lt;section&gt;</code> or a <code>&lt;footer&gt;</code>:</p>
 <pre><code class="lang-html">&lt;article class=&quot;card&quot;&gt;
   &lt;header&gt;
     &lt;h3&gt;Forest&lt;/h3&gt;
@@ -159,6 +166,8 @@ aside .links a.button {
   &lt;/footer&gt;
 &lt;/article&gt;
 </code></pre>
+<h3 id="grid-of-cards">Grid of cards</h3>
+<p>To display them as a grid, wrap them with <a href="#grids">Picnic&#39;s <code>flex</code> system</a>:</p>
 <pre><code class="lang-html">&lt;div class=&quot;flex two&quot;&gt;
   &lt;div&gt;
     &lt;article class=&quot;card&quot;&gt;
@@ -483,7 +492,7 @@ $(&quot;form&quot;).on(&#39;submit&#39;, function(e){
 </code></pre>
 <p>The main difference with the width classes is that it includes a none in case you want to hide the offset at certain sizes and that it doesn&#39;t include a full</p>
 <h2 id="input">Input</h2>
-<p>Simple (or not) text form elements:</p>
+<p>Simple text form elements, here formatted with the grid system:</p>
 <pre><code class="lang-html">&lt;fieldset class=&quot;flex two&quot;&gt;
   &lt;label&gt;&lt;input type=&quot;email&quot; placeholder=&quot;Email&quot;&gt;&lt;/label&gt;
   &lt;label&gt;&lt;input type=&quot;password&quot; placeholder=&quot;Password&quot;&gt;&lt;/label&gt;
@@ -496,7 +505,14 @@ input.demo {
 }
 </style>
 
-
+<h3 id="elements">Elements</h3>
+<p>The style applies to <code>&lt;input&gt;</code> (of any type), <code>&lt;textarea&gt;</code> and <code>&lt;select&gt;</code> like <code>&lt;div class=&quot;select&quot;&gt;&lt;select&gt;...</code>:</p>
+<pre><code class="lang-html">&lt;fieldset class=&quot;flex two&quot;&gt;
+  &lt;label&gt;&lt;input type=&quot;email&quot; placeholder=&quot;Email&quot;&gt;&lt;/label&gt;
+  &lt;label class=&quot;select&quot;&gt;&lt;select&gt;&lt;option&gt;A&lt;/option&gt;&lt;option&gt;B&lt;/option&gt;&lt;/select&gt;&lt;/label&gt;
+&lt;/fieldset&gt;
+&lt;textarea placeholder=&quot;Textarea&quot;&gt;&lt;/textarea&gt;
+</code></pre>
 <h2 id="label">Label</h2>
 <p>An element to display some short relevant information on the side of other element</p>
 <pre><code class="lang-html">&lt;h1&gt;header 1 &lt;span class=&quot;label&quot;&gt;Normal&lt;/span&gt;&lt;/h1&gt;
@@ -504,6 +520,15 @@ input.demo {
 &lt;h3&gt;header 3 &lt;span class=&quot;label warning&quot;&gt;Warning&lt;/span&gt;&lt;/h3&gt;
 &lt;h4&gt;header 4 &lt;span class=&quot;label error&quot;&gt;Error&lt;/span&gt;&lt;/h4&gt;
 &lt;p&gt;paragraph &lt;span class=&quot;label&quot;&gt;Normal&lt;/span&gt;&lt;/p&gt;
+</code></pre>
+<p>They are like buttons, but without interactive parts.</p>
+<h3 id="variations">Variations</h3>
+<p>Besides the basic <code>label</code>, there are 4 variations <code>success</code>, <code>warning</code>, <code>error</code> and <code>pseudo</code>:</p>
+<pre><code class="lang-html">&lt;p&gt;paragraph &lt;span class=&quot;label&quot;&gt;Default&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;paragraph &lt;span class=&quot;label success&quot;&gt;Success&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;paragraph &lt;span class=&quot;label warning&quot;&gt;Warning&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;paragraph &lt;span class=&quot;label error&quot;&gt;Error&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;paragraph &lt;span class=&quot;label pseudo&quot;&gt;Pseudo&lt;/span&gt;&lt;/p&gt;
 </code></pre>
 <h2 id="modal">Modal</h2>
 <p>The modal is pure CSS, which makes the HTML quite ugly actually. However it does work. To try it, press the button:</p>
@@ -678,20 +703,45 @@ nav.demo {
 <h2 id="radio-button">Radio button</h2>
 <p>A simple way of using radiobuttons</p>
 <pre><code class="lang-html">&lt;label&gt;
-  &lt;input type=&#39;radio&#39; name=&quot;radiodemo&quot;&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;radiodemo&quot;&gt;
   &lt;span class=&quot;checkable&quot;&gt;Select me&lt;/span&gt;
 &lt;/label&gt;&lt;br&gt;&lt;br&gt;
 
-&lt;input id=&quot;radiodemo&quot; checked type=&#39;radio&#39; name=&quot;radiodemo&quot;&gt;
+&lt;input id=&quot;radiodemo&quot; checked type=&quot;radio&quot; name=&quot;radiodemo&quot;&gt;
 &lt;label for=&quot;radiodemo&quot; class=&quot;checkable&quot;&gt;Or me&lt;/label&gt;
 </code></pre>
+<h3 id="hack-it">Hack it</h3>
+<p>To customize the style, you would be targetting the <code>[type=radio] + .checkable</code> ::before or ::after pseudo-elements directly:</p>
+<pre><code class="lang-css">[type=radio] + .checkable::before {
+  border-width: 2px;
+  ...
+}
+</code></pre>
 <h2 id="select">Select</h2>
+<p>Create a simple dropdown:</p>
 <pre><code class="lang-html">&lt;select&gt;
   &lt;option&gt;Select an option&lt;/option&gt;
   &lt;option&gt;Good option&lt;/option&gt;
   &lt;option&gt;Nice option&lt;/option&gt;
   &lt;option&gt;Cheap option&lt;/option&gt;
 &lt;/select&gt;
+</code></pre>
+<h3 id="customize-it">Customize it</h3>
+<p>Usually you&#39;d use <a href="#grid">Picnic&#39;s grid system</a> to size it appropriately:</p>
+<pre><code class="lang-html">&lt;div class=&quot;flex two&quot;&gt;
+  &lt;select&gt;
+    &lt;option&gt;Select an option&lt;/option&gt;
+    &lt;option&gt;Good option&lt;/option&gt;
+    &lt;option&gt;Nice option&lt;/option&gt;
+    &lt;option&gt;Cheap option&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;select&gt;
+    &lt;option&gt;Select another option&lt;/option&gt;
+    &lt;option&gt;Good option&lt;/option&gt;
+    &lt;option&gt;Nice option&lt;/option&gt;
+    &lt;option&gt;Cheap option&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;
 </code></pre>
 <h2 id="stack">Stack</h2>
 <p>A vertical group of different elements.</p>
@@ -764,7 +814,7 @@ nav.demo {
 &lt;/div&gt;
 </code></pre>
 <h2 id="table">Table</h2>
-<pre><code class="lang-html">&lt;table class=&quot;primary&quot;&gt;
+<pre><code class="lang-html">&lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;Name&lt;/th&gt;
@@ -790,6 +840,14 @@ nav.demo {
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
+</code></pre>
+<h3 id="table-variations">Table Variations</h3>
+<p>There are 4 variations <code>success</code>, <code>warning</code>, <code>error</code> and <code>dull</code>:</p>
+<pre><code class="lang-html">&lt;table&gt;
+&lt;table class=&quot;success&quot;&gt;
+&lt;table class=&quot;warning&quot;&gt;
+&lt;table class=&quot;error&quot;&gt;
+&lt;table class=&quot;dull&quot;&gt;
 </code></pre>
 <h2 id="tabs">Tabs</h2>
 <blockquote>
